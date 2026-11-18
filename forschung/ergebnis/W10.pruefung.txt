@@ -1,0 +1,7 @@
+Z21: FEHLT im Text der Quelle: "Specific energy | 60–110 Wh /kg" (https://en.wikipedia.org/wiki/Lithium_titanate_battery)
+Z22: FEHLT im Text der Quelle: "a lower specific energy (about 30–110 Wh/kg)" (https://en.wikipedia.org/wiki/Lithium_titanate_battery)
+Z23: FEHLT im Text der Quelle: "Energy density | 177–202 Wh /L" (https://en.wikipedia.org/wiki/Lithium_titanate_battery)
+Z25: FEHLT im Text der Quelle: "a lower inherent voltage (2.4 V)" (https://en.wikipedia.org/wiki/Lithium_titanate_battery)
+Z41: WERT OHNE BELEG: - **Folgerung (Kühlung / Elektrik):** NMC mit hohem Nickelanteil erzeugt beim Betrieb mehr Wärme und
+
+19 Belege bestaetigt, 4 Fehler

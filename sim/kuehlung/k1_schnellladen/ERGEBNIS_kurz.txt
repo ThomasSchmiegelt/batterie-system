@@ -1,0 +1,6 @@
+K1 Ergebnis (2026-11-17, KI-generiert, Entwurf, mit Nachtrag). Quelle sim/kuehlung/k1_schnellladen/ergebnis.json. Vorgabe (Annahme) T_max <= 45 C, dT <= 5 K; Werte = Spitzen ueber die Ladezeit (T_max / dT Kern). NMC auf aktuellem CAD-Netz (Kern r 6,25 mm); NMC K3 mit Tab-Scheibe (Annahme Opus).
+Abgleich P0 mit K0 L2: LFP +0.0000 K / +0.0000 K; NMC (neues Netz) -0.206 K / -0.348 K (Geometrieaenderung). Waermeintegral max. Abw. 0.34 %.
+Profile (LFP | NMC): P0 43.1 °C / 10.6 K | 53.4 °C / 15.7 K; P1 44.1 °C / 11.3 K | 54.9 °C / 16.6 K; P2 61.7 °C / 21.3 K | 82.5 °C / 31.6 K; P3 37.5 °C / 7.4 K | 44.9 °C / 11.0 K; P4 34.1 °C / 5.4 K | 39.6 °C / 8.1 K.
+Kuehlung P0 (LFP | NMC): Kh1000 39.7 °C / 10.8 K | 49.0 °C / 17.3 K; Kh2000 37.4 °C / 10.5 K | 46.0 °C / 17.8 K; K3 33.8 °C / 4.6 K | 38.9 °C / 5.8 K; V15 33.1 °C / 10.6 K | 43.4 °C / 15.7 K.
+Kombinationen: K3+P1 37.6 °C / 6.3 K | 44.3 °C / 8.0 K; K3+h1000 30.8 °C / 3.8 K | 34.6 °C / 5.7 K; NMC P3+K3 34.0 °C / 3.8 K; NMC P3+Kh2000 39.0 °C / 11.9 K.
+Beide Vorgaben erfuellt: LFP K3 und LFP K3+h1000; NMC nur P3+K3. Bilder: sim/kuehlung/k1_schnellladen/*.png, bilder/ (Render).

@@ -1,0 +1,297 @@
+{
+ "hinweis": "KI-generiert (Claude Sonnet, 2026-11-17). Aus eingaben.json durch anordnung.py. Längen-Abstandsregel: n Zellen = n*Dicke + (n-1)*Abstand.",
+ "basis": {
+  "bauraum": [
+   1900,
+   1400,
+   130
+  ],
+  "rand": 30,
+  "h_unten": 20,
+  "h_oben": 10,
+  "gap_lfp": 1.0,
+  "gap_nmc": 2.0
+ },
+ "baender": {
+  "rand": [
+   20,
+   50
+  ],
+  "h_unten": [
+   15,
+   30
+  ],
+  "h_oben": [
+   5,
+   15
+  ],
+  "gap_lfp": [
+   0.5,
+   2.0
+  ],
+  "gap_nmc": [
+   1.0,
+   3.0
+  ]
+ },
+ "ergebnis": {
+  "LFP": {
+   "A": {
+    "energie_kWh": 73.9,
+    "ah": 92.375,
+    "laenge_mm": 660.3101851851852,
+    "dicke_mm": 14,
+    "innen_L_mm": 1840,
+    "innen_B_mm": 1340,
+    "hoehe_noetig_mm": 120,
+    "reserve_H_mm": 10,
+    "lagen": {
+     "Länge quer (B)": {
+      "reihen": 2,
+      "je_reihe": 125,
+      "laenge_belegt_mm": 1320.6203703703704,
+      "stapel_belegt_mm": 1874.0,
+      "reserve_Zelllaenge_mm": 19.379629629629562,
+      "reserve_Stapel_mm": -34.0,
+      "passt": false,
+      "reserve_L_mm": -34.0,
+      "reserve_B_mm": 19.379629629629562
+     },
+     "gedreht, Länge in L": {
+      "reihen": 2,
+      "je_reihe": 125,
+      "laenge_belegt_mm": 1320.6203703703704,
+      "stapel_belegt_mm": 1874.0,
+      "reserve_Zelllaenge_mm": 519.3796296296296,
+      "reserve_Stapel_mm": -534.0,
+      "passt": false,
+      "reserve_L_mm": 519.3796296296296,
+      "reserve_B_mm": -534.0
+     }
+    },
+    "beste_lage": "Länge quer (B)",
+    "passt_L": false,
+    "passt_B": true,
+    "passt_H": true,
+    "reserve_L_mm": -34.0,
+    "reserve_B_mm": 19.379629629629562,
+    "passt": false
+   },
+   "B": {
+    "energie_kWh": 93.0,
+    "ah": 116.25,
+    "laenge_mm": 830.9722222222222,
+    "dicke_mm": 14,
+    "innen_L_mm": 1840,
+    "innen_B_mm": 1340,
+    "hoehe_noetig_mm": 120,
+    "reserve_H_mm": 10,
+    "lagen": {
+     "Länge quer (B)": {
+      "reihen": 1,
+      "je_reihe": 250,
+      "laenge_belegt_mm": 830.9722222222222,
+      "stapel_belegt_mm": 3749.0,
+      "reserve_Zelllaenge_mm": 509.0277777777778,
+      "reserve_Stapel_mm": -1909.0,
+      "passt": false,
+      "reserve_L_mm": -1909.0,
+      "reserve_B_mm": 509.0277777777778
+     },
+     "gedreht, Länge in L": {
+      "reihen": 2,
+      "je_reihe": 125,
+      "laenge_belegt_mm": 1661.9444444444443,
+      "stapel_belegt_mm": 1874.0,
+      "reserve_Zelllaenge_mm": 178.05555555555566,
+      "reserve_Stapel_mm": -534.0,
+      "passt": false,
+      "reserve_L_mm": 178.05555555555566,
+      "reserve_B_mm": -534.0
+     }
+    },
+    "beste_lage": "gedreht, Länge in L",
+    "passt_L": true,
+    "passt_B": false,
+    "passt_H": true,
+    "reserve_L_mm": 178.05555555555566,
+    "reserve_B_mm": -534.0,
+    "passt": false
+   }
+  },
+  "NMC": {
+   "A": {
+    "energie_kWh": 73.9,
+    "zellen": 868,
+    "teilung_mm": 48.0,
+    "innen_L_mm": 1840,
+    "innen_B_mm": 1340,
+    "hoehe_noetig_mm": 110,
+    "reserve_H_mm": 20,
+    "plaetze_L_Reihen": 1200,
+    "plaetze_B_Reihen": 1188,
+    "plaetze": 1200,
+    "richtung": "Reihen entlang L",
+    "reihen": 32,
+    "je_gerade_reihe": 38,
+    "je_ungerade_reihe": 37,
+    "belegung_prozent": 72.33333333333333,
+    "reserve_plaetze": 332,
+    "passt_Flaeche": true,
+    "passt_H": true,
+    "passt": true
+   },
+   "B": {
+    "energie_kWh": 86.6,
+    "zellen": 1085,
+    "teilung_mm": 48.0,
+    "innen_L_mm": 1840,
+    "innen_B_mm": 1340,
+    "hoehe_noetig_mm": 110,
+    "reserve_H_mm": 20,
+    "plaetze_L_Reihen": 1200,
+    "plaetze_B_Reihen": 1188,
+    "plaetze": 1200,
+    "richtung": "Reihen entlang L",
+    "reihen": 32,
+    "je_gerade_reihe": 38,
+    "je_ungerade_reihe": 37,
+    "belegung_prozent": 90.41666666666667,
+    "reserve_plaetze": 115,
+    "passt_Flaeche": true,
+    "passt_H": true,
+    "passt": true
+   }
+  }
+ },
+ "empfindlichkeit": [
+  {
+   "annahme": "rand",
+   "wert": 20,
+   "basis_wert": 30,
+   "urteil": {
+    "LFP_A": false,
+    "LFP_B": false,
+    "NMC_A": true,
+    "NMC_B": true
+   },
+   "kippt": []
+  },
+  {
+   "annahme": "rand",
+   "wert": 50,
+   "basis_wert": 30,
+   "urteil": {
+    "LFP_A": false,
+    "LFP_B": false,
+    "NMC_A": true,
+    "NMC_B": true
+   },
+   "kippt": []
+  },
+  {
+   "annahme": "gap_lfp",
+   "wert": 0.5,
+   "basis_wert": 1.0,
+   "urteil": {
+    "LFP_A": true,
+    "LFP_B": false,
+    "NMC_A": true,
+    "NMC_B": true
+   },
+   "kippt": [
+    "LFP_A"
+   ]
+  },
+  {
+   "annahme": "gap_lfp",
+   "wert": 2.0,
+   "basis_wert": 1.0,
+   "urteil": {
+    "LFP_A": false,
+    "LFP_B": false,
+    "NMC_A": true,
+    "NMC_B": true
+   },
+   "kippt": []
+  },
+  {
+   "annahme": "gap_nmc",
+   "wert": 1.0,
+   "basis_wert": 2.0,
+   "urteil": {
+    "LFP_A": false,
+    "LFP_B": false,
+    "NMC_A": true,
+    "NMC_B": true
+   },
+   "kippt": []
+  },
+  {
+   "annahme": "gap_nmc",
+   "wert": 3.0,
+   "basis_wert": 2.0,
+   "urteil": {
+    "LFP_A": false,
+    "LFP_B": false,
+    "NMC_A": true,
+    "NMC_B": true
+   },
+   "kippt": []
+  },
+  {
+   "annahme": "h_unten",
+   "wert": 15,
+   "basis_wert": 20,
+   "urteil": {
+    "LFP_A": false,
+    "LFP_B": false,
+    "NMC_A": true,
+    "NMC_B": true
+   },
+   "kippt": []
+  },
+  {
+   "annahme": "h_unten",
+   "wert": 30,
+   "basis_wert": 20,
+   "urteil": {
+    "LFP_A": false,
+    "LFP_B": false,
+    "NMC_A": true,
+    "NMC_B": true
+   },
+   "kippt": []
+  },
+  {
+   "annahme": "h_oben",
+   "wert": 5,
+   "basis_wert": 10,
+   "urteil": {
+    "LFP_A": false,
+    "LFP_B": false,
+    "NMC_A": true,
+    "NMC_B": true
+   },
+   "kippt": []
+  },
+  {
+   "annahme": "h_oben",
+   "wert": 15,
+   "basis_wert": 10,
+   "urteil": {
+    "LFP_A": false,
+    "LFP_B": false,
+    "NMC_A": true,
+    "NMC_B": true
+   },
+   "kippt": []
+  }
+ ],
+ "kippende_annahmen": [
+  [
+   "gap_lfp",
+   "LFP_A"
+  ]
+ ]
+}

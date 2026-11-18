@@ -1,0 +1,60 @@
+{
+ "variante": "LFP",
+ "hinweis": "KI-generiert. Alle Faktoren Annahmen bis Recherche-Bestätigung.",
+ "satz": "Kompaktwagen, 400 km Reichweite, in 20 min auf 80 %, Mitteleuropa",
+ "start": {
+  "fahrzeug": "Kompakt",
+  "reichweite_km": 400,
+  "laden_min": 20,
+  "klima": "Mitteleuropa"
+ },
+ "herkunft": {
+  "fahrzeug": "Startsatz",
+  "reichweite_km": "Startsatz",
+  "laden_min": "Startsatz",
+  "klima": "Startsatz"
+ },
+ "abgeleitet": {
+  "kWh_netto": 68.0,
+  "kWh_brutto": 73.9,
+  "U_nenn_V": 800,
+  "P_laden_spitze_kW": 186,
+  "C_laden_spitze": 2.51,
+  "Wh_L_noetig": 204,
+  "chemie": "LFP",
+  "masse_kg": 528
+ },
+ "warnungen": [
+  "Bauraum offen: Annahme wh_l_pack LFP 180 Wh/L unbelegt (B-BAT-004/006); nötig 204 Wh/L"
+ ],
+ "annahmen": {
+  "reserve": 0.08,
+  "ladefenster": 0.7,
+  "spitze_zu_mittel": 1.3,
+  "grenze_400V_kW": 150,
+  "dauer_zu_spitze": 0.4,
+  "km_leben": 200000,
+  "sicherheit_zyklen": 2.0,
+  "rest_soh": 0.8,
+  "wh_l_pack": {
+   "LFP": 180,
+   "NMC": 330
+  },
+  "wh_kg_pack": {
+   "LFP": 140,
+   "NMC": 200
+  },
+  "c_laden_max": {
+   "LFP": 3.0,
+   "NMC": 3.0
+  }
+ },
+ "fahrzeug_tabelle": {
+  "verbrauch": 17,
+  "L": 1.95,
+  "B": 1.4,
+  "H": 0.13,
+  "p_spitze": 150,
+  "L_quelle": "ENT-013"
+ }
+}

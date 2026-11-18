@@ -1,0 +1,225 @@
+{
+ "hinweis": "KI-generiert, ENTWURF, nicht freigegeben. Erzeugt von cad/pack/pack.py aus cad/pack/entwurf/parameter_NMC.json",
+ "variante": "NMC",
+ "laenge_mm": 2030.0,
+ "breite_mm": 1430.0,
+ "hoehe_mm": 115.0,
+ "hoehe_stapel_mm": 115.0,
+ "hoehe_max_mm": 130,
+ "gehaeuse_L_mm": 2030.0,
+ "zellen": 868,
+ "quertraeger_x_mm": [
+  502.0,
+  1002.0,
+  1502.0
+ ],
+ "zellmasse_je_kg": 0.355,
+ "gruppen": {
+  "Unterfahrschutz": {
+   "anzahl": 1,
+   "volumen_cm3": 8708.7,
+   "masse_kg": 23.51349,
+   "masse_bekannt": true,
+   "werkstoff": "Al"
+  },
+  "Boden": {
+   "anzahl": 1,
+   "volumen_cm3": 8708.7,
+   "masse_kg": 23.51349,
+   "masse_bekannt": true,
+   "werkstoff": "Al"
+  },
+  "Seitenrahmen": {
+   "anzahl": 1,
+   "volumen_cm3": 20808.0,
+   "masse_kg": 56.1816,
+   "masse_bekannt": true,
+   "werkstoff": "Al (Vollprofil, Obergrenze)"
+  },
+  "Kuehlplatte": {
+   "anzahl": 2,
+   "volumen_cm3": 43182.399999999994,
+   "masse_kg": 116.59247999999998,
+   "masse_bekannt": true,
+   "werkstoff": "Al (Vollmaterial, Obergrenze)"
+  },
+  "Pad": {
+   "anzahl": 2,
+   "volumen_cm3": 5397.799999999999,
+   "masse_kg": 0.0,
+   "masse_bekannt": false,
+   "werkstoff": "Pad"
+  },
+  "Deckel": {
+   "anzahl": 1,
+   "volumen_cm3": 5805.8,
+   "masse_kg": 15.67566,
+   "masse_bekannt": true,
+   "werkstoff": "Al"
+  },
+  "Zellabgriff": {
+   "anzahl": 868,
+   "volumen_cm3": 98.16848723937392,
+   "masse_kg": 0.26505491554631205,
+   "masse_bekannt": true,
+   "werkstoff": "Al"
+  },
+  "Gruppenverbinder": {
+   "anzahl": 32,
+   "volumen_cm3": 3120.0000000000014,
+   "masse_kg": 8.423999999999998,
+   "masse_bekannt": true,
+   "werkstoff": "Al (Annahme, Cu offen)"
+  },
+  "Zelltraeger": {
+   "anzahl": 4,
+   "volumen_cm3": 2832.6715451646423,
+   "masse_kg": 0.0,
+   "masse_bekannt": false,
+   "werkstoff": "offen (Werkstoff/Dichte fehlt)"
+  },
+  "Verguss": {
+   "anzahl": 4,
+   "volumen_cm3": 42490.07317746992,
+   "masse_kg": 0.0,
+   "masse_bekannt": false,
+   "werkstoff": "offen (Dichte fehlt)"
+  },
+  "Quertraeger": {
+   "anzahl": 3,
+   "volumen_cm3": 1541.25,
+   "masse_kg": 4.161375,
+   "masse_bekannt": true,
+   "werkstoff": "Al"
+  },
+  "Zellen": {
+   "anzahl": 868,
+   "volumen_cm3": 115402.51055473118,
+   "masse_kg": 308.1399999999994,
+   "masse_bekannt": true,
+   "werkstoff": "Zelle (Masse aus Akte)"
+  }
+ },
+ "masse_bekannt_kg": 556.4671499155644,
+ "schwerpunkt_mm": [
+  974.4610099994859,
+  704.3843286300711,
+  58.19902776637433
+ ],
+ "mitte_mm": [
+  1015.0,
+  715.0
+ ],
+ "schwerpunkt_abw_mm": [
+  -40.538990000514104,
+  -10.615671369928918
+ ],
+ "teile": 1787,
+ "kollisionspaare_geprueft": 5007,
+ "kollisionen": [],
+ "anzahl_kollisionen": 0,
+ "rechenzeit_s": 171.4088876247406,
+ "annahmen": {
+  "A_deckel_mm": {
+   "wert": 2,
+   "herkunft": "M0 eingaben.json hoehenstapel_mm.deckel (Annahme)"
+  },
+  "A_boden_mm": {
+   "wert": 3,
+   "herkunft": "M0 eingaben.json hoehenstapel_mm.boden (Annahme)"
+  },
+  "A_unterfahrschutz_mm": {
+   "wert": 3,
+   "herkunft": "M0 eingaben.json (Annahme)"
+  },
+  "A_luft_mm": {
+   "wert": 5,
+   "herkunft": "M0 eingaben.json (Annahme)"
+  },
+  "A_kuehlplatte_mm": {
+   "wert": 8,
+   "herkunft": "M0 eingaben.json (Annahme); Vollmaterial, real hohl"
+  },
+  "A_pad_mm": {
+   "wert": 1,
+   "herkunft": "M0 eingaben.json waermeleitschicht_je (Annahme)"
+  },
+  "A_rand_mm": {
+   "wert": 30,
+   "herkunft": "M0 eingaben.json rand_mm (Annahme)"
+  },
+  "A_hoehe_max_mm": {
+   "wert": 130,
+   "herkunft": "M0 eingaben.json (Annahme)"
+  },
+  "A_quertraeger_anzahl": {
+   "wert": 3,
+   "herkunft": "M0 eingaben.json (Annahme Opus)"
+  },
+  "A_quertraeger_hoehe_mm": {
+   "wert": 54,
+   "herkunft": "M0 eingaben.json (W22, US9045030)"
+  },
+  "A_quertraeger_breite_mm": {
+   "wert": 26,
+   "herkunft": "M0 eingaben.json (W22, US9045030)"
+  },
+  "A_quertraeger_wand_mm": {
+   "wert": 2.5,
+   "herkunft": "M0 eingaben.json (Annahme, Mitte 2-3 mm)"
+  },
+  "A_quertraeger_spiel_mm": {
+   "wert": 2,
+   "herkunft": "M0 eingaben.json (Annahme)"
+  },
+  "A_alu_dichte_kg_m3": {
+   "wert": 2700,
+   "herkunft": "M0 eingaben.json (Annahme)"
+  },
+  "A_zellabstand_LFP_mm": {
+   "wert": 1.0,
+   "herkunft": "M0 eingaben.json (G1)"
+  },
+  "A_zellabstand_NMC_mm": {
+   "wert": 2.0,
+   "herkunft": "M0 eingaben.json (G1)"
+  },
+  "A_zellzahl_LFP": {
+   "wert": 250,
+   "herkunft": "M0 eingaben.json (G1)"
+  },
+  "A_zellzahl_NMC": {
+   "wert": 868,
+   "herkunft": "M0 eingaben.json (G1 Fall A)"
+  },
+  "A_zellverbinder_LFP_mm": {
+   "wert": [
+    25,
+    3
+   ],
+   "herkunft": "AUFTRAG G4: Querschnitt 25 x 3 (Breite x Dicke)"
+  },
+  "A_gruppenverbinder_NMC_mm": {
+   "wert": [
+    25,
+    3
+   ],
+   "herkunft": "AUFTRAG G4: Querschnitt 25 x 3 (Breite x Dicke)"
+  },
+  "A_zellabgriff_NMC_mm": {
+   "wert": [
+    12,
+    1
+   ],
+   "herkunft": "AUFTRAG G4: 12 x 1 (Durchmesser x Dicke, Scheibe auf dem Pluspol)"
+  },
+  "A_vergusshoehe_anteil_NMC": {
+   "wert": 0.5,
+   "herkunft": "AUFTRAG G4: Verguss bis halbe Zellhöhe (Annahme)"
+  },
+  "A_traeger_dicke_NMC_mm": {
+   "wert": 2.5,
+   "herkunft": "NEUE ANNAHME (Platzhalter, in M0 nicht gesetzt; Opus entscheiden)"
+  }
+ }
+}

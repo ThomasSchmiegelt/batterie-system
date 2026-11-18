@@ -1,0 +1,9 @@
+G1-V Ergebnis (KI-generiert, Entwurf), Quelle sim/geometrie/g1_anordnung/ergebnis.json
+LFP A: 92.4 Ah, Länge 681 mm, passt (Reserve L 16, B 8, H 10 mm)
+LFP B: 116.2 Ah, Länge 840 mm, passt nicht (beste Lage: gedreht, Länge in L; Reserve L 210, B -504 mm)
+NMC A: 868 Zellen / 1260 Plätze = 69 %, passt, H-Reserve 20 mm
+NMC B: 1085 Zellen / 1260 Plätze = 86 %, passt
+LFP A bei Zellabstand 0,5 mm: passt
+Kippende Annahmen: gap_lfp kippt LFP_A; rand kippt LFP_A
+Erwartung verfehlt: nein; Abweichung: LFP B Ah/Länge 116.2/840 statt 111/790 (Eingabe 93,0 kWh)
+Details: ERGEBNIS.md

@@ -1,0 +1,755 @@
+{
+ "hinweis": "KI-generiert (Claude Sonnet, 2026-11-16). Aus eingaben.json (hier und ../vergleich_lfp_nmc) durch varianten.py. Mitte = arithmetisches Mittel.",
+ "bauraum_Liter": 354.9,
+ "grenze_batterieanteil": 0.3,
+ "zyklenbedarf": 1000.0,
+ "systemspannung_V": 800,
+ "varianten": {
+  "LFP": {
+   "nennspannung_V": 3.2,
+   "reihe_s": 250,
+   "zyklen_band": [
+    2500,
+    9000
+   ],
+   "zyklen_urteil": "erfüllt",
+   "faelle": {
+    "A": {
+     "mitte": {
+      "w_Wh_kg": 185,
+      "k": 0.75,
+      "a": 0.5,
+      "p": 1,
+      "zellen": 250,
+      "E_ist_kWh": 73.91304347826086,
+      "ah_noetig": 92.39130434782608,
+      "m_pack_kg": 532.7066196631414,
+      "E_brutto_kWh": 73.91304347826086,
+      "E_netto_kWh": 68.0,
+      "verbrauch_kWh_100km": 17.0,
+      "gesamtmasse_kg": 1500,
+      "batterieanteil": 0.3551377464420943,
+      "schritte": 0
+     },
+     "hauptwert": {
+      "w_Wh_kg": 160,
+      "k": 0.75,
+      "a": 0.5,
+      "p": 1,
+      "zellen": 250,
+      "E_ist_kWh": 73.91304347826086,
+      "ah_noetig": 92.39130434782608,
+      "m_pack_kg": 615.9420289855072,
+      "E_brutto_kWh": 73.91304347826086,
+      "E_netto_kWh": 68.0,
+      "verbrauch_kWh_100km": 17.0,
+      "gesamtmasse_kg": 1500,
+      "batterieanteil": 0.4106280193236715,
+      "schritte": 0,
+      "pack_Wh_L_noetig": 208.26442231124506,
+      "bauraum": [
+       {
+        "volumennutzung": 0.6,
+        "verfuegbar_Wh_L": 213.15779999999998,
+        "abweichung": 0.023495984741176423,
+        "urteil": "erfüllt"
+       }
+      ],
+      "bauraum_urteil": "erfüllt"
+     },
+     "gitter": {
+      "w160_k0.65": {
+       "w_Wh_kg": 160,
+       "k": 0.65,
+       "a": 0.5,
+       "p": 1,
+       "zellen": 250,
+       "E_ist_kWh": 73.91304347826086,
+       "ah_noetig": 92.39130434782608,
+       "m_pack_kg": 710.7023411371237,
+       "E_brutto_kWh": 73.91304347826086,
+       "E_netto_kWh": 68.0,
+       "verbrauch_kWh_100km": 17.0,
+       "gesamtmasse_kg": 1500,
+       "batterieanteil": 0.47380156075808244,
+       "schritte": 0
+      },
+      "w160_k0.75": {
+       "w_Wh_kg": 160,
+       "k": 0.75,
+       "a": 0.5,
+       "p": 1,
+       "zellen": 250,
+       "E_ist_kWh": 73.91304347826086,
+       "ah_noetig": 92.39130434782608,
+       "m_pack_kg": 615.9420289855072,
+       "E_brutto_kWh": 73.91304347826086,
+       "E_netto_kWh": 68.0,
+       "verbrauch_kWh_100km": 17.0,
+       "gesamtmasse_kg": 1500,
+       "batterieanteil": 0.4106280193236715,
+       "schritte": 0
+      },
+      "w160_k0.85": {
+       "w_Wh_kg": 160,
+       "k": 0.85,
+       "a": 0.5,
+       "p": 1,
+       "zellen": 250,
+       "E_ist_kWh": 73.91304347826086,
+       "ah_noetig": 92.39130434782608,
+       "m_pack_kg": 543.4782608695651,
+       "E_brutto_kWh": 73.91304347826086,
+       "E_netto_kWh": 68.0,
+       "verbrauch_kWh_100km": 17.0,
+       "gesamtmasse_kg": 1500,
+       "batterieanteil": 0.3623188405797101,
+       "schritte": 0
+      },
+      "w185_k0.65": {
+       "w_Wh_kg": 185,
+       "k": 0.65,
+       "a": 0.5,
+       "p": 1,
+       "zellen": 250,
+       "E_ist_kWh": 73.91304347826086,
+       "ah_noetig": 92.39130434782608,
+       "m_pack_kg": 614.6614842267015,
+       "E_brutto_kWh": 73.91304347826086,
+       "E_netto_kWh": 68.0,
+       "verbrauch_kWh_100km": 17.0,
+       "gesamtmasse_kg": 1500,
+       "batterieanteil": 0.409774322817801,
+       "schritte": 0
+      },
+      "w185_k0.75": {
+       "w_Wh_kg": 185,
+       "k": 0.75,
+       "a": 0.5,
+       "p": 1,
+       "zellen": 250,
+       "E_ist_kWh": 73.91304347826086,
+       "ah_noetig": 92.39130434782608,
+       "m_pack_kg": 532.7066196631414,
+       "E_brutto_kWh": 73.91304347826086,
+       "E_netto_kWh": 68.0,
+       "verbrauch_kWh_100km": 17.0,
+       "gesamtmasse_kg": 1500,
+       "batterieanteil": 0.3551377464420943,
+       "schritte": 0
+      },
+      "w185_k0.85": {
+       "w_Wh_kg": 185,
+       "k": 0.85,
+       "a": 0.5,
+       "p": 1,
+       "zellen": 250,
+       "E_ist_kWh": 73.91304347826086,
+       "ah_noetig": 92.39130434782608,
+       "m_pack_kg": 470.03525264394824,
+       "E_brutto_kWh": 73.91304347826086,
+       "E_netto_kWh": 68.0,
+       "verbrauch_kWh_100km": 17.0,
+       "gesamtmasse_kg": 1500,
+       "batterieanteil": 0.3133568350959655,
+       "schritte": 0
+      },
+      "w210_k0.65": {
+       "w_Wh_kg": 210,
+       "k": 0.65,
+       "a": 0.5,
+       "p": 1,
+       "zellen": 250,
+       "E_ist_kWh": 73.91304347826086,
+       "ah_noetig": 92.39130434782608,
+       "m_pack_kg": 541.4874980092371,
+       "E_brutto_kWh": 73.91304347826086,
+       "E_netto_kWh": 68.0,
+       "verbrauch_kWh_100km": 17.0,
+       "gesamtmasse_kg": 1500,
+       "batterieanteil": 0.3609916653394914,
+       "schritte": 0
+      },
+      "w210_k0.75": {
+       "w_Wh_kg": 210,
+       "k": 0.75,
+       "a": 0.5,
+       "p": 1,
+       "zellen": 250,
+       "E_ist_kWh": 73.91304347826086,
+       "ah_noetig": 92.39130434782608,
+       "m_pack_kg": 469.2891649413388,
+       "E_brutto_kWh": 73.91304347826086,
+       "E_netto_kWh": 68.0,
+       "verbrauch_kWh_100km": 17.0,
+       "gesamtmasse_kg": 1500,
+       "batterieanteil": 0.3128594432942259,
+       "schritte": 0
+      },
+      "w210_k0.85": {
+       "w_Wh_kg": 210,
+       "k": 0.85,
+       "a": 0.5,
+       "p": 1,
+       "zellen": 250,
+       "E_ist_kWh": 73.91304347826086,
+       "ah_noetig": 92.39130434782608,
+       "m_pack_kg": 414.0786749482401,
+       "E_brutto_kWh": 73.91304347826086,
+       "E_netto_kWh": 68.0,
+       "verbrauch_kWh_100km": 17.0,
+       "gesamtmasse_kg": 1500,
+       "batterieanteil": 0.27605244996549344,
+       "schritte": 0
+      }
+     },
+     "m_pack_spanne_kg": [
+      414.0786749482401,
+      710.7023411371237
+     ],
+     "grenze_kg": 450.0,
+     "anteil_unter_grenze": false,
+     "anteil_spanne": [
+      0.27605244996549344,
+      0.47380156075808244
+     ],
+     "pack_Wh_L_noetig": 208.26442231124506,
+     "bauraum": [
+      {
+       "volumennutzung": 0.6,
+       "verfuegbar_Wh_L": 213.15779999999998,
+       "abweichung": 0.023495984741176423,
+       "urteil": "erfüllt"
+      }
+     ],
+     "bauraum_urteil": "erfüllt",
+     "empfindlichkeit_kg": {
+      "k": {
+       "0.65": 614.6614842267015,
+       "0.85": 470.03525264394824
+      },
+      "w": {
+       "160": 615.9420289855072,
+       "210": 469.2891649413388
+      }
+     },
+     "empfindlichkeit_hub_kg": {
+      "k": 144.6262315827533,
+      "w": 146.65286404416844
+     },
+     "staerkste_annahme": "w",
+     "schritte": 0
+    },
+    "B": {
+     "mitte": {
+      "w_Wh_kg": 185,
+      "k": 0.75,
+      "a": 0.5,
+      "p": 1,
+      "zellen": 250,
+      "E_ist_kWh": 89.87090790735171,
+      "ah_noetig": 112.33863488418963,
+      "m_pack_kg": 647.7015562395702,
+      "E_brutto_kWh": 89.87090790735171,
+      "E_netto_kWh": 82.68123527476358,
+      "verbrauch_kWh_100km": 20.670308818690895,
+      "gesamtmasse_kg": 2147.70155623957,
+      "batterieanteil": 0.301578938823156,
+      "schritte": 6
+     },
+     "hauptwert": {
+      "w_Wh_kg": 160,
+      "k": 0.75,
+      "a": 0.5,
+      "p": 1,
+      "zellen": 250,
+      "E_ist_kWh": 93.00882486114584,
+      "ah_noetig": 116.2610310764323,
+      "m_pack_kg": 775.064067893566,
+      "E_brutto_kWh": 93.00882486114584,
+      "E_netto_kWh": 85.56811887225417,
+      "verbrauch_kWh_100km": 21.392029718063544,
+      "gesamtmasse_kg": 2275.064067893566,
+      "batterieanteil": 0.3406779082978448,
+      "schritte": 7,
+      "pack_Wh_L_noetig": 262.07051242926417,
+      "bauraum": [
+       {
+        "volumennutzung": 0.6,
+        "verfuegbar_Wh_L": 213.15779999999998,
+        "abweichung": -0.18663951154163627,
+        "urteil": "nicht erfüllt"
+       }
+      ],
+      "bauraum_urteil": "nicht erfüllt",
+      "empfindlichkeit_a_kg": {
+       "0.3": 702.4768838369333,
+       "0.7": 864.3664995066144
+      },
+      "empfindlichkeit_a_hub_kg": 161.88961566968112
+     },
+     "gitter": {
+      "w160_k0.65": {
+       "w_Wh_kg": 160,
+       "k": 0.65,
+       "a": 0.5,
+       "p": 1,
+       "zellen": 250,
+       "E_ist_kWh": 96.85879354862841,
+       "ah_noetig": 121.07349193578551,
+       "m_pack_kg": 931.3275028560946,
+       "E_brutto_kWh": 96.85879354862841,
+       "E_netto_kWh": 89.11009006473815,
+       "verbrauch_kWh_100km": 22.277522516184536,
+       "gesamtmasse_kg": 2431.3275028560947,
+       "batterieanteil": 0.3830530859220153,
+       "schritte": 8
+      },
+      "w160_k0.75": {
+       "w_Wh_kg": 160,
+       "k": 0.75,
+       "a": 0.5,
+       "p": 1,
+       "zellen": 250,
+       "E_ist_kWh": 93.00882486114584,
+       "ah_noetig": 116.2610310764323,
+       "m_pack_kg": 775.064067893566,
+       "E_brutto_kWh": 93.00882486114584,
+       "E_netto_kWh": 85.56811887225417,
+       "verbrauch_kWh_100km": 21.392029718063544,
+       "gesamtmasse_kg": 2275.064067893566,
+       "batterieanteil": 0.3406779082978448,
+       "schritte": 7
+      },
+      "w160_k0.85": {
+       "w_Wh_kg": 160,
+       "k": 0.85,
+       "a": 0.5,
+       "p": 1,
+       "zellen": 250,
+       "E_ist_kWh": 90.26538201061322,
+       "ah_noetig": 112.83172751326653,
+       "m_pack_kg": 663.7125639601841,
+       "E_brutto_kWh": 90.26538201061322,
+       "E_netto_kWh": 83.04415144976417,
+       "verbrauch_kWh_100km": 20.761037862441043,
+       "gesamtmasse_kg": 2163.712563960184,
+       "batterieanteil": 0.30674710449774767,
+       "schritte": 7
+      },
+      "w185_k0.65": {
+       "w_Wh_kg": 185,
+       "k": 0.65,
+       "a": 0.5,
+       "p": 1,
+       "zellen": 250,
+       "E_ist_kWh": 92.95889886452542,
+       "ah_noetig": 116.19862358065679,
+       "m_pack_kg": 773.0376597954437,
+       "E_brutto_kWh": 92.95889886452542,
+       "E_netto_kWh": 85.5221869553634,
+       "verbrauch_kWh_100km": 21.38054673884085,
+       "gesamtmasse_kg": 2273.0376597954437,
+       "batterieanteil": 0.34009012409632106,
+       "schritte": 7
+      },
+      "w185_k0.75": {
+       "w_Wh_kg": 185,
+       "k": 0.75,
+       "a": 0.5,
+       "p": 1,
+       "zellen": 250,
+       "E_ist_kWh": 89.87090790735171,
+       "ah_noetig": 112.33863488418963,
+       "m_pack_kg": 647.7015562395702,
+       "E_brutto_kWh": 89.87090790735171,
+       "E_netto_kWh": 82.68123527476358,
+       "verbrauch_kWh_100km": 20.670308818690895,
+       "gesamtmasse_kg": 2147.70155623957,
+       "batterieanteil": 0.301578938823156,
+       "schritte": 6
+      },
+      "w185_k0.85": {
+       "w_Wh_kg": 185,
+       "k": 0.85,
+       "a": 0.5,
+       "p": 1,
+       "zellen": 250,
+       "E_ist_kWh": 87.6449431690412,
+       "ah_noetig": 109.5561789613015,
+       "m_pack_kg": 557.3535756846131,
+       "E_brutto_kWh": 87.6449431690412,
+       "E_netto_kWh": 80.6333477155179,
+       "verbrauch_kWh_100km": 20.158336928879475,
+       "gesamtmasse_kg": 2057.353575684613,
+       "batterieanteil": 0.27090801613871646,
+       "schritte": 6
+      },
+      "w210_k0.65": {
+       "w_Wh_kg": 210,
+       "k": 0.65,
+       "a": 0.5,
+       "p": 1,
+       "zellen": 250,
+       "E_ist_kWh": 90.19229329218899,
+       "ah_noetig": 112.74036661523624,
+       "m_pack_kg": 660.7460218594356,
+       "E_brutto_kWh": 90.19229329218899,
+       "E_netto_kWh": 82.97690982881387,
+       "verbrauch_kWh_100km": 20.74422745720347,
+       "gesamtmasse_kg": 2160.7460218594356,
+       "batterieanteil": 0.3057953203083206,
+       "schritte": 7
+      },
+      "w210_k0.75": {
+       "w_Wh_kg": 210,
+       "k": 0.75,
+       "a": 0.5,
+       "p": 1,
+       "zellen": 250,
+       "E_ist_kWh": 87.61910650285976,
+       "ah_noetig": 109.52388312857471,
+       "m_pack_kg": 556.3049109984258,
+       "E_brutto_kWh": 87.61910650285976,
+       "E_netto_kWh": 80.60957798263098,
+       "verbrauch_kWh_100km": 20.152394495657745,
+       "gesamtmasse_kg": 2056.304910998426,
+       "batterieanteil": 0.2705361972453373,
+       "schritte": 6
+      },
+      "w210_k0.85": {
+       "w_Wh_kg": 210,
+       "k": 0.85,
+       "a": 0.5,
+       "p": 1,
+       "zellen": 250,
+       "E_ist_kWh": 85.74851704048208,
+       "ah_noetig": 107.1856463006026,
+       "m_pack_kg": 480.38098576074367,
+       "E_brutto_kWh": 85.74851704048208,
+       "E_netto_kWh": 78.88863567724353,
+       "verbrauch_kWh_100km": 19.722158919310882,
+       "gesamtmasse_kg": 1980.3809857607437,
+       "batterieanteil": 0.24256998487400144,
+       "schritte": 6
+      }
+     },
+     "m_pack_spanne_kg": [
+      480.38098576074367,
+      931.3275028560946
+     ],
+     "grenze_kg": 644.310466871871,
+     "anteil_unter_grenze": false,
+     "anteil_spanne": [
+      0.24256998487400144,
+      0.3830530859220153
+     ],
+     "pack_Wh_L_noetig": 253.22881912468785,
+     "bauraum": [
+      {
+       "volumennutzung": 0.6,
+       "verfuegbar_Wh_L": 213.15779999999998,
+       "abweichung": -0.1582403585152653,
+       "urteil": "nicht erfüllt"
+      }
+     ],
+     "bauraum_urteil": "nicht erfüllt",
+     "empfindlichkeit_kg": {
+      "k": {
+       "0.65": 773.0376597954437,
+       "0.85": 557.3535756846131
+      },
+      "w": {
+       "160": 775.064067893566,
+       "210": 556.3049109984258
+      },
+      "a": {
+       "0.3": 596.2215390807785,
+       "0.7": 708.9383989569842
+      }
+     },
+     "empfindlichkeit_hub_kg": {
+      "k": 215.68408411083055,
+      "w": 218.7591568951401,
+      "a": 112.71685987620572
+     },
+     "staerkste_annahme": "w",
+     "schritte": 6
+    }
+   },
+   "w_stuetzstellen": [
+    160,
+    185,
+    210
+   ]
+  },
+  "NMC": {
+   "nennspannung_V": 3.7,
+   "reihe_s": 217,
+   "zyklen_band": [
+    400,
+    1200
+   ],
+   "zyklen_urteil": "unsicher",
+   "faelle": {
+    "A": {
+     "mitte": {
+      "w_Wh_kg": 241.02112676056345,
+      "k": 0.75,
+      "a": 0.5,
+      "p": 4,
+      "zellen": 868,
+      "E_ist_kWh": 74.26825000000001,
+      "ah_noetig": 23.125,
+      "m_pack_kg": 410.8533333333333,
+      "E_brutto_kWh": 73.91304347826086,
+      "E_netto_kWh": 68.0,
+      "verbrauch_kWh_100km": 17.0,
+      "gesamtmasse_kg": 1500,
+      "batterieanteil": 0.2739022222222222,
+      "schritte": 0,
+      "zellmasse_kg": 308.14
+     },
+     "hauptwert": {
+      "w_Wh_kg": 241.02112676056345,
+      "k": 0.75,
+      "a": 0.5,
+      "p": 4,
+      "zellen": 868,
+      "E_ist_kWh": 74.26825000000001,
+      "ah_noetig": 23.125,
+      "m_pack_kg": 410.8533333333333,
+      "E_brutto_kWh": 73.91304347826086,
+      "E_netto_kWh": 68.0,
+      "verbrauch_kWh_100km": 17.0,
+      "gesamtmasse_kg": 1500,
+      "batterieanteil": 0.2739022222222222,
+      "schritte": 0,
+      "zellmasse_kg": 308.14
+     },
+     "gitter": {
+      "k0.65": {
+       "w_Wh_kg": 241.02112676056345,
+       "k": 0.65,
+       "a": 0.5,
+       "p": 4,
+       "zellen": 868,
+       "E_ist_kWh": 74.26825000000001,
+       "ah_noetig": 23.125,
+       "m_pack_kg": 474.0615384615384,
+       "E_brutto_kWh": 73.91304347826086,
+       "E_netto_kWh": 68.0,
+       "verbrauch_kWh_100km": 17.0,
+       "gesamtmasse_kg": 1500,
+       "batterieanteil": 0.3160410256410256,
+       "schritte": 0,
+       "zellmasse_kg": 308.14
+      },
+      "k0.75": {
+       "w_Wh_kg": 241.02112676056345,
+       "k": 0.75,
+       "a": 0.5,
+       "p": 4,
+       "zellen": 868,
+       "E_ist_kWh": 74.26825000000001,
+       "ah_noetig": 23.125,
+       "m_pack_kg": 410.8533333333333,
+       "E_brutto_kWh": 73.91304347826086,
+       "E_netto_kWh": 68.0,
+       "verbrauch_kWh_100km": 17.0,
+       "gesamtmasse_kg": 1500,
+       "batterieanteil": 0.2739022222222222,
+       "schritte": 0,
+       "zellmasse_kg": 308.14
+      },
+      "k0.85": {
+       "w_Wh_kg": 241.02112676056345,
+       "k": 0.85,
+       "a": 0.5,
+       "p": 4,
+       "zellen": 868,
+       "E_ist_kWh": 74.26825000000001,
+       "ah_noetig": 23.125,
+       "m_pack_kg": 362.5176470588235,
+       "E_brutto_kWh": 73.91304347826086,
+       "E_netto_kWh": 68.0,
+       "verbrauch_kWh_100km": 17.0,
+       "gesamtmasse_kg": 1500,
+       "batterieanteil": 0.24167843137254902,
+       "schritte": 0,
+       "zellmasse_kg": 308.14
+      }
+     },
+     "m_pack_spanne_kg": [
+      362.5176470588235,
+      474.0615384615384
+     ],
+     "grenze_kg": 450.0,
+     "anteil_unter_grenze": true,
+     "anteil_spanne": [
+      0.24167843137254902,
+      0.3160410256410256
+     ],
+     "pack_Wh_L_noetig": 208.26442231124506,
+     "bauraum": [
+      {
+       "volumennutzung": 0.4,
+       "verfuegbar_Wh_L": 257.32,
+       "abweichung": 0.2355446847058824,
+       "urteil": "erfüllt"
+      },
+      {
+       "volumennutzung": 0.6,
+       "verfuegbar_Wh_L": 385.97999999999996,
+       "abweichung": 0.8533170270588233,
+       "urteil": "erfüllt"
+      }
+     ],
+     "bauraum_urteil": "erfüllt",
+     "empfindlichkeit_kg": {
+      "k": {
+       "0.65": 474.0615384615384,
+       "0.85": 362.5176470588235
+      }
+     },
+     "empfindlichkeit_hub_kg": {
+      "k": 111.5438914027149
+     },
+     "staerkste_annahme": "k",
+     "schritte": 0
+    },
+    "B": {
+     "mitte": {
+      "w_Wh_kg": 241.02112676056333,
+      "k": 0.75,
+      "a": 0.5,
+      "p": 5,
+      "zellen": 1085,
+      "E_ist_kWh": 92.8353125,
+      "ah_noetig": 23.125,
+      "m_pack_kg": 513.5666666666667,
+      "E_brutto_kWh": 86.56613526570048,
+      "E_netto_kWh": 79.64084444444444,
+      "verbrauch_kWh_100km": 19.91021111111111,
+      "gesamtmasse_kg": 2013.5666666666666,
+      "batterieanteil": 0.2550532223086729,
+      "schritte": 3,
+      "zellmasse_kg": 385.175
+     },
+     "hauptwert": {
+      "w_Wh_kg": 241.02112676056333,
+      "k": 0.75,
+      "a": 0.5,
+      "p": 5,
+      "zellen": 1085,
+      "E_ist_kWh": 92.8353125,
+      "ah_noetig": 23.125,
+      "m_pack_kg": 513.5666666666667,
+      "E_brutto_kWh": 86.56613526570048,
+      "E_netto_kWh": 79.64084444444444,
+      "verbrauch_kWh_100km": 19.91021111111111,
+      "gesamtmasse_kg": 2013.5666666666666,
+      "batterieanteil": 0.2550532223086729,
+      "schritte": 3,
+      "zellmasse_kg": 385.175
+     },
+     "gitter": {
+      "k0.65": {
+       "w_Wh_kg": 241.02112676056336,
+       "k": 0.65,
+       "a": 0.5,
+       "p": 5,
+       "zellen": 1085,
+       "E_ist_kWh": 92.8353125,
+       "ah_noetig": 23.125,
+       "m_pack_kg": 592.5769230769231,
+       "E_brutto_kWh": 88.51276477146043,
+       "E_netto_kWh": 81.43174358974359,
+       "verbrauch_kWh_100km": 20.357935897435897,
+       "gesamtmasse_kg": 2092.576923076923,
+       "batterieanteil": 0.2831804731008878,
+       "schritte": 3,
+       "zellmasse_kg": 385.175
+      },
+      "k0.75": {
+       "w_Wh_kg": 241.02112676056333,
+       "k": 0.75,
+       "a": 0.5,
+       "p": 5,
+       "zellen": 1085,
+       "E_ist_kWh": 92.8353125,
+       "ah_noetig": 23.125,
+       "m_pack_kg": 513.5666666666667,
+       "E_brutto_kWh": 86.56613526570048,
+       "E_netto_kWh": 79.64084444444444,
+       "verbrauch_kWh_100km": 19.91021111111111,
+       "gesamtmasse_kg": 2013.5666666666666,
+       "batterieanteil": 0.2550532223086729,
+       "schritte": 3,
+       "zellmasse_kg": 385.175
+      },
+      "k0.85": {
+       "w_Wh_kg": 241.02112676056336,
+       "k": 0.85,
+       "a": 0.5,
+       "p": 5,
+       "zellen": 1085,
+       "E_ist_kWh": 92.8353125,
+       "ah_noetig": 23.125,
+       "m_pack_kg": 453.14705882352945,
+       "E_brutto_kWh": 85.07753623188405,
+       "E_netto_kWh": 78.27133333333333,
+       "verbrauch_kWh_100km": 19.567833333333333,
+       "gesamtmasse_kg": 1953.1470588235295,
+       "batterieanteil": 0.23200867378439022,
+       "schritte": 3,
+       "zellmasse_kg": 385.175
+      }
+     },
+     "m_pack_spanne_kg": [
+      453.14705882352945,
+      592.5769230769231
+     ],
+     "grenze_kg": 604.0699999999999,
+     "anteil_unter_grenze": true,
+     "anteil_spanne": [
+      0.23200867378439022,
+      0.2831804731008878
+     ],
+     "pack_Wh_L_noetig": 243.9169773617934,
+     "bauraum": [
+      {
+       "volumennutzung": 0.4,
+       "verfuegbar_Wh_L": 257.32,
+       "abweichung": 0.054949117454527796,
+       "urteil": "erfüllt"
+      },
+      {
+       "volumennutzung": 0.6,
+       "verfuegbar_Wh_L": 385.97999999999996,
+       "abweichung": 0.5824236761817916,
+       "urteil": "erfüllt"
+      }
+     ],
+     "bauraum_urteil": "erfüllt",
+     "empfindlichkeit_kg": {
+      "k": {
+       "0.65": 592.5769230769231,
+       "0.85": 453.14705882352945
+      },
+      "a": {
+       "0.3": 513.5666666666667,
+       "0.7": 513.5666666666667
+      }
+     },
+     "empfindlichkeit_hub_kg": {
+      "k": 139.42986425339365,
+      "a": 0.0
+     },
+     "staerkste_annahme": "k",
+     "schritte": 3
+    }
+   }
+  }
+ }
+}

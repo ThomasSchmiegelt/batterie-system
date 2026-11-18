@@ -1,0 +1,101 @@
+{
+ "anfrage": "cylindrical cell battery pack cell holder adhesive potting both terminals same end busbar",
+ "ab": "2015",
+ "inhaber": null,
+ "land": null,
+ "url": "https://patents.google.com/xhr/query?url=q%3D%28cylindrical%2Bcell%2Bbattery%2Bpack%2Bcell%2Bholder%2Badhesive%2Bpotting%2Bboth%2Bterminals%2Bsame%2Bend%2Bbusbar%29%26num%3D10%26after%3Dpriority%3A20150101&exp=",
+ "zeit": "2026-11-17 15:50:09",
+ "gesamt": 1183,
+ "treffer": [
+  {
+   "nr": "EP3550635B1",
+   "url": "https://patents.google.com/patent/EP3550635B1/en",
+   "titel": "Battery module and battery pack including the same",
+   "inhaber": "LG Chem, Ltd.",
+   "prioritaet": "2017-05-22",
+   "veroeffentlicht": "2021-05-19",
+   "kurz": "A battery module, comprising: a battery cell stack (100) having a plurality of battery cells (110) stacked; and a plurality of bus bars (200) respectively coupled to electrode leads (111) respectively provided at the plurality of battery cells (110), wherein the bus bar (200) includes: a frame ( …"
+  },
+  {
+   "nr": "CN216055077U",
+   "url": "https://patents.google.com/patent/CN216055077U/en",
+   "titel": "Battery cell, battery and power consumption device",
+   "inhaber": "宁德时代新能源科技股份有限公司",
+   "prioritaet": "2021-08-31",
+   "veroeffentlicht": "2022-03-15",
+   "kurz": "The embodiment of the application provides a battery monomer, a battery and a power consumption device. The battery cell includes a case, an electrode assembly, an end cap assembly, and a support. The housing has an opening. The electrode assembly is disposed within the housing. The electrode …"
+  },
+  {
+   "nr": "JP7627289B2",
+   "url": "https://patents.google.com/patent/JP7627289B2/en",
+   "titel": "Battery pack and automobile including same",
+   "inhaber": "エルジー エナジー ソリューション リミテッド",
+   "prioritaet": "2021-01-11",
+   "veroeffentlicht": "2025-02-05",
+   "kurz": "a battery cell assembly including a plurality of battery cells; a bus bar assembly provided on an upper side of the battery cell assembly and electrically connected to the plurality of battery cells; a heat sink disposed at a predetermined distance from the bus bar assembly and supporting lower …"
+  },
+  {
+   "nr": "US20220285777A1",
+   "url": "https://patents.google.com/patent/US20220285777A1/en",
+   "titel": "Battery Module, and Battery Pack and Vehicle Comprising Battery Module",
+   "inhaber": "Lg Energy Solution, Ltd.",
+   "prioritaet": "2019-11-11",
+   "veroeffentlicht": "2022-09-08",
+   "kurz": "Disclosed is a battery module, which includes a plurality of battery cells stacked on each other; and a plurality of adhesive members respectively disposed between the plurality of battery cells and configured to be removable according to a user manipulation."
+  },
+  {
+   "nr": "CN119208851A",
+   "url": "https://patents.google.com/patent/CN119208851A/en",
+   "titel": "Battery devices, energy storage devices and power consumption devices",
+   "inhaber": "宁德时代新能源科技股份有限公司",
+   "prioritaet": "2024-11-27",
+   "veroeffentlicht": "2024-12-27",
+   "kurz": "The application discloses a battery device, an energy storage device and an electricity utilization device, wherein the battery device comprises a plurality of battery cells, each battery cell comprises a shell and an electrode assembly, the shell comprises a plurality of shell walls, each shell …"
+  },
+  {
+   "nr": "EP3836247A1",
+   "url": "https://patents.google.com/patent/EP3836247A1/en",
+   "titel": "Battery module, battery pack comprising such battery module, and vehicle …",
+   "inhaber": "LG Chem, Ltd.",
+   "prioritaet": "2018-12-26",
+   "veroeffentlicht": "2021-06-16",
+   "kurz": "A battery module according to an embodiment of the present disclosure includes a plurality of battery cells, a module case configured to accommodate the plurality of battery cells, a busbar frame assembly slidably inserted into the module case to support the plurality of battery cells and …"
+  },
+  {
+   "nr": "KR102172519B1",
+   "url": "https://patents.google.com/patent/KR102172519B1/en",
+   "titel": "Bus bar assembly for connecting electrode lead and Battery module including the …",
+   "inhaber": "주식회사 엘지화학",
+   "prioritaet": "2017-10-11",
+   "veroeffentlicht": "2020-10-30",
+   "kurz": "The present invention discloses a busbar assembly. The bus bar assembly according to the present invention is a bus bar assembly for electrically connecting a plurality of battery cells having electrode leads, Insertion type bus bar provided in the form of a rod-shaped conductor; A side-contact …"
+  },
+  {
+   "nr": "EP4468446A1",
+   "url": "https://patents.google.com/patent/EP4468446A1/en",
+   "titel": "Battery pack",
+   "inhaber": "LG Energy Solution, Ltd.",
+   "prioritaet": "2022-02-23",
+   "veroeffentlicht": "2024-11-27",
+   "kurz": "The present invention relates to a battery pack, and in particular, the battery pack according to the present invention relates to a battery pack including a battery module, wherein the battery module includes: a cell stack in which a plurality of battery cells are stacked; a flexible circuit …"
+  },
+  {
+   "nr": "US11784360B2",
+   "url": "https://patents.google.com/patent/US11784360B2/en",
+   "titel": "Battery module",
+   "inhaber": "Sk On Co., Ltd.",
+   "prioritaet": "2019-05-14",
+   "veroeffentlicht": "2023-10-10",
+   "kurz": "A battery module includes a cell unit, including a plurality of battery cells disposed on both surfaces of a unit plate, and a case accommodating the cell unit. The unit plate includes a plurality of receiving spaces, in which the plurality of battery cells are disposed, and a connection member …"
+  },
+  {
+   "nr": "EP4030515A1",
+   "url": "https://patents.google.com/patent/EP4030515A1/en",
+   "titel": "Battery module",
+   "inhaber": "Lg Energy Solution, Ltd.",
+   "prioritaet": "2019-10-18",
+   "veroeffentlicht": "2022-07-20",
+   "kurz": "A battery module according to one embodiment of the present disclosure may include a cell block including a battery cell assembly containing one or more battery cells and a pair of terminal busbars connected to the battery cell assembly to electrically connect the battery cell to an external …"
+  }
+ ]
+}

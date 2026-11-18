@@ -1,0 +1,33 @@
+{
+ "hinweis": "KI-generiert, Entwurf. Sammelergebnis G4, erzeugt von cad/pack/pack_massen.py",
+ "masse_kg": {
+  "LFP": 611.8937620000052,
+  "NMC": 473.35510172299706
+ },
+ "c0b_fall_A_kg": {
+  "LFP": 615.9420289855072,
+  "NMC": 410.8533333333333
+ },
+ "abweichung_prozent": {
+  "LFP": -0.6572480517638701,
+  "NMC": 15.212671607791206
+ },
+ "im_band": {
+  "LFP": true,
+  "NMC": false
+ },
+ "baender": {
+  "LFP": [
+   560,
+   620
+  ],
+  "NMC": [
+   390,
+   430
+  ]
+ },
+ "quellen": [
+  "cad/pack/entwurf/ergebnis_LFP.json",
+  "cad/pack/entwurf/ergebnis_NMC.json"
+ ]
+}

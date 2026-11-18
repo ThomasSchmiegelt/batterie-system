@@ -1,0 +1,163 @@
+{
+ "hinweis": "KI-generiert (Claude Opus, 2026-11-17). Eingaben K0: Wärmesimulation einer Zelle je Variante (Elmer). Herkunft je Zahl.",
+ "geometrie": {
+  "quelle": "cad/zelle/entwurf/parameter_<V>_entwurf.json (BT-100, BT-120); Kern homogenisiert (Stapel/Wickel als ein orthotroper Körper), Gehäuse als eigene Schicht",
+  "LFP": "Quader 681 × 90 × 14 mm, steht hochkant (90 mm senkrecht), Kern = Innenraum ohne Endzonen (Elektrodenlänge 615,5 mm), Endzonen als Gehäuse+Luft",
+  "NMC": "Zylinder Ø46 × 80 mm, Kern Ringzylinder r 7…22,6 mm, Kernloch Luft"
+ },
+ "waermeleitung_W_mK": {
+  "LFP_gemessen_W18": {
+   "in_ebene": [
+    21.04,
+    19.82
+   ],
+   "quer": 4.11,
+   "herkunft": "W18 (314-Ah-LFP-Prismenzelle, andere Zelle, Analogie)"
+  },
+  "schichtmischung": {
+   "herkunft": "Annahme Opus: Mischregel parallel (in Ebene/axial) und seriell (quer/radial) aus Schichtdicken der Akten und Stoffwerten",
+   "stoff": {
+    "al": [
+     237,
+     "Annahme Lehrbuch"
+    ],
+    "cu": [
+     398,
+     "Annahme Lehrbuch"
+    ],
+    "lfp_kathode": [
+     1.0,
+     [
+      0.5,
+      1.5
+     ],
+     "Annahme"
+    ],
+    "nmc_kathode": [
+     1.5,
+     [
+      0.8,
+      2.0
+     ],
+     "Annahme"
+    ],
+    "graphit_anode": [
+     1.2,
+     [
+      0.8,
+      1.6
+     ],
+     "Annahme"
+    ],
+    "separator_nass": [
+     0.33,
+     [
+      0.2,
+      0.5
+     ],
+     "Annahme"
+    ]
+   }
+  },
+  "gehaeuse": {
+   "al": 237,
+   "stahl": 50,
+   "herkunft": "Annahme Lehrbuch"
+  },
+  "hauptfall": "LFP: W18 gemessen; NMC: Schichtmischung (keine Messung)"
+ },
+ "waermekapazitaet": {
+  "LFP_J_kgK": [
+   1112,
+   "W18"
+  ],
+  "NMC_J_kgK": [
+   1100,
+   "Annahme, wie LFP"
+  ],
+  "masse_g": {
+   "LFP": [
+    1850,
+    "ENT-020 (Annahme)"
+   ],
+   "NMC": [
+    355,
+    "ENT-011"
+   ]
+  }
+ },
+ "innenwiderstand_mOhm": {
+  "Blade_135Ah": {
+   "wert": 1.0,
+   "band": [
+    0.7,
+    1.5
+   ],
+   "herkunft": "W20 Abb. 8A (1C, 18 s Pulse, 20 °C), von Opus grob abgelesen"
+  },
+  "LFP_92Ah": {
+   "regel": "R ∝ 1/Ah: 1,0 × 135/92,4 = 1,46 mΩ",
+   "herkunft": "Annahme"
+  },
+  "NMC_4680": {
+   "wert": 6.5,
+   "band": [
+    5,
+    11
+   ],
+   "herkunft": "W20 Abb. 8B, grob abgelesen"
+  }
+ },
+ "lastfaelle": {
+  "L1": {
+   "name": "Dauer 1C",
+   "art": "stationär",
+   "herkunft": "Annahme"
+  },
+  "L2": {
+   "name": "Schnellladen 10→80 % in 20 min ≈ 2,1C",
+   "art": "transient 1200 s, Start 25 °C",
+   "herkunft": "Startsatz „in 20 min auf 80 %“ (REQ-P05 Vorschlag)"
+  }
+ },
+ "waermequelle": "Q = I² · R gleichmäßig im Kern (Annahme: ohne reversible Wärme, ohne Ortsabhängigkeit)",
+ "kuehlung": {
+  "K1": {
+   "name": "Boden gekühlt",
+   "LFP": "Schmalseite unten (681 × 14 mm)",
+   "NMC": "Becherboden",
+   "h_W_m2K": [
+    500,
+    [
+     200,
+     1000
+    ]
+   ],
+   "T_kuehl_C": 25,
+   "herkunft": "Annahme (Kühlplatte + Wärmeleitpaste)"
+  },
+  "K2": {
+   "name": "NMC seitlich gekühlt",
+   "NMC": "Mantel, Kühlband 25 % des Umfangs",
+   "h_W_m2K": [
+    500,
+    [
+     200,
+     1000
+    ]
+   ],
+   "herkunft": "Annahme"
+  },
+  "rest": "adiabat (Nachbarzellen gleich warm)"
+ },
+ "ziele": {
+  "T_max_C": [
+   45,
+   "Annahme, REQ-P09 offen, vom Autor festzulegen"
+  ],
+  "dT_zelle_K": [
+   5,
+   "Annahme, REQ-P09 offen"
+  ]
+ }
+}

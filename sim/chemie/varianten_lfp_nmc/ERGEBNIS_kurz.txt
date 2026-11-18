@@ -1,0 +1,9 @@
+KI-generiert (Claude Sonnet, 2026-11-16). Quelle: sim/chemie/varianten_lfp_nmc/ergebnis.json
+Energie A brutto 73,9 kWh; B brutto LFP 93,0 (160 Wh/kg) / NMC 86,6
+LFP: 250s×1p, 92,4 Ah (A, 160). Packmasse A: 160 616, 185 533, 210 469 kg; B (160) 775 kg
+NMC 4680: 217s×4p = 868 Zellen (A), E_ist 74,3 kWh, 411 kg; B 5p = 1085 Zellen, 514 kg
+Anteil A: LFP160 41,1 %, LFP185 35,5 %, NMC 27,4 % (Grenze 30 %); B: LFP160 34,1 %, NMC 25,5 %
+Bauraum: LFP A erfüllt (203,9 nötig / 213,2), LFP B nicht erfüllt; NMC A erfüllt, B erfüllt
+Zyklen: Bedarf 1000; LFP erfüllt, NMC unsicher
+Schritte Fall B: LFP 6, NMC 3; stärkste Annahme: LFP A w, NMC A k
+Abgleich ERWARTUNG: siehe ERGEBNIS.md; Verfehlungen: NMC-Bedarf Fall B 86,6 kWh liegt über Erwartung 84–86 (Pkt 1), sonst Pkt 1–6 wie erwartet

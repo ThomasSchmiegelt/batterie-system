@@ -1,0 +1,107 @@
+{
+ "hinweis": "KI-generiert (Claude Opus, 2026-11-16). Eingaben Variantenvergleich mit gemessenen Zellwerten. Herkunft je Zahl: Autor, Wxx, ENT-xxx, Annahme.",
+ "vorgaben": {
+  "fahrzeugmasse_kg": {
+   "wert": 1500,
+   "herkunft": "Autor 2026-11-16, Anhaltswert (Fall A mit, Fall B ohne Batterie)"
+  },
+  "reichweite_km": {
+   "wert": 400,
+   "herkunft": "Autor"
+  },
+  "systemspannung_V": {
+   "wert": 800,
+   "herkunft": "ENT-006 (Autor)"
+  }
+ },
+ "annahmen": "wie sim/chemie/vergleich_lfp_nmc/eingaben.json (verbrauch_ref 17, referenzmasse 1500, massenanteil 0.5 [0.3,0.7], reserve 0.08, km_leben 200000, sicherheit_zyklen 2, bauraum 1.9x1.4x0.13 m, grenze 0.30) – von dort lesen, nicht abschreiben",
+ "zelle_zu_pack_masse": {
+  "wert": 0.75,
+  "band": [
+   0.65,
+   0.85
+  ],
+  "herkunft": "Annahme, für beide Varianten gleich (keine Packquelle für 4680)"
+ },
+ "volumennutzung_pack": {
+  "LFP": {
+   "wert": 0.6,
+   "herkunft": "W19 (Blade bis 60 %, Sekundärquelle)"
+  },
+  "NMC": {
+   "band": [
+    0.4,
+    0.6
+   ],
+   "herkunft": "Annahme: zwischen konventionell 40 % (W19) und Blade 60 %; keine Quelle für 4680-Pack"
+  }
+ },
+ "varianten": {
+  "LFP": {
+   "zelle_Wh_kg": {
+    "wert": 160,
+    "band": [
+     160,
+     210
+    ],
+    "herkunft": "W20 gemessen Blade Gen 1 (160); oberes Bandende W03 Hersteller Long Blade 2.0 (210)"
+   },
+   "zelle_Wh_L": {
+    "wert": 355.263,
+    "herkunft": "W20 gemessen"
+   },
+   "nennspannung_V": {
+    "wert": 3.2,
+    "herkunft": "W20, ENT-005"
+   },
+   "kapazitaet_Ah": {
+    "wert": null,
+    "herkunft": "offen: aus Energie bei p=1 (Zelle wird angepasst, G1)"
+   },
+   "zyklen": {
+    "band": [
+     2500,
+     9000
+    ],
+    "herkunft": "W01, W03"
+   }
+  },
+  "NMC": {
+   "zelle_Wh_kg": {
+    "wert": 241.01,
+    "herkunft": "W20 gemessen 4680"
+   },
+   "zelle_Wh_L": {
+    "wert": 643.3,
+    "herkunft": "W20 gemessen"
+   },
+   "nennspannung_V": {
+    "wert": 3.7,
+    "herkunft": "ENT-010"
+   },
+   "kapazitaet_Ah": {
+    "wert": 23.125,
+    "herkunft": "ENT-009, Kaufzelle fest → p = ceil(E/(s·U·Ah))"
+   },
+   "zellmasse_g": {
+    "wert": 355,
+    "herkunft": "ENT-011"
+   },
+   "zyklen": {
+    "band": [
+     400,
+     1200
+    ],
+    "herkunft": "W02 Li-Ion allgemein, keine 4680-Quelle"
+   }
+  }
+ },
+ "bauraum_L_B_H_m": {
+  "wert": [
+   1.95,
+   1.43,
+   0.13
+  ],
+  "herkunft": "L ENT-013, B ENT-030 (Autor 2026-11-17), H Annahme"
+ }
+}

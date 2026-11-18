@@ -1,0 +1,6 @@
+Z22: FEHLT im Text der Quelle: "dimensions of 90 mm in height, 965 mm in length, and 14 mm in thickness" (file:///home/cae/hermes/batterie/quellen/blade_zerlegung/1-s2.0-S2666386425000529-main.pdf)
+Z24: FEHLT im Text der Quelle: "the BYD Blade cell uses LFP chemistry" (file:///home/cae/hermes/batterie/quellen/blade_zerlegung/1-s2.0-S2666386425000529-main.pdf)
+Z25: FEHLT im Text der Quelle: "the Tesla 4680 cell creates around 23 of the heat to be dissipated at a 1 C load" (file:///home/cae/hermes/batterie/quellen/blade_zerlegung/1-s2.0-S2666386425000529-main.pdf)
+Z26: FEHLT im Text der Quelle: "similar fractions of active material weight of approximately 60% for both cells" (file:///home/cae/hermes/batterie/quellen/blade_zerlegung/1-s2.0-S2666386425000529-main.pdf)
+
+17 Belege bestaetigt, 4 Fehler

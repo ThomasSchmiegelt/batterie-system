@@ -1,0 +1,101 @@
+{
+ "anfrage": "fast charging step charging pulse charging battery temperature control",
+ "ab": "2015",
+ "inhaber": null,
+ "land": null,
+ "url": "https://patents.google.com/xhr/query?url=q%3D%28fast%2Bcharging%2Bstep%2Bcharging%2Bpulse%2Bcharging%2Bbattery%2Btemperature%2Bcontrol%29%26num%3D10%26after%3Dpriority%3A20150101&exp=",
+ "zeit": "2026-11-17 13:27:48",
+ "gesamt": 124435,
+ "treffer": [
+  {
+   "nr": "EP3641046B1",
+   "url": "https://patents.google.com/patent/EP3641046B1/en",
+   "titel": "Charging device and charging method",
+   "inhaber": "Positec Power Tools (Suzhou) Co., Ltd",
+   "prioritaet": "2017-06-15",
+   "veroeffentlicht": "2023-07-12",
+   "kurz": "A charging device for charging a battery pack, the battery pack being detachably mountable on a power tool to provide power to the power tool, and the battery pack comprising a first battery pack and a second battery pack, wherein the charging device comprises: a parameter detecting unit (31) …"
+  },
+  {
+   "nr": "CN114523882B",
+   "url": "https://patents.google.com/patent/CN114523882B/en",
+   "titel": "Multi-element high-precision lithium battery preheating system",
+   "inhaber": "苏州赤兔驱动科技有限公司",
+   "prioritaet": "2022-03-21",
+   "veroeffentlicht": "2023-12-19",
+   "kurz": "The invention provides a multi-element high-precision lithium battery preheating system which comprises a temperature sensor, a battery pack, a BMS (battery management system), a charger, a central control unit and a remote user terminal; the method of measuring the temperature by adopting …"
+  },
+  {
+   "nr": "KR20180114206A",
+   "url": "https://patents.google.com/patent/KR20180114206A/en",
+   "titel": "Lithium-ion battery charging method with user, cell and temperature awareness",
+   "inhaber": "더 리젠츠 오브 더 유니버시티 오브 미시건",
+   "prioritaet": "2016-03-07",
+   "veroeffentlicht": "2018-10-17",
+   "kurz": "Lithium-ion cells are widely used in a variety of platforms such as electric vehicles (EVs) and mobile devices. Filling cells at high speeds has always been a goal for the operation of sustainable systems. However, given the new discovery that rest and dormancy are required, especially after …"
+  },
+  {
+   "nr": "CN120565924A",
+   "url": "https://patents.google.com/patent/CN120565924A/en",
+   "titel": "A thermal management control method for power batteries",
+   "inhaber": "徐州徐工新能源动力科技有限公司",
+   "prioritaet": "2025-05-26",
+   "veroeffentlicht": "2025-08-29",
+   "kurz": "The present invention discloses a power battery thermal management control method, which includes establishing a basic model for calculating battery heating and cooling; setting basic control logic, substituting the basic model into different control modes for different temperatures; data …"
+  },
+  {
+   "nr": "EP4625620A1",
+   "url": "https://patents.google.com/patent/EP4625620A1/en",
+   "titel": "Battery system temperature control method and apparatus, and battery system",
+   "inhaber": "Contemporary Amperex Technology Co., Limited",
+   "prioritaet": "2023-05-29",
+   "veroeffentlicht": "2025-10-01",
+   "kurz": "Embodiments of the present application provide a battery system temperature control method and apparatus, and a battery system. The battery system temperature control method includes: obtaining a cluster temperature of each of a plurality of battery clusters of the battery system; and performing …"
+  },
+  {
+   "nr": "CN114976316A",
+   "url": "https://patents.google.com/patent/CN114976316A/en",
+   "titel": "Battery equalization function dormancy management method and system, electronic …",
+   "inhaber": "重庆长安新能源汽车科技有限公司",
+   "prioritaet": "2022-06-29",
+   "veroeffentlicht": "2022-08-30",
+   "kurz": "The present invention provides a method, system, electronic device and vehicle for dormancy management of a battery balancing function. The method includes: step 1. After the vehicle is powered off and dormant, the BMS sub-board enters an inspection working mode, and the cell voltage, NTC …"
+  },
+  {
+   "nr": "WO2022182642A1",
+   "url": "https://patents.google.com/patent/WO2022182642A1/en",
+   "titel": "Fast charging batteries at low temperatures with battery pack preheating",
+   "inhaber": "All Cell Technologies, Llc",
+   "prioritaet": "2021-02-23",
+   "veroeffentlicht": "2022-09-01",
+   "kurz": "A method and apparatus for charging a battery pack including a plurality of electrochemical cells distributed within a thermal management composite matrix, including a phase change material. The method operates upon determining that a battery pack temperature and/or voltage measurement is below a …"
+  },
+  {
+   "nr": "KR102734327B1",
+   "url": "https://patents.google.com/patent/KR102734327B1/en",
+   "titel": "Battery system for vehicle and controlling method thereof",
+   "inhaber": "주식회사 엘지에너지솔루션",
+   "prioritaet": "2019-10-23",
+   "veroeffentlicht": "2024-11-27",
+   "kurz": "The present invention relates to a vehicle battery system and a control method thereof, and provides a control method of a vehicle battery system including: a step of monitoring a state of a battery module in a battery management system that controls the operation of the battery module; a step of …"
+  },
+  {
+   "nr": "CN116348332A",
+   "url": "https://patents.google.com/patent/CN116348332A/en",
+   "titel": "System and method for rapidly charging a battery using combined constant …",
+   "inhaber": "Tvs电机股份有限公司",
+   "prioritaet": "2020-10-29",
+   "veroeffentlicht": "2023-06-27",
+   "kurz": "The present invention relates to a charging system (10) and a method of rapidly charging a battery. Accordingly, the charging system (10) and method includes continuously monitoring data related to one or more batteries (100) by a BMS (105), using a control unit and reading a state of charge (SOC) …"
+  },
+  {
+   "nr": "CN113815494A",
+   "url": "https://patents.google.com/patent/CN113815494A/en",
+   "titel": "Preheating charging control method of lithium ion battery",
+   "inhaber": "北京链宇科技有限责任公司",
+   "prioritaet": "2021-09-22",
+   "veroeffentlicht": "2021-12-21",
+   "kurz": "The invention discloses a preheating charge control method of a lithium ion battery, which comprises the steps of firstly establishing a thermoelectric coupling temperature and negative electrode potential estimation model, secondly heating the battery to a preset initial charging temperature …"
+  }
+ ]
+}

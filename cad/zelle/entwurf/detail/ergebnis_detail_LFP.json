@@ -1,0 +1,298 @@
+{
+ "variante": "LFP",
+ "stapel": {
+  "kathoden": 38,
+  "anoden": 39,
+  "separatorlagen": 78,
+  "dicke_kathode_mm": 0.16,
+  "dicke_anode_mm": 0.14,
+  "dicke_separator_mm": 0.012,
+  "stapeldicke_mm": 12.476,
+  "innendicke_mm": 13.4,
+  "rest_zur_innendicke_mm": 0.9239999999999995,
+  "rest_nach_beutel_mm": 0.7240000000000002,
+  "stapel_z_von_bis_mm": [
+   0.7619999999999996,
+   13.238000000000014
+  ]
+ },
+ "laengen_mm": {
+  "zelle": 681.0,
+  "separator": 631.0,
+  "endzone_je_seite_ab_separator": 24.69999999999999,
+  "fahnenspitze_kathode_x": 657.25,
+  "fahnenspitze_anode_x": 23.5,
+  "innen_platz_stromschiene_bis_wand_kathode": 22.450000000000045,
+  "innen_platz_stromschiene_bis_wand_anode": 22.2
+ },
+ "fahnenbreite_aus_aufbau_W20_mm": {
+  "kathode": 27.1,
+  "anode": 20.5,
+  "hinweis": "Abb.5A, Deutung als Breite unsicher"
+ },
+ "annahmen": {
+  "A_POL_D": 10.0,
+  "A_POL_H": 3.0,
+  "A_PET_FOLIE_MM": 0.05,
+  "A_BEUTEL_MM": 0.1,
+  "A_BB_DICKE_MM": 1.0,
+  "A_HALTER_BREITE_MM": 40.0,
+  "A_ORING_R_MM": 1.0,
+  "A_VENTIL_D_MM": 8.0,
+  "A_VENTIL_H_MM": 0.5,
+  "A_VENTIL_Y_MM": 25.0,
+  "A_STOPFEN_D_MM": 3.0,
+  "A_STOPFEN_H_MM": 1.5,
+  "A_STOPFEN_Y_MM": -25.0,
+  "A_UEBERHOEHUNG": 20.0,
+  "A_ENDZONE_FENSTER_MM": 110.0
+ },
+ "nicht_modelliert": [
+  "Isolierrand Kathode 6,5 mm (BT-114)",
+  "Klebeband/Kunststoffschiene BT-116",
+  "Faltbögen nur als gerades Band",
+  "Fahnen nicht zu Bündeln verdichtet"
+ ],
+ "volumen_je_teil_cm3": {
+  "Kathode_Beschichtung": 270.14295000000186,
+  "Al_Folie": 38.77721399999937,
+  "Anode_Beschichtung": 267.18900000000036,
+  "Cu_Folie": 20.60896499999955,
+  "Separator": 51.38359199999993,
+  "Separator_Falz": 0.01397707199996105,
+  "Stromschiene_Al_Kathode": 0.3380996000000003,
+  "Stromschiene_Cu_Anode": 0.25575800000000026,
+  "Pol_plus_Al": 2.0224002707484297,
+  "Pol_minus_Cu": 2.0027653166634933,
+  "Halter_Kathode": 10.090381123172747,
+  "Halter_Anode": 9.978016077257664,
+  "Isolationsbeutel": 13.96180799999999,
+  "Gehaeuse_Al": 42.873532600943086,
+  "O_Ringe": 0.23687050562614315,
+  "PET_Folie": 7.0892099999999045,
+  "Ventil": 0.025132741228718343,
+  "Stopfen": 0.01060287520586555
+ },
+ "gueltig": {
+  "Kathode_Beschichtung": true,
+  "Al_Folie": true,
+  "Anode_Beschichtung": true,
+  "Cu_Folie": true,
+  "Separator": true,
+  "Separator_Falz": true,
+  "Stromschiene_Al_Kathode": true,
+  "Stromschiene_Cu_Anode": true,
+  "Pol_plus_Al": true,
+  "Pol_minus_Cu": true,
+  "Halter_Kathode": true,
+  "Halter_Anode": true,
+  "Isolationsbeutel": true,
+  "Gehaeuse_Al": true,
+  "O_Ringe": true,
+  "PET_Folie": true,
+  "Ventil": true,
+  "Stopfen": true
+ },
+ "obj": {
+  "voll_Kathode_Beschichtung": [
+   608,
+   912
+  ],
+  "voll_Al_Folie": [
+   608,
+   912
+  ],
+  "voll_Anode_Beschichtung": [
+   624,
+   936
+  ],
+  "voll_Cu_Folie": [
+   624,
+   936
+  ],
+  "voll_Separator": [
+   624,
+   936
+  ],
+  "voll_Separator_Falz": [
+   616,
+   924
+  ],
+  "voll_Stromschiene_Al_Kathode": [
+   8,
+   12
+  ],
+  "voll_Stromschiene_Cu_Anode": [
+   8,
+   12
+  ],
+  "voll_Pol_plus_Al": [
+   252,
+   500
+  ],
+  "voll_Pol_minus_Cu": [
+   252,
+   500
+  ],
+  "voll_Halter_Kathode": [
+   266,
+   540
+  ],
+  "voll_Halter_Anode": [
+   266,
+   540
+  ],
+  "voll_Isolationsbeutel": [
+   16,
+   32
+  ],
+  "voll_Gehaeuse_Al": [
+   776,
+   1564
+  ],
+  "voll_O_Ringe": [
+   31752,
+   63504
+  ],
+  "voll_PET_Folie": [
+   16,
+   32
+  ],
+  "voll_Ventil": [
+   252,
+   500
+  ],
+  "voll_Stopfen": [
+   252,
+   500
+  ],
+  "ende_Kathode_Beschichtung": [
+   608,
+   912
+  ],
+  "ende_Al_Folie": [
+   608,
+   912
+  ],
+  "ende_Anode_Beschichtung": [
+   624,
+   936
+  ],
+  "ende_Cu_Folie": [
+   312,
+   468
+  ],
+  "ende_Separator": [
+   624,
+   936
+  ],
+  "ende_Separator_Falz": [
+   312,
+   468
+  ],
+  "ende_Stromschiene_Al_Kathode": [
+   8,
+   12
+  ],
+  "ende_Pol_plus_Al": [
+   252,
+   500
+  ],
+  "ende_Halter_Kathode": [
+   266,
+   540
+  ],
+  "ende_Isolationsbeutel": [
+   16,
+   32
+  ],
+  "ende_Gehaeuse_Al": [
+   270,
+   544
+  ],
+  "ende_O_Ringe": [
+   15876,
+   31752
+  ],
+  "ende_PET_Folie": [
+   16,
+   32
+  ],
+  "ende_Ventil": [
+   252,
+   500
+  ],
+  "schnitt_Kathode_Beschichtung": [
+   608,
+   912
+  ],
+  "schnitt_Al_Folie": [
+   532,
+   912
+  ],
+  "schnitt_Anode_Beschichtung": [
+   624,
+   936
+  ],
+  "schnitt_Cu_Folie": [
+   312,
+   468
+  ],
+  "schnitt_Separator": [
+   624,
+   936
+  ],
+  "schnitt_Separator_Falz": [
+   312,
+   468
+  ],
+  "schnitt_Stromschiene_Al_Kathode": [
+   8,
+   12
+  ],
+  "schnitt_Pol_plus_Al": [
+   128,
+   252
+  ],
+  "schnitt_Halter_Kathode": [
+   140,
+   280
+  ],
+  "schnitt_Isolationsbeutel": [
+   16,
+   28
+  ],
+  "schnitt_Gehaeuse_Al": [
+   143,
+   282
+  ],
+  "schnitt_O_Ringe": [
+   8064,
+   16124
+  ],
+  "schnitt_PET_Folie": [
+   16,
+   28
+  ],
+  "lagen_Kathode_Beschichtung": [
+   16,
+   24
+  ],
+  "lagen_Al_Folie": [
+   8,
+   12
+  ],
+  "lagen_Anode_Beschichtung": [
+   32,
+   48
+  ],
+  "lagen_Cu_Folie": [
+   16,
+   24
+  ],
+  "lagen_Separator": [
+   32,
+   48
+  ]
+ }
+}

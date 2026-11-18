@@ -1,0 +1,6 @@
+Z15: FEHLT im Text der Quelle: "specific energy of CATL's LFP battery is claimed to be 205 watt-hours per kilogr" (https://en.wikipedia.org/wiki/Lithium_iron_phosphate_battery)
+Z16: FEHLT im Text der Quelle: "Volumetric energy density = 227–396 W⋅h/L (820–1,430 kJ/L)" (https://en.wikipedia.org/wiki/Lithium_iron_phosphate_battery)
+Z36: WERT OHNE BELEG: - **Kühlung / Thermik:** Bei 0 °C sinkt die verfügbare Kapazität auf ≈ 66 % und bei −20 °C auf ≈ 33 
+Z43: WERT OHNE BELEG: 2. Wie groß ist der Kapazitätsverlust bei den für uns relevanten Betriebstemperaturen (z. B. −10 °C,
+
+12 Belege bestaetigt, 2 Fehler

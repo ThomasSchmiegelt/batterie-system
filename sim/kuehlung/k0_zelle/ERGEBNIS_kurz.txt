@@ -1,0 +1,7 @@
+K0 Ergebnis (2026-11-17, KI-generiert, Entwurf). Quelle sim/kuehlung/k0_zelle/ergebnis.json. Vorgabe REQ-P09: T_max <= 45 C, dT <= 5 K. Hauptfall K1 (Boden gekuehlt).
+L1 (1C, stationaer): LFP T_max 30.1 C, dT 3.0 K; NMC T_max 33.5 C, dT 4.8 K; Bilanz < 0,001 %.
+L2 (2,1C, 1200 s): LFP T_max 43.1 C, dT 10.6 K; NMC K1 53.6 C / 16.0 K; NMC K2 49.9 C / 18.1 K.
+dT-Vorgabe 5 K bei L2 von allen verfehlt; T_max-Vorgabe 45 C nur von LFP eingehalten.
+Netzstudie: max. Aenderung T_max 0.017 K (< 0,5 K).
+Verfehlte Erwartung: NMC L2 T_max (45-50 erwartet), K2 dT >= 20 K. Offen: Gehaeuse-Dichte/c, W18-Richtungszuordnung, NMC-Bodenkontakt/Spalt.
+Bilder: sim/kuehlung/k0_zelle/*.png, bilder/ (gerenderte Folge und MP4, Blender statt pvbatch).

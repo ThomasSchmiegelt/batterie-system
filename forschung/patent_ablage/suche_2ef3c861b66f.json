@@ -1,0 +1,101 @@
+{
+ "anfrage": "battery pack liquid cooling plate bottom cells thermal interface",
+ "ab": "2015",
+ "inhaber": null,
+ "land": null,
+ "url": "https://patents.google.com/xhr/query?url=q%3D%28battery%2Bpack%2Bliquid%2Bcooling%2Bplate%2Bbottom%2Bcells%2Bthermal%2Binterface%29%26num%3D10%26after%3Dpriority%3A20150101&exp=",
+ "zeit": "2026-11-17 13:05:12",
+ "gesamt": 137387,
+ "treffer": [
+  {
+   "nr": "CN114976358A",
+   "url": "https://patents.google.com/patent/CN114976358A/en",
+   "titel": "Manufacturing method and battery pack of phase change material plate for …",
+   "inhaber": "中国第一汽车股份有限公司",
+   "prioritaet": "2022-06-16",
+   "veroeffentlicht": "2022-08-30",
+   "kurz": "The invention discloses a manufacturing method of a phase change material plate for a combined type heat management system and a battery pack, wherein the battery pack comprises a box body, a battery pack, the phase change material plate and a phase change material frame; the box body is provided …"
+  },
+  {
+   "nr": "EP3588666B1",
+   "url": "https://patents.google.com/patent/EP3588666B1/en",
+   "titel": "Battery pack having improved temperature control performance",
+   "inhaber": "LG Energy Solution, Ltd.",
+   "prioritaet": "2017-08-14",
+   "veroeffentlicht": "2022-06-29",
+   "kurz": "A battery pack comprising: a plurality of battery modules (100) which comprise at least one secondary battery therein and which are spaced apart from each other in a stacking direction (X) of the battery modules by a certain distance between respective facing side surfaces of adjacent battery …"
+  },
+  {
+   "nr": "WO2023169534A1",
+   "url": "https://patents.google.com/patent/WO2023169534A1/en",
+   "titel": "Vehicle chassis assembly and automobile",
+   "inhaber": "威睿电动汽车技术(宁波)有限公司",
+   "prioritaet": "2022-03-10",
+   "veroeffentlicht": "2023-09-14",
+   "kurz": "The present application provides a vehicle chassis assembly and an automobile. The vehicle chassis assembly comprises a vehicle body bottom plate and a battery pack assembly. The battery pack assembly comprises a lower shell and a battery cell. The lower shell and the vehicle body bottom plate are …"
+  },
+  {
+   "nr": "CN112701381A",
+   "url": "https://patents.google.com/patent/CN112701381A/en",
+   "titel": "Immersive battery pack cooling system",
+   "inhaber": "清华大学苏州汽车研究院（吴江）",
+   "prioritaet": "2020-12-31",
+   "veroeffentlicht": "2021-04-23",
+   "kurz": "The invention discloses an immersion type battery pack cooling system, which belongs to the technical field of batteries and comprises: the battery pack comprises a battery pack, the battery pack comprises a battery bracket and a plurality of single batteries arranged on the battery bracket side …"
+  },
+  {
+   "nr": "US20230124905A1",
+   "url": "https://patents.google.com/patent/US20230124905A1/en",
+   "titel": "Battery cell pack for electric vehicle",
+   "inhaber": "Volvo Car Corporation",
+   "prioritaet": "2021-10-15",
+   "veroeffentlicht": "2023-04-20",
+   "kurz": "A battery cell pack includes a battery cell having first and second terminals and a gas vent on a bottom side of the battery cell; a frame on the bottom side of the battery cell, the frame including: a frame plate including first and second openings aligned with the first and second terminals and …"
+  },
+  {
+   "nr": "CN115842193A",
+   "url": "https://patents.google.com/patent/CN115842193A/en",
+   "titel": "Lithium battery pack thermal management system based on parallel liquid cooling …",
+   "inhaber": "广东电网有限责任公司",
+   "prioritaet": "2022-12-05",
+   "veroeffentlicht": "2023-03-24",
+   "kurz": "The present application discloses a lithium battery pack heat management system based on parallel liquid cold plates, including: a battery case and a lithium battery pack arranged in the battery case, the lithium battery pack includes a plurality of lithium battery cells arranged at intervals in …"
+  },
+  {
+   "nr": "CN108140916B",
+   "url": "https://patents.google.com/patent/CN108140916B/en",
+   "titel": "Battery module and battery pack and vehicle including the same",
+   "inhaber": "株式会社Lg化学",
+   "prioritaet": "2016-06-13",
+   "veroeffentlicht": "2020-12-22",
+   "kurz": "The invention relates to a battery module, and a battery pack and a vehicle each including the battery module. A battery module according to an embodiment of the present invention includes a battery module including: a plurality of battery cells each having a receiving part for receiving an …"
+  },
+  {
+   "nr": "JP7262592B2",
+   "url": "https://patents.google.com/patent/JP7262592B2/en",
+   "titel": "battery module",
+   "inhaber": "エルジー エナジー ソリューション リミテッド",
+   "prioritaet": "2020-01-22",
+   "veroeffentlicht": "2023-04-21",
+   "kurz": "a cell laminate composed of a plurality of secondary batteries arranged in close contact along one direction; a module housing capable of accommodating the cell laminate inside; a thermally conductive adhesive provided in a space between the lower end of the cell stack and the bottom surface of …"
+  },
+  {
+   "nr": "CN116826242B",
+   "url": "https://patents.google.com/patent/CN116826242B/en",
+   "titel": "Square lithium battery thermal management system capable of freely assembling …",
+   "inhaber": "西安交通大学",
+   "prioritaet": "2023-07-31",
+   "veroeffentlicht": "2026-07-14",
+   "kurz": "The invention discloses a heat management system of a square lithium battery capable of freely assembling, coupling phase-change cooling and air-cooling heat dissipation, which comprises a square lithium battery, stepped phase-change cooling assemblies, an air-cooling channel and an end cover."
+  },
+  {
+   "nr": "CN211828908U",
+   "url": "https://patents.google.com/patent/CN211828908U/en",
+   "titel": "Battery module and battery",
+   "inhaber": "摩登汽车(盐城)有限公司",
+   "prioritaet": "2020-04-02",
+   "veroeffentlicht": "2020-10-30",
+   "kurz": "The utility model discloses a battery module and a battery. A flow channel structure is integrated in a side plate of the battery module, and the flow channel structure is filled with a phase change material capable of absorbing and releasing heat, so that the side plate has the side of a …"
+  }
+ ]
+}

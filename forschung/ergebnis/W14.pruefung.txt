@@ -1,0 +1,3 @@
+Z19: FEHLT im Text der Quelle: "maximum_voltage : 16V DC" (https://en.wikipedia.org/wiki/CAN_bus)
+
+8 Belege bestaetigt, 1 Fehler

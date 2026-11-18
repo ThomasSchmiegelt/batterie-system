@@ -1,0 +1,20 @@
+# KI-generiert (Claude Opus, 2026-11-18). Schlank: kein venv, keine fremden Texte, keine großen CAD-Dateien.
+.venv/
+__pycache__/
+*.pyc
+forschung/pakete/
+forschung/STOP
+*.step
+*.stp
+*.FCStd
+*.FCBak
+*.blend
+*.blend1
+*.vtu
+*.pvtu
+cad/**/netz_*.json
+*.log
+# Fremde Inhalte (Lizenz, docs/10): Quellen-PDFs, Datensätze, PI-Rohlogs mit Quelltexten
+quellen/
+*.jsonl
+forschung/recherche_ablage/

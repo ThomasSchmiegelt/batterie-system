@@ -1,0 +1,1407 @@
+{
+  "id": "batterie0001",
+  "name": "Batteriesystem (KI-generiert)",
+  "created_at": 1794501458.0246508,
+  "updated_at": 1794501458.024651,
+  "tasks": [
+    {
+      "id": "S0",
+      "name": "Projektstart: Grundgerüst, Regeln, Software",
+      "duration": 0,
+      "predecessors": [],
+      "successors": [
+        "R1"
+      ],
+      "resources": "Opus",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Opus",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "erledigt 2026-11-11 | Status: fertig | REQ: REQ-D09 | Doku: README.md, CLAUDE.md, AGENTS.md, SOFTWARE.md | Ergebnis: README.md ✓, SOFTWARE.md ✓, requirements.txt ✓",
+      "is_start": true,
+      "is_end": false
+    },
+    {
+      "id": "R1",
+      "name": "Wissensaufbau W01-W15 (Chemie, Zelltypen, Spannung, Kabel, Steuerung, Struktur)",
+      "duration": 2,
+      "predecessors": [
+        "S0"
+      ],
+      "successors": [
+        "R2"
+      ],
+      "resources": "PI, Maschine",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "PI",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "hardware",
+          "name": "Maschine",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Stufe 1, läuft seit 2026-11-12 | Status: fertig | REQ: REQ-D01, REQ-D07 | Wissen: W01, W02, W03, W04, W05, W06, W07, W08, W09, W10, W11, W12, W13, W14, W15, W16, W17 | Befunde: B-BAT-001, B-BAT-002, B-BAT-004, B-BAT-005, B-BAT-009, B-BAT-008 | Software: PI, web-recherche | Ergebnis: forschung/WISSEN.md ✓",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "R2",
+      "name": "Werkzeuge T01-T07 (Open Source Zellchemie, Elektroauslegung, Ersatzmodelle)",
+      "duration": 1,
+      "predecessors": [
+        "R1"
+      ],
+      "successors": [
+        "R3",
+        "U1"
+      ],
+      "resources": "PI, Maschine",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "PI",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "hardware",
+          "name": "Maschine",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Stufe 1 | Status: fertig | REQ: REQ-D01, REQ-D07 | Wissen: T01, T02, T03, T04, T05, T06, T07, T08, T09 | Befunde: B-BAT-002, B-BAT-003, B-BAT-004, B-BAT-005 | Software: PI, web-recherche | Ergebnis: forschung/WERKZEUGE.md ✓",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "R3",
+      "name": "Patente P01-P10",
+      "duration": 1,
+      "predecessors": [
+        "R2"
+      ],
+      "successors": [
+        "R4",
+        "B5"
+      ],
+      "resources": "PI, Maschine",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "PI",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "hardware",
+          "name": "Maschine",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Stufe 1 | Status: fertig | REQ: REQ-D08 | Wissen: P01, P02, P03, P04, P05, P06, P07, P08, P09, P10 | Befunde: B-BAT-003, B-BAT-004, B-BAT-022, B-BAT-020, B-BAT-019, B-BAT-017, B-BAT-013, B-BAT-007 | Software: PI, patent-recherche | Ergebnis: forschung/PATENTE.md ✓",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "R4",
+      "name": "Recherche prüfen: Zitate, Aussagen, Widersprüche -> BEFUNDE",
+      "duration": 1,
+      "predecessors": [
+        "R3"
+      ],
+      "successors": [
+        "R5",
+        "V1",
+        "G1",
+        "K0",
+        "X1"
+      ],
+      "resources": "Opus, Haiku",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Opus",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "software",
+          "name": "Haiku",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Regel 2 CLAUDE.md | Status: ohne Nachweis | REQ: REQ-D01 | Befunde: B-BAT-001, B-BAT-002, B-BAT-004, B-BAT-005, B-BAT-009, B-BAT-007 | Doku: BEFUNDE.md",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "R5",
+      "name": "Werkzeugwahl festlegen (ENT): Zellmodell, Packmodell, Schaltung",
+      "duration": 1,
+      "predecessors": [
+        "R4"
+      ],
+      "successors": [
+        "W1",
+        "C1",
+        "E4"
+      ],
+      "resources": "Opus, Mensch",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Opus",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "human",
+          "name": "Mensch",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Entscheidungsakte | Status: ohne Nachweis | REQ: REQ-D11 | Wissen: T01, T02, T04, T05 | Befunde: B-BAT-002, B-BAT-003, B-BAT-004 | Doku: docs/04_entscheidungen.md",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "W1",
+      "name": "Preprocessing mit Sketch-to-Prompt: Ein-/Auslass, Lager, Lasten, Kabelwege auf das STL zeichnen",
+      "duration": 2,
+      "predecessors": [
+        "R5"
+      ],
+      "successors": [
+        "W2",
+        "L1"
+      ],
+      "resources": "Opus, Mensch",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Opus",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "human",
+          "name": "Mensch",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Werkzeug, Nutzerwunsch 2026-11-12 | Status: offen | Software: Sketch-to-Prompt | Doku: docs/konzept_werkzeuge_kuehlung_kabel_crash.md | Ergebnis: werkzeuge/pre/*",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "W2",
+      "name": "Postprocessing: Schnittebenen aus Skizzenlinie + Blickrichtung, Feldwerte (Strömung, Spannung) je Schnitt",
+      "duration": 2,
+      "predecessors": [
+        "W1"
+      ],
+      "successors": [
+        "K1",
+        "X1"
+      ],
+      "resources": "Sonnet",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Sonnet",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Werkzeug, für K/X/M | Status: offen | Software: Sketch-to-Prompt, ParaView, pyvista | Doku: docs/konzept_werkzeuge_kuehlung_kabel_crash.md | Ergebnis: werkzeuge/post/*",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "V1",
+      "name": "Lastenheft-Werte REQ-P01..P08 vorschlagen (Fahrzeug, kWh, Spannung, Leistung, Laden, Chemie, Bauraum, Temperatur)",
+      "duration": 1,
+      "predecessors": [
+        "R4"
+      ],
+      "successors": [
+        "SL1",
+        "V2",
+        "B0"
+      ],
+      "resources": "Opus",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Opus",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Stufe 0 | Status: fertig | REQ: REQ-P01, REQ-P02, REQ-P03, REQ-P04, REQ-P05, REQ-P06, REQ-P07, REQ-P08, REQ-P09, REQ-P10 | Bauteil: BT-000 | Befunde: B-BAT-004, B-BAT-013, B-BAT-011, B-BAT-010, B-BAT-009, B-BAT-008, B-BAT-007, B-BAT-006 | ENT: ENT-001, ENT-003, ENT-004, ENT-006, ENT-013, ENT-030, ENT-091, ENT-102, ENT-103 | Doku: docs/startparameter.md, docs/01_lastenheft.md, docs/13_stueckliste.md | Ergebnis: pm/startwerte.json ✓",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "SL1",
+      "name": "Grobe Stückliste aus Startsatz (Baugruppen, Mengen mit Herleitung)",
+      "duration": 0.5,
+      "predecessors": [
+        "V1"
+      ],
+      "successors": [
+        "SL2"
+      ],
+      "resources": "Opus",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Opus",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "erledigt 2026-11-12 (Vorschlags-Startsatz) | Status: fertig | REQ: REQ-D01 | Bauteil: BT-000 | Befunde: B-BAT-004 | ENT: ENT-001, ENT-003, ENT-004, ENT-006, ENT-013, ENT-030, ENT-091, ENT-102, ENT-103 | Doku: docs/13_stueckliste.md | Ergebnis: pm/bauteile/stueckliste.json ✓, docs/13_stueckliste.md ✓",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "V2",
+      "name": "Freigabe Lastenheft durch Autor",
+      "duration": 2,
+      "predecessors": [
+        "V1"
+      ],
+      "successors": [
+        "C1",
+        "G1",
+        "G3"
+      ],
+      "resources": "Mensch",
+      "resource_list": [
+        {
+          "kind": "human",
+          "name": "Mensch",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "nur Mensch gibt frei | Status: ohne Nachweis | REQ: REQ-D05, REQ-P01, REQ-P02, REQ-P03, REQ-P04, REQ-P05, REQ-P06, REQ-P07, REQ-P08, REQ-P09, REQ-P10 | Bauteil: BT-000 | ENT: ENT-001, ENT-003, ENT-004, ENT-006, ENT-013, ENT-030, ENT-091, ENT-102, ENT-103 | Doku: docs/01_lastenheft.md",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "C1",
+      "name": "ERWARTUNG Zellmodell (Entladekurve, Wärme, Innenwiderstand)",
+      "duration": 0.5,
+      "predecessors": [
+        "V2",
+        "R5"
+      ],
+      "successors": [
+        "C2"
+      ],
+      "resources": "Opus",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Opus",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Stufe 2 | Status: offen | REQ: REQ-D06 | Bauteil: BT-100 | Befunde: B-BAT-022, B-BAT-015 | ENT: ENT-002, ENT-004, ENT-005, ENT-006, ENT-007, ENT-008, ENT-009, ENT-010, ENT-011, ENT-012, ENT-014, ENT-015, ENT-016, ENT-017, ENT-018, ENT-019, ENT-020, ENT-025, ENT-026 | Ergebnis: sim/chemie/ERWARTUNG.md",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "C2",
+      "name": "Zellmodell LFP (PyBaMM Prada2013) auf langes Format skalieren",
+      "duration": 2,
+      "predecessors": [
+        "C1"
+      ],
+      "successors": [
+        "C3"
+      ],
+      "resources": "Sonnet, Maschine",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Sonnet",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "hardware",
+          "name": "Maschine",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Stufe 2 | Status: offen | REQ: REQ-P06 | Bauteil: BT-100 | Wissen: W01, W09, T01 | Befunde: B-BAT-001, B-BAT-004, B-BAT-005, B-BAT-007 | ENT: ENT-002, ENT-004, ENT-005, ENT-006, ENT-007, ENT-008, ENT-009, ENT-010, ENT-011, ENT-012, ENT-014, ENT-015, ENT-016, ENT-017, ENT-018, ENT-019, ENT-020, ENT-025, ENT-026 | Stückliste: 100.1 | Software: PyBaMM | Ergebnis: sim/chemie/zelle_lang*",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "C3",
+      "name": "Ratentest 0,5C/1C/2C, Wärmeleistung, R_i über SOC und T",
+      "duration": 1,
+      "predecessors": [
+        "C2"
+      ],
+      "successors": [
+        "C4",
+        "G3",
+        "K0",
+        "K1"
+      ],
+      "resources": "Sonnet, Maschine",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Sonnet",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "hardware",
+          "name": "Maschine",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Stufe 2 | Status: offen | REQ: REQ-P04, REQ-P05 | Bauteil: BT-100 | ENT: ENT-002, ENT-004, ENT-005, ENT-006, ENT-007, ENT-008, ENT-009, ENT-010, ENT-011, ENT-012, ENT-014, ENT-015, ENT-016, ENT-017, ENT-018, ENT-019, ENT-020, ENT-025, ENT-026 | Software: PyBaMM | Ergebnis: sim/chemie/ratentest*",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "C4",
+      "name": "Validierung gegen veröffentlichte Messkurven, Abgleich Erwartung",
+      "duration": 1,
+      "predecessors": [
+        "C3"
+      ],
+      "successors": [
+        "C5",
+        "E3"
+      ],
+      "resources": "Opus",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Opus",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Stufe 2 | Status: offen | REQ: REQ-D06, REQ-D01 | Bauteil: BT-100 | ENT: ENT-002, ENT-004, ENT-005, ENT-006, ENT-007, ENT-008, ENT-009, ENT-010, ENT-011, ENT-012, ENT-014, ENT-015, ENT-016, ENT-017, ENT-018, ENT-019, ENT-020, ENT-025, ENT-026 | Software: PyBaMM | Ergebnis: sim/chemie/ERGEBNIS.md",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "C5",
+      "name": "Alterung (Zyklen, Kalender) und Vergleich NMC / Natrium-Ionen",
+      "duration": 2,
+      "predecessors": [
+        "C4"
+      ],
+      "successors": [
+        "B1"
+      ],
+      "resources": "Sonnet, Maschine",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Sonnet",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "hardware",
+          "name": "Maschine",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Stufe 2 | Status: offen | REQ: REQ-P10, REQ-P06 | Bauteil: BT-100 | Wissen: W02, W07, W10 | Befunde: B-BAT-004, B-BAT-005 | ENT: ENT-002, ENT-004, ENT-005, ENT-006, ENT-007, ENT-008, ENT-009, ENT-010, ENT-011, ENT-012, ENT-014, ENT-015, ENT-016, ENT-017, ENT-018, ENT-019, ENT-020, ENT-025, ENT-026 | Stückliste: 700.9 | Software: PyBaMM | Ergebnis: sim/chemie/alterung*",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "G1",
+      "name": "Zellmaße als ENT-Akten (aus W03/W08/P01, sonst Annahme)",
+      "duration": 0.5,
+      "predecessors": [
+        "V2",
+        "R4"
+      ],
+      "successors": [
+        "G2"
+      ],
+      "resources": "Opus, Mensch",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Opus",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "human",
+          "name": "Mensch",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Stufe 3, PM | Status: ohne Nachweis | REQ: REQ-D11 | Bauteil: BT-100 | Wissen: W03, W08, P01 | Befunde: B-BAT-004, B-BAT-015, B-BAT-014, B-BAT-013, B-BAT-012, B-BAT-010, B-BAT-009, B-BAT-008, B-BAT-007 | ENT: ENT-002, ENT-004, ENT-005, ENT-006, ENT-007, ENT-008, ENT-009, ENT-010, ENT-011, ENT-012, ENT-014, ENT-015, ENT-016, ENT-017, ENT-018, ENT-019, ENT-020, ENT-025, ENT-026 | Stückliste: 100.1 | Doku: pm/bauteile/parameter.json",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "G2",
+      "name": "Parametrische Zelle FreeCAD (liest parameter.json)",
+      "duration": 2,
+      "predecessors": [
+        "G1"
+      ],
+      "successors": [
+        "G4"
+      ],
+      "resources": "Sonnet",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Sonnet",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Stufe 3 | Status: offen | REQ: REQ-D11 | Bauteil: BT-100 | Befunde: B-BAT-016, B-BAT-015, B-BAT-014 | ENT: ENT-002, ENT-004, ENT-005, ENT-006, ENT-007, ENT-008, ENT-009, ENT-010, ENT-011, ENT-012, ENT-014, ENT-015, ENT-016, ENT-017, ENT-018, ENT-019, ENT-020, ENT-025, ENT-026 | Software: FreeCAD | Ergebnis: cad/zelle/*.FCStd",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "G3",
+      "name": "Verschaltung sS/pP aus Spannung und Energie festlegen (ENT)",
+      "duration": 1,
+      "predecessors": [
+        "V2",
+        "C3"
+      ],
+      "successors": [
+        "G4",
+        "K0",
+        "E1",
+        "E2"
+      ],
+      "resources": "Opus, Mensch",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Opus",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "human",
+          "name": "Mensch",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Stufe 4, bestimmt Zellzahl | Status: ohne Nachweis | REQ: REQ-P02, REQ-P03 | Bauteil: BT-200 | Wissen: W12 | Befunde: B-BAT-011, B-BAT-010, B-BAT-008 | ENT: ENT-004, ENT-012",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "G4",
+      "name": "Pack: Zellanordnung, Querträger, Kühlplatte, Deckel",
+      "duration": 3,
+      "predecessors": [
+        "G2",
+        "G3"
+      ],
+      "successors": [
+        "G5",
+        "E1",
+        "L1",
+        "K1"
+      ],
+      "resources": "Sonnet, Maschine",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Sonnet",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "hardware",
+          "name": "Maschine",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Stufe 3 | Status: offen | REQ: REQ-P07, REQ-D11 | Bauteil: BT-200, BT-500 | Wissen: W15, P02 | Befunde: B-BAT-003, B-BAT-004, B-BAT-020, B-BAT-012 | ENT: ENT-004, ENT-012 | Stückliste: 200.1, 200.2, 200.3, 200.5, 500.1, 500.2, 500.3, 700.1 | Software: FreeCAD, gmsh | Doku: docs/13_stueckliste.md | Ergebnis: cad/pack/*.FCStd",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "G5",
+      "name": "Bauregeln + Prüfskript (Abstände, Isolation, Montagefolge)",
+      "duration": 1,
+      "predecessors": [
+        "G4"
+      ],
+      "successors": [
+        "M1",
+        "X1",
+        "SL2",
+        "B3"
+      ],
+      "resources": "Opus, Sonnet",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Opus",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "software",
+          "name": "Sonnet",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Stufe 3 | Status: offen | REQ: REQ-P13 | Bauteil: BT-200, BT-500 | ENT: ENT-004, ENT-012 | Stückliste: 500.7, 700.8 | Software: FreeCAD | Ergebnis: cad/pack/bauregeln*",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "K0",
+      "name": "Kühlart Luft gegen Wasser (1D-Wärmebilanz Schnellladen, W16), Entscheidung ENT",
+      "duration": 1,
+      "predecessors": [
+        "C3",
+        "G3",
+        "R4"
+      ],
+      "successors": [
+        "K1"
+      ],
+      "resources": "Opus, Sonnet, Mensch",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Opus",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "software",
+          "name": "Sonnet",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "human",
+          "name": "Mensch",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Nutzerwunsch 2026-11-12 | Status: offen | REQ: REQ-P09, REQ-P12 | Bauteil: BT-600 | Wissen: W16 | Befunde: B-BAT-004, B-BAT-018, B-BAT-017 | ENT: ENT-004, ENT-081, ENT-088 | Stückliste: 600.1, 600.6, 700.9 | Software: numpy | Doku: docs/konzept_werkzeuge_kuehlung_kabel_crash.md | Ergebnis: sim/kuehlung/kuehlart*",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "E1",
+      "name": "Zellverbinder/Kabel: Querschnitt, Verluste, Erwärmung (Zielband als Annahme)",
+      "duration": 2,
+      "predecessors": [
+        "G3",
+        "G4"
+      ],
+      "successors": [
+        "F1"
+      ],
+      "resources": "Sonnet, Maschine",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Sonnet",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "hardware",
+          "name": "Maschine",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Stufe 4 | Status: offen | REQ: REQ-P04 | Bauteil: BT-400 | Wissen: W13, P06 | Befunde: B-BAT-003, B-BAT-004, B-BAT-013 | ENT: ENT-004 | Stückliste: 400.1, 400.2, 400.3 | Software: numpy | Ergebnis: sim/elektrik/verbinder*",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "E2",
+      "name": "Schutzkonzept: Sicherung, Schütze, Vorladung, Isolationswächter",
+      "duration": 2,
+      "predecessors": [
+        "G3"
+      ],
+      "successors": [
+        "L1",
+        "E3",
+        "E4",
+        "SL2"
+      ],
+      "resources": "Opus, Sonnet",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Opus",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "software",
+          "name": "Sonnet",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Stufe 4 | Status: offen | REQ: REQ-P13, REQ-P11 | Bauteil: BT-400, BT-700 | Wissen: W13 | Befunde: B-BAT-004 | ENT: ENT-004 | Stückliste: 300.5, 700.1, 700.2, 700.3, 700.4, 700.5, 700.6 | Ergebnis: sim/elektrik/schutz*",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "L1",
+      "name": "Kabelverlegung: Weg skizzieren (Sketch-to-Prompt), Prüfskript Biegeradius/Abstand HV-NV/Kühlleitung, FreeCAD-Sweep",
+      "duration": 3,
+      "predecessors": [
+        "E2",
+        "G4",
+        "W1"
+      ],
+      "successors": [
+        "SL2",
+        "F1"
+      ],
+      "resources": "Opus, Sonnet",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Opus",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "software",
+          "name": "Sonnet",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Nutzerwunsch 2026-11-12, Vorbild spulen_montage.py | Status: offen | REQ: REQ-P13 | Bauteil: BT-400 | Wissen: T09 | ENT: ENT-004 | Stückliste: 300.6, 400.2, 400.3, 700.6 | Software: Sketch-to-Prompt, FreeCAD | Doku: docs/konzept_werkzeuge_kuehlung_kabel_crash.md | Ergebnis: cad/pack/kabel*",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "E3",
+      "name": "Steuerung/BMS: Messkonzept, Ladezustand, Ausgleich (Konzept, offene Software aus T06)",
+      "duration": 2,
+      "predecessors": [
+        "E2",
+        "C4"
+      ],
+      "successors": [
+        "SL2",
+        "F1"
+      ],
+      "resources": "Opus, Sonnet",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Opus",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "software",
+          "name": "Sonnet",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Stufe 4 | Status: offen | REQ: REQ-P15 | Bauteil: BT-300 | Wissen: W05, W14, T06, P07 | Befunde: B-BAT-002, B-BAT-004, B-BAT-013 | ENT: ENT-004 | Stückliste: 300.1, 300.2, 300.3, 300.4, 300.6, 600.4, 700.7, 700.10 | Software: foxBMS | Ergebnis: sim/elektrik/bms*",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "E4",
+      "name": "Schaltungsmodell ngspice/Modelica: Vorladung, Kurzschluss",
+      "duration": 2,
+      "predecessors": [
+        "E2",
+        "R5"
+      ],
+      "successors": [
+        "B1"
+      ],
+      "resources": "Sonnet, Maschine",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Sonnet",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "hardware",
+          "name": "Maschine",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Stufe 4 | Status: offen | REQ: REQ-P03, REQ-P13 | Bauteil: BT-300, BT-400 | Wissen: T04, T05 | Befunde: B-BAT-002, B-BAT-004 | ENT: ENT-004 | Stückliste: 700.3 | Software: ngspice, OpenModelica | Ergebnis: sim/elektrik/schaltung*",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "K1",
+      "name": "ERWARTUNG Kühlung Schnellladen (max. Zelltemperatur, Spreizung)",
+      "duration": 0.5,
+      "predecessors": [
+        "C3",
+        "G4",
+        "K0",
+        "W2"
+      ],
+      "successors": [
+        "K2"
+      ],
+      "resources": "Opus",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Opus",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Stufe 5 | Status: offen | REQ: REQ-D06, REQ-P09 | Bauteil: BT-600 | Befunde: B-BAT-020, B-BAT-019 | ENT: ENT-004, ENT-081, ENT-088 | Ergebnis: sim/kuehlung/ERWARTUNG.md",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "K2",
+      "name": "Kanalverteilung 1D (Verteiler, Druckverlust)",
+      "duration": 1,
+      "predecessors": [
+        "K1"
+      ],
+      "successors": [
+        "K3",
+        "K4"
+      ],
+      "resources": "Sonnet, Maschine",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Sonnet",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "hardware",
+          "name": "Maschine",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Stufe 5 | Status: offen | REQ: REQ-P09 | Bauteil: BT-600 | Wissen: P03 | Befunde: B-BAT-021, B-BAT-013 | ENT: ENT-004, ENT-081, ENT-088 | Stückliste: 600.2, 600.3, 600.5 | Software: numpy, scipy | Ergebnis: sim/kuehlung/verteilung*",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "K3",
+      "name": "Elmer: Zelle -> Paste -> Platte, Schnellladefall",
+      "duration": 3,
+      "predecessors": [
+        "K2"
+      ],
+      "successors": [
+        "K5"
+      ],
+      "resources": "Sonnet, Maschine",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Sonnet",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "hardware",
+          "name": "Maschine",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Stufe 5 | Status: offen | REQ: REQ-P09 | Bauteil: BT-600 | ENT: ENT-004, ENT-081, ENT-088 | Stückliste: 200.3, 300.3, 600.1, 600.4 | Software: ElmerFEM, gmsh | Ergebnis: sim/kuehlung/elmer*",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "K4",
+      "name": "FluidX3D: Strömung Kühlplatte bzw. Luftkanal (Gegenprüfung 1D)",
+      "duration": 2,
+      "predecessors": [
+        "K2"
+      ],
+      "successors": [
+        "K5"
+      ],
+      "resources": "Maschine",
+      "resource_list": [
+        {
+          "kind": "hardware",
+          "name": "Maschine",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Stufe 5, GPU nicht zugleich mit PI | Status: offen | REQ: REQ-P09 | Bauteil: BT-600 | ENT: ENT-004, ENT-081, ENT-088 | Stückliste: 600.2 | Software: FluidX3D | Ergebnis: sim/kuehlung/fluidx3d*",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "K5",
+      "name": "Deutung Kühlung, Abgleich Erwartung, Änderungsvorschlag",
+      "duration": 1,
+      "predecessors": [
+        "K3",
+        "K4"
+      ],
+      "successors": [
+        "U1",
+        "SL2",
+        "F1"
+      ],
+      "resources": "Opus",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Opus",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Stufe 5 | Status: offen | REQ: REQ-P09, REQ-D06 | Bauteil: BT-600 | ENT: ENT-004, ENT-081, ENT-088 | Ergebnis: sim/kuehlung/ERGEBNIS.md",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "U1",
+      "name": "ERWARTUNG Ersatzmodell: Zielgröße, Gültigkeitsbereich, Mindestgüte (z. B. Rangkorrelation)",
+      "duration": 0.5,
+      "predecessors": [
+        "K5",
+        "R2"
+      ],
+      "successors": [
+        "U2"
+      ],
+      "resources": "Opus",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Opus",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Lehre Fusion: Proxy 0,59 reichte nicht | Status: offen | REQ: REQ-D06 | Wissen: T07 | Befunde: B-BAT-004, B-BAT-005 | Doku: docs/ersatzmodell_einsatz.md | Ergebnis: sim/ersatzmodell/ERWARTUNG.md",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "U2",
+      "name": "Versuchsplan (Latin Hypercube): Durchfluss, Eintritt, C-Rate, Plattenmaß -> Elmer-Läufe",
+      "duration": 3,
+      "predecessors": [
+        "U1"
+      ],
+      "successors": [
+        "U3"
+      ],
+      "resources": "Sonnet, Maschine",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Sonnet",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "hardware",
+          "name": "Maschine",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "losgelöst, pausierbar | Status: offen | REQ: REQ-D09, REQ-D10 | Software: ElmerFEM | Ergebnis: sim/ersatzmodell/doe*",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "U3",
+      "name": "Ersatzmodell anpassen (Gauß-Prozess), Kreuzvalidierung gegen zurückgehaltene Läufe",
+      "duration": 1,
+      "predecessors": [
+        "U2"
+      ],
+      "successors": [
+        "U4"
+      ],
+      "resources": "Sonnet",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Sonnet",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Status: offen | REQ: REQ-D01 | Software: scikit-learn | Ergebnis: sim/ersatzmodell/gp*",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "U4",
+      "name": "Optimierung Kühlplatte/Ladeprofil mit Ersatzmodell, Bestwerte mit Elmer bestätigen",
+      "duration": 2,
+      "predecessors": [
+        "U3"
+      ],
+      "successors": [
+        "B1"
+      ],
+      "resources": "Opus, Maschine",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Opus",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "hardware",
+          "name": "Maschine",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Ersatzmodell nur sortiert, Elmer entscheidet | Status: offen | REQ: REQ-P09 | Bauteil: BT-600 | ENT: ENT-004, ENT-081, ENT-088 | Stückliste: 600.1 | Software: scikit-learn, ElmerFEM | Ergebnis: sim/ersatzmodell/ERGEBNIS.md",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "M1",
+      "name": "Mechanik: Zellverspannung, Eigenfrequenzen, Lagerung",
+      "duration": 3,
+      "predecessors": [
+        "G5"
+      ],
+      "successors": [
+        "F1"
+      ],
+      "resources": "Sonnet, Maschine",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Sonnet",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "hardware",
+          "name": "Maschine",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Stufe 6, optional | Status: fertig | REQ: REQ-P14 | Bauteil: BT-200, BT-500 | Befunde: B-BAT-019 | ENT: ENT-004, ENT-012 | Stückliste: 200.2, 200.4, 500.5, 500.6 | Software: ElmerFEM | Ergebnis: sim/mechanik/* ✓",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "X1",
+      "name": "Seitencrash Pfahl, quasistatisch: Eindringung in Gehäuse/Querträger (CalculiX, plastisch, Kontakt)",
+      "duration": 3,
+      "predecessors": [
+        "G5",
+        "W2",
+        "R4"
+      ],
+      "successors": [
+        "X2",
+        "SL2"
+      ],
+      "resources": "Sonnet, Maschine",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Sonnet",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "hardware",
+          "name": "Maschine",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Nutzerwunsch 2026-11-12 | Status: offen | REQ: REQ-P14, REQ-P11 | Bauteil: BT-500 | Wissen: W17, T08 | Befunde: B-BAT-002 | ENT: ENT-004 | Stückliste: 500.1, 500.3, 500.4 | Software: CalculiX, gmsh | Ergebnis: sim/crash/quasistatisch*",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "X2",
+      "name": "Seitencrash dynamisch (OpenRadioss, Installation nur nach Freigabe)",
+      "duration": 4,
+      "predecessors": [
+        "X1"
+      ],
+      "successors": [
+        "F1"
+      ],
+      "resources": "Opus, Maschine, Mensch",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Opus",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "hardware",
+          "name": "Maschine",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "human",
+          "name": "Mensch",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "optional | Status: offen | REQ: REQ-P14 | Bauteil: BT-500 | Wissen: T08 | Befunde: B-BAT-002 | ENT: ENT-004 | Stückliste: 500.4 | Software: OpenRadioss | Ergebnis: sim/crash/dynamisch*",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "SL2",
+      "name": "Stückliste fortschreiben nach Auslegung (Mengen, Kauf/Eigen, Werkstoffe, Bezugsquellen)",
+      "duration": 1,
+      "predecessors": [
+        "SL1",
+        "G5",
+        "E2",
+        "E3",
+        "K5",
+        "L1",
+        "X1"
+      ],
+      "successors": [
+        "B1",
+        "B5"
+      ],
+      "resources": "Sonnet, Opus",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Sonnet",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "software",
+          "name": "Opus",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "lebendes Dokument BAT-DOC-13 | Status: ohne Nachweis | REQ: REQ-D01, REQ-D11 | Bauteil: BT-000 | ENT: ENT-001, ENT-003, ENT-004, ENT-006, ENT-013, ENT-030, ENT-091, ENT-102, ENT-103 | Doku: docs/13_stueckliste.md",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "F1",
+      "name": "FMEA und Verifikationsplan nachziehen",
+      "duration": 1,
+      "predecessors": [
+        "E1",
+        "E3",
+        "K5",
+        "M1",
+        "L1",
+        "X2"
+      ],
+      "successors": [
+        "B1",
+        "B5"
+      ],
+      "resources": "Opus, Haiku",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Opus",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "software",
+          "name": "Haiku",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "BAT-DOC-05/06 | Status: ohne Nachweis | REQ: REQ-P11, REQ-D03 | Stückliste: 700.10 | Doku: docs/05_risiken_fmea.md, docs/06_verifikationsplan.md",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "B1",
+      "name": "Bericht DE/EN je Kapitel, Prozessdoku, Lessons Learned",
+      "duration": 4,
+      "predecessors": [
+        "C5",
+        "E4",
+        "U4",
+        "F1",
+        "SL2"
+      ],
+      "successors": [
+        "B2",
+        "B3",
+        "B5"
+      ],
+      "resources": "Sonnet, Opus",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Sonnet",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "software",
+          "name": "Opus",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Stufe 7 | Status: fertig | REQ: REQ-D02, REQ-D04 | Befunde: B-BAT-017 | Software: pdflatex | Doku: docs/prozess.md, LESSONS_LEARNED.md, docs/08_ki_einsatz_protokoll.md | Ergebnis: bericht/*.pdf ✓",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "B2",
+      "name": "Bauteilgespräch testen (pm/gespraech.sh für alle BT)",
+      "duration": 1,
+      "predecessors": [
+        "B1"
+      ],
+      "successors": [
+        "B4"
+      ],
+      "resources": "PI, Opus",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "PI",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "software",
+          "name": "Opus",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Stufe 7 | Status: fertig | REQ: REQ-D12 | Software: PI | Doku: pm/gespraech.sh | Ergebnis: pm/gespraeche/*.md ✓",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "B3",
+      "name": "Abschlussvideo (Storyboard -> Blender -> ffmpeg)",
+      "duration": 3,
+      "predecessors": [
+        "B1",
+        "G5"
+      ],
+      "successors": [
+        "B4"
+      ],
+      "resources": "Sonnet, Maschine",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Sonnet",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "hardware",
+          "name": "Maschine",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Stufe 7 | Status: offen | REQ: REQ-D13 | Software: Blender, FreeCAD | Doku: video/STORYBOARD.md | Ergebnis: video/*.mp4",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "B0",
+      "name": "Präsentation: Zielgruppe, Ziel, Firmenvorlage, Sprache festlegen",
+      "duration": 0.5,
+      "predecessors": [
+        "V1"
+      ],
+      "successors": [
+        "B5"
+      ],
+      "resources": "Mensch",
+      "resource_list": [
+        {
+          "kind": "human",
+          "name": "Mensch",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "BAT-DOC-14, nur Mensch | Status: ohne Nachweis | REQ: REQ-D14 | Doku: praesentation/STORYBOARD.md",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "B5",
+      "name": "Unternehmenspräsentation aus Folienbausteinen erzeugen (pptx + PDF, DE/EN), Zahlen gegen Quellen prüfen",
+      "duration": 2,
+      "predecessors": [
+        "B0",
+        "B1",
+        "SL2",
+        "F1",
+        "R3"
+      ],
+      "successors": [
+        "B4"
+      ],
+      "resources": "Sonnet, Opus",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Sonnet",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "software",
+          "name": "Opus",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Stufe 7, REQ-D14 | Status: offen | REQ: REQ-D14, REQ-D01 | Software: python-pptx, LibreOffice | Doku: praesentation/STORYBOARD.md | Ergebnis: praesentation/*.pptx",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "B4",
+      "name": "Freigabe und Veröffentlichung durch Autor",
+      "duration": 1,
+      "predecessors": [
+        "B2",
+        "B3",
+        "B5"
+      ],
+      "successors": [],
+      "resources": "Mensch",
+      "resource_list": [
+        {
+          "kind": "human",
+          "name": "Mensch",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "nur Mensch | Status: ohne Nachweis | REQ: REQ-D05 | Stückliste: 700.11",
+      "is_start": false,
+      "is_end": true
+    }
+  ],
+  "description": "KI-generiert (Claude Opus, 2026-11-12). Batteriesystem für ein E-Fahrzeug: Recherche, Zellchemie (PyBaMM), Zelle und Pack (FreeCAD), Elektrik, Kühlung (Elmer/FluidX3D), Ersatzmodell, Bericht, Video. Dauern in Arbeitstagen sind Annahmen. Quelle: hermes/batterie/PLAN.md.",
+  "system_prompt": "",
+  "resource_catalog": [
+    {
+      "kind": "human",
+      "name": "Mensch",
+      "rate": 0
+    },
+    {
+      "kind": "software",
+      "name": "Opus",
+      "rate": 0
+    },
+    {
+      "kind": "software",
+      "name": "Sonnet",
+      "rate": 0
+    },
+    {
+      "kind": "software",
+      "name": "Haiku",
+      "rate": 0
+    },
+    {
+      "kind": "software",
+      "name": "PI",
+      "rate": 0
+    },
+    {
+      "kind": "hardware",
+      "name": "Maschine",
+      "rate": 0
+    }
+  ],
+  "resource_mode": "catalog",
+  "start_date": "2026-11-12",
+  "workdays": true,
+  "project_id": ""
+}

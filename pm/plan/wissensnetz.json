@@ -1,0 +1,7460 @@
+{
+ "hinweis": "KI-generiert (pm/plan/wissensnetz.py). Dauern sind Annahmen.",
+ "projektdauer_AT": 35.5,
+ "knoten": [
+  {
+   "id": "S0",
+   "name": "Projektstart: Grundgerüst, Regeln, Software",
+   "dauer": 0,
+   "vorgaenger": [],
+   "nachfolger": [
+    "R1"
+   ],
+   "ressourcen": [
+    "Opus"
+   ],
+   "notiz": "erledigt 2026-11-11",
+   "es": 0,
+   "ef": 0,
+   "puffer": 0.0,
+   "kritisch": true,
+   "status": "fertig",
+   "req": [
+    {
+     "id": "REQ-D09",
+     "text": "Rechnungen reproduzierbar: Skript, Eingaben, Softwarestand (requirements.txt, Versionen)"
+    }
+   ],
+   "bt": [],
+   "wissen": [],
+   "doc": [
+    "README.md",
+    "CLAUDE.md",
+    "AGENTS.md",
+    "SOFTWARE.md"
+   ],
+   "aus": [
+    {
+     "glob": "README.md",
+     "vorhanden": true
+    },
+    {
+     "glob": "SOFTWARE.md",
+     "vorhanden": true
+    },
+    {
+     "glob": "requirements.txt",
+     "vorhanden": true
+    }
+   ],
+   "befunde": [],
+   "entscheidungen": [],
+   "software": [],
+   "teile": []
+  },
+  {
+   "id": "R1",
+   "name": "Wissensaufbau W01-W15 (Chemie, Zelltypen, Spannung, Kabel, Steuerung, Struktur)",
+   "dauer": 2,
+   "vorgaenger": [
+    "S0"
+   ],
+   "nachfolger": [
+    "R2"
+   ],
+   "ressourcen": [
+    "PI",
+    "Maschine"
+   ],
+   "notiz": "Stufe 1, läuft seit 2026-11-12",
+   "es": 0,
+   "ef": 2,
+   "puffer": 0.0,
+   "kritisch": true,
+   "status": "fertig",
+   "req": [
+    {
+     "id": "REQ-D01",
+     "text": "Jede Zahl ist rückverfolgbar (Rechnung mit Datei oder Quelle mit wörtlichem Beleg)"
+    },
+    {
+     "id": "REQ-D07",
+     "text": "Fremde Inhalte und Geheimnisse nicht im Repo, Lizenzen erfasst"
+    }
+   ],
+   "bt": [],
+   "wissen": [
+    {
+     "id": "W01",
+     "status": "fertig",
+     "pruefung": "12 Belege bestaetigt, 2 Fehler",
+     "datei": "forschung/ergebnis/W01.md"
+    },
+    {
+     "id": "W02",
+     "status": "fertig",
+     "pruefung": "8 Belege bestaetigt, 5 Fehler",
+     "datei": "forschung/ergebnis/W02.md"
+    },
+    {
+     "id": "W03",
+     "status": "fertig",
+     "pruefung": "24 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/W03.md"
+    },
+    {
+     "id": "W04",
+     "status": "fertig",
+     "pruefung": "5 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/W04.md"
+    },
+    {
+     "id": "W05",
+     "status": "fertig",
+     "pruefung": "0 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/W05.md"
+    },
+    {
+     "id": "W06",
+     "status": "fertig",
+     "pruefung": "11 Belege bestaetigt, 1 Fehler",
+     "datei": "forschung/ergebnis/W06.md"
+    },
+    {
+     "id": "W07",
+     "status": "fertig",
+     "pruefung": "8 Belege bestaetigt, 2 Fehler",
+     "datei": "forschung/ergebnis/W07.md"
+    },
+    {
+     "id": "W08",
+     "status": "fertig",
+     "pruefung": "12 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/W08.md"
+    },
+    {
+     "id": "W09",
+     "status": "fertig",
+     "pruefung": "10 Belege bestaetigt, 3 Fehler",
+     "datei": "forschung/ergebnis/W09.md"
+    },
+    {
+     "id": "W10",
+     "status": "fertig",
+     "pruefung": "19 Belege bestaetigt, 4 Fehler",
+     "datei": "forschung/ergebnis/W10.md"
+    },
+    {
+     "id": "W11",
+     "status": "fertig",
+     "pruefung": "10 Belege bestaetigt, 2 Fehler",
+     "datei": "forschung/ergebnis/W11.md"
+    },
+    {
+     "id": "W12",
+     "status": "fertig",
+     "pruefung": "12 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/W12.md"
+    },
+    {
+     "id": "W13",
+     "status": "fertig",
+     "pruefung": "10 Belege bestaetigt, 1 Fehler",
+     "datei": "forschung/ergebnis/W13.md"
+    },
+    {
+     "id": "W14",
+     "status": "fertig",
+     "pruefung": "8 Belege bestaetigt, 1 Fehler",
+     "datei": "forschung/ergebnis/W14.md"
+    },
+    {
+     "id": "W15",
+     "status": "fertig",
+     "pruefung": "10 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/W15.md"
+    },
+    {
+     "id": "W16",
+     "status": "fertig",
+     "pruefung": "10 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/W16.md"
+    },
+    {
+     "id": "W17",
+     "status": "fertig",
+     "pruefung": "14 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/W17.md"
+    }
+   ],
+   "doc": [],
+   "aus": [
+    {
+     "glob": "forschung/WISSEN.md",
+     "vorhanden": true
+    }
+   ],
+   "befunde": [
+    {
+     "id": "B-BAT-001",
+     "titel": "B-BAT-001 (2026-11-12) PI-Recherche W01 (LFP): Stufe B funktioniert, Zitatprüfung 12/14"
+    },
+    {
+     "id": "B-BAT-002",
+     "titel": "B-BAT-002 (2026-11-12) „0 Belege“ hieß „nicht geprüft“: Zitate ohne „Beleg:“ rutschten durch"
+    },
+    {
+     "id": "B-BAT-004",
+     "titel": "B-BAT-004 (2026-11-16) Analyse: Was fehlt für die komplette Batterie (Struktur gegen Information)"
+    },
+    {
+     "id": "B-BAT-005",
+     "titel": "B-BAT-005 (2026-11-16) R4: Recherche geprüft, kein erfundener Wert, ein Spaltenfehler (PI), Wh/L-Frage bleibt offen"
+    },
+    {
+     "id": "B-BAT-009",
+     "titel": "B-BAT-009 (2026-11-16) Zerlegungsstudie Blade (W20): Gen-1-Zelle 160 Wh/kg, 355 Wh/L; Bauraum Fall A genau an der Grenze"
+    },
+    {
+     "id": "B-BAT-008",
+     "titel": "B-BAT-008 (2026-11-16) W19 geprüft; Energiewiderspruch Stückliste 112 kWh gegen 73,9 kWh"
+    }
+   ],
+   "entscheidungen": [],
+   "software": [
+    {
+     "name": "PI",
+     "status": "im Projekt (SOFTWARE.md)"
+    },
+    {
+     "name": "web-recherche",
+     "status": "im Projekt (SOFTWARE.md)"
+    }
+   ],
+   "teile": []
+  },
+  {
+   "id": "R2",
+   "name": "Werkzeuge T01-T07 (Open Source Zellchemie, Elektroauslegung, Ersatzmodelle)",
+   "dauer": 1,
+   "vorgaenger": [
+    "R1"
+   ],
+   "nachfolger": [
+    "R3",
+    "U1"
+   ],
+   "ressourcen": [
+    "PI",
+    "Maschine"
+   ],
+   "notiz": "Stufe 1",
+   "es": 2,
+   "ef": 3,
+   "puffer": 0.0,
+   "kritisch": true,
+   "status": "fertig",
+   "req": [
+    {
+     "id": "REQ-D01",
+     "text": "Jede Zahl ist rückverfolgbar (Rechnung mit Datei oder Quelle mit wörtlichem Beleg)"
+    },
+    {
+     "id": "REQ-D07",
+     "text": "Fremde Inhalte und Geheimnisse nicht im Repo, Lizenzen erfasst"
+    }
+   ],
+   "bt": [],
+   "wissen": [
+    {
+     "id": "T01",
+     "status": "fertig",
+     "pruefung": "5 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/T01.md"
+    },
+    {
+     "id": "T02",
+     "status": "fertig",
+     "pruefung": "4 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/T02.md"
+    },
+    {
+     "id": "T03",
+     "status": "fertig",
+     "pruefung": "2 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/T03.md"
+    },
+    {
+     "id": "T04",
+     "status": "fertig",
+     "pruefung": "3 Belege bestaetigt, 1 Fehler",
+     "datei": "forschung/ergebnis/T04.md"
+    },
+    {
+     "id": "T05",
+     "status": "fertig",
+     "pruefung": "6 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/T05.md"
+    },
+    {
+     "id": "T06",
+     "status": "fertig",
+     "pruefung": "4 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/T06.md"
+    },
+    {
+     "id": "T07",
+     "status": "fertig",
+     "pruefung": "2 Belege bestaetigt, 1 Fehler",
+     "datei": "forschung/ergebnis/T07.md"
+    },
+    {
+     "id": "T08",
+     "status": "fertig",
+     "pruefung": "9 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/T08.md"
+    },
+    {
+     "id": "T09",
+     "status": "fertig",
+     "pruefung": "1 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/T09.md"
+    }
+   ],
+   "doc": [],
+   "aus": [
+    {
+     "glob": "forschung/WERKZEUGE.md",
+     "vorhanden": true
+    }
+   ],
+   "befunde": [
+    {
+     "id": "B-BAT-002",
+     "titel": "B-BAT-002 (2026-11-12) „0 Belege“ hieß „nicht geprüft“: Zitate ohne „Beleg:“ rutschten durch"
+    },
+    {
+     "id": "B-BAT-003",
+     "titel": "B-BAT-003 (2026-11-12) Patente P02–P10: Spalten verrutscht (Opus-Fehler in lauf.sh), PI blieb ehrlich"
+    },
+    {
+     "id": "B-BAT-004",
+     "titel": "B-BAT-004 (2026-11-16) Analyse: Was fehlt für die komplette Batterie (Struktur gegen Information)"
+    },
+    {
+     "id": "B-BAT-005",
+     "titel": "B-BAT-005 (2026-11-16) R4: Recherche geprüft, kein erfundener Wert, ein Spaltenfehler (PI), Wh/L-Frage bleibt offen"
+    }
+   ],
+   "entscheidungen": [],
+   "software": [
+    {
+     "name": "PI",
+     "status": "im Projekt (SOFTWARE.md)"
+    },
+    {
+     "name": "web-recherche",
+     "status": "im Projekt (SOFTWARE.md)"
+    }
+   ],
+   "teile": []
+  },
+  {
+   "id": "R3",
+   "name": "Patente P01-P10",
+   "dauer": 1,
+   "vorgaenger": [
+    "R2"
+   ],
+   "nachfolger": [
+    "R4",
+    "B5"
+   ],
+   "ressourcen": [
+    "PI",
+    "Maschine"
+   ],
+   "notiz": "Stufe 1",
+   "es": 3,
+   "ef": 4,
+   "puffer": 0.0,
+   "kritisch": true,
+   "status": "fertig",
+   "req": [
+    {
+     "id": "REQ-D08",
+     "text": "Patentrecherche ohne rechtliche Bewertung; Freedom to Operate nur durch Fachleute"
+    }
+   ],
+   "bt": [],
+   "wissen": [
+    {
+     "id": "P01",
+     "status": "fertig",
+     "pruefung": "2 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/P01.md"
+    },
+    {
+     "id": "P02",
+     "status": "fertig",
+     "pruefung": "2 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/P02.md"
+    },
+    {
+     "id": "P03",
+     "status": "fertig",
+     "pruefung": "6 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/P03.md"
+    },
+    {
+     "id": "P04",
+     "status": "fertig",
+     "pruefung": "6 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/P04.md"
+    },
+    {
+     "id": "P05",
+     "status": "fertig",
+     "pruefung": "6 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/P05.md"
+    },
+    {
+     "id": "P06",
+     "status": "fertig",
+     "pruefung": "6 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/P06.md"
+    },
+    {
+     "id": "P07",
+     "status": "fertig",
+     "pruefung": "6 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/P07.md"
+    },
+    {
+     "id": "P08",
+     "status": "fertig",
+     "pruefung": "6 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/P08.md"
+    },
+    {
+     "id": "P09",
+     "status": "fertig",
+     "pruefung": "6 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/P09.md"
+    },
+    {
+     "id": "P10",
+     "status": "fertig",
+     "pruefung": "6 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/P10.md"
+    }
+   ],
+   "doc": [],
+   "aus": [
+    {
+     "glob": "forschung/PATENTE.md",
+     "vorhanden": true
+    }
+   ],
+   "befunde": [
+    {
+     "id": "B-BAT-003",
+     "titel": "B-BAT-003 (2026-11-12) Patente P02–P10: Spalten verrutscht (Opus-Fehler in lauf.sh), PI blieb ehrlich"
+    },
+    {
+     "id": "B-BAT-004",
+     "titel": "B-BAT-004 (2026-11-16) Analyse: Was fehlt für die komplette Batterie (Struktur gegen Information)"
+    },
+    {
+     "id": "B-BAT-022",
+     "titel": "B-BAT-022 (2026-11-17) C1 Zellmodell: NMC bestätigt K1, aber 10→80 % erst in 36 min; LFP-Parametersatz passt nicht"
+    },
+    {
+     "id": "B-BAT-020",
+     "titel": "B-BAT-020 (2026-11-17) Fixierung, Kontaktierung, Kühlung der 4680 nach Herstellervergleich"
+    },
+    {
+     "id": "B-BAT-019",
+     "titel": "B-BAT-019 (2026-11-17) Schnellladen in den Griff bekommen (K1); Gehäuserecherche W21"
+    },
+    {
+     "id": "B-BAT-017",
+     "titel": "B-BAT-017 (2026-11-17) Vorgaben Kühlung (REQ-P09, ENT-081); Bericht begonnen"
+    },
+    {
+     "id": "B-BAT-013",
+     "titel": "B-BAT-013 (2026-11-17) Entscheidungen des Autors: ENT-012 freigegeben, Bauraum verlängert (ENT-013)"
+    },
+    {
+     "id": "B-BAT-007",
+     "titel": "B-BAT-007 (2026-11-16) Freigaben ENT-004/005; W18 geprüft; Blade-Zerlegungsstudie nicht abrufbar"
+    }
+   ],
+   "entscheidungen": [],
+   "software": [
+    {
+     "name": "PI",
+     "status": "im Projekt (SOFTWARE.md)"
+    },
+    {
+     "name": "patent-recherche",
+     "status": "im Projekt (SOFTWARE.md)"
+    }
+   ],
+   "teile": []
+  },
+  {
+   "id": "R4",
+   "name": "Recherche prüfen: Zitate, Aussagen, Widersprüche -> BEFUNDE",
+   "dauer": 1,
+   "vorgaenger": [
+    "R3"
+   ],
+   "nachfolger": [
+    "R5",
+    "V1",
+    "G1",
+    "K0",
+    "X1"
+   ],
+   "ressourcen": [
+    "Opus",
+    "Haiku"
+   ],
+   "notiz": "Regel 2 CLAUDE.md",
+   "es": 4,
+   "ef": 5,
+   "puffer": 0.0,
+   "kritisch": true,
+   "status": "ohne Nachweis",
+   "req": [
+    {
+     "id": "REQ-D01",
+     "text": "Jede Zahl ist rückverfolgbar (Rechnung mit Datei oder Quelle mit wörtlichem Beleg)"
+    }
+   ],
+   "bt": [],
+   "wissen": [],
+   "doc": [
+    "BEFUNDE.md"
+   ],
+   "aus": [],
+   "befunde": [
+    {
+     "id": "B-BAT-001",
+     "titel": "B-BAT-001 (2026-11-12) PI-Recherche W01 (LFP): Stufe B funktioniert, Zitatprüfung 12/14"
+    },
+    {
+     "id": "B-BAT-002",
+     "titel": "B-BAT-002 (2026-11-12) „0 Belege“ hieß „nicht geprüft“: Zitate ohne „Beleg:“ rutschten durch"
+    },
+    {
+     "id": "B-BAT-004",
+     "titel": "B-BAT-004 (2026-11-16) Analyse: Was fehlt für die komplette Batterie (Struktur gegen Information)"
+    },
+    {
+     "id": "B-BAT-005",
+     "titel": "B-BAT-005 (2026-11-16) R4: Recherche geprüft, kein erfundener Wert, ein Spaltenfehler (PI), Wh/L-Frage bleibt offen"
+    },
+    {
+     "id": "B-BAT-009",
+     "titel": "B-BAT-009 (2026-11-16) Zerlegungsstudie Blade (W20): Gen-1-Zelle 160 Wh/kg, 355 Wh/L; Bauraum Fall A genau an der Grenze"
+    },
+    {
+     "id": "B-BAT-007",
+     "titel": "B-BAT-007 (2026-11-16) Freigaben ENT-004/005; W18 geprüft; Blade-Zerlegungsstudie nicht abrufbar"
+    }
+   ],
+   "entscheidungen": [],
+   "software": [],
+   "teile": []
+  },
+  {
+   "id": "R5",
+   "name": "Werkzeugwahl festlegen (ENT): Zellmodell, Packmodell, Schaltung",
+   "dauer": 1,
+   "vorgaenger": [
+    "R4"
+   ],
+   "nachfolger": [
+    "W1",
+    "C1",
+    "E4"
+   ],
+   "ressourcen": [
+    "Opus",
+    "Mensch"
+   ],
+   "notiz": "Entscheidungsakte",
+   "es": 5,
+   "ef": 6,
+   "puffer": 2.0,
+   "kritisch": false,
+   "status": "ohne Nachweis",
+   "req": [
+    {
+     "id": "REQ-D11",
+     "text": "Jede Entscheidung als Akte an Bauteil und Merkmal gebunden; CAD-Maße nur aus diesen Akten"
+    }
+   ],
+   "bt": [],
+   "wissen": [
+    {
+     "id": "T01",
+     "status": "fertig",
+     "pruefung": "5 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/T01.md"
+    },
+    {
+     "id": "T02",
+     "status": "fertig",
+     "pruefung": "4 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/T02.md"
+    },
+    {
+     "id": "T04",
+     "status": "fertig",
+     "pruefung": "3 Belege bestaetigt, 1 Fehler",
+     "datei": "forschung/ergebnis/T04.md"
+    },
+    {
+     "id": "T05",
+     "status": "fertig",
+     "pruefung": "6 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/T05.md"
+    }
+   ],
+   "doc": [
+    "docs/04_entscheidungen.md"
+   ],
+   "aus": [],
+   "befunde": [
+    {
+     "id": "B-BAT-002",
+     "titel": "B-BAT-002 (2026-11-12) „0 Belege“ hieß „nicht geprüft“: Zitate ohne „Beleg:“ rutschten durch"
+    },
+    {
+     "id": "B-BAT-003",
+     "titel": "B-BAT-003 (2026-11-12) Patente P02–P10: Spalten verrutscht (Opus-Fehler in lauf.sh), PI blieb ehrlich"
+    },
+    {
+     "id": "B-BAT-004",
+     "titel": "B-BAT-004 (2026-11-16) Analyse: Was fehlt für die komplette Batterie (Struktur gegen Information)"
+    }
+   ],
+   "entscheidungen": [],
+   "software": [],
+   "teile": []
+  },
+  {
+   "id": "W1",
+   "name": "Preprocessing mit Sketch-to-Prompt: Ein-/Auslass, Lager, Lasten, Kabelwege auf das STL zeichnen",
+   "dauer": 2,
+   "vorgaenger": [
+    "R5"
+   ],
+   "nachfolger": [
+    "W2",
+    "L1"
+   ],
+   "ressourcen": [
+    "Opus",
+    "Mensch"
+   ],
+   "notiz": "Werkzeug, Nutzerwunsch 2026-11-12",
+   "es": 6,
+   "ef": 8,
+   "puffer": 5.5,
+   "kritisch": false,
+   "status": "offen",
+   "req": [],
+   "bt": [],
+   "wissen": [],
+   "doc": [
+    "docs/konzept_werkzeuge_kuehlung_kabel_crash.md"
+   ],
+   "aus": [
+    {
+     "glob": "werkzeuge/pre/*",
+     "vorhanden": false
+    }
+   ],
+   "befunde": [],
+   "entscheidungen": [],
+   "software": [
+    {
+     "name": "Sketch-to-Prompt",
+     "status": "im Projekt (SOFTWARE.md)"
+    }
+   ],
+   "teile": []
+  },
+  {
+   "id": "W2",
+   "name": "Postprocessing: Schnittebenen aus Skizzenlinie + Blickrichtung, Feldwerte (Strömung, Spannung) je Schnitt",
+   "dauer": 2,
+   "vorgaenger": [
+    "W1"
+   ],
+   "nachfolger": [
+    "K1",
+    "X1"
+   ],
+   "ressourcen": [
+    "Sonnet"
+   ],
+   "notiz": "Werkzeug, für K/X/M",
+   "es": 8,
+   "ef": 10,
+   "puffer": 5.5,
+   "kritisch": false,
+   "status": "offen",
+   "req": [],
+   "bt": [],
+   "wissen": [],
+   "doc": [
+    "docs/konzept_werkzeuge_kuehlung_kabel_crash.md"
+   ],
+   "aus": [
+    {
+     "glob": "werkzeuge/post/*",
+     "vorhanden": false
+    }
+   ],
+   "befunde": [],
+   "entscheidungen": [],
+   "software": [
+    {
+     "name": "Sketch-to-Prompt",
+     "status": "im Projekt (SOFTWARE.md)"
+    },
+    {
+     "name": "ParaView",
+     "status": "im Projekt (SOFTWARE.md)"
+    },
+    {
+     "name": "pyvista",
+     "status": "im Projekt (SOFTWARE.md)"
+    }
+   ],
+   "teile": []
+  },
+  {
+   "id": "V1",
+   "name": "Lastenheft-Werte REQ-P01..P08 vorschlagen (Fahrzeug, kWh, Spannung, Leistung, Laden, Chemie, Bauraum, Temperatur)",
+   "dauer": 1,
+   "vorgaenger": [
+    "R4"
+   ],
+   "nachfolger": [
+    "SL1",
+    "V2",
+    "B0"
+   ],
+   "ressourcen": [
+    "Opus"
+   ],
+   "notiz": "Stufe 0",
+   "es": 5,
+   "ef": 6,
+   "puffer": 0.0,
+   "kritisch": true,
+   "status": "fertig",
+   "req": [
+    {
+     "id": "REQ-P01",
+     "text": "Anwendung / Fahrzeugklasse"
+    },
+    {
+     "id": "REQ-P02",
+     "text": "nutzbarer Energieinhalt"
+    },
+    {
+     "id": "REQ-P03",
+     "text": "Systemspannung (Nenn, min, max)"
+    },
+    {
+     "id": "REQ-P04",
+     "text": "Dauer- und Spitzenleistung Entladen"
+    },
+    {
+     "id": "REQ-P05",
+     "text": "Schnellladen 10 → 80 %"
+    },
+    {
+     "id": "REQ-P06",
+     "text": "Zellchemie"
+    },
+    {
+     "id": "REQ-P07",
+     "text": "Bauraum (L × B × H) und Masse"
+    },
+    {
+     "id": "REQ-P08",
+     "text": "Umgebungstemperatur Betrieb und Laden"
+    },
+    {
+     "id": "REQ-P09",
+     "text": "max. Zelltemperatur und Spreizung"
+    },
+    {
+     "id": "REQ-P10",
+     "text": "Lebensdauer (Zyklen, Jahre, Restkapazität)"
+    }
+   ],
+   "bt": [
+    {
+     "id": "BT-000",
+     "name": "Batteriesystem"
+    }
+   ],
+   "wissen": [],
+   "doc": [
+    "docs/startparameter.md",
+    "docs/01_lastenheft.md",
+    "docs/13_stueckliste.md"
+   ],
+   "aus": [
+    {
+     "glob": "pm/startwerte.json",
+     "vorhanden": true
+    }
+   ],
+   "befunde": [
+    {
+     "id": "B-BAT-004",
+     "titel": "B-BAT-004 (2026-11-16) Analyse: Was fehlt für die komplette Batterie (Struktur gegen Information)"
+    },
+    {
+     "id": "B-BAT-013",
+     "titel": "B-BAT-013 (2026-11-17) Entscheidungen des Autors: ENT-012 freigegeben, Bauraum verlängert (ENT-013)"
+    },
+    {
+     "id": "B-BAT-011",
+     "titel": "B-BAT-011 (2026-11-16) Variantenvergleich mit Messwerten: NMC-4680 ein Drittel leichter, LFP-Blade im Bauraum knapp"
+    },
+    {
+     "id": "B-BAT-010",
+     "titel": "B-BAT-010 (2026-11-16) Zwei Varianten parallel: LFP-Blade und NMC-4680, gleiche Spezifikation"
+    },
+    {
+     "id": "B-BAT-009",
+     "titel": "B-BAT-009 (2026-11-16) Zerlegungsstudie Blade (W20): Gen-1-Zelle 160 Wh/kg, 355 Wh/L; Bauraum Fall A genau an der Grenze"
+    },
+    {
+     "id": "B-BAT-008",
+     "titel": "B-BAT-008 (2026-11-16) W19 geprüft; Energiewiderspruch Stückliste 112 kWh gegen 73,9 kWh"
+    },
+    {
+     "id": "B-BAT-007",
+     "titel": "B-BAT-007 (2026-11-16) Freigaben ENT-004/005; W18 geprüft; Blade-Zerlegungsstudie nicht abrufbar"
+    },
+    {
+     "id": "B-BAT-006",
+     "titel": "B-BAT-006 (2026-11-16) Chemievergleich LFP/NMC bei 1500 kg und 400 km: kein belegter Massenunterschied"
+    }
+   ],
+   "entscheidungen": [
+    {
+     "id": "ENT-001",
+     "titel": "Frage",
+     "bt": [
+      "BT-000"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-001.md"
+    },
+    {
+     "id": "ENT-003",
+     "titel": "Frage",
+     "bt": [
+      "BT-000"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-003.md"
+    },
+    {
+     "id": "ENT-004",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-200",
+      "BT-210",
+      "BT-300",
+      "BT-400",
+      "BT-500",
+      "BT-530",
+      "BT-600",
+      "BT-700",
+      "BT-710",
+      "BT-780"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-004.md"
+    },
+    {
+     "id": "ENT-006",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-310",
+      "BT-410",
+      "BT-711"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-006.md"
+    },
+    {
+     "id": "ENT-013",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-220"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-013.md"
+    },
+    {
+     "id": "ENT-030",
+     "titel": "Frage",
+     "bt": [
+      "BT-000"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-030.md"
+    },
+    {
+     "id": "ENT-091",
+     "titel": "Frage",
+     "bt": [
+      "BT-000"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-091.md"
+    },
+    {
+     "id": "ENT-102",
+     "titel": "Entscheidung und Begründung",
+     "bt": [
+      "BT-000"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-102.md"
+    },
+    {
+     "id": "ENT-103",
+     "titel": "Entscheidung und Begründung",
+     "bt": [
+      "BT-000"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-103.md"
+    }
+   ],
+   "software": [],
+   "teile": []
+  },
+  {
+   "id": "SL1",
+   "name": "Grobe Stückliste aus Startsatz (Baugruppen, Mengen mit Herleitung)",
+   "dauer": 0.5,
+   "vorgaenger": [
+    "V1"
+   ],
+   "nachfolger": [
+    "SL2"
+   ],
+   "ressourcen": [
+    "Opus"
+   ],
+   "notiz": "erledigt 2026-11-12 (Vorschlags-Startsatz)",
+   "es": 6,
+   "ef": 6.5,
+   "puffer": 20.0,
+   "kritisch": false,
+   "status": "fertig",
+   "req": [
+    {
+     "id": "REQ-D01",
+     "text": "Jede Zahl ist rückverfolgbar (Rechnung mit Datei oder Quelle mit wörtlichem Beleg)"
+    }
+   ],
+   "bt": [
+    {
+     "id": "BT-000",
+     "name": "Batteriesystem"
+    }
+   ],
+   "wissen": [],
+   "doc": [
+    "docs/13_stueckliste.md"
+   ],
+   "aus": [
+    {
+     "glob": "pm/bauteile/stueckliste.json",
+     "vorhanden": true
+    },
+    {
+     "glob": "docs/13_stueckliste.md",
+     "vorhanden": true
+    }
+   ],
+   "befunde": [
+    {
+     "id": "B-BAT-004",
+     "titel": "B-BAT-004 (2026-11-16) Analyse: Was fehlt für die komplette Batterie (Struktur gegen Information)"
+    }
+   ],
+   "entscheidungen": [
+    {
+     "id": "ENT-001",
+     "titel": "Frage",
+     "bt": [
+      "BT-000"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-001.md"
+    },
+    {
+     "id": "ENT-003",
+     "titel": "Frage",
+     "bt": [
+      "BT-000"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-003.md"
+    },
+    {
+     "id": "ENT-004",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-200",
+      "BT-210",
+      "BT-300",
+      "BT-400",
+      "BT-500",
+      "BT-530",
+      "BT-600",
+      "BT-700",
+      "BT-710",
+      "BT-780"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-004.md"
+    },
+    {
+     "id": "ENT-006",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-310",
+      "BT-410",
+      "BT-711"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-006.md"
+    },
+    {
+     "id": "ENT-013",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-220"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-013.md"
+    },
+    {
+     "id": "ENT-030",
+     "titel": "Frage",
+     "bt": [
+      "BT-000"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-030.md"
+    },
+    {
+     "id": "ENT-091",
+     "titel": "Frage",
+     "bt": [
+      "BT-000"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-091.md"
+    },
+    {
+     "id": "ENT-102",
+     "titel": "Entscheidung und Begründung",
+     "bt": [
+      "BT-000"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-102.md"
+    },
+    {
+     "id": "ENT-103",
+     "titel": "Entscheidung und Begründung",
+     "bt": [
+      "BT-000"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-103.md"
+    }
+   ],
+   "software": [],
+   "teile": [
+    {
+     "pos": "100.1",
+     "bt": "BT-100",
+     "benennung": "Zelle (NMC, Zellformat offen; Rechenregel wie LFP-Platzhalter)",
+     "menge": 220,
+     "art": "K"
+    },
+    {
+     "pos": "200.1",
+     "bt": "BT-200",
+     "benennung": "Zellreihe zwischen Querträgern (Cell-to-Pack, ohne Module)",
+     "menge": 10,
+     "art": "E"
+    },
+    {
+     "pos": "200.2",
+     "bt": "BT-200",
+     "benennung": "Zwischenlage zwischen Zellen (Wärme- und Brandschutz, Quellausgleich)",
+     "menge": 220,
+     "art": "K"
+    },
+    {
+     "pos": "200.3",
+     "bt": "BT-200",
+     "benennung": "Wärmeleitmaterial Zelle → Kühlplatte",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "200.4",
+     "bt": "BT-200",
+     "benennung": "Verspannung der Zellreihen (Endplatte/Band)",
+     "menge": 10,
+     "art": "E"
+    },
+    {
+     "pos": "200.5",
+     "bt": "BT-250",
+     "benennung": "Zellhalter (hält und teilt Rundzellen, Abstand für Kühlung und Isolation)",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "300.1",
+     "bt": "BT-300",
+     "benennung": "BMS-Hauptsteuergerät",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "300.2",
+     "bt": "BT-300",
+     "benennung": "Zellüberwachung (Spannung, Ausgleich)",
+     "menge": 14,
+     "art": "K"
+    },
+    {
+     "pos": "300.3",
+     "bt": "BT-300",
+     "benennung": "Temperaturfühler Zelle",
+     "menge": 55,
+     "art": "K"
+    },
+    {
+     "pos": "300.4",
+     "bt": "BT-300",
+     "benennung": "Strommessung (Shunt oder Hall)",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "300.5",
+     "bt": "BT-300",
+     "benennung": "Isolationswächter",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "300.6",
+     "bt": "BT-300",
+     "benennung": "Messleitungen bzw. Flexleiterplatte Zelle → Überwachung",
+     "menge": 14,
+     "art": "K"
+    },
+    {
+     "pos": "400.1",
+     "bt": "BT-400",
+     "benennung": "Zellverbinder (Zellabgriff, Plus und Minus je Zelle)",
+     "menge": 0,
+     "art": "E"
+    },
+    {
+     "pos": "400.2",
+     "bt": "BT-400",
+     "benennung": "Reihenverbinder (Reihenbrücke, bei p > 1 Gruppenbrücke)",
+     "menge": 219,
+     "art": "E"
+    },
+    {
+     "pos": "400.3",
+     "bt": "BT-400",
+     "benennung": "HV-Hauptleitung plus/minus im Pack",
+     "menge": 2,
+     "art": "K"
+    },
+    {
+     "pos": "500.1",
+     "bt": "BT-500",
+     "benennung": "Gehäusewanne",
+     "menge": 1,
+     "art": "E"
+    },
+    {
+     "pos": "500.2",
+     "bt": "BT-500",
+     "benennung": "Deckel mit Dichtung",
+     "menge": 1,
+     "art": "E"
+    },
+    {
+     "pos": "500.3",
+     "bt": "BT-500",
+     "benennung": "Querträger",
+     "menge": 11,
+     "art": "E"
+    },
+    {
+     "pos": "500.4",
+     "bt": "BT-500",
+     "benennung": "Seitenrahmen / Crashprofil (Seitencrash)",
+     "menge": 2,
+     "art": "E"
+    },
+    {
+     "pos": "500.5",
+     "bt": "BT-500",
+     "benennung": "Unterfahrschutz",
+     "menge": 1,
+     "art": "E"
+    },
+    {
+     "pos": "500.6",
+     "bt": "BT-500",
+     "benennung": "Befestigungspunkte am Fahrzeug",
+     "menge": 1,
+     "art": "E"
+    },
+    {
+     "pos": "500.7",
+     "bt": "BT-500",
+     "benennung": "Druckausgleichselement (atmend, wasserdicht)",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "600.1",
+     "bt": "BT-600",
+     "benennung": "Kühlplatte (Wasser-Glykol)",
+     "menge": 1,
+     "art": "E"
+    },
+    {
+     "pos": "600.2",
+     "bt": "BT-600",
+     "benennung": "Verteiler und Sammler",
+     "menge": 1,
+     "art": "E"
+    },
+    {
+     "pos": "600.3",
+     "bt": "BT-600",
+     "benennung": "Kühlmittelanschlüsse Ein/Aus",
+     "menge": 2,
+     "art": "K"
+    },
+    {
+     "pos": "600.4",
+     "bt": "BT-600",
+     "benennung": "Temperaturfühler Kühlmittel",
+     "menge": 2,
+     "art": "K"
+    },
+    {
+     "pos": "600.5",
+     "bt": "BT-600",
+     "benennung": "Kühlmittel Wasser-Glykol",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "600.6",
+     "bt": "BT-600",
+     "benennung": "Pumpe, Wärmetauscher/Kältemittelkühler",
+     "menge": 1,
+     "art": "S"
+    },
+    {
+     "pos": "700.1",
+     "bt": "BT-700",
+     "benennung": "Schaltbox (Gehäuse für Schütze, Vorladung, Hauptsicherung)",
+     "menge": 1,
+     "art": "E"
+    },
+    {
+     "pos": "700.2",
+     "bt": "BT-700",
+     "benennung": "Hauptschütz plus und minus",
+     "menge": 2,
+     "art": "K"
+    },
+    {
+     "pos": "700.3",
+     "bt": "BT-700",
+     "benennung": "Vorladeschütz mit Vorladewiderstand",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "700.4",
+     "bt": "BT-700",
+     "benennung": "Hauptsicherung (ggf. pyrotechnischer Trenner)",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "700.5",
+     "bt": "BT-700",
+     "benennung": "Service-Trennstecker",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "700.6",
+     "bt": "BT-700",
+     "benennung": "HV-Steckverbinder Pack (Antrieb, Laden)",
+     "menge": 2,
+     "art": "K"
+    },
+    {
+     "pos": "700.7",
+     "bt": "BT-700",
+     "benennung": "NV-Steckverbinder (12 V, CAN, Sensorik)",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "700.8",
+     "bt": "BT-700",
+     "benennung": "Entgasungsventil mit Entgasungskanal",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "700.9",
+     "bt": "BT-700",
+     "benennung": "Heizung (Kälte, −20 °C laut REQ-P08)",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "700.10",
+     "bt": "BT-700",
+     "benennung": "Gas-/Drucksensor Früherkennung thermisches Ereignis",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "700.11",
+     "bt": "BT-700",
+     "benennung": "Kennzeichnung (Typschild, HV-Warnung)",
+     "menge": 1,
+     "art": "K"
+    }
+   ]
+  },
+  {
+   "id": "V2",
+   "name": "Freigabe Lastenheft durch Autor",
+   "dauer": 2,
+   "vorgaenger": [
+    "V1"
+   ],
+   "nachfolger": [
+    "C1",
+    "G1",
+    "G3"
+   ],
+   "ressourcen": [
+    "Mensch"
+   ],
+   "notiz": "nur Mensch gibt frei",
+   "es": 6,
+   "ef": 8,
+   "puffer": 0.0,
+   "kritisch": true,
+   "status": "ohne Nachweis",
+   "req": [
+    {
+     "id": "REQ-D05",
+     "text": "Freigabe nur durch den Menschen"
+    },
+    {
+     "id": "REQ-P01",
+     "text": "Anwendung / Fahrzeugklasse"
+    },
+    {
+     "id": "REQ-P02",
+     "text": "nutzbarer Energieinhalt"
+    },
+    {
+     "id": "REQ-P03",
+     "text": "Systemspannung (Nenn, min, max)"
+    },
+    {
+     "id": "REQ-P04",
+     "text": "Dauer- und Spitzenleistung Entladen"
+    },
+    {
+     "id": "REQ-P05",
+     "text": "Schnellladen 10 → 80 %"
+    },
+    {
+     "id": "REQ-P06",
+     "text": "Zellchemie"
+    },
+    {
+     "id": "REQ-P07",
+     "text": "Bauraum (L × B × H) und Masse"
+    },
+    {
+     "id": "REQ-P08",
+     "text": "Umgebungstemperatur Betrieb und Laden"
+    },
+    {
+     "id": "REQ-P09",
+     "text": "max. Zelltemperatur und Spreizung"
+    },
+    {
+     "id": "REQ-P10",
+     "text": "Lebensdauer (Zyklen, Jahre, Restkapazität)"
+    }
+   ],
+   "bt": [
+    {
+     "id": "BT-000",
+     "name": "Batteriesystem"
+    }
+   ],
+   "wissen": [],
+   "doc": [
+    "docs/01_lastenheft.md"
+   ],
+   "aus": [],
+   "befunde": [],
+   "entscheidungen": [
+    {
+     "id": "ENT-001",
+     "titel": "Frage",
+     "bt": [
+      "BT-000"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-001.md"
+    },
+    {
+     "id": "ENT-003",
+     "titel": "Frage",
+     "bt": [
+      "BT-000"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-003.md"
+    },
+    {
+     "id": "ENT-004",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-200",
+      "BT-210",
+      "BT-300",
+      "BT-400",
+      "BT-500",
+      "BT-530",
+      "BT-600",
+      "BT-700",
+      "BT-710",
+      "BT-780"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-004.md"
+    },
+    {
+     "id": "ENT-006",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-310",
+      "BT-410",
+      "BT-711"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-006.md"
+    },
+    {
+     "id": "ENT-013",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-220"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-013.md"
+    },
+    {
+     "id": "ENT-030",
+     "titel": "Frage",
+     "bt": [
+      "BT-000"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-030.md"
+    },
+    {
+     "id": "ENT-091",
+     "titel": "Frage",
+     "bt": [
+      "BT-000"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-091.md"
+    },
+    {
+     "id": "ENT-102",
+     "titel": "Entscheidung und Begründung",
+     "bt": [
+      "BT-000"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-102.md"
+    },
+    {
+     "id": "ENT-103",
+     "titel": "Entscheidung und Begründung",
+     "bt": [
+      "BT-000"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-103.md"
+    }
+   ],
+   "software": [],
+   "teile": []
+  },
+  {
+   "id": "C1",
+   "name": "ERWARTUNG Zellmodell (Entladekurve, Wärme, Innenwiderstand)",
+   "dauer": 0.5,
+   "vorgaenger": [
+    "V2",
+    "R5"
+   ],
+   "nachfolger": [
+    "C2"
+   ],
+   "ressourcen": [
+    "Opus"
+   ],
+   "notiz": "Stufe 2",
+   "es": 8,
+   "ef": 8.5,
+   "puffer": 0.0,
+   "kritisch": true,
+   "status": "offen",
+   "req": [
+    {
+     "id": "REQ-D06",
+     "text": "Erwartung vor jeder Rechnung, Vergleich danach"
+    }
+   ],
+   "bt": [
+    {
+     "id": "BT-100",
+     "name": "Zelle"
+    }
+   ],
+   "wissen": [],
+   "doc": [],
+   "aus": [
+    {
+     "glob": "sim/chemie/ERWARTUNG.md",
+     "vorhanden": false
+    }
+   ],
+   "befunde": [
+    {
+     "id": "B-BAT-022",
+     "titel": "B-BAT-022 (2026-11-17) C1 Zellmodell: NMC bestätigt K1, aber 10→80 % erst in 36 min; LFP-Parametersatz passt nicht"
+    },
+    {
+     "id": "B-BAT-015",
+     "titel": "B-BAT-015 (2026-11-17) Innenaufbau beider Zellen aus der Zerlegung; Korrektur LFP-Länge 681 mm; Bauraumbreite 1430 mm"
+    }
+   ],
+   "entscheidungen": [
+    {
+     "id": "ENT-002",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-002.md"
+    },
+    {
+     "id": "ENT-004",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-200",
+      "BT-210",
+      "BT-300",
+      "BT-400",
+      "BT-500",
+      "BT-530",
+      "BT-600",
+      "BT-700",
+      "BT-710",
+      "BT-780"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-004.md"
+    },
+    {
+     "id": "ENT-005",
+     "titel": "Frage",
+     "bt": [
+      "BT-100",
+      "BT-760"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-005.md"
+    },
+    {
+     "id": "ENT-006",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-310",
+      "BT-410",
+      "BT-711"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-006.md"
+    },
+    {
+     "id": "ENT-007",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-007.md"
+    },
+    {
+     "id": "ENT-008",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-008.md"
+    },
+    {
+     "id": "ENT-009",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-009.md"
+    },
+    {
+     "id": "ENT-010",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-010.md"
+    },
+    {
+     "id": "ENT-011",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-011.md"
+    },
+    {
+     "id": "ENT-012",
+     "titel": "Frage",
+     "bt": [
+      "BT-100",
+      "BT-200",
+      "BT-220",
+      "BT-240",
+      "BT-250",
+      "BT-610"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-012.md"
+    },
+    {
+     "id": "ENT-014",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-014.md"
+    },
+    {
+     "id": "ENT-015",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-015.md"
+    },
+    {
+     "id": "ENT-016",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-016.md"
+    },
+    {
+     "id": "ENT-017",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-017.md"
+    },
+    {
+     "id": "ENT-018",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-018.md"
+    },
+    {
+     "id": "ENT-019",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-019.md"
+    },
+    {
+     "id": "ENT-020",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-020.md"
+    },
+    {
+     "id": "ENT-025",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-025.md"
+    },
+    {
+     "id": "ENT-026",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-026.md"
+    }
+   ],
+   "software": [],
+   "teile": []
+  },
+  {
+   "id": "C2",
+   "name": "Zellmodell LFP (PyBaMM Prada2013) auf langes Format skalieren",
+   "dauer": 2,
+   "vorgaenger": [
+    "C1"
+   ],
+   "nachfolger": [
+    "C3"
+   ],
+   "ressourcen": [
+    "Sonnet",
+    "Maschine"
+   ],
+   "notiz": "Stufe 2",
+   "es": 8.5,
+   "ef": 10.5,
+   "puffer": 0.0,
+   "kritisch": true,
+   "status": "offen",
+   "req": [
+    {
+     "id": "REQ-P06",
+     "text": "Zellchemie"
+    }
+   ],
+   "bt": [
+    {
+     "id": "BT-100",
+     "name": "Zelle"
+    }
+   ],
+   "wissen": [
+    {
+     "id": "W01",
+     "status": "fertig",
+     "pruefung": "12 Belege bestaetigt, 2 Fehler",
+     "datei": "forschung/ergebnis/W01.md"
+    },
+    {
+     "id": "W09",
+     "status": "fertig",
+     "pruefung": "10 Belege bestaetigt, 3 Fehler",
+     "datei": "forschung/ergebnis/W09.md"
+    },
+    {
+     "id": "T01",
+     "status": "fertig",
+     "pruefung": "5 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/T01.md"
+    }
+   ],
+   "doc": [],
+   "aus": [
+    {
+     "glob": "sim/chemie/zelle_lang*",
+     "vorhanden": false
+    }
+   ],
+   "befunde": [
+    {
+     "id": "B-BAT-001",
+     "titel": "B-BAT-001 (2026-11-12) PI-Recherche W01 (LFP): Stufe B funktioniert, Zitatprüfung 12/14"
+    },
+    {
+     "id": "B-BAT-004",
+     "titel": "B-BAT-004 (2026-11-16) Analyse: Was fehlt für die komplette Batterie (Struktur gegen Information)"
+    },
+    {
+     "id": "B-BAT-005",
+     "titel": "B-BAT-005 (2026-11-16) R4: Recherche geprüft, kein erfundener Wert, ein Spaltenfehler (PI), Wh/L-Frage bleibt offen"
+    },
+    {
+     "id": "B-BAT-007",
+     "titel": "B-BAT-007 (2026-11-16) Freigaben ENT-004/005; W18 geprüft; Blade-Zerlegungsstudie nicht abrufbar"
+    }
+   ],
+   "entscheidungen": [
+    {
+     "id": "ENT-002",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-002.md"
+    },
+    {
+     "id": "ENT-004",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-200",
+      "BT-210",
+      "BT-300",
+      "BT-400",
+      "BT-500",
+      "BT-530",
+      "BT-600",
+      "BT-700",
+      "BT-710",
+      "BT-780"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-004.md"
+    },
+    {
+     "id": "ENT-005",
+     "titel": "Frage",
+     "bt": [
+      "BT-100",
+      "BT-760"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-005.md"
+    },
+    {
+     "id": "ENT-006",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-310",
+      "BT-410",
+      "BT-711"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-006.md"
+    },
+    {
+     "id": "ENT-007",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-007.md"
+    },
+    {
+     "id": "ENT-008",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-008.md"
+    },
+    {
+     "id": "ENT-009",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-009.md"
+    },
+    {
+     "id": "ENT-010",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-010.md"
+    },
+    {
+     "id": "ENT-011",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-011.md"
+    },
+    {
+     "id": "ENT-012",
+     "titel": "Frage",
+     "bt": [
+      "BT-100",
+      "BT-200",
+      "BT-220",
+      "BT-240",
+      "BT-250",
+      "BT-610"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-012.md"
+    },
+    {
+     "id": "ENT-014",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-014.md"
+    },
+    {
+     "id": "ENT-015",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-015.md"
+    },
+    {
+     "id": "ENT-016",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-016.md"
+    },
+    {
+     "id": "ENT-017",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-017.md"
+    },
+    {
+     "id": "ENT-018",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-018.md"
+    },
+    {
+     "id": "ENT-019",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-019.md"
+    },
+    {
+     "id": "ENT-020",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-020.md"
+    },
+    {
+     "id": "ENT-025",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-025.md"
+    },
+    {
+     "id": "ENT-026",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-026.md"
+    }
+   ],
+   "software": [
+    {
+     "name": "PyBaMM",
+     "status": "im Projekt (SOFTWARE.md)"
+    }
+   ],
+   "teile": [
+    {
+     "pos": "100.1",
+     "bt": "BT-100",
+     "benennung": "Zelle (NMC, Zellformat offen; Rechenregel wie LFP-Platzhalter)",
+     "menge": 220,
+     "art": "K"
+    }
+   ]
+  },
+  {
+   "id": "C3",
+   "name": "Ratentest 0,5C/1C/2C, Wärmeleistung, R_i über SOC und T",
+   "dauer": 1,
+   "vorgaenger": [
+    "C2"
+   ],
+   "nachfolger": [
+    "C4",
+    "G3",
+    "K0",
+    "K1"
+   ],
+   "ressourcen": [
+    "Sonnet",
+    "Maschine"
+   ],
+   "notiz": "Stufe 2",
+   "es": 10.5,
+   "ef": 11.5,
+   "puffer": 0.0,
+   "kritisch": true,
+   "status": "offen",
+   "req": [
+    {
+     "id": "REQ-P04",
+     "text": "Dauer- und Spitzenleistung Entladen"
+    },
+    {
+     "id": "REQ-P05",
+     "text": "Schnellladen 10 → 80 %"
+    }
+   ],
+   "bt": [
+    {
+     "id": "BT-100",
+     "name": "Zelle"
+    }
+   ],
+   "wissen": [],
+   "doc": [],
+   "aus": [
+    {
+     "glob": "sim/chemie/ratentest*",
+     "vorhanden": false
+    }
+   ],
+   "befunde": [],
+   "entscheidungen": [
+    {
+     "id": "ENT-002",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-002.md"
+    },
+    {
+     "id": "ENT-004",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-200",
+      "BT-210",
+      "BT-300",
+      "BT-400",
+      "BT-500",
+      "BT-530",
+      "BT-600",
+      "BT-700",
+      "BT-710",
+      "BT-780"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-004.md"
+    },
+    {
+     "id": "ENT-005",
+     "titel": "Frage",
+     "bt": [
+      "BT-100",
+      "BT-760"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-005.md"
+    },
+    {
+     "id": "ENT-006",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-310",
+      "BT-410",
+      "BT-711"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-006.md"
+    },
+    {
+     "id": "ENT-007",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-007.md"
+    },
+    {
+     "id": "ENT-008",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-008.md"
+    },
+    {
+     "id": "ENT-009",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-009.md"
+    },
+    {
+     "id": "ENT-010",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-010.md"
+    },
+    {
+     "id": "ENT-011",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-011.md"
+    },
+    {
+     "id": "ENT-012",
+     "titel": "Frage",
+     "bt": [
+      "BT-100",
+      "BT-200",
+      "BT-220",
+      "BT-240",
+      "BT-250",
+      "BT-610"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-012.md"
+    },
+    {
+     "id": "ENT-014",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-014.md"
+    },
+    {
+     "id": "ENT-015",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-015.md"
+    },
+    {
+     "id": "ENT-016",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-016.md"
+    },
+    {
+     "id": "ENT-017",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-017.md"
+    },
+    {
+     "id": "ENT-018",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-018.md"
+    },
+    {
+     "id": "ENT-019",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-019.md"
+    },
+    {
+     "id": "ENT-020",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-020.md"
+    },
+    {
+     "id": "ENT-025",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-025.md"
+    },
+    {
+     "id": "ENT-026",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-026.md"
+    }
+   ],
+   "software": [
+    {
+     "name": "PyBaMM",
+     "status": "im Projekt (SOFTWARE.md)"
+    }
+   ],
+   "teile": []
+  },
+  {
+   "id": "C4",
+   "name": "Validierung gegen veröffentlichte Messkurven, Abgleich Erwartung",
+   "dauer": 1,
+   "vorgaenger": [
+    "C3"
+   ],
+   "nachfolger": [
+    "C5",
+    "E3"
+   ],
+   "ressourcen": [
+    "Opus"
+   ],
+   "notiz": "Stufe 2",
+   "es": 11.5,
+   "ef": 12.5,
+   "puffer": 12.0,
+   "kritisch": false,
+   "status": "offen",
+   "req": [
+    {
+     "id": "REQ-D06",
+     "text": "Erwartung vor jeder Rechnung, Vergleich danach"
+    },
+    {
+     "id": "REQ-D01",
+     "text": "Jede Zahl ist rückverfolgbar (Rechnung mit Datei oder Quelle mit wörtlichem Beleg)"
+    }
+   ],
+   "bt": [
+    {
+     "id": "BT-100",
+     "name": "Zelle"
+    }
+   ],
+   "wissen": [],
+   "doc": [],
+   "aus": [
+    {
+     "glob": "sim/chemie/ERGEBNIS.md",
+     "vorhanden": false
+    }
+   ],
+   "befunde": [],
+   "entscheidungen": [
+    {
+     "id": "ENT-002",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-002.md"
+    },
+    {
+     "id": "ENT-004",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-200",
+      "BT-210",
+      "BT-300",
+      "BT-400",
+      "BT-500",
+      "BT-530",
+      "BT-600",
+      "BT-700",
+      "BT-710",
+      "BT-780"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-004.md"
+    },
+    {
+     "id": "ENT-005",
+     "titel": "Frage",
+     "bt": [
+      "BT-100",
+      "BT-760"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-005.md"
+    },
+    {
+     "id": "ENT-006",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-310",
+      "BT-410",
+      "BT-711"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-006.md"
+    },
+    {
+     "id": "ENT-007",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-007.md"
+    },
+    {
+     "id": "ENT-008",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-008.md"
+    },
+    {
+     "id": "ENT-009",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-009.md"
+    },
+    {
+     "id": "ENT-010",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-010.md"
+    },
+    {
+     "id": "ENT-011",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-011.md"
+    },
+    {
+     "id": "ENT-012",
+     "titel": "Frage",
+     "bt": [
+      "BT-100",
+      "BT-200",
+      "BT-220",
+      "BT-240",
+      "BT-250",
+      "BT-610"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-012.md"
+    },
+    {
+     "id": "ENT-014",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-014.md"
+    },
+    {
+     "id": "ENT-015",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-015.md"
+    },
+    {
+     "id": "ENT-016",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-016.md"
+    },
+    {
+     "id": "ENT-017",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-017.md"
+    },
+    {
+     "id": "ENT-018",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-018.md"
+    },
+    {
+     "id": "ENT-019",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-019.md"
+    },
+    {
+     "id": "ENT-020",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-020.md"
+    },
+    {
+     "id": "ENT-025",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-025.md"
+    },
+    {
+     "id": "ENT-026",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-026.md"
+    }
+   ],
+   "software": [
+    {
+     "name": "PyBaMM",
+     "status": "im Projekt (SOFTWARE.md)"
+    }
+   ],
+   "teile": []
+  },
+  {
+   "id": "C5",
+   "name": "Alterung (Zyklen, Kalender) und Vergleich NMC / Natrium-Ionen",
+   "dauer": 2,
+   "vorgaenger": [
+    "C4"
+   ],
+   "nachfolger": [
+    "B1"
+   ],
+   "ressourcen": [
+    "Sonnet",
+    "Maschine"
+   ],
+   "notiz": "Stufe 2",
+   "es": 12.5,
+   "ef": 14.5,
+   "puffer": 13.0,
+   "kritisch": false,
+   "status": "offen",
+   "req": [
+    {
+     "id": "REQ-P10",
+     "text": "Lebensdauer (Zyklen, Jahre, Restkapazität)"
+    },
+    {
+     "id": "REQ-P06",
+     "text": "Zellchemie"
+    }
+   ],
+   "bt": [
+    {
+     "id": "BT-100",
+     "name": "Zelle"
+    }
+   ],
+   "wissen": [
+    {
+     "id": "W02",
+     "status": "fertig",
+     "pruefung": "8 Belege bestaetigt, 5 Fehler",
+     "datei": "forschung/ergebnis/W02.md"
+    },
+    {
+     "id": "W07",
+     "status": "fertig",
+     "pruefung": "8 Belege bestaetigt, 2 Fehler",
+     "datei": "forschung/ergebnis/W07.md"
+    },
+    {
+     "id": "W10",
+     "status": "fertig",
+     "pruefung": "19 Belege bestaetigt, 4 Fehler",
+     "datei": "forschung/ergebnis/W10.md"
+    }
+   ],
+   "doc": [],
+   "aus": [
+    {
+     "glob": "sim/chemie/alterung*",
+     "vorhanden": false
+    }
+   ],
+   "befunde": [
+    {
+     "id": "B-BAT-004",
+     "titel": "B-BAT-004 (2026-11-16) Analyse: Was fehlt für die komplette Batterie (Struktur gegen Information)"
+    },
+    {
+     "id": "B-BAT-005",
+     "titel": "B-BAT-005 (2026-11-16) R4: Recherche geprüft, kein erfundener Wert, ein Spaltenfehler (PI), Wh/L-Frage bleibt offen"
+    }
+   ],
+   "entscheidungen": [
+    {
+     "id": "ENT-002",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-002.md"
+    },
+    {
+     "id": "ENT-004",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-200",
+      "BT-210",
+      "BT-300",
+      "BT-400",
+      "BT-500",
+      "BT-530",
+      "BT-600",
+      "BT-700",
+      "BT-710",
+      "BT-780"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-004.md"
+    },
+    {
+     "id": "ENT-005",
+     "titel": "Frage",
+     "bt": [
+      "BT-100",
+      "BT-760"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-005.md"
+    },
+    {
+     "id": "ENT-006",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-310",
+      "BT-410",
+      "BT-711"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-006.md"
+    },
+    {
+     "id": "ENT-007",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-007.md"
+    },
+    {
+     "id": "ENT-008",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-008.md"
+    },
+    {
+     "id": "ENT-009",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-009.md"
+    },
+    {
+     "id": "ENT-010",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-010.md"
+    },
+    {
+     "id": "ENT-011",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-011.md"
+    },
+    {
+     "id": "ENT-012",
+     "titel": "Frage",
+     "bt": [
+      "BT-100",
+      "BT-200",
+      "BT-220",
+      "BT-240",
+      "BT-250",
+      "BT-610"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-012.md"
+    },
+    {
+     "id": "ENT-014",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-014.md"
+    },
+    {
+     "id": "ENT-015",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-015.md"
+    },
+    {
+     "id": "ENT-016",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-016.md"
+    },
+    {
+     "id": "ENT-017",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-017.md"
+    },
+    {
+     "id": "ENT-018",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-018.md"
+    },
+    {
+     "id": "ENT-019",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-019.md"
+    },
+    {
+     "id": "ENT-020",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-020.md"
+    },
+    {
+     "id": "ENT-025",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-025.md"
+    },
+    {
+     "id": "ENT-026",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-026.md"
+    }
+   ],
+   "software": [
+    {
+     "name": "PyBaMM",
+     "status": "im Projekt (SOFTWARE.md)"
+    }
+   ],
+   "teile": [
+    {
+     "pos": "700.9",
+     "bt": "BT-700",
+     "benennung": "Heizung (Kälte, −20 °C laut REQ-P08)",
+     "menge": 1,
+     "art": "K"
+    }
+   ]
+  },
+  {
+   "id": "G1",
+   "name": "Zellmaße als ENT-Akten (aus W03/W08/P01, sonst Annahme)",
+   "dauer": 0.5,
+   "vorgaenger": [
+    "V2",
+    "R4"
+   ],
+   "nachfolger": [
+    "G2"
+   ],
+   "ressourcen": [
+    "Opus",
+    "Mensch"
+   ],
+   "notiz": "Stufe 3, PM",
+   "es": 8,
+   "ef": 8.5,
+   "puffer": 2.0,
+   "kritisch": false,
+   "status": "ohne Nachweis",
+   "req": [
+    {
+     "id": "REQ-D11",
+     "text": "Jede Entscheidung als Akte an Bauteil und Merkmal gebunden; CAD-Maße nur aus diesen Akten"
+    }
+   ],
+   "bt": [
+    {
+     "id": "BT-100",
+     "name": "Zelle"
+    }
+   ],
+   "wissen": [
+    {
+     "id": "W03",
+     "status": "fertig",
+     "pruefung": "24 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/W03.md"
+    },
+    {
+     "id": "W08",
+     "status": "fertig",
+     "pruefung": "12 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/W08.md"
+    },
+    {
+     "id": "P01",
+     "status": "fertig",
+     "pruefung": "2 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/P01.md"
+    }
+   ],
+   "doc": [
+    "pm/bauteile/parameter.json"
+   ],
+   "aus": [],
+   "befunde": [
+    {
+     "id": "B-BAT-004",
+     "titel": "B-BAT-004 (2026-11-16) Analyse: Was fehlt für die komplette Batterie (Struktur gegen Information)"
+    },
+    {
+     "id": "B-BAT-015",
+     "titel": "B-BAT-015 (2026-11-17) Innenaufbau beider Zellen aus der Zerlegung; Korrektur LFP-Länge 681 mm; Bauraumbreite 1430 mm"
+    },
+    {
+     "id": "B-BAT-014",
+     "titel": "B-BAT-014 (2026-11-17) G1: Zellmaße je Variante als Akten (ENT-014…029, vorgeschlagen)"
+    },
+    {
+     "id": "B-BAT-013",
+     "titel": "B-BAT-013 (2026-11-17) Entscheidungen des Autors: ENT-012 freigegeben, Bauraum verlängert (ENT-013)"
+    },
+    {
+     "id": "B-BAT-012",
+     "titel": "B-BAT-012 (2026-11-17) G1-Vorprüfung Zellanordnung: LFP-Blade passt nur ohne Zwischenraum, NMC-4680 mit Reserve"
+    },
+    {
+     "id": "B-BAT-010",
+     "titel": "B-BAT-010 (2026-11-16) Zwei Varianten parallel: LFP-Blade und NMC-4680, gleiche Spezifikation"
+    },
+    {
+     "id": "B-BAT-009",
+     "titel": "B-BAT-009 (2026-11-16) Zerlegungsstudie Blade (W20): Gen-1-Zelle 160 Wh/kg, 355 Wh/L; Bauraum Fall A genau an der Grenze"
+    },
+    {
+     "id": "B-BAT-008",
+     "titel": "B-BAT-008 (2026-11-16) W19 geprüft; Energiewiderspruch Stückliste 112 kWh gegen 73,9 kWh"
+    },
+    {
+     "id": "B-BAT-007",
+     "titel": "B-BAT-007 (2026-11-16) Freigaben ENT-004/005; W18 geprüft; Blade-Zerlegungsstudie nicht abrufbar"
+    }
+   ],
+   "entscheidungen": [
+    {
+     "id": "ENT-002",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-002.md"
+    },
+    {
+     "id": "ENT-004",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-200",
+      "BT-210",
+      "BT-300",
+      "BT-400",
+      "BT-500",
+      "BT-530",
+      "BT-600",
+      "BT-700",
+      "BT-710",
+      "BT-780"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-004.md"
+    },
+    {
+     "id": "ENT-005",
+     "titel": "Frage",
+     "bt": [
+      "BT-100",
+      "BT-760"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-005.md"
+    },
+    {
+     "id": "ENT-006",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-310",
+      "BT-410",
+      "BT-711"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-006.md"
+    },
+    {
+     "id": "ENT-007",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-007.md"
+    },
+    {
+     "id": "ENT-008",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-008.md"
+    },
+    {
+     "id": "ENT-009",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-009.md"
+    },
+    {
+     "id": "ENT-010",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-010.md"
+    },
+    {
+     "id": "ENT-011",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-011.md"
+    },
+    {
+     "id": "ENT-012",
+     "titel": "Frage",
+     "bt": [
+      "BT-100",
+      "BT-200",
+      "BT-220",
+      "BT-240",
+      "BT-250",
+      "BT-610"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-012.md"
+    },
+    {
+     "id": "ENT-014",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-014.md"
+    },
+    {
+     "id": "ENT-015",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-015.md"
+    },
+    {
+     "id": "ENT-016",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-016.md"
+    },
+    {
+     "id": "ENT-017",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-017.md"
+    },
+    {
+     "id": "ENT-018",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-018.md"
+    },
+    {
+     "id": "ENT-019",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-019.md"
+    },
+    {
+     "id": "ENT-020",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-020.md"
+    },
+    {
+     "id": "ENT-025",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-025.md"
+    },
+    {
+     "id": "ENT-026",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-026.md"
+    }
+   ],
+   "software": [],
+   "teile": [
+    {
+     "pos": "100.1",
+     "bt": "BT-100",
+     "benennung": "Zelle (NMC, Zellformat offen; Rechenregel wie LFP-Platzhalter)",
+     "menge": 220,
+     "art": "K"
+    }
+   ]
+  },
+  {
+   "id": "G2",
+   "name": "Parametrische Zelle FreeCAD (liest parameter.json)",
+   "dauer": 2,
+   "vorgaenger": [
+    "G1"
+   ],
+   "nachfolger": [
+    "G4"
+   ],
+   "ressourcen": [
+    "Sonnet"
+   ],
+   "notiz": "Stufe 3",
+   "es": 8.5,
+   "ef": 10.5,
+   "puffer": 2.0,
+   "kritisch": false,
+   "status": "offen",
+   "req": [
+    {
+     "id": "REQ-D11",
+     "text": "Jede Entscheidung als Akte an Bauteil und Merkmal gebunden; CAD-Maße nur aus diesen Akten"
+    }
+   ],
+   "bt": [
+    {
+     "id": "BT-100",
+     "name": "Zelle"
+    }
+   ],
+   "wissen": [],
+   "doc": [],
+   "aus": [
+    {
+     "glob": "cad/zelle/*.FCStd",
+     "vorhanden": false
+    }
+   ],
+   "befunde": [
+    {
+     "id": "B-BAT-016",
+     "titel": "B-BAT-016 (2026-11-17) Detailmodell Innenaufbau fertig; 4680-Wickel ragte über den Becher (Opus-Fehler im Kern)"
+    },
+    {
+     "id": "B-BAT-015",
+     "titel": "B-BAT-015 (2026-11-17) Innenaufbau beider Zellen aus der Zerlegung; Korrektur LFP-Länge 681 mm; Bauraumbreite 1430 mm"
+    },
+    {
+     "id": "B-BAT-014",
+     "titel": "B-BAT-014 (2026-11-17) G1: Zellmaße je Variante als Akten (ENT-014…029, vorgeschlagen)"
+    }
+   ],
+   "entscheidungen": [
+    {
+     "id": "ENT-002",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-002.md"
+    },
+    {
+     "id": "ENT-004",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-200",
+      "BT-210",
+      "BT-300",
+      "BT-400",
+      "BT-500",
+      "BT-530",
+      "BT-600",
+      "BT-700",
+      "BT-710",
+      "BT-780"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-004.md"
+    },
+    {
+     "id": "ENT-005",
+     "titel": "Frage",
+     "bt": [
+      "BT-100",
+      "BT-760"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-005.md"
+    },
+    {
+     "id": "ENT-006",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-310",
+      "BT-410",
+      "BT-711"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-006.md"
+    },
+    {
+     "id": "ENT-007",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-007.md"
+    },
+    {
+     "id": "ENT-008",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-008.md"
+    },
+    {
+     "id": "ENT-009",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-009.md"
+    },
+    {
+     "id": "ENT-010",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-010.md"
+    },
+    {
+     "id": "ENT-011",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-011.md"
+    },
+    {
+     "id": "ENT-012",
+     "titel": "Frage",
+     "bt": [
+      "BT-100",
+      "BT-200",
+      "BT-220",
+      "BT-240",
+      "BT-250",
+      "BT-610"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-012.md"
+    },
+    {
+     "id": "ENT-014",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-014.md"
+    },
+    {
+     "id": "ENT-015",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-015.md"
+    },
+    {
+     "id": "ENT-016",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-016.md"
+    },
+    {
+     "id": "ENT-017",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-017.md"
+    },
+    {
+     "id": "ENT-018",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-018.md"
+    },
+    {
+     "id": "ENT-019",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-019.md"
+    },
+    {
+     "id": "ENT-020",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-020.md"
+    },
+    {
+     "id": "ENT-025",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-025.md"
+    },
+    {
+     "id": "ENT-026",
+     "titel": "Frage",
+     "bt": [
+      "BT-100"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-026.md"
+    }
+   ],
+   "software": [
+    {
+     "name": "FreeCAD",
+     "status": "im Projekt (SOFTWARE.md)"
+    }
+   ],
+   "teile": []
+  },
+  {
+   "id": "G3",
+   "name": "Verschaltung sS/pP aus Spannung und Energie festlegen (ENT)",
+   "dauer": 1,
+   "vorgaenger": [
+    "V2",
+    "C3"
+   ],
+   "nachfolger": [
+    "G4",
+    "K0",
+    "E1",
+    "E2"
+   ],
+   "ressourcen": [
+    "Opus",
+    "Mensch"
+   ],
+   "notiz": "Stufe 4, bestimmt Zellzahl",
+   "es": 11.5,
+   "ef": 12.5,
+   "puffer": 0.0,
+   "kritisch": true,
+   "status": "ohne Nachweis",
+   "req": [
+    {
+     "id": "REQ-P02",
+     "text": "nutzbarer Energieinhalt"
+    },
+    {
+     "id": "REQ-P03",
+     "text": "Systemspannung (Nenn, min, max)"
+    }
+   ],
+   "bt": [
+    {
+     "id": "BT-200",
+     "name": "Zellstack"
+    }
+   ],
+   "wissen": [
+    {
+     "id": "W12",
+     "status": "fertig",
+     "pruefung": "12 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/W12.md"
+    }
+   ],
+   "doc": [],
+   "aus": [],
+   "befunde": [
+    {
+     "id": "B-BAT-011",
+     "titel": "B-BAT-011 (2026-11-16) Variantenvergleich mit Messwerten: NMC-4680 ein Drittel leichter, LFP-Blade im Bauraum knapp"
+    },
+    {
+     "id": "B-BAT-010",
+     "titel": "B-BAT-010 (2026-11-16) Zwei Varianten parallel: LFP-Blade und NMC-4680, gleiche Spezifikation"
+    },
+    {
+     "id": "B-BAT-008",
+     "titel": "B-BAT-008 (2026-11-16) W19 geprüft; Energiewiderspruch Stückliste 112 kWh gegen 73,9 kWh"
+    }
+   ],
+   "entscheidungen": [
+    {
+     "id": "ENT-004",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-200",
+      "BT-210",
+      "BT-300",
+      "BT-400",
+      "BT-500",
+      "BT-530",
+      "BT-600",
+      "BT-700",
+      "BT-710",
+      "BT-780"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-004.md"
+    },
+    {
+     "id": "ENT-012",
+     "titel": "Frage",
+     "bt": [
+      "BT-100",
+      "BT-200",
+      "BT-220",
+      "BT-240",
+      "BT-250",
+      "BT-610"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-012.md"
+    }
+   ],
+   "software": [],
+   "teile": []
+  },
+  {
+   "id": "G4",
+   "name": "Pack: Zellanordnung, Querträger, Kühlplatte, Deckel",
+   "dauer": 3,
+   "vorgaenger": [
+    "G2",
+    "G3"
+   ],
+   "nachfolger": [
+    "G5",
+    "E1",
+    "L1",
+    "K1"
+   ],
+   "ressourcen": [
+    "Sonnet",
+    "Maschine"
+   ],
+   "notiz": "Stufe 3",
+   "es": 12.5,
+   "ef": 15.5,
+   "puffer": 0.0,
+   "kritisch": true,
+   "status": "offen",
+   "req": [
+    {
+     "id": "REQ-P07",
+     "text": "Bauraum (L × B × H) und Masse"
+    },
+    {
+     "id": "REQ-D11",
+     "text": "Jede Entscheidung als Akte an Bauteil und Merkmal gebunden; CAD-Maße nur aus diesen Akten"
+    }
+   ],
+   "bt": [
+    {
+     "id": "BT-200",
+     "name": "Zellstack"
+    },
+    {
+     "id": "BT-500",
+     "name": "Struktur und Gehäuse"
+    }
+   ],
+   "wissen": [
+    {
+     "id": "W15",
+     "status": "fertig",
+     "pruefung": "10 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/W15.md"
+    },
+    {
+     "id": "P02",
+     "status": "fertig",
+     "pruefung": "2 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/P02.md"
+    }
+   ],
+   "doc": [
+    "docs/13_stueckliste.md"
+   ],
+   "aus": [
+    {
+     "glob": "cad/pack/*.FCStd",
+     "vorhanden": false
+    }
+   ],
+   "befunde": [
+    {
+     "id": "B-BAT-003",
+     "titel": "B-BAT-003 (2026-11-12) Patente P02–P10: Spalten verrutscht (Opus-Fehler in lauf.sh), PI blieb ehrlich"
+    },
+    {
+     "id": "B-BAT-004",
+     "titel": "B-BAT-004 (2026-11-16) Analyse: Was fehlt für die komplette Batterie (Struktur gegen Information)"
+    },
+    {
+     "id": "B-BAT-020",
+     "titel": "B-BAT-020 (2026-11-17) Fixierung, Kontaktierung, Kühlung der 4680 nach Herstellervergleich"
+    },
+    {
+     "id": "B-BAT-012",
+     "titel": "B-BAT-012 (2026-11-17) G1-Vorprüfung Zellanordnung: LFP-Blade passt nur ohne Zwischenraum, NMC-4680 mit Reserve"
+    }
+   ],
+   "entscheidungen": [
+    {
+     "id": "ENT-004",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-200",
+      "BT-210",
+      "BT-300",
+      "BT-400",
+      "BT-500",
+      "BT-530",
+      "BT-600",
+      "BT-700",
+      "BT-710",
+      "BT-780"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-004.md"
+    },
+    {
+     "id": "ENT-012",
+     "titel": "Frage",
+     "bt": [
+      "BT-100",
+      "BT-200",
+      "BT-220",
+      "BT-240",
+      "BT-250",
+      "BT-610"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-012.md"
+    }
+   ],
+   "software": [
+    {
+     "name": "FreeCAD",
+     "status": "im Projekt (SOFTWARE.md)"
+    },
+    {
+     "name": "gmsh",
+     "status": "im Projekt (SOFTWARE.md)"
+    }
+   ],
+   "teile": [
+    {
+     "pos": "200.1",
+     "bt": "BT-200",
+     "benennung": "Zellreihe zwischen Querträgern (Cell-to-Pack, ohne Module)",
+     "menge": 10,
+     "art": "E"
+    },
+    {
+     "pos": "200.2",
+     "bt": "BT-200",
+     "benennung": "Zwischenlage zwischen Zellen (Wärme- und Brandschutz, Quellausgleich)",
+     "menge": 220,
+     "art": "K"
+    },
+    {
+     "pos": "200.3",
+     "bt": "BT-200",
+     "benennung": "Wärmeleitmaterial Zelle → Kühlplatte",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "200.5",
+     "bt": "BT-250",
+     "benennung": "Zellhalter (hält und teilt Rundzellen, Abstand für Kühlung und Isolation)",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "500.1",
+     "bt": "BT-500",
+     "benennung": "Gehäusewanne",
+     "menge": 1,
+     "art": "E"
+    },
+    {
+     "pos": "500.2",
+     "bt": "BT-500",
+     "benennung": "Deckel mit Dichtung",
+     "menge": 1,
+     "art": "E"
+    },
+    {
+     "pos": "500.3",
+     "bt": "BT-500",
+     "benennung": "Querträger",
+     "menge": 11,
+     "art": "E"
+    },
+    {
+     "pos": "700.1",
+     "bt": "BT-700",
+     "benennung": "Schaltbox (Gehäuse für Schütze, Vorladung, Hauptsicherung)",
+     "menge": 1,
+     "art": "E"
+    }
+   ]
+  },
+  {
+   "id": "G5",
+   "name": "Bauregeln + Prüfskript (Abstände, Isolation, Montagefolge)",
+   "dauer": 1,
+   "vorgaenger": [
+    "G4"
+   ],
+   "nachfolger": [
+    "M1",
+    "X1",
+    "SL2",
+    "B3"
+   ],
+   "ressourcen": [
+    "Opus",
+    "Sonnet"
+   ],
+   "notiz": "Stufe 3",
+   "es": 15.5,
+   "ef": 16.5,
+   "puffer": 3.0,
+   "kritisch": false,
+   "status": "offen",
+   "req": [
+    {
+     "id": "REQ-P13",
+     "text": "Schutzart, Isolation, Berührschutz"
+    }
+   ],
+   "bt": [
+    {
+     "id": "BT-200",
+     "name": "Zellstack"
+    },
+    {
+     "id": "BT-500",
+     "name": "Struktur und Gehäuse"
+    }
+   ],
+   "wissen": [],
+   "doc": [],
+   "aus": [
+    {
+     "glob": "cad/pack/bauregeln*",
+     "vorhanden": false
+    }
+   ],
+   "befunde": [],
+   "entscheidungen": [
+    {
+     "id": "ENT-004",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-200",
+      "BT-210",
+      "BT-300",
+      "BT-400",
+      "BT-500",
+      "BT-530",
+      "BT-600",
+      "BT-700",
+      "BT-710",
+      "BT-780"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-004.md"
+    },
+    {
+     "id": "ENT-012",
+     "titel": "Frage",
+     "bt": [
+      "BT-100",
+      "BT-200",
+      "BT-220",
+      "BT-240",
+      "BT-250",
+      "BT-610"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-012.md"
+    }
+   ],
+   "software": [
+    {
+     "name": "FreeCAD",
+     "status": "im Projekt (SOFTWARE.md)"
+    }
+   ],
+   "teile": [
+    {
+     "pos": "500.7",
+     "bt": "BT-500",
+     "benennung": "Druckausgleichselement (atmend, wasserdicht)",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "700.8",
+     "bt": "BT-700",
+     "benennung": "Entgasungsventil mit Entgasungskanal",
+     "menge": 1,
+     "art": "K"
+    }
+   ]
+  },
+  {
+   "id": "K0",
+   "name": "Kühlart Luft gegen Wasser (1D-Wärmebilanz Schnellladen, W16), Entscheidung ENT",
+   "dauer": 1,
+   "vorgaenger": [
+    "C3",
+    "G3",
+    "R4"
+   ],
+   "nachfolger": [
+    "K1"
+   ],
+   "ressourcen": [
+    "Opus",
+    "Sonnet",
+    "Mensch"
+   ],
+   "notiz": "Nutzerwunsch 2026-11-12",
+   "es": 12.5,
+   "ef": 13.5,
+   "puffer": 2.0,
+   "kritisch": false,
+   "status": "offen",
+   "req": [
+    {
+     "id": "REQ-P09",
+     "text": "max. Zelltemperatur und Spreizung"
+    },
+    {
+     "id": "REQ-P12",
+     "text": "Kühlmittel und Anschlüsse"
+    }
+   ],
+   "bt": [
+    {
+     "id": "BT-600",
+     "name": "Kühlung"
+    }
+   ],
+   "wissen": [
+    {
+     "id": "W16",
+     "status": "fertig",
+     "pruefung": "10 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/W16.md"
+    }
+   ],
+   "doc": [
+    "docs/konzept_werkzeuge_kuehlung_kabel_crash.md"
+   ],
+   "aus": [
+    {
+     "glob": "sim/kuehlung/kuehlart*",
+     "vorhanden": false
+    }
+   ],
+   "befunde": [
+    {
+     "id": "B-BAT-004",
+     "titel": "B-BAT-004 (2026-11-16) Analyse: Was fehlt für die komplette Batterie (Struktur gegen Information)"
+    },
+    {
+     "id": "B-BAT-018",
+     "titel": "B-BAT-018 (2026-11-17) K0 Wärme Einzelzelle: Schnellladen verfehlt 5 K bei beiden, 45 °C bei NMC"
+    },
+    {
+     "id": "B-BAT-017",
+     "titel": "B-BAT-017 (2026-11-17) Vorgaben Kühlung (REQ-P09, ENT-081); Bericht begonnen"
+    }
+   ],
+   "entscheidungen": [
+    {
+     "id": "ENT-004",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-200",
+      "BT-210",
+      "BT-300",
+      "BT-400",
+      "BT-500",
+      "BT-530",
+      "BT-600",
+      "BT-700",
+      "BT-710",
+      "BT-780"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-004.md"
+    },
+    {
+     "id": "ENT-081",
+     "titel": "Frage",
+     "bt": [
+      "BT-230",
+      "BT-600",
+      "BT-610"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-081.md"
+    },
+    {
+     "id": "ENT-088",
+     "titel": "Frage",
+     "bt": [
+      "BT-600"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-088.md"
+    }
+   ],
+   "software": [
+    {
+     "name": "numpy",
+     "status": "im Projekt (SOFTWARE.md)"
+    }
+   ],
+   "teile": [
+    {
+     "pos": "600.1",
+     "bt": "BT-600",
+     "benennung": "Kühlplatte (Wasser-Glykol)",
+     "menge": 1,
+     "art": "E"
+    },
+    {
+     "pos": "600.6",
+     "bt": "BT-600",
+     "benennung": "Pumpe, Wärmetauscher/Kältemittelkühler",
+     "menge": 1,
+     "art": "S"
+    },
+    {
+     "pos": "700.9",
+     "bt": "BT-700",
+     "benennung": "Heizung (Kälte, −20 °C laut REQ-P08)",
+     "menge": 1,
+     "art": "K"
+    }
+   ]
+  },
+  {
+   "id": "E1",
+   "name": "Zellverbinder/Kabel: Querschnitt, Verluste, Erwärmung (Zielband als Annahme)",
+   "dauer": 2,
+   "vorgaenger": [
+    "G3",
+    "G4"
+   ],
+   "nachfolger": [
+    "F1"
+   ],
+   "ressourcen": [
+    "Sonnet",
+    "Maschine"
+   ],
+   "notiz": "Stufe 4",
+   "es": 15.5,
+   "ef": 17.5,
+   "puffer": 9.0,
+   "kritisch": false,
+   "status": "offen",
+   "req": [
+    {
+     "id": "REQ-P04",
+     "text": "Dauer- und Spitzenleistung Entladen"
+    }
+   ],
+   "bt": [
+    {
+     "id": "BT-400",
+     "name": "Verkabelung und Zellverbinder"
+    }
+   ],
+   "wissen": [
+    {
+     "id": "W13",
+     "status": "fertig",
+     "pruefung": "10 Belege bestaetigt, 1 Fehler",
+     "datei": "forschung/ergebnis/W13.md"
+    },
+    {
+     "id": "P06",
+     "status": "fertig",
+     "pruefung": "6 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/P06.md"
+    }
+   ],
+   "doc": [],
+   "aus": [
+    {
+     "glob": "sim/elektrik/verbinder*",
+     "vorhanden": false
+    }
+   ],
+   "befunde": [
+    {
+     "id": "B-BAT-003",
+     "titel": "B-BAT-003 (2026-11-12) Patente P02–P10: Spalten verrutscht (Opus-Fehler in lauf.sh), PI blieb ehrlich"
+    },
+    {
+     "id": "B-BAT-004",
+     "titel": "B-BAT-004 (2026-11-16) Analyse: Was fehlt für die komplette Batterie (Struktur gegen Information)"
+    },
+    {
+     "id": "B-BAT-013",
+     "titel": "B-BAT-013 (2026-11-17) Entscheidungen des Autors: ENT-012 freigegeben, Bauraum verlängert (ENT-013)"
+    }
+   ],
+   "entscheidungen": [
+    {
+     "id": "ENT-004",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-200",
+      "BT-210",
+      "BT-300",
+      "BT-400",
+      "BT-500",
+      "BT-530",
+      "BT-600",
+      "BT-700",
+      "BT-710",
+      "BT-780"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-004.md"
+    }
+   ],
+   "software": [
+    {
+     "name": "numpy",
+     "status": "im Projekt (SOFTWARE.md)"
+    }
+   ],
+   "teile": [
+    {
+     "pos": "400.1",
+     "bt": "BT-400",
+     "benennung": "Zellverbinder (Zellabgriff, Plus und Minus je Zelle)",
+     "menge": 0,
+     "art": "E"
+    },
+    {
+     "pos": "400.2",
+     "bt": "BT-400",
+     "benennung": "Reihenverbinder (Reihenbrücke, bei p > 1 Gruppenbrücke)",
+     "menge": 219,
+     "art": "E"
+    },
+    {
+     "pos": "400.3",
+     "bt": "BT-400",
+     "benennung": "HV-Hauptleitung plus/minus im Pack",
+     "menge": 2,
+     "art": "K"
+    }
+   ]
+  },
+  {
+   "id": "E2",
+   "name": "Schutzkonzept: Sicherung, Schütze, Vorladung, Isolationswächter",
+   "dauer": 2,
+   "vorgaenger": [
+    "G3"
+   ],
+   "nachfolger": [
+    "L1",
+    "E3",
+    "E4",
+    "SL2"
+   ],
+   "ressourcen": [
+    "Opus",
+    "Sonnet"
+   ],
+   "notiz": "Stufe 4",
+   "es": 12.5,
+   "ef": 14.5,
+   "puffer": 9.0,
+   "kritisch": false,
+   "status": "offen",
+   "req": [
+    {
+     "id": "REQ-P13",
+     "text": "Schutzart, Isolation, Berührschutz"
+    },
+    {
+     "id": "REQ-P11",
+     "text": "Sicherheit: keine Ausbreitung des thermischen Durchgehens bzw. Warnzeit nach Norm"
+    }
+   ],
+   "bt": [
+    {
+     "id": "BT-400",
+     "name": "Verkabelung und Zellverbinder"
+    },
+    {
+     "id": "BT-700",
+     "name": "Zusatzkomponenten"
+    }
+   ],
+   "wissen": [
+    {
+     "id": "W13",
+     "status": "fertig",
+     "pruefung": "10 Belege bestaetigt, 1 Fehler",
+     "datei": "forschung/ergebnis/W13.md"
+    }
+   ],
+   "doc": [],
+   "aus": [
+    {
+     "glob": "sim/elektrik/schutz*",
+     "vorhanden": false
+    }
+   ],
+   "befunde": [
+    {
+     "id": "B-BAT-004",
+     "titel": "B-BAT-004 (2026-11-16) Analyse: Was fehlt für die komplette Batterie (Struktur gegen Information)"
+    }
+   ],
+   "entscheidungen": [
+    {
+     "id": "ENT-004",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-200",
+      "BT-210",
+      "BT-300",
+      "BT-400",
+      "BT-500",
+      "BT-530",
+      "BT-600",
+      "BT-700",
+      "BT-710",
+      "BT-780"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-004.md"
+    }
+   ],
+   "software": [],
+   "teile": [
+    {
+     "pos": "300.5",
+     "bt": "BT-300",
+     "benennung": "Isolationswächter",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "700.1",
+     "bt": "BT-700",
+     "benennung": "Schaltbox (Gehäuse für Schütze, Vorladung, Hauptsicherung)",
+     "menge": 1,
+     "art": "E"
+    },
+    {
+     "pos": "700.2",
+     "bt": "BT-700",
+     "benennung": "Hauptschütz plus und minus",
+     "menge": 2,
+     "art": "K"
+    },
+    {
+     "pos": "700.3",
+     "bt": "BT-700",
+     "benennung": "Vorladeschütz mit Vorladewiderstand",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "700.4",
+     "bt": "BT-700",
+     "benennung": "Hauptsicherung (ggf. pyrotechnischer Trenner)",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "700.5",
+     "bt": "BT-700",
+     "benennung": "Service-Trennstecker",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "700.6",
+     "bt": "BT-700",
+     "benennung": "HV-Steckverbinder Pack (Antrieb, Laden)",
+     "menge": 2,
+     "art": "K"
+    }
+   ]
+  },
+  {
+   "id": "L1",
+   "name": "Kabelverlegung: Weg skizzieren (Sketch-to-Prompt), Prüfskript Biegeradius/Abstand HV-NV/Kühlleitung, FreeCAD-Sweep",
+   "dauer": 3,
+   "vorgaenger": [
+    "E2",
+    "G4",
+    "W1"
+   ],
+   "nachfolger": [
+    "SL2",
+    "F1"
+   ],
+   "ressourcen": [
+    "Opus",
+    "Sonnet"
+   ],
+   "notiz": "Nutzerwunsch 2026-11-12, Vorbild spulen_montage.py",
+   "es": 15.5,
+   "ef": 18.5,
+   "puffer": 8.0,
+   "kritisch": false,
+   "status": "offen",
+   "req": [
+    {
+     "id": "REQ-P13",
+     "text": "Schutzart, Isolation, Berührschutz"
+    }
+   ],
+   "bt": [
+    {
+     "id": "BT-400",
+     "name": "Verkabelung und Zellverbinder"
+    }
+   ],
+   "wissen": [
+    {
+     "id": "T09",
+     "status": "fertig",
+     "pruefung": "1 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/T09.md"
+    }
+   ],
+   "doc": [
+    "docs/konzept_werkzeuge_kuehlung_kabel_crash.md"
+   ],
+   "aus": [
+    {
+     "glob": "cad/pack/kabel*",
+     "vorhanden": false
+    }
+   ],
+   "befunde": [],
+   "entscheidungen": [
+    {
+     "id": "ENT-004",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-200",
+      "BT-210",
+      "BT-300",
+      "BT-400",
+      "BT-500",
+      "BT-530",
+      "BT-600",
+      "BT-700",
+      "BT-710",
+      "BT-780"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-004.md"
+    }
+   ],
+   "software": [
+    {
+     "name": "Sketch-to-Prompt",
+     "status": "im Projekt (SOFTWARE.md)"
+    },
+    {
+     "name": "FreeCAD",
+     "status": "im Projekt (SOFTWARE.md)"
+    }
+   ],
+   "teile": [
+    {
+     "pos": "300.6",
+     "bt": "BT-300",
+     "benennung": "Messleitungen bzw. Flexleiterplatte Zelle → Überwachung",
+     "menge": 14,
+     "art": "K"
+    },
+    {
+     "pos": "400.2",
+     "bt": "BT-400",
+     "benennung": "Reihenverbinder (Reihenbrücke, bei p > 1 Gruppenbrücke)",
+     "menge": 219,
+     "art": "E"
+    },
+    {
+     "pos": "400.3",
+     "bt": "BT-400",
+     "benennung": "HV-Hauptleitung plus/minus im Pack",
+     "menge": 2,
+     "art": "K"
+    },
+    {
+     "pos": "700.6",
+     "bt": "BT-700",
+     "benennung": "HV-Steckverbinder Pack (Antrieb, Laden)",
+     "menge": 2,
+     "art": "K"
+    }
+   ]
+  },
+  {
+   "id": "E3",
+   "name": "Steuerung/BMS: Messkonzept, Ladezustand, Ausgleich (Konzept, offene Software aus T06)",
+   "dauer": 2,
+   "vorgaenger": [
+    "E2",
+    "C4"
+   ],
+   "nachfolger": [
+    "SL2",
+    "F1"
+   ],
+   "ressourcen": [
+    "Opus",
+    "Sonnet"
+   ],
+   "notiz": "Stufe 4",
+   "es": 14.5,
+   "ef": 16.5,
+   "puffer": 10.0,
+   "kritisch": false,
+   "status": "offen",
+   "req": [
+    {
+     "id": "REQ-P15",
+     "text": "Messung und BMS: Zellspannung, Temperatur, Isolationswächter"
+    }
+   ],
+   "bt": [
+    {
+     "id": "BT-300",
+     "name": "Regelung (BMS)"
+    }
+   ],
+   "wissen": [
+    {
+     "id": "W05",
+     "status": "fertig",
+     "pruefung": "0 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/W05.md"
+    },
+    {
+     "id": "W14",
+     "status": "fertig",
+     "pruefung": "8 Belege bestaetigt, 1 Fehler",
+     "datei": "forschung/ergebnis/W14.md"
+    },
+    {
+     "id": "T06",
+     "status": "fertig",
+     "pruefung": "4 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/T06.md"
+    },
+    {
+     "id": "P07",
+     "status": "fertig",
+     "pruefung": "6 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/P07.md"
+    }
+   ],
+   "doc": [],
+   "aus": [
+    {
+     "glob": "sim/elektrik/bms*",
+     "vorhanden": false
+    }
+   ],
+   "befunde": [
+    {
+     "id": "B-BAT-002",
+     "titel": "B-BAT-002 (2026-11-12) „0 Belege“ hieß „nicht geprüft“: Zitate ohne „Beleg:“ rutschten durch"
+    },
+    {
+     "id": "B-BAT-004",
+     "titel": "B-BAT-004 (2026-11-16) Analyse: Was fehlt für die komplette Batterie (Struktur gegen Information)"
+    },
+    {
+     "id": "B-BAT-013",
+     "titel": "B-BAT-013 (2026-11-17) Entscheidungen des Autors: ENT-012 freigegeben, Bauraum verlängert (ENT-013)"
+    }
+   ],
+   "entscheidungen": [
+    {
+     "id": "ENT-004",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-200",
+      "BT-210",
+      "BT-300",
+      "BT-400",
+      "BT-500",
+      "BT-530",
+      "BT-600",
+      "BT-700",
+      "BT-710",
+      "BT-780"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-004.md"
+    }
+   ],
+   "software": [
+    {
+     "name": "foxBMS",
+     "status": "nicht installiert / nicht geprüft"
+    }
+   ],
+   "teile": [
+    {
+     "pos": "300.1",
+     "bt": "BT-300",
+     "benennung": "BMS-Hauptsteuergerät",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "300.2",
+     "bt": "BT-300",
+     "benennung": "Zellüberwachung (Spannung, Ausgleich)",
+     "menge": 14,
+     "art": "K"
+    },
+    {
+     "pos": "300.3",
+     "bt": "BT-300",
+     "benennung": "Temperaturfühler Zelle",
+     "menge": 55,
+     "art": "K"
+    },
+    {
+     "pos": "300.4",
+     "bt": "BT-300",
+     "benennung": "Strommessung (Shunt oder Hall)",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "300.6",
+     "bt": "BT-300",
+     "benennung": "Messleitungen bzw. Flexleiterplatte Zelle → Überwachung",
+     "menge": 14,
+     "art": "K"
+    },
+    {
+     "pos": "600.4",
+     "bt": "BT-600",
+     "benennung": "Temperaturfühler Kühlmittel",
+     "menge": 2,
+     "art": "K"
+    },
+    {
+     "pos": "700.7",
+     "bt": "BT-700",
+     "benennung": "NV-Steckverbinder (12 V, CAN, Sensorik)",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "700.10",
+     "bt": "BT-700",
+     "benennung": "Gas-/Drucksensor Früherkennung thermisches Ereignis",
+     "menge": 1,
+     "art": "K"
+    }
+   ]
+  },
+  {
+   "id": "E4",
+   "name": "Schaltungsmodell ngspice/Modelica: Vorladung, Kurzschluss",
+   "dauer": 2,
+   "vorgaenger": [
+    "E2",
+    "R5"
+   ],
+   "nachfolger": [
+    "B1"
+   ],
+   "ressourcen": [
+    "Sonnet",
+    "Maschine"
+   ],
+   "notiz": "Stufe 4",
+   "es": 14.5,
+   "ef": 16.5,
+   "puffer": 11.0,
+   "kritisch": false,
+   "status": "offen",
+   "req": [
+    {
+     "id": "REQ-P03",
+     "text": "Systemspannung (Nenn, min, max)"
+    },
+    {
+     "id": "REQ-P13",
+     "text": "Schutzart, Isolation, Berührschutz"
+    }
+   ],
+   "bt": [
+    {
+     "id": "BT-300",
+     "name": "Regelung (BMS)"
+    },
+    {
+     "id": "BT-400",
+     "name": "Verkabelung und Zellverbinder"
+    }
+   ],
+   "wissen": [
+    {
+     "id": "T04",
+     "status": "fertig",
+     "pruefung": "3 Belege bestaetigt, 1 Fehler",
+     "datei": "forschung/ergebnis/T04.md"
+    },
+    {
+     "id": "T05",
+     "status": "fertig",
+     "pruefung": "6 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/T05.md"
+    }
+   ],
+   "doc": [],
+   "aus": [
+    {
+     "glob": "sim/elektrik/schaltung*",
+     "vorhanden": false
+    }
+   ],
+   "befunde": [
+    {
+     "id": "B-BAT-002",
+     "titel": "B-BAT-002 (2026-11-12) „0 Belege“ hieß „nicht geprüft“: Zitate ohne „Beleg:“ rutschten durch"
+    },
+    {
+     "id": "B-BAT-004",
+     "titel": "B-BAT-004 (2026-11-16) Analyse: Was fehlt für die komplette Batterie (Struktur gegen Information)"
+    }
+   ],
+   "entscheidungen": [
+    {
+     "id": "ENT-004",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-200",
+      "BT-210",
+      "BT-300",
+      "BT-400",
+      "BT-500",
+      "BT-530",
+      "BT-600",
+      "BT-700",
+      "BT-710",
+      "BT-780"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-004.md"
+    }
+   ],
+   "software": [
+    {
+     "name": "ngspice",
+     "status": "nicht installiert / nicht geprüft"
+    },
+    {
+     "name": "OpenModelica",
+     "status": "nicht installiert / nicht geprüft"
+    }
+   ],
+   "teile": [
+    {
+     "pos": "700.3",
+     "bt": "BT-700",
+     "benennung": "Vorladeschütz mit Vorladewiderstand",
+     "menge": 1,
+     "art": "K"
+    }
+   ]
+  },
+  {
+   "id": "K1",
+   "name": "ERWARTUNG Kühlung Schnellladen (max. Zelltemperatur, Spreizung)",
+   "dauer": 0.5,
+   "vorgaenger": [
+    "C3",
+    "G4",
+    "K0",
+    "W2"
+   ],
+   "nachfolger": [
+    "K2"
+   ],
+   "ressourcen": [
+    "Opus"
+   ],
+   "notiz": "Stufe 5",
+   "es": 15.5,
+   "ef": 16.0,
+   "puffer": 0.0,
+   "kritisch": true,
+   "status": "offen",
+   "req": [
+    {
+     "id": "REQ-D06",
+     "text": "Erwartung vor jeder Rechnung, Vergleich danach"
+    },
+    {
+     "id": "REQ-P09",
+     "text": "max. Zelltemperatur und Spreizung"
+    }
+   ],
+   "bt": [
+    {
+     "id": "BT-600",
+     "name": "Kühlung"
+    }
+   ],
+   "wissen": [],
+   "doc": [],
+   "aus": [
+    {
+     "glob": "sim/kuehlung/ERWARTUNG.md",
+     "vorhanden": false
+    }
+   ],
+   "befunde": [
+    {
+     "id": "B-BAT-020",
+     "titel": "B-BAT-020 (2026-11-17) Fixierung, Kontaktierung, Kühlung der 4680 nach Herstellervergleich"
+    },
+    {
+     "id": "B-BAT-019",
+     "titel": "B-BAT-019 (2026-11-17) Schnellladen in den Griff bekommen (K1); Gehäuserecherche W21"
+    }
+   ],
+   "entscheidungen": [
+    {
+     "id": "ENT-004",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-200",
+      "BT-210",
+      "BT-300",
+      "BT-400",
+      "BT-500",
+      "BT-530",
+      "BT-600",
+      "BT-700",
+      "BT-710",
+      "BT-780"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-004.md"
+    },
+    {
+     "id": "ENT-081",
+     "titel": "Frage",
+     "bt": [
+      "BT-230",
+      "BT-600",
+      "BT-610"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-081.md"
+    },
+    {
+     "id": "ENT-088",
+     "titel": "Frage",
+     "bt": [
+      "BT-600"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-088.md"
+    }
+   ],
+   "software": [],
+   "teile": []
+  },
+  {
+   "id": "K2",
+   "name": "Kanalverteilung 1D (Verteiler, Druckverlust)",
+   "dauer": 1,
+   "vorgaenger": [
+    "K1"
+   ],
+   "nachfolger": [
+    "K3",
+    "K4"
+   ],
+   "ressourcen": [
+    "Sonnet",
+    "Maschine"
+   ],
+   "notiz": "Stufe 5",
+   "es": 16.0,
+   "ef": 17.0,
+   "puffer": 0.0,
+   "kritisch": true,
+   "status": "offen",
+   "req": [
+    {
+     "id": "REQ-P09",
+     "text": "max. Zelltemperatur und Spreizung"
+    }
+   ],
+   "bt": [
+    {
+     "id": "BT-600",
+     "name": "Kühlung"
+    }
+   ],
+   "wissen": [
+    {
+     "id": "P03",
+     "status": "fertig",
+     "pruefung": "6 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/P03.md"
+    }
+   ],
+   "doc": [],
+   "aus": [
+    {
+     "glob": "sim/kuehlung/verteilung*",
+     "vorhanden": false
+    }
+   ],
+   "befunde": [
+    {
+     "id": "B-BAT-021",
+     "titel": "B-BAT-021 (2026-11-17) Kühlplatten K2: laminar, U nur mit 4-mm-Kanälen ≥ 500; Durchfluss offen"
+    },
+    {
+     "id": "B-BAT-013",
+     "titel": "B-BAT-013 (2026-11-17) Entscheidungen des Autors: ENT-012 freigegeben, Bauraum verlängert (ENT-013)"
+    }
+   ],
+   "entscheidungen": [
+    {
+     "id": "ENT-004",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-200",
+      "BT-210",
+      "BT-300",
+      "BT-400",
+      "BT-500",
+      "BT-530",
+      "BT-600",
+      "BT-700",
+      "BT-710",
+      "BT-780"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-004.md"
+    },
+    {
+     "id": "ENT-081",
+     "titel": "Frage",
+     "bt": [
+      "BT-230",
+      "BT-600",
+      "BT-610"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-081.md"
+    },
+    {
+     "id": "ENT-088",
+     "titel": "Frage",
+     "bt": [
+      "BT-600"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-088.md"
+    }
+   ],
+   "software": [
+    {
+     "name": "numpy",
+     "status": "im Projekt (SOFTWARE.md)"
+    },
+    {
+     "name": "scipy",
+     "status": "im Projekt (SOFTWARE.md)"
+    }
+   ],
+   "teile": [
+    {
+     "pos": "600.2",
+     "bt": "BT-600",
+     "benennung": "Verteiler und Sammler",
+     "menge": 1,
+     "art": "E"
+    },
+    {
+     "pos": "600.3",
+     "bt": "BT-600",
+     "benennung": "Kühlmittelanschlüsse Ein/Aus",
+     "menge": 2,
+     "art": "K"
+    },
+    {
+     "pos": "600.5",
+     "bt": "BT-600",
+     "benennung": "Kühlmittel Wasser-Glykol",
+     "menge": 1,
+     "art": "K"
+    }
+   ]
+  },
+  {
+   "id": "K3",
+   "name": "Elmer: Zelle -> Paste -> Platte, Schnellladefall",
+   "dauer": 3,
+   "vorgaenger": [
+    "K2"
+   ],
+   "nachfolger": [
+    "K5"
+   ],
+   "ressourcen": [
+    "Sonnet",
+    "Maschine"
+   ],
+   "notiz": "Stufe 5",
+   "es": 17.0,
+   "ef": 20.0,
+   "puffer": 0.0,
+   "kritisch": true,
+   "status": "offen",
+   "req": [
+    {
+     "id": "REQ-P09",
+     "text": "max. Zelltemperatur und Spreizung"
+    }
+   ],
+   "bt": [
+    {
+     "id": "BT-600",
+     "name": "Kühlung"
+    }
+   ],
+   "wissen": [],
+   "doc": [],
+   "aus": [
+    {
+     "glob": "sim/kuehlung/elmer*",
+     "vorhanden": false
+    }
+   ],
+   "befunde": [],
+   "entscheidungen": [
+    {
+     "id": "ENT-004",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-200",
+      "BT-210",
+      "BT-300",
+      "BT-400",
+      "BT-500",
+      "BT-530",
+      "BT-600",
+      "BT-700",
+      "BT-710",
+      "BT-780"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-004.md"
+    },
+    {
+     "id": "ENT-081",
+     "titel": "Frage",
+     "bt": [
+      "BT-230",
+      "BT-600",
+      "BT-610"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-081.md"
+    },
+    {
+     "id": "ENT-088",
+     "titel": "Frage",
+     "bt": [
+      "BT-600"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-088.md"
+    }
+   ],
+   "software": [
+    {
+     "name": "ElmerFEM",
+     "status": "im Projekt (SOFTWARE.md)"
+    },
+    {
+     "name": "gmsh",
+     "status": "im Projekt (SOFTWARE.md)"
+    }
+   ],
+   "teile": [
+    {
+     "pos": "200.3",
+     "bt": "BT-200",
+     "benennung": "Wärmeleitmaterial Zelle → Kühlplatte",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "300.3",
+     "bt": "BT-300",
+     "benennung": "Temperaturfühler Zelle",
+     "menge": 55,
+     "art": "K"
+    },
+    {
+     "pos": "600.1",
+     "bt": "BT-600",
+     "benennung": "Kühlplatte (Wasser-Glykol)",
+     "menge": 1,
+     "art": "E"
+    },
+    {
+     "pos": "600.4",
+     "bt": "BT-600",
+     "benennung": "Temperaturfühler Kühlmittel",
+     "menge": 2,
+     "art": "K"
+    }
+   ]
+  },
+  {
+   "id": "K4",
+   "name": "FluidX3D: Strömung Kühlplatte bzw. Luftkanal (Gegenprüfung 1D)",
+   "dauer": 2,
+   "vorgaenger": [
+    "K2"
+   ],
+   "nachfolger": [
+    "K5"
+   ],
+   "ressourcen": [
+    "Maschine"
+   ],
+   "notiz": "Stufe 5, GPU nicht zugleich mit PI",
+   "es": 17.0,
+   "ef": 19.0,
+   "puffer": 1.0,
+   "kritisch": false,
+   "status": "offen",
+   "req": [
+    {
+     "id": "REQ-P09",
+     "text": "max. Zelltemperatur und Spreizung"
+    }
+   ],
+   "bt": [
+    {
+     "id": "BT-600",
+     "name": "Kühlung"
+    }
+   ],
+   "wissen": [],
+   "doc": [],
+   "aus": [
+    {
+     "glob": "sim/kuehlung/fluidx3d*",
+     "vorhanden": false
+    }
+   ],
+   "befunde": [],
+   "entscheidungen": [
+    {
+     "id": "ENT-004",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-200",
+      "BT-210",
+      "BT-300",
+      "BT-400",
+      "BT-500",
+      "BT-530",
+      "BT-600",
+      "BT-700",
+      "BT-710",
+      "BT-780"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-004.md"
+    },
+    {
+     "id": "ENT-081",
+     "titel": "Frage",
+     "bt": [
+      "BT-230",
+      "BT-600",
+      "BT-610"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-081.md"
+    },
+    {
+     "id": "ENT-088",
+     "titel": "Frage",
+     "bt": [
+      "BT-600"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-088.md"
+    }
+   ],
+   "software": [
+    {
+     "name": "FluidX3D",
+     "status": "im Projekt (SOFTWARE.md)"
+    }
+   ],
+   "teile": [
+    {
+     "pos": "600.2",
+     "bt": "BT-600",
+     "benennung": "Verteiler und Sammler",
+     "menge": 1,
+     "art": "E"
+    }
+   ]
+  },
+  {
+   "id": "K5",
+   "name": "Deutung Kühlung, Abgleich Erwartung, Änderungsvorschlag",
+   "dauer": 1,
+   "vorgaenger": [
+    "K3",
+    "K4"
+   ],
+   "nachfolger": [
+    "U1",
+    "SL2",
+    "F1"
+   ],
+   "ressourcen": [
+    "Opus"
+   ],
+   "notiz": "Stufe 5",
+   "es": 20.0,
+   "ef": 21.0,
+   "puffer": 0.0,
+   "kritisch": true,
+   "status": "offen",
+   "req": [
+    {
+     "id": "REQ-P09",
+     "text": "max. Zelltemperatur und Spreizung"
+    },
+    {
+     "id": "REQ-D06",
+     "text": "Erwartung vor jeder Rechnung, Vergleich danach"
+    }
+   ],
+   "bt": [
+    {
+     "id": "BT-600",
+     "name": "Kühlung"
+    }
+   ],
+   "wissen": [],
+   "doc": [],
+   "aus": [
+    {
+     "glob": "sim/kuehlung/ERGEBNIS.md",
+     "vorhanden": false
+    }
+   ],
+   "befunde": [],
+   "entscheidungen": [
+    {
+     "id": "ENT-004",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-200",
+      "BT-210",
+      "BT-300",
+      "BT-400",
+      "BT-500",
+      "BT-530",
+      "BT-600",
+      "BT-700",
+      "BT-710",
+      "BT-780"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-004.md"
+    },
+    {
+     "id": "ENT-081",
+     "titel": "Frage",
+     "bt": [
+      "BT-230",
+      "BT-600",
+      "BT-610"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-081.md"
+    },
+    {
+     "id": "ENT-088",
+     "titel": "Frage",
+     "bt": [
+      "BT-600"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-088.md"
+    }
+   ],
+   "software": [],
+   "teile": []
+  },
+  {
+   "id": "U1",
+   "name": "ERWARTUNG Ersatzmodell: Zielgröße, Gültigkeitsbereich, Mindestgüte (z. B. Rangkorrelation)",
+   "dauer": 0.5,
+   "vorgaenger": [
+    "K5",
+    "R2"
+   ],
+   "nachfolger": [
+    "U2"
+   ],
+   "ressourcen": [
+    "Opus"
+   ],
+   "notiz": "Lehre Fusion: Proxy 0,59 reichte nicht",
+   "es": 21.0,
+   "ef": 21.5,
+   "puffer": 0.0,
+   "kritisch": true,
+   "status": "offen",
+   "req": [
+    {
+     "id": "REQ-D06",
+     "text": "Erwartung vor jeder Rechnung, Vergleich danach"
+    }
+   ],
+   "bt": [],
+   "wissen": [
+    {
+     "id": "T07",
+     "status": "fertig",
+     "pruefung": "2 Belege bestaetigt, 1 Fehler",
+     "datei": "forschung/ergebnis/T07.md"
+    }
+   ],
+   "doc": [
+    "docs/ersatzmodell_einsatz.md"
+   ],
+   "aus": [
+    {
+     "glob": "sim/ersatzmodell/ERWARTUNG.md",
+     "vorhanden": false
+    }
+   ],
+   "befunde": [
+    {
+     "id": "B-BAT-004",
+     "titel": "B-BAT-004 (2026-11-16) Analyse: Was fehlt für die komplette Batterie (Struktur gegen Information)"
+    },
+    {
+     "id": "B-BAT-005",
+     "titel": "B-BAT-005 (2026-11-16) R4: Recherche geprüft, kein erfundener Wert, ein Spaltenfehler (PI), Wh/L-Frage bleibt offen"
+    }
+   ],
+   "entscheidungen": [],
+   "software": [],
+   "teile": []
+  },
+  {
+   "id": "U2",
+   "name": "Versuchsplan (Latin Hypercube): Durchfluss, Eintritt, C-Rate, Plattenmaß -> Elmer-Läufe",
+   "dauer": 3,
+   "vorgaenger": [
+    "U1"
+   ],
+   "nachfolger": [
+    "U3"
+   ],
+   "ressourcen": [
+    "Sonnet",
+    "Maschine"
+   ],
+   "notiz": "losgelöst, pausierbar",
+   "es": 21.5,
+   "ef": 24.5,
+   "puffer": 0.0,
+   "kritisch": true,
+   "status": "offen",
+   "req": [
+    {
+     "id": "REQ-D09",
+     "text": "Rechnungen reproduzierbar: Skript, Eingaben, Softwarestand (requirements.txt, Versionen)"
+    },
+    {
+     "id": "REQ-D10",
+     "text": "Aufwand messbar: Laufzeiten und Agentenaufrufe je Arbeitspaket"
+    }
+   ],
+   "bt": [],
+   "wissen": [],
+   "doc": [],
+   "aus": [
+    {
+     "glob": "sim/ersatzmodell/doe*",
+     "vorhanden": false
+    }
+   ],
+   "befunde": [],
+   "entscheidungen": [],
+   "software": [
+    {
+     "name": "ElmerFEM",
+     "status": "im Projekt (SOFTWARE.md)"
+    }
+   ],
+   "teile": []
+  },
+  {
+   "id": "U3",
+   "name": "Ersatzmodell anpassen (Gauß-Prozess), Kreuzvalidierung gegen zurückgehaltene Läufe",
+   "dauer": 1,
+   "vorgaenger": [
+    "U2"
+   ],
+   "nachfolger": [
+    "U4"
+   ],
+   "ressourcen": [
+    "Sonnet"
+   ],
+   "notiz": "",
+   "es": 24.5,
+   "ef": 25.5,
+   "puffer": 0.0,
+   "kritisch": true,
+   "status": "offen",
+   "req": [
+    {
+     "id": "REQ-D01",
+     "text": "Jede Zahl ist rückverfolgbar (Rechnung mit Datei oder Quelle mit wörtlichem Beleg)"
+    }
+   ],
+   "bt": [],
+   "wissen": [],
+   "doc": [],
+   "aus": [
+    {
+     "glob": "sim/ersatzmodell/gp*",
+     "vorhanden": false
+    }
+   ],
+   "befunde": [],
+   "entscheidungen": [],
+   "software": [
+    {
+     "name": "scikit-learn",
+     "status": "im Projekt (SOFTWARE.md)"
+    }
+   ],
+   "teile": []
+  },
+  {
+   "id": "U4",
+   "name": "Optimierung Kühlplatte/Ladeprofil mit Ersatzmodell, Bestwerte mit Elmer bestätigen",
+   "dauer": 2,
+   "vorgaenger": [
+    "U3"
+   ],
+   "nachfolger": [
+    "B1"
+   ],
+   "ressourcen": [
+    "Opus",
+    "Maschine"
+   ],
+   "notiz": "Ersatzmodell nur sortiert, Elmer entscheidet",
+   "es": 25.5,
+   "ef": 27.5,
+   "puffer": 0.0,
+   "kritisch": true,
+   "status": "offen",
+   "req": [
+    {
+     "id": "REQ-P09",
+     "text": "max. Zelltemperatur und Spreizung"
+    }
+   ],
+   "bt": [
+    {
+     "id": "BT-600",
+     "name": "Kühlung"
+    }
+   ],
+   "wissen": [],
+   "doc": [],
+   "aus": [
+    {
+     "glob": "sim/ersatzmodell/ERGEBNIS.md",
+     "vorhanden": false
+    }
+   ],
+   "befunde": [],
+   "entscheidungen": [
+    {
+     "id": "ENT-004",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-200",
+      "BT-210",
+      "BT-300",
+      "BT-400",
+      "BT-500",
+      "BT-530",
+      "BT-600",
+      "BT-700",
+      "BT-710",
+      "BT-780"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-004.md"
+    },
+    {
+     "id": "ENT-081",
+     "titel": "Frage",
+     "bt": [
+      "BT-230",
+      "BT-600",
+      "BT-610"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-081.md"
+    },
+    {
+     "id": "ENT-088",
+     "titel": "Frage",
+     "bt": [
+      "BT-600"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-088.md"
+    }
+   ],
+   "software": [
+    {
+     "name": "scikit-learn",
+     "status": "im Projekt (SOFTWARE.md)"
+    },
+    {
+     "name": "ElmerFEM",
+     "status": "im Projekt (SOFTWARE.md)"
+    }
+   ],
+   "teile": [
+    {
+     "pos": "600.1",
+     "bt": "BT-600",
+     "benennung": "Kühlplatte (Wasser-Glykol)",
+     "menge": 1,
+     "art": "E"
+    }
+   ]
+  },
+  {
+   "id": "M1",
+   "name": "Mechanik: Zellverspannung, Eigenfrequenzen, Lagerung",
+   "dauer": 3,
+   "vorgaenger": [
+    "G5"
+   ],
+   "nachfolger": [
+    "F1"
+   ],
+   "ressourcen": [
+    "Sonnet",
+    "Maschine"
+   ],
+   "notiz": "Stufe 6, optional",
+   "es": 16.5,
+   "ef": 19.5,
+   "puffer": 7.0,
+   "kritisch": false,
+   "status": "fertig",
+   "req": [
+    {
+     "id": "REQ-P14",
+     "text": "Mechanik: Stoß, Schwingung, Crash"
+    }
+   ],
+   "bt": [
+    {
+     "id": "BT-200",
+     "name": "Zellstack"
+    },
+    {
+     "id": "BT-500",
+     "name": "Struktur und Gehäuse"
+    }
+   ],
+   "wissen": [],
+   "doc": [],
+   "aus": [
+    {
+     "glob": "sim/mechanik/*",
+     "vorhanden": true
+    }
+   ],
+   "befunde": [
+    {
+     "id": "B-BAT-019",
+     "titel": "B-BAT-019 (2026-11-17) Schnellladen in den Griff bekommen (K1); Gehäuserecherche W21"
+    }
+   ],
+   "entscheidungen": [
+    {
+     "id": "ENT-004",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-200",
+      "BT-210",
+      "BT-300",
+      "BT-400",
+      "BT-500",
+      "BT-530",
+      "BT-600",
+      "BT-700",
+      "BT-710",
+      "BT-780"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-004.md"
+    },
+    {
+     "id": "ENT-012",
+     "titel": "Frage",
+     "bt": [
+      "BT-100",
+      "BT-200",
+      "BT-220",
+      "BT-240",
+      "BT-250",
+      "BT-610"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-012.md"
+    }
+   ],
+   "software": [
+    {
+     "name": "ElmerFEM",
+     "status": "im Projekt (SOFTWARE.md)"
+    }
+   ],
+   "teile": [
+    {
+     "pos": "200.2",
+     "bt": "BT-200",
+     "benennung": "Zwischenlage zwischen Zellen (Wärme- und Brandschutz, Quellausgleich)",
+     "menge": 220,
+     "art": "K"
+    },
+    {
+     "pos": "200.4",
+     "bt": "BT-200",
+     "benennung": "Verspannung der Zellreihen (Endplatte/Band)",
+     "menge": 10,
+     "art": "E"
+    },
+    {
+     "pos": "500.5",
+     "bt": "BT-500",
+     "benennung": "Unterfahrschutz",
+     "menge": 1,
+     "art": "E"
+    },
+    {
+     "pos": "500.6",
+     "bt": "BT-500",
+     "benennung": "Befestigungspunkte am Fahrzeug",
+     "menge": 1,
+     "art": "E"
+    }
+   ]
+  },
+  {
+   "id": "X1",
+   "name": "Seitencrash Pfahl, quasistatisch: Eindringung in Gehäuse/Querträger (CalculiX, plastisch, Kontakt)",
+   "dauer": 3,
+   "vorgaenger": [
+    "G5",
+    "W2",
+    "R4"
+   ],
+   "nachfolger": [
+    "X2",
+    "SL2"
+   ],
+   "ressourcen": [
+    "Sonnet",
+    "Maschine"
+   ],
+   "notiz": "Nutzerwunsch 2026-11-12",
+   "es": 16.5,
+   "ef": 19.5,
+   "puffer": 3.0,
+   "kritisch": false,
+   "status": "offen",
+   "req": [
+    {
+     "id": "REQ-P14",
+     "text": "Mechanik: Stoß, Schwingung, Crash"
+    },
+    {
+     "id": "REQ-P11",
+     "text": "Sicherheit: keine Ausbreitung des thermischen Durchgehens bzw. Warnzeit nach Norm"
+    }
+   ],
+   "bt": [
+    {
+     "id": "BT-500",
+     "name": "Struktur und Gehäuse"
+    }
+   ],
+   "wissen": [
+    {
+     "id": "W17",
+     "status": "fertig",
+     "pruefung": "14 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/W17.md"
+    },
+    {
+     "id": "T08",
+     "status": "fertig",
+     "pruefung": "9 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/T08.md"
+    }
+   ],
+   "doc": [],
+   "aus": [
+    {
+     "glob": "sim/crash/quasistatisch*",
+     "vorhanden": false
+    }
+   ],
+   "befunde": [
+    {
+     "id": "B-BAT-002",
+     "titel": "B-BAT-002 (2026-11-12) „0 Belege“ hieß „nicht geprüft“: Zitate ohne „Beleg:“ rutschten durch"
+    }
+   ],
+   "entscheidungen": [
+    {
+     "id": "ENT-004",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-200",
+      "BT-210",
+      "BT-300",
+      "BT-400",
+      "BT-500",
+      "BT-530",
+      "BT-600",
+      "BT-700",
+      "BT-710",
+      "BT-780"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-004.md"
+    }
+   ],
+   "software": [
+    {
+     "name": "CalculiX",
+     "status": "im Projekt (SOFTWARE.md)"
+    },
+    {
+     "name": "gmsh",
+     "status": "im Projekt (SOFTWARE.md)"
+    }
+   ],
+   "teile": [
+    {
+     "pos": "500.1",
+     "bt": "BT-500",
+     "benennung": "Gehäusewanne",
+     "menge": 1,
+     "art": "E"
+    },
+    {
+     "pos": "500.3",
+     "bt": "BT-500",
+     "benennung": "Querträger",
+     "menge": 11,
+     "art": "E"
+    },
+    {
+     "pos": "500.4",
+     "bt": "BT-500",
+     "benennung": "Seitenrahmen / Crashprofil (Seitencrash)",
+     "menge": 2,
+     "art": "E"
+    }
+   ]
+  },
+  {
+   "id": "X2",
+   "name": "Seitencrash dynamisch (OpenRadioss, Installation nur nach Freigabe)",
+   "dauer": 4,
+   "vorgaenger": [
+    "X1"
+   ],
+   "nachfolger": [
+    "F1"
+   ],
+   "ressourcen": [
+    "Opus",
+    "Maschine",
+    "Mensch"
+   ],
+   "notiz": "optional",
+   "es": 19.5,
+   "ef": 23.5,
+   "puffer": 3.0,
+   "kritisch": false,
+   "status": "offen",
+   "req": [
+    {
+     "id": "REQ-P14",
+     "text": "Mechanik: Stoß, Schwingung, Crash"
+    }
+   ],
+   "bt": [
+    {
+     "id": "BT-500",
+     "name": "Struktur und Gehäuse"
+    }
+   ],
+   "wissen": [
+    {
+     "id": "T08",
+     "status": "fertig",
+     "pruefung": "9 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/T08.md"
+    }
+   ],
+   "doc": [],
+   "aus": [
+    {
+     "glob": "sim/crash/dynamisch*",
+     "vorhanden": false
+    }
+   ],
+   "befunde": [
+    {
+     "id": "B-BAT-002",
+     "titel": "B-BAT-002 (2026-11-12) „0 Belege“ hieß „nicht geprüft“: Zitate ohne „Beleg:“ rutschten durch"
+    }
+   ],
+   "entscheidungen": [
+    {
+     "id": "ENT-004",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-200",
+      "BT-210",
+      "BT-300",
+      "BT-400",
+      "BT-500",
+      "BT-530",
+      "BT-600",
+      "BT-700",
+      "BT-710",
+      "BT-780"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-004.md"
+    }
+   ],
+   "software": [
+    {
+     "name": "OpenRadioss",
+     "status": "nicht installiert / nicht geprüft"
+    }
+   ],
+   "teile": [
+    {
+     "pos": "500.4",
+     "bt": "BT-500",
+     "benennung": "Seitenrahmen / Crashprofil (Seitencrash)",
+     "menge": 2,
+     "art": "E"
+    }
+   ]
+  },
+  {
+   "id": "SL2",
+   "name": "Stückliste fortschreiben nach Auslegung (Mengen, Kauf/Eigen, Werkstoffe, Bezugsquellen)",
+   "dauer": 1,
+   "vorgaenger": [
+    "SL1",
+    "G5",
+    "E2",
+    "E3",
+    "K5",
+    "L1",
+    "X1"
+   ],
+   "nachfolger": [
+    "B1",
+    "B5"
+   ],
+   "ressourcen": [
+    "Sonnet",
+    "Opus"
+   ],
+   "notiz": "lebendes Dokument BAT-DOC-13",
+   "es": 21.0,
+   "ef": 22.0,
+   "puffer": 5.5,
+   "kritisch": false,
+   "status": "ohne Nachweis",
+   "req": [
+    {
+     "id": "REQ-D01",
+     "text": "Jede Zahl ist rückverfolgbar (Rechnung mit Datei oder Quelle mit wörtlichem Beleg)"
+    },
+    {
+     "id": "REQ-D11",
+     "text": "Jede Entscheidung als Akte an Bauteil und Merkmal gebunden; CAD-Maße nur aus diesen Akten"
+    }
+   ],
+   "bt": [
+    {
+     "id": "BT-000",
+     "name": "Batteriesystem"
+    }
+   ],
+   "wissen": [],
+   "doc": [
+    "docs/13_stueckliste.md"
+   ],
+   "aus": [],
+   "befunde": [],
+   "entscheidungen": [
+    {
+     "id": "ENT-001",
+     "titel": "Frage",
+     "bt": [
+      "BT-000"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-001.md"
+    },
+    {
+     "id": "ENT-003",
+     "titel": "Frage",
+     "bt": [
+      "BT-000"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-003.md"
+    },
+    {
+     "id": "ENT-004",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-200",
+      "BT-210",
+      "BT-300",
+      "BT-400",
+      "BT-500",
+      "BT-530",
+      "BT-600",
+      "BT-700",
+      "BT-710",
+      "BT-780"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-004.md"
+    },
+    {
+     "id": "ENT-006",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-310",
+      "BT-410",
+      "BT-711"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-006.md"
+    },
+    {
+     "id": "ENT-013",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-220"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-013.md"
+    },
+    {
+     "id": "ENT-030",
+     "titel": "Frage",
+     "bt": [
+      "BT-000"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-030.md"
+    },
+    {
+     "id": "ENT-091",
+     "titel": "Frage",
+     "bt": [
+      "BT-000"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-091.md"
+    },
+    {
+     "id": "ENT-102",
+     "titel": "Entscheidung und Begründung",
+     "bt": [
+      "BT-000"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-102.md"
+    },
+    {
+     "id": "ENT-103",
+     "titel": "Entscheidung und Begründung",
+     "bt": [
+      "BT-000"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-103.md"
+    }
+   ],
+   "software": [],
+   "teile": [
+    {
+     "pos": "100.1",
+     "bt": "BT-100",
+     "benennung": "Zelle (NMC, Zellformat offen; Rechenregel wie LFP-Platzhalter)",
+     "menge": 220,
+     "art": "K"
+    },
+    {
+     "pos": "200.1",
+     "bt": "BT-200",
+     "benennung": "Zellreihe zwischen Querträgern (Cell-to-Pack, ohne Module)",
+     "menge": 10,
+     "art": "E"
+    },
+    {
+     "pos": "200.2",
+     "bt": "BT-200",
+     "benennung": "Zwischenlage zwischen Zellen (Wärme- und Brandschutz, Quellausgleich)",
+     "menge": 220,
+     "art": "K"
+    },
+    {
+     "pos": "200.3",
+     "bt": "BT-200",
+     "benennung": "Wärmeleitmaterial Zelle → Kühlplatte",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "200.4",
+     "bt": "BT-200",
+     "benennung": "Verspannung der Zellreihen (Endplatte/Band)",
+     "menge": 10,
+     "art": "E"
+    },
+    {
+     "pos": "200.5",
+     "bt": "BT-250",
+     "benennung": "Zellhalter (hält und teilt Rundzellen, Abstand für Kühlung und Isolation)",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "300.1",
+     "bt": "BT-300",
+     "benennung": "BMS-Hauptsteuergerät",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "300.2",
+     "bt": "BT-300",
+     "benennung": "Zellüberwachung (Spannung, Ausgleich)",
+     "menge": 14,
+     "art": "K"
+    },
+    {
+     "pos": "300.3",
+     "bt": "BT-300",
+     "benennung": "Temperaturfühler Zelle",
+     "menge": 55,
+     "art": "K"
+    },
+    {
+     "pos": "300.4",
+     "bt": "BT-300",
+     "benennung": "Strommessung (Shunt oder Hall)",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "300.5",
+     "bt": "BT-300",
+     "benennung": "Isolationswächter",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "300.6",
+     "bt": "BT-300",
+     "benennung": "Messleitungen bzw. Flexleiterplatte Zelle → Überwachung",
+     "menge": 14,
+     "art": "K"
+    },
+    {
+     "pos": "400.1",
+     "bt": "BT-400",
+     "benennung": "Zellverbinder (Zellabgriff, Plus und Minus je Zelle)",
+     "menge": 0,
+     "art": "E"
+    },
+    {
+     "pos": "400.2",
+     "bt": "BT-400",
+     "benennung": "Reihenverbinder (Reihenbrücke, bei p > 1 Gruppenbrücke)",
+     "menge": 219,
+     "art": "E"
+    },
+    {
+     "pos": "400.3",
+     "bt": "BT-400",
+     "benennung": "HV-Hauptleitung plus/minus im Pack",
+     "menge": 2,
+     "art": "K"
+    },
+    {
+     "pos": "500.1",
+     "bt": "BT-500",
+     "benennung": "Gehäusewanne",
+     "menge": 1,
+     "art": "E"
+    },
+    {
+     "pos": "500.2",
+     "bt": "BT-500",
+     "benennung": "Deckel mit Dichtung",
+     "menge": 1,
+     "art": "E"
+    },
+    {
+     "pos": "500.3",
+     "bt": "BT-500",
+     "benennung": "Querträger",
+     "menge": 11,
+     "art": "E"
+    },
+    {
+     "pos": "500.4",
+     "bt": "BT-500",
+     "benennung": "Seitenrahmen / Crashprofil (Seitencrash)",
+     "menge": 2,
+     "art": "E"
+    },
+    {
+     "pos": "500.5",
+     "bt": "BT-500",
+     "benennung": "Unterfahrschutz",
+     "menge": 1,
+     "art": "E"
+    },
+    {
+     "pos": "500.6",
+     "bt": "BT-500",
+     "benennung": "Befestigungspunkte am Fahrzeug",
+     "menge": 1,
+     "art": "E"
+    },
+    {
+     "pos": "500.7",
+     "bt": "BT-500",
+     "benennung": "Druckausgleichselement (atmend, wasserdicht)",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "600.1",
+     "bt": "BT-600",
+     "benennung": "Kühlplatte (Wasser-Glykol)",
+     "menge": 1,
+     "art": "E"
+    },
+    {
+     "pos": "600.2",
+     "bt": "BT-600",
+     "benennung": "Verteiler und Sammler",
+     "menge": 1,
+     "art": "E"
+    },
+    {
+     "pos": "600.3",
+     "bt": "BT-600",
+     "benennung": "Kühlmittelanschlüsse Ein/Aus",
+     "menge": 2,
+     "art": "K"
+    },
+    {
+     "pos": "600.4",
+     "bt": "BT-600",
+     "benennung": "Temperaturfühler Kühlmittel",
+     "menge": 2,
+     "art": "K"
+    },
+    {
+     "pos": "600.5",
+     "bt": "BT-600",
+     "benennung": "Kühlmittel Wasser-Glykol",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "600.6",
+     "bt": "BT-600",
+     "benennung": "Pumpe, Wärmetauscher/Kältemittelkühler",
+     "menge": 1,
+     "art": "S"
+    },
+    {
+     "pos": "700.1",
+     "bt": "BT-700",
+     "benennung": "Schaltbox (Gehäuse für Schütze, Vorladung, Hauptsicherung)",
+     "menge": 1,
+     "art": "E"
+    },
+    {
+     "pos": "700.2",
+     "bt": "BT-700",
+     "benennung": "Hauptschütz plus und minus",
+     "menge": 2,
+     "art": "K"
+    },
+    {
+     "pos": "700.3",
+     "bt": "BT-700",
+     "benennung": "Vorladeschütz mit Vorladewiderstand",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "700.4",
+     "bt": "BT-700",
+     "benennung": "Hauptsicherung (ggf. pyrotechnischer Trenner)",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "700.5",
+     "bt": "BT-700",
+     "benennung": "Service-Trennstecker",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "700.6",
+     "bt": "BT-700",
+     "benennung": "HV-Steckverbinder Pack (Antrieb, Laden)",
+     "menge": 2,
+     "art": "K"
+    },
+    {
+     "pos": "700.7",
+     "bt": "BT-700",
+     "benennung": "NV-Steckverbinder (12 V, CAN, Sensorik)",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "700.8",
+     "bt": "BT-700",
+     "benennung": "Entgasungsventil mit Entgasungskanal",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "700.9",
+     "bt": "BT-700",
+     "benennung": "Heizung (Kälte, −20 °C laut REQ-P08)",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "700.10",
+     "bt": "BT-700",
+     "benennung": "Gas-/Drucksensor Früherkennung thermisches Ereignis",
+     "menge": 1,
+     "art": "K"
+    },
+    {
+     "pos": "700.11",
+     "bt": "BT-700",
+     "benennung": "Kennzeichnung (Typschild, HV-Warnung)",
+     "menge": 1,
+     "art": "K"
+    }
+   ]
+  },
+  {
+   "id": "F1",
+   "name": "FMEA und Verifikationsplan nachziehen",
+   "dauer": 1,
+   "vorgaenger": [
+    "E1",
+    "E3",
+    "K5",
+    "M1",
+    "L1",
+    "X2"
+   ],
+   "nachfolger": [
+    "B1",
+    "B5"
+   ],
+   "ressourcen": [
+    "Opus",
+    "Haiku"
+   ],
+   "notiz": "BAT-DOC-05/06",
+   "es": 23.5,
+   "ef": 24.5,
+   "puffer": 3.0,
+   "kritisch": false,
+   "status": "ohne Nachweis",
+   "req": [
+    {
+     "id": "REQ-P11",
+     "text": "Sicherheit: keine Ausbreitung des thermischen Durchgehens bzw. Warnzeit nach Norm"
+    },
+    {
+     "id": "REQ-D03",
+     "text": "Jede Anforderung hat einen Nachweis in BAT-DOC-03"
+    }
+   ],
+   "bt": [],
+   "wissen": [],
+   "doc": [
+    "docs/05_risiken_fmea.md",
+    "docs/06_verifikationsplan.md"
+   ],
+   "aus": [],
+   "befunde": [],
+   "entscheidungen": [],
+   "software": [],
+   "teile": [
+    {
+     "pos": "700.10",
+     "bt": "BT-700",
+     "benennung": "Gas-/Drucksensor Früherkennung thermisches Ereignis",
+     "menge": 1,
+     "art": "K"
+    }
+   ]
+  },
+  {
+   "id": "B1",
+   "name": "Bericht DE/EN je Kapitel, Prozessdoku, Lessons Learned",
+   "dauer": 4,
+   "vorgaenger": [
+    "C5",
+    "E4",
+    "U4",
+    "F1",
+    "SL2"
+   ],
+   "nachfolger": [
+    "B2",
+    "B3",
+    "B5"
+   ],
+   "ressourcen": [
+    "Sonnet",
+    "Opus"
+   ],
+   "notiz": "Stufe 7",
+   "es": 27.5,
+   "ef": 31.5,
+   "puffer": 0.0,
+   "kritisch": true,
+   "status": "fertig",
+   "req": [
+    {
+     "id": "REQ-D02",
+     "text": "Jedes Dokument hat einen Kopf nach BAT-DOC-00 und ist als KI-generiert gekennzeichnet"
+    },
+    {
+     "id": "REQ-D04",
+     "text": "KI-Einsatz protokolliert: Modell, Aufgabe, Prüfung"
+    }
+   ],
+   "bt": [],
+   "wissen": [],
+   "doc": [
+    "docs/prozess.md",
+    "LESSONS_LEARNED.md",
+    "docs/08_ki_einsatz_protokoll.md"
+   ],
+   "aus": [
+    {
+     "glob": "bericht/*.pdf",
+     "vorhanden": true
+    }
+   ],
+   "befunde": [
+    {
+     "id": "B-BAT-017",
+     "titel": "B-BAT-017 (2026-11-17) Vorgaben Kühlung (REQ-P09, ENT-081); Bericht begonnen"
+    }
+   ],
+   "entscheidungen": [],
+   "software": [
+    {
+     "name": "pdflatex",
+     "status": "im Projekt (SOFTWARE.md)"
+    }
+   ],
+   "teile": []
+  },
+  {
+   "id": "B2",
+   "name": "Bauteilgespräch testen (pm/gespraech.sh für alle BT)",
+   "dauer": 1,
+   "vorgaenger": [
+    "B1"
+   ],
+   "nachfolger": [
+    "B4"
+   ],
+   "ressourcen": [
+    "PI",
+    "Opus"
+   ],
+   "notiz": "Stufe 7",
+   "es": 31.5,
+   "ef": 32.5,
+   "puffer": 2.0,
+   "kritisch": false,
+   "status": "fertig",
+   "req": [
+    {
+     "id": "REQ-D12",
+     "text": "Bauteilgespräch: jedes Bauteil begründet seine Form mit Aktenverweisen"
+    }
+   ],
+   "bt": [],
+   "wissen": [],
+   "doc": [
+    "pm/gespraech.sh"
+   ],
+   "aus": [
+    {
+     "glob": "pm/gespraeche/*.md",
+     "vorhanden": true
+    }
+   ],
+   "befunde": [],
+   "entscheidungen": [],
+   "software": [
+    {
+     "name": "PI",
+     "status": "im Projekt (SOFTWARE.md)"
+    }
+   ],
+   "teile": []
+  },
+  {
+   "id": "B3",
+   "name": "Abschlussvideo (Storyboard -> Blender -> ffmpeg)",
+   "dauer": 3,
+   "vorgaenger": [
+    "B1",
+    "G5"
+   ],
+   "nachfolger": [
+    "B4"
+   ],
+   "ressourcen": [
+    "Sonnet",
+    "Maschine"
+   ],
+   "notiz": "Stufe 7",
+   "es": 31.5,
+   "ef": 34.5,
+   "puffer": 0.0,
+   "kritisch": true,
+   "status": "offen",
+   "req": [
+    {
+     "id": "REQ-D13",
+     "text": "Projektdokumentation als Abschlussvideo (Zelle → … → System)"
+    }
+   ],
+   "bt": [],
+   "wissen": [],
+   "doc": [
+    "video/STORYBOARD.md"
+   ],
+   "aus": [
+    {
+     "glob": "video/*.mp4",
+     "vorhanden": false
+    }
+   ],
+   "befunde": [],
+   "entscheidungen": [],
+   "software": [
+    {
+     "name": "Blender",
+     "status": "im Projekt (SOFTWARE.md)"
+    },
+    {
+     "name": "FreeCAD",
+     "status": "im Projekt (SOFTWARE.md)"
+    }
+   ],
+   "teile": []
+  },
+  {
+   "id": "B0",
+   "name": "Präsentation: Zielgruppe, Ziel, Firmenvorlage, Sprache festlegen",
+   "dauer": 0.5,
+   "vorgaenger": [
+    "V1"
+   ],
+   "nachfolger": [
+    "B5"
+   ],
+   "ressourcen": [
+    "Mensch"
+   ],
+   "notiz": "BAT-DOC-14, nur Mensch",
+   "es": 6,
+   "ef": 6.5,
+   "puffer": 26.0,
+   "kritisch": false,
+   "status": "ohne Nachweis",
+   "req": [
+    {
+     "id": "REQ-D14",
+     "text": "Unternehmenspräsentation am Projektende, erzeugt aus den Projektdaten; jeder Vorgang liefert unterwegs seinen Folienbaustein"
+    }
+   ],
+   "bt": [],
+   "wissen": [],
+   "doc": [
+    "praesentation/STORYBOARD.md"
+   ],
+   "aus": [],
+   "befunde": [],
+   "entscheidungen": [],
+   "software": [],
+   "teile": []
+  },
+  {
+   "id": "B5",
+   "name": "Unternehmenspräsentation aus Folienbausteinen erzeugen (pptx + PDF, DE/EN), Zahlen gegen Quellen prüfen",
+   "dauer": 2,
+   "vorgaenger": [
+    "B0",
+    "B1",
+    "SL2",
+    "F1",
+    "R3"
+   ],
+   "nachfolger": [
+    "B4"
+   ],
+   "ressourcen": [
+    "Sonnet",
+    "Opus"
+   ],
+   "notiz": "Stufe 7, REQ-D14",
+   "es": 31.5,
+   "ef": 33.5,
+   "puffer": 1.0,
+   "kritisch": false,
+   "status": "offen",
+   "req": [
+    {
+     "id": "REQ-D14",
+     "text": "Unternehmenspräsentation am Projektende, erzeugt aus den Projektdaten; jeder Vorgang liefert unterwegs seinen Folienbaustein"
+    },
+    {
+     "id": "REQ-D01",
+     "text": "Jede Zahl ist rückverfolgbar (Rechnung mit Datei oder Quelle mit wörtlichem Beleg)"
+    }
+   ],
+   "bt": [],
+   "wissen": [],
+   "doc": [
+    "praesentation/STORYBOARD.md"
+   ],
+   "aus": [
+    {
+     "glob": "praesentation/*.pptx",
+     "vorhanden": false
+    }
+   ],
+   "befunde": [],
+   "entscheidungen": [],
+   "software": [
+    {
+     "name": "python-pptx",
+     "status": "im Projekt (SOFTWARE.md)"
+    },
+    {
+     "name": "LibreOffice",
+     "status": "im Projekt (SOFTWARE.md)"
+    }
+   ],
+   "teile": []
+  },
+  {
+   "id": "B4",
+   "name": "Freigabe und Veröffentlichung durch Autor",
+   "dauer": 1,
+   "vorgaenger": [
+    "B2",
+    "B3",
+    "B5"
+   ],
+   "nachfolger": [],
+   "ressourcen": [
+    "Mensch"
+   ],
+   "notiz": "nur Mensch",
+   "es": 34.5,
+   "ef": 35.5,
+   "puffer": 0.0,
+   "kritisch": true,
+   "status": "ohne Nachweis",
+   "req": [
+    {
+     "id": "REQ-D05",
+     "text": "Freigabe nur durch den Menschen"
+    }
+   ],
+   "bt": [],
+   "wissen": [],
+   "doc": [],
+   "aus": [],
+   "befunde": [],
+   "entscheidungen": [],
+   "software": [],
+   "teile": [
+    {
+     "pos": "700.11",
+     "bt": "BT-700",
+     "benennung": "Kennzeichnung (Typschild, HV-Warnung)",
+     "menge": 1,
+     "art": "K"
+    }
+   ]
+  }
+ ],
+ "stueckliste": [
+  {
+   "pos": "100.1",
+   "bt": "BT-100",
+   "teil": "BT-100",
+   "benennung": "Zelle (NMC, Zellformat offen; Rechenregel wie LFP-Platzhalter)",
+   "menge": 220,
+   "formel": "220s × 1p",
+   "art": "K",
+   "vorgang": "C2, G1",
+   "recherche": "W01, W03, W08, W10, P01",
+   "bemerkung": "Energie 73.9 kWh bei 92.0 Ah (Annahme bisher 100 Ah); Ah abgeleitet aus Energie und 800 V (ENT-006); Maße folgen in G1"
+  },
+  {
+   "pos": "200.1",
+   "bt": "BT-200",
+   "teil": "BT-210",
+   "benennung": "Zellreihe zwischen Querträgern (Cell-to-Pack, ohne Module)",
+   "menge": 10,
+   "formel": "220 / 24",
+   "art": "E",
+   "vorgang": "G4",
+   "recherche": "W03, P02",
+   "bemerkung": "Alternative: Module, falls CTP verworfen"
+  },
+  {
+   "pos": "200.2",
+   "bt": "BT-200",
+   "teil": "BT-220",
+   "benennung": "Zwischenlage zwischen Zellen (Wärme- und Brandschutz, Quellausgleich)",
+   "menge": 220,
+   "formel": "1 je Zelle",
+   "art": "K",
+   "vorgang": "G4, M1",
+   "recherche": "W04, P04",
+   "bemerkung": "Werkstoff offen (z. B. Glimmer, Aerogel)"
+  },
+  {
+   "pos": "200.3",
+   "bt": "BT-200",
+   "teil": "BT-230",
+   "benennung": "Wärmeleitmaterial Zelle → Kühlplatte",
+   "menge": 1,
+   "formel": "1 Lage, Fläche aus G4",
+   "art": "K",
+   "vorgang": "G4, K3",
+   "recherche": "W16, P03",
+   "bemerkung": ""
+  },
+  {
+   "pos": "200.4",
+   "bt": "BT-200",
+   "teil": "BT-240",
+   "benennung": "Verspannung der Zellreihen (Endplatte/Band)",
+   "menge": 10,
+   "formel": "1 je Reihe",
+   "art": "E",
+   "vorgang": "M1",
+   "recherche": "W15",
+   "bemerkung": "Quellen der Zellen beim Laden"
+  },
+  {
+   "pos": "200.5",
+   "bt": "BT-250",
+   "teil": "BT-250",
+   "benennung": "Zellhalter (hält und teilt Rundzellen, Abstand für Kühlung und Isolation)",
+   "menge": 1,
+   "formel": "1 Satz",
+   "art": "K",
+   "vorgang": "G4",
+   "recherche": "–",
+   "bemerkung": "Maße offen, G4; nur NMC (Rundzelle)"
+  },
+  {
+   "pos": "300.1",
+   "bt": "BT-300",
+   "teil": "BT-310",
+   "benennung": "BMS-Hauptsteuergerät",
+   "menge": 1,
+   "formel": "–",
+   "art": "K",
+   "vorgang": "E3",
+   "recherche": "W05, W14, T06",
+   "bemerkung": "Ladezustand, Alterung, Schutzlogik, Fahrzeug-CAN"
+  },
+  {
+   "pos": "300.2",
+   "bt": "BT-300",
+   "teil": "BT-320",
+   "benennung": "Zellüberwachung (Spannung, Ausgleich)",
+   "menge": 14,
+   "formel": "220 / 16",
+   "art": "K",
+   "vorgang": "E3",
+   "recherche": "W05, W14, P07",
+   "bemerkung": "passiver oder aktiver Ausgleich offen"
+  },
+  {
+   "pos": "300.3",
+   "bt": "BT-300",
+   "teil": "BT-330",
+   "benennung": "Temperaturfühler Zelle",
+   "menge": 55,
+   "formel": "220 / 4",
+   "art": "K",
+   "vorgang": "E3, K3",
+   "recherche": "W05",
+   "bemerkung": ""
+  },
+  {
+   "pos": "300.4",
+   "bt": "BT-300",
+   "teil": "BT-340",
+   "benennung": "Strommessung (Shunt oder Hall)",
+   "menge": 1,
+   "formel": "–",
+   "art": "K",
+   "vorgang": "E3",
+   "recherche": "W14",
+   "bemerkung": ""
+  },
+  {
+   "pos": "300.5",
+   "bt": "BT-300",
+   "teil": "BT-350",
+   "benennung": "Isolationswächter",
+   "menge": 1,
+   "formel": "–",
+   "art": "K",
+   "vorgang": "E2",
+   "recherche": "W13",
+   "bemerkung": "REQ-P13"
+  },
+  {
+   "pos": "300.6",
+   "bt": "BT-300",
+   "teil": "BT-360",
+   "benennung": "Messleitungen bzw. Flexleiterplatte Zelle → Überwachung",
+   "menge": 14,
+   "formel": "1 je Überwachungsbaustein",
+   "art": "K",
+   "vorgang": "E3, L1",
+   "recherche": "P07",
+   "bemerkung": ""
+  },
+  {
+   "pos": "400.1",
+   "bt": "BT-400",
+   "teil": "BT-410",
+   "benennung": "Zellverbinder (Zellabgriff, Plus und Minus je Zelle)",
+   "menge": 0,
+   "formel": "entfällt bei p = 1 (Reihenverbinder 400.2 sind die Zellverbinder)",
+   "art": "E",
+   "vorgang": "E1",
+   "recherche": "W13, P06",
+   "bemerkung": "Querschnitt aus Strom und Erwärmung (E1); Opus 2026-11-17: Mengen aus s und p"
+  },
+  {
+   "pos": "400.2",
+   "bt": "BT-400",
+   "teil": "BT-420",
+   "benennung": "Reihenverbinder (Reihenbrücke, bei p > 1 Gruppenbrücke)",
+   "menge": 219,
+   "formel": "s − 1 = 220 − 1",
+   "art": "E",
+   "vorgang": "E1, L1",
+   "recherche": "W13",
+   "bemerkung": "Opus 2026-11-17: aus s abgeleitet (LFP 249, NMC 216)"
+  },
+  {
+   "pos": "400.3",
+   "bt": "BT-400",
+   "teil": "BT-430",
+   "benennung": "HV-Hauptleitung plus/minus im Pack",
+   "menge": 2,
+   "formel": "–",
+   "art": "K",
+   "vorgang": "E1, L1",
+   "recherche": "W13, T09",
+   "bemerkung": "Verlegung skizzieren (Sketch-to-Prompt)"
+  },
+  {
+   "pos": "500.1",
+   "bt": "BT-500",
+   "teil": "BT-510",
+   "benennung": "Gehäusewanne",
+   "menge": 1,
+   "formel": "–",
+   "art": "E",
+   "vorgang": "G4, X1",
+   "recherche": "W15, P10",
+   "bemerkung": "Werkstoff offen (Alu-Strangpress/Guss, Stahl)"
+  },
+  {
+   "pos": "500.2",
+   "bt": "BT-500",
+   "teil": "BT-520",
+   "benennung": "Deckel mit Dichtung",
+   "menge": 1,
+   "formel": "1 Satz",
+   "art": "E",
+   "vorgang": "G4",
+   "recherche": "W15",
+   "bemerkung": "Schutzart REQ-P13"
+  },
+  {
+   "pos": "500.3",
+   "bt": "BT-500",
+   "teil": "BT-530",
+   "benennung": "Querträger",
+   "menge": 11,
+   "formel": "10 Reihen + 1",
+   "art": "E",
+   "vorgang": "G4, X1",
+   "recherche": "W15, P02",
+   "bemerkung": "tragen und trennen Zellreihen"
+  },
+  {
+   "pos": "500.4",
+   "bt": "BT-500",
+   "teil": "BT-540",
+   "benennung": "Seitenrahmen / Crashprofil (Seitencrash)",
+   "menge": 2,
+   "formel": "links, rechts",
+   "art": "E",
+   "vorgang": "X1, X2",
+   "recherche": "W17, T08",
+   "bemerkung": ""
+  },
+  {
+   "pos": "500.5",
+   "bt": "BT-500",
+   "teil": "BT-550",
+   "benennung": "Unterfahrschutz",
+   "menge": 1,
+   "formel": "–",
+   "art": "E",
+   "vorgang": "M1",
+   "recherche": "W15",
+   "bemerkung": "Steinschlag, Aufsetzen"
+  },
+  {
+   "pos": "500.6",
+   "bt": "BT-500",
+   "teil": "BT-560",
+   "benennung": "Befestigungspunkte am Fahrzeug",
+   "menge": 1,
+   "formel": "1 Satz",
+   "art": "E",
+   "vorgang": "M1",
+   "recherche": "–",
+   "bemerkung": "Fest-/Loslager (Lehre Wasserstoff)"
+  },
+  {
+   "pos": "500.7",
+   "bt": "BT-500",
+   "teil": "BT-570",
+   "benennung": "Druckausgleichselement (atmend, wasserdicht)",
+   "menge": 1,
+   "formel": "–",
+   "art": "K",
+   "vorgang": "G5",
+   "recherche": "–",
+   "bemerkung": ""
+  },
+  {
+   "pos": "600.1",
+   "bt": "BT-600",
+   "teil": "BT-610",
+   "benennung": "Kühlplatte (Wasser-Glykol)",
+   "menge": 1,
+   "formel": "1 oder je Reihe, aus K0/K3",
+   "art": "E",
+   "vorgang": "K0, K3, U4",
+   "recherche": "W16, P03",
+   "bemerkung": "Alternative Luftkühlung: Gebläse + Kanäle (Entscheidung K0)"
+  },
+  {
+   "pos": "600.2",
+   "bt": "BT-600",
+   "teil": "BT-620",
+   "benennung": "Verteiler und Sammler",
+   "menge": 1,
+   "formel": "1 Satz",
+   "art": "E",
+   "vorgang": "K2, K4",
+   "recherche": "P03",
+   "bemerkung": "Gleichverteilung entscheidet (Lehre Wasserstoff); Austritt ≥ Eintritt (Regel des Autors aus Fusion, hier prüfen)"
+  },
+  {
+   "pos": "600.3",
+   "bt": "BT-600",
+   "teil": "BT-630",
+   "benennung": "Kühlmittelanschlüsse Ein/Aus",
+   "menge": 2,
+   "formel": "–",
+   "art": "K",
+   "vorgang": "K2",
+   "recherche": "–",
+   "bemerkung": ""
+  },
+  {
+   "pos": "600.4",
+   "bt": "BT-600",
+   "teil": "BT-640",
+   "benennung": "Temperaturfühler Kühlmittel",
+   "menge": 2,
+   "formel": "Ein, Aus",
+   "art": "K",
+   "vorgang": "K3, E3",
+   "recherche": "–",
+   "bemerkung": ""
+  },
+  {
+   "pos": "600.5",
+   "bt": "BT-600",
+   "teil": "BT-650",
+   "benennung": "Kühlmittel Wasser-Glykol",
+   "menge": 1,
+   "formel": "Füllmenge aus K2",
+   "art": "K",
+   "vorgang": "K2",
+   "recherche": "W16",
+   "bemerkung": "REQ-P12"
+  },
+  {
+   "pos": "600.6",
+   "bt": "BT-600",
+   "teil": "BT-660",
+   "benennung": "Pumpe, Wärmetauscher/Kältemittelkühler",
+   "menge": 1,
+   "formel": "Fahrzeugseite",
+   "art": "S",
+   "vorgang": "K0",
+   "recherche": "W16",
+   "bemerkung": "nur Schnittstelle: Durchfluss, Eintrittstemperatur"
+  },
+  {
+   "pos": "700.1",
+   "bt": "BT-700",
+   "teil": "BT-710",
+   "benennung": "Schaltbox (Gehäuse für Schütze, Vorladung, Hauptsicherung)",
+   "menge": 1,
+   "formel": "–",
+   "art": "E",
+   "vorgang": "E2, G4",
+   "recherche": "W13",
+   "bemerkung": "Trennstelle Stack/Fahrzeug; Einbauort aus G4"
+  },
+  {
+   "pos": "700.2",
+   "bt": "BT-700",
+   "teil": "BT-711",
+   "benennung": "Hauptschütz plus und minus",
+   "menge": 2,
+   "formel": "–",
+   "art": "K",
+   "vorgang": "E2",
+   "recherche": "W13",
+   "bemerkung": "800 V DC, Strom aus REQ-P04/P05"
+  },
+  {
+   "pos": "700.3",
+   "bt": "BT-700",
+   "teil": "BT-712",
+   "benennung": "Vorladeschütz mit Vorladewiderstand",
+   "menge": 1,
+   "formel": "1 Satz",
+   "art": "K",
+   "vorgang": "E2, E4",
+   "recherche": "W13",
+   "bemerkung": "Einschaltstrom der Umrichterkondensatoren"
+  },
+  {
+   "pos": "700.4",
+   "bt": "BT-700",
+   "teil": "BT-713",
+   "benennung": "Hauptsicherung (ggf. pyrotechnischer Trenner)",
+   "menge": 1,
+   "formel": "–",
+   "art": "K",
+   "vorgang": "E2",
+   "recherche": "W13",
+   "bemerkung": "Kurzschlussfall E4"
+  },
+  {
+   "pos": "700.5",
+   "bt": "BT-700",
+   "teil": "BT-720",
+   "benennung": "Service-Trennstecker",
+   "menge": 1,
+   "formel": "–",
+   "art": "K",
+   "vorgang": "E2",
+   "recherche": "W13",
+   "bemerkung": "Werkstatt: Pack spannungsfrei schalten"
+  },
+  {
+   "pos": "700.6",
+   "bt": "BT-700",
+   "teil": "BT-730",
+   "benennung": "HV-Steckverbinder Pack (Antrieb, Laden)",
+   "menge": 2,
+   "formel": "–",
+   "art": "K",
+   "vorgang": "E2, L1",
+   "recherche": "W12, W13",
+   "bemerkung": ""
+  },
+  {
+   "pos": "700.7",
+   "bt": "BT-700",
+   "teil": "BT-740",
+   "benennung": "NV-Steckverbinder (12 V, CAN, Sensorik)",
+   "menge": 1,
+   "formel": "–",
+   "art": "K",
+   "vorgang": "E3",
+   "recherche": "W14",
+   "bemerkung": ""
+  },
+  {
+   "pos": "700.8",
+   "bt": "BT-700",
+   "teil": "BT-750",
+   "benennung": "Entgasungsventil mit Entgasungskanal",
+   "menge": 1,
+   "formel": "1 Satz",
+   "art": "K",
+   "vorgang": "G5",
+   "recherche": "W04, P05",
+   "bemerkung": "thermisches Durchgehen, REQ-P11"
+  },
+  {
+   "pos": "700.9",
+   "bt": "BT-700",
+   "teil": "BT-760",
+   "benennung": "Heizung (Kälte, −20 °C laut REQ-P08)",
+   "menge": 1,
+   "formel": "–",
+   "art": "K",
+   "vorgang": "K0, C5",
+   "recherche": "W01, W16",
+   "bemerkung": "oder über Kühlkreis (Fahrzeugseite)"
+  },
+  {
+   "pos": "700.10",
+   "bt": "BT-700",
+   "teil": "BT-770",
+   "benennung": "Gas-/Drucksensor Früherkennung thermisches Ereignis",
+   "menge": 1,
+   "formel": "–",
+   "art": "K",
+   "vorgang": "E3, F1",
+   "recherche": "W04",
+   "bemerkung": "Warnzeit REQ-P11"
+  },
+  {
+   "pos": "700.11",
+   "bt": "BT-700",
+   "teil": "BT-780",
+   "benennung": "Kennzeichnung (Typschild, HV-Warnung)",
+   "menge": 1,
+   "formel": "1 Satz",
+   "art": "K",
+   "vorgang": "B4",
+   "recherche": "–",
+   "bemerkung": "Normen BAT-DOC-07"
+  }
+ ],
+ "anforderungen_ohne_vorgang": [],
+ "pruef_fehler": []
+}

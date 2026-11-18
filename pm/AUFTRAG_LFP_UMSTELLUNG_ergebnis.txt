@@ -1,0 +1,10 @@
+KI-generiert (Claude Sonnet), Entwurf, 2026-11-16 (Lauf 16:59 CET). Ergebnis zu pm/AUFTRAG_LFP_UMSTELLUNG.md
+1. startwerte.py: Chemie aus parameter.json (BT-100/chemie = LFP, ENT-005) hat Vorrang; Bauraumregel nur Prüfung. pm/startwerte.json abgeleitet.chemie = LFP; REQ-P06 in docs/startparameter.md: "LFP (ENT-005, entschieden); Bauraumregel ... Regel ergäbe NMC". TAB_*/Annahmen unverändert.
+2. Warnung (pm/startwerte.json warnungen): "Bauraum offen: Annahme wh_l_pack LFP 180 Wh/L unbelegt (B-BAT-004/006); nötig 214 Wh/L".
+3. Energie brutto: startwerte.json abgeleitet.kWh_brutto = 73.9 kWh; Stückliste (docs/13_stueckliste.md, 250 Zellen × 3,2 V × 140 Ah) = 112.0 kWh. Abweichung +51 % (> 10 %) -> OPUS. Nicht gelöst. Zellen 250s x 1p (Stückliste: 250s x 1p, 800 V; Ah-Annahme 140 passt nicht zu 73.9 kWh).
+4. Obsidian: wissensnetz_obsidian.py erzeugt jetzt Notizen für alle Bauteile aus struktur.json: 49 (Auftrag sprach von 46; struktur.json hat 49), mit Eltern/Kinder, Merkmalen (entschiedene Werte aus parameter.json, z. B. chemie LFP ENT-005), ENT-Akten, Stückliste, Vorgängen. Gesamt 234 Notizen, 1580 Links, 0 fehlende Ziele. wissensnetz.py und wissensnetz_ansicht.py liefen ohne Fehler (47 Vorgänge).
+5. Kosmetik: vergleich.py Beschriftung "Grenze" unter die Linie mit weißem Kasten verschoben; packmasse.png angesehen, lesbar. sim/chemie/vergleich_lfp_nmc/ergebnis.json vorher/nachher per diff identisch.
+6. python3 pm/pm.py pruefe: 5 Entscheidungen, 0 Fehler; register lief.
+Geänderte Skripte: pm/startwerte.py, pm/plan/wissensnetz_obsidian.py, sim/chemie/vergleich_lfp_nmc/vergleich.py. Neu erzeugt: pm/startwerte.json, docs/startparameter.md, docs/13_stueckliste.md, wissen/, docs/03, packmasse.png.
+Offen/Opus: Energiewiderspruch 73.9 vs 112.0 kWh (Zellkapazität 140 Ah ist Annahme in stueckliste.py).
+Vorschlag docs/08: 2026-11-16 | Sonnet | LFP-Umstellung Startwerte/Stückliste, Obsidian 49 Bauteile, Bildkosmetik | pm/AUFTRAG_LFP_UMSTELLUNG_ergebnis.txt | Opus: Rohdaten, ergebnis.json diff | offen: Energie 73.9 vs 112.0 kWh

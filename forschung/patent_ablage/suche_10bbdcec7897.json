@@ -1,0 +1,101 @@
+{
+ "anfrage": "blade battery cell length greater than width battery pack without module",
+ "ab": "2015",
+ "inhaber": "BYD",
+ "land": null,
+ "url": "https://patents.google.com/xhr/query?url=q%3D%28blade%2Bbattery%2Bcell%2Blength%2Bgreater%2Bthan%2Bwidth%2Bbattery%2Bpack%2Bwithout%2Bmodule%29%26num%3D10%26after%3Dpriority%3A20150101%26assignee%3DBYD&exp=",
+ "zeit": "2026-11-12 12:59:03",
+ "gesamt": 194,
+ "treffer": [
+  {
+   "nr": "CN222995670U",
+   "url": "https://patents.google.com/patent/CN222995670U/en",
+   "titel": "Battery pack for vehicle and vehicle",
+   "inhaber": "比亚迪股份有限公司",
+   "prioritaet": "2024-07-22",
+   "veroeffentlicht": "2025-06-17",
+   "kurz": "The utility model discloses a battery pack for a vehicle and a vehicle, wherein the battery pack for a vehicle comprises a shell and a battery module, a receiving cavity is formed in the shell, the battery module comprises at least one layer of battery components, the at least one layer of battery …"
+  },
+  {
+   "nr": "CN223321452U",
+   "url": "https://patents.google.com/patent/CN223321452U/en",
+   "titel": "Sampling structure, battery information collection device, battery device and …",
+   "inhaber": "比亚迪股份有限公司",
+   "prioritaet": "2024-09-30",
+   "veroeffentlicht": "2025-09-09",
+   "kurz": "Sampling structure, battery information acquisition device, battery device and electric equipment Technical Field The application relates to the technical field of batteries, in particular to a sampling structure, a battery information acquisition device, a battery device and electric equipment."
+  },
+  {
+   "nr": "CN121215963A",
+   "url": "https://patents.google.com/patent/CN121215963A/en",
+   "titel": "Battery components and electrical equipment",
+   "inhaber": "比亚迪股份有限公司",
+   "prioritaet": "2024-06-26",
+   "veroeffentlicht": "2025-12-26",
+   "kurz": "This application provides battery modules and electrical devices. The battery modules provided in this application define the parameter relationship between individual cells and heat absorbers, which can optimize the design thickness of the heat absorbers while taking into account the better heat …"
+  },
+  {
+   "nr": "CN216529163U",
+   "url": "https://patents.google.com/patent/CN216529163U/en",
+   "titel": "Battery pack and vehicle",
+   "inhaber": "比亚迪股份有限公司",
+   "prioritaet": "2021-11-30",
+   "veroeffentlicht": "2022-05-13",
+   "kurz": "The application discloses battery package and vehicle. The battery pack includes: a tray; the beam body is fixed in the tray and provided with a first accommodating area; the first electric core group is fixed in the first accommodating area; the first battery cell group comprises a plurality of …"
+  },
+  {
+   "nr": "CN222601263U",
+   "url": "https://patents.google.com/patent/CN222601263U/en",
+   "titel": "Battery pack and electric device having the same",
+   "inhaber": "比亚迪股份有限公司",
+   "prioritaet": "2024-05-28",
+   "veroeffentlicht": "2025-03-11",
+   "kurz": "The utility model discloses a battery pack and an electrical device having the same, wherein the battery pack includes a shell, a power distribution structure and a battery assembly, wherein a receiving cavity is formed in the shell and a plurality of plug-in components are arranged at intervals …"
+  },
+  {
+   "nr": "CN220914413U",
+   "url": "https://patents.google.com/patent/CN220914413U/en",
+   "titel": "Battery packs and electrical equipment",
+   "inhaber": "比亚迪股份有限公司",
+   "prioritaet": "2023-09-12",
+   "veroeffentlicht": "2024-05-07",
+   "kurz": "The present disclosure relates to a battery pack and an electrical device, wherein the battery pack comprises a tray and a battery unit, wherein the tray has a receiving slot; the battery unit is located in the receiving slot, the battery unit comprises a plurality of battery cells, the plurality …"
+  },
+  {
+   "nr": "CN112216878B",
+   "url": "https://patents.google.com/patent/CN112216878B/en",
+   "titel": "Lithium-ion battery repeating unit, lithium-ion battery and method of using the …",
+   "inhaber": "比亚迪股份有限公司",
+   "prioritaet": "2019-07-10",
+   "veroeffentlicht": "2021-11-12",
+   "kurz": "The present disclosure relates to a lithium ion battery repeating unit, a lithium ion battery and a method of using the same, a battery module and an automobile, the repeating unit includes an anode, a first separator and a cathode that are sequentially stacked in a stacking direction, the cathode …"
+  },
+  {
+   "nr": "WO2025139258A1",
+   "url": "https://patents.google.com/patent/WO2025139258A1/en",
+   "titel": "Battery assembly and device",
+   "inhaber": "比亚迪股份有限公司",
+   "prioritaet": "2023-12-29",
+   "veroeffentlicht": "2025-07-03",
+   "kurz": "A battery assembly and a device. The battery assembly comprises a plurality of single batteries, and heat-absorbing members are provided between oppositely arranged first surfaces of at least some adjacent single batteries. Each heat-absorbing member comprises a main heat-absorbing material, the …"
+  },
+  {
+   "nr": "CN120810135A",
+   "url": "https://patents.google.com/patent/CN120810135A/en",
+   "titel": "Battery pack and electric equipment",
+   "inhaber": "比亚迪股份有限公司",
+   "prioritaet": "2025-06-11",
+   "veroeffentlicht": "2025-10-17",
+   "kurz": "The embodiments of the present application provide a battery pack and an electrical device, which relate to the technical field of battery packs. The battery pack includes a beam assembly and a plurality of battery modules. The beam assembly has at least one mounting groove and a first discharge …"
+  },
+  {
+   "nr": "WO2025044798A1",
+   "url": "https://patents.google.com/patent/WO2025044798A1/en",
+   "titel": "Battery pack and electric vehicle",
+   "inhaber": "比亚迪股份有限公司",
+   "prioritaet": "2023-08-28",
+   "veroeffentlicht": "2025-03-06",
+   "kurz": "An electric vehicle, provided with a battery pack. The battery pack comprises: a first case structure, a battery cell group, and an electric control assembly, wherein the first case structure has a first accommodating cavity; the battery cell group is arranged in the first accommodating cavity;"
+  }
+ ]
+}

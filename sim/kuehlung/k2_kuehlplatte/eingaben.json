@@ -1,0 +1,111 @@
+{
+ "hinweis": "KI-generiert (Claude Sonnet, 2026-11-17), Entwurf. Eingaben K2 genau wie ERWARTUNG.md (Opus); Herkunft je Wert. Ein Wert ist NEU und nicht in ERWARTUNG.md: Waermeleitfaehigkeit Kuehlmittel (siehe offene Frage in ERGEBNIS.md).",
+ "platten": {
+  "quelle": "cad/pack/entwurf/parameter_<V>.json (A_rand_mm, A_kuehlplatte_mm) und ergebnis_<V>.json (laenge_mm, breite_mm); Platte = Bauraum minus 2 x Rand (wie cad/pack/pack.py inner())",
+  "anzahl": 2
+ },
+ "waerme": {
+  "quelle": "sim/kuehlung/k1_schnellladen/ergebnis.json faelle.<Fall>.E_quelle_exakt_J / Dauer; mal Zellzahl (parameter_<V>.json A_zellzahl_*)",
+  "faelle": {
+   "LFP_P0": {
+    "var": "LFP",
+    "dauer_s": 1200,
+    "dauer_herkunft": "K1 eingaben.json profile.P0 (20 min)"
+   },
+   "NMC_P4": {
+    "var": "NMC",
+    "dauer_s": 1800,
+    "dauer_herkunft": "K1 ERGEBNIS.md Tabelle (NMC_P4, 30 min) = Fall der ERWARTUNG (6,7 W je Zelle)"
+   },
+   "NMC_P3": {
+    "var": "NMC",
+    "dauer_s": 1500,
+    "dauer_herkunft": "K1 ERGEBNIS.md (P3, 25 min); Fall aus ENT-088 (zusaetzlich gerechnet)"
+   }
+  },
+  "verteilung_auf_platten": "hälftig (Annahme, ERWARTUNG.md)"
+ },
+ "kuehlmittel": {
+  "name": "Wasser-Glykol 50/50 (ERWARTUNG.md)",
+  "rho_kg_m3": 1070,
+  "c_J_kgK": 3300,
+  "mu_Pa_s": 0.003,
+  "herkunft": "Annahme Lehrbuch, ERWARTUNG.md; Eintritt 25 C",
+  "k_W_mK": 0.4,
+  "k_herkunft": "Annahme (Sonnet 2026-11-17, von Opus 2026-11-17 als Annahme bestaetigt); nicht in ERWARTUNG.md; h ~ k"
+ },
+ "kanal": {
+  "hoehe_mm": 5,
+  "steg_mm": 3,
+  "blech_mm": 1.5,
+  "herkunft": "Annahme, ERWARTUNG.md (8 mm = 2 x 1,5 + 5)",
+  "breiten_mm": [
+   10,
+   15,
+   20
+  ],
+  "fuehrung": [
+   "quer",
+   "laengs"
+  ],
+  "dT_kuehlmittel_K": [
+   5,
+   8,
+   10
+  ],
+  "verteilung": "gleichmaessige Verteilung auf alle parallelen Kanaele angenommen (Z-/U-Fuehrung nicht aufgeloest)"
+ },
+ "hydraulik": {
+  "zuschlag_umlenkung_verteiler": 0.3,
+  "zuschlag_herkunft": "Annahme, AUFTRAG.md (pauschal 30 %)",
+  "pumpenwirkungsgrad": null,
+  "pumpe_herkunft": "kein Wirkungsgrad angenommen; es wird nur hydraulische Leistung dP*V gezeigt"
+ },
+ "korrelationen": {
+  "laminar_Nu": "Shah/London Rechteckkanal, Nu_H1 (konstanter Waermestrom), voll entwickelt; thermischer Einlauf nach Hausen (Gz); Lehrbuch",
+  "laminar_f": "Shah/London Rechteckkanal f*Re = 96(1-1,3553a+1,9467a^2-1,7012a^3+0,9564a^4-0,2537a^5) (Darcy), Lehrbuch",
+  "uebergang_turbulent": "Gnielinski (Re 4000..), Reibung f=(0,79 ln Re -1,64)^-2; Re 2300..4000 linear interpoliert; Lehrbuch",
+  "hinweis": "Lehrbuchformeln aus dem Gedaechtnis, keine abgerufene Quelle: Annahme"
+ },
+ "ziele": {
+  "dT_kuehlmittel_max_K": 5,
+  "dp_max_bar_je_pack": 0.5,
+  "h_min_W_m2K": 500,
+  "herkunft": "Annahme, ERWARTUNG.md; h 500 = K0/K1-Annahme; verfehlt: h < 300, dp > 1 bar"
+ },
+ "auswahl": "kleinster Druckverlust mit h >= 500 (AUFTRAG.md)",
+ "nachtrag": {
+  "herkunft": "Opus-Auftrag 2026-11-17 (Nachricht an Sonnet)",
+  "breiten_mm": [
+   4,
+   6,
+   8,
+   10,
+   15,
+   20
+  ],
+  "hoehen_mm": [
+   3,
+   5
+  ],
+  "durchgaenge": [
+   1,
+   2,
+   4,
+   6
+  ],
+  "h_grund": "h_eff = h_Kanal*(w + 2*eta*H)/(w+steg); eta = tanh(mL)/mL, m=sqrt(2h/(k_Al*steg)), L=H (Rippe, Spitze adiabat); Steg = Rippe von Blech zu Blech (Annahme Opus: Stegwirkungsgrad)",
+  "k_Al_W_mK": 237,
+  "k_Al_herkunft": "wie K1 (Verbinder Al k 237)",
+  "pad": {
+   "dicke_mm": 1,
+   "k_W_mK": 3,
+   "herkunft": "Opus-Auftrag (Pad 1 mm, k 3)"
+  },
+  "blech_mm": 1.5,
+  "blech_k": "Al 237",
+  "U": "1/U = 1/h_eff + t_pad/k_pad + t_blech/k_Al",
+  "maeander": "N Durchgaenge in Reihe: Kanallaenge x N, parallele Kanaele / N; Umlenkverluste nur ueber 30 %-Zuschlag (Annahme, bei vielen Durchgaengen zu klein moeglich)",
+  "auswahl": "U >= 500 W/(m2K) und dp <= 0,5 bar, kleinste hydraulische Pumpenleistung (je Fall; zusaetzlich mit dT <= 5 K)"
+ }
+}

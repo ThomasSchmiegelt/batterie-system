@@ -1,0 +1,5 @@
+Z13: FEHLT im Text der Quelle: "Cycle durability 400–1,200 cycles [ 11 ]" (https://en.wikipedia.org/wiki/Lithium-ion_battery)
+Z23: FEHLT im Text der Quelle: "Standard: 250–842 W.h/L" (https://en.wikipedia.org/wiki/Lithium-ion_battery)
+Z24: FEHLT im Text der Quelle: "Specialty: up to 450 W.h/kg" (https://en.wikipedia.org/wiki/Lithium-ion_battery)
+
+10 Belege bestaetigt, 3 Fehler

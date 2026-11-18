@@ -1,0 +1,278 @@
+{
+ "variante": "NMC",
+ "wickel": {
+  "kern_radius_mm": 6.25,
+  "modell": "flaechentreu (pi*(R^2-r0^2) = Summe Dicke x Laenge), Baender gemeinsam am Kern",
+  "dicke_je_windung_voll_mm": 0.45,
+  "windungen_kathode": 36.66288123451032,
+  "windungen_anode": 36.93465785432936,
+  "windungen_separator1": 38.88612751811855,
+  "windungen_separator2": 38.44337214942581,
+  "aussenradius_kathode_mm": 22.174379787125503,
+  "aussenradius_anode_mm": 22.519804855252087,
+  "aussenradius_separator_mm": 22.56476071489488,
+  "aussenradius_wickel_max_mm": 22.56476071489488,
+  "aussenradius_flaechenformel_mm": 22.564539778389705,
+  "kleinster_innenradius_mm": 5.800000001,
+  "innenradius_je_band_bei_32,5_windungen_mm": {
+   "K": 20.150844632761444,
+   "S1": 20.320844632761442,
+   "A": 20.330844632761444,
+   "S2": 20.590844632761442
+  },
+  "becher_innenradius_mm": 22.6,
+  "abstand_wickel_zu_becher_mm": 0.035239285105120643,
+  "hoehe_z_von_bis_mm": [
+   1.0,
+   76.0
+  ],
+  "freie_hoehe_oben_bis_deckel_mm": 2.4000000000000057
+ },
+ "annahmen": {
+  "A_NMC_POL_D": 12.0,
+  "A_NMC_POL_H": 1.0,
+  "A_NMC_RAND_MM": 0.3,
+  "A_NMC_TABSCHEIBE_MM": 0.3,
+  "A_NMC_TABSCHEIBE_R": 21.0,
+  "A_NMC_TAB_SEKTOR_GRAD": 50.0,
+  "A_NMC_DICHTRING_BREITE": 2.0,
+  "A_NMC_DICHTRING_H": 1.0,
+  "A_NMC_DECKEL_MM": 0.4,
+  "A_NMC_ISOLIERRING_H": 0.7,
+  "A_NMC_POST_D": 4.0,
+  "A_NMC_NIET_D": 8.0,
+  "A_NMC_NIET_H": 0.5,
+  "A_NMC_VENTIL_D": 10.0,
+  "A_NMC_VENTIL_X": 12.0,
+  "A_NMC_KLEBE_H": 8.0,
+  "A_NMC_KLEBE_DICKE": 0.05,
+  "A_NMC_BAND_START_VERSATZ_MM": 0.0,
+  "A_PUNKTE_JE_WINDUNG": 72
+ },
+ "nicht_modelliert": [
+  "Foliensteg der Fahnen (5 / 7,5 mm) einzeln: durch Ringscheibe 'gefalteter Rand' angedeutet (ANNAHME Dicke)",
+  "Elektrolyt",
+  "Deckel nur als Scheibe, Sicken und Bördelung fehlen"
+ ],
+ "darstellung": "Wickel passt in den Becher",
+ "volumen_je_teil_cm3": {
+  "Kathode_Beschichtung": 34.67871789771687,
+  "Al_Folie": 4.623829053023084,
+  "Anode_Beschichtung": 60.24102991624685,
+  "Cu_Folie": 2.409641196651699,
+  "Separator": 5.3183481483030635,
+  "Becher_Stahl": 5.226051945617255,
+  "Rand_Al_oben": 0.4430643971727206,
+  "Rand_Cu_unten": 0.44306439717272195,
+  "TabScheibe_Al_Kathode": 0.3276049843758447,
+  "TabScheibe_Cu_Anode": 0.3276049843758457,
+  "Dichtring": 0.27143360527015853,
+  "Deckel": 0.5332665033909485,
+  "Pol_plus_Al": 0.21111502632123355,
+  "Isolierring": 0.15341025246009712,
+  "Blindniet_Cu": 0.045238934211693005,
+  "Ventil": 0.015707963267948967,
+  "Klebestreifen": 0.11354852209321689
+ },
+ "gueltig": {
+  "Kathode_Beschichtung": true,
+  "Al_Folie": true,
+  "Anode_Beschichtung": true,
+  "Cu_Folie": true,
+  "Separator": true,
+  "Becher_Stahl": true,
+  "Rand_Al_oben": true,
+  "Rand_Cu_unten": true,
+  "TabScheibe_Al_Kathode": true,
+  "TabScheibe_Cu_Anode": true,
+  "Dichtring": true,
+  "Deckel": true,
+  "Pol_plus_Al": true,
+  "Isolierring": true,
+  "Blindniet_Cu": true,
+  "Ventil": true,
+  "Klebestreifen": true
+ },
+ "obj": {
+  "voll_Kathode_Beschichtung": [
+   21128,
+   42248
+  ],
+  "voll_Al_Folie": [
+   10564,
+   21124
+  ],
+  "voll_Anode_Beschichtung": [
+   21288,
+   42568
+  ],
+  "voll_Cu_Folie": [
+   10644,
+   21284
+  ],
+  "voll_Separator": [
+   22064,
+   44552
+  ],
+  "voll_Becher_Stahl": [
+   504,
+   1004
+  ],
+  "voll_Rand_Al_oben": [
+   504,
+   1008
+  ],
+  "voll_Rand_Cu_unten": [
+   504,
+   1008
+  ],
+  "voll_TabScheibe_Al_Kathode": [
+   278,
+   548
+  ],
+  "voll_TabScheibe_Cu_Anode": [
+   278,
+   548
+  ],
+  "voll_Dichtring": [
+   504,
+   1008
+  ],
+  "voll_Deckel": [
+   252,
+   500
+  ],
+  "voll_Pol_plus_Al": [
+   504,
+   1000
+  ],
+  "voll_Isolierring": [
+   504,
+   1008
+  ],
+  "voll_Blindniet_Cu": [
+   252,
+   500
+  ],
+  "voll_Ventil": [
+   252,
+   500
+  ],
+  "voll_Klebestreifen": [
+   1008,
+   2016
+  ],
+  "viertel_Kathode_Beschichtung": [
+   16088,
+   31880
+  ],
+  "viertel_Al_Folie": [
+   8044,
+   15940
+  ],
+  "viertel_Anode_Beschichtung": [
+   16248,
+   32200
+  ],
+  "viertel_Cu_Folie": [
+   8124,
+   16100
+  ],
+  "viertel_Separator": [
+   16820,
+   33624
+  ],
+  "viertel_Becher_Stahl": [
+   386,
+   768
+  ],
+  "viertel_Rand_Al_oben": [
+   384,
+   764
+  ],
+  "viertel_Rand_Cu_unten": [
+   384,
+   764
+  ],
+  "viertel_TabScheibe_Al_Kathode": [
+   214,
+   424
+  ],
+  "viertel_TabScheibe_Cu_Anode": [
+   214,
+   424
+  ],
+  "viertel_Dichtring": [
+   384,
+   764
+  ],
+  "viertel_Deckel": [
+   194,
+   384
+  ],
+  "viertel_Pol_plus_Al": [
+   388,
+   768
+  ],
+  "viertel_Isolierring": [
+   384,
+   764
+  ],
+  "viertel_Blindniet_Cu": [
+   194,
+   384
+  ],
+  "viertel_Ventil": [
+   128,
+   252
+  ],
+  "viertel_Klebestreifen": [
+   768,
+   1528
+  ],
+  "oben_Kathode_Beschichtung": [
+   21128,
+   42248
+  ],
+  "oben_Al_Folie": [
+   10564,
+   21124
+  ],
+  "oben_Anode_Beschichtung": [
+   21288,
+   42568
+  ],
+  "oben_Cu_Folie": [
+   10644,
+   21284
+  ],
+  "oben_Separator": [
+   22064,
+   44552
+  ],
+  "oben_Becher_Stahl": [
+   504,
+   1004
+  ],
+  "oben_Rand_Cu_unten": [
+   504,
+   1008
+  ],
+  "oben_TabScheibe_Cu_Anode": [
+   278,
+   548
+  ],
+  "oben_Blindniet_Cu": [
+   252,
+   500
+  ],
+  "oben_Ventil": [
+   252,
+   500
+  ],
+  "oben_Klebestreifen": [
+   504,
+   1008
+  ]
+ }
+}

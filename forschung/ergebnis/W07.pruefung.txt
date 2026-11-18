@@ -1,0 +1,5 @@
+Z11: FEHLT im Text der Quelle: "Nominal cell voltage \| 3.0–3.1 V" (https://en.wikipedia.org/wiki/Sodium-ion_battery)
+Z12: FEHLT im Text der Quelle: "Energy density \| 250–375 W·h/L" (https://en.wikipedia.org/wiki/Sodium-ion_battery)
+Z33: WERT OHNE BELEG: 2. Wie stark steigt der Innenwiderstand einer SIB-Zelle bei −30 °C im Vergleich zu LFP, und reicht u
+
+8 Belege bestaetigt, 2 Fehler

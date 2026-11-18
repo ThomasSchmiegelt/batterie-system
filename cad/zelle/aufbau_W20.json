@@ -1,0 +1,229 @@
+{
+ "hinweis": "KI-generiert (Claude Opus, 2026-11-17). Innenaufbau BYD Blade (Gen 1, 965 mm) und Tesla 4680 aus Zerlegung W20 (Cell Rep. Phys. Sci. 6, 102453, 2025, CC-BY). Fundstelle je Wert. Tabelle 1 nennt Dicken in 'mm', gemeint µm (Satzfehler, Plausibilität: Stapel 12,5 mm bei 14 mm Zelle). Werte aus Abbildungen sind von Opus abgelesen, nicht durch pruefe.py prüfbar.",
+ "LFP_original": {
+  "kathode": {
+   "laenge_mm": [
+    899.5,
+    "Abb.5A"
+   ],
+   "breite_mm": [
+    82.5,
+    "Abb.5A"
+   ],
+   "beschichtung_um_je_seite": [
+    70,
+    "Tab.1"
+   ],
+   "folie_al_um": [
+    20,
+    "Tab.1"
+   ],
+   "anzahl": [
+    38,
+    "Tab.1/Text"
+   ],
+   "fahne_mm": [
+    [
+     27.1,
+     9
+    ],
+    "Abb.5A, Bedeutung der zwei Maße nicht eindeutig (Fahnenzone/Überstand)"
+   ],
+   "isolierrand_mm": [
+    6.5,
+    "Abb.5A rechts"
+   ]
+  },
+  "anode": {
+   "laenge_mm": [
+    904,
+    "Abb.5A"
+   ],
+   "breite_mm": [
+    85,
+    "Abb.5A"
+   ],
+   "beschichtung_um_je_seite": [
+    65,
+    "Tab.1"
+   ],
+   "folie_cu_um": [
+    10,
+    "Tab.1"
+   ],
+   "anzahl": [
+    39,
+    "Tab.1/Text"
+   ],
+   "fahne_mm": [
+    [
+     20.5,
+     7
+    ],
+    "Abb.5A"
+   ],
+   "isolierrand_mm": [
+    4,
+    "Abb.5A rechts"
+   ]
+  },
+  "separator": {
+   "laenge_mm": [
+    915,
+    "Abb.5A (Breite der Z-Faltung)"
+   ],
+   "breite_mm": [
+    87,
+    "Abb.5A (~87)"
+   ],
+   "dicke_um": [
+    12,
+    "Tab.1"
+   ],
+   "lagen": [
+    78,
+    "Tab.1 (Text: 79)"
+   ],
+   "bauweise": [
+    "ein Band, Z-gefaltet, Rand laminiert",
+    "Text"
+   ]
+  },
+  "ueberstand_mm": {
+   "separator_anode": [
+    2,
+    "Text"
+   ],
+   "anode_kathode": [
+    1,
+    "Text"
+   ]
+  },
+  "fixierung": [
+   "Kunststoffschiene + Klebeband, Stapel und Halter im transparenten Isolationsbeutel",
+   "Text, Abb.2A"
+  ],
+  "kontaktierung": [
+   "Fahnen je Seite gebündelt, Ultraschall verdichtet, an Stromschiene laser-geschweißt; Stromschiene am Pol",
+   "Text, Abb.2A/4A"
+  ],
+  "polisolation": [
+   "zweiteilige Kunststoffhalter und Gummi-O-Ring; beide Pole gegen Gehäuse isoliert, Gehäuse eigenes Potenzial",
+   "Text, Abb.2A"
+  ],
+  "gehaeuse": [
+   "Aluminium, Wand 0,3 mm, PET-Klebefolie außen",
+   "Tab.1, Text"
+  ],
+  "fuelloeffnung": [
+   "verschweißt; Gummistopfen an der Füllstelle (Abb.4A)",
+   "Text, Abb.4A"
+  ],
+  "ventil": [
+   "Stirnseite, seitlich (Abb.2A: Vent neben Kathodenpol)",
+   "Text, Abb.2A"
+  ]
+ },
+ "NMC": {
+  "kathode": {
+   "laenge_mm": [
+    3215,
+    "Abb.5B"
+   ],
+   "breite_mm": [
+    72,
+    "Abb.5B"
+   ],
+   "beschichtung_um_je_seite": [
+    75,
+    "Tab.1"
+   ],
+   "folie_al_um": [
+    20,
+    "Tab.1"
+   ],
+   "fahnen": [
+    "tabless: Folienrand schräg geschlitzt und gefaltet; Abb.5B: Fahnenzone 400 mm Anfang/Ende, Maße 2,5 / 5 mm",
+    "Text, Abb.5B"
+   ]
+  },
+  "anode": {
+   "laenge_mm": [
+    3305,
+    "Abb.5B"
+   ],
+   "breite_mm": [
+    73,
+    "Abb.5B"
+   ],
+   "beschichtung_um_je_seite": [
+    125,
+    "Tab.1"
+   ],
+   "folie_cu_um": [
+    10,
+    "Tab.1"
+   ],
+   "fahnen": [
+    "tabless, Maße 7,5 / 2,5 mm",
+    "Abb.5B"
+   ]
+  },
+  "separator": {
+   "laenge_mm": [
+    3550,
+    "Abb.5B"
+   ],
+   "breite_mm": [
+    75,
+    "Abb.5B"
+   ],
+   "dicke_um": [
+    10,
+    "Tab.1"
+   ],
+   "lagen": [
+    2,
+    "Tab.1"
+   ]
+  },
+  "ueberstand_mm": {
+   "separator_anode": [
+    2,
+    "Text"
+   ],
+   "anode_kathode": [
+    1,
+    "Text"
+   ]
+  },
+  "kern": [
+   "Mitte des Wickels leer (Schweißwerkzeug)",
+   "Text"
+  ],
+  "kontaktierung": [
+   "Kathoden-Tab-Scheibe (Al) oben, Punktschweißung an Pol; Anoden-Tab-Scheibe (Cu) unten, an Becher laser-geschweißt; je 6 dreieckige Kontaktflächen",
+   "Text, Abb.4B"
+  ],
+  "polisolation": [
+   "Pluspol mit Isolier-/Dichtring; Becher = Minuspol; Anoden-Kathoden-Isolation oben",
+   "Text, Abb.2B"
+  ],
+  "gehaeuse": [
+   "Stahl, vermutlich vernickelt, Wand 0,4 mm, ohne Isolierung",
+   "Tab.1, Text"
+  ],
+  "fuelloeffnung": [
+   "Kupfer-Blindniet im Boden (Verschlusskappe, Dichtring)",
+   "Text, Abb.2B"
+  ],
+  "ventil": [
+   "Boden",
+   "Text"
+  ],
+  "befestigung_wickel": [
+   "zwei Klebestreifen oben und unten",
+   "Text"
+  ]
+ }
+}

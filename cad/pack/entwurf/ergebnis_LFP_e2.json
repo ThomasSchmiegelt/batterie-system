@@ -1,0 +1,2150 @@
+{
+ "schnittebene_quer_x_mm": null,
+ "schnittebene_halb_x_mm": null,
+ "hinweis": "KI-generiert, ENTWURF, nicht freigegeben. Erzeugt von cad/pack/pack.py aus cad/pack/entwurf/parameter_LFP.json",
+ "variante": "LFP",
+ "laenge_mm": 2050.0,
+ "breite_mm": 1430.0,
+ "hoehe_mm": 210.0,
+ "hoehe_stapel_mm": 121.0,
+ "hoehe_max_mm": 130,
+ "gehaeuse_L_mm": 2050.0,
+ "zellen": 250,
+ "quertraeger_x_mm": [
+  524.0,
+  1018.0,
+  1512.0
+ ],
+ "zellmasse_je_kg": 1.85,
+ "gruppen": {
+  "Unterfahrschutz": {
+   "anzahl": 1,
+   "volumen_cm3": 8794.5,
+   "masse_kg": 23.74515,
+   "masse_bekannt": true,
+   "werkstoff": "Al"
+  },
+  "Boden": {
+   "anzahl": 1,
+   "volumen_cm3": 8794.5,
+   "masse_kg": 23.74515,
+   "masse_bekannt": true,
+   "werkstoff": "Al"
+  },
+  "Seitenrahmen": {
+   "anzahl": 1,
+   "volumen_cm3": 22161.600000000006,
+   "masse_kg": 21.79224000000001,
+   "masse_bekannt": true,
+   "werkstoff": "Al (Vollprofil, Obergrenze)"
+  },
+  "Kuehlplatte": {
+   "anzahl": 2,
+   "volumen_cm3": 43548.08141524401,
+   "masse_kg": 47.03192792846353,
+   "masse_bekannt": true,
+   "werkstoff": "Al (Vollmaterial, Obergrenze)"
+  },
+  "Pad": {
+   "anzahl": 2,
+   "volumen_cm3": 5418.091908056262,
+   "masse_kg": 13.545229770140654,
+   "masse_bekannt": true,
+   "werkstoff": "Pad"
+  },
+  "Deckel": {
+   "anzahl": 1,
+   "volumen_cm3": 5854.377812131689,
+   "masse_kg": 15.80682009275556,
+   "masse_bekannt": true,
+   "werkstoff": "Al"
+  },
+  "Zellverbinder": {
+   "anzahl": 130,
+   "volumen_cm3": 373.5000000000007,
+   "masse_kg": 1.0084499999999983,
+   "masse_bekannt": true,
+   "werkstoff": "Al"
+  },
+  "Quertraeger": {
+   "anzahl": 3,
+   "volumen_cm3": 1541.25,
+   "masse_kg": 4.161375,
+   "masse_bekannt": true,
+   "werkstoff": "Al"
+  },
+  "Zellen": {
+   "anzahl": 250,
+   "volumen_cm3": 214514.99999999953,
+   "masse_kg": 462.500000000002,
+   "masse_bekannt": true,
+   "werkstoff": "Zelle (Masse aus Akte)"
+  },
+  "E2_CMU": {
+   "anzahl": 14,
+   "volumen_cm3": 1008.0,
+   "masse_kg": 1.1199999999999999,
+   "masse_bekannt": true,
+   "werkstoff": "E2 Teil (Masse ERW-E2 N1)"
+  },
+  "E2_Schaltbox": {
+   "anzahl": 1,
+   "volumen_cm3": 577.2399999999978,
+   "masse_kg": 1.5585479999999943,
+   "masse_bekannt": true,
+   "werkstoff": "Al"
+  },
+  "E2_Schaltbox_Inhalt": {
+   "anzahl": 8,
+   "volumen_cm3": 1588.5,
+   "masse_kg": 1.7999999999999998,
+   "masse_bekannt": true,
+   "werkstoff": "E2 Teil (Masse ERW-E2 N1)"
+  },
+  "E2_Stecker_Sensor": {
+   "anzahl": 5,
+   "volumen_cm3": 776.0,
+   "masse_kg": 0.8300000000000001,
+   "masse_bekannt": true,
+   "werkstoff": "E2 Teil (Masse ERW-E2 N1)"
+  },
+  "E2_HV_Leitung": {
+   "anzahl": 4,
+   "volumen_cm3": 177.93874855997848,
+   "masse_kg": 0.517848345616576,
+   "masse_bekannt": true,
+   "werkstoff": "Cu (Leiter, Isolierung ohne Wert)"
+  },
+  "E2_FPC": {
+   "anzahl": 14,
+   "volumen_cm3": 56.50367999999802,
+   "masse_kg": 0.589585,
+   "masse_bekannt": true,
+   "werkstoff": "FPC (Masse ERW-E2 N1)"
+  },
+  "E2_FPC_Halter": {
+   "anzahl": 2,
+   "volumen_cm3": 113.45471999999859,
+   "masse_kg": 0.0,
+   "masse_bekannt": true,
+   "werkstoff": "Halter (Masse offen, 0 gesetzt)"
+  }
+ },
+ "masse_bekannt_kg": 619.7523241369821,
+ "schwerpunkt_mm": [
+  1029.030214488052,
+  715.0258209331873,
+  62.59347283644123
+ ],
+ "mitte_mm": [
+  1025.0,
+  715.0
+ ],
+ "schwerpunkt_abw_mm": [
+  4.0302144880520245,
+  0.02582093318733314
+ ],
+ "teile": 439,
+ "kollisionspaare_geprueft": 1045,
+ "kollisionen": [],
+ "anzahl_kollisionen": 0,
+ "rechenzeit_s": 3.663459062576294,
+ "e2": {
+  "fall": "hinten (ENT-144)",
+  "verschaltung": {
+   "variante": "LFP",
+   "machbar": true,
+   "konzept": "schleife_2reihen (ENT-148)",
+   "reihen_physisch": 2,
+   "zellen_je_reihe": 125,
+   "kette": "Plus hinten Reihe 0 -> vorn, Querverbinder vorn (Mitte, Service-Trennstecker in der Deckelöffnung), Reihe 1 -> hinten Minus",
+   "mitte_vorn_x": 50.0,
+   "plus_hinten_x": 1997.0,
+   "minus_hinten_x": 1997.0
+  },
+  "schaltbox_L_mm": 320.0,
+  "schaltbox_B_mm": 290.0,
+  "schaltbox_H_mm": 89.0,
+  "schaltbox_x0_y0_z0_mm": [
+   1700.0,
+   570.0,
+   121.0
+  ],
+  "reihenbreiten_mm": [
+   290.0,
+   290.0,
+   70.0
+  ],
+  "hoechstes_teil_mm": 85.0,
+  "hoehenzuwachs_gesamt_mm": 89.0,
+  "hoehe_stapel_vor_e2_mm": 121.0,
+  "hoehe_max_A_mm": 130,
+  "cmu_anzahl": 14,
+  "cmu_seite": {
+   "vorn": 7,
+   "hinten": 7
+  },
+  "cmu_kapazitaet_je_endzone": 11,
+  "cmu_masse_kg": 1.12,
+  "freier_abstand_endzone_vorn_mm": 13.0,
+  "freier_abstand_endzone_hinten_mm": 16.0,
+  "cmu_dicke_mm": 10.0,
+  "abgriffe": 251,
+  "cmu_y": [
+   90.0,
+   210.0,
+   330.0,
+   90.0,
+   210.0,
+   330.0,
+   450.0,
+   1100.0,
+   1220.0,
+   1340.0,
+   980.0,
+   1100.0,
+   1220.0,
+   1340.0
+  ],
+  "fpc": [
+   {
+    "cmu": 3,
+    "reihe": 0,
+    "seite": "vorn",
+    "laenge_mm": 1183.55,
+    "davon_x_mm": 1125.5,
+    "davon_y_mm": 58.05,
+    "platziert": true,
+    "spur": 0,
+    "lage": 0
+   },
+   {
+    "cmu": 10,
+    "reihe": 1,
+    "seite": "hinten",
+    "laenge_mm": 1531.55,
+    "davon_x_mm": 1113.5,
+    "davon_y_mm": 418.04999999999995,
+    "platziert": true,
+    "spur": 0,
+    "lage": 0
+   },
+   {
+    "cmu": 9,
+    "reihe": 1,
+    "seite": "vorn",
+    "laenge_mm": 899.55,
+    "davon_x_mm": 841.5,
+    "davon_y_mm": 58.049999999999955,
+    "platziert": true,
+    "spur": 0,
+    "lage": 0
+   },
+   {
+    "cmu": 2,
+    "reihe": 0,
+    "seite": "hinten",
+    "laenge_mm": 1127.55,
+    "davon_x_mm": 829.5,
+    "davon_y_mm": 298.05,
+    "platziert": true,
+    "spur": 0,
+    "lage": 0
+   },
+   {
+    "cmu": 4,
+    "reihe": 0,
+    "seite": "vorn",
+    "laenge_mm": 1004.55,
+    "davon_x_mm": 826.5,
+    "davon_y_mm": 178.05,
+    "platziert": true,
+    "spur": 0,
+    "lage": 1
+   },
+   {
+    "cmu": 11,
+    "reihe": 1,
+    "seite": "hinten",
+    "laenge_mm": 1112.55,
+    "davon_x_mm": 814.5,
+    "davon_y_mm": 298.04999999999995,
+    "platziert": true,
+    "spur": 0,
+    "lage": 1
+   },
+   {
+    "cmu": 8,
+    "reihe": 1,
+    "seite": "vorn",
+    "laenge_mm": 749.55,
+    "davon_x_mm": 571.5,
+    "davon_y_mm": 178.04999999999995,
+    "platziert": true,
+    "spur": 0,
+    "lage": 1
+   },
+   {
+    "cmu": 1,
+    "reihe": 0,
+    "seite": "hinten",
+    "laenge_mm": 737.55,
+    "davon_x_mm": 559.5,
+    "davon_y_mm": 178.05,
+    "platziert": true,
+    "spur": 0,
+    "lage": 1
+   },
+   {
+    "cmu": 5,
+    "reihe": 0,
+    "seite": "vorn",
+    "laenge_mm": 854.55,
+    "davon_x_mm": 556.5,
+    "davon_y_mm": 298.05,
+    "platziert": true,
+    "spur": 0,
+    "lage": 2
+   },
+   {
+    "cmu": 12,
+    "reihe": 1,
+    "seite": "hinten",
+    "laenge_mm": 722.55,
+    "davon_x_mm": 544.5,
+    "davon_y_mm": 178.04999999999995,
+    "platziert": true,
+    "spur": 0,
+    "lage": 2
+   },
+   {
+    "cmu": 7,
+    "reihe": 1,
+    "seite": "vorn",
+    "laenge_mm": 570.55,
+    "davon_x_mm": 272.5,
+    "davon_y_mm": 298.04999999999995,
+    "platziert": true,
+    "spur": 0,
+    "lage": 2
+   },
+   {
+    "cmu": 0,
+    "reihe": 0,
+    "seite": "hinten",
+    "laenge_mm": 318.55,
+    "davon_x_mm": 260.5,
+    "davon_y_mm": 58.05,
+    "platziert": true,
+    "spur": 0,
+    "lage": 2
+   },
+   {
+    "cmu": 6,
+    "reihe": 0,
+    "seite": "vorn",
+    "laenge_mm": 675.55,
+    "davon_x_mm": 257.5,
+    "davon_y_mm": 418.05,
+    "platziert": true,
+    "spur": 0,
+    "lage": 3
+   },
+   {
+    "cmu": 13,
+    "reihe": 1,
+    "seite": "hinten",
+    "laenge_mm": 303.54999999999995,
+    "davon_x_mm": 245.5,
+    "davon_y_mm": 58.049999999999955,
+    "platziert": true,
+    "spur": 0,
+    "lage": 3
+   }
+  ],
+  "fpc_laenge_gesamt_m": 11.791699999999995,
+  "fpc_laenge_platziert_m": 11.791699999999995,
+  "fpc_stuecke": 14,
+  "fpc_nicht_platziert": 0,
+  "fpc_masse_kg": 0.5895849999999998,
+  "hv": [
+   {
+    "strecke": "Plus Zelle -> Schaltbox",
+    "laenge_mm": 571.9557428756427
+   },
+   {
+    "strecke": "Minus Zelle -> Schaltbox",
+    "laenge_mm": 571.9557428756427
+   },
+   {
+    "strecke": "Mitte_A -> Trennstecker",
+    "laenge_mm": 6.0
+   },
+   {
+    "strecke": "Mitte_B -> Trennstecker",
+    "laenge_mm": 6.0
+   }
+  ],
+  "hv_laenge_gesamt_m": 1.1759114857512853,
+  "hv_W_je_m": 12.946784000000001,
+  "hv_verlust_W": 15.22427200914097,
+  "hv_cu_masse_kg": 0.526808345616576,
+  "stecker_lfp": {
+   "x": 55.5,
+   "y": 715.0,
+   "oberkante_mm": 179.0,
+   "ueber_deckel_mm": 58.0,
+   "deckeloeffnung_mm": [
+    80.0,
+    50.0
+   ],
+   "querverbinder_laenge_mm": 1358.0
+  },
+  "hv_gebaut": true,
+  "hv_kurze_leitungen_box_stecker_mm": 20,
+  "masse_elektronik_ohne_hv_leitungen_kg": 5.898132999999993,
+  "aussparungen_mm3": {
+   "Pad_oben": 34508.09194373805,
+   "Kuehlplatte_oben": 72718.58475599438,
+   "Deckel": 8622.187868312001
+  },
+  "geometrie": {
+   "cmu": [
+    {
+     "i": 0,
+     "seite": "hinten",
+     "x": 2015.0,
+     "y": 90.0,
+     "taps": 18
+    },
+    {
+     "i": 1,
+     "seite": "hinten",
+     "x": 2015.0,
+     "y": 210.0,
+     "taps": 18
+    },
+    {
+     "i": 2,
+     "seite": "hinten",
+     "x": 2015.0,
+     "y": 330.0,
+     "taps": 18
+    },
+    {
+     "i": 3,
+     "seite": "vorn",
+     "x": 35.0,
+     "y": 90.0,
+     "taps": 18
+    },
+    {
+     "i": 4,
+     "seite": "vorn",
+     "x": 35.0,
+     "y": 210.0,
+     "taps": 18
+    },
+    {
+     "i": 5,
+     "seite": "vorn",
+     "x": 35.0,
+     "y": 330.0,
+     "taps": 18
+    },
+    {
+     "i": 6,
+     "seite": "vorn",
+     "x": 35.0,
+     "y": 450.0,
+     "taps": 18
+    },
+    {
+     "i": 7,
+     "seite": "vorn",
+     "x": 35.0,
+     "y": 1100.0,
+     "taps": 18
+    },
+    {
+     "i": 8,
+     "seite": "vorn",
+     "x": 35.0,
+     "y": 1220.0,
+     "taps": 18
+    },
+    {
+     "i": 9,
+     "seite": "vorn",
+     "x": 35.0,
+     "y": 1340.0,
+     "taps": 18
+    },
+    {
+     "i": 10,
+     "seite": "hinten",
+     "x": 2015.0,
+     "y": 980.0,
+     "taps": 18
+    },
+    {
+     "i": 11,
+     "seite": "hinten",
+     "x": 2015.0,
+     "y": 1100.0,
+     "taps": 18
+    },
+    {
+     "i": 12,
+     "seite": "hinten",
+     "x": 2015.0,
+     "y": 1220.0,
+     "taps": 18
+    },
+    {
+     "i": 13,
+     "seite": "hinten",
+     "x": 2015.0,
+     "y": 1340.0,
+     "taps": 17
+    }
+   ],
+   "fpc": [
+    {
+     "cmu": 3,
+     "reihe": 0,
+     "xy": [
+      [
+       40.0,
+       90.0
+      ],
+      [
+       40.0,
+       31.950000000000003
+      ],
+      [
+       1165.5,
+       31.950000000000003
+      ]
+     ],
+     "platziert": true
+    },
+    {
+     "cmu": 10,
+     "reihe": 1,
+     "xy": [
+      [
+       2010.0,
+       980.0
+      ],
+      [
+       2010.0,
+       1398.0500000000002
+      ],
+      [
+       896.5,
+       1398.0500000000002
+      ]
+     ],
+     "platziert": true
+    },
+    {
+     "cmu": 9,
+     "reihe": 1,
+     "xy": [
+      [
+       40.0,
+       1340.0
+      ],
+      [
+       40.0,
+       1398.0500000000002
+      ],
+      [
+       881.5,
+       1398.0500000000002
+      ]
+     ],
+     "platziert": true
+    },
+    {
+     "cmu": 2,
+     "reihe": 0,
+     "xy": [
+      [
+       2010.0,
+       330.0
+      ],
+      [
+       2010.0,
+       31.950000000000003
+      ],
+      [
+       1180.5,
+       31.950000000000003
+      ]
+     ],
+     "platziert": true
+    },
+    {
+     "cmu": 4,
+     "reihe": 0,
+     "xy": [
+      [
+       40.0,
+       210.0
+      ],
+      [
+       40.0,
+       32.25
+      ],
+      [
+       866.5,
+       32.25
+      ]
+     ],
+     "platziert": true
+    },
+    {
+     "cmu": 11,
+     "reihe": 1,
+     "xy": [
+      [
+       2010.0,
+       1100.0
+      ],
+      [
+       2010.0,
+       1397.75
+      ],
+      [
+       1195.5,
+       1397.75
+      ]
+     ],
+     "platziert": true
+    },
+    {
+     "cmu": 8,
+     "reihe": 1,
+     "xy": [
+      [
+       40.0,
+       1220.0
+      ],
+      [
+       40.0,
+       1397.75
+      ],
+      [
+       611.5,
+       1397.75
+      ]
+     ],
+     "platziert": true
+    },
+    {
+     "cmu": 1,
+     "reihe": 0,
+     "xy": [
+      [
+       2010.0,
+       210.0
+      ],
+      [
+       2010.0,
+       32.25
+      ],
+      [
+       1450.5,
+       32.25
+      ]
+     ],
+     "platziert": true
+    },
+    {
+     "cmu": 5,
+     "reihe": 0,
+     "xy": [
+      [
+       40.0,
+       330.0
+      ],
+      [
+       40.0,
+       32.55
+      ],
+      [
+       596.5,
+       32.55
+      ]
+     ],
+     "platziert": true
+    },
+    {
+     "cmu": 12,
+     "reihe": 1,
+     "xy": [
+      [
+       2010.0,
+       1220.0
+      ],
+      [
+       2010.0,
+       1397.45
+      ],
+      [
+       1465.5,
+       1397.45
+      ]
+     ],
+     "platziert": true
+    },
+    {
+     "cmu": 7,
+     "reihe": 1,
+     "xy": [
+      [
+       40.0,
+       1100.0
+      ],
+      [
+       40.0,
+       1397.45
+      ],
+      [
+       312.5,
+       1397.45
+      ]
+     ],
+     "platziert": true
+    },
+    {
+     "cmu": 0,
+     "reihe": 0,
+     "xy": [
+      [
+       2010.0,
+       90.0
+      ],
+      [
+       2010.0,
+       32.55
+      ],
+      [
+       1749.5,
+       32.55
+      ]
+     ],
+     "platziert": true
+    },
+    {
+     "cmu": 6,
+     "reihe": 0,
+     "xy": [
+      [
+       40.0,
+       450.0
+      ],
+      [
+       40.0,
+       32.85
+      ],
+      [
+       297.5,
+       32.85
+      ]
+     ],
+     "platziert": true
+    },
+    {
+     "cmu": 13,
+     "reihe": 1,
+     "xy": [
+      [
+       2010.0,
+       1340.0
+      ],
+      [
+       2010.0,
+       1397.15
+      ],
+      [
+       1764.5,
+       1397.15
+      ]
+     ],
+     "platziert": true
+    }
+   ],
+   "hv": [
+    {
+     "name": "Plus",
+     "laenge_mm": 571.9557428756427,
+     "xy": [
+      [
+       2012.0,
+       38.0
+      ],
+      [
+       2012.0,
+       570.0
+      ]
+     ]
+    },
+    {
+     "name": "Minus",
+     "laenge_mm": 571.9557428756427,
+     "xy": [
+      [
+       2012.0,
+       1392.0
+      ],
+      [
+       2012.0,
+       860.0
+      ]
+     ]
+    },
+    {
+     "name": "Mitte_A",
+     "laenge_mm": 6.0,
+     "xy": [
+      [
+       55.5,
+       703.0
+      ]
+     ]
+    },
+    {
+     "name": "Mitte_B",
+     "laenge_mm": 6.0,
+     "xy": [
+      [
+       55.5,
+       727.0
+      ]
+     ]
+    }
+   ],
+   "taps": [
+    [
+     1997.0,
+     31.95
+    ],
+    [
+     1989.5,
+     31.95
+    ],
+    [
+     1974.5,
+     31.95
+    ],
+    [
+     1959.5,
+     31.95
+    ],
+    [
+     1944.5,
+     31.95
+    ],
+    [
+     1929.5,
+     31.95
+    ],
+    [
+     1914.5,
+     31.95
+    ],
+    [
+     1899.5,
+     31.95
+    ],
+    [
+     1884.5,
+     31.95
+    ],
+    [
+     1869.5,
+     31.95
+    ],
+    [
+     1854.5,
+     31.95
+    ],
+    [
+     1839.5,
+     31.95
+    ],
+    [
+     1824.5,
+     31.95
+    ],
+    [
+     1809.5,
+     31.95
+    ],
+    [
+     1794.5,
+     31.95
+    ],
+    [
+     1779.5,
+     31.95
+    ],
+    [
+     1764.5,
+     31.95
+    ],
+    [
+     1749.5,
+     31.95
+    ],
+    [
+     1734.5,
+     31.95
+    ],
+    [
+     1719.5,
+     31.95
+    ],
+    [
+     1704.5,
+     31.95
+    ],
+    [
+     1689.5,
+     31.95
+    ],
+    [
+     1674.5,
+     31.95
+    ],
+    [
+     1659.5,
+     31.95
+    ],
+    [
+     1644.5,
+     31.95
+    ],
+    [
+     1629.5,
+     31.95
+    ],
+    [
+     1614.5,
+     31.95
+    ],
+    [
+     1599.5,
+     31.95
+    ],
+    [
+     1584.5,
+     31.95
+    ],
+    [
+     1569.5,
+     31.95
+    ],
+    [
+     1554.5,
+     31.95
+    ],
+    [
+     1525.0,
+     31.95
+    ],
+    [
+     1495.5,
+     31.95
+    ],
+    [
+     1480.5,
+     31.95
+    ],
+    [
+     1465.5,
+     31.95
+    ],
+    [
+     1450.5,
+     31.95
+    ],
+    [
+     1435.5,
+     31.95
+    ],
+    [
+     1420.5,
+     31.95
+    ],
+    [
+     1405.5,
+     31.95
+    ],
+    [
+     1390.5,
+     31.95
+    ],
+    [
+     1375.5,
+     31.95
+    ],
+    [
+     1360.5,
+     31.95
+    ],
+    [
+     1345.5,
+     31.95
+    ],
+    [
+     1330.5,
+     31.95
+    ],
+    [
+     1315.5,
+     31.95
+    ],
+    [
+     1300.5,
+     31.95
+    ],
+    [
+     1285.5,
+     31.95
+    ],
+    [
+     1270.5,
+     31.95
+    ],
+    [
+     1255.5,
+     31.95
+    ],
+    [
+     1240.5,
+     31.95
+    ],
+    [
+     1225.5,
+     31.95
+    ],
+    [
+     1210.5,
+     31.95
+    ],
+    [
+     1195.5,
+     31.95
+    ],
+    [
+     1180.5,
+     31.95
+    ],
+    [
+     1165.5,
+     31.95
+    ],
+    [
+     1150.5,
+     31.95
+    ],
+    [
+     1135.5,
+     31.95
+    ],
+    [
+     1120.5,
+     31.95
+    ],
+    [
+     1105.5,
+     31.95
+    ],
+    [
+     1090.5,
+     31.95
+    ],
+    [
+     1075.5,
+     31.95
+    ],
+    [
+     1060.5,
+     31.95
+    ],
+    [
+     1031.0,
+     31.95
+    ],
+    [
+     1001.5,
+     31.95
+    ],
+    [
+     986.5,
+     31.95
+    ],
+    [
+     971.5,
+     31.95
+    ],
+    [
+     956.5,
+     31.95
+    ],
+    [
+     941.5,
+     31.95
+    ],
+    [
+     926.5,
+     31.95
+    ],
+    [
+     911.5,
+     31.95
+    ],
+    [
+     896.5,
+     31.95
+    ],
+    [
+     881.5,
+     31.95
+    ],
+    [
+     866.5,
+     31.95
+    ],
+    [
+     851.5,
+     31.95
+    ],
+    [
+     836.5,
+     31.95
+    ],
+    [
+     821.5,
+     31.95
+    ],
+    [
+     806.5,
+     31.95
+    ],
+    [
+     791.5,
+     31.95
+    ],
+    [
+     776.5,
+     31.95
+    ],
+    [
+     761.5,
+     31.95
+    ],
+    [
+     746.5,
+     31.95
+    ],
+    [
+     731.5,
+     31.95
+    ],
+    [
+     716.5,
+     31.95
+    ],
+    [
+     701.5,
+     31.95
+    ],
+    [
+     686.5,
+     31.95
+    ],
+    [
+     671.5,
+     31.95
+    ],
+    [
+     656.5,
+     31.95
+    ],
+    [
+     641.5,
+     31.95
+    ],
+    [
+     626.5,
+     31.95
+    ],
+    [
+     611.5,
+     31.95
+    ],
+    [
+     596.5,
+     31.95
+    ],
+    [
+     581.5,
+     31.95
+    ],
+    [
+     566.5,
+     31.95
+    ],
+    [
+     537.0,
+     31.95
+    ],
+    [
+     507.5,
+     31.95
+    ],
+    [
+     492.5,
+     31.95
+    ],
+    [
+     477.5,
+     31.95
+    ],
+    [
+     462.5,
+     31.95
+    ],
+    [
+     447.5,
+     31.95
+    ],
+    [
+     432.5,
+     31.95
+    ],
+    [
+     417.5,
+     31.95
+    ],
+    [
+     402.5,
+     31.95
+    ],
+    [
+     387.5,
+     31.95
+    ],
+    [
+     372.5,
+     31.95
+    ],
+    [
+     357.5,
+     31.95
+    ],
+    [
+     342.5,
+     31.95
+    ],
+    [
+     327.5,
+     31.95
+    ],
+    [
+     312.5,
+     31.95
+    ],
+    [
+     297.5,
+     31.95
+    ],
+    [
+     282.5,
+     31.95
+    ],
+    [
+     267.5,
+     31.95
+    ],
+    [
+     252.5,
+     31.95
+    ],
+    [
+     237.5,
+     31.95
+    ],
+    [
+     222.5,
+     31.95
+    ],
+    [
+     207.5,
+     31.95
+    ],
+    [
+     192.5,
+     31.95
+    ],
+    [
+     177.5,
+     31.95
+    ],
+    [
+     162.5,
+     31.95
+    ],
+    [
+     147.5,
+     31.95
+    ],
+    [
+     132.5,
+     31.95
+    ],
+    [
+     117.5,
+     31.95
+    ],
+    [
+     102.5,
+     31.95
+    ],
+    [
+     87.5,
+     31.95
+    ],
+    [
+     72.5,
+     31.95
+    ],
+    [
+     57.5,
+     31.95
+    ],
+    [
+     50.0,
+     31.95
+    ],
+    [
+     57.5,
+     1398.05
+    ],
+    [
+     72.5,
+     1398.05
+    ],
+    [
+     87.5,
+     1398.05
+    ],
+    [
+     102.5,
+     1398.05
+    ],
+    [
+     117.5,
+     1398.05
+    ],
+    [
+     132.5,
+     1398.05
+    ],
+    [
+     147.5,
+     1398.05
+    ],
+    [
+     162.5,
+     1398.05
+    ],
+    [
+     177.5,
+     1398.05
+    ],
+    [
+     192.5,
+     1398.05
+    ],
+    [
+     207.5,
+     1398.05
+    ],
+    [
+     222.5,
+     1398.05
+    ],
+    [
+     237.5,
+     1398.05
+    ],
+    [
+     252.5,
+     1398.05
+    ],
+    [
+     267.5,
+     1398.05
+    ],
+    [
+     282.5,
+     1398.05
+    ],
+    [
+     297.5,
+     1398.05
+    ],
+    [
+     312.5,
+     1398.05
+    ],
+    [
+     327.5,
+     1398.05
+    ],
+    [
+     342.5,
+     1398.05
+    ],
+    [
+     357.5,
+     1398.05
+    ],
+    [
+     372.5,
+     1398.05
+    ],
+    [
+     387.5,
+     1398.05
+    ],
+    [
+     402.5,
+     1398.05
+    ],
+    [
+     417.5,
+     1398.05
+    ],
+    [
+     432.5,
+     1398.05
+    ],
+    [
+     447.5,
+     1398.05
+    ],
+    [
+     462.5,
+     1398.05
+    ],
+    [
+     477.5,
+     1398.05
+    ],
+    [
+     492.5,
+     1398.05
+    ],
+    [
+     507.5,
+     1398.05
+    ],
+    [
+     537.0,
+     1398.05
+    ],
+    [
+     566.5,
+     1398.05
+    ],
+    [
+     581.5,
+     1398.05
+    ],
+    [
+     596.5,
+     1398.05
+    ],
+    [
+     611.5,
+     1398.05
+    ],
+    [
+     626.5,
+     1398.05
+    ],
+    [
+     641.5,
+     1398.05
+    ],
+    [
+     656.5,
+     1398.05
+    ],
+    [
+     671.5,
+     1398.05
+    ],
+    [
+     686.5,
+     1398.05
+    ],
+    [
+     701.5,
+     1398.05
+    ],
+    [
+     716.5,
+     1398.05
+    ],
+    [
+     731.5,
+     1398.05
+    ],
+    [
+     746.5,
+     1398.05
+    ],
+    [
+     761.5,
+     1398.05
+    ],
+    [
+     776.5,
+     1398.05
+    ],
+    [
+     791.5,
+     1398.05
+    ],
+    [
+     806.5,
+     1398.05
+    ],
+    [
+     821.5,
+     1398.05
+    ],
+    [
+     836.5,
+     1398.05
+    ],
+    [
+     851.5,
+     1398.05
+    ],
+    [
+     866.5,
+     1398.05
+    ],
+    [
+     881.5,
+     1398.05
+    ],
+    [
+     896.5,
+     1398.05
+    ],
+    [
+     911.5,
+     1398.05
+    ],
+    [
+     926.5,
+     1398.05
+    ],
+    [
+     941.5,
+     1398.05
+    ],
+    [
+     956.5,
+     1398.05
+    ],
+    [
+     971.5,
+     1398.05
+    ],
+    [
+     986.5,
+     1398.05
+    ],
+    [
+     1001.5,
+     1398.05
+    ],
+    [
+     1031.0,
+     1398.05
+    ],
+    [
+     1060.5,
+     1398.05
+    ],
+    [
+     1075.5,
+     1398.05
+    ],
+    [
+     1090.5,
+     1398.05
+    ],
+    [
+     1105.5,
+     1398.05
+    ],
+    [
+     1120.5,
+     1398.05
+    ],
+    [
+     1135.5,
+     1398.05
+    ],
+    [
+     1150.5,
+     1398.05
+    ],
+    [
+     1165.5,
+     1398.05
+    ],
+    [
+     1180.5,
+     1398.05
+    ],
+    [
+     1195.5,
+     1398.05
+    ],
+    [
+     1210.5,
+     1398.05
+    ],
+    [
+     1225.5,
+     1398.05
+    ],
+    [
+     1240.5,
+     1398.05
+    ],
+    [
+     1255.5,
+     1398.05
+    ],
+    [
+     1270.5,
+     1398.05
+    ],
+    [
+     1285.5,
+     1398.05
+    ],
+    [
+     1300.5,
+     1398.05
+    ],
+    [
+     1315.5,
+     1398.05
+    ],
+    [
+     1330.5,
+     1398.05
+    ],
+    [
+     1345.5,
+     1398.05
+    ],
+    [
+     1360.5,
+     1398.05
+    ],
+    [
+     1375.5,
+     1398.05
+    ],
+    [
+     1390.5,
+     1398.05
+    ],
+    [
+     1405.5,
+     1398.05
+    ],
+    [
+     1420.5,
+     1398.05
+    ],
+    [
+     1435.5,
+     1398.05
+    ],
+    [
+     1450.5,
+     1398.05
+    ],
+    [
+     1465.5,
+     1398.05
+    ],
+    [
+     1480.5,
+     1398.05
+    ],
+    [
+     1495.5,
+     1398.05
+    ],
+    [
+     1525.0,
+     1398.05
+    ],
+    [
+     1554.5,
+     1398.05
+    ],
+    [
+     1569.5,
+     1398.05
+    ],
+    [
+     1584.5,
+     1398.05
+    ],
+    [
+     1599.5,
+     1398.05
+    ],
+    [
+     1614.5,
+     1398.05
+    ],
+    [
+     1629.5,
+     1398.05
+    ],
+    [
+     1644.5,
+     1398.05
+    ],
+    [
+     1659.5,
+     1398.05
+    ],
+    [
+     1674.5,
+     1398.05
+    ],
+    [
+     1689.5,
+     1398.05
+    ],
+    [
+     1704.5,
+     1398.05
+    ],
+    [
+     1719.5,
+     1398.05
+    ],
+    [
+     1734.5,
+     1398.05
+    ],
+    [
+     1749.5,
+     1398.05
+    ],
+    [
+     1764.5,
+     1398.05
+    ],
+    [
+     1779.5,
+     1398.05
+    ],
+    [
+     1794.5,
+     1398.05
+    ],
+    [
+     1809.5,
+     1398.05
+    ],
+    [
+     1824.5,
+     1398.05
+    ],
+    [
+     1839.5,
+     1398.05
+    ],
+    [
+     1854.5,
+     1398.05
+    ],
+    [
+     1869.5,
+     1398.05
+    ],
+    [
+     1884.5,
+     1398.05
+    ],
+    [
+     1899.5,
+     1398.05
+    ],
+    [
+     1914.5,
+     1398.05
+    ],
+    [
+     1929.5,
+     1398.05
+    ],
+    [
+     1944.5,
+     1398.05
+    ],
+    [
+     1959.5,
+     1398.05
+    ],
+    [
+     1974.5,
+     1398.05
+    ],
+    [
+     1989.5,
+     1398.05
+    ],
+    [
+     1997.0,
+     1398.05
+    ]
+   ]
+  },
+  "biegeradius_mm": 70.0,
+  "hv_aussendurchmesser_mm": 14,
+  "masse_elektronik_gesamt_kg": 6.4159813456165695,
+  "masse_hv_leiter_cu_kg": 0.526808345616576,
+  "querverbinder_mitte_al_kg": 0.274995
+ },
+ "annahmen": {
+  "A_deckel_mm": {
+   "wert": 2,
+   "herkunft": "M0 eingaben.json hoehenstapel_mm.deckel (Annahme)"
+  },
+  "A_boden_mm": {
+   "wert": 3,
+   "herkunft": "M0 eingaben.json hoehenstapel_mm.boden (Annahme)"
+  },
+  "A_unterfahrschutz_mm": {
+   "wert": 3,
+   "herkunft": "M0 eingaben.json (Annahme)"
+  },
+  "A_luft_mm": {
+   "wert": 5,
+   "herkunft": "M0 eingaben.json (Annahme)"
+  },
+  "A_kuehlplatte_mm": {
+   "wert": 8,
+   "herkunft": "M0 eingaben.json (Annahme); Vollmaterial, real hohl"
+  },
+  "A_pad_mm": {
+   "wert": 1,
+   "herkunft": "M0 eingaben.json waermeleitschicht_je (Annahme)"
+  },
+  "A_rand_mm": {
+   "wert": 30,
+   "herkunft": "M0 eingaben.json rand_mm (Annahme)"
+  },
+  "A_hoehe_max_mm": {
+   "wert": 130,
+   "herkunft": "M0 eingaben.json (Annahme)"
+  },
+  "A_quertraeger_anzahl": {
+   "wert": 3,
+   "herkunft": "M0 eingaben.json (Annahme Opus)"
+  },
+  "A_quertraeger_hoehe_mm": {
+   "wert": 54,
+   "herkunft": "M0 eingaben.json (W22, US9045030)"
+  },
+  "A_quertraeger_breite_mm": {
+   "wert": 26,
+   "herkunft": "M0 eingaben.json (W22, US9045030)"
+  },
+  "A_quertraeger_wand_mm": {
+   "wert": 2.5,
+   "herkunft": "M0 eingaben.json (Annahme, Mitte 2-3 mm)"
+  },
+  "A_quertraeger_spiel_mm": {
+   "wert": 2,
+   "herkunft": "M0 eingaben.json (Annahme)"
+  },
+  "A_alu_dichte_kg_m3": {
+   "wert": 2700,
+   "herkunft": "M0 eingaben.json (Annahme)"
+  },
+  "A_zellabstand_LFP_mm": {
+   "wert": 1.0,
+   "herkunft": "M0 eingaben.json (G1)"
+  },
+  "A_zellabstand_NMC_mm": {
+   "wert": 2.0,
+   "herkunft": "M0 eingaben.json (G1)"
+  },
+  "A_zellzahl_LFP": {
+   "wert": 250,
+   "herkunft": "M0 eingaben.json (G1)"
+  },
+  "A_zellzahl_NMC": {
+   "wert": 868,
+   "herkunft": "M0 eingaben.json (G1 Fall A)"
+  },
+  "A_zellverbinder_LFP_mm": {
+   "wert": [
+    25,
+    3
+   ],
+   "herkunft": "AUFTRAG G4: Querschnitt 25 x 3 (Breite x Dicke)"
+  },
+  "A_gruppenverbinder_NMC_mm": {
+   "wert": [
+    25,
+    3
+   ],
+   "herkunft": "AUFTRAG G4: Querschnitt 25 x 3 (Breite x Dicke)"
+  },
+  "A_zellabgriff_NMC_mm": {
+   "wert": [
+    12,
+    1
+   ],
+   "herkunft": "AUFTRAG G4: 12 x 1 (Durchmesser x Dicke, Scheibe auf dem Pluspol)"
+  },
+  "A_vergusshoehe_anteil_NMC": {
+   "wert": 0.5,
+   "herkunft": "AUFTRAG G4: Verguss bis halbe Zellhöhe (Annahme)"
+  },
+  "A_KUEHLPLATTE_FUELLGRAD": {
+   "wert": 0.4,
+   "herkunft": "Annahme Opus 2026-11-17: 2 Bleche je 1,5 mm + Kanalstege, Füllgrad 0,4 (Masse = Volumen x Füllgrad x Al-Dichte)"
+  },
+  "A_seitenrahmen_wand_mm": {
+   "wert": 2.5,
+   "herkunft": "Annahme Opus 2026-11-17: Mehrkammerprofil, Wand 2,5 mm (W22-Wandbereich)"
+  },
+  "A_seitenrahmen_kammern": {
+   "wert": 3,
+   "herkunft": "Annahme Opus 2026-11-17: 3 Kammern über die Rahmenbreite"
+  },
+  "A_dichte_pad_kg_m3": {
+   "wert": 2500,
+   "herkunft": "Annahme Opus 2026-11-17"
+  },
+  "A_dichte_zelltraeger_kg_m3": {
+   "wert": 1200,
+   "herkunft": "Annahme Opus 2026-11-17 (PC)"
+  },
+  "A_dichte_verguss_kg_m3": {
+   "wert": 300,
+   "herkunft": "Annahme Opus 2026-11-17 (PU-Schaum)"
+  },
+  "A_e2_schuetz_mm": {
+   "wert": [
+    80,
+    60,
+    75
+   ],
+   "herkunft": "ERW-E2 N1 Hauptschütz"
+  },
+  "A_e2_schuetz_masse_kg": {
+   "wert": 0.45,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_vorladeschuetz_mm": {
+   "wert": [
+    40,
+    30,
+    40
+   ],
+   "herkunft": "ERW-E2 N1 Vorladeschütz"
+  },
+  "A_e2_vorladewiderstand_mm": {
+   "wert": [
+    60,
+    20,
+    20
+   ],
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_vorlade_masse_kg": {
+   "wert": 0.15,
+   "herkunft": "ERW-E2 N1 (Schütz + Widerstand zusammen)"
+  },
+  "A_e2_pyro_mm": {
+   "wert": [
+    30,
+    30,
+    80
+   ],
+   "herkunft": "ERW-E2 N1 Pyrosicherung Ø30 x 80, als Quader 30 x 30 x 80 (Vereinfachung)"
+  },
+  "A_e2_pyro_masse_kg": {
+   "wert": 0.15,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_schmelz_mm": {
+   "wert": [
+    30,
+    30,
+    85
+   ],
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_schmelz_masse_kg": {
+   "wert": 0.1,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_shunt_mm": {
+   "wert": [
+    80,
+    40,
+    15
+   ],
+   "herkunft": "ERW-E2 N1 Shunt mit Messplatine"
+  },
+  "A_e2_shunt_masse_kg": {
+   "wert": 0.1,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_bms_masse_kg": {
+   "wert": 0.4,
+   "herkunft": "ERW-E2 N1 BMS-Platine (Maße aus Akte BT-310)"
+  },
+  "A_e2_cmu_mm": {
+   "wert": [
+    120,
+    60,
+    10
+   ],
+   "herkunft": "ERW-E2 N1 CMU-Platine"
+  },
+  "A_e2_cmu_masse_kg": {
+   "wert": 0.08,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_fpc_dicke_mm": {
+   "wert": 0.3,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_fpc_masse_kg_m": {
+   "wert": 0.05,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_fpc_halter_mm": {
+   "wert": 3.0,
+   "herkunft": "ERW-E2 N1 (FPC plus Halter)"
+  },
+  "A_e2_hv250_mm": {
+   "wert": [
+    90,
+    70,
+    60
+   ],
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_hv250_masse_kg": {
+   "wert": 0.4,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_hv40_mm": {
+   "wert": [
+    50,
+    40,
+    40
+   ],
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_hv40_masse_kg": {
+   "wert": 0.15,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_nv_mm": {
+   "wert": [
+    50,
+    30,
+    40
+   ],
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_nv_masse_kg": {
+   "wert": 0.05,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_trennstecker_mm": {
+   "wert": [
+    80,
+    50,
+    60
+   ],
+   "herkunft": "ERW-E2 N1, oben zugänglich (Deckelöffnung)"
+  },
+  "A_e2_trennstecker_masse_kg": {
+   "wert": 0.2,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_gas_mm": {
+   "wert": [
+    30,
+    30,
+    20
+   ],
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_gas_masse_kg": {
+   "wert": 0.03,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_hv_aussendurchmesser_LFP_mm": {
+   "wert": 14,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_hv_aussendurchmesser_NMC_mm": {
+   "wert": 12,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_box_wand_mm": {
+   "wert": 2,
+   "herkunft": "ERW-E2 N1 Schaltbox Al, Wand 2 mm"
+  },
+  "A_e2_box_rand_mm": {
+   "wert": 15,
+   "herkunft": "ERW-E2 N1 Rand 15 mm um den Inhalt"
+  },
+  "A_e2_box_hoehe_max_mm": {
+   "wert": 90,
+   "herkunft": "ERW-E2 N1 H ≤ 90"
+  },
+  "A_e2_box_teilabstand_mm": {
+   "wert": 10,
+   "herkunft": "NEUE ANNAHME (Platzhalter, in ERW-E2 N1 nicht gesetzt; Opus entscheiden): Abstand zwischen den Teilen in der Schaltbox"
+  },
+  "A_traeger_dicke_NMC_mm": {
+   "wert": 2.5,
+   "herkunft": "NEUE ANNAHME (Platzhalter, in M0 nicht gesetzt; Opus entscheiden)"
+  }
+ }
+}

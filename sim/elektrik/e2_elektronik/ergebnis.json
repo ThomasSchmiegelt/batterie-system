@@ -1,0 +1,48 @@
+{
+ "LFP": {
+  "spannungsabgriffe": 251,
+  "ausgleich_strom_A": 0.15,
+  "ausgleich_dQ_Ah": 1.848,
+  "ausgleich_h": 12.32,
+  "U_zelle_nenn_V": 3.2,
+  "cmu_W_alle_kanaele_nenn": 8.639999999999999,
+  "cmu_W_alle_kanaele_umax": 9.854999999999999,
+  "cmu_W_umax_urteil": "<= 10 W",
+  "vor_I_A": 8.0,
+  "vor_E_J": 320.0,
+  "vor_tau_ms": 100.0,
+  "vor_t95_ms": 300.0,
+  "zellmasse_kg": 462.5,
+  "heiz_E_MJ": 11.5625,
+  "heiz_min": 38.541666666666664,
+  "hv_W_je_m_Leiter_laden": 12.946784000000001,
+  "hv_Laenge_Leiter_gesamt_m_fuer_15W": 1.158588881995714,
+  "hv_verlust_W_bei_3m_5m": [
+   38.840352,
+   64.73392000000001
+  ]
+ },
+ "NMC": {
+  "spannungsabgriffe": 218,
+  "ausgleich_strom_A": 0.13,
+  "ausgleich_dQ_Ah": 1.848,
+  "ausgleich_h": 14.215384615384616,
+  "U_zelle_nenn_V": 3.686635944700461,
+  "cmu_W_alle_kanaele_nenn": 8.626728110599078,
+  "cmu_W_alle_kanaele_umax": 9.828,
+  "cmu_W_umax_urteil": "<= 10 W",
+  "vor_I_A": 8.0,
+  "vor_E_J": 320.0,
+  "vor_tau_ms": 100.0,
+  "vor_t95_ms": 300.0,
+  "zellmasse_kg": 308.14,
+  "heiz_E_MJ": 7.7035,
+  "heiz_min": 25.678333333333335,
+  "hv_W_je_m_Leiter_laden": 9.494891428571428,
+  "hv_Laenge_Leiter_gesamt_m_fuer_15W": 1.5797968952928674,
+  "hv_verlust_W_bei_3m_5m": [
+   28.484674285714284,
+   47.47445714285714
+  ]
+ }
+}

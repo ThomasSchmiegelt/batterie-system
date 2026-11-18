@@ -1,0 +1,10 @@
+{
+  "userIgnoreFilters": [
+    ".venv/",
+    "forschung/recherche_ablage/",
+    "forschung/pakete/",
+    "forschung/patent_ablage/",
+    "quellen/",
+    "node_modules/"
+  ]
+}

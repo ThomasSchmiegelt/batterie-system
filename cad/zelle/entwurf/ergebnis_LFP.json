@@ -1,0 +1,28 @@
+{
+ "hinweis": "KI-generiert, ENTWURF (Akten vorgeschlagen), nicht freigegeben. Erzeugt von cad/zelle/zelle.py",
+ "variante": "LFP",
+ "parameterdatei": "cad/zelle/entwurf/parameter_LFP_entwurf.json",
+ "wandstaerke_mm": 0.3,
+ "masse_eingabe": {
+  "laenge_mm": 660.0,
+  "breite_mm": 90.0,
+  "dicke_mm": 14.0
+ },
+ "kapazitaet_Ah": 92.4,
+ "nennspannung_V": 3.2,
+ "annahmen": {
+  "ANNAHME_POL_DURCHMESSER_MM": 10.0,
+  "ANNAHME_POL_HOEHE_MM": 3.0
+ },
+ "aussenvolumen_L": 0.8316,
+ "bbox_mit_polen_mm": [
+  666.0,
+  90.0,
+  14.0
+ ],
+ "gehaeuse_materialvolumen_cm3": 41.66517599999992,
+ "polvolumen_cm3": 0.4712388980384689,
+ "energie_Wh": 295.68,
+ "Wh_pro_L": 355.55555555555554,
+ "gueltig_solid": true
+}

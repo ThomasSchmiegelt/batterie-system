@@ -1,0 +1,101 @@
+{
+ "anfrage": "sodium ion battery cell pack vehicle",
+ "ab": "2015",
+ "inhaber": null,
+ "land": null,
+ "url": "https://patents.google.com/xhr/query?url=q%3D%28sodium%2Bion%2Bbattery%2Bcell%2Bpack%2Bvehicle%29%26num%3D10%26after%3Dpriority%3A20150101&exp=",
+ "zeit": "2026-11-17 13:16:52",
+ "gesamt": 85349,
+ "treffer": [
+  {
+   "nr": "CN222463111U",
+   "url": "https://patents.google.com/patent/CN222463111U/en",
+   "titel": "Battery monomer, battery and power consumption device",
+   "inhaber": "宁德时代新能源科技股份有限公司",
+   "prioritaet": "2024-04-22",
+   "veroeffentlicht": "2025-02-11",
+   "kurz": "The embodiment of the application provides a battery monomer, a battery and an electricity utilization device. The housing has an accommodation space and an opening. The top cover sealing cover is arranged at the opening. The electrode assembly is disposed in the receiving space. Wherein, the …"
+  },
+  {
+   "nr": "CN215896628U",
+   "url": "https://patents.google.com/patent/CN215896628U/en",
+   "titel": "Battery monomer, battery and power consumption device",
+   "inhaber": "宁德时代新能源科技股份有限公司",
+   "prioritaet": "2021-09-29",
+   "veroeffentlicht": "2022-02-22",
+   "kurz": "Embodiments of the present application provide a battery cell, a battery and an electrical device, which belong to the technical field of power battery safety. The end cap is closed on the casing along the first direction, and the positive electrode sheet, the separator and the negative electrode …"
+  },
+  {
+   "nr": "CN223066287U",
+   "url": "https://patents.google.com/patent/CN223066287U/en",
+   "titel": "Battery monomer, battery and electric equipment",
+   "inhaber": "宁德时代新能源科技股份有限公司",
+   "prioritaet": "2024-07-31",
+   "veroeffentlicht": "2025-07-04",
+   "kurz": "The present application provides a battery cell, a battery and an electrical device. The battery cell includes a shell and an electrode assembly, the shell includes a shell and an end cover, at least one end of the shell along the first direction has an opening, the end cover corresponds to the …"
+  },
+  {
+   "nr": "CN221994536U",
+   "url": "https://patents.google.com/patent/CN221994536U/en",
+   "titel": "Battery device and electricity utilization device",
+   "inhaber": "宁德时代新能源科技股份有限公司",
+   "prioritaet": "2024-08-05",
+   "veroeffentlicht": "2024-11-12",
+   "kurz": "The present application provides a battery device and an electrical device, the battery device includes a housing, a battery management system and a plurality of battery cells, the housing has an energy layer and an electrical compartment, and the battery management system is disposed in the …"
+  },
+  {
+   "nr": "US20230006317A1",
+   "url": "https://patents.google.com/patent/US20230006317A1/en",
+   "titel": "Battery cell, battery and electricity consuming device",
+   "inhaber": "Contemporary Amperex Technology Co., Limited",
+   "prioritaet": "2021-01-25",
+   "veroeffentlicht": "2023-01-05",
+   "kurz": "A battery cell is provided. The battery cell includes a tab, an electrode terminal, an adapter for electrical connection between the electrode terminal and the tab. The adapter includes a first connecting portion for electrical connection with the electrode terminal; a second connecting portion …"
+  },
+  {
+   "nr": "EP4379928A1",
+   "url": "https://patents.google.com/patent/EP4379928A1/en",
+   "titel": "Battery cell, battery, and electrical device",
+   "inhaber": "Contemporary Amperex Technology Co., Limited",
+   "prioritaet": "2022-02-28",
+   "veroeffentlicht": "2024-06-05",
+   "kurz": "The present disclosure relates to a battery cell, a battery and an electric-powered device, and the battery cell includes: an electrode assembly; a shell adapted for receiving the electrode assembly; and a cap assembly adapted for closing an opening of the shell, wherein the shell includes a first …"
+  },
+  {
+   "nr": "JP7598979B2",
+   "url": "https://patents.google.com/patent/JP7598979B2/en",
+   "titel": "Batteries, related devices, manufacturing methods and manufacturing equipment",
+   "inhaber": "香港時代新能源科技有限公司",
+   "prioritaet": "2020-07-10",
+   "veroeffentlicht": "2024-12-12",
+   "kurz": "A battery, A battery cell, the battery cell including a relief mechanism, the relief mechanism being used to operate and release the internal pressure when an internal pressure or temperature of the battery cell reaches a threshold value; a thermal management member for containing a fluid and …"
+  },
+  {
+   "nr": "EP4274014A1",
+   "url": "https://patents.google.com/patent/EP4274014A1/en",
+   "titel": "Battery module and battery pack with reinforced safety",
+   "inhaber": "LG Energy Solution, Ltd.",
+   "prioritaet": "2021-11-03",
+   "veroeffentlicht": "2023-11-08",
+   "kurz": "Provided is a battery module or the like with an improved structure to improve safety when a thermal event occurs in the battery module. A battery module according to an aspect of the present disclosure includes a cell assembly including one or more battery cells, a module case having an inner …"
+  },
+  {
+   "nr": "CN217468720U",
+   "url": "https://patents.google.com/patent/CN217468720U/en",
+   "titel": "Battery and power consumption device",
+   "inhaber": "宁德时代新能源科技股份有限公司",
+   "prioritaet": "2022-06-23",
+   "veroeffentlicht": "2022-09-20",
+   "kurz": "The present application relates to a battery and a power consumption device. The battery includes: a case having a receiving chamber therein; the battery monomers are arranged in the accommodating cavity; and the collecting assembly is coupled in the accommodating cavity and is configured for …"
+  },
+  {
+   "nr": "CN222775512U",
+   "url": "https://patents.google.com/patent/CN222775512U/en",
+   "titel": "Battery packs, battery devices and power-consuming devices",
+   "inhaber": "宁德时代新能源科技股份有限公司",
+   "prioritaet": "2025-01-23",
+   "veroeffentlicht": "2025-04-18",
+   "kurz": "The utility model relates to the field of battery technology and discloses a battery pack, a battery device and an electric device, wherein the battery pack includes: a plurality of soft-pack battery cells; a separator, wherein the separator separates the plurality of soft-pack battery cells into …"
+  }
+ ]
+}

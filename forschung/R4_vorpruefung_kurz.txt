@@ -1,0 +1,16 @@
+R4 Vorpruefung, KI-generiert (Sonnet), Entwurf. Details: forschung/R4_vorpruefung.md
+FEHLT-Zeilen: 22 = A 21, B 0, C 1. B-Faelle: keine. C: T07 Z7 (Zusammenfassung, "verstreut" nicht im Rohtext, keine Zahl).
+WERT OHNE BELEG: 14 Zeilen (Folgerungen/Fragen); frei: W01 Z36 (66/33 %), W01 Z43 (45 C), W02 Z44 (1,5-2; 8 %), W11 Z34, W12 Z38, W16 Z33/Z34.
+ZUSATZ -> OPUS: W06 Z22 "Energiedichte LFP 150-220" stammt im Rohtext aus der NMC-Spalte; LFP-Spalte: 80-150 / 210 / 90-160 (Einheit "kWh" im Rohtext).
+Selbst gerechnet/umgeformt: W01 Z36 (65,4 % statt "66"), W06 Z17/Z21, W13 Z9 ("50 mm oder mehr" -> "bis 50 mm"), W13 Z12; W08 Z17/Z18 Zitat stuetzt Wert nicht.
+Top-Widersprueche (alle -> OPUS):
+1 LFP-Zelle Wh/kg: 95-172 (W01 Z14) / 180-205 (W01 Z15) / 185-210 (W03 Z16-18) / 185 (W07 Z14) / 150-220 (W06 Z22, fraglich).
+2 Li-Ion/NMC Wh/kg: 100-250 (W02 Z12) vs NMC >300 (W01 Z30) vs bis 450 (W02 Z24); Wh/L 250-680 (W02 Z13) vs 250-842 (W09 Z23).
+3 EOL: 80 % (W06 Z16, W15 Z15, W10 Z34) vs 70-80 % (W14 Z13).
+4 Temperatur: Laden 5-45 C (W02 Z19) vs nominal +20..+30 (W16 Z11) vs -43..60 (W03 Z27) vs -20..105 (W11 Z14).
+5 Ladeleistung: 30-80 kW (W06 Z18) vs 500 kW (W12 Z13) vs 220 kW bei 500 A (W12 Z17); Zyklen LFP 2500-9000 (W01) / 2000+ (W08) / >3500, >5000 (W03).
+Weitere: LTO 2,3 V (W10 Z24) vs 2,4 V (Z25); LFP 3,2 V (W01 Z11) vs ~3,3 V (Z21); Blade 580 mm vs 450-580 mm (W03 Z14/Z15).
+LUECKEN (keine Quelle): max. Zelltemperatur (W04 Z15 "nicht gefunden"), Temperaturspreizung, Zellinnenwiderstand,
+ Wh/L LFP-Pack, Ah Blade-Zelle, Masse Blade-Zelle, Stromdichte Zellverbinder, zulaessige Kuehlmitteltemperatur.
+Belegt mit Einschraenkung: Wh/L LFP-Zelle 227-396 (W01 Z16, Rundzellen 18650/32140, nicht Blade); Verbinder-Querschnitt nur allgemein 10 mm2 (W13 Z9).
+Alle 27 Themen bearbeitet; nichts ausser den zwei Ausgabedateien geaendert.

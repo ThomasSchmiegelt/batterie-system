@@ -1,0 +1,5 @@
+Z24: WERT OHNE BELEG: - **Folgerung (Zelle/Chemie):** Da das nominale Leistungsfenster der Zelle bei +20…+30 °C liegt, mus
+Z33: WERT OHNE BELEG: 2. Welche thermische Kontaktwiderstände (Interface-Material, Kleber/Lot) sind zwischen Zelle und Küh
+Z34: WERT OHNE BELEG: 3. Muss das System auch für Umgebungsbedingungen unter 0 °C (Heizbetrieb) ausgelegt werden, und wenn
+
+10 Belege bestaetigt, 0 Fehler

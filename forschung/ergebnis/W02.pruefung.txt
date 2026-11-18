@@ -1,0 +1,10 @@
+Z12: FEHLT im Text der Quelle: "Specific energy density 100 to 250 W·h/kg (360 to 900 kJ/kg)" (https://en.wikipedia.org/wiki/Lithium-ion_battery)
+Z13: FEHLT im Text der Quelle: "Volumetric energy density 250 to 680 W·h/L" (https://en.wikipedia.org/wiki/Lithium-ion_battery)
+Z14: FEHLT im Text der Quelle: "Specific power density 1 to 10,000 W/kg" (https://en.wikipedia.org/wiki/Lithium-ion_battery)
+Z16: FEHLT im Text der Quelle: "Cycle durability 400–1,200 cycles" (https://en.wikipedia.org/wiki/Lithium-ion_battery)
+Z24: FEHLT im Text der Quelle: "Specialty: up to 450 W h/kg (1,600 kJ/kg)" (https://en.wikipedia.org/wiki/Lithium-ion_battery)
+Z29: WERT OHNE BELEG: - **Zusammenbau / Fertigung:** Die Elektrolytfüllung und das Verschließen erfolgen in Trockenräumen 
+Z30: WERT OHNE BELEG: - **Kühlung:** Zylindrische Zellen (Jelly-Roll-Bauweise) zeigen bei hohem Entladestrom einen radiale
+Z44: WERT OHNE BELEG: - **Widerspruch (Selbstentladung):** Die Infobox nennt **0,35–2,5 %/Monat**, der Fließtext zitiert H
+
+8 Belege bestaetigt, 5 Fehler

@@ -1,0 +1,11 @@
+{"hinweis":"KI-generiert (Claude Sonnet, 2026-11-17), Entwurf. Alle Werte aus ERWARTUNG.md (ERW-M0) oder den genannten Dateien.",
+"bauraum_L_NMC_mm":{"wert":1950,"herkunft":"ENT-013 (parameter_*_entwurf.json BT-000)"},
+"bauraum_B_mm":{"wert":1430,"herkunft":"ENT-030"},
+"hoehe_max_mm":{"wert":130,"herkunft":"Annahme (G1 eingaben.json bauraum_mm)"},
+"rand_mm":{"wert":30,"herkunft":"G1 eingaben.json rand_je_seite_mm (Annahme); ERWARTUNG Punkt 3: Seitenrahmen ca. 30 mm"},
+"quertraeger":{"anzahl":3,"anzahl_herkunft":"Annahme Opus (ERWARTUNG)","breite_L_mm":26,"hoehe_mm":54,"wand_mm":2.5,"herkunft":"W22, US9045030: 54 x 26 mm, Wand 2-3 mm (2,5 = Mitte, ERWARTUNG Punkt 5)","spiel_je_seite_mm":2,"spiel_herkunft":"Annahme (ERWARTUNG)"},
+"alu_dichte_kg_m3":{"wert":2700,"herkunft":"Annahme (Auftrag)"},
+"hoehenstapel_mm":{"kuehlplatte_je":8,"waermeleitschicht_je":1,"boden":3,"deckel":2,"unterfahrschutz":3,"luft":5,"herkunft":"Annahmen, ERWARTUNG Eingaben"},
+"zellen":{"LFP":{"hoehe_mm":90,"dicke_mm":14,"laenge_mm":681,"abstand_mm":1.0,"anzahl":250,"herkunft":"cad/zelle/entwurf/parameter_LFP_entwurf.json BT-100 (ENT-015/016/017); Abstand und Zahl 250 aus sim/geometrie/g1_anordnung/eingaben.json"},
+ "NMC":{"durchmesser_mm":46,"hoehe_mm":80,"abstand_mm":2.0,"anzahl":868,"herkunft":"parameter_NMC_entwurf.json BT-100 (ENT-025/026); Abstand, Zahl Fall A aus g1_anordnung/eingaben.json"}},
+"zielband":{"LFP_laenge_mm":[2000,2060],"NMC_plaetze_min":868,"herkunft":"ERWARTUNG 'Verfehlt'"}}

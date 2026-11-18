@@ -1,0 +1,11 @@
+KI-generiert (Claude Sonnet, 2026-11-16). Quelle: sim/chemie/vergleich_lfp_nmc/ergebnis.json
+Energie A: netto 68.0 / brutto 73.9 kWh; B brutto 88.7 (LFP) / 87.4 (NMC), +20 %/+18 %, 6 Schritte
+Packmasse Mitte A: LFP 499 kg, NMC 464 kg; B: LFP 599 kg, NMC 549 kg
+Spanne (w,k): LFP A 414-615, NMC A 316-758, LFP B 480-773, NMC B 353-1014 kg
+Anteil: A LFP 33.3 %, NMC 30.9 % (Grenze 30 %: beide darüber); B 28.5 %/26.8 % (knapp darunter)
+Zellen in Reihe bei 800 V: LFP 250, NMC 220
+Zyklen: Bedarf 1000; LFP erfüllt, NMC unsicher
+Pack-Wh/L nötig: A 214; LFP offen (keine Quelle); NMC-Zellband 250-842 (Zelle, nicht Pack)
+Empfindlichkeit (Hub Packmasse, Fall B): LFP k 196, w 91, a 96 kg; NMC k 177, w 434, a 81 kg
+Stärkste Annahme: LFP k (Zellanteil an Pack), NMC w (Zellband 150-275)
+Abgleich ERWARTUNG Punkt 1-6: erfüllt; keine verfehlte Erwartung; Punkt 7 ist Deutung (Opus)

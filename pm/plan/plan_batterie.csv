@@ -1,0 +1,48 @@
+ID;Name;Dauer_AT;Vorgaenger;Ressourcen;ES;EF;Puffer;Notiz
+S0;Projektstart: Grundgerüst, Regeln, Software;0;;Opus;0;0;0.0;erledigt 2026-11-11
+R1;Wissensaufbau W01-W15 (Chemie, Zelltypen, Spannung, Kabel, Steuerung, Struktur);2;S0;PI,Maschine;0;2;0.0;Stufe 1, läuft seit 2026-11-12
+R2;Werkzeuge T01-T07 (Open Source Zellchemie, Elektroauslegung, Ersatzmodelle);1;R1;PI,Maschine;2;3;0.0;Stufe 1
+R3;Patente P01-P10;1;R2;PI,Maschine;3;4;0.0;Stufe 1
+R4;Recherche prüfen: Zitate, Aussagen, Widersprüche -> BEFUNDE;1;R3;Opus,Haiku;4;5;0.0;Regel 2 CLAUDE.md
+R5;Werkzeugwahl festlegen (ENT): Zellmodell, Packmodell, Schaltung;1;R4;Opus,Mensch;5;6;2.0;Entscheidungsakte
+W1;Preprocessing mit Sketch-to-Prompt: Ein-/Auslass, Lager, Lasten, Kabelwege auf das STL zeichnen;2;R5;Opus,Mensch;6;8;5.5;Werkzeug, Nutzerwunsch 2026-11-12
+W2;Postprocessing: Schnittebenen aus Skizzenlinie + Blickrichtung, Feldwerte (Strömung, Spannung) je Schnitt;2;W1;Sonnet;8;10;5.5;Werkzeug, für K/X/M
+V1;Lastenheft-Werte REQ-P01..P08 vorschlagen (Fahrzeug, kWh, Spannung, Leistung, Laden, Chemie, Bauraum, Temperatur);1;R4;Opus;5;6;0.0;Stufe 0
+SL1;Grobe Stückliste aus Startsatz (Baugruppen, Mengen mit Herleitung);0.5;V1;Opus;6;6.5;20.0;erledigt 2026-11-12 (Vorschlags-Startsatz)
+V2;Freigabe Lastenheft durch Autor;2;V1;Mensch;6;8;0.0;nur Mensch gibt frei
+C1;ERWARTUNG Zellmodell (Entladekurve, Wärme, Innenwiderstand);0.5;V2,R5;Opus;8;8.5;0.0;Stufe 2
+C2;Zellmodell LFP (PyBaMM Prada2013) auf langes Format skalieren;2;C1;Sonnet,Maschine;8.5;10.5;0.0;Stufe 2
+C3;Ratentest 0,5C/1C/2C, Wärmeleistung, R_i über SOC und T;1;C2;Sonnet,Maschine;10.5;11.5;0.0;Stufe 2
+C4;Validierung gegen veröffentlichte Messkurven, Abgleich Erwartung;1;C3;Opus;11.5;12.5;12.0;Stufe 2
+C5;Alterung (Zyklen, Kalender) und Vergleich NMC / Natrium-Ionen;2;C4;Sonnet,Maschine;12.5;14.5;13.0;Stufe 2
+G1;Zellmaße als ENT-Akten (aus W03/W08/P01, sonst Annahme);0.5;V2,R4;Opus,Mensch;8;8.5;2.0;Stufe 3, PM
+G2;Parametrische Zelle FreeCAD (liest parameter.json);2;G1;Sonnet;8.5;10.5;2.0;Stufe 3
+G3;Verschaltung sS/pP aus Spannung und Energie festlegen (ENT);1;V2,C3;Opus,Mensch;11.5;12.5;0.0;Stufe 4, bestimmt Zellzahl
+G4;Pack: Zellanordnung, Querträger, Kühlplatte, Deckel;3;G2,G3;Sonnet,Maschine;12.5;15.5;0.0;Stufe 3
+G5;Bauregeln + Prüfskript (Abstände, Isolation, Montagefolge);1;G4;Opus,Sonnet;15.5;16.5;3.0;Stufe 3
+K0;Kühlart Luft gegen Wasser (1D-Wärmebilanz Schnellladen, W16), Entscheidung ENT;1;C3,G3,R4;Opus,Sonnet,Mensch;12.5;13.5;2.0;Nutzerwunsch 2026-11-12
+E1;Zellverbinder/Kabel: Querschnitt, Verluste, Erwärmung (Zielband als Annahme);2;G3,G4;Sonnet,Maschine;15.5;17.5;9.0;Stufe 4
+E2;Schutzkonzept: Sicherung, Schütze, Vorladung, Isolationswächter;2;G3;Opus,Sonnet;12.5;14.5;9.0;Stufe 4
+L1;Kabelverlegung: Weg skizzieren (Sketch-to-Prompt), Prüfskript Biegeradius/Abstand HV-NV/Kühlleitung, FreeCAD-Sweep;3;E2,G4,W1;Opus,Sonnet;15.5;18.5;8.0;Nutzerwunsch 2026-11-12, Vorbild spulen_montage.py
+E3;Steuerung/BMS: Messkonzept, Ladezustand, Ausgleich (Konzept, offene Software aus T06);2;E2,C4;Opus,Sonnet;14.5;16.5;10.0;Stufe 4
+E4;Schaltungsmodell ngspice/Modelica: Vorladung, Kurzschluss;2;E2,R5;Sonnet,Maschine;14.5;16.5;11.0;Stufe 4
+K1;ERWARTUNG Kühlung Schnellladen (max. Zelltemperatur, Spreizung);0.5;C3,G4,K0,W2;Opus;15.5;16.0;0.0;Stufe 5
+K2;Kanalverteilung 1D (Verteiler, Druckverlust);1;K1;Sonnet,Maschine;16.0;17.0;0.0;Stufe 5
+K3;Elmer: Zelle -> Paste -> Platte, Schnellladefall;3;K2;Sonnet,Maschine;17.0;20.0;0.0;Stufe 5
+K4;FluidX3D: Strömung Kühlplatte bzw. Luftkanal (Gegenprüfung 1D);2;K2;Maschine;17.0;19.0;1.0;Stufe 5, GPU nicht zugleich mit PI
+K5;Deutung Kühlung, Abgleich Erwartung, Änderungsvorschlag;1;K3,K4;Opus;20.0;21.0;0.0;Stufe 5
+U1;ERWARTUNG Ersatzmodell: Zielgröße, Gültigkeitsbereich, Mindestgüte (z. B. Rangkorrelation);0.5;K5,R2;Opus;21.0;21.5;0.0;Lehre Fusion: Proxy 0,59 reichte nicht
+U2;Versuchsplan (Latin Hypercube): Durchfluss, Eintritt, C-Rate, Plattenmaß -> Elmer-Läufe;3;U1;Sonnet,Maschine;21.5;24.5;0.0;losgelöst, pausierbar
+U3;Ersatzmodell anpassen (Gauß-Prozess), Kreuzvalidierung gegen zurückgehaltene Läufe;1;U2;Sonnet;24.5;25.5;0.0;
+U4;Optimierung Kühlplatte/Ladeprofil mit Ersatzmodell, Bestwerte mit Elmer bestätigen;2;U3;Opus,Maschine;25.5;27.5;0.0;Ersatzmodell nur sortiert, Elmer entscheidet
+M1;Mechanik: Zellverspannung, Eigenfrequenzen, Lagerung;3;G5;Sonnet,Maschine;16.5;19.5;7.0;Stufe 6, optional
+X1;Seitencrash Pfahl, quasistatisch: Eindringung in Gehäuse/Querträger (CalculiX, plastisch, Kontakt);3;G5,W2,R4;Sonnet,Maschine;16.5;19.5;3.0;Nutzerwunsch 2026-11-12
+X2;Seitencrash dynamisch (OpenRadioss, Installation nur nach Freigabe);4;X1;Opus,Maschine,Mensch;19.5;23.5;3.0;optional
+SL2;Stückliste fortschreiben nach Auslegung (Mengen, Kauf/Eigen, Werkstoffe, Bezugsquellen);1;SL1,G5,E2,E3,K5,L1,X1;Sonnet,Opus;21.0;22.0;5.5;lebendes Dokument BAT-DOC-13
+F1;FMEA und Verifikationsplan nachziehen;1;E1,E3,K5,M1,L1,X2;Opus,Haiku;23.5;24.5;3.0;BAT-DOC-05/06
+B1;Bericht DE/EN je Kapitel, Prozessdoku, Lessons Learned;4;C5,E4,U4,F1,SL2;Sonnet,Opus;27.5;31.5;0.0;Stufe 7
+B2;Bauteilgespräch testen (pm/gespraech.sh für alle BT);1;B1;PI,Opus;31.5;32.5;2.0;Stufe 7
+B3;Abschlussvideo (Storyboard -> Blender -> ffmpeg);3;B1,G5;Sonnet,Maschine;31.5;34.5;0.0;Stufe 7
+B0;Präsentation: Zielgruppe, Ziel, Firmenvorlage, Sprache festlegen;0.5;V1;Mensch;6;6.5;26.0;BAT-DOC-14, nur Mensch
+B5;Unternehmenspräsentation aus Folienbausteinen erzeugen (pptx + PDF, DE/EN), Zahlen gegen Quellen prüfen;2;B0,B1,SL2,F1,R3;Sonnet,Opus;31.5;33.5;1.0;Stufe 7, REQ-D14
+B4;Freigabe und Veröffentlichung durch Autor;1;B2,B3,B5;Mensch;34.5;35.5;0.0;nur Mensch

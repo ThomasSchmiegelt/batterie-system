@@ -1,0 +1,26 @@
+{
+ "hinweis": "KI-generiert (Claude Sonnet, 2026-11-17), Entwurf. Eingaben C2 nach AUFTRAG.md/ERWARTUNG.md. Jeder Wert mit Herkunft.",
+ "blade": {
+  "parametersatz": "PyBaMM Prada2013 (LFP/Graphit, Literatur; Materialsatz, Annahme laut ERWARTUNG)",
+  "U_min_V": 2.6,
+  "U_max_V": 3.65,
+  "fenster_herkunft": "W20 (forschung/ergebnis/W20.md, Spannungsfenster BYD Blade 2,6-3,65 V, Zitatpruefung bestanden); Test#5 readme 2.6~3.6 V",
+  "kapazitaet_Ah": 135,
+  "kapazitaet_herkunft": "W20 Nennkapazitaet 135 Ah (bestanden)",
+  "elektrodenhoehe_m": 0.085,
+  "elektrodenhoehe_herkunft": "ANNAHME ohne Beleg (Zellhoehe 90 mm laut W20 minus 5 mm Rand); wirkt nur ueber das Flaechenprodukt, Breite wird auf 135 Ah skaliert",
+  "flaeche_herkunft": "Elektrodenbreite so skaliert, dass C/20-Kapazitaet (Prada-Fenster) = 135 Ah (Skalierung laut ERWARTUNG Punkt 1, Annahme)",
+  "schichtdicken": "Prada2013 unveraendert (Kathode 80 um, Anode 34 um). W28 nennt Blade-Kathode 82 um und 3,39 mAh/cm2 (usablewatts, Zitatpruefung bestanden) - nur Vergleich, nicht eingesetzt, da ein Zielwert aus Blog-Modell, nicht Messung",
+  "temperatur": "isotherm bei gemessener Zellt. (Thermoelement Test#5); Arrhenius fuer D, kappa als freie Ea (Stufe c); Austauschstrom behaelt Prada-Ea",
+  "nicht_verwendet_W28": "11 Zeilen (BYD 4680 iopscience: Z11-Z21) wegen FEHLT in W28.pruefung.txt",
+  "annahmen_dieser_ausfuehrung": {
+   "A1": "SOC-Abbildung (a=0, b=1): Fit der affinen Abbildung stiess an Grenze a=0,2, daher nicht verwendet",
+   "A2": "Fitgrenzen (log10-Faktoren +-2 bzw. +-3, Rc 0-3 mOhm): von mir gewaehlt, ohne Beleg; mehrere Parameter liegen an der Grenze (siehe ergebnis_blade.json b_parameter)",
+   "A3": "Kalibrierbereich SOC 15-90 %, erster Sweep (Pulse 475 A, Zelle ca. 28 C); Pulse bei 100 %, <=10 % und 95 % nicht im Fit",
+   "A4": "Ea_Rc: Kontaktwiderstand mit eigener Arrhenius-Energie (Erweiterung von Stufe c, nicht in ERWARTUNG genannt)",
+   "A5": "Test#5-Temperaturen: Thermoelement der Zelle (m10: Kanal Aux_Temperature_6), Zelle -7/3/28/41 C statt -10/0/25/40 C",
+   "A6": "LFP 92,4 Ah: Rc = Rc_blade*135/92,4 (Widerstand ~ 1/Flaeche), Breite = Blade-Breite*92,4/135",
+   "A7": "4680: Spannungsfenster 2,5-4,3 V (W20), Start 10 % SOC per PyBaMM initial_soc, SOC aus Ah, Plating-Kriterium Anodenpotential >= 0 V gg. Li (Opus)"
+  }
+ }
+}

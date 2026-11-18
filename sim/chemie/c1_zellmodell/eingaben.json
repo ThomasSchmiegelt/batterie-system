@@ -1,0 +1,52 @@
+{
+ "hinweis": "KI-generiert (Claude Sonnet, 2026-11-17), Entwurf. Eingaben C1 nach AUFTRAG.md/ERWARTUNG.md (Opus).",
+ "modell": "PyBaMM 26.10 SPMe, thermal lumped (Parameter Herkunft unten)",
+ "LFP": {
+  "parametersatz": "PyBaMM Prada2013 (Literatur, unveraendert ausser Flaeche/Thermik)",
+  "akten_json": "pm/bauteile/parameter_LFP.json",
+  "kapazitaet_ziel_Ah": 92.4,
+  "C_rate_schnell": 2.1,
+  "flaeche": "Kathodenbreite BT-111 breite_mm 82.5, Laenge 615.5 mm, 38 Kathoden, 2 Seiten (Annahme: beidseitig beschichtet)",
+  "elektrodenhoehe_m": 0.0825,
+  "elektrodenbreite_m": 46.778,
+  "kuehlflaeche_m2": 0.009534,
+  "kuehlflaeche_herkunft": "Boden 681x14 mm (K0/K1 K1-Kuehlung)",
+  "h_W_m2K": 500,
+  "h_herkunft": "K0/K1 Annahme Opus",
+  "T_kuehl_C": 25
+ },
+ "NMC": {
+  "parametersatz": "PyBaMM Chen2020 (LG M50, Literatur, unveraendert ausser Flaeche/Thermik)",
+  "akten_json": "pm/bauteile/parameter_NMC.json",
+  "kapazitaet_ziel_Ah": 23.125,
+  "C_rate_schnell": 1.4,
+  "flaeche": "Kathode BT-111 breite_mm 72, Laenge 3215 mm, 1 Band, 2 Seiten (Annahme)",
+  "elektrodenhoehe_m": 0.072,
+  "elektrodenbreite_m": 6.43,
+  "kuehlflaeche_m2": 0.001663,
+  "kuehlflaeche_herkunft": "Becherboden Ø46 mm (K0/K1)",
+  "h_W_m2K": 500,
+  "h_herkunft": "K0/K1 Annahme Opus",
+  "T_kuehl_C": 25
+ },
+ "zellvolumen_m3": {
+  "LFP": 0.000858,
+  "NMC": 0.0001329,
+  "herkunft": "NICHT mehr verwendet; Zellvolumen im Modell = Elektrodenflaeche x Summe Schichtdicken des Parametersatzes (siehe zellmodell.py); Aktenvolumen nur Referenz"
+ },
+ "dcir": {
+  "puls_s": 10,
+  "soc": 0.5,
+  "T_C": [
+   10,
+   25,
+   40
+  ],
+  "strom": "1C der Aktenkapazitaet (Annahme der Auftrags-Ausfuehrung, Erwartung nennt keinen Strom)"
+ },
+ "I2R_Annahme_W": {
+  "LFP": 55,
+  "NMC": 6.7,
+  "herkunft": "ERWARTUNG.md Punkt 2"
+ }
+}

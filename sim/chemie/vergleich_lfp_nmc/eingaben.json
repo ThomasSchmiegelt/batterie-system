@@ -1,0 +1,40 @@
+{
+ "hinweis": "KI-generiert (Claude Opus, 2026-11-16). Eingaben Chemievergleich LFP/NMC. Jede Zahl mit Herkunft: 'Autor' = Vorgabe, 'Wxx' = Recherche (R4 geprüft), 'Annahme' = Schätzung Opus, vom Autor zu bestätigen. Das Skript liest nur diese Datei.",
+ "vorgaben": {
+  "fahrzeugmasse_kg": {"wert": 1500, "herkunft": "Autor 2026-11-16"},
+  "reichweite_km": {"wert": 400, "herkunft": "Autor 2026-11-16"}
+ },
+ "faelle": {
+  "A": "1500 kg = Gesamtmasse mit Batterie; Verbrauch fest beim Referenzwert",
+  "B": "1500 kg = Fahrzeug ohne Batterie; Gesamtmasse = 1500 + Packmasse, Verbrauch steigt mit der Masse (Fixpunkt-Iteration)"
+ },
+ "annahmen": {
+  "verbrauch_ref_kWh_100km": {"wert": 17, "herkunft": "Annahme (pm/startwerte.py TAB_FZ Kompakt), gilt bei Referenzmasse"},
+  "referenzmasse_kg": {"wert": 1500, "herkunft": "Annahme: Referenzverbrauch gilt für 1500 kg Gesamtmasse"},
+  "massenanteil_verbrauch": {"wert": 0.5, "band": [0.3, 0.7], "herkunft": "Annahme: Anteil des Verbrauchs, der proportional zur Masse ist (Rollen, Beschleunigen); Rest Luftwiderstand, Nebenverbraucher"},
+  "reserve": {"wert": 0.08, "herkunft": "Annahme (startwerte.py), nicht nutzbarer Anteil"},
+  "zelle_zu_pack_masse": {"wert": 0.75, "band": [0.65, 0.85], "herkunft": "Annahme: Anteil der Zellmasse an der Packmasse (Cell-to-Pack); unbelegt"},
+  "systemspannung_V": {"wert": 800, "herkunft": "Annahme (startwerte.py: Spitzenladeleistung > 150 kW → 800 V)"},
+  "km_leben": {"wert": 200000, "herkunft": "Annahme (startwerte.py)"},
+  "sicherheit_zyklen": {"wert": 2.0, "herkunft": "Annahme (startwerte.py)"},
+  "bauraum_L_B_H_m": {"wert": [1.9, 1.4, 0.13], "herkunft": "Annahme (startwerte.py TAB_FZ Kompakt)"},
+  "grenze_batterieanteil": {"wert": 0.30, "herkunft": "Annahme: Packmasse höchstens 30 % der Gesamtmasse (Grenze im Bild, REQ-P07 Masse noch offen)"}
+ },
+ "chemie": {
+  "LFP": {
+   "zelle_Wh_kg": {"band": [185, 210], "herkunft": "W03 (Blade 190–210, Geely 192, SVOLT 185), Zellebene"},
+   "nennspannung_V": {"wert": 3.2, "herkunft": "W01, W08"},
+   "zyklen": {"band": [2500, 9000], "herkunft": "W01; Blade-Format > 3500 (W03)"},
+   "zelle_Wh_L": {"wert": null, "herkunft": "keine Quelle für Blade (R4); 227–396 Wh/L gilt für 18650 (W01) und wird NICHT verwendet"},
+   "kaelte": {"text": "Material bei −20 °C 46,7 mAh/g gegen 141,8 mAh/g bei 23 °C", "herkunft": "W01 (Materialebene, nicht Zelle)"},
+   "sicherheit": {"text": "Nageltest Blade: Oberfläche 30–60 °C", "herkunft": "W03"}
+  },
+  "NMC": {
+   "zelle_Wh_kg": {"band": [150, 275], "herkunft": "W06 Rohtext NMC-Spalte (Einheit im Rohtext 'kWh', gemeint Wh/kg; B-BAT-005), Ebene nicht sicher Zelle"},
+   "nennspannung_V": {"wert": 3.65, "band": [3.6, 3.7], "herkunft": "W10"},
+   "zyklen": {"band": [400, 1200], "herkunft": "W02 (Li-Ion allgemein, nicht NMC-spezifisch)"},
+   "zelle_Wh_L": {"band": [250, 842], "herkunft": "W09 (Li-Ion allgemein, nicht NMC-spezifisch)"},
+   "sicherheit": {"text": "Sauerstofffreisetzung ab 300 °C (entladen)", "herkunft": "W10"}
+  }
+ }
+}

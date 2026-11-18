@@ -1,0 +1,99 @@
+{
+ "hinweis": "KI-generiert (Claude Opus, 2026-11-17). Eingaben G1-Vorprüfung: passen die Zellen beider Varianten in den Bauraum? Herkunft je Zahl.",
+ "bauraum_mm": {
+  "wert": [
+   1950,
+   1430,
+   130
+  ],
+  "herkunft": "L ENT-013, B ENT-030 (Autor 2026-11-17); H Annahme"
+ },
+ "rand_je_seite_mm": {
+  "wert": 30,
+  "band": [
+   20,
+   50
+  ],
+  "herkunft": "Annahme: Rahmen/Gehäusewand BT-510/520 innen, je Seite in L und B"
+ },
+ "hoehe_unten_mm": {
+  "wert": 20,
+  "band": [
+   15,
+   30
+  ],
+  "herkunft": "Annahme: Bodenplatte + Kühlplatte BT-610 + Wärmeleitmaterial"
+ },
+ "hoehe_oben_mm": {
+  "wert": 10,
+  "band": [
+   5,
+   15
+  ],
+  "herkunft": "Annahme: Deckel BT-530 + Luft + Zellverbinder"
+ },
+ "energie_kWh": {
+  "A": 73.9,
+  "B_LFP": 93.0,
+  "B_NMC": 86.6,
+  "herkunft": "sim/chemie/varianten_lfp_nmc/ergebnis.json (LFP 160 Wh/kg)"
+ },
+ "LFP": {
+  "querschnitt_hoehe_mm": {
+   "wert": 90,
+   "herkunft": "W20 Blade gemessen"
+  },
+  "dicke_mm": {
+   "wert": 14,
+   "herkunft": "W20"
+  },
+  "laenge_ref_mm": {
+   "wert": 965,
+   "herkunft": "W20"
+  },
+  "kapazitaet_ref_Ah": {
+   "wert": 135,
+   "herkunft": "W20"
+  },
+  "laenge_regel": "Zelllänge = Elektrodenlänge + feste Endzone; Elektrodenlänge = elektrode_ref_mm × Ah / kapazitaet_ref_Ah; Endzone = laenge_ref_mm − elektrode_ref_mm (65,5 mm, W20 Abb.5A); Annahme: aktive Länge ∝ Ah",
+  "zellabstand_mm": {
+   "wert": 1.0,
+   "band": [
+    0.5,
+    2.0
+   ],
+   "herkunft": "Annahme: Zwischenlage BT-220"
+  },
+  "s": 250,
+  "nennspannung_V": 3.2,
+  "anordnung": "Zellen hochkant (90 mm Höhe), Dicke in Fahrtrichtung gestapelt, Länge quer; n_quer = floor(B_innen / Länge) Reihen nebeneinander, je Reihe ceil(250/n_quer) Zellen; zusätzlich gedrehte Lage (Länge in L-Richtung) prüfen",
+  "elektrode_ref_mm": {
+   "wert": 899.5,
+   "herkunft": "W20 Abb.5A"
+  }
+ },
+ "NMC": {
+  "durchmesser_mm": {
+   "wert": 46,
+   "herkunft": "W20, ENT-008"
+  },
+  "hoehe_mm": {
+   "wert": 80,
+   "herkunft": "W20"
+  },
+  "zellen": {
+   "A": 868,
+   "B": 1085,
+   "herkunft": "ergebnis.json (217s x 4p / 5p)"
+  },
+  "zellabstand_mm": {
+   "wert": 2.0,
+   "band": [
+    1.0,
+    3.0
+   ],
+   "herkunft": "Annahme: Zellhalter BT-250"
+  },
+  "anordnung": "stehend, Sechseckpackung: Teilung t = d + Abstand, Reihenabstand t*sqrt(3)/2; Anzahl im Innenrechteck zählen (Reihen abwechselnd versetzt)"
+ }
+}

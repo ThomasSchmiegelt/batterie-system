@@ -1,0 +1,360 @@
+{
+ "hinweis": "KI-generiert (Claude Sonnet, 2026-11-17), Entwurf. Eingaben K1 (Schnellladen) genau wie ERWARTUNG.md (Opus). Modell, Netz, Stoffwerte, Innenwiderstand, Geometrie: wie K0 (../k0_zelle/eingaben.json), nicht kopiert. Herkunft je Wert.",
+ "basis": {
+  "quelle": "../k0_zelle/eingaben.json",
+  "T_start_C": 25,
+  "T_kuehl_C": 25,
+  "h_K1_W_m2K": 500,
+  "ziele": {
+   "T_max_C": [
+    45,
+    "Annahme, REQ-P09 offen"
+   ],
+   "dT_zelle_K": [
+    5,
+    "Annahme, REQ-P09 offen"
+   ]
+  },
+  "waermequelle": "Q(t) = I(t)^2 * R, gleichmaessig im Kern, Tabelle in Elmer: Heat Source = Variable Time; Real (Wert auf (t_a, t_b], Sprung ueber 0,01 s); Zeitschritt 10 s, bei P2 5 s"
+ },
+ "profile": {
+  "P0": {
+   "name": "konstant 2,1C, 20 min (= K0 L2)",
+   "stufen_dauer_s_dsoc": [
+    [
+     1200,
+     0.7
+    ]
+   ],
+   "zeitschritt_s": 10,
+   "waerme_rel_erwartet": 1.0,
+   "herkunft": "Annahme Opus (ERWARTUNG.md), = K0 L2"
+  },
+  "P1": {
+   "name": "Stufen 3C bis 40 %, 2C bis 65 %, 1,385C bis 80 %, 20 min",
+   "stufen_dauer_s_dsoc": [
+    [
+     360,
+     0.3
+    ],
+    [
+     450,
+     0.25
+    ],
+    [
+     390,
+     0.15
+    ]
+   ],
+   "zeitschritt_s": 10,
+   "waerme_rel_erwartet": 1.09,
+   "herkunft": "Annahme Opus (ERWARTUNG.md); C aus Delta-SOC/Dauer: 3, 2, 1,3846"
+  },
+  "P2": {
+   "name": "Puls/Wechsel: 4,2C an / 0 aus, Takt 60 s, 50 %, 20 min",
+   "puls": {
+    "takt_s": 60,
+    "an_s": 30,
+    "dauer_s": 1200,
+    "dsoc_an_gesamt": 0.7
+   },
+   "zeitschritt_s": 5,
+   "waerme_rel_erwartet": 2.0,
+   "herkunft": "Autor 2026-11-17 („nur bestimmte zellen im wechsel“); Zahlen Annahme Opus (ERWARTUNG.md)"
+  },
+  "P3": {
+   "name": "begrenzt konstant 1,68C, 25 min",
+   "stufen_dauer_s_dsoc": [
+    [
+     1500,
+     0.7
+    ]
+   ],
+   "zeitschritt_s": 10,
+   "waerme_rel_erwartet": 0.8,
+   "herkunft": "Autor 2026-11-17 („natürlich begrenzen“); Zahlen Annahme Opus"
+  },
+  "P4": {
+   "name": "begrenzt konstant 1,4C, 30 min",
+   "stufen_dauer_s_dsoc": [
+    [
+     1800,
+     0.7
+    ]
+   ],
+   "zeitschritt_s": 10,
+   "waerme_rel_erwartet": 0.6667,
+   "herkunft": "Autor 2026-11-17 („natürlich begrenzen“); Zahlen Annahme Opus"
+  }
+ },
+ "kuehlung": {
+  "K1h500": {
+   "name": "Boden, h 500 (K0 K1)",
+   "raender": [
+    "Boden"
+   ],
+   "h": 500,
+   "T_start": 25,
+   "T_kuehl": 25,
+   "herkunft": "K0 eingaben.json (Annahme)"
+  },
+  "Kh1000": {
+   "name": "Boden, h 1000",
+   "raender": [
+    "Boden"
+   ],
+   "h": 1000,
+   "T_start": 25,
+   "T_kuehl": 25,
+   "herkunft": "Annahme Opus (ERWARTUNG.md), im K0-Band 200..1000"
+  },
+  "Kh2000": {
+   "name": "Boden, h 2000",
+   "raender": [
+    "Boden"
+   ],
+   "h": 2000,
+   "T_start": 25,
+   "T_kuehl": 25,
+   "herkunft": "Annahme Opus (ERWARTUNG.md), ausserhalb des K0-Bands"
+  },
+  "K3": {
+   "name": "beidseitig: Boden und Oben (LFP Schmalseiten unten/oben; NMC Boden und Deckel, Annahme elektrisch isoliert), h 500",
+   "raender": [
+    "Boden",
+    "Oben"
+   ],
+   "h": 500,
+   "T_start": 25,
+   "T_kuehl": 25,
+   "herkunft": "Annahme Opus (ERWARTUNG.md)"
+  },
+  "K3h1000": {
+   "name": "beidseitig, h 1000",
+   "raender": [
+    "Boden",
+    "Oben"
+   ],
+   "h": 1000,
+   "T_start": 25,
+   "T_kuehl": 25,
+   "herkunft": "Annahme Opus (ERWARTUNG.md, Kombination)"
+  },
+  "V15": {
+   "name": "Vorkuehlung: Start und Kuehlmittel 15 C, Boden, h 500",
+   "raender": [
+    "Boden"
+   ],
+   "h": 500,
+   "T_start": 15,
+   "T_kuehl": 15,
+   "herkunft": "Annahme Opus (ERWARTUNG.md); Kuehlmittel ebenfalls 15 C (Annahme des Umsetzers, noetig damit die Zelle nicht ueber den Boden aufgeheizt wird; Aenderung gegenueber ERWARTUNG: nur wenn Opus anders meint)"
+  },
+  "K3b": {
+   "name": "K1b: unten Boden h 500, oben Robin mit h_eff = phi/(1/h+t_pad/k_pad+t_v/k_v), phi 0.5, k_pad 3",
+   "raender": [
+    "Boden",
+    "Oben"
+   ],
+   "h": 500,
+   "h_rand": {
+    "Oben": 213.706
+   },
+   "phi": 0.5,
+   "t_pad_m": 0.001,
+   "k_pad": 3,
+   "t_v_m": 0.0015,
+   "k_v": 237,
+   "h_fluid": 500,
+   "T_start": 25,
+   "T_kuehl": 25,
+   "herkunft": "Annahme Opus (ERWARTUNG.md Nachtrag K1b)"
+  },
+  "K3b_phi03": {
+   "name": "K1b: unten Boden h 500, oben Robin mit h_eff = phi/(1/h+t_pad/k_pad+t_v/k_v), phi 0.3, k_pad 3",
+   "raender": [
+    "Boden",
+    "Oben"
+   ],
+   "h": 500,
+   "h_rand": {
+    "Oben": 128.2236
+   },
+   "phi": 0.3,
+   "t_pad_m": 0.001,
+   "k_pad": 3,
+   "t_v_m": 0.0015,
+   "k_v": 237,
+   "h_fluid": 500,
+   "T_start": 25,
+   "T_kuehl": 25,
+   "herkunft": "Annahme Opus (ERWARTUNG.md Nachtrag K1b)"
+  },
+  "K3b_phi07": {
+   "name": "K1b: unten Boden h 500, oben Robin mit h_eff = phi/(1/h+t_pad/k_pad+t_v/k_v), phi 0.7, k_pad 3",
+   "raender": [
+    "Boden",
+    "Oben"
+   ],
+   "h": 500,
+   "h_rand": {
+    "Oben": 299.1885
+   },
+   "phi": 0.7,
+   "t_pad_m": 0.001,
+   "k_pad": 3,
+   "t_v_m": 0.0015,
+   "k_v": 237,
+   "h_fluid": 500,
+   "T_start": 25,
+   "T_kuehl": 25,
+   "herkunft": "Annahme Opus (ERWARTUNG.md Nachtrag K1b)"
+  },
+  "K3b_kpad1": {
+   "name": "K1b: unten Boden h 500, oben Robin mit h_eff = phi/(1/h+t_pad/k_pad+t_v/k_v), phi 0.5, k_pad 1",
+   "raender": [
+    "Boden",
+    "Oben"
+   ],
+   "h": 500,
+   "h_rand": {
+    "Oben": 166.3158
+   },
+   "phi": 0.5,
+   "t_pad_m": 0.001,
+   "k_pad": 1,
+   "t_v_m": 0.0015,
+   "k_v": 237,
+   "h_fluid": 500,
+   "T_start": 25,
+   "T_kuehl": 25,
+   "herkunft": "Annahme Opus (ERWARTUNG.md Nachtrag K1b)"
+  },
+  "K3b_kpad6": {
+   "name": "K1b: unten Boden h 500, oben Robin mit h_eff = phi/(1/h+t_pad/k_pad+t_v/k_v), phi 0.5, k_pad 6",
+   "raender": [
+    "Boden",
+    "Oben"
+   ],
+   "h": 500,
+   "h_rand": {
+    "Oben": 230.0971
+   },
+   "phi": 0.5,
+   "t_pad_m": 0.001,
+   "k_pad": 6,
+   "t_v_m": 0.0015,
+   "k_v": 237,
+   "h_fluid": 500,
+   "T_start": 25,
+   "T_kuehl": 25,
+   "herkunft": "Annahme Opus (ERWARTUNG.md Nachtrag K1b)"
+  }
+ },
+ "faelle": {
+  "Profile": [
+   "P0",
+   "P1",
+   "P2",
+   "P3",
+   "P4"
+  ],
+  "Kuehlfaelle_mit_P0": [
+   "Kh1000",
+   "Kh2000",
+   "K3",
+   "V15"
+  ],
+  "Kombinationen": [
+   [
+    "P1",
+    "K3",
+    "LFP+NMC"
+   ],
+   [
+    "P0",
+    "K3h1000",
+    "LFP+NMC"
+   ],
+   [
+    "P3",
+    "Kh2000",
+    "NMC"
+   ],
+   [
+    "P3",
+    "K3",
+    "NMC"
+   ]
+  ],
+  "K1b": [
+   [
+    "P0",
+    "K3b"
+   ],
+   [
+    "P3",
+    "K3b"
+   ],
+   [
+    "P4",
+    "K3b"
+   ],
+   [
+    "P3",
+    "K3b_phi03"
+   ],
+   [
+    "P3",
+    "K3b_phi07"
+   ],
+   [
+    "P3",
+    "K3b_kpad1"
+   ],
+   [
+    "P3",
+    "K3b_kpad6"
+   ]
+  ]
+ },
+ "nmc_tabscheibe": {
+  "gilt_fuer": "NMC mit Kuehlfall K3/K3h1000 (Raum zwischen Wickel und Deckel, Koerper Luft_oben); alle anderen NMC-Faelle behalten Luft (k 0,026)",
+  "al_dicke_mm": 0.3,
+  "k_al": 237,
+  "kontakt_dicke_mm": 0.1,
+  "k_kontakt": 1.0,
+  "herkunft": "Annahme Opus (Nachtrag 2026-11-17): 0,3 mm Al flaechig, k 237, plus Kontaktschicht k 1 W/(m K) 0,1 mm. Unten liegt im Modell keine Luft (Raum Becherboden-Wickel ist Kern-Material), daher dort keine Scheibe.",
+  "umsetzung": "Annahme Umsetzer (Offene Frage an Opus): Der Luftraum ist g = H - Wand - z_Wickelende (aus netzinfo.json) hoch. In der Ebene k_xy = (0,3*237 + (g-0,3)*0,026)/g; senkrecht (Scheibe ueberbrueckt den Raum als Leiter): k_z = g / (0,1/1 + (g-0,1)/237)"
+ },
+ "K1c": {
+  "herkunft": "Annahme Opus (ERWARTUNG.md Nachtrag K1c); Auftrag AUFTRAG_K1c.md",
+  "csv": "../../chemie/c2_kalibrierung/schnellladen_Q_t.csv",
+  "json_mittel": "../../chemie/c2_kalibrierung/ergebnis_schnellladen_n4680.json",
+  "C_start": 1.5,
+  "faelle": {
+   "LFP_P0_K3_R128": {
+    "v": "LFP",
+    "profil": "P0",
+    "kuehl": "K3",
+    "R_mOhm": 1.28,
+    "quelle": "R",
+    "herkunft": "R 1,28 mOhm: C2 ergebnis_blade.json (Test#5 Blade 10 s 25 C 0,877 mOhm x 135/92,4), Auftrag Opus"
+   },
+   "NMC_C2gesamt_K3b": {
+    "v": "NMC",
+    "profil": "C2gesamt",
+    "kuehl": "K3b",
+    "quelle": "gesamt",
+    "herkunft": "Q(t) Spalte Q_W schnellladen_Q_t.csv (4680, 1,5C), 'gesamt' (PyBaMM Total heating)"
+   },
+   "NMC_C2idu_K3b": {
+    "v": "NMC",
+    "profil": "C2idu",
+    "kuehl": "K3b",
+    "quelle": "idu",
+    "herkunft": "Q(t) wie gesamt, Form skaliert auf I*dU-Mittel 11,49 W (ergebnis_schnellladen_n4680.json); Skalierung = Annahme, Zeitverlauf I*dU nicht gespeichert"
+   }
+  }
+ }
+}

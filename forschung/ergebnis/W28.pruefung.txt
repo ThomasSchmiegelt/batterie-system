@@ -1,0 +1,14 @@
+Z11: FEHLT im Text der Quelle: "discharge capacity of 15.41 Ah and a discharge energy of 49.82 Wh" (https://iopscience.iop.org/article/10.1149/1945-7111/ad14d0)
+Z12: FEHLT im Text der Quelle: "discharge capacity of 15.41 Ah and a discharge energy of 49.82 Wh" (https://iopscience.iop.org/article/10.1149/1945-7111/ad14d0)
+Z13: FEHLT im Text der Quelle: "corresponding to an average discharge voltage of 3.2 V" (https://iopscience.iop.org/article/10.1149/1945-7111/ad14d0)
+Z14: FEHLT im Text der Quelle: "average single-sided areal capacities of 2.09 mAh cm⁻2 for the LFP cathode" (https://iopscience.iop.org/article/10.1149/1945-7111/ad14d0)
+Z15: FEHLT im Text der Quelle: "2.09 mAh cm⁻2 for the LFP cathode and 2.34 mAh cm⁻2 for the graphite anode" (https://iopscience.iop.org/article/10.1149/1945-7111/ad14d0)
+Z16: FEHLT im Text der Quelle: "resulting in an N/P ratio of 1.1" (https://iopscience.iop.org/article/10.1149/1945-7111/ad14d0)
+Z17: FEHLT im Text der Quelle: "the electrode thickness measures approxi-mately 150 μm" (https://iopscience.iop.org/article/10.1149/1945-7111/ad14d0)
+Z18: FEHLT im Text der Quelle: "with an aluminum current collector around 10 μm" (https://iopscience.iop.org/article/10.1149/1945-7111/ad14d0)
+Z19: FEHLT im Text der Quelle: "the BYD 4680 achieved 97.8% and 92.7% of its nominal charging capacity" (https://iopscience.iop.org/article/10.1149/1945-7111/ad14d0)
+Z20: FEHLT im Text der Quelle: "while the Tesla 4680 reached 82.8% and 71.0% at the same rates" (https://iopscience.iop.org/article/10.1149/1945-7111/ad14d0)
+Z21: FEHLT im Text der Quelle: "from approximately 15.00 Ah at C/2 to 13.25 Ah at 2 C" (https://iopscience.iop.org/article/10.1149/1945-7111/ad14d0)
+Z50: WERT OHNE BELEG: 3. Welche thermische Leitfähigkeit (W·m⁻¹·K⁻¹) haben die aktiven Schichten (Kathode, Anode) und der 
+
+12 Belege bestaetigt, 11 Fehler

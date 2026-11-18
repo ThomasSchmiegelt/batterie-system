@@ -1,0 +1,101 @@
+{
+ "anfrage": "cell to pack battery tray cells directly arranged structural beam",
+ "ab": "2015",
+ "inhaber": null,
+ "land": null,
+ "url": "https://patents.google.com/xhr/query?url=q%3D%28cell%2Bto%2Bpack%2Bbattery%2Btray%2Bcells%2Bdirectly%2Barranged%2Bstructural%2Bbeam%29%26num%3D10%26after%3Dpriority%3A20150101&exp=",
+ "zeit": "2026-11-17 13:03:10",
+ "gesamt": 44352,
+ "treffer": [
+  {
+   "nr": "US20260148986A1",
+   "url": "https://patents.google.com/patent/US20260148986A1/en",
+   "titel": "Negative electrode plate and preparation method thereof, battery, and electric …",
+   "inhaber": "Contemporary Amperex Technology (Hong Kong) Limited",
+   "prioritaet": "2023-01-03",
+   "veroeffentlicht": "2026-05-28",
+   "kurz": "This application discloses a negative electrode plate and a preparation method thereof, a battery, and an electric device. The negative electrode plate includes a current collector, a lithiophilic plating layer, and a negative electrode active material layer, where the lithiophilic plating layer …"
+  },
+  {
+   "nr": "GB202417857D0",
+   "url": "https://patents.google.com/patent/GB202417857D0/en",
+   "titel": "Fixing structure for electrode tabs of battery cells in a pouch cell battery",
+   "inhaber": "Gus Tech Co Ltd",
+   "prioritaet": "2024-12-05",
+   "veroeffentlicht": "2025-01-22",
+   "kurz": ""
+  },
+  {
+   "nr": "EP4207363A3",
+   "url": "https://patents.google.com/patent/EP4207363A3/en",
+   "titel": "Lithium secondary batteries",
+   "inhaber": "Prologium Technology Co., Ltd.",
+   "prioritaet": "2022-01-04",
+   "veroeffentlicht": "2023-07-12",
+   "kurz": "The invention provides a lithium secondary battery including an ionic provider added to the positive electrode and/or a lithium receiver added to the negative electrode. The ionic provider and/or the ionic provider does not involve in the electrochemical reaction of the lithium secondary battery …"
+  },
+  {
+   "nr": "WO2025188859A8",
+   "url": "https://patents.google.com/patent/WO2025188859A8/en",
+   "titel": "Electrolyte solvent for batteries",
+   "inhaber": "Apple Inc.",
+   "prioritaet": "2024-03-05",
+   "veroeffentlicht": "2025-10-02",
+   "kurz": "The disclosure is directed to a battery cell including halo-substituted alkyl electrolyte solvent compounds for use in battery cells such as lithium-ion (Li-ion) battery cells."
+  },
+  {
+   "nr": "CN222813775U",
+   "url": "https://patents.google.com/patent/CN222813775U/en",
+   "titel": "Battery devices and power devices",
+   "inhaber": "宁德时代新能源科技股份有限公司",
+   "prioritaet": "2025-01-23",
+   "veroeffentlicht": "2025-04-29",
+   "kurz": "The application discloses a battery device and an electricity utilization device, wherein the battery device comprises a box body, a battery unit assembly comprises a shell assembly and a battery cell group, the shell assembly comprises a first shell and a second shell, the first shell is provided …"
+  },
+  {
+   "nr": "WO2025184855A8",
+   "url": "https://patents.google.com/patent/WO2025184855A8/en",
+   "titel": "Positive electrode material synthesis method for lithium vanadium …",
+   "inhaber": "安徽科技学院",
+   "prioritaet": "2024-03-06",
+   "veroeffentlicht": "2025-10-02",
+   "kurz": "A positive electrode material synthesis method for a lithium vanadium fluorophosphate lithium-ion battery, and a lithium vanadium fluorophosphate lithium-ion battery, relating to the technical field of lithium batteries. The lithium vanadium fluorophosphate lithium-ion battery comprises a battery …"
+  },
+  {
+   "nr": "WO2025081792A1",
+   "url": "https://patents.google.com/patent/WO2025081792A1/en",
+   "titel": "Case, battery and electric device",
+   "inhaber": "宁德时代新能源科技股份有限公司",
+   "prioritaet": "2023-10-19",
+   "veroeffentlicht": "2025-04-24",
+   "kurz": "Embodiments of the present application provide a case, a battery and an electric device. The case comprises a case body, provided with an accommodation space having an opening, and the accommodation space is used for accommodating a battery cell; the case body comprises a supporting plate and a …"
+  },
+  {
+   "nr": "WO2025232217A1",
+   "url": "https://patents.google.com/patent/WO2025232217A1/en",
+   "titel": "Battery tray, battery case, battery, and electric device",
+   "inhaber": "宁德时代新能源科技股份有限公司",
+   "prioritaet": "2024-05-09",
+   "veroeffentlicht": "2025-11-13",
+   "kurz": "The present disclosure relates to a battery tray, a battery case, a battery, and electric device. The battery tray comprises: a carrying assembly (1), wherein the carrying assembly (1) is provided with an accommodating area (10) used for supporting battery cells (2), and the accommodating area (10 …"
+  },
+  {
+   "nr": "CN223039029U",
+   "url": "https://patents.google.com/patent/CN223039029U/en",
+   "titel": "Battery device and electricity utilization device",
+   "inhaber": "宁德时代新能源科技股份有限公司",
+   "prioritaet": "2025-04-10",
+   "veroeffentlicht": "2025-06-27",
+   "kurz": "The application relates to a battery device and an electric device, wherein the battery device comprises a box body, a plurality of battery cells and a heat exchange assembly, the box body comprises at least two limiting beams which are distributed along a first direction, the battery cells are …"
+  },
+  {
+   "nr": "CN220510172U",
+   "url": "https://patents.google.com/patent/CN220510172U/en",
+   "titel": "Expansion beam, battery pack, energy storage system and electricity utilization …",
+   "inhaber": "宁德时代新能源科技股份有限公司",
+   "prioritaet": "2023-11-14",
+   "veroeffentlicht": "2024-02-20",
+   "kurz": "The utility model discloses an expansion beam, a battery pack, an energy storage system and an electrical device. The expansion beam includes: a connecting beam body and a combined beam body. The combined beam body is arranged on the connecting beam body at the first position. On one side in the …"
+  }
+ ]
+}

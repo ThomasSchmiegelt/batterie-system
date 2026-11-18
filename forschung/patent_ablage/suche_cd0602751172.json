@@ -1,0 +1,101 @@
+{
+ "anfrage": "battery management system cell voltage temperature sampling flexible circuit",
+ "ab": "2015",
+ "inhaber": null,
+ "land": null,
+ "url": "https://patents.google.com/xhr/query?url=q%3D%28battery%2Bmanagement%2Bsystem%2Bcell%2Bvoltage%2Btemperature%2Bsampling%2Bflexible%2Bcircuit%29%26num%3D10%26after%3Dpriority%3A20150101&exp=",
+ "zeit": "2026-11-17 13:13:27",
+ "gesamt": 98186,
+ "treffer": [
+  {
+   "nr": "WO2022065676A1",
+   "url": "https://patents.google.com/patent/WO2022065676A1/en",
+   "titel": "Battery resistance calculation apparatus and method",
+   "inhaber": "주식회사 엘지에너지솔루션",
+   "prioritaet": "2020-09-22",
+   "veroeffentlicht": "2022-03-31",
+   "kurz": "A battery resistance calculation apparatus according to one embodiment of the present invention comprises: a measurement circuit connected between a chassis and either the (+) terminal or the (-) terminal of a battery pack; a voltage measurement unit for measuring a voltage from the measurement …"
+  },
+  {
+   "nr": "WO2019078478A1",
+   "url": "https://patents.google.com/patent/WO2019078478A1/en",
+   "titel": "Apparatus and method for estimating battery resistance",
+   "inhaber": "주식회사 엘지화학",
+   "prioritaet": "2017-10-20",
+   "veroeffentlicht": "2019-04-25",
+   "kurz": "An apparatus for estimating a battery resistance, according to the present invention, comprises: a sensing unit configured to respectively measure the voltage, current, and temperature of a battery; and a processor operably coupled to the sensing unit, wherein the processor can calculate a …"
+  },
+  {
+   "nr": "WO2024136225A1",
+   "url": "https://patents.google.com/patent/WO2024136225A1/en",
+   "titel": "Battery data management device and operation method therefor",
+   "inhaber": "주식회사 엘지에너지솔루션",
+   "prioritaet": "2022-12-22",
+   "veroeffentlicht": "2024-06-27",
+   "kurz": "A battery data management device according to one embodiment disclosed herein may comprise: a data management unit which generates voltage change information according to the SOC of a battery on the basis of battery data; and a controller which calculates a voltage change function according to the …"
+  },
+  {
+   "nr": "WO2019212128A1",
+   "url": "https://patents.google.com/patent/WO2019212128A1/en",
+   "titel": "Battery management device, battery management method and energy storage system …",
+   "inhaber": "주식회사 엘지화학",
+   "prioritaet": "2018-05-03",
+   "veroeffentlicht": "2019-11-07",
+   "kurz": "A battery management device, a battery management method and an energy storage system comprising same are provided. A battery management device according to one embodiment of the present invention comprises: a first battery pack; a second battery pack; a first switch serially connected to the …"
+  },
+  {
+   "nr": "WO2023224210A1",
+   "url": "https://patents.google.com/patent/WO2023224210A1/en",
+   "titel": "Overheating diagnosis method, and overheating diagnosis apparatus and battery …",
+   "inhaber": "주식회사 엘지에너지솔루션",
+   "prioritaet": "2022-05-20",
+   "veroeffentlicht": "2023-11-23",
+   "kurz": "The present invention relates to an overheating diagnosis method, and an overheating diagnosis apparatus and battery system providing same. The battery system according to the present invention comprises: a battery including a plurality of battery cells; a measurement unit for measuring the …"
+  },
+  {
+   "nr": "WO2024096491A1",
+   "url": "https://patents.google.com/patent/WO2024096491A1/en",
+   "titel": "Battery soh estimation apparatus and method",
+   "inhaber": "주식회사 엘지에너지솔루션",
+   "prioritaet": "2022-10-31",
+   "veroeffentlicht": "2024-05-10",
+   "kurz": "A battery SOH estimation apparatus according to one embodiment of the present invention comprises: a battery information acquisition unit for acquiring battery information including at least one from among voltage, current, temperature, and SOC; and a control unit for calculating deterioration …"
+  },
+  {
+   "nr": "WO2020055162A1",
+   "url": "https://patents.google.com/patent/WO2020055162A1/en",
+   "titel": "Switch diagnosis device and method",
+   "inhaber": "주식회사 엘지화학",
+   "prioritaet": "2018-09-12",
+   "veroeffentlicht": "2020-03-19",
+   "kurz": "The present invention relates to a switch diagnosis device and method capable of effectively diagnosing a switch in a step of diagnosing a switch provided in a battery pack. According to one aspect of the present invention, when a plurality of battery modules having a parallel structure are …"
+  },
+  {
+   "nr": "WO2022085950A1",
+   "url": "https://patents.google.com/patent/WO2022085950A1/en",
+   "titel": "Battery device and resistance state estimation method",
+   "inhaber": "주식회사 엘지에너지솔루션",
+   "prioritaet": "2020-10-22",
+   "veroeffentlicht": "2022-04-28",
+   "kurz": "A battery device processor estimates the internal resistance of a battery at a reference temperature on the basis of a measured voltage of the battery, a measured current of the battery, the open circuit voltage of the battery and a measured temperature of the battery, and estimates the resistance …"
+  },
+  {
+   "nr": "WO2021149973A1",
+   "url": "https://patents.google.com/patent/WO2021149973A1/en",
+   "titel": "Battery diagnosis system, power system, and battery diagnosis method",
+   "inhaber": "주식회사 엘지에너지솔루션",
+   "prioritaet": "2020-01-22",
+   "veroeffentlicht": "2021-07-29",
+   "kurz": "A battery diagnosis system according to the present invention is for a battery pack comprising: a battery group including a plurality of batteries connected in series; and a battery management system for transmitting a notification signal indicating battery parameters of the plurality of …"
+  },
+  {
+   "nr": "WO2022015025A1",
+   "url": "https://patents.google.com/patent/WO2022015025A1/en",
+   "titel": "Battery valve and battery including same",
+   "inhaber": "주식회사 엘지에너지솔루션",
+   "prioritaet": "2020-07-13",
+   "veroeffentlicht": "2022-01-20",
+   "kurz": "A battery valve according to an embodiment of the present invention, which is a battery valve for discharging gas out of a battery, may comprise: a communication unit which receives a battery valve opening/closing command from an external device; and an opening/closing control unit which, …"
+  }
+ ]
+}

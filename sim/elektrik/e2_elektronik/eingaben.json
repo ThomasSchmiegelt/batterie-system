@@ -1,0 +1,77 @@
+{
+ "hinweis": "KI-generiert (Claude Sonnet), Entwurf. Alle Werte aus ERWARTUNG.md (ERW-E2) oder Ergebnisdateien; Herkunft je Wert.",
+ "LFP": {
+  "s": 250,
+  "p": 1,
+  "cmu_kanaele": 18,
+  "cmu_anzahl": 14,
+  "zellmasse_kg": 1.85,
+  "zellen": 250,
+  "U_nenn_V": 800,
+  "ah_reihe": 92.4,
+  "I_laden_A": 194,
+  "A_HV_mm2": 50,
+  "herkunft": "s,p: E1 ergebnis.json; zellmasse/zellen: cad/pack/entwurf/ergebnis_LFP.json; I_laden: E1 (193,99 A); A_HV: ENT-100; Rest ERW-E2"
+ },
+ "NMC": {
+  "s": 217,
+  "p": 4,
+  "cmu_kanaele": 18,
+  "cmu_anzahl": 13,
+  "zellmasse_kg": 0.355,
+  "zellen": 868,
+  "U_nenn_V": 800,
+  "ah_reihe": 92.4,
+  "I_laden_A": 139,
+  "A_HV_mm2": 35,
+  "herkunft": "s,p: E1; zellmasse/zellen: cad/pack/entwurf/ergebnis_NMC.json; I_laden: ERW-E2 (1,5C = 139 A; E1-Datei nennt 129,5 A bei 1,4C); A_HV: ENT-101"
+ },
+ "u_max_V": {
+  "LFP": 3.65,
+  "NMC": 4.2,
+  "herkunft": "Opus 2026-11-18, AUFTRAG.md Fortsetzung Antwort 5 (Höchstspannung LFP 3,65 V, NMC 4,2 V)"
+ },
+ "ausgleich": {
+  "kapazitaetsunterschied": 0.02,
+  "strom_A": 0.15,
+  "herkunft": "ERW-E2 Punkt 2; NMC 0,13 A: ENT-146 (AUFTRAG E2 Fortsetzung 2, Punkt 1b)",
+  "strom_A_NMC": 0.13
+ },
+ "vorladung": {
+  "C_F": 0.001,
+  "R_Ohm": 100,
+  "herkunft": "ERW-E2 BT-712 (C_ZK Annahme Opus)"
+ },
+ "heizung": {
+  "c_J_kgK": 1000,
+  "dT_K": 25,
+  "P_W": 5000,
+  "herkunft": "ERW-E2 Punkt 4 (c ~1000 J/(kg K) Annahme Opus)"
+ },
+ "stoffe": {
+  "rho_Cu_Ohm_m": 1.72e-08,
+  "herkunft": "E1 eingaben.json",
+  "rho_Cu_kg_m3": 8960,
+  "herkunft_rho_Cu_kg_m3": "Opus 2026-11-18, ERWARTUNG Nachtrag 2 (Cu 8,96 g/cm³, Stoffwert)"
+ },
+ "erwartung": {
+  "abgriffe": [
+   251,
+   218
+  ],
+  "ausgleich_h": 12,
+  "cmu_W_max": 10,
+  "vor_I_A": 8,
+  "vor_E_J": 320,
+  "vor_t_ms": 300,
+  "heiz_min": [
+   40,
+   32.5
+  ],
+  "hv_L_m": [
+   3,
+   5
+  ],
+  "hv_verlust_W_max": 15
+ }
+}

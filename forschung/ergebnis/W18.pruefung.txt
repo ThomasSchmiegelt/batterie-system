@@ -1,0 +1,6 @@
+Z15: FEHLT im Text der Quelle: "expanded uncertainties of about 26, 10 and 9.5%, k = 2, from thermocouple" (https://www.techscience.com/fhmt/online/detail/29043/TSP_FHMT_92550.pdf)
+Z33: WERT OHNE BELEG: - **(Folgerung – Kühlung / Flächenauswahl):** Die Art der gekühlten Fläche dominiert die interne Spr
+Z40: WERT OHNE BELEG: 1. **Temperaturabhängigkeit der Leitfähigkeiten:** Die drei Richtungen wurden bei unterschiedlichen 
+Z41: WERT OHNE BELEG: 2. **Schrägschnitt-Anisotropie / Tab-Effekt:** Die Infrarot-Aufnahmen zeigen lokale Temperaturerhöhu
+
+17 Belege bestaetigt, 1 Fehler

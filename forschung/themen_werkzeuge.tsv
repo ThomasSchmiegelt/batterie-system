@@ -1,0 +1,10 @@
+# nr	Suchbegriffe (Komma)	URLs	wozu
+T01	model,DFN,SPM,parameter,python,license,simulation,BSD	https://github.com/pybamm-team/PyBaMM https://github.com/pybop-team/PyBOP https://github.com/FaradayInstitution/BPX	Zellchemie: PyBaMM, Parameterschätzung, Parameterformat
+T02	pack,cells,parallel,series,thermal,model,license,simulation	https://github.com/pybamm-team/liionpack https://github.com/BattMoTeam/BattMo https://github.com/BattMoTeam/BattMo.jl https://github.com/cidetec-energy-storage/cideMOD	Zelle bis Pack: liionpack, BattMo, cideMOD
+T03	impedance,equivalent circuit,fit,license	https://github.com/ECSHackWeek/impedance.py https://en.wikipedia.org/wiki/Battery_simulator	Ersatzschaltbild, Impedanz
+T04	circuit,simulation,SPICE,schematic,PCB,license,open source	https://en.wikipedia.org/wiki/Ngspice https://en.wikipedia.org/wiki/KiCad	Elektroauslegung: Schaltung, Platine (BMS)
+T05	Modelica,library,electrical,thermal,system,license,open source	https://en.wikipedia.org/wiki/Modelica https://en.wikipedia.org/wiki/OpenModelica https://github.com/modelica/ModelicaStandardLibrary	Systemsimulation Elektrik und Wärme
+T06	BMS,open source,license,safety,cell,voltage,charging,ISO 15118	https://github.com/foxBMS/foxbms-2 https://github.com/EVerest/everest-core	Offene Steuerung: BMS-Software, Ladekommunikation
+T07	surrogate,metamodel,response surface,kriging,Gaussian process,neural,sampling,design of experiments,Latin hypercube	https://en.wikipedia.org/wiki/Surrogate_model https://en.wikipedia.org/wiki/Design_of_experiments	Ersatzmodelle: wo sie Rechenzeit sparen
+T08	explicit,crash,impact,finite element,solver,license,open source,AGPL,GPL	https://en.wikipedia.org/wiki/OpenRadioss https://openradioss.org/ https://en.wikipedia.org/wiki/Calculix	Crash- und Festigkeitslöser (OpenRadioss, CalculiX)
+T09	harness,cable,routing,bend,wire,FreeCAD,workbench,license	https://en.wikipedia.org/wiki/Cable_harness https://github.com/sargo-devel/Cables	Kabelverlegung: Kabelbaum, FreeCAD Cables Workbench

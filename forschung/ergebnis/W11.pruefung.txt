@@ -1,0 +1,6 @@
+Z14: FEHLT im Text der Quelle: "Charge temperature interval -20 °C 〜 105 °C" (https://en.wikipedia.org/wiki/Solid-state_battery)
+Z15: FEHLT im Text der Quelle: "Self-discharge rate 6%ｰ85 °C (month)" (https://en.wikipedia.org/wiki/Solid-state_battery)
+Z28: WERT OHNE BELEG: - **Kühlung / Thermik:** *(Folgerung)* Da die Wärmefreisetzung im Entladeszenario auf 20–30 % gegenü
+Z34: WERT OHNE BELEG: 1. Welcher Mindest-Kontaktdruck (MPa) ist für den jeweiligen SSE-Werkstoff (Oxid / Sulfid / Chlorid)
+
+10 Belege bestaetigt, 2 Fehler

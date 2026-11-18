@@ -1,0 +1,234 @@
+{
+ "hinweis": "KI-generiert (Claude Sonnet), Entwurf. Quelle: eingaben.json via querschnitte.py",
+ "lastfaelle": {
+  "LFP": {
+   "Laden 10-80 % (Pack)": {
+    "pack_A": 193.9875,
+    "zelle_A": 193.9875
+   },
+   "Spitze 10 s bei Nennspannung": {
+    "pack_A": 187.5,
+    "zelle_A": 187.5
+   },
+   "Spitze 10 s bei Entladeschluss": {
+    "pack_A": 240.0,
+    "zelle_A": 240.0
+   },
+   "Dauer bei Nennspannung": {
+    "pack_A": 75.0,
+    "zelle_A": 75.0
+   },
+   "Dauer bei Entladeschluss": {
+    "pack_A": 96.0,
+    "zelle_A": 96.0
+   }
+  },
+  "NMC": {
+   "Laden 10-80 % (Pack)": {
+    "pack_A": 129.5,
+    "zelle_A": 32.375
+   },
+   "Spitze 10 s bei Nennspannung": {
+    "pack_A": 187.5,
+    "zelle_A": 46.875
+   },
+   "Spitze 10 s bei Entladeschluss": {
+    "pack_A": 230.4147465437788,
+    "zelle_A": 57.6036866359447
+   },
+   "Dauer bei Nennspannung": {
+    "pack_A": 75.0,
+    "zelle_A": 18.75
+   },
+   "Dauer bei Entladeschluss": {
+    "pack_A": 92.16589861751152,
+    "zelle_A": 23.04147465437788
+   }
+  }
+ },
+ "pad_lambda_W_mK": 3.0,
+ "arten": {
+  "LFP Zell-/Reihenverbinder (BT-410/420)": {
+   "werkstoff": "Al",
+   "breite_mm": 15,
+   "dicke_mm": 5,
+   "A_mm2": 75,
+   "laenge_mm": 15,
+   "A_aus_J_max_mm2": 64.66250000000001,
+   "A_aus_J_min_mm2": 96.99375,
+   "J_A_mm2": 2.5865,
+   "dT_K": 0.3144291657500001,
+   "dT_K_lambda": {
+    "1.0": 0.9432874972500002,
+    "3.0": 0.3144291657500001,
+    "5.0": 0.18865749945000002
+   },
+   "R_uOhm": 5.6400000000000015,
+   "dichte": 2700,
+   "rho": 2.82e-08,
+   "c": 900,
+   "stueck": 249,
+   "strom_dauer_A": 193.9875,
+   "strom_spitze_A": 240.0,
+   "verlust_je_W": 0.21223968688125006,
+   "verlust_gesamt_W": 52.84768203343127,
+   "verlust_spitze_gesamt_W": 80.89113600000002,
+   "spannungsabfall_V": 0.2724282855000001,
+   "masse_gesamt_kg": 0.7563375,
+   "dT_adiabat_Spitze_10s_K": 1.1883456790123461,
+   "band_mm2": [
+    70,
+    100
+   ],
+   "im_band": true,
+   "ausserhalb_ueber_50_prozent": false
+  },
+  "LFP HV-Hauptleitung (BT-430)": {
+   "werkstoff": "Cu",
+   "A_mm2": 50,
+   "laenge_mm": 2024,
+   "A_aus_J_max_mm2": 38.7975,
+   "A_aus_J_min_mm2": 48.496875,
+   "J_A_mm2": 3.87975,
+   "R_uOhm": 696.256,
+   "dichte": 8960,
+   "rho": 1.72e-08,
+   "c": 385,
+   "stueck": 2,
+   "strom_dauer_A": 193.9875,
+   "strom_spitze_A": 240.0,
+   "verlust_je_W": 26.20091408319,
+   "verlust_gesamt_W": 52.40182816638,
+   "verlust_spitze_gesamt_W": 80.20869119999999,
+   "spannungsabfall_V": 0.2701299216,
+   "masse_gesamt_kg": 1.8135039999999996,
+   "dT_adiabat_Spitze_10s_K": 1.1487940630797773,
+   "band_mm2": [
+    35,
+    50
+   ],
+   "im_band": true,
+   "ausserhalb_ueber_50_prozent": false
+  },
+  "NMC Gruppenverbinder (BT-420)": {
+   "werkstoff": "Al",
+   "breite_mm": 15,
+   "dicke_mm": 3,
+   "A_mm2": 45,
+   "laenge_mm": 192,
+   "A_aus_J_max_mm2": 43.166666666666664,
+   "A_aus_J_min_mm2": 64.75,
+   "J_A_mm2": 2.8777777777777778,
+   "dT_K": 0.2335412592592593,
+   "dT_K_lambda": {
+    "1.0": 0.700623777777778,
+    "3.0": 0.2335412592592593,
+    "5.0": 0.1401247555555556
+   },
+   "R_uOhm": 120.32000000000002,
+   "dichte": 2700,
+   "rho": 2.82e-08,
+   "c": 900,
+   "stueck": 216,
+   "strom_dauer_A": 129.5,
+   "strom_spitze_A": 230.4147465437788,
+   "verlust_je_W": 1.1801618301234569,
+   "verlust_gesamt_W": 254.91495530666668,
+   "verlust_spitze_gesamt_W": 807.0051745984554,
+   "spannungsabfall_V": 2.5319840000000005,
+   "masse_gesamt_kg": 6.3218879999999995,
+   "dT_adiabat_Spitze_10s_K": 3.042554372769017,
+   "methode": "Sammelstrecke: 217 Stueck, I^2R/3; Bruecke: 216 Stueck, voller Strom",
+   "verlust_alt_konservativ_W": 435.84403968000004,
+   "verlust_sammel_W": 145.95394538666667,
+   "verlust_bruecke_W": 108.96100992,
+   "band_mm2": [
+    50,
+    80
+   ],
+   "im_band": false,
+   "ausserhalb_ueber_50_prozent": false
+  },
+  "NMC Zellabgriff (BT-410)": {
+   "werkstoff": "Al",
+   "breite_mm": 12,
+   "dicke_mm": 1,
+   "A_mm2": 12,
+   "laenge_mm": 23,
+   "A_aus_J_max_mm2": 10.791666666666666,
+   "A_aus_J_min_mm2": 16.1875,
+   "J_A_mm2": 2.6979166666666665,
+   "dT_K": 0.0684202907986111,
+   "dT_K_lambda": {
+    "1.0": 0.20526087239583332,
+    "3.0": 0.0684202907986111,
+    "5.0": 0.04105217447916666
+   },
+   "R_uOhm": 54.05,
+   "dichte": 2700,
+   "rho": 2.82e-08,
+   "c": 900,
+   "stueck": 1736,
+   "strom_dauer_A": 32.375,
+   "strom_spitze_A": 57.6036866359447,
+   "verlust_je_W": 0.05665200078124999,
+   "verlust_gesamt_W": 98.34787335624999,
+   "verlust_spitze_gesamt_W": 311.347926267281,
+   "spannungsabfall_V": 0.7594430375,
+   "masse_gesamt_kg": 1.2936672,
+   "dT_adiabat_Spitze_10s_K": 2.674120054191518,
+   "band_mm2": [
+    10,
+    20
+   ],
+   "im_band": true,
+   "ausserhalb_ueber_50_prozent": false
+  },
+  "NMC HV-Hauptleitung (BT-430)": {
+   "werkstoff": "Cu",
+   "A_mm2": 35,
+   "laenge_mm": 1950,
+   "A_aus_J_max_mm2": 25.9,
+   "A_aus_J_min_mm2": 32.375,
+   "J_A_mm2": 3.7,
+   "R_uOhm": 958.2857142857142,
+   "dichte": 8960,
+   "rho": 1.72e-08,
+   "c": 385,
+   "stueck": 2,
+   "strom_dauer_A": 129.5,
+   "strom_spitze_A": 230.4147465437788,
+   "verlust_je_W": 16.070690999999997,
+   "verlust_gesamt_W": 32.14138199999999,
+   "verlust_spitze_gesamt_W": 101.75260828279578,
+   "spannungsabfall_V": 0.24819599999999997,
+   "masse_gesamt_kg": 1.22304,
+   "dT_adiabat_Spitze_10s_K": 2.160947222055066,
+   "band_mm2": [
+    35,
+    50
+   ],
+   "im_band": true,
+   "ausserhalb_ueber_50_prozent": false
+  }
+ },
+ "LFP_summe": {
+  "verlust_W": 105.24951019981127,
+  "spannungsabfall_V": 0.5425582071000001,
+  "spannungsabfall_prozent_Nenn": 0.06781977588750002,
+  "verlust_prozent_150kW": 0.07016634013320751,
+  "masse_kg": 2.5698414999999994,
+  "masse_Al_kg": 0.7563375,
+  "masse_Cu_kg": 1.8135039999999996
+ },
+ "NMC_summe": {
+  "verlust_W": 385.4042106629166,
+  "spannungsabfall_V": 3.5396230375000006,
+  "spannungsabfall_prozent_Nenn": 0.4424528796875001,
+  "verlust_prozent_150kW": 0.2569361404419444,
+  "masse_kg": 8.8385952,
+  "masse_Al_kg": 7.615555199999999,
+  "masse_Cu_kg": 1.22304
+ },
+ "verfehlt_verlust_ueber_300W": true
+}
