@@ -51,7 +51,7 @@ Regeln zur Verteilung:
 - **Im selben Schritt mitschreiben:** `BEFUNDE.md`, `ERINNERUNGEN.md`, Hermes-Skill `~/.hermes/skills/cae/batterie-system/SKILL.md` und das Buch-Ereignisprotokoll `~/hermes/buch/ereignissprotokoll_batterie/ereignisprotokoll.md` (BA-NN, nur im Buch, nicht im Repo). Weitere Nutzerregeln stehen im Gedächtnis der Fusion-Instanz, die das Projekt angelegt hat (`~/.claude/projects/-home-cae-hermes-fusion/memory/`).
 
 ## Befehle
-Git: privates Repo github.com/ThomasSchmiegelt/batterie-system (seit 2026-11-18, .gitignore: ohne venv, Quellen, PI-Rohlogs, große CAD). Kein Build, keine Tests und keinen Linter. Geprüft wird mit eigenen Skripten (`pm.py pruefe`, `pruefe.py`).
+Git: privates Repo github.com/ThomasSchmiegelt/batterie-system (seit 2026-11-18, .gitignore: ohne venv, Quellen, PI-Rohlogs, große CAD). Es gibt keinen Build, keine Tests und keinen Linter. Geprüft wird mit eigenen Skripten (`pm.py pruefe`, `pruefe.py`).
 ```bash
 source umgebung.sh                          # venv .venv, $FREECAD_APPIMAGE, $BLENDER (neu: python3 -m venv .venv && .venv/bin/pip install -r requirements.txt)
 python3 pm/pm.py pruefe                     # Verweise BT/REQ/B-BAT/Merkmal prüfen, doppelte gültige Entscheidungen
