@@ -1,0 +1,103 @@
+{
+ "rho_Al_Ohm_m": 2.82e-08,
+ "herkunft": "e1_querschnitte/eingaben.json stoffe.rho_Al_Ohm_m (Stoffwert, Opus-Auftrag 2,82e-8)",
+ "LFP": {
+  "strom_dauer_A": 193.9875,
+  "strom_spitze_A": 240.0,
+  "dauer": {
+   "Zellverbinder (248 x L 15 mm, 25 x 3 = 75 mm2)": {
+    "stueck": 248,
+    "R_uOhm": 5.6400000000000015,
+    "verlust_W": 52.635442346550015
+   },
+   "Querverbinder Mitte (Al 25 x 3, 2 Haelften, ohne Bruecke)": {
+    "stueck": 1,
+    "R_uOhm": 503.0880000000001,
+    "verlust_W": 18.931780069807505
+   },
+   "Anschlusslaschen Plus/Minus (Al 25 x 3)": {
+    "stueck": 2,
+    "R_uOhm": 25.756000000000004,
+    "verlust_W": 1.9384558068487507
+   }
+  },
+  "spitze": {
+   "Zellverbinder (248 x L 15 mm, 25 x 3 = 75 mm2)": {
+    "stueck": 248,
+    "R_uOhm": 5.6400000000000015,
+    "verlust_W": 80.56627200000001
+   },
+   "Querverbinder Mitte (Al 25 x 3, 2 Haelften, ohne Bruecke)": {
+    "stueck": 1,
+    "R_uOhm": 503.0880000000001,
+    "verlust_W": 28.977868800000003
+   },
+   "Anschlusslaschen Plus/Minus (Al 25 x 3)": {
+    "stueck": 2,
+    "R_uOhm": 25.756000000000004,
+    "verlust_W": 2.9670912000000005
+   }
+  },
+  "summe_dauer_W": 73.50567822320627,
+  "summe_spitze_W": 112.51123200000002,
+  "e1_vergleich_Al_dauer_W": 52.84768203343127,
+  "e1_vergleich_Al_spitze_W": 80.89113600000002,
+  "erwartung_W": 50.0,
+  "abweichung_prozent_gegen_erwartung_dauer": 47.01135644641255
+ },
+ "NMC": {
+  "A_E1_45mm2": {
+   "dauer": {
+    "sammel_W": 159.3858783275251,
+    "bruecke_W": 203.33064599196348,
+    "gruppen_W": 362.7165243194886,
+    "zellabgriff_W": 98.34787335624999,
+    "Al_summe_W": 461.0643976757386
+   },
+   "spitze": {
+    "sammel_W": 504.580943136484,
+    "bruecke_W": 643.7004971817354,
+    "gruppen_W": 1148.2814403182194,
+    "zellabgriff_W": 311.347926267281,
+    "Al_summe_W": 1459.6293665855005
+   },
+   "abweichung_prozent_Al_dauer_gegen_E1_Al": 30.51596722498255,
+   "abweichung_prozent_Al_dauer_gegen_385": 19.756986409282746
+  },
+  "A_CAD_75mm2": {
+   "dauer": {
+    "sammel_W": 95.63152699651506,
+    "bruecke_W": 121.99838759517809,
+    "gruppen_W": 217.62991459169314,
+    "zellabgriff_W": 98.34787335624999,
+    "Al_summe_W": 315.9777879479431
+   },
+   "spitze": {
+    "sammel_W": 302.74856588189044,
+    "bruecke_W": 386.22029830904125,
+    "gruppen_W": 688.9688641909318,
+    "zellabgriff_W": 311.347926267281,
+    "Al_summe_W": 1000.3167904582128
+   },
+   "abweichung_prozent_Al_dauer_gegen_E1_Al": -10.554476069870041,
+   "abweichung_prozent_Al_dauer_gegen_385": -17.927847286248543
+  },
+  "laschen_NMC_W_dauer": 0.3152807,
+  "strom_dauer_A": 129.5,
+  "strom_spitze_A": 230.4147465437788,
+  "gruppen": 217,
+  "bruecken": 216,
+  "sammel_laenge_mittel_mm": 209.66948552033048,
+  "bruecke_laenge_mittel_mm": 89.57214158330596,
+  "bruecke_laenge_max_mm": 190.533056857049,
+  "e1_vergleich": {
+   "gruppen_dauer_W": 254.91495530666668,
+   "gruppen_spitze_W": 807.0051745984554,
+   "zellabgriff_dauer_W": 98.34787335624999,
+   "al_summe_dauer_W": 353.26282866291666,
+   "al_summe_spitze_W": 1118.3531008657365,
+   "summe_inkl_HV_dauer_W": 385.4042106629166
+  },
+  "erwartung_W": 385.0
+ }
+}

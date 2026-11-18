@@ -6,13 +6,15 @@ from mathutils import Vector
 R = os.environ.get("BATTERIE", "/home/cae/hermes/batterie"); OUT = f"{R}/cad/pack/entwurf"; NZ = "/home/cae/cae_projekte/batterie/e2"; VAR = os.environ["PACK_VARIANTE"]; VO = VAR + "_e2"
 S = int(os.environ.get("RENDER_SAMPLES", "32")); MM = 0.001
 ERG = json.load(open(f"{OUT}/ergebnis_{VO}.json")); E = ERG["e2"]; LG = ERG["gehaeuse_L_mm"]; BB = ERG["breite_mm"]
-FARBE = {"E2_CMU": (0.85, 0.05, 0.05), "E2_FPC": (1.0, 0.75, 0.0), "E2_HV_Leitung": (0.85, 0.0, 0.7), "E2_Schaltbox": (0.1, 0.55, 0.25), "E2_Schaltbox_Inhalt": (0.2, 0.85, 0.45), "E2_Stecker_Sensor": (0.0, 0.45, 0.95)}
+FARBE = {"E2_CMU": (0.85, 0.05, 0.05), "E2_FPC": (1.0, 0.75, 0.0), "E2_HV_Leitung": (0.85, 0.0, 0.7), "E2_Schaltbox": (0.1, 0.55, 0.25), "E2_Schaltbox_Inhalt": (0.2, 0.85, 0.45), "E2_Stecker_Sensor": (0.0, 0.45, 0.95), "E2_Lasche": (1.0, 0.47, 0.0), "E2_Trennbruecke": (0.0, 0.78, 0.9), "E2_Servicedeckel": (0.7, 0.7, 1.0)}
 GRAU = (0.55, 0.57, 0.6)
 bx0, by0, bz0 = E["schaltbox_x0_y0_z0_mm"]; zbox = bz0
 ANS = {"gesamt": ("", (0.85, -1.0, 0.6), 1.2 * LG, (1700, 1000), None, 0.20),
        "draufsicht": ("_ohnedeckel", (0.0, 0.0, 1.0), 1.06 * LG, (1900, 1450), None, 0.25),
        "schnitt": ("_boxschnitt", (0.0, -1.0, 0.0), 700.0, (1700, 900), (bx0 + 150.0, by0 + E["schaltbox_B_mm"] / 2, 100.0), 0.30),
        "detail": ("_ohnedeckel", (-0.7, -0.45, 0.85), 300.0, (1700, 1000), "detail", 0.35)}
+if VAR == "LFP":
+    _st = E["stecker_lfp"]; ANS["bruecke"] = ("_ohnedeckel", (0.55, -0.6, 0.65), 330.0, (1700, 1000), (_st["x"], _st["y"], ERG["hoehe_stapel_mm"] - 8.0), 0.35)
 def bau(name):
     suf, dirv, scale, res, ctr, alpha = ANS[name]
     netz = json.load(open(f"{NZ}/netz_{VO}{suf}.json" if suf else f"{OUT}/netz_{VO}.json"))
@@ -26,14 +28,15 @@ def bau(name):
         pts, tri = m["punkte"], m["dreiecke"]
         if not pts: continue
         e2 = g in FARBE
-        if name == "detail" and not e2 and g not in ("Zellen", "Zellverbinder", "Gruppenverbinder", "Gruppenbruecke", "Zellabgriff", "Quertraeger", "Verguss", "Zelltraeger"): continue
-        if name == "gesamt" and g == "Zellen": continue          # Zellen verdecken sonst alles
+        if name in ("detail", "bruecke") and not e2 and g not in ("Zellen", "Zellverbinder", "Gruppenverbinder", "Gruppenbruecke", "Zellabgriff", "Quertraeger", "Verguss", "Zelltraeger"): continue
+        if name == "gesamt" and g == "Zellen": continue
+        if name == "bruecke" and g == "E2_Servicedeckel": continue      # Servicedeckel ausgeblendet, Brücke sichtbar          # Zellen verdecken sonst alles
         me = bpy.data.meshes.new(g); me.from_pydata([(p[0] * MM, p[1] * MM, p[2] * MM) for p in pts], [], tri); me.update()
         ob = bpy.data.objects.new(g, me); sc.collection.objects.link(ob); ob["gruppe"] = g
         mt = bpy.data.materials.new(g); mt.use_nodes = True; b = mt.node_tree.nodes["Principled BSDF"]
         b.inputs["Base Color"].default_value = (*(FARBE[g] if e2 else GRAU), 1); b.inputs["Roughness"].default_value = 0.4
         if e2: b.inputs["Metallic"].default_value = 0.2
-        elif name in ("draufsicht", "detail") and g in ("Zellen", "Zellverbinder", "Gruppenverbinder", "Gruppenbruecke", "Zellabgriff", "Quertraeger", "Verguss", "Zelltraeger"): pass   # opak
+        elif name in ("draufsicht", "detail", "bruecke") and g in ("Zellen", "Zellverbinder", "Gruppenverbinder", "Gruppenbruecke", "Zellabgriff", "Quertraeger", "Verguss", "Zelltraeger"): pass   # opak
         else:
             b.inputs["Alpha"].default_value = alpha if g not in ("Zellen",) else min(alpha, 0.35); mt.blend_method = "BLEND" if hasattr(mt, "blend_method") else None
         ob.data.materials.append(mt); obs.append(ob)

@@ -1,0 +1,1782 @@
+{
+ "hinweis": "ENTWURF, nicht freigegeben. KI-generiert, cad/pack/entwurf_parameter_e2d.py; Basis parameter_NMC.json (unverändert) + Block A_e2d_* (E2 Fortsetzung 5).",
+ "parameter": {
+  "BT-000": {
+   "energie_brutto_kWh": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "nennspannung_V": {
+    "wert": 800.0,
+    "einheit": "V",
+    "entscheidung": "ENT-006",
+    "status": "entschieden (Mensch)"
+   },
+   "bauraum_laenge_mm": {
+    "wert": 1950.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-103",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   },
+   "bauraum_breite_mm": {
+    "wert": 1430.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-030",
+    "status": "entschieden (Mensch)"
+   },
+   "bauraum_hoehe_mm": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "masse_max_kg": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-100": {
+   "chemie": {
+    "wert": "NMC",
+    "einheit": null,
+    "entscheidung": "ENT-007",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   },
+   "format": {
+    "wert": "Rundzelle 4680",
+    "einheit": null,
+    "entscheidung": "ENT-008",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   },
+   "laenge_mm": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "breite_mm": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "dicke_mm": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "kapazitaet_Ah": {
+    "wert": 23.125,
+    "einheit": "Ah",
+    "entscheidung": "ENT-009",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   },
+   "nennspannung_V": {
+    "wert": 3.7,
+    "einheit": "V",
+    "entscheidung": "ENT-010",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   },
+   "masse_g": {
+    "wert": 355.0,
+    "einheit": "g",
+    "entscheidung": "ENT-011",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   },
+   "durchmesser_mm": {
+    "wert": 46.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-025",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   },
+   "hoehe_mm": {
+    "wert": 80.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-026",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   }
+  },
+  "BT-110": {
+   "bauweise": {
+    "wert": "\"Wickel (jelly roll), tabless\"",
+    "einheit": null,
+    "entscheidung": "ENT-027",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   },
+   "lagen_anzahl": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-111": {
+   "laenge_mm": {
+    "wert": 3215.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-057",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   },
+   "breite_mm": {
+    "wert": 72.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-058",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   },
+   "beschichtung_um": {
+    "wert": 75.0,
+    "einheit": "µm",
+    "entscheidung": "ENT-059",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   },
+   "folie_um": {
+    "wert": 20.0,
+    "einheit": "µm",
+    "entscheidung": "ENT-060",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   },
+   "anzahl": {
+    "wert": 1.0,
+    "einheit": null,
+    "entscheidung": "ENT-061",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   },
+   "fahne_mm": {
+    "wert": 5.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-062",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   }
+  },
+  "BT-112": {
+   "laenge_mm": {
+    "wert": 3305.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-063",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   },
+   "breite_mm": {
+    "wert": 73.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-064",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   },
+   "beschichtung_um": {
+    "wert": 125.0,
+    "einheit": "µm",
+    "entscheidung": "ENT-065",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   },
+   "folie_um": {
+    "wert": 10.0,
+    "einheit": "µm",
+    "entscheidung": "ENT-066",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   },
+   "anzahl": {
+    "wert": 1.0,
+    "einheit": null,
+    "entscheidung": "ENT-067",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   },
+   "fahne_mm": {
+    "wert": 7.5,
+    "einheit": "mm",
+    "entscheidung": "ENT-068",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   }
+  },
+  "BT-113": {
+   "laenge_mm": {
+    "wert": 3550.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-069",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   },
+   "breite_mm": {
+    "wert": 75.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-070",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   },
+   "dicke_um": {
+    "wert": 10.0,
+    "einheit": "µm",
+    "entscheidung": "ENT-071",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   },
+   "lagen": {
+    "wert": 2.0,
+    "einheit": null,
+    "entscheidung": "ENT-072",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   },
+   "bauweise": {
+    "wert": "\"zwei Bänder, mit Elektroden gewickelt\"",
+    "einheit": null,
+    "entscheidung": "ENT-073",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   }
+  },
+  "BT-114": {
+   "breite_mm": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-115": {
+   "durchmesser_mm": {
+    "wert": 12.5,
+    "einheit": "mm",
+    "entscheidung": "ENT-074",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   }
+  },
+  "BT-116": {
+   "art": {
+    "wert": "\"je ein Klebestreifen oben und unten\"",
+    "einheit": null,
+    "entscheidung": "ENT-075",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   },
+   "dicke_um": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-120": {
+   "werkstoff": {
+    "wert": "\"Stahl, vernickelt (vermutet)\"",
+    "einheit": null,
+    "entscheidung": "ENT-028",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   },
+   "wandstaerke_mm": {
+    "wert": 0.4,
+    "einheit": "mm",
+    "entscheidung": "ENT-029",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   }
+  },
+  "BT-121": {
+   "werkstoff": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "dicke_um": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-122": {
+   "verschluss": {
+    "wert": "\"Kupfer-Blindniet im Boden\"",
+    "einheit": null,
+    "entscheidung": "ENT-076",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   },
+   "lage": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-130": {
+   "anordnung": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "breite_mm": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "dicke_mm": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "ueberstand_mm": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-131": {
+   "werkstoff": {
+    "wert": "\"Al-Tab-Scheibe oben (Kathode), Cu-Tab-Scheibe unten (Anode), je 6 Dreiecksflächen\"",
+    "einheit": null,
+    "entscheidung": "ENT-077",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   },
+   "dicke_mm": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "fuegeverfahren": {
+    "wert": "\"Laser auf Wickelstirn; Kathoden-Tab punktgeschweißt an Pol, Anoden-Tab an Becher\"",
+    "einheit": null,
+    "entscheidung": "ENT-078",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   }
+  },
+  "BT-132": {
+   "werkstoff": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "art": {
+    "wert": "\"Isolier-/Dichtring am Pluspol; Anoden-Kathoden-Isolation oben\"",
+    "einheit": null,
+    "entscheidung": "ENT-079",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   }
+  },
+  "BT-140": {
+   "durchmesser_mm": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "oeffnungsdruck_kPa": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "lage": {
+    "wert": "\"Boden\"",
+    "einheit": null,
+    "entscheidung": "ENT-080",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   }
+  },
+  "BT-200": {
+   "verschaltung": {
+    "wert": "maeander",
+    "einheit": null,
+    "entscheidung": "ENT-145",
+    "status": "vorgeschlagen",
+    "variante": "NMC"
+   },
+   "zellen_anzahl": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "reihen_anzahl": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-210": {
+   "zellen_je_reihe": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "zellteilung_mm": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-220": {
+   "werkstoff": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "dicke_mm": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-230": {
+   "werkstoff": {
+    "wert": "\"Gap-Pad, elektrisch isolierend\"",
+    "einheit": null,
+    "entscheidung": "ENT-095",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   },
+   "dicke_mm": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "waermeleitfaehigkeit_W_mK": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-240": {
+   "art": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "vorspannkraft_kN": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "endplatte_dicke_mm": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-250": {
+   "werkstoff": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "anordnung": {
+    "wert": "\"Träger unten + Verguss\"",
+    "einheit": null,
+    "entscheidung": "ENT-092",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   },
+   "zellabstand_mm": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "hoehe_mm": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-300": {
+   "architektur": {
+    "wert": "zentral_BMS_CMU_Daisy-Chain",
+    "einheit": null,
+    "entscheidung": "ENT-110",
+    "status": "vorgeschlagen"
+   }
+  },
+  "BT-310": {
+   "laenge_mm": {
+    "wert": 200.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-139",
+    "status": "vorgeschlagen"
+   },
+   "breite_mm": {
+    "wert": 150.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-140",
+    "status": "vorgeschlagen"
+   },
+   "hoehe_mm": {
+    "wert": 20.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-141",
+    "status": "vorgeschlagen"
+   },
+   "einbauort": {
+    "wert": "deckel_hinten",
+    "einheit": null,
+    "entscheidung": "ENT-138",
+    "status": "vorgeschlagen"
+   }
+  },
+  "BT-320": {
+   "anzahl": {
+    "wert": 13.0,
+    "einheit": "-",
+    "entscheidung": "ENT-113",
+    "status": "vorgeschlagen",
+    "variante": "NMC"
+   },
+   "kanaele": {
+    "wert": 18.0,
+    "einheit": "-",
+    "entscheidung": "ENT-111",
+    "status": "vorgeschlagen"
+   },
+   "ausgleich": {
+    "wert": "passiv",
+    "einheit": null,
+    "entscheidung": "ENT-114",
+    "status": "vorgeschlagen"
+   },
+   "ausgleichsstrom_mA": {
+    "wert": 130.0,
+    "einheit": "mA",
+    "entscheidung": "ENT-146",
+    "status": "vorgeschlagen",
+    "variante": "NMC"
+   }
+  },
+  "BT-330": {
+   "anzahl": {
+    "wert": 52.0,
+    "einheit": "-",
+    "entscheidung": "ENT-117",
+    "status": "vorgeschlagen",
+    "variante": "NMC"
+   },
+   "zellen_je_fuehler": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-340": {
+   "prinzip": {
+    "wert": "Shunt_Hall_redundant",
+    "einheit": null,
+    "entscheidung": "ENT-118",
+    "status": "vorgeschlagen"
+   },
+   "messbereich_A": {
+    "wert": 500.0,
+    "einheit": "A",
+    "entscheidung": "ENT-119",
+    "status": "vorgeschlagen"
+   }
+  },
+  "BT-350": {
+   "ansprechwert_kOhm": {
+    "wert": 400.0,
+    "einheit": "kOhm",
+    "entscheidung": "ENT-120",
+    "status": "vorgeschlagen"
+   }
+  },
+  "BT-360": {
+   "art": {
+    "wert": "FPC",
+    "einheit": null,
+    "entscheidung": "ENT-121",
+    "status": "vorgeschlagen"
+   },
+   "breite_mm": {
+    "wert": 20.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-122",
+    "status": "vorgeschlagen",
+    "variante": "NMC"
+   }
+  },
+  "BT-400": {},
+  "BT-410": {
+   "werkstoff": {
+    "wert": "\"Al\"",
+    "einheit": null,
+    "entscheidung": "ENT-093",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   },
+   "breite_mm": {
+    "wert": 12.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-099",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   },
+   "dicke_mm": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "verbindung": {
+    "wert": "\"Laserschweißen\"",
+    "einheit": null,
+    "entscheidung": "ENT-094",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   }
+  },
+  "BT-420": {
+   "werkstoff": {
+    "wert": "\"Al\"",
+    "einheit": null,
+    "entscheidung": "ENT-098",
+    "status": "entschieden (Mensch)"
+   },
+   "breite_mm": {
+    "wert": 25.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-096",
+    "status": "entschieden (Mensch)"
+   },
+   "dicke_mm": {
+    "wert": 3.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-097",
+    "status": "entschieden (Mensch)"
+   }
+  },
+  "BT-430": {
+   "querschnitt_mm2": {
+    "wert": 35.0,
+    "einheit": "mm2",
+    "entscheidung": "ENT-101",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   },
+   "biegeradius_min_mm": {
+    "wert": 60.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-143",
+    "status": "vorgeschlagen",
+    "variante": "NMC"
+   },
+   "werkstoff": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-500": {
+   "bauweise": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-510": {
+   "werkstoff": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "fertigung": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "wandstaerke_mm": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "bodendicke_mm": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-520": {
+   "werkstoff": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "dicke_mm": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "dichtung": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-530": {
+   "anzahl": {
+    "wert": 3.0,
+    "einheit": null,
+    "entscheidung": "ENT-082",
+    "status": "entschieden (Mensch)"
+   },
+   "werkstoff": {
+    "wert": "\"Al-Strangpressprofil\"",
+    "einheit": null,
+    "entscheidung": "ENT-086",
+    "status": "entschieden (Mensch)"
+   },
+   "breite_mm": {
+    "wert": 26.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-083",
+    "status": "entschieden (Mensch)"
+   },
+   "hoehe_mm": {
+    "wert": 54.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-084",
+    "status": "entschieden (Mensch)"
+   },
+   "wandstaerke_mm": {
+    "wert": 2.5,
+    "einheit": "mm",
+    "entscheidung": "ENT-085",
+    "status": "entschieden (Mensch)"
+   }
+  },
+  "BT-540": {
+   "werkstoff": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "breite_mm": {
+    "wert": 30.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-087",
+    "status": "entschieden (Mensch)"
+   },
+   "hoehe_mm": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "wandstaerke_mm": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "kammern": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-550": {
+   "werkstoff": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "dicke_mm": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "abstand_mm": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-560": {
+   "anzahl": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "lagerung": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "schraube": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-570": {
+   "anzahl": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-600": {
+   "kuehlart": {
+    "wert": "\"Kühlplatte oben und unten\"",
+    "einheit": null,
+    "entscheidung": "ENT-088",
+    "status": "entschieden (Mensch)"
+   }
+  },
+  "BT-610": {
+   "anzahl": {
+    "wert": 2.0,
+    "einheit": null,
+    "entscheidung": "ENT-089",
+    "status": "entschieden (Mensch)"
+   },
+   "werkstoff": {
+    "wert": "\"Al, gelötet, parallele Kanäle quer, 1 Durchgang\"",
+    "einheit": null,
+    "entscheidung": "ENT-106",
+    "status": "vorgeschlagen"
+   },
+   "dicke_mm": {
+    "wert": 8.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-090",
+    "status": "entschieden (Mensch)"
+   },
+   "kanal_anzahl": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "kanal_breite_mm": {
+    "wert": 4.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-104",
+    "status": "vorgeschlagen"
+   },
+   "kanal_hoehe_mm": {
+    "wert": 5.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-105",
+    "status": "vorgeschlagen"
+   }
+  },
+  "BT-620": {
+   "anordnung": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "durchmesser_mm": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-630": {
+   "durchmesser_ein_mm": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "durchmesser_aus_mm": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-640": {
+   "anzahl": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-650": {
+   "medium": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "fuellmenge_L": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-660": {
+   "durchfluss_L_min": {
+    "wert": 20.0,
+    "einheit": "L/min",
+    "entscheidung": "ENT-108",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   },
+   "eintritt_max_C": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-700": {},
+  "BT-710": {
+   "laenge_mm": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "breite_mm": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "hoehe_mm": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "einbauort": {
+    "wert": "deckel_hinten",
+    "einheit": null,
+    "entscheidung": "ENT-144",
+    "status": "entschieden (Mensch)",
+    "variante": "NMC"
+   }
+  },
+  "BT-711": {
+   "nennstrom_A": {
+    "wert": 250.0,
+    "einheit": "A",
+    "entscheidung": "ENT-123",
+    "status": "vorgeschlagen"
+   },
+   "nennspannung_V": {
+    "wert": 1000.0,
+    "einheit": "V",
+    "entscheidung": "ENT-124",
+    "status": "vorgeschlagen"
+   }
+  },
+  "BT-712": {
+   "widerstand_Ohm": {
+    "wert": 100.0,
+    "einheit": "Ohm",
+    "entscheidung": "ENT-125",
+    "status": "vorgeschlagen"
+   },
+   "vorladezeit_ms": {
+    "wert": 300.0,
+    "einheit": "ms",
+    "entscheidung": "ENT-126",
+    "status": "vorgeschlagen"
+   }
+  },
+  "BT-713": {
+   "art": {
+    "wert": "Pyro_plus_Schmelzsicherung",
+    "einheit": null,
+    "entscheidung": "ENT-127",
+    "status": "vorgeschlagen"
+   },
+   "nennstrom_A": {
+    "wert": 315.0,
+    "einheit": "A",
+    "entscheidung": "ENT-129",
+    "status": "vorgeschlagen",
+    "variante": "NMC"
+   }
+  },
+  "BT-720": {
+   "nennstrom_A": {
+    "wert": 250.0,
+    "einheit": "A",
+    "entscheidung": "ENT-130",
+    "status": "vorgeschlagen"
+   },
+   "einbauort": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-730": {
+   "anzahl": {
+    "wert": 2.0,
+    "einheit": "-",
+    "entscheidung": "ENT-132",
+    "status": "vorgeschlagen"
+   },
+   "nennstrom_A": {
+    "wert": 250.0,
+    "einheit": "A",
+    "entscheidung": "ENT-133",
+    "status": "vorgeschlagen"
+   }
+  },
+  "BT-740": {
+   "polzahl": {
+    "wert": 26.0,
+    "einheit": "-",
+    "entscheidung": "ENT-134",
+    "status": "vorgeschlagen"
+   }
+  },
+  "BT-750": {
+   "durchmesser_mm": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "oeffnungsdruck_kPa": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "auslassrichtung": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-760": {
+   "art": {
+    "wert": "PTC_im_Kuehlkreis_Fahrzeug",
+    "einheit": null,
+    "entscheidung": "ENT-135",
+    "status": "vorgeschlagen"
+   },
+   "leistung_kW": {
+    "wert": 5.0,
+    "einheit": "kW",
+    "entscheidung": "ENT-136",
+    "status": "vorgeschlagen"
+   }
+  },
+  "BT-770": {
+   "prinzip": {
+    "wert": "Druck_plus_H2_CO2",
+    "einheit": null,
+    "entscheidung": "ENT-137",
+    "status": "vorgeschlagen"
+   }
+  },
+  "BT-780": {}
+ },
+ "A": {
+  "A_deckel_mm": {
+   "wert": 2,
+   "herkunft": "M0 eingaben.json hoehenstapel_mm.deckel (Annahme)"
+  },
+  "A_boden_mm": {
+   "wert": 3,
+   "herkunft": "M0 eingaben.json hoehenstapel_mm.boden (Annahme)"
+  },
+  "A_unterfahrschutz_mm": {
+   "wert": 3,
+   "herkunft": "M0 eingaben.json (Annahme)"
+  },
+  "A_luft_mm": {
+   "wert": 5,
+   "herkunft": "M0 eingaben.json (Annahme)"
+  },
+  "A_kuehlplatte_mm": {
+   "wert": 8,
+   "herkunft": "M0 eingaben.json (Annahme); Vollmaterial, real hohl"
+  },
+  "A_pad_mm": {
+   "wert": 1,
+   "herkunft": "M0 eingaben.json waermeleitschicht_je (Annahme)"
+  },
+  "A_rand_mm": {
+   "wert": 30,
+   "herkunft": "M0 eingaben.json rand_mm (Annahme)"
+  },
+  "A_hoehe_max_mm": {
+   "wert": 130,
+   "herkunft": "M0 eingaben.json (Annahme)"
+  },
+  "A_quertraeger_anzahl": {
+   "wert": 3,
+   "herkunft": "M0 eingaben.json (Annahme Opus)"
+  },
+  "A_quertraeger_hoehe_mm": {
+   "wert": 54,
+   "herkunft": "M0 eingaben.json (W22, US9045030)"
+  },
+  "A_quertraeger_breite_mm": {
+   "wert": 26,
+   "herkunft": "M0 eingaben.json (W22, US9045030)"
+  },
+  "A_quertraeger_wand_mm": {
+   "wert": 2.5,
+   "herkunft": "M0 eingaben.json (Annahme, Mitte 2-3 mm)"
+  },
+  "A_quertraeger_spiel_mm": {
+   "wert": 2,
+   "herkunft": "M0 eingaben.json (Annahme)"
+  },
+  "A_alu_dichte_kg_m3": {
+   "wert": 2700,
+   "herkunft": "M0 eingaben.json (Annahme)"
+  },
+  "A_zellabstand_LFP_mm": {
+   "wert": 1.0,
+   "herkunft": "M0 eingaben.json (G1)"
+  },
+  "A_zellabstand_NMC_mm": {
+   "wert": 2.0,
+   "herkunft": "M0 eingaben.json (G1)"
+  },
+  "A_zellzahl_LFP": {
+   "wert": 250,
+   "herkunft": "M0 eingaben.json (G1)"
+  },
+  "A_zellzahl_NMC": {
+   "wert": 868,
+   "herkunft": "M0 eingaben.json (G1 Fall A)"
+  },
+  "A_zellverbinder_LFP_mm": {
+   "wert": [
+    25,
+    3
+   ],
+   "herkunft": "AUFTRAG G4: Querschnitt 25 x 3 (Breite x Dicke)"
+  },
+  "A_gruppenverbinder_NMC_mm": {
+   "wert": [
+    25,
+    3
+   ],
+   "herkunft": "AUFTRAG G4: Querschnitt 25 x 3 (Breite x Dicke)"
+  },
+  "A_zellabgriff_NMC_mm": {
+   "wert": [
+    12,
+    1
+   ],
+   "herkunft": "AUFTRAG G4: 12 x 1 (Durchmesser x Dicke, Scheibe auf dem Pluspol)"
+  },
+  "A_vergusshoehe_anteil_NMC": {
+   "wert": 0.5,
+   "herkunft": "AUFTRAG G4: Verguss bis halbe Zellhöhe (Annahme)"
+  },
+  "A_KUEHLPLATTE_FUELLGRAD": {
+   "wert": 0.4,
+   "herkunft": "Annahme Opus 2026-11-17: 2 Bleche je 1,5 mm + Kanalstege, Füllgrad 0,4 (Masse = Volumen x Füllgrad x Al-Dichte)"
+  },
+  "A_seitenrahmen_wand_mm": {
+   "wert": 2.5,
+   "herkunft": "Annahme Opus 2026-11-17: Mehrkammerprofil, Wand 2,5 mm (W22-Wandbereich)"
+  },
+  "A_seitenrahmen_kammern": {
+   "wert": 3,
+   "herkunft": "Annahme Opus 2026-11-17: 3 Kammern über die Rahmenbreite"
+  },
+  "A_dichte_pad_kg_m3": {
+   "wert": 2500,
+   "herkunft": "Annahme Opus 2026-11-17"
+  },
+  "A_dichte_zelltraeger_kg_m3": {
+   "wert": 1200,
+   "herkunft": "Annahme Opus 2026-11-17 (PC)"
+  },
+  "A_dichte_verguss_kg_m3": {
+   "wert": 300,
+   "herkunft": "Annahme Opus 2026-11-17 (PU-Schaum)"
+  },
+  "A_e2_schuetz_mm": {
+   "wert": [
+    80,
+    60,
+    75
+   ],
+   "herkunft": "ERW-E2 N1 Hauptschütz"
+  },
+  "A_e2_schuetz_masse_kg": {
+   "wert": 0.45,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_vorladeschuetz_mm": {
+   "wert": [
+    40,
+    30,
+    40
+   ],
+   "herkunft": "ERW-E2 N1 Vorladeschütz"
+  },
+  "A_e2_vorladewiderstand_mm": {
+   "wert": [
+    60,
+    20,
+    20
+   ],
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_vorlade_masse_kg": {
+   "wert": 0.15,
+   "herkunft": "ERW-E2 N1 (Schütz + Widerstand zusammen)"
+  },
+  "A_e2_pyro_mm": {
+   "wert": [
+    30,
+    30,
+    80
+   ],
+   "herkunft": "ERW-E2 N1 Pyrosicherung Ø30 x 80, als Quader 30 x 30 x 80 (Vereinfachung)"
+  },
+  "A_e2_pyro_masse_kg": {
+   "wert": 0.15,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_schmelz_mm": {
+   "wert": [
+    30,
+    30,
+    85
+   ],
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_schmelz_masse_kg": {
+   "wert": 0.1,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_shunt_mm": {
+   "wert": [
+    80,
+    40,
+    15
+   ],
+   "herkunft": "ERW-E2 N1 Shunt mit Messplatine"
+  },
+  "A_e2_shunt_masse_kg": {
+   "wert": 0.1,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_bms_masse_kg": {
+   "wert": 0.4,
+   "herkunft": "ERW-E2 N1 BMS-Platine (Maße aus Akte BT-310)"
+  },
+  "A_e2_cmu_mm": {
+   "wert": [
+    120,
+    60,
+    10
+   ],
+   "herkunft": "ERW-E2 N1 CMU-Platine"
+  },
+  "A_e2_cmu_masse_kg": {
+   "wert": 0.08,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_fpc_dicke_mm": {
+   "wert": 0.3,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_fpc_masse_kg_m": {
+   "wert": 0.05,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_fpc_halter_mm": {
+   "wert": 3.0,
+   "herkunft": "ERW-E2 N1 (FPC plus Halter)"
+  },
+  "A_e2_hv250_mm": {
+   "wert": [
+    90,
+    70,
+    60
+   ],
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_hv250_masse_kg": {
+   "wert": 0.4,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_hv40_mm": {
+   "wert": [
+    50,
+    40,
+    40
+   ],
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_hv40_masse_kg": {
+   "wert": 0.15,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_nv_mm": {
+   "wert": [
+    50,
+    30,
+    40
+   ],
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_nv_masse_kg": {
+   "wert": 0.05,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_trennstecker_mm": {
+   "wert": [
+    80,
+    50,
+    60
+   ],
+   "herkunft": "ERW-E2 N1, oben zugänglich (Deckelöffnung)"
+  },
+  "A_e2_trennstecker_masse_kg": {
+   "wert": 0.2,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_bruecke_luecke_mm": {
+   "wert": 30,
+   "herkunft": "ERW-E2 N3 (Platzhalter Opus/Sonnet): Lücke im Querverbinder LFP für die Service-Trennbrücke"
+  },
+  "A_e2_bruecke_ueberlappung_mm": {
+   "wert": 25,
+   "herkunft": "ERW-E2 N3: Überlappung Brücke auf Querverbinder je Seite"
+  },
+  "A_e2_bruecke_querschnitt_mm": {
+   "wert": [
+    25,
+    3
+   ],
+   "herkunft": "ERW-E2 N3: Cu-Brücke 25 x 3, 2 x M8 (je Seite eine Schraube), HV-Interlock-Kontakt nicht modelliert"
+  },
+  "A_e2_serviceoeffnung_mm": {
+   "wert": [
+    120,
+    80
+   ],
+   "herkunft": "ERW-E2 N3: Öffnung 120 (y) x 80 (x) durch Pad, obere Kühlplatte, Deckel; Servicedeckel flach, bündig, Dicke = A_deckel_mm"
+  },
+  "A_e2_lasche_mm": {
+   "wert": [
+    25,
+    3
+   ],
+   "herkunft": "ERW-E2 N3: Anschlusslasche Querschnitt wie Verbinder 25 x 3, Überlappung 25 mm, Bohrung M8"
+  },
+  "A_e2_lasche_bohrung_mm": {
+   "wert": 8,
+   "herkunft": "ERW-E2 N3: Bohrung M8 (Nennmaß 8, Durchgangsloch nicht gesetzt)"
+  },
+  "A_e2_lasche_ueberlappung_mm": {
+   "wert": 25,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2_gas_mm": {
+   "wert": [
+    30,
+    30,
+    20
+   ],
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_gas_masse_kg": {
+   "wert": 0.03,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_hv_aussendurchmesser_LFP_mm": {
+   "wert": 14,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_hv_aussendurchmesser_NMC_mm": {
+   "wert": 12,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_box_wand_mm": {
+   "wert": 2,
+   "herkunft": "ERW-E2 N1 Schaltbox Al, Wand 2 mm"
+  },
+  "A_e2_box_rand_mm": {
+   "wert": 15,
+   "herkunft": "ERW-E2 N1 Rand 15 mm um den Inhalt"
+  },
+  "A_e2_box_hoehe_max_mm": {
+   "wert": 90,
+   "herkunft": "ERW-E2 N1 H ≤ 90"
+  },
+  "A_e2_box_teilabstand_mm": {
+   "wert": 10,
+   "herkunft": "NEUE ANNAHME (Platzhalter, in ERW-E2 N1 nicht gesetzt; Opus entscheiden): Abstand zwischen den Teilen in der Schaltbox"
+  },
+  "A_traeger_dicke_NMC_mm": {
+   "wert": 2.5,
+   "herkunft": "NEUE ANNAHME (Platzhalter, in M0 nicht gesetzt; Opus entscheiden)"
+  },
+  "A_e2d_schuetz_bolzen_n": {
+   "wert": 2,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_schuetz_bolzen_abstand_mm": {
+   "wert": 40,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_schuetz_bolzen_d_mm": {
+   "wert": 8,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_schuetz_bolzen_h_mm": {
+   "wert": 15,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_schuetz_fusslaschen_n": {
+   "wert": 2,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_schuetz_fusslasche_gewinde_mm": {
+   "wert": 5,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_schuetz_spulenstecker_mm": {
+   "wert": [
+    15,
+    10,
+    12
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_fusslasche_mm": {
+   "wert": [
+    20,
+    9,
+    2
+   ],
+   "herkunft": "abgeleitet (Sonnet): Laschenbreite 20, Auskragung 9 (< Teilabstand 10), Dicke 2; Bohrung M5 nicht in N3 bemaßt"
+  },
+  "A_e2d_schiene_cu_LFP_mm": {
+   "wert": [
+    25,
+    3
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_schiene_cu_NMC_mm": {
+   "wert": [
+    20,
+    3
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_schiene_bohrung_mm": {
+   "wert": 8.5,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_schiene_biegeradius_innen_faktor_dicke": {
+   "wert": 1.0,
+   "herkunft": "ERW-E2 N3: Biegeradius innen = Dicke"
+  },
+  "A_e2d_schrumpfschlauch_mm": {
+   "wert": 0.5,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_pyro_lasche_gewinde_mm": {
+   "wert": 8,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_lasche_pyro_schmelz_mm": {
+   "wert": [
+    25,
+    3,
+    25
+   ],
+   "herkunft": "abgeleitet (Sonnet): Laschen = Querschnitt der Schiene Cu 25 x 3 (LFP) bzw. 20 x 3 (NMC) hat Vorrang; Auskragung 25 ohne Vorgabe"
+  },
+  "A_e2d_schmelz_halter_mm": {
+   "wert": [
+    40,
+    40,
+    95
+   ],
+   "herkunft": "ERW-E2 N3: Schmelzsicherung im Kunststoffhalter"
+  },
+  "A_e2d_schmelz_wand_mm": {
+   "wert": 5,
+   "herkunft": "abgeleitet (Sonnet): Halterwand = (40 - 30) / 2 aus Halter 40 und Sicherung 30"
+  },
+  "A_e2d_shunt_steg_mm": {
+   "wert": 3,
+   "herkunft": "ERW-E2 N3: Manganin-Steg 3 mm zwischen Cu-Enden M8"
+  },
+  "A_e2d_shunt_platine_mm": {
+   "wert": [
+    80,
+    40,
+    1.6
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_shunt_stecker_pol": {
+   "wert": 4,
+   "herkunft": "ERW-E2 N3 (Stecker 4-polig, Maße fehlen)"
+  },
+  "A_e2d_bms_platine_dicke_mm": {
+   "wert": 1.6,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_bms_abstandsbolzen": {
+   "wert": [
+    4,
+    4,
+    8
+   ],
+   "herkunft": "ERW-E2 N3: 4 Stück M4, Höhe 8"
+  },
+  "A_e2d_bms_abstandsbolzen_aussen_mm": {
+   "wert": 7,
+   "herkunft": "abgeleitet (Sonnet): Außendurchmesser Sechskant SW7 (Gedächtnis-Normmaß, nicht belegt)"
+  },
+  "A_e2d_bms_abstandsbolzen_einzug_mm": {
+   "wert": 5,
+   "herkunft": "abgeleitet (Sonnet): Lage 5 mm von der Platinenkante, Lage nicht in N3"
+  },
+  "A_e2d_bms_stecker_mm": {
+   "wert": [
+    30,
+    15,
+    12
+   ],
+   "herkunft": "ERW-E2 N3: Stecker 26-polig und 2 x Daisy-Chain 12-polig je 30 x 15 x 12 (Lesart: Maß gilt für alle drei)"
+  },
+  "A_e2d_box_flansch_mm": {
+   "wert": 12,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_box_deckel_mm": {
+   "wert": 2,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_box_dichtung_mm": {
+   "wert": [
+    3,
+    3
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_box_schraube_teilung_mm": {
+   "wert": 60,
+   "herkunft": "ERW-E2 N3: M5 alle 60 mm"
+  },
+  "A_e2d_box_schraube_gewinde_mm": {
+   "wert": 5,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_box_flansch_dicke_mm": {
+   "wert": 2,
+   "herkunft": "abgeleitet (Sonnet): Flanschdicke = Wanddicke A_e2_box_wand_mm 2 mm"
+  },
+  "A_e2d_box_druckausgleich_d_mm": {
+   "wert": 20,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_m5_kopf_mm": {
+   "wert": [
+    8.5,
+    5
+   ],
+   "herkunft": "abgeleitet (Sonnet): Zylinderkopf M5: Ø 8,5 x 5 (Gedächtnis-Normmaß ISO 4762, nicht belegt)"
+  },
+  "A_e2d_m4_kopf_mm": {
+   "wert": [
+    7,
+    4
+   ],
+   "herkunft": "abgeleitet (Sonnet): Zylinderkopf M4: Ø 7 x 4 (Gedächtnis-Normmaß ISO 4762, nicht belegt)"
+  },
+  "A_e2d_m8_kopf_mm": {
+   "wert": [
+    13,
+    8
+   ],
+   "herkunft": "abgeleitet (Sonnet): Zylinderkopf M8: Ø 13 x 8 (Gedächtnis-Normmaß ISO 4762, nicht belegt)"
+  },
+  "A_e2d_m8_scheibe_mm": {
+   "wert": [
+    16,
+    1.6
+   ],
+   "herkunft": "abgeleitet (Sonnet): Scheibe M8: Ø 16 x 1,6 (Gedächtnis-Normmaß ISO 7089, nicht belegt)"
+  },
+  "A_e2d_kabelschuh_huelse_mm": {
+   "wert": 40,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_kabelschuh_lasche_mm": {
+   "wert": [
+    20,
+    4
+   ],
+   "herkunft": "ERW-E2 N3: Lasche 20 breit x 4 dick"
+  },
+  "A_e2d_kabelschuh_lasche_laenge_mm": {
+   "wert": 20,
+   "herkunft": "abgeleitet (Sonnet): Palme quadratisch 20 x 20"
+  },
+  "A_e2d_kabel_biegeradius_faktor_D": {
+   "wert": 5,
+   "herkunft": "ERW-E2 N3: R >= 5 D"
+  },
+  "A_e2d_kabel_schichten": {
+   "wert": [
+    "Leiter",
+    "Isolierung",
+    "Schirm",
+    "Mantel"
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_kabel_wand_teilung": {
+   "wert": 3,
+   "herkunft": "abgeleitet (Sonnet): Radialwand zwischen Leiter und Außendurchmesser in drei gleiche Teile (Isolierung, Schirm, Mantel); N3 nennt keine Schichtdicken"
+  },
+  "A_e2d_clip_mm": {
+   "wert": [
+    20,
+    15,
+    10
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_clip_abstand_mm": {
+   "wert": 200,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_fpc_tab_mm": {
+   "wert": [
+    8,
+    4,
+    0.2
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_ntc_mm": {
+   "wert": [
+    3,
+    2,
+    1
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_ntc_je_cmu": {
+   "wert": 4,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_fpc_stecker_mm": {
+   "wert": [
+    25,
+    8,
+    6
+   ],
+   "herkunft": "ERW-E2 N3: 20-polig, an der CMU"
+  },
+  "A_e2d_daisy_d_mm": {
+   "wert": 4,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_daisy_stecker_mm": {
+   "wert": [
+    15,
+    8,
+    8
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_daisy_r_min_mm": {
+   "wert": 20,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_hv250_flansch_mm": {
+   "wert": [
+    90,
+    70,
+    8
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_hv250_schrauben": {
+   "wert": [
+    4,
+    5
+   ],
+   "herkunft": "ERW-E2 N3: 4 x M5"
+  },
+  "A_e2d_hv250_koerper_mm": {
+   "wert": [
+    50,
+    60
+   ],
+   "herkunft": "ERW-E2 N3: Ø 50 x 60, 90 Grad gewinkelt (liegend)"
+  },
+  "A_e2d_hv250_hebel_mm": {
+   "wert": [
+    60,
+    10,
+    10
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_hv250_oring_mm": {
+   "wert": [
+    60,
+    3
+   ],
+   "herkunft": "abgeleitet (Sonnet): O-Ring Mittendurchmesser 60, Schnur 3 (Schnur = Dichtungsmaß 3 aus N3)"
+  },
+  "A_e2d_hv40_flansch_mm": {
+   "wert": [
+    50,
+    40,
+    6
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_hv40_schrauben": {
+   "wert": [
+    4,
+    4
+   ],
+   "herkunft": "ERW-E2 N3: 4 x M4"
+  },
+  "A_e2d_nv_flansch_mm": {
+   "wert": [
+    50,
+    30,
+    5
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_nv_schrauben": {
+   "wert": [
+    2,
+    4
+   ],
+   "herkunft": "ERW-E2 N3: 2 x M4"
+  },
+  "A_e2d_stecker_schraube_einzug_mm": {
+   "wert": 5,
+   "herkunft": "abgeleitet (Sonnet): Schrauben 5 mm von der Flanschkante"
+  },
+  "A_e2d_stecker_koerper_einzug_mm": {
+   "wert": 8,
+   "herkunft": "abgeleitet (Sonnet): Körper von HV 40 A / NV: Flanschfläche minus 8 mm je Kante (Platz für Schraubenköpfe); Höhe = Hülle aus N1 minus Flansch"
+  },
+  "A_e2d_bruecke_mm": {
+   "wert": [
+    25,
+    3,
+    80
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_bruecke_schrauben": {
+   "wert": [
+    2,
+    8
+   ],
+   "herkunft": "ERW-E2 N3: 2 x M8 mit Scheibe"
+  },
+  "A_e2d_hvil_mm": {
+   "wert": [
+    15,
+    10,
+    8
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_servicedeckel_mm": {
+   "wert": [
+    120,
+    80,
+    2
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_servicedeckel_schrauben": {
+   "wert": [
+    6,
+    5
+   ],
+   "herkunft": "ERW-E2 N3: 6 x M5 (Senkkopf bündig, Kopfhöhe = Deckeldicke)"
+  },
+  "A_e2d_servicedeckel_dichtung_mm": {
+   "wert": [
+    3,
+    3
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_servicedeckel_rand_mm": {
+   "wert": 12,
+   "herkunft": "abgeleitet (Sonnet): Rand des Haupt-Deckels um die Serviceöffnung für Dichtung (3) und Senkschrauben; Öffnung im Deckel = 120 x 80 minus 2 x 12"
+  },
+  "A_e2d_omega_h_mm": {
+   "wert": 4,
+   "herkunft": "ERW-E2 N3: Dehnbogen (Omega) h 4"
+  },
+  "A_e2d_schweiss_mm": {
+   "wert": [
+    10,
+    1,
+    0.2,
+    2
+   ],
+   "herkunft": "ERW-E2 N3: 2 Linien 10 x 1, Vertiefung 0,2 je Pol"
+  },
+  "A_e2d_schweiss_abstand_mm": {
+   "wert": 5,
+   "herkunft": "abgeleitet (Sonnet): Abstand der zwei Linien 5 mm (Mitte zu Mitte)"
+  },
+  "A_e2d_beruehrschutz_dicke_mm": {
+   "wert": 1,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_lasche_lfp_gewinde_mm": {
+   "wert": 8,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_lasche_ueberlappung_mm": {
+   "wert": 25,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_fenster": {
+   "wert": "letztes Feld (hinten)",
+   "herkunft": "abgeleitet (Sonnet): Zellverbinder-Details (Omega, Schweißnaht, Berührschutz) nur im hintersten Querträger-Feld voll, sonst vereinfacht; Auftrag AUFTRAG.md Fortsetzung 5 erlaubt das bei zu großer Datei"
+  }
+ }
+}

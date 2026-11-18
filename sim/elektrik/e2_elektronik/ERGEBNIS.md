@@ -1,8 +1,8 @@
-| Dok.-Nr. | ERG-E2 | Version | 0.4 | Status | Entwurf |
+| Dok.-Nr. | ERG-E2 | Version | 1.1 | Status | Entwurf |
 |---|---|---|---|---|---|
-| Titel | Ergebnis E2 (Rechnung, Akten, CAD Schaltbox hinten, CMU, FPC, HV intern, Bilder) | Ersteller | Claude Sonnet (KI) | Prüfer | Opus (offen) |
+| Titel | Ergebnis E2 (Rechnung, Akten, CAD Schaltbox hinten, CMU, FPC, HV intern, Bilder) | Ersteller | Claude Sonnet (KI) | Prüfer | Opus (offen; v1.0 Stichprobe 2026-11-18, B-BAT-027) |
 
-> KI-generiert (Claude Sonnet, 2026-11-18). Entwurf. Die Abschnitte „Version 0.2“ (Fall b vorn, ENT-109) und „Version 0.3“ sind überholt; maßgebend ist „Version 0.4“ am Ende. Zahlen aus `ergebnis.json` (dieser Ordner), erzeugt von `elektronik.py` aus `eingaben.json`.
+> KI-generiert (Claude Sonnet, 2026-11-18). Entwurf. Die Abschnitte „Version 0.2“ (Fall b vorn, ENT-109) und „Version 0.3“ sind überholt; maßgebend ist „Version 1.0 (Fortsetzung 4)“ am Ende; sie ersetzt in v0.4 die Aussagen zu Trennstecker LFP, Laschen, Nut, Al-Verlust. Zahlen aus `ergebnis.json` (dieser Ordner), erzeugt von `elektronik.py` aus `eingaben.json`.
 
 ## Abgleich mit ERWARTUNG.md
 | Punkt | Erwartung | LFP | NMC | Urteil |
@@ -186,6 +186,93 @@ LFP-Elektronikmasse im Detail (`e2.masse_elektronik_*`): ohne HV-Leiter 5.898 kg
 5. LFP-Elektronikmasse 6,42 kg: 0,6 kg unter dem Band 7–12 kg; Halter-Masse (0,05 kg/m enthalten?) und Isolierung der Leiter ohne Wert.
 6. ENT-138 (BMS vorn) widerspricht ENT-144/ENT-109, ENT-147 (aus v0.3) und ENT-122-Änderung (diese Version) warten auf Bestätigung.
 7. NMC-Brücken: Streifenform und 25 mm Breite aus G4 übernommen, Wendebrücken ohne Gruppen-Spaltenwechsel (jede Spalte hat 32 Zellen, Gruppen à 4 teilen sich glatt).
+
+## Version 1.0 (2026-11-18, Auftrag „Fortsetzung 4“ mit „Änderung zu Punkt 4“)
+Quellen: `cad/pack/entwurf/ergebnis_LFP_e2.json`, `ergebnis_NMC_e2.json` (Block `e2`), `verlust_al.json` (dieser Ordner, erzeugt von `verlust_al.py` aus `e1_querschnitte/eingaben.json`, `ergebnis.json` und den CAD-Ergebnissen). Läufe 2026-11-18 (nice, `systemd-run --user --scope`, nur CPU): `pack.py` PACK_E2=1 LFP 4 s, NMC 172 s, Blender Cycles 24 Samples je Variante ca. 2 min. FCStd: `cad/pack/entwurf/pack_LFP_e2.FCStd`, `cad/pack/entwurf/pack_NMC_e2.FCStd`; STEP und Netze in `/home/cae/cae_projekte/batterie/e2/` (Links in `cad/pack/entwurf/`).
+
+**1. Akten:** ENT-150 (BT-720 `einbauort` = `trennbruecke_servicedeckel_vorn`, nur LFP, vorgeschlagen, ersetzt ENT-131 für LFP). ENT-131 (Reihenmitte, alle Varianten) auf `variante: [NMC]` gesetzt, gleiches Vorgehen wie ENT-122/ENT-149; bitte bestätigen. `pm.py pruefe`: 150 Entscheidungen, 0 Fehler; `register` gelaufen. **Merkmal „bauform“ fehlt für BT-720 in `struktur.json`** (Auftrag nennt „bauform“); nicht angelegt, deshalb unter `einbauort`. Annahmen „ERW-E2 N3“ als `A_e2_*` in `cad/pack/entwurf_parameter.py`: Brücke Cu 25 × 3, Überlappung 25 mm je Seite, **Lücke im Querverbinder 30 mm (Platzhalter, nicht in N3 gesetzt)**, Öffnung 120 (y) × 80 (x), Lasche 25 × 3, Bohrung Ø 8 (Nennmaß M8, Durchgangsloch nicht gesetzt).
+
+**2. Änderung Punkt 4, LFP-Trennbrücke:** Querverbinder vorn mit 30-mm-Lücke, Cu-Brücke 25 × 3 × 80 mm (25 mm auf jeder Seite überlappend), 2 Schrauben M8 (Ø 8, Masse offen = 0), Öffnung 120 × 80 mm durch Pad, obere Kühlplatte und Deckel, darüber ein flacher Servicedeckel (Al, Dicke wie Deckel 2 mm, bündig). HV-Interlock-Kontakt nicht modelliert. Die zwei Mittelleitungen und der Stecker entfallen.
+| Größe | LFP | Fundstelle |
+|---|---|---|
+| Höhenzuwachs über dem Deckel vorn | 0 mm | `e2.stecker_lfp.ueber_deckel_mm` |
+| Packhöhe vorn (Deckeloberkante, Servicedeckel bündig) | 121 mm (Soll ≤ 130 mm: **erfüllt**) | `hoehe_stapel_mm` 121; höchstes Teil vorn `e2.hoehe_vorn_mm` 121 |
+| Packhöhe mit Turm hinten | 210 mm (ENT-144) | `hoehe_mm` |
+| HV intern | 1.164 m (Plus 572 + Minus 572 + 20 mm), Verlust 15.07 W | `e2.hv_laenge_gesamt_m`, `e2.hv_verlust_W` (Erwartung 6–20 W: ok) |
+| Elektronikmasse mit HV-Leitern | 6.34 kg (Band 7–12 kg: 0,7 kg darunter); davon HV-Cu 0.521 kg | `e2.masse_elektronik_gesamt_kg`, `e2.masse_hv_leiter_cu_kg` |
+| Kollisionen | **0** bei 1050 Paaren | `anzahl_kollisionen` |
+Nicht belegt: ob 120 × 80 mm für das Werkzeug reicht und ob die Öffnung in der Kühlplatte (Fläche siehe 4.) thermisch zulässig ist; Dichtung des Servicedeckels nicht modelliert.
+
+**3. Anschlusslaschen (Punkt 1):** Al 25 × 3 (Querschnitt wie Verbinder, 75 mm²), Bohrung Ø 8.
+- **NMC:** Platte 25 × 25 × 3 mm auf dem Gruppenverbinder im Zellmittelpunkt (Überlappung 25 mm erfüllt), 4 Stück (Plus, Minus, 2 × Mitte); Leitung beginnt auf der Lasche (3 mm kürzer). Aussparungen: Pad und obere Kühlplatte (Pad_oben 132.0 cm³ gesamt, Kühlplatte 7.7 cm³). FPC-Spur musste verschoben werden (Abstand zur Lasche 22,5 mm statt 17 mm), Kollision FPC_06 mit Lasche vorher 20,6 mm³, jetzt 0; FPC 30.77 m (vorher 30.73 m).
+- **LFP:** Der Seitenspalt lässt nur 1 mm neben dem Zellverbinder frei (Rahmen 30 mm, Verbinder 3 mm dick, Zellen ab 34 mm). **Die geforderte Überlappung von 25 mm auf dem Zellverbinder ist dort nicht darstellbar.** Gebaut: Steg 25 (y) × 3 (x) am Ende des hintersten Zellverbinders (Stumpfstoß, wie angeschweißt), Flansch 25 × 15 × 3 mm über der FPC-Ebene mit Bohrung Ø 8 unter dem Leitungsfuß, Pfad je Lasche 65.5 mm. Beginn y hinter dem FPC-Stapel (3 mm). Bohrungsrand zum Flanschrand nur ≈ 0,8 mm (Leitung liegt bei y = 38 mm, Flansch beginnt bei 33,2 mm). → OPUS: Lage der Leitung oder Stumpfstoß-Konzept.
+
+**4. Nut LFP für K2 (Punkt 3):** Nut 2 mm tief in der oberen Kühlplatte (Querverbinder 3 mm, Pad 1 mm), Breite 25 mm, `e2.stecker_lfp.nut`: Nutfläche ohne Öffnung 31 200 mm² = **1.14 %** der oberen Kühlfläche (2 726 300 mm² = (2050 − 60) × (1430 − 60), Innenfläche). Dazu die Serviceöffnung 9 600 mm² = 0.35 %, Nut plus Öffnung 1.50 %. Volumen Aussparung Kühlplatte oben 142.5 cm³ (`aussparungen_mm3`).
+
+**5. Verlust der Al-Verbinder (Punkt 2, Dauerstrom, ρ_Al 2,82e-8 Ωm aus `e1_querschnitte/eingaben.json`; `verlust_al.json`):**
+| | Erwartung | Rechnung | Abweichung | Urteil |
+|---|---|---|---|---|
+| LFP Zellverbinder 248 × L 15 mm, 75 mm², 194 A | – | 52.6 W | – | – |
+| LFP Querverbinder Mitte 1338 mm, 75 mm² | – | 18.9 W | – | – |
+| LFP Laschen 2 × 65,5 mm | – | 1.94 W | – | – |
+| **LFP Summe Dauer** (Spitze 240 A: 112.5 W) | ≤ 50 W | **73.5 W** | **+47 %** | **verfehlt, > 30 % → OPUS** |
+| NMC mit E1-Querschnitt 45 mm² (Gruppen 362.7 W + Zellabgriff 98.3 W) | ≈ 385 W | **461.1 W** (Spitze 1459.6 W) | +19.8 % gegen 385; +30.5 % gegen E1-Al-Summe 353.3 W | Grenzfall (> 30 % gegen E1-Al), → OPUS |
+| NMC mit CAD-Querschnitt 25 × 3 = 75 mm² (Gruppen 217.6 W + Zellabgriff 98.3 W) | ≈ 385 W | 316.0 W (Spitze 1000.3 W) | −17.9 % | im Band |
+- LFP: der Querverbinder (1338 mm) ist der Posten, den E1 nicht kannte (E1: 249 Verbinder à 15 mm, 52.8 W).
+- NMC: Gruppenverbinder im Mäander länger als bei E1 (Sammelstrecke im Mittel 209.7 mm statt 192 mm, Brücken im Mittel 89.6 mm statt 48 mm, größte 190.5 mm, 217 Gruppen, 216 Brücken); Methode wie E1 (Sammelstrecke I²R/3, Brücke voller Strom, Zugabe 48 mm wie in E1). Laschen NMC 0.32 W.
+- **Widerspruch, den ich nicht entscheide:** E1 hat 15 × 3 = 45 mm² gewählt, das CAD (G4) zeichnet 25 × 3 = 75 mm². Beide Ergebnisse stehen oben. Die „≈ 385 W“ der Erwartung ist die E1-Summe aus Gruppen, Zellabgriff **und HV-Cu** (385.4 W, `e1_querschnitte/ergebnis.json` NMC_summe.verlust_W), nicht nur Al (353.3 W). Zellabgriff (98.3 W) aus E1 unverändert (Geometrie gleich).
+- Kontaktwiderstände der Schweißungen und Schrauben nicht modelliert.
+
+**6. Bilder** (alle angesehen, Höhengrenze 130 mm und Packhöhe im Schnitt beschriftet, Lesehilfe `lesehilfe.md`): `e2_<V>_gesamt|draufsicht|schnitt|detail.png`, neu `e2_LFP_bruecke.png` (Trennbrücke vorn, Servicedeckel ausgeblendet), `kabelplan_<V>.png`, `schaltbild_<V>.png` (v1.0). Das Bild `e2_LFP_bruecke.png` zeigt die Brücke ohne Zielband (Maßbild); das Zielband „≤ 130 mm vorn“ steht im Schnitt `e2_LFP_schnitt.png`.
+
+**Offen (v1.0)**
+1. LFP-Al-Verlust 73.5 W gegen ≤ 50 W (+47 %); NMC je nach Querschnittsbasis 461 W oder 316 W. Entscheidung Opus (Querschnitt NMC E1 oder G4; LFP Querverbinder breiter/dicker?).
+2. Merkmal „bauform“ in BT-720 fehlt; ENT-150 unter `einbauort`; ENT-131 auf [NMC] geändert, zu bestätigen.
+3. Lücke 30 mm, Öffnung 120 × 80 mm, Schrauben-Masse, Interlock, Dichtung: Platzhalter.
+4. LFP-Lasche: Überlappung 25 mm im Seitenspalt nicht darstellbar (Stumpfstoß); Bohrungsrand 0,8 mm.
+5. Elektronikmasse LFP 6.34 kg, 0,7 kg unter dem Band; NMC 7.15 kg (ok).
+6. Aus v0.4 weiter offen: ENT-138 gegen ENT-144; ENT-147; Halter-Masse; NMC-Hälften 413/387 V.
+
+## Version 1.1 (2026-11-18, Auftrag „Fortsetzung 5“, Konstruktionsstand E2D)
+> **KI-generiert** (Claude Sonnet, 2026-11-18), Entwurf, nicht freigegeben. Alle Zahlen aus `cad/pack/entwurf/ergebnis_<V>_e2d.json` und `sim/elektrik/e2_elektronik/verlust_al_e2d.json`; Maße nur aus ERWARTUNG.md Nachtrag 3 (Block `A_e2d_*` in `cad/pack/entwurf/parameter_<V>_e2d.json`, erzeugt von `cad/pack/entwurf_parameter_e2d.py`). Abgeleitete Maße sind dort mit „abgeleitet (Sonnet)“ gekennzeichnet und unten unter „Offen“ gelistet. Neue Dateien: `cad/pack/pack_e2d.py`, `e2d_geo.py`, `render_e2d.py`, `label_e2d.py`; die Basis (`pack.py`, `entwurf_parameter.py`, `pack_<V>_e2.FCStd`, v1.0 oben) ist unverändert. Rechnung: LFP 26 s, NMC 239 s (FreeCAD), Bilder je Variante ca. 4 bis 6 min (Blender Cycles CPU, 24 Samples, daher sichtbares Rauschen); 20-min-Grenze nicht erreicht.
+
+**1. NMC-Verbinderquerschnitt aus der Akte (Schritt 1).** `pm/bauteile/parameter.json` BT-420: breite_mm 25 (ENT-096), dicke_mm 3 (ENT-097), also 75 mm². Verlust `verlust_al_e2d.json` (ρ_Al 2,82e-8 Ωm, Dauerstrom 129,5 A):
+| | v1.0 | v1.1 | Erwartung (N3) | Urteil |
+|---|---|---|---|---|
+| NMC Al-Summe mit Akte 25 × 3 = 75 mm² (Gruppen + Zellabgriff) | 316,0 W | **316,0 W** (Spitze 1000,3 W) | ≈ 460 W gilt für 15 × 3 | weicht ab, weil Akte 25 × 3 sagt |
+| NMC mit E1-Querschnitt 15 × 3 = 45 mm² (zum Vergleich) | 461,1 W | 461,1 W (Spitze 1459,6 W) | ≈ 460 W | trifft |
+| LFP Summe Dauer (Akte 25 × 3, 194 A) | 73,5 W | **75,6 W** | ≤ 50 W | verfehlt weiter (+51 %); Laschenpfad jetzt 141,8 mm statt 65,5 mm |
+Die Länge der Gruppenverbinder ändert sich durch E2D nicht (gleiche Verschaltung). Ob 15 × 3 thermisch reicht, entscheidet Opus (nicht berechnet).
+
+**2. Gebaut (Schritte 2 bis 5).** Schaltbox: Wanne 2 mm mit Flansch 12 mm, Dichtung 3 × 3, Deckel 2 mm, M5 alle 60 mm, Druckausgleich Ø 20; Geräte mit Bolzen M8 (Schütze 2 × Ø 8 × 15, Abstand 40), Fußlaschen, Spulenstecker, BMS-Abstandsbolzen M4, Stecker 26 pol/2 × Daisy, Shunt mit Platine; 6 Stromschienen (Cu 25 × 3 LFP, 20 × 3 NMC, R innen = Dicke, Schrumpfschlauch 0,5) mit Bohrungen 8,5; HV-Stecker 250 A (Flansch 90 × 70 × 8, 4 × M5, Hebel, O-Ring), 40 A, NV; Kabel 4 Schichten (Leiter, Isolierung, Schirm, Mantel), Kabelschuhe (Hülse 40, Palme 20 × 4), Clips alle 200 mm; FPC-Ni-Tab 8 × 4 × 0,2, NTC 3 × 2 × 1 (4 je CMU), FPC-Stecker 25 × 8 × 6, Daisy-Chain (Stecker, Leitung Ø 4). LFP zusätzlich: Anschlusslasche als abgekantetes Band, Trennbrücke 25 × 3 × 80 mit 2 × M8 und Scheibe, HVIL, Servicedeckel 120 × 80 × 2 auf Dichtung mit 6 × M5 Senkkopf, Schweißlinien. NMC zusätzlich: Berührschutz 1 mm über dem Omega-Scheitel.
+| Größe | LFP | NMC | Fundstelle |
+|---|---|---|---|
+| Teile (v1.0 → v1.1) | 442 → 956 (2,2 ×) | 2236 → 2701 (1,2 ×) | `ergebnis_<V>_e2[d].json` teile (Erwartung N3: 3 bis 5 ×, **nicht erreicht**, weil NMC schon viele Teile hatte) |
+| Kollisionen nach Schritt 5 | **3** (Schmelz_Lasche_A/Schiene_5 0,0017 mm³ = Berührung; 2 × Trennbrücke-M8-Kopf/Servicedeckel je 212,4 mm³) | **0** | `anzahl_kollisionen`, `kollisionen` |
+| Elektronikmasse gesamt (v1.0 → v1.1, Zuwachs) | 6,342 → 7,351 kg (+1,01) | 7,150 → 7,941 kg (+0,79) | `e2.masse_elektronik_gesamt_kg`; Erwartung +1…3 kg: LFP am unteren Rand, **NMC darunter**. Masse offener Teile (Kabelschuh, Schrauben, Dichtung) mit 0 gesetzt |
+| Packmasse bekannt | 620,6 kg | 483,2 kg | `masse_bekannt_kg` |
+| Schaltbox Wanne L × B × H bis Deckel | 320 × 300 × 123 mm | 320 × 300 × 117 mm | `e2.schaltbox_*` |
+| Innenhöhe Schaltbox (Cap N1 90 mm) | 116 mm, **über** | 110 mm, **über** | `e2.schaltbox_innenhoehe_mm`, `schaltbox_hoehe_max_N1_mm` |
+| Packhöhe vorn (Grenze 130 mm) | **134 mm, über** (Ursache: M8-Kopf der Trennbrücke) | 128 mm, ok | `e2.hoehe_vorn_mm` |
+| HV intern Länge, Verlust | 1,08 m, 13,98 W | 1,088 m, 10,34 W | `e2.hv_laenge_gesamt_m`, `hv_verlust_W` |
+| Stromschienen (Länge Mittellinie) | 155 / 385 / 75 / 175 / 74 / 75 mm | 149 / 380 / 70 / 144 / 69 / 60 mm | `e2.schienen` |
+| Details (Tab / NTC / FPC-Stecker / Daisy-Stecker) | 251 / 56 / 14 / 28 | 218 / 50 / 13 / 26 | `e2.details` |
+
+**3. Kollisionsprüfung je Schritt.** Verlauf LFP 95 → 9 → 7 → 3 Kollisionen (Korrekturen: Schraubenstapel, Fußlaschen, Schienen mit Biegung, Lasche eine Dicke höher, NTC aus den Querträgern verschoben, Kabelhöhe über dem höchsten Gerät). NMC: 354 → 0. Eingebaute Aussparungen (Volumen gemeldet, `e2.aussparungen_mm3`): Pad/Kühlplatte/Deckel um Kabel, Tabs, NTC; Verguss/Zellträger um Daisy-Stecker und -Leitung (NMC: Daisy-Leitung schneidet 11 Mal durch den Verguss, größter Posten 18 275,7 mm³ im ersten Lauf, **Lage offen**); FPC an 3 Gruppenverbindern ausgespart. Zwei NTC (NMC `NTC_00_000`, `NTC_12_217`) liegen unter den Anschlusslaschen und entfallen im Modell (`e2.teile_entfallen_durch_aussparung`).
+
+**4. Bilder** (alle angesehen; Zielband als Textzeile im Seitenfeld mit Ist-Wert, rot = über Grenze; Lesehilfe `lesehilfe.md`): je Variante `e2d_<V>_boxoffen.png`, `e2d_<V>_stecker.png`, `e2d_<V>_detail.png`, `e2d_<V>_kabel.png`, `e2d_<V>_gesamt.png`, LFP zusätzlich `e2d_LFP_bruecke_offen.png` und `e2d_LFP_bruecke_zu.png` (NMC hat keine Trennbrücke: 5 Bilder). Rohbilder und Netze in `/home/cae/cae_projekte/batterie/e2/`. Rauschen durch 24 Samples; Zellen ausgeblendet; Schaltbox in der Draufsicht bewusst klein gegen das Pack.
+CAD: `/home/cae/cae_projekte/batterie/e2/pack_LFP_e2d.FCStd` und `pack_NMC_e2d.FCStd` (je auch `.step`).
+
+**Offen (v1.1), nur Opus/Mensch entscheidet**
+1. **NMC 15 × 3 (E1) gegen 25 × 3 (Akte ENT-096/097):** Verlust 461 W gegen 316 W; Erwartung N3 geht von 15 × 3 aus. LFP-Al-Verlust 75,6 W gegen ≤ 50 W.
+2. **M8-Schraubenstapel 9,6 mm (`e2.stecker_lfp.schraubenstapel_mm`, Oberkante 125,6 mm) gegen 8 mm unter dem Servicedeckel:** 2 Kollisionen, Packhöhe vorn 134 mm > 130 mm. Nicht geändert (kein eigenes Maß).
+3. **Innenhöhe Schaltbox 116/110 mm gegen Cap N1 90 mm:** Schmelzhalter 95 mm hoch, Schienen und Kabelhöhe darüber. Nicht geändert.
+4. **LFP-Seitenspalt 1 mm** gegen Omega h = 4, Berührschutz, Lasche mit 25 mm Überlappung: Lasche als Stumpfstoß/abgekantetes Band gebaut.
+5. **BT-710 Stromschienen-Querschnitt als Merkmal fehlt** (Schienenmaß nur aus N3); Stecker 4 pol am Shunt ohne Maße (nur Platine); Daisy-Querleitung (LFP 1980 mm, NMC 1880 mm) nicht gezeichnet.
+6. **Abgeleitete Maße (Sonnet), zu bestätigen:** Fußlasche 20 × 9 × 2; Laschen Pyro/Schmelz Auskragung 25; Halterwand 5; Schraubenköpfe M4/M5/M8 und Scheibe (Normmaße aus dem Gedächtnis, nicht belegt); BMS-Abstandsbolzen SW 7, Einzug 5; Kabelschichtdicken (Radialwand in 3 gleiche Teile); Servicedeckel-Rand 12; O-Ring Ø 60 × 3; Palmenlänge ≥ Schienenbreite; Freigang 1 mm Kabelhöhe über Gerät; Schienenabstand zur Leitung 40 mm (Lagefaktor); Geräteanordnung in der Box (diagonale 385-mm-Schiene nicht optimiert).
+7. **Fensterregel:** Omega, Schweißlinien (LFP) und Berührschutz (NMC) nur im hintersten Feld (`e2.fenster_feld` 3); das war von Beginn an so gebaut, die 20-min-Grenze wurde nicht erreicht. Opus entscheidet, ob alle Felder gewünscht sind.
+8. Teilezahl-Erwartung 3 bis 5 × verfehlt (2,2 × / 1,2 ×); NMC-Elektronikmasse +0,79 kg unter +1…3 kg.
+9. Die 4-Minuten-Rechnung NMC (Lauf 2) und beide Bildläufe liefen mit `nice` und teils im Vordergrund der Sitzung, nicht alle unter `systemd-run --scope` (Auflage verfehlt bei den ersten FreeCAD-Läufen).
 
 ---
 *KI-generiert (Claude Sonnet, 2026-11-18), Entwurf, nicht freigegeben.*

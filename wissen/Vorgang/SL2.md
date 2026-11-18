@@ -80,7 +80,7 @@ tags: ["vorgang", "status/ohneNachweis"]
 - ohne Nachweisdatei
 
 ## Befunde
-- –
+- [[wissen/Befund/B-BAT-028|B-BAT-028]] – B-BAT-028 (2026-11-18) SL2 Stückliste je Variante: Massen stimmen (±1,3 %), fünf Bauteile fehlten im Baum, vier Zählwidersprüche CAD/E1
 
 ## Entscheidungen
 - [[wissen/Entscheidung/ENT-001|ENT-001]] – Frage (?)
@@ -92,6 +92,7 @@ tags: ["vorgang", "status/ohneNachweis"]
 - [[wissen/Entscheidung/ENT-091|ENT-091]] – Frage (?)
 - [[wissen/Entscheidung/ENT-102|ENT-102]] – Entscheidung und Begründung (?)
 - [[wissen/Entscheidung/ENT-103|ENT-103]] – Entscheidung und Begründung (?)
+- [[wissen/Entscheidung/ENT-147|ENT-147]] – Frage (vorgeschlagen)
 
 ---
 *KI-generiert, erzeugt aus pm/plan/wissensnetz.json – nicht von Hand bearbeiten*

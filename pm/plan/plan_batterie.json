@@ -110,7 +110,7 @@
           "rate": 0
         }
       ],
-      "notes": "Stufe 1 | Status: fertig | REQ: REQ-D08 | Wissen: P01, P02, P03, P04, P05, P06, P07, P08, P09, P10 | Befunde: B-BAT-003, B-BAT-004, B-BAT-022, B-BAT-020, B-BAT-019, B-BAT-017, B-BAT-013, B-BAT-007 | Software: PI, patent-recherche | Ergebnis: forschung/PATENTE.md ✓",
+      "notes": "Stufe 1 | Status: fertig | REQ: REQ-D08 | Wissen: P01, P02, P03, P04, P05, P06, P07, P08, P09, P10 | Befunde: B-BAT-003, B-BAT-004, B-BAT-023, B-BAT-022, B-BAT-020, B-BAT-019, B-BAT-017, B-BAT-013, B-BAT-007 | Software: PI, patent-recherche | Ergebnis: forschung/PATENTE.md ✓",
       "is_start": false,
       "is_end": false
     },
@@ -253,7 +253,7 @@
           "rate": 0
         }
       ],
-      "notes": "Stufe 0 | Status: fertig | REQ: REQ-P01, REQ-P02, REQ-P03, REQ-P04, REQ-P05, REQ-P06, REQ-P07, REQ-P08, REQ-P09, REQ-P10 | Bauteil: BT-000 | Befunde: B-BAT-004, B-BAT-013, B-BAT-011, B-BAT-010, B-BAT-009, B-BAT-008, B-BAT-007, B-BAT-006 | ENT: ENT-001, ENT-003, ENT-004, ENT-006, ENT-013, ENT-030, ENT-091, ENT-102, ENT-103 | Doku: docs/startparameter.md, docs/01_lastenheft.md, docs/13_stueckliste.md | Ergebnis: pm/startwerte.json ✓",
+      "notes": "Stufe 0 | Status: fertig | REQ: REQ-P01, REQ-P02, REQ-P03, REQ-P04, REQ-P05, REQ-P06, REQ-P07, REQ-P08, REQ-P09, REQ-P10 | Bauteil: BT-000 | Befunde: B-BAT-004, B-BAT-013, B-BAT-011, B-BAT-010, B-BAT-009, B-BAT-008, B-BAT-007, B-BAT-006 | ENT: ENT-001, ENT-003, ENT-004, ENT-006, ENT-013, ENT-030, ENT-091, ENT-102, ENT-103, ENT-147 | Doku: docs/startparameter.md, docs/01_lastenheft.md, docs/13_stueckliste.md | Ergebnis: pm/startwerte.json ✓",
       "is_start": false,
       "is_end": false
     },
@@ -276,7 +276,7 @@
           "rate": 0
         }
       ],
-      "notes": "erledigt 2026-11-12 (Vorschlags-Startsatz) | Status: fertig | REQ: REQ-D01 | Bauteil: BT-000 | Befunde: B-BAT-004 | ENT: ENT-001, ENT-003, ENT-004, ENT-006, ENT-013, ENT-030, ENT-091, ENT-102, ENT-103 | Doku: docs/13_stueckliste.md | Ergebnis: pm/bauteile/stueckliste.json ✓, docs/13_stueckliste.md ✓",
+      "notes": "erledigt 2026-11-12 (Vorschlags-Startsatz) | Status: fertig | REQ: REQ-D01 | Bauteil: BT-000 | Befunde: B-BAT-004 | ENT: ENT-001, ENT-003, ENT-004, ENT-006, ENT-013, ENT-030, ENT-091, ENT-102, ENT-103, ENT-147 | Doku: docs/13_stueckliste.md | Ergebnis: pm/bauteile/stueckliste.json ✓, docs/13_stueckliste.md ✓",
       "is_start": false,
       "is_end": false
     },
@@ -301,7 +301,7 @@
           "rate": 0
         }
       ],
-      "notes": "nur Mensch gibt frei | Status: ohne Nachweis | REQ: REQ-D05, REQ-P01, REQ-P02, REQ-P03, REQ-P04, REQ-P05, REQ-P06, REQ-P07, REQ-P08, REQ-P09, REQ-P10 | Bauteil: BT-000 | ENT: ENT-001, ENT-003, ENT-004, ENT-006, ENT-013, ENT-030, ENT-091, ENT-102, ENT-103 | Doku: docs/01_lastenheft.md",
+      "notes": "nur Mensch gibt frei | Status: ohne Nachweis | REQ: REQ-D05, REQ-P01, REQ-P02, REQ-P03, REQ-P04, REQ-P05, REQ-P06, REQ-P07, REQ-P08, REQ-P09, REQ-P10 | Bauteil: BT-000 | ENT: ENT-001, ENT-003, ENT-004, ENT-006, ENT-013, ENT-030, ENT-091, ENT-102, ENT-103, ENT-147 | Doku: docs/01_lastenheft.md",
       "is_start": false,
       "is_end": false
     },
@@ -354,7 +354,7 @@
           "rate": 0
         }
       ],
-      "notes": "Stufe 2 | Status: offen | REQ: REQ-P06 | Bauteil: BT-100 | Wissen: W01, W09, T01 | Befunde: B-BAT-001, B-BAT-004, B-BAT-005, B-BAT-007 | ENT: ENT-002, ENT-004, ENT-005, ENT-006, ENT-007, ENT-008, ENT-009, ENT-010, ENT-011, ENT-012, ENT-014, ENT-015, ENT-016, ENT-017, ENT-018, ENT-019, ENT-020, ENT-025, ENT-026 | Stückliste: 100.1 | Software: PyBaMM | Ergebnis: sim/chemie/zelle_lang*",
+      "notes": "Stufe 2 | Status: offen | REQ: REQ-P06 | Bauteil: BT-100 | Wissen: W01, W09, T01 | Befunde: B-BAT-001, B-BAT-004, B-BAT-005, B-BAT-023, B-BAT-007 | ENT: ENT-002, ENT-004, ENT-005, ENT-006, ENT-007, ENT-008, ENT-009, ENT-010, ENT-011, ENT-012, ENT-014, ENT-015, ENT-016, ENT-017, ENT-018, ENT-019, ENT-020, ENT-025, ENT-026 | Stückliste: 100.1 | Software: PyBaMM | Ergebnis: sim/chemie/zelle_lang*",
       "is_start": false,
       "is_end": false
     },
@@ -525,7 +525,7 @@
           "rate": 0
         }
       ],
-      "notes": "Stufe 4, bestimmt Zellzahl | Status: ohne Nachweis | REQ: REQ-P02, REQ-P03 | Bauteil: BT-200 | Wissen: W12 | Befunde: B-BAT-011, B-BAT-010, B-BAT-008 | ENT: ENT-004, ENT-012",
+      "notes": "Stufe 4, bestimmt Zellzahl | Status: ohne Nachweis | REQ: REQ-P02, REQ-P03 | Bauteil: BT-200 | Wissen: W12 | Befunde: B-BAT-011, B-BAT-010, B-BAT-008 | ENT: ENT-004, ENT-012, ENT-145, ENT-148",
       "is_start": false,
       "is_end": false
     },
@@ -558,7 +558,7 @@
           "rate": 0
         }
       ],
-      "notes": "Stufe 3 | Status: offen | REQ: REQ-P07, REQ-D11 | Bauteil: BT-200, BT-500 | Wissen: W15, P02 | Befunde: B-BAT-003, B-BAT-004, B-BAT-020, B-BAT-012 | ENT: ENT-004, ENT-012 | Stückliste: 200.1, 200.2, 200.3, 200.5, 500.1, 500.2, 500.3, 700.1 | Software: FreeCAD, gmsh | Doku: docs/13_stueckliste.md | Ergebnis: cad/pack/*.FCStd",
+      "notes": "Stufe 3 | Status: offen | REQ: REQ-P07, REQ-D11 | Bauteil: BT-200, BT-500 | Wissen: W15, P02 | Befunde: B-BAT-003, B-BAT-004, B-BAT-020, B-BAT-012 | ENT: ENT-004, ENT-012, ENT-145, ENT-148 | Stückliste: 200.1, 200.2, 200.3, 200.5, 500.1, 500.2, 500.3, 700.1 | Software: FreeCAD, gmsh | Doku: docs/13_stueckliste.md | Ergebnis: cad/pack/*.FCStd",
       "is_start": false,
       "is_end": false
     },
@@ -590,7 +590,7 @@
           "rate": 0
         }
       ],
-      "notes": "Stufe 3 | Status: offen | REQ: REQ-P13 | Bauteil: BT-200, BT-500 | ENT: ENT-004, ENT-012 | Stückliste: 500.7, 700.8 | Software: FreeCAD | Ergebnis: cad/pack/bauregeln*",
+      "notes": "Stufe 3 | Status: offen | REQ: REQ-P13 | Bauteil: BT-200, BT-500 | ENT: ENT-004, ENT-012, ENT-145, ENT-148 | Stückliste: 500.7, 700.8 | Software: FreeCAD | Ergebnis: cad/pack/bauregeln*",
       "is_start": false,
       "is_end": false
     },
@@ -689,7 +689,7 @@
           "rate": 0
         }
       ],
-      "notes": "Stufe 4 | Status: offen | REQ: REQ-P13, REQ-P11 | Bauteil: BT-400, BT-700 | Wissen: W13 | Befunde: B-BAT-004 | ENT: ENT-004 | Stückliste: 300.5, 700.1, 700.2, 700.3, 700.4, 700.5, 700.6 | Ergebnis: sim/elektrik/schutz*",
+      "notes": "Stufe 4 | Status: offen | REQ: REQ-P13, REQ-P11 | Bauteil: BT-400, BT-700 | Wissen: W13 | Befunde: B-BAT-004, B-BAT-027, B-BAT-026, B-BAT-024 | ENT: ENT-004 | Stückliste: 300.5, 700.1, 700.2, 700.3, 700.4, 700.5, 700.6 | Ergebnis: sim/elektrik/schutz*",
       "is_start": false,
       "is_end": false
     },
@@ -752,7 +752,7 @@
           "rate": 0
         }
       ],
-      "notes": "Stufe 4 | Status: offen | REQ: REQ-P15 | Bauteil: BT-300 | Wissen: W05, W14, T06, P07 | Befunde: B-BAT-002, B-BAT-004, B-BAT-013 | ENT: ENT-004 | Stückliste: 300.1, 300.2, 300.3, 300.4, 300.6, 600.4, 700.7, 700.10 | Software: foxBMS | Ergebnis: sim/elektrik/bms*",
+      "notes": "Stufe 4 | Status: offen | REQ: REQ-P15 | Bauteil: BT-300 | Wissen: W05, W14, T06, P07 | Befunde: B-BAT-002, B-BAT-004, B-BAT-013 | ENT: ENT-004, ENT-110 | Stückliste: 300.1, 300.2, 300.3, 300.4, 300.6, 600.4, 700.7, 700.10 | Software: foxBMS | Ergebnis: sim/elektrik/bms*",
       "is_start": false,
       "is_end": false
     },
@@ -782,7 +782,7 @@
           "rate": 0
         }
       ],
-      "notes": "Stufe 4 | Status: offen | REQ: REQ-P03, REQ-P13 | Bauteil: BT-300, BT-400 | Wissen: T04, T05 | Befunde: B-BAT-002, B-BAT-004 | ENT: ENT-004 | Stückliste: 700.3 | Software: ngspice, OpenModelica | Ergebnis: sim/elektrik/schaltung*",
+      "notes": "Stufe 4 | Status: offen | REQ: REQ-P03, REQ-P13 | Bauteil: BT-300, BT-400 | Wissen: T04, T05 | Befunde: B-BAT-002, B-BAT-004 | ENT: ENT-004, ENT-110 | Stückliste: 700.3 | Software: ngspice, OpenModelica | Ergebnis: sim/elektrik/schaltung*",
       "is_start": false,
       "is_end": false
     },
@@ -1050,7 +1050,7 @@
           "rate": 0
         }
       ],
-      "notes": "Stufe 6, optional | Status: fertig | REQ: REQ-P14 | Bauteil: BT-200, BT-500 | Befunde: B-BAT-019 | ENT: ENT-004, ENT-012 | Stückliste: 200.2, 200.4, 500.5, 500.6 | Software: ElmerFEM | Ergebnis: sim/mechanik/* ✓",
+      "notes": "Stufe 6, optional | Status: fertig | REQ: REQ-P14 | Bauteil: BT-200, BT-500 | Befunde: B-BAT-019 | ENT: ENT-004, ENT-012, ENT-145, ENT-148 | Stückliste: 200.2, 200.4, 500.5, 500.6 | Software: ElmerFEM | Ergebnis: sim/mechanik/* ✓",
       "is_start": false,
       "is_end": false
     },
@@ -1153,7 +1153,7 @@
           "rate": 0
         }
       ],
-      "notes": "lebendes Dokument BAT-DOC-13 | Status: ohne Nachweis | REQ: REQ-D01, REQ-D11 | Bauteil: BT-000 | ENT: ENT-001, ENT-003, ENT-004, ENT-006, ENT-013, ENT-030, ENT-091, ENT-102, ENT-103 | Doku: docs/13_stueckliste.md",
+      "notes": "lebendes Dokument BAT-DOC-13 | Status: ohne Nachweis | REQ: REQ-D01, REQ-D11 | Bauteil: BT-000 | Befunde: B-BAT-028 | ENT: ENT-001, ENT-003, ENT-004, ENT-006, ENT-013, ENT-030, ENT-091, ENT-102, ENT-103, ENT-147 | Doku: docs/13_stueckliste.md",
       "is_start": false,
       "is_end": false
     },

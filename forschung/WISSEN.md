@@ -1434,3 +1434,154 @@ Diese Quellen beschreiben, wie man die inneren Elektroden-Materialien einer Zell
 
 
 Prüfung: 12 Belege bestaetigt, 11 Fehler
+
+## W29
+
+# W29 – Elektrische Antriebsbatterie und LFP-Chemie
+
+## Erklärung
+
+Eine Antriebsbatterie (EV-Battery) ist der stationäre Energiespeicher eines Elektrofahrzeugs und besteht aus Hunderten lithiium-Ionen-Zellen, die in Module und ein Gesamt-Paket montiert werden. In jeder Zelle wandern bei der Entladung Lithium-Ionen (Ladungsträger) über den flüssigen Elektrolyten (= Ionenleiter) zwischen Kathode (oxidierbare Metallverbindungs-Elektrode) und Anode (graphitische Kohlenstoff-Elektrode) und erzeugen so einen Elektronenstrom im Außenkreis; beim Laden dreht ein externes Netzgerät diesen Vorgang um. Die für die Fahrstrecke entscheidende Größe ist die gespeicherte Energie in Wattstunden (Wh), für die Beschleunigung und die maximale Ladungsratedie Leistung in Watt (W) – beide wünschenswert, groß pro Kilogramm Masse (Wh/kg bzw. W/kg). Heute dominieren zwei Kathoden-Chemien: Li-NMC (Lithium-Nickel-Mangan-Cobalt-Oxid) mit hoher Energiedichte aber sensibler Thermodynamik und LFP (Lithium-Eisen-Phosphat) mit besserer Thermosicherheit, geringerer Toxizität und längerer Lebensdauer. Der LFP-Anteil am weltweiten BEV- (Battery Electric Vehicle, also rein batterieelektrisches Fahrzeug) Markt erreichte 2023 laut dem Paket 41 % der Kapazität. Die mechanische Kernaufgabe im Fahrzeug besteht darin, diese Zellen, Module und das Pack so zu konstruieren, dass sie unter statischer Belastung (Fahrgewicht, Nutzlast), dynamischer Belastung (Vibration, Erschütterung), thermischer Belastung (Ladewärme, Umgebungs­temperatur) und Crash-Belastung (Kollision) sicher und über Lebensdauer funktionsfähig bleiben. Für den CAE-Ingenieur sind somit Masse, Geometrie, Wärmeentwicklung, zyklische Ermüdung der Trägers und das Sicherheitsverhalten der Zelle bei Ruptur die zentralen Auslegungsparameter.
+
+## Kennwerte
+
+| Größe | Wert | Einheit | Beleg |
+|---|---|---|---|
+| Batteriekapazität je EV-Modell (2023) | 21 – 123 (Ø 80) | kWh | Beleg: „The battery capacity of available EV models reached from 21 to 123 kWh in 2023" (https://en.wikipedia.org/wiki/Electric_vehicle_battery) |
+| Nominale Zellspannung (LFP) | 3,2 | V | Beleg: „Nominal cell voltage \| 3.2 V" (https://en.wikipedia.org/wiki/Lithium_iron_phosphate_battery) |
+| Spezifikleistung (LFP, max.) | 2 400 | W/kg | Beleg: „Specific power \| Up to 2,400 W/kg" (https://en.wikipedia.org/wiki/Lithium_iron_phosphate_battery) |
+| Zyklendauer (LFP, bis 80 % SoH) | 2 500 – 9 000 | Zyklen | Beleg: „Cycle durability \| 2,500–9,000 cycles" (https://en.wikipedia.org/wiki/Lithium_iron_phosphate_battery) |
+| Zeitdauer (LFP) | > 10 | a | Beleg: „Time durability \| > 10 years" (https://en.wikipedia.org/wiki/Lithium_iron_phosphate_battery) |
+| LFP-Marktanteil BEV-Kapazität (2023) | 41 % | – | Beleg: „reaching 41% global market share by capacity for BEVs in 2023" (https://en.wikipedia.org/wiki/Electric_vehicle_battery) |
+| Weltweiter Packpreis (2024) | 115 | USD/kWh | Beleg: „battery pack prices dropped 20% from 2023 to a record low of $115 per kilowatt-hour" (https://about.bnef.com/blog/lithium-ion-battery-pack-prices-see-largest-drop-since-2017-falling-to-115-per-kilowatt-hour-bloombergnef/) |
+| BEV-Packpreis (2024) | 97 | USD/kWh | Beleg: „Prices for battery electric vehicles (BEVs) came in at $97/kWh" (https://about.bnef.com/blog/lithium-ion-battery-pack-prices-see-largest-drop-since-2017-falling-to-115-per-kilowatt-hour-bloombergnef/) |
+| China-Packpreis (2024) | 94 | USD/kWh | Beleg: „average battery pack prices were lowest in China, at $94/kWh" (https://about.bnef.com/blog/lithium-ion-battery-pack-prices-see-largest-drop-since-2017-falling-to-115-per-kilowatt-hour-bloombergnef/) |
+| Lab-Kapazitätsdichte nächste Generation | > 800 | Wh/kg | Beleg: „performance above 800Wh/kg in laboratory testing" (https://en.wikipedia.org/wiki/Electric_vehicle_battery) |
+| Weltweiter EVB-Nachfrage (2023) | > 750 | GWh | Beleg: „Demand for EVBs exceeded 750 GWh in 2023" (https://en.wikipedia.org/wiki/Electric_vehicle_battery) |
+| Globale Produktionskapazität (2023) | ≈ 2 000 | GWh | Beleg: „almost 2000 GWh with 772 GWh used for EVs in 2023" (https://en.wikipedia.org/wiki/Electric_vehicle_battery) |
+
+## Bedeutung für unser Batteriesystem
+
+- **Kühlkonzept – Folgerung:** Mit einer max. Spezifikleistung von 2 400 W/kg (LFP) entsteht bei hoher C-Rate erhebliche Wärme; eine FEM-Wärmeberechnung des Packs unter Peak-Last erscheint zwingend, um thermische Degradation und Überhitzung zu vermeiden.
+- **Massen- und Geometrieauslegung – Folgerung:** Bei Ø 80 kWh und 3,2 V Zellspannung (LFP) benötigt ein Pack eine sehr große Zellanzahl in Series-/Parallel-Konfiguration; die statische Auslegung der Zellhalter, Module und des Trägers muss die resultierende Gesamtmasse und die spezifischen Zellenabmessungen tragen – konkrete Zellabmessungen sind im Paket **nicht gefunden**.
+- **Crash-Sicherheit – Folgerung:** Die Quellen warnen vor Brandgefahr bei Zellruptur („pose a fire safety risk if punctured"), auch wenn LFP risikoärmer als NMC ist; die Crash-Simulation muss Zellzerstörung und deren thermische Ausbreitung im Pack einbeziehen.
+- **Zyklische Ermüdung des Trägers – Folgerung:** 2 500–9 000 Entlade-/Ladezyklen (LFP) bedeuten über > 10 Jahre Betrieb zyklische Mikrobelastungen (Schwellung, Dichtungsveränderung) der Zelle; die strukturelle Auslegung der Halterung sollte konservativ für die gesamte Lebensdauer bemessen werden.
+- **Beschaffungs- und Lieferkettenrisiko – Folgerung:** > 67 % der NMC-Produktion und 100 % der LFP-Produktion liegen in China; eine Diversifikation der Zellquellen sollte in der Systemplanung und im Einkauf eingeplant werden.
+
+## Offene Fragen
+
+1. Welche Zellgeometrie (Zylinder, Pouch, Prisma) und welche genauen Abmessungen hat der Zellenlieferant? Ohne diese Angaben ist die mechanische Auslegung der Zellhalter und Module nicht möglich.
+2. Wie hoch ist die spezifische Verlustleistung (W/kg) unter nominaler und peak Last im konkreten Betriebsprofil – die Quellen nennen nur maximale Spezifikleistung, keine thermische Verlustleistung für die Wärmesimulation.
+3. Welche Stoß- und Vibrationsgrenzen (z. B. ISO 16750, SAE J2380) und welche zulässige Maximalverformung der Zelle (Ruptur-Grenze) gelten für unser Batteriesystem?
+4. Wie ändern sich die mechanischen Eigenschaften (Festeigenschaft, Dämpfung, Dichtungsveränderung) des Packs nach 5 000 bzw. 9 000 Zyklen, und muss die CAE-Berechnung hierfür konservativ bemessen werden?
+
+## Auffälliges
+
+- **Zwei der fünf Quellen nicht abrufbar:** Die IEA-Quelle (*Global EV Outlook 2024*, Trends in EV Batteries) lieferte HTTP 403 (Forbidden) und batterydesign.net (*Battery cost*) HTTP 404 (Not Found). Alle zugehörigen Daten (Energie­dichte-Trends, Kostenentwicklungsdetails) fehlen im Paket.
+- **Widerspruch innerhalb derselben Quelle:** In der Wikipedia-Seite *Electric vehicle battery* wird der LFP-Marktanteil im Fließtext mit **41 %** (2023) angegeben, in der Vergleichstabelle derselben Seite jedoch mit **40 %** (2023). Die Diskrepanz ist vermutlich auf unterschiedliche Erhebungszeitpunkte oder -methoden zurückzuführen, bleibt aber im selben Dokument uneinheitlich.
+- **Keine versteckten Anweisungen** in den Quelltexten gefunden.
+- Die Angabe „800 Wh/kg" (Lab) bezieht sich ausdrücklich auf nächste-Generation-Chemien (z. B. Solid-State) und ist **nicht** mit den heute serienreifen Werten vergleichbar; im LFP-Wikipedia-Artikel wird als „Next gen" 180–205 Wh/kg genannt. Eine Verwechslung in der Auslegung wäre kritisch.
+
+
+Prüfung: 8 Belege bestaetigt, 4 Fehler
+
+## W30
+
+# Ergebnis W30 – Elektroladesystem & Seitkollisionssicherheit
+
+## Erklärung
+
+Das Paket verbindet zwei Themen: den Aufbau und die Wirtschaftlichkeit von Fahrzeugladesystemen (Battery Packs) sowie die passive Sicherheit bei seitlichen Kollisionen. Ein Ladesystem fasst einzelne Lithium-Ionen-Zellen – jeweils mit Elektrolyt, Separator und aktiver Masse – zu einem strukturell geschützten Aggregate zusammen, das den elektrischen Antriebsmotor mit Energie versorgt. Seitliche Kollisionen („Side Impact") gehören zu den gefährlichsten Unfallformen, weil die seitliche Karosserie kaum Aufpralllänge besitzt; schwere Verletzungen auftreten bereits ab 50 km/h, im Gegensatz zu 70 km/h bei Frontalaufprall. Die Position des Akku-Packs – zwischen den Achsen (Lkw) oder auf dem Dach (Bus), wie im Paket an Bildbeispielen belegt – bestimmt damit unmittelbar die laterale Aufprallgeometrie und die Lastfälle für die Kollisionssimulation des Gesamtfahrzeugs. Zwei einschlägige UNECE-Vorschriften (R100: Batteriesicherheit, R135: Stangen-Seitenaufprall) waren im Paket nicht abrufbar (HTTP 403), so dass konkrete Regellasten nicht belegt werden können. Die verfügbaren Wikipedia-Quellen liefern vor allem Kennwerte zu Zelltypen, Packkosten, Recyclingstatistik und Unfallhäufigkeit.
+
+## Kennwerte
+
+| Größe | Wert | Einheit | Beleg |
+|---|---|---|---|
+| Zykluslebensdauer LTO-Zelle | &gt; 10 000 | Ladezyklen | Beleg: "often exceeding 10,000 charge-discharge cycles" (https://en.wikipedia.org/wiki/Electric_vehicle_battery) |
+| Packkosten, PHEV (kleine Reichweite) | ≈ 545 | US$/kWh | Beleg: "approximately $545/kWh for plug-in hybrid electric vehicles" (https://en.wikipedia.org/wiki/Electric_vehicle_battery) |
+| Packkosten, BEV (große Reichweite) | ≈ 230 | US$/kWh | Beleg: "around $230/kWh for BEV200 vehicles" (https://en.wikipedia.org/wiki/Electric_vehicle_battery) |
+| Recyclingquote E-Fahrzeugbatterien (2019) | 5 | % | Beleg: "in 2019 only 5% of electric vehicle batteries were recycled" (https://en.wikipedia.org/wiki/Electric_vehicle_battery) |
+| Skaleneffekt-Plateau (Produktionsmenge) | 200 – 300 | MWh/a | Beleg: "beyond production volumes of 200–300 MWh per year" (https://en.wikipedia.org/wiki/Electric_vehicle_battery) |
+| Mineralbedarf Rohstoffe 2020 (E-Fahrzeuge) | 400 | kt | Beleg: "mineral supplies need to increase from 400 kilotonnes in 2020" (https://en.wikipedia.org/wiki/Electric_vehicle_battery) |
+| Mineralbedarf Rohstoffe 2040 (E-Fahrzeuge) | 11 800 | kt | Beleg: "to 11,800 kilotonnes in 2040 in order to cover the demand" (https://en.wikipedia.org/wiki/Electric_vehicle_battery) |
+| Mineralbedarf 2060 vs. 2015 (Faktor) | 87 | – | Beleg: "require 87 times more than 2015 of specific metals by 2060" (https://en.wikipedia.org/wiki/Electric_vehicle_battery) |
+| Anteil Seitenaufprall an allen Unfällen (EU) | 22 – 29 | % | Beleg: "at rates of 22-29% and 61-69% respectively" (https://en.wikipedia.org/wiki/Side_collision) |
+| Anteil Frontalaufprall an allen Unfällen (EU) | 61 – 69 | % | Beleg: "at rates of 22-29% and 61-69% respectively" (https://en.wikipedia.org/wiki/Side_collision) |
+| Schwerverletzungs-Grenzwert Seitenaufprall | 50 | km/h | Beleg: "passenger fatality and serious injury typically occurring at 50 km/h" (https://en.wikipedia.org/wiki/Side_collision) |
+| Schwerverletzungs-Grenzwert Frontalaufprall | 70 | km/h | Beleg: "as opposed to 70 km/h (~43 mph) for frontal impacts" (https://en.wikipedia.org/wiki/Side_collision) |
+| Tote bei Seitenaufprall (USA, 2008) | 5 265 | Personen | Beleg: "In 2008, a total of 5,265 (22%) out of 23,888 people were killed" (https://en.wikipedia.org/wiki/Side_collision) |
+| Verletzte am Kopf/Hals (Shanghai, 2005–2013) | 64 | % | Beleg: "The head and neck are involved in around 64% of the casualties" (https://en.wikipedia.org/wiki/Side_collision) |
+| Anteil „struck side" (EU, 2018) | 60 | % | Beleg: "60% of casualties were "struck side", while 40% were "non struck side"" (https://en.wikipedia.org/wiki/Side_collision) |
+| Geschätzte Rettungen durch Seitenairbags (USA) | ≈ 1 000 | Leben/a | Beleg: "saving an estimated 1,000 lives per year" (https://en.wikipedia.org/wiki/Side_collision) |
+| Mechanische Lasten, UNECE R100 (Batterie-Seitenkräft) | nicht gefunden | – | nicht gefunden (HTTP 403) |
+| Stangen-Seitenaufprall-Vorgabe, UN-ECE R135 | nicht gefunden | – | nicht gefunden (HTTP 403) |
+
+## Bedeutung für unser Batteriesystem
+
+- **Als Folgerung (Zusammenbau / Struktur):** Die Packposition – zwischen den Achsen (Lkw-Beispiel) oder auf dem Dach (Bus-Beispiel), beide im Paket durch Bildunterschriften belegt – legt die laterale Hebelänge für die Kollisionssimulation fest; je höher und seitlicher das Pack, desto größer der Moment auf den Gehäuseflansch.
+- **Als Folgerung (Sicherheit / Kühlung):** Seitenaufprälle mit Stangen erzeugen konzentrierte, hochdynamische Einwirkung direkt am Akku-Rahmen; die UN-ECE-R135-Lasten sind ein zentraler Lastfall (konkrete Werte: nicht gefunden, Quelle 403). Die Kühlkomponenten (Rohre, Fluide) müssen auf diese Lasten hin geprüft werden.
+- **Als Folgerung (Wirtschaftlichkeit / Chemie):** Die Packkosten-Spanne (230–545 US$/kWh) und die stark steigende Rohstoffnachfrage (Nickel, Kobalt, Lithium) schränken das Designfenster für Materialmassen im Gehäuse ein; LTO-Chemie bietet höhere Sicherheitsreserven, ist aber energiedicht-unterschwellig – als Folgerung eine Nischenoption für sicherheitskritische Anordnungen.
+- **Als Folgerung (Elektrik / Zellenauslegung):** LTO-Zellen mit &gt;10 000 Zyklen und geringem Thermal-Runaway-Risiko könnten – als Folgerung aus dem im Paket genannten Sicherheitsprofil – bei Anordnungen mit geringem baulichen Abstand zur Seitwand vorteilhaft sein, sind aber energiedichter-unterschwellig.
+
+## Offene Fragen
+
+1. Welche konkreten mechanischen Lasten (Krafteinwirkung, Anprallgeschwindigkeit, Kontaktzeit, Deformationsgrenze) gibt die UN-ECE-R135-Stangen-Seitenkollisionsvorschrift für ein Fahrzeug mit seitlich montiertem Batteriepack vor? *(Quelle im Paket HTTP-403; externe Klärung nötig.)*
+2. Welche Anforderungen an Zell-/Pack-Sicherheit bei Seitenaufprall (Elektrolytaustritt, Kurzschluss, thermische Stabilität) stellt die UNECE-R100-Richtlinie, und wie greifen diese mit der R135-Strukturlast zusammen? *(Quelle im Paket HTTP-403.)*
+3. Wie verändert sich die Kinetik der lateralen Karosseriedeformation, wenn das massereiche, starr gelagerte Akku-Pack einen signifikanten Teil der Seitenspannungszone bildet, im Vergleich zu einem konventionellen Hohlquerschnitt? *(Für FE-Modell-Setup relevant.)*
+4. Welche Testprotokolle (NHTSA/IIHS „MDB", „Pole") sind für die strukturelle Auslegung des Akku-Rahmens maßgebend, und welche Überdeckungsfaktoren sind dabei anzusetzen?
+
+## Auffälliges
+
+- Zwei von vier Quellen (UNECE-R100-PDF, UN-ECE-R135-Webseite) lieferten **HTTP-403-Fehler**; die konkreten Regelwerte und Belastungsgrenzwerte fehlen daher vollständig im Paket.
+- Das Paket kombiniert zwei thematisch unterscheidbare Bereiche (Batterietechnologie/-wirtschaftlichkeit und Unfallstatistik/seitliche Kollision), ohne eine explizite Verbindungslinie im Text; die Relevanz für unsere CAE-Aufgabe muss aus dem Kontext erschlossen werden.
+- Keine widersprüchlichen Aussagen zwischen den zwei vollständigen Quellen festgestellt.
+- Keine versteckten Anweisungen oder auffälligen Manipulationen im Text erkannt.
+
+
+Prüfung: 15 Belege bestaetigt, 0 Fehler
+
+## W31
+
+# Paket W31 – Wissensaufbau: Elektrische Schaltung, Batteriemanagement, Strukturmaterial, (Trenner)
+
+## Erklärung
+
+Ein **Contactor** (deutsch: Leistungsschalter bzw. Kontaktor) ist ein elektromagnetisch betriebener Schalter für Ströme ab etwa 15 Ampere; er schaltet die Hauptstrombahn zwischen einem Batteriepack und dem Verbraucher (Motor, Heizung, Kapazitormbank). Das Funktionsprinzip: Strom durch die Spule erzeugt ein Magnetfeld, das einen Eisenkern anzieht und mechanisch die Kontakte schließt; nach Abschalten öffnet eine Feder oder die Gravitation die Kontakte wieder. In der Praxis sind Contactoren für hohe Ströme und Spannungen ausgelegt und enthalten Bogenlöschungseinrichtungen, um den Funken beim Trennen zu unterdrücken. Das **Battery Management System (BMS)** ist die elektronische Steuereinheit, die Zellspannung, Ladezustand (State of Charge) und Zustand (State of Health) überwacht, den Lade- und Entladevorgang steuert und den Akku vor Überladung, Überstrom und thermischer Entartung schützt. Für die thermische Verwaltung steht je nach Auslegung Luftkühlung (einfach, aber wirkungsarm) oder Flüssigkeitskühlung (höhere Wärmeübergabe, größere Bauteile) zur Verfügung. **Aluminium** (Element, Ordnungszahl 13) ist als Struktur- und Gehäusematerial relevant: Es weist mit rund einem Drittel der Dichte von Stahl einen deutlichen Massevorteil auf, bildet an der Luft eine stabile Schutzoxidschicht und ist weich, nichtferromagnetisch und duktil. Zum vierten Themenfeld, dem **pyrotechnischen Fixierungs-/Trennelement**, liegt im vorliegenden Paket unter der zugeordneten URL kein Textinhalt vor; alle zu diesem Punkt erwartbaren Kennwerte sind daher „nicht gefunden". Zusammen bilden diese vier Bausteine – Schaltung, Steuerung, Kühlung und Struktur – die mechanisch-elektrische Infrastruktur eines Batteriesystems, wie es in Fahrzeugen oder stationären Einspeiseapplikationen eingesetzt wird.
+
+## Kennwerte
+
+| Größe | Wert | Einheit | Beleg |
+|---|---|---|---|
+| Stromschwelle Contactor-Klassifizierung | 15 | A | Beleg: "switching more than 15 amperes or in circuits rated more than a few kilowatts" (https://en.wikipedia.org/wiki/Contactor) |
+| Spannungsbereich Contactor-Spule (AC/DC) | 24 – 600 | V | Beleg: "Coil voltages for contactors are often from 24 V AC/DC all the way up to 600 V AC" (https://en.wikipedia.org/wiki/Contactor) |
+| Trennstrombereich Contactor | mehrere bis Tausende | A | Beleg: "having a breaking current of several amperes to thousands of amperes and 24 V DC to many kilovolts" (https://en.wikipedia.org/wiki/Contactor) |
+| Max. Anzahl Steuerknoten (modulare BMS-Architektur) | 255 | nodes | Beleg: "most hardware is limited to a maximum of 255 nodes" (https://en.wikipedia.org/wiki/Battery_management_system) |
+| Spezifische Wärmekapazität Aluminium | 896.894 | J/(kg·K) | Beleg: "Specific heat capacity 896.894 J/(kg·K)" (https://en.wikipedia.org/wiki/Aluminium) |
+| Molare Wärmekapazität Aluminium | 24.20 | J/(mol·K) | Beleg: "Molar heat capacity 24.20 J/(mol·K)" (https://en.wikipedia.org/wiki/Aluminium) |
+| Dichte Aluminium relativ zu Stahl | ≈ 1/3 | – | Beleg: "density lower than other common metals, about one-third that of steel" (https://en.wikipedia.org/wiki/Aluminium) |
+| Ordnungszahl Aluminium | 13 | – | Beleg: "has symbol Al and atomic number 13" (https://en.wikipedia.org/wiki/Aluminium) |
+| Pyrotechnischer Fixierungs-/Trennwert (alle Größen) | – | – | nicht gefunden |
+
+## Bedeutung für unser Batteriesystem
+
+- **Elektrik / Schaltung** (Folgerung): Der Contactor ist der einzige im Paket beschriebene Hauptstromschalter; die BMS-Seite bestätigt, dass die Lastanbindung „normally … controlled through electromagnetic relays called contactors". Für unsere Zellmodule muss die Contactor-Auswahl nach Nennstrom, Trennstrom und Spulenspannung (24 V DC–600 V AC) dimensioniert werden, da die BMS zusätzlich ein Vorwiderstands-Precharge-Konzept anbindet.
+- **Sicherheit** (Folgerung): Die BMS beschreibt explizit die Schutzfunktion – Verhinderung von Überladen, Kurzschluss, Erdungsfehler – und die Öffnung eines „internal switch (such as a relay or MOSFET)" bei Regelverstößen. Der Contactor muss daher als schaltender Sicherheitsaktuator in die Sicherheits-Steuerlogik der BMS integriert sein.
+- **Kühlung** (Folgerung): Die BMS-Quelle listet passive/aktive Luftkühlung und Flüssigkeitskühlung (direkt oder indirekt) als thermisches Management. Für die Mechanik- und Gehäuseplanung bedeutet das: Kanalquerschnitt, Montageaufwand und Wirkungsgrad der Kühlung sind frühe Festlegungen; Aluminium mit seiner hohen spezifischen Wärmekapazität (≈ 897 J/kg K) und geringen Dichte ist für Gehäuse/Heizkörper vorteilhaft.
+- **Zusammenbau / Struktur** (Folgerung): Aluminium ist „soft, nonmagnetic, and ductile" und bildet eine „protective layer of oxide" – beides spricht für Bleche/Strukturelemente im Pack, die nicht elektromagnetisch gestört werden sollen und ohne separate Beschichtung gegen Korrosion geschützt sind.
+- **Mechanischer Trenner / Sicherheit** (Folgerung, eingeschränkt): Zu pyrotechnischen Fixierungen liegt im Paket kein Dateninhalt vor. Ob ein solcher in unserem Batteriesystem vorgesehen ist und welche mechanischen Lasten er tragen muss, bleibt offen und kann hier nicht bewertet werden.
+
+## Offene Fragen
+
+1. **Contactor-Dimensionierung:** Welcher Nenn- und Trennstrom ist für unsere Zellenstrangschaltung vorgegeben, und reicht der im Paket genannte Bereich (mehrere A bis Tausende A, 24 V DC bis kV) aus, oder ist ein spezieller Hochspannungs-Contactor nötig?
+2. **BMS-Architektur:** Wollen wir zentralisiert (ein Controller, viele Leitungen) oder moduliert (bis 255 Knoten) – und welche Kommunikationsmethode (isoliert seriell, optisch, drahtlos) ergibt sich daraus?
+3. **Thermisches Design:** Wird Luft- oder Flüssigkeitskühlung eingesetzt, und wenn indirekte Flüssigkeitskühlung: welcher Pumpendurchsatz vs. welcher Temperaturgradient ist am Gehäuse- und Zelllayout akzeptabel?
+4. **Pyrotechnischer Trenner:** Welche mechanische Funktion (Notfalltrennung, Crash-Sensor, Wartungszugang) soll ein pyrotechnischer Fixierungselement erfüllen, und welche Statische/Dynamische Last ist nachzuweisen? (Keine Daten im vorliegenden Paket.)
+
+## Auffälliges
+
+- **Leerer Abschnitt:** Die Quelldatei enthält unter der URL `https://en.wikipedia.org/wiki/Pyrotechnic_fastener` **keinen Textinhalt** (nur der Überschrift zeile, dann direkt nächster Abschnitt). Damit fehlt eine der vier deklarierten Quellen vollständig; alle darauf bezogenen Kennwerte sind „nicht gefunden".
+- **Qualitätshinweis im Contactor-Artikel:** Der Wikipedia-Artikel trägt den Wartungsvermerk „This article needs more citations" (Januar 2026) und mehrere „citation needed" -Platzhalter; die dortigen Angaben (z. B. Bogenlöschung, Kontaktmaterial) sind nur eingeschränkt belegbar.
+- **Widersprüche zwischen Quellen:** keine festgestellt. Die Beschreibungen von Contactorr, BMS und Aluminium greifen im vorliegenden Text konsistent ineinander.
+
+
+Prüfung: 6 Belege bestaetigt, 3 Fehler

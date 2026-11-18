@@ -46,6 +46,35 @@ Folge: Vor dem CAD (G1/G4) stehen drei Schritte: (a) Bauteilbaum bis zur Stückl
 ## B-BAT-025 (2026-11-18) E2 Fortsetzung 2: NMC-Mäander machbar, LFP nicht; LFP-FPC passt nicht an den Querträgern vorbei
 Quelle `cad/pack/entwurf/ergebnis_{LFP,NMC}_e2.json`, `sim/elektrik/e2_elektronik/ERGEBNIS.md` v0.3. NMC: 4 Bänder à 7 Spalten, Plus/Mitte/Minus hinten, HV intern 1,19 m, 11,34 W, 0 Kollisionen, FPC 30,7 m, Hälften 112/105 Gruppen. LFP: 2 Reihen reichen nicht (4 Durchläufe nötig), 9 Kollisionen FPC–Querträger (18 mm frei über dem Profil, FPC 20 mm), 6 von 14 FPC-Stücken ohne Platz.
 
+## B-BAT-029 (2026-11-18) KO1 Kosten: LFP ≈ 80 €/kWh, NMC ≈ 110 €/kWh, vollständig geschätzt
+- Untere Schranke: 15 Positionen bei LFP und 12 bei NMC haben keine Masse bzw. Menge. Werte:
+
+  | Variante | €/Pack | €/kWh | Zellanteil |
+  |---|---|---|---|
+  | LFP | 5 933 | 80,3 | 62 % |
+  | NMC | 8 151 | 109,8 | 68 % |
+
+- Verifiziert ist nur der BNEF-Packpreis BEV 2024 von 97 USD/kWh (W29), etwa 89 €/kWh. Er dient zum Abgleich. 100 % der Summe beruhen auf Schätzungen (ERW-KO1).
+- Wirkung des Zellpreises: ±20 % beim Zellpreis ergeben ±12,5 % (LFP) bzw. ±13,7 % (NMC) beim Packpreis.
+- Opus-Fehler in Lauf 1: Fertigungszuschlag auf die Zellen gerechnet, Kühlplatte als Vollmaterial. Korrigiert in Nachtrag 1.
+- REQ-P16 ohne Zielwert (Autor).
+- Vorgang: [KO1]
+
+## B-BAT-028 (2026-11-18) SL2 Stückliste je Variante: Massen stimmen (±1,3 %), fünf Bauteile fehlten im Baum, vier Zählwidersprüche CAD/E1
+- `docs/13_stueckliste_<V>.md` v0.2: je 38 Positionen; LFP 619 kg (+1,2 % gegen pack_massen), NMC 471 kg (−0,4 %); NMC über G4-Band 390–430 kg. Kostenspalten leer, Gerüst `pm/kosten/`.
+- Baum erweitert (Opus): BT-260 Verguss (NMC), BT-361 FPC-Halter, BT-440 Pol-Anschlusslaschen, BT-721 Trennbrücke, BT-722 Servicedeckel (LFP), BT-720 bauform (ENT-150 umgehängt). CMU → BT-320, FPC → BT-360 bestätigt. Dichtungen bleiben in BT-520/BT-710.
+- **Zählwidersprüche, nach E2 v1.1 klären:**
+  - LFP-Reihenverbinder: CAD 130, E1 249. Bei 250 Zellen in Reihe sind 249 nötig.
+  - NMC-Abgriffe: 868 gegen 1736. Das ist eine Definitionsfrage: je Gruppe 218 Spannungsabgriffe, je Zelle 2 Pole.
+  - NMC-Gruppenverbinder: 217 gegen 216. Möglicherweise ist die Endlasche mitgezählt.
+  - HV-Leitung: CAD 0,5/0,4 kg, nur Cu, gegen E1 1,8/1,2 kg. Die E1-Werte sind eine Schätzung mit Isolierung. Es gilt CAD plus Isolierung.
+- Vorgang: [SL2]
+
+## B-BAT-027 (2026-11-18) E2 v1.0: Trennbrücke LFP (0 mm Höhe), Al-Verlust höher als erwartet, NMC-Verbinderquerschnitt widersprüchlich
+- LFP-Trennstecker → Trennbrücke unter Servicedeckel (ENT-150, Autor „wie du meinst“), Packhöhe vorn 121 mm. Nut + Serviceöffnung 1,5 % der oberen Kühlfläche (für K2).
+- Al-Verbinder LFP 73,5 W gegen ≤ 50 W: Opus-Erwartung zu tief, bei 194 A Schnellladen vertretbar (Querverbinder 18,9 W nachgerechnet).
+- **Widerspruch NMC:** E1 wählt Gruppenverbinder 15×3 mm, das Pack-CAD zeichnet 25×3 mm → 461 W bzw. 316 W. Das CAD muss den Akten-Querschnitt lesen; Klärung vor M/X. LFP-Lasche im 1-mm-Spalt nur Stumpfstoß (Bohrungsrand 0,8 mm) → konstruktiv offen. Merkmal BT-720 bauform fehlt in struktur.json (ENT-150 unter einbauort). Vorgang: [E2]
+
 ## B-BAT-026 (2026-11-18) E2 abgeschlossen (Entwurf): beide Varianten ohne Kollision, Erwartung Nachtrag 2 erfüllt
 - ERGEBNIS.md v0.4: HV intern LFP 1,18 m / 15,2 W, NMC 1,19 m / 11,3 W; Elektronik 6,4 / 7,1 kg; FPC LFP 16 mm, 4 Lagen; NMC 216 Brücken nach Mäander. Opus-Fehler „Mitte hinten“ (Nachtrag 2) behoben.
 - Offen: LFP-Trennstecker vorn 58 mm über Deckel (Packhöhe dort 179 mm); 2 mm Nut in der oberen Kühlplatte LFP für den Querverbinder; Anschlusslaschen, Verlust der Al-Verbinder. ENT-122 auf [NMC] gesetzt (Sonnet, Opus bestätigt). Vorgang: [E2]

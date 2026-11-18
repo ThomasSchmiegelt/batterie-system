@@ -933,10 +933,8 @@
     "status": "vorgeschlagen"
    },
    "einbauort": {
-    "wert": "reihenmitte",
-    "einheit": null,
-    "entscheidung": "ENT-131",
-    "status": "vorgeschlagen"
+    "wert": null,
+    "entscheidung": null
    }
   },
   "BT-730": {
@@ -1264,6 +1262,43 @@
   "A_e2_trennstecker_masse_kg": {
    "wert": 0.2,
    "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_bruecke_luecke_mm": {
+   "wert": 30,
+   "herkunft": "ERW-E2 N3 (Platzhalter Opus/Sonnet): Lücke im Querverbinder LFP für die Service-Trennbrücke"
+  },
+  "A_e2_bruecke_ueberlappung_mm": {
+   "wert": 25,
+   "herkunft": "ERW-E2 N3: Überlappung Brücke auf Querverbinder je Seite"
+  },
+  "A_e2_bruecke_querschnitt_mm": {
+   "wert": [
+    25,
+    3
+   ],
+   "herkunft": "ERW-E2 N3: Cu-Brücke 25 x 3, 2 x M8 (je Seite eine Schraube), HV-Interlock-Kontakt nicht modelliert"
+  },
+  "A_e2_serviceoeffnung_mm": {
+   "wert": [
+    120,
+    80
+   ],
+   "herkunft": "ERW-E2 N3: Öffnung 120 (y) x 80 (x) durch Pad, obere Kühlplatte, Deckel; Servicedeckel flach, bündig, Dicke = A_deckel_mm"
+  },
+  "A_e2_lasche_mm": {
+   "wert": [
+    25,
+    3
+   ],
+   "herkunft": "ERW-E2 N3: Anschlusslasche Querschnitt wie Verbinder 25 x 3, Überlappung 25 mm, Bohrung M8"
+  },
+  "A_e2_lasche_bohrung_mm": {
+   "wert": 8,
+   "herkunft": "ERW-E2 N3: Bohrung M8 (Nennmaß 8, Durchgangsloch nicht gesetzt)"
+  },
+  "A_e2_lasche_ueberlappung_mm": {
+   "wert": 25,
+   "herkunft": "ERW-E2 N3"
   },
   "A_e2_gas_mm": {
    "wert": [

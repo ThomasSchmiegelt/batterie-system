@@ -136,7 +136,7 @@
 | [ENT-128](../pm/entscheidungen/ENT-128.md) | 2026-11-18 | Hauptsicherung LFP 350 A | LFP | BT-713 | nennstrom_A = 350.0 A | REQ-P13 | B-BAT-024 | Opus (Annahme ERW-E2) | vorgeschlagen |
 | [ENT-129](../pm/entscheidungen/ENT-129.md) | 2026-11-18 | Hauptsicherung NMC 315 A | NMC | BT-713 | nennstrom_A = 315.0 A | REQ-P13 | B-BAT-024 | Opus (Annahme ERW-E2) | vorgeschlagen |
 | [ENT-130](../pm/entscheidungen/ENT-130.md) | 2026-11-18 | Service-Trennstecker 250 A | alle | BT-720 | nennstrom_A = 250.0 A | REQ-P13 | B-BAT-024 | Opus (Annahme ERW-E2) | vorgeschlagen |
-| [ENT-131](../pm/entscheidungen/ENT-131.md) | 2026-11-18 | Service-Trennstecker in der Mitte der Reihe | alle | BT-720 | einbauort = reihenmitte | REQ-P13 | B-BAT-024 | Opus (Annahme ERW-E2) | vorgeschlagen |
+| [ENT-131](../pm/entscheidungen/ENT-131.md) | 2026-11-18 | Service-Trennstecker in der Mitte der Reihe | NMC | BT-720 | einbauort = reihenmitte | REQ-P13 | B-BAT-024 | Opus (Annahme ERW-E2) | vorgeschlagen |
 | [ENT-132](../pm/entscheidungen/ENT-132.md) | 2026-11-18 | HV-Stecker Anzahl 2 | alle | BT-730 | anzahl = 2.0 - | REQ-P13 | B-BAT-024 | Opus (Annahme ERW-E2) | vorgeschlagen |
 | [ENT-133](../pm/entscheidungen/ENT-133.md) | 2026-11-18 | HV-Stecker Antrieb/Laden 250 A | alle | BT-730 | nennstrom_A = 250.0 A | REQ-P13 | B-BAT-024 | Opus (Annahme ERW-E2) | vorgeschlagen |
 | [ENT-134](../pm/entscheidungen/ENT-134.md) | 2026-11-18 | NV-Stecker 26-polig | alle | BT-740 | polzahl = 26.0 - | REQ-P13 | B-BAT-024 | Opus (Annahme ERW-E2) | vorgeschlagen |
@@ -155,6 +155,7 @@
 | [ENT-147](../pm/entscheidungen/ENT-147.md) | 2026-11-18 | Bauraumlänge LFP 2050 mm (CMU hochkant in beiden Endzonen, je +10 mm) | LFP | BT-000 | bauraum_laenge_mm = 2050.0 mm | REQ-P07 | B-BAT-024 | Opus (Annahme, AUFTRAG E2 Fortsetzung 2) | vorgeschlagen |
 | [ENT-148](../pm/entscheidungen/ENT-148.md) | 2026-11-18 | Verschaltung LFP Schleife 2 Reihen: Plus und Minus hinten, Mitte vorn | LFP | BT-200 | verschaltung = schleife_2reihen | REQ-P02 | B-BAT-024 | Opus (Vorschlag, AUFTRAG E2 Fortsetzung 3; Geometrie Sonnet) | vorgeschlagen |
 | [ENT-149](../pm/entscheidungen/ENT-149.md) | 2026-11-18 | Messleitung FPC Breite LFP 16 mm | LFP | BT-360 | breite_mm = 16.0 mm | REQ-P02 | B-BAT-024 | Opus (Vorschlag, AUFTRAG E2 Fortsetzung 3; Geometrie Sonnet) | vorgeschlagen |
+| [ENT-150](../pm/entscheidungen/ENT-150.md) | 2026-11-18 | Service-Trennbrücke LFP unter Servicedeckel | LFP | BT-720 | bauform = trennbruecke_servicedeckel_vorn | REQ-P13 | B-BAT-024 | Opus (Vorschlag, AUFTRAG E2 Änderung zu Punkt 4, Autor 2026-11-18); Geometrie Sonnet | vorgeschlagen |
 
 ---
 *KI-generiert (pm.py). Status „entschieden“ setzt nur der Autor.*

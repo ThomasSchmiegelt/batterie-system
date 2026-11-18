@@ -4,14 +4,16 @@
 \contentsline {section}{\numberline {3}Vorgehen mit KI-Agenten}{5}{section.3}%
 \contentsline {section}{\numberline {4}Recherche und Datenlage}{6}{section.4}%
 \contentsline {section}{\numberline {5}Chemie: von der Annahme zur Messung}{8}{section.5}%
-\contentsline {section}{\numberline {6}Systemauslegung}{12}{section.6}%
-\contentsline {section}{\numberline {7}Zelle: Maße, Innenaufbau, CAD}{14}{section.7}%
-\contentsline {section}{\numberline {8}Wärme der Einzelzelle (K0, K1, K1b)}{18}{section.8}%
-\contentsline {section}{\numberline {9}Gehäuse und Pack}{29}{section.9}%
-\contentsline {section}{\numberline {10}Elektrik E1: Querschnitte und Verluste}{34}{section.10}%
-\contentsline {section}{\numberline {11}Fehler und Korrekturen}{36}{section.11}%
-\contentsline {section}{\numberline {12}Entscheidungen}{38}{section.12}%
-\contentsline {section}{\numberline {13}Offene Punkte und nächste Schritte}{40}{section.13}%
-\contentsline {section}{Anhang A: Begriffe (Glossar)}{41}{section.13}%
-\contentsline {section}{Anhang B: Quellen}{42}{section.13}%
-\contentsline {section}{Anhang C: Software}{43}{section.13}%
+\contentsline {section}{\numberline {6}Systemauslegung}{14}{section.6}%
+\contentsline {section}{\numberline {7}Zelle: Maße, Innenaufbau, CAD}{16}{section.7}%
+\contentsline {section}{\numberline {8}Wärme der Einzelzelle (K0, K1, K1b)}{20}{section.8}%
+\contentsline {section}{\numberline {9}Gehäuse und Pack}{32}{section.9}%
+\contentsline {section}{\numberline {10}Elektrik E1: Querschnitte und Verluste}{37}{section.10}%
+\contentsline {section}{\numberline {11}Elektronik und Kabel E2}{39}{section.11}%
+\contentsline {section}{\numberline {12}Stückliste und Kosten}{47}{section.12}%
+\contentsline {section}{\numberline {13}Fehler und Korrekturen}{51}{section.13}%
+\contentsline {section}{\numberline {14}Entscheidungen}{54}{section.14}%
+\contentsline {section}{\numberline {15}Offene Punkte und nächste Schritte}{57}{section.15}%
+\contentsline {section}{Anhang A: Begriffe (Glossar)}{58}{section.15}%
+\contentsline {section}{Anhang B: Quellen}{59}{section.15}%
+\contentsline {section}{Anhang C: Software}{60}{section.15}%

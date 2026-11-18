@@ -1,4 +1,4 @@
-%% KI-generiert (Claude Opus/Sonnet), Entwurf. BAT-DOC-17, Version 0.2.
+%% KI-generiert (Claude Opus/Sonnet), Entwurf. BAT-DOC-17, Version 0.3.
 %% Praeambel und Makros \bild, \lesehilfe, \kasten nach ~/hermes/fusion/bericht/projektbericht/projektbericht.tex
 \documentclass[10pt,a4paper]{article}
 \usepackage[utf8]{inputenc}\usepackage[T1]{fontenc}\usepackage[german]{babel}
@@ -12,7 +12,7 @@
 \DeclareUnicodeCharacter{03A9}{\ensuremath{\Omega}}
 \DeclareUnicodeCharacter{0394}{\ensuremath{\Delta}}
 \DeclareUnicodeCharacter{221D}{\ensuremath{\propto}}
-\hypersetup{pdfauthor={Thomas Schmiegelt},pdftitle={Projektbericht Batteriesystem BT-000, Fassung 0.2 (KI-generiert, Entwurf)}}
+\hypersetup{pdfauthor={Thomas Schmiegelt},pdftitle={Projektbericht Batteriesystem BT-000, Fassung 0.3 (KI-generiert, Entwurf)}}
 \emergencystretch=3em
 \urlstyle{tt}
 \newcommand{\bild}[3]{\begin{figure}[H]\centering\includegraphics[width=#2\linewidth]{bilder/#1}\caption[]{#3}\end{figure}}
@@ -26,7 +26,7 @@
 \newcommand{\tquelle}[1]{\par\smallskip{\raggedright\footnotesize Quelle: #1\par}\smallskip}
 \newcommand{\annahme}{\textit{(Annahme)}}
 \pagestyle{fancy}\fancyhf{}
-\fancyhead[L]{\small BAT-DOC-17 \textbar{} Version 0.2 \textbar{} Entwurf}
+\fancyhead[L]{\small BAT-DOC-17 \textbar{} Version 0.3 \textbar{} Entwurf}
 \fancyhead[R]{\small Projektbericht Batteriesystem BT-000}
 \fancyfoot[L]{\footnotesize\textbf{KI-generiert} (Claude Opus/Sonnet), Entwurf, nicht vom Menschen freigegeben.}
 \fancyfoot[R]{\small Seite \thepage}
@@ -39,14 +39,14 @@
 \thispagestyle{fancy}
 \begin{center}{\LARGE\textbf{Projektbericht Batteriesystem BT-000}}\\[4pt]
 {\large Zwei Zellvarianten (LFP-Blade und NMC-4680) bei gleicher Spezifikation, entworfen und nachgerechnet mit KI-Agenten}\\[2pt]
-{\large Zwischenstand, Fassung 0.2 (Deutsch), Stand 2026-11-17 abends}\end{center}
+{\large Zwischenstand, Fassung 0.3 (Deutsch), Stand 2026-11-18}\end{center}
 
 \begin{center}\small
 \begin{tabularx}{\linewidth}{|l|X|l|X|}\hline
-\textbf{Dok.-Nr.} & BAT-DOC-17 & \textbf{Version} & 0.2\\\hline
-\textbf{Status} & Entwurf & \textbf{Datum} & 2026-11-17\\\hline
+\textbf{Dok.-Nr.} & BAT-DOC-17 & \textbf{Version} & 0.3\\\hline
+\textbf{Status} & Entwurf & \textbf{Datum} & 2026-11-18\\\hline
 \textbf{Ersteller} & Claude Opus/Sonnet (KI) & \textbf{Prüfer} & Opus (Inhalt, Zahlen); Mensch (Freigabe) offen\\\hline
-\textbf{Autor / Auftraggeber} & Thomas Schmiegelt & \textbf{Vorgang} & B1-b (Zwischenstand, nachgezogen)\\\hline
+\textbf{Autor / Auftraggeber} & Thomas Schmiegelt & \textbf{Vorgang} & B1-c (Fassung 0.3)\\\hline
 \end{tabularx}\end{center}
 
 \kigen{Dieses Dokument ist von KI-Agenten erstellt (Claude Sonnet nach Gliederung von Claude Opus) und nicht vom Menschen
@@ -55,9 +55,9 @@ Fundstelle steht als Fußnote oder in Klammern. Keine Zahl ist in diesem Bericht
 \textit{Annahme} gekennzeichnet. „Freigegeben“ setzt nur der Mensch.}
 
 \kasten{Testprojekt.}{Das Batteriesystem ist ein Testprojekt für den gewerblichen Einsatz von KI-Agenten, kein Produkt.
-Der Bericht beschreibt den Stand vom 2026-11-17 abends (Fassung 0.2, gegenüber 0.1 neu: Wärme beim Schnellladen K1/K1b, Gehäuse
-und Pack, Elektrik E1, Entscheidungen bis ENT-103). Es ist ein Zwischenstand: Kühlplatten-Kanäle (BT-610), Crash und das
-Zellmodell C1 bis C3 fehlen. Beim Lesen gilt: Was „vorgeschlagen“ heißt, hat der Autor noch nicht entschieden.}
+Der Bericht beschreibt den Stand vom 2026-11-18 (Fassung 0.3, gegenüber 0.2 neu: Zellmodell C1/C2, Wärme K1c und Kühlplatte K2, Elektronik und Kabel E2,
+Stückliste SL2 und Kosten KO1, Entscheidungen bis ENT-150). Es ist ein Zwischenstand: Crash (X1), das Zellmodell C3 und die Überarbeitung der
+Elektronik-Konstruktion fehlen. Beim Lesen gilt: Was „vorgeschlagen“ heißt, hat der Autor noch nicht entschieden.}
 
 \tableofcontents
 
@@ -69,20 +69,19 @@ derselben Spezifikation parallel entwickelt: ein \textbf{LFP-Blade-Pack} (prisma
 \textbf{NMC-4680-Pack} (Rundzellen).\quelle{\path{pm/entscheidungen/ENT-005.md}, \path{ENT-007.md} bis \path{ENT-011.md}; \path{docs/01_lastenheft.md} (REQ-P06); \path{BEFUNDE.md} B-BAT-010}
 
 \begin{itemize}[nosep]
-\item \textbf{Masse (CAD, Entwurf).} LFP 611,9 kg (Zielband 560--620 kg, Abweichung gegen die Chemierechnung C0b $-0{,}7$ \%); NMC 473,4 kg
-  (Zielband 390--430 kg \emph{verfehlt}, $+15{,}2$ \% gegen C0b 411 kg). Gehäuse LFP 2030 × 1430 × 121 mm, NMC 1950 × 1430 × 115 mm, je 3 Querträger,
-  0 Kollisionen.\quelle{\path{cad/pack/entwurf/ergebnis.json}, \path{ergebnis_LFP.json}, \path{ergebnis_NMC.json}; \path{cad/pack/ERGEBNIS.md}}
+\item \textbf{Masse.} Stückliste auf Konstruktionsstand: LFP 619,8 kg (Zielband 560--620 kg), NMC 471,3 kg (Zielband 390--430 kg \emph{verfehlt}); gegen die Packmassenrechnung G4 (611,9 bzw. 473,4 kg) $+1{,}29$ \% bzw. $-0{,}43$ \%.\quelle{\path{pm/bauteile/stueckliste_LFP.json}, \path{stueckliste_NMC.json}, Feld \texttt{summen}; \path{cad/pack/entwurf/ergebnis.json}}
   Die Chemierechnung C0b allein ergab im Fall A 616 kg (LFP) gegen 411 kg (NMC).\quelle{\path{sim/chemie/varianten_lfp_nmc/ergebnis.json}}
+  Bauraum: 1430 mm Breite (ENT-030); Länge LFP 2030 mm (ENT-102, entschieden) bzw. 2050 mm im E2-Stand (ENT-147, vorgeschlagen), NMC 1950 mm (ENT-103); Höhe 130 mm \annahme.\quelle{\path{pm/entscheidungen/ENT-102.md}, \path{ENT-103.md}, \path{ENT-147.md}; \path{cad/pack/entwurf/ergebnis_LFP_e2d.json}}
 \item \textbf{Schnellladezeit} (10 auf 80 \%), vom Autor festgelegt: LFP 20 min, NMC 30 min (REQ-P05).\quelle{\path{docs/01_lastenheft.md}, REQ-P05}
-\item \textbf{Kühlung.} Entschieden ist eine Kühlplatte oben \emph{und} unten (ENT-088). Mit ihr hält LFP beim Schnellladen in 20 min beide Vorgaben (33,8 °C, 4,6 K Spreizung);
-  NMC hält sie in 30 min mit der Kühlung über Verbinder und Isolierpad (K1b: 33,3 °C, 3,8 K, Annahme $h_\mathrm{eff}$ 214 W/(m²·K)). Mit Kühlung nur von unten
-  verfehlt beim Schnellladen jede Variante die 5 K.\quelle{\path{sim/kuehlung/k1_schnellladen/ergebnis.json}; \path{ERGEBNIS.md} Abschnitte 2 und 8; \path{pm/entscheidungen/ENT-088.md}}
-\item \textbf{Elektrik (E1).} Verluste der Verbinder bei Dauerstrom: LFP 105,2 W, NMC 385,4 W; die NMC-Summe liegt über der Verfehlt-Grenze 300 W der Erwartung.\quelle{\path{sim/elektrik/e1_querschnitte/ERGEBNIS.md}, Abgleich Punkt 5}
-\item \textbf{Bauraum:} 1430 mm Breite (ENT-030), Länge je Variante eigenes Gehäuse (LFP 2030 mm ENT-102, NMC 1950 mm ENT-103), Höhe 130 mm \annahme.\quelle{\path{pm/entscheidungen/ENT-030.md}, \path{ENT-102.md}, \path{ENT-103.md}}
-\item \textbf{Stand der Akten:} 103 Akten, davon 36 entschieden und 67 „vorgeschlagen“ (Zellmaße und Innenaufbau ENT-014 bis ENT-080 u. a.).\quelle{\path{docs/04_entscheidungen.md} (Zählung der Statusspalte)}
+  Zellmodell C1/C2: Das 4680-Modell erreicht 80 \% in 29,7 min bei 1,5C (Plating-Risiko, Anodenpotential unter 0 V); der LFP-Parametersatz aus PyBaMM passt nicht, die Blade-Zelle ist mit 0,877 m$\Omega$ gemessen.\quelle{\path{sim/chemie/c2_kalibrierung/ERGEBNIS.md}; \path{BEFUNDE.md} B-BAT-022, -023}
+\item \textbf{Kühlung.} Kühlplatte oben \emph{und} unten (ENT-088). Mit der Wärme aus C2 (K1c) hält LFP 32,7 °C und 4,0 K; die 4680 hält 34,0 °C und 4,15 K, mit dem ungünstigeren Wärmemaß aber 39,1 °C und 6,5 K (5 K verfehlt). Die Kühlplatte (K2) ist laminar durchströmt; nur 4-mm-Kanäle erreichen den Wärmedurchgang 500 W/(m²·K); Durchfluss LFP 23, NMC 20 L/min (ENT-107, ENT-108).\quelle{\path{sim/kuehlung/k1_schnellladen/ERGEBNIS.md} Abschnitt 9; \path{sim/kuehlung/k2_kuehlplatte/ERGEBNIS.md}; \path{BEFUNDE.md} B-BAT-021}
+\item \textbf{Elektrik.} E1: Verluste der Verbinder bei Dauerstrom LFP 105,2 W, NMC 385,4 W (Querschnitt 15 × 3 mm).\quelle{\path{sim/elektrik/e1_querschnitte/ERGEBNIS.md}}
+  E2: Die Schaltbox steht als Turm unter der Rücksitzbank (ENT-144); beide Packs sind verdrahtet. Konstruktionsstand E2D: Al-Verlust LFP 75,6 W, NMC 316,0 W (Akte 25 × 3 mm); Packhöhe vorn LFP 134 mm (Grenze 130 mm überschritten), NMC 128 mm.\quelle{\path{sim/elektrik/e2_elektronik/ERGEBNIS.md} v1.1; \path{cad/pack/entwurf/ergebnis_LFP_e2d.json}}
+\item \textbf{Kosten (alles Schätzung).} Teilsumme LFP 5\,935 € je Pack (80,3 €/kWh), NMC 8\,149 € (109,7 €/kWh); 16 bzw. 13 Positionen sind offen, die Werte sind Untergrenzen. Verifiziert ist nur der Marktpreis 97 USD/kWh (W29), die Pack-Preise selbst sind Annahmen. REQ-P16 hat keinen Zielwert.\quelle{\path{pm/kosten/ergebnis_LFP.json}, \path{ergebnis_NMC.json}; \path{docs/18_kosten.md}}
+\item \textbf{Stand der Akten:} 150 Akten: 106 entschieden (104 „Mensch“, 2 „Autor“), 43 „vorgeschlagen“, 1 ersetzt (ENT-109).\quelle{\path{docs/04_entscheidungen.md} (Zählung der Statusspalte, 2026-11-18)}
 \item \textbf{Lehre für KI im Engineering.} Die erste Chemie-Empfehlung hielt nicht: Sie beruhte auf einer unbelegten
-  Annahme und wurde erst durch Messwerte aus einer Zerlegungsstudie korrigiert. Kapitel~\ref{k:fehler} listet 17 Fehler und Korrekturen
-  und ihre Entdeckung; die meisten fand erst die Gegenprüfung am Rohwert oder die Rechnung selbst.
+  Annahme und wurde erst durch Messwerte aus einer Zerlegungsstudie korrigiert. Kapitel~\ref{k:fehler} listet 23 Fehler und Korrekturen
+  und ihre Entdeckung; die meisten fand erst die Gegenprüfung am Rohwert oder die Rechnung selbst. Neu in 0.3: Opus-Erwartungen, die physikalisch nicht erreichbar oder zu streng waren (Elektronik, Kosten).
 \end{itemize}
 
 %======================================================================
@@ -116,7 +115,7 @@ REQ-P08 & Umgebungstemperatur & offen & offen\\
 REQ-P09 & max. Zelltemperatur, Spreizung & T$_{\max}$ ≤ 45 °C, Spreizung in der Zelle ≤ 5 K & festgelegt\\
 REQ-P10 & Lebensdauer & offen (Zyklen, Jahre, Restkapazität) & offen\\\bottomrule
 \end{longtable}
-Quelle: \path{docs/01_lastenheft.md}, Stand 2026-11-17 abends. Weitere Anforderungen (P11 bis P15: Sicherheit, Kühlmittel, Schutzart, Mechanik, BMS) sind offen.
+Quelle: \path{docs/01_lastenheft.md}, Stand 2026-11-17 abends. Weitere Anforderungen (P11 bis P15: Sicherheit, Kühlmittel, Schutzart, Mechanik, BMS) sind offen. REQ-P16 (Kosten) ist vorgeschlagen und hat \textbf{keinen Zielwert}.
 
 %======================================================================
 \section{Vorgehen mit KI-Agenten}
@@ -151,8 +150,8 @@ der Entwurf mit „vorgeschlagenen“ Akten läuft getrennt.\quelle{\path{CLAUDE
 \end{itemize}
 
 \subsection*{Umfang im Protokoll}
-Das KI-Einsatzprotokoll hat am 2026-11-17 insgesamt 32 Zeilen (je Zeile ein verteilter Auftrag oder Arbeitsschritt):
-18 für Sonnet, 7 für Opus, 5 für PI, 2 für Web-Abruf-Agenten; Haiku: 0 Zeilen. Die Zeile für K0 ist noch offen („läuft“).\quelle{\path{docs/08_ki_einsatz_protokoll.md} (Zählung der Zeilen, Stand dieses Berichts)}
+Das KI-Einsatzprotokoll hat am 2026-11-18 insgesamt 72 Zeilen (je Zeile ein verteilter Auftrag oder Arbeitsschritt):
+47 für Sonnet, 7 für Opus, 14 für PI, 2 für Haiku, 2 für Web-Abruf-Agenten. Einige Zeilen (u. a. dieser Bericht) stehen auf „läuft“.\quelle{\path{docs/08_ki_einsatz_protokoll.md} (Zählung der Zeilen nach Spalte „Wer“, 2026-11-18)}
 
 %======================================================================
 \section{Recherche und Datenlage}\label{k:recherche}
@@ -256,6 +255,22 @@ leichteres Restfahrzeug braucht.\quelle{\path{sim/chemie/varianten_lfp_nmc/DEUTU
 Hinweis: DEUTUNG.md nennt für den Bauraum von LFP Fall A noch die Zahlen von Lauf 1 (−0,3 \%); gültig ist Lauf 3 (+4,5 \%, \texttt{ERGEBNIS.md}).
 Annahmen, die das Ergebnis tragen: Packfaktor 0,75 für beide Varianten, Volumennutzung LFP 60 \% (W19, Sekundärquelle), Zellen je Reihe und Fühler der
 NMC-Stückliste aus der LFP-Annahme (offen, G4).
+
+\subsection*{C1 und C2: Zellmodell und Kalibrierung (2026-11-17)}
+\begriffe{\textbf{PyBaMM}: Python-Programm für elektrochemische Zellmodelle (hier das Einteilchenmodell SPMe). \textbf{DCIR}: Gleichstrom-Innenwiderstand nach einem 10-s-Lastpuls. \textbf{CC-CV}: Laden erst mit konstantem Strom, dann mit konstanter Spannung. \textbf{Plating}: Ablagerung von metallischem Lithium an der Anode, wenn deren Potential unter 0 V fällt (Alterung, Kurzschlussgefahr). \textbf{Parametersatz}: Zahlen eines Zelltyps im Modell, hier aus der Literatur (LFP \texttt{Prada2013}, NMC \texttt{Chen2020}).}
+\kasten{Stand.}{C1 und C2 sind PyBaMM-Rechnungen auf der CPU (Sekunden bis Minuten). Die Parametersätze sind \emph{Literatur} und nicht die Zellen dieses Projekts; die NMC-Zelle ist ein 21700-Satz, keine 4680. Alle Zahlen stehen in \path{sim/chemie/c1_zellmodell/ergebnis_zahlen.json} und \path{sim/chemie/c2_kalibrierung/ergebnis_*.json}.}
+\textbf{C1: erster Lauf.} NMC (Chen2020): Kapazität 23,19 Ah (+0,26 \% gegen die Akte ENT-009), Innenwiderstand 6,40 m$\Omega$ (Erwartungsband 5 bis 8 m$\Omega$), Wärme im Mittel 6,92 W gegen die K1-Annahme 6,7 W. Beim Laden mit konstantem Strom und Spannung ist 4,2 V nach 21,8 min erreicht und 80 \% nach 36,15 min; damit wird REQ-P05 (30 min) mit diesem Satz \emph{verfehlt}. LFP (Prada2013): mit der Elektrodenfläche der Akten nur 48,63 Ah ($-47{,}4$ \%); nach Skalierung auf 92,4 Ah ist der Innenwiderstand 0,76 m$\Omega$ und die Wärme 32,8 W gegen 55 W in K1. Der LFP-Satz passt also nicht.\quelle{\path{sim/chemie/c1_zellmodell/ERGEBNIS.md}, Abgleich Punkte 1 bis 4; \path{BEFUNDE.md} B-BAT-022}
+
+\textbf{C2: Kalibrierung an Messdaten.} Für die Blade-Zelle (135 Ah) liegt ein Pulsdatensatz vor (Test\#5, Borealis, CC-BY). Bei 25 °C und 15 bis 90 \% Ladezustand weicht das Modell nach der Anpassung um 15,3 mV (RMS) ab (Ziel 15 mV, knapp verfehlt); der 10-s-Widerstand ist gemessen 0,877 m$\Omega$, im Modell 0,827 m$\Omega$. Die Temperaturreihe verfehlt (157,8 mV RMS), die Ruhespannung des Literatursatzes liegt 143 mV daneben. Für die Wärme gilt deshalb der gemessene Widerstand; auf die eigene LFP-Zelle (92,4 Ah) umgerechnet sind das 1,28 m$\Omega$ und etwa 48 W statt 55 W bei 2,1C (K1 war konservativ).\quelle{\path{sim/chemie/c2_kalibrierung/ERGEBNIS.md}, Abgleich Punkte 1 und 2; \path{ergebnis_blade.json}; \path{BEFUNDE.md} B-BAT-023}
+
+\bild{c2_blade_widerstand.png}{0.95}{C2: 10-s-Widerstand der Blade-Zelle je Ladezustand und Temperatur. Quelle: \path{sim/chemie/c2_kalibrierung/blade_widerstand.png} (Messdaten Test\#5).}
+\lesehilfe{Jeder Punkt ist ein 10-s-Entladepuls der echten Blade-Zelle. Je höher der Punkt, desto mehr Spannung bricht ein. Kalt (blau) ist der Widerstand etwa doppelt so hoch wie warm (rot). Das grüne Band ist der erwartete Bereich bei 25 °C und halber Ladung (0,8 bis 1,2 m$\Omega$); die gemessenen 25-°C-Punkte (orange) liegen darin.}
+
+\textbf{4680 beim Schnellladen.} Mit dem Chen2020-Material, der Geometrie aus W20 und einem Innenwiderstand von 6,4 m$\Omega$ (im Band 5,4 bis 7 m$\Omega$, W24; deshalb nicht kalibriert) erreicht die Zelle bei 1,5C Startstrom 10 auf 80 \% in 29,7 min (1,3C: 33,0 min; 1,8C: 25,8 min). Die Wärme beträgt 7,4 W (Modell) bzw. 11,5 W (Strom mal Spannungsabfall) gegen 6,7 W in K1b. Das Anodenpotential liegt in \emph{allen} gültigen Läufen unter 0 V, schon bei 1C ($-0{,}031$ V): Nach diesem generischen Satz besteht Plating-Risiko; ohne 4680-Messdaten ist das nicht entscheidbar.\quelle{\path{sim/chemie/c2_kalibrierung/ergebnis_schnellladen_n4680.json}, Felder \texttt{zeit\_10\_80\_min}, \texttt{waerme\_mittel\_gesamt\_W}, \texttt{waerme\_mittel\_IdU\_W}, \texttt{phi\_an\_min\_V}; \path{ERGEBNIS.md} Abgleich Punkt 3}
+
+\bild{c2_schnellladen_4680.png}{0.95}{C2: 4680 beim Schnellladen 10 auf 80 \% für drei Startströme. Quelle: \path{sim/chemie/c2_kalibrierung/schnellladen_4680.png}.}
+\lesehilfe{Vier Teilbilder: oben Strom und Spannung über der Zeit, unten das Anodenpotential und der Ladezustand. Die rote Linie im Teilbild links unten ist die Plating-Grenze (0 V): Liegt eine Kurve darunter, kann sich Lithium abscheiden. Die grüne gestrichelte Linie ist das Ziel 30 min. Der Startstrom 1,5C (orange) erreicht 80 \% knapp vor 30 min, liegt aber ab etwa 10 min unter der roten Linie.}
+Folge: Der Autor hat die Auslegung mit der Modellwärme (7,4 W) beschlossen und I$\cdot\Delta$U als ungünstigsten Fall mitgeführt; die 30 min der 4680 gelten als „knapp, nicht abgesichert“. Zwei Risiken sind eingetragen: \textbf{R-PLAT} (Lithium-Ablagerung beim Schnellladen) und \textbf{R-4680W} (Wärme zwischen 7,4 und 11,5 W, im ungünstigen Fall Spreizung 6,5 K über der Vorgabe 5 K); beide Status „offen“.\quelle{\path{BEFUNDE.md} B-BAT-023; \path{docs/05_risiken_fmea.md}, Zeilen R-PLAT und R-4680W}
 
 %======================================================================
 \section{Systemauslegung}
@@ -482,9 +497,9 @@ P4, K1b & – & – & 33,3 & 3,8 & – / beide\\
 \bottomrule\end{tabular}\end{center}
 \tquelle{Spitzenwerte über die Ladezeit; \path{sim/kuehlung/k1_schnellladen/ergebnis.json}, Felder T\_max\_Spitze\_C und dT\_Spitze\_K (Tabelle mit Ladeende, Zeiten über der Schwelle und Wärmeintegral: \path{ERGEBNIS.md} Abschnitt 2). „beide“ = T$_{\max}$ ≤ 45 °C und $\Delta$T ≤ 5 K (REQ-P09). „–“: nicht gerechnet.}
 
-\bild{k1_landkarte.png}{0.92}{K1: Landkarte aller gerechneten Fälle gegen REQ-P09. Quelle: \path{sim/kuehlung/k1_schnellladen/landkarte.png}.}
+\bild{k1_landkarte.png}{0.92}{K1: Landkarte aller gerechneten Fälle gegen REQ-P09, mit den K1c-Zeilen (Stand 2026-11-17 abends). Quelle: \path{sim/kuehlung/k1_schnellladen/landkarte.png}.}
 \lesehilfe{Jede Zeile ist ein Fall, jede Spalte ein Spitzenwert. Grün heißt Vorgabe eingehalten (T$_{\max}$ ≤ 45 °C bzw. $\Delta$T ≤ 5 K), rot verfehlt, grau nicht gerechnet. Die Spalte „Ampel“ fasst beide Vorgaben zusammen: grün beide erfüllt, gelb nur eine, rot keine.
-Die grünen Felder in der Ampel sind: LFP mit Kühlplatte oben und unten (mit h 500 und h 1000) sowie NMC mit K3 bei 25 min (Deckel direkt gekühlt), mit K1b bei 30 min und mit K1b bei 25 min und höherer Bedeckung.}
+Die grünen Felder in der Ampel sind: LFP mit Kühlplatte oben und unten (mit h 500 und h 1000) sowie NMC mit K3 bei 25 min (Deckel direkt gekühlt), mit K1b bei 30 min und mit K1b bei 25 min und höherer Bedeckung. Die drei letzten Zeilen (K1c) rechnen mit der Wärme aus dem Zellmodell C2: LFP und NMC (Modellwärme) grün, NMC mit dem ungünstigeren Wärmemaß gelb.}
 \bild{k1_verlauf_kuehlung_LFP.png}{0.88}{K1: LFP, Temperatur und Spreizung je Kühlfall (Profil P0). Quelle: \path{sim/kuehlung/k1_schnellladen/verlauf_kuehlung_LFP.png}.}
 \lesehilfe{Oben die höchste Temperatur in der Zelle über die Ladezeit, unten der Temperaturunterschied im Kern. Der grüne Bereich ist das \emph{Zielband} (unterhalb der beschrifteten Linie 45 °C bzw. 5 K). Mehr Wärmeübergang am Boden (h 1000, h 2000) und Vorkühlung (V15) senken nur die Höchsttemperatur; die Spreizung bleibt bei etwa 10 K. Erst die Kühlung von zwei Seiten (K3) bringt die Spreizung in das grüne Band.}
 \bild{k1_verlauf_kuehlung_NMC.png}{0.88}{K1: 4680, Temperatur und Spreizung je Kühlfall (Profil P0, wenn nicht anders). Quelle: \path{sim/kuehlung/k1_schnellladen/verlauf_kuehlung_NMC.png}.}
@@ -507,6 +522,34 @@ Auf dieser Grundlage hat der Autor für die 4680 die Ladezeit 30 min festgelegt 
 \end{itemize}
 \textbf{K1b-Deutung:} liegt als Opus-Deutung nicht vor; die Bewertung oben folgt der Sonnet-Auswertung gegen die Erwartung (Erwartung P4 etwa 35 °C / 4,5 bis 5 K, Ergebnis 33,3 °C / 3,8 K).\quelle{\path{sim/kuehlung/k1_schnellladen/ERGEBNIS.md}, Abschnitt 8}
 \kasten{Folge für Auslegung (Entscheidungen des Autors, 2026-11-17).}{Kühlplatte oben und unten (ENT-088); Schnellladen LFP 20 min, NMC 30 min (REQ-P05). Offen bleibt die Annahme zum oberen Kühlpfad der 4680 (Pad, Bedeckung $\varphi$).\quelle{\path{sim/kuehlung/TABELLEN_TEMPERATUR.md}, Abschnitt Folge}}
+
+
+\subsection*{K1c: Wärme aus dem kalibrierten Zellmodell}
+K1 rechnete die Wärme als $I^2 R$ mit Annahmen. K1c setzt stattdessen die Ergebnisse aus C2 ein: für LFP den gemessenen Widerstand (1,28 m$\Omega$ je Zelle), für die 4680 den Wärmeverlauf Q(t) aus dem Modell (bei 1,5C). Kühlung wie bisher (Platte oben und unten, 4680 oben über Verbinder und Pad mit $\varphi$ 0,5, $k_\mathrm{pad}$ 3 W/(m·K), alles Annahme).
+\begin{center}\small
+\begin{tabular}{@{}lccl@{}}\toprule
+Fall & T$_{\max}$ °C & $\Delta$T K & Vorgabe 45 °C / 5 K\\\midrule
+LFP, P0, beidseitig gekühlt, R 1,28 m$\Omega$ & 32,7 & 4,02 & beide erfüllt\\
+4680, K1b, Q(t) aus dem Modell (mittel 7,4 W) & 34,0 & 4,15 & beide erfüllt\\
+4680, K1b, Q(t) auf I$\cdot\Delta$U skaliert (mittel 11,5 W) & 39,1 & 6,48 & T erfüllt, $\Delta$T \emph{verfehlt}\\
+\bottomrule\end{tabular}\end{center}
+\tquelle{\path{sim/kuehlung/k1_schnellladen/ERGEBNIS.md}, Abschnitt 9 (Tabelle und Abgleich mit Nachtrag K1c). Die I$\cdot\Delta$U-Form ist eine Skalierung des Modellverlaufs (Annahme, Zeitverlauf nicht gespeichert); die Q(t)-Datei endet bei 1720,8 s, Ladeende wäre 1780,8 s.}
+Die Erwartung (Opus, Nachtrag K1c) war LFP etwa 32,8 °C / 4,0 K (getroffen), 4680 etwa 34 bis 35 °C / 4,2 bis 4,6 K (T erfüllt, $\Delta$T knapp darunter) und bei I$\cdot\Delta$U 38 bis 40 °C / 6 bis 7 K (getroffen). Die Wärmeintegrale stimmen auf 0,08 \% mit der Datei überein. Deutung (Opus, Autor „einverstanden“): Der Unterschied der beiden Wärmemaße ist die Mischungswärme der Konzentrationsgradienten (Strom mal Spannungsabfall gegen Gleichgewichtsspannung, obere Schranke).\quelle{\path{sim/kuehlung/k1_schnellladen/ERGEBNIS.md}, Abschnitt 9; \path{BEFUNDE.md} B-BAT-023}
+Die Landkarte weiter oben (\path{sim/kuehlung/k1_schnellladen/landkarte.png}) enthält die drei K1c-Zeilen am Ende.
+
+\subsection*{K2: Kühlplatte, Kanäle und Durchfluss}
+\begriffe{\textbf{Laminar}: glatte Strömung ohne Wirbel (hier Reynoldszahl 27 bis 188); der Wärmeübergang hängt dann nur von der Kanalform ab, nicht vom Durchfluss. \textbf{Wärmedurchgang U}: Wärmestrom je Fläche und Kelvin von der Zelle bis ins Kühlmittel, bezogen auf die Plattenfläche, in W/(m²·K). \textbf{Druckverlust $\Delta p$}: Druckabfall im Kanal. \textbf{Pad}: Wärmeleitmaterial zwischen Zelle und Platte.}
+K2 ist eine eindimensionale Rechnung (Hydraulik und Wärmeübergang) für beide Platten je Variante (LFP 1970 × 1370 mm, NMC 1890 × 1370 mm), Kühlmittel ($\rho$ 1070, $c$ 3300 J/(kg·K), $\mu$ 3 mPa·s, $k$ 0,40 W/(m·K)) als \emph{Annahme} (Sonnet).\quelle{\path{sim/kuehlung/k2_kuehlplatte/ERGEBNIS.md}, Abschnitt 1}
+Die Wärme je Pack ist beim Schnellladen LFP 13,75 kW (55,0 W je Zelle), 4680 5,91 kW (6,81 W je Zelle, Profil P4).\quelle{\path{sim/kuehlung/k2_kuehlplatte/ERGEBNIS.md}, Abschnitt 1}
+\begin{itemize}[nosep]
+\item \textbf{Laminar, Erwartung verfehlt.} Der Wärmeübergang im Kanal ist 260 bis 316 W/(m²·K) statt der erwarteten 500 bis 1000; die Erwartung von Opus war zu optimistisch (laminar: Nusseltzahl etwa 4 bis 5).\quelle{\path{BEFUNDE.md} B-BAT-021; \path{sim/kuehlung/k2_kuehlplatte/ERGEBNIS.md}, Abschnitt 3}
+\item \textbf{Stege und Pad.} Bezogen auf die Plattenfläche und mit Pad (1 mm) und Blech in Reihe liegt U nur mit \textbf{4-mm-Kanälen, 5 mm hoch}, bei 565 bis 595 W/(m²·K) (LFP 568 bis 595, 4680 551 bis 577) über dem Ziel 500; die Basisvariante (20 × 5 mm) erreicht 361. Mäander (mehr Durchgänge) bringt kein nennenswert höheres U, nur mehr Druckverlust.\quelle{\path{sim/kuehlung/k2_kuehlplatte/ERGEBNIS.md}, Abschnitt 8 (Nachtrag); \path{ergebnis_nachtrag.json}}
+\item \textbf{Druckverlust und Pumpe.} $\Delta p$ etwa 0,005 bar, Pumpenleistung unter 1 W (Ziel $\le$ 0,5 bar): weit erfüllt.\quelle{\path{BEFUNDE.md} B-BAT-021}
+\item \textbf{Durchfluss.} Für 5 K Kühlmittelerwärmung LFP 46,7 L/min, 4680 20,1 L/min (Profil P4); bei 10 K halbiert, U bleibt gleich (laminar). Entschieden (Autor, 2026-11-17): LFP \textbf{23 L/min} bei 10 K (ENT-107), NMC \textbf{20 L/min} bei 5 K (ENT-108). Die Kanalmaße 4 × 5 mm (ENT-104, -105) und die Bauweise gelötet, parallele Kanäle quer (ENT-106) sind \emph{vorgeschlagen}.\quelle{\path{sim/kuehlung/k2_kuehlplatte/ERGEBNIS.md}, Abschnitt 2; \path{pm/entscheidungen/ENT-107.md}, \path{ENT-108.md}, \path{ENT-104.md} bis \path{ENT-106.md}}
+\end{itemize}
+\bild{k2_nachtrag_U_leistung.png}{1.0}{K2: Wärmedurchgang U gegen Pumpenleistung je Bauvariante, links LFP, Mitte 4680 (30 min), rechts 4680 (25 min). Quelle: \path{sim/kuehlung/k2_kuehlplatte/nachtrag_U_leistung.png}.}
+\lesehilfe{Jeder Punkt ist eine Bauvariante der Kühlplatte (Farbe: Kanalbreite, Kreis 5 mm hoch, Dreieck 3 mm hoch). Waagerecht steht die Pumpenleistung (logarithmisch, links ist besser), senkrecht der Wärmedurchgang. Das grüne Band ab 500 W/(m²·K) ist das Ziel (Annahme aus K0/K1). Nur die violetten Punkte (4-mm-Kanäle) liegen sicher darin; der schwarze Ring ist die gewählte Variante für höchstens 5 K Kühlmittelerwärmung.}
+\textbf{Offen:} Zelle--Pad- und Pad--Blech-Kontaktwiderstand sind nicht enthalten; die Nusselt-Korrelation stammt aus dem Gedächtnis des Modells (Annahme, kein abgerufener Beleg); K1 rechnete mit $h$ 500 und wurde mit dem hier berechneten U nicht wiederholt; die Kühlmittel-Erwärmung entlang des Packs ist nicht Teil von REQ-P09.\quelle{\path{sim/kuehlung/k2_kuehlplatte/ERGEBNIS.md}, Abschnitt 6; \path{pm/entscheidungen/ENT-107.md}}
 
 
 %======================================================================
@@ -617,13 +660,119 @@ NMC HV-Hauptleitung & 2 & Cu 35 mm² & 3,70 & 32,1 & 101,8 & 1,22\\
 \textbf{Methodenkorrektur.} Der erste Lauf setzte bei den NMC-Gruppenverbindern den vollen Gruppenstrom über die ganze Länge an (Verlust 566,3 W, Spannungsabfall 0,547 \%). Das ist konservativ, aber falsch: Der Strom wächst entlang der Sammelstrecke gleichmäßig von 0 auf $I$ (4 Zellabgriffe), der Verlust dort ist $I^2 R/3$;
 nur die Reihenbrücke zur Nachbargruppe führt den vollen Strom. Nach dem Nachtrag (Annahme Opus): 385,4 W und 0,442 \%. Die Korrektur änderte die Verluste, aber nicht die Querschnittsregel.\quelle{\path{sim/elektrik/e1_querschnitte/ERGEBNIS.md}, Nachtrag Methode}
 \textbf{Folge (Autor, 2026-11-17).} Der Autor hat Reihenverbinder Al 25 × 3 mm (75 mm²) für beide Varianten (ENT-096 bis 098), Zellabgriff 12 × 1 mm Al (ENT-099) und HV-Hauptleitung 50 mm² (LFP) bzw. 35 mm² (NMC) Cu (ENT-100, 101) entschieden.\quelle{\path{pm/entscheidungen/ENT-096.md} bis \path{ENT-101.md}}
-E1 rechnete LFP mit 15 × 5 mm (gleicher Querschnitt 75 mm²). Eine Nachrechnung der NMC-Verluste mit dem entschiedenen Gruppenverbinder liegt nicht vor; Opus schätzte etwa 285 W (nicht gerechnet).\quelle{\path{docs/08_ki_einsatz_protokoll.md} (E1-Nachtrag-Zeile)}
+E1 rechnete LFP mit 15 × 5 mm (gleicher Querschnitt 75 mm²). Die Nachrechnung der NMC-Verluste mit dem entschiedenen Gruppenverbinder 25 × 3 mm liegt jetzt in E2 vor: 316,0 W Al-Summe (Kapitel~\ref{k:e2}); Opus hatte etwa 285 W geschätzt (nicht gerechnet).\quelle{\path{docs/08_ki_einsatz_protokoll.md} (E1-Nachtrag-Zeile); \path{sim/elektrik/e2_elektronik/ERGEBNIS.md} v1.1, Abschnitt 1}
 
 \bild{e1_querschnitte.png}{0.92}{E1: gewählte Querschnitte (Dauerstrom LFP 194 A, NMC 130 A). Quelle: \path{sim/elektrik/e1_querschnitte/querschnitte.png}.}
 \lesehilfe{Je Art von Stromschiene oder Kabel ein Balken mit dem gewählten Querschnitt in mm² (blau Aluminium, rot Kupfer; die Zahl darüber nennt Fläche und Breite × Dicke). Das grüne Band dahinter ist der \emph{erwartete Bereich} (Zielband). Die gestrichelte Linie ist der Querschnitt bei niedriger zulässiger Stromdichte (viel Reserve), die gepunktete der kleinste noch zulässige.
 Alle Balken außer dem NMC-Gruppenverbinder (45 mm², knapp unter dem Band 50 bis 80 mm²) liegen im Band.}
 \bild{e1_verluste.png}{0.92}{E1: Wärmeverlust der Verbinder je Art. Quelle: \path{sim/elektrik/e1_querschnitte/verluste.png}.}
 \lesehilfe{Wärmeverlust aller Verbinder einer Art in Watt: blau bei Dauerstrom, orange bei 10 s Spitze. Das grüne Band ist das \emph{Ziel} unter 100 W, die rote Linie die Verfehlt-Grenze 300 W. LFP liegt mit gut 50 W je Art knapp im Band (Summe 105 W); bei NMC liegt der Gruppenverbinder darüber (255 W), die NMC-Summe beträgt 385 W.}
+
+%======================================================================
+\section{Elektronik und Kabel E2}\label{k:e2}
+\begriffe{\textbf{CMU}: Zellüberwachungsplatine, misst die Zellspannungen (hier 18 Kanäle). \textbf{FPC}: flache Messleitung (Flexleiterplatte) von den Zellen zur CMU. \textbf{Daisy-Chain}: CMU-Platinen in Reihe verbunden. \textbf{Schaltbox}: Gehäuse mit Schützen (Schaltern), Sicherungen, Shunt (Strommessung) und BMS. \textbf{Vorladung}: langsames Laden der Fahrzeugkondensatoren vor dem Einschalten. \textbf{Service-Trennbrücke}: trennbare Stromschiene, die die Zellkette in zwei Hälften unter 400 V teilt. \textbf{HV}: Hochvolt.}
+\kasten{Stand.}{E2 legt Überwachung, Schaltbox und Leitungen beider Packs aus und baut sie in das Pack-CAD ein. Die Zahlen stehen in \path{sim/elektrik/e2_elektronik/ERGEBNIS.md} (Version 1.1), \path{ergebnis.json} und \path{cad/pack/entwurf/ergebnis_<V>_e2d.json}. Die Maße der Bauteile sind \emph{Annahmen aus der Erwartung E2} (Opus); die zugehörigen Akten ENT-110 bis ENT-143 sind „vorgeschlagen“. Das Bild ist ein Entwurf, die Teile sind noch quaderhaft.}
+\textbf{Entscheidungen.} Die Schaltbox steht als Turm am hinteren Packende unter der Rücksitzbank, dort darf die Packhöhe lokal 210 mm betragen (ENT-144, entschieden, Autor 2026-11-18); das ersetzt die Lage vorn auf dem Deckel (ENT-109).\quelle{\path{pm/entscheidungen/ENT-144.md}} NMC: Mäander-Verschaltung, alle Anschlüsse hinten (ENT-145). LFP: Schleife in zwei Reihen, Plus und Minus hinten, die Mitte vorn (ENT-148) mit einer \textbf{Trennbrücke} unter einem flachen Servicedeckel, 0 mm über dem Deckel (ENT-150). ENT-145, -148 und -150 sind vorgeschlagen.\quelle{\path{pm/entscheidungen/ENT-145.md}, \path{ENT-148.md}, \path{ENT-150.md}; \path{BEFUNDE.md} B-BAT-025 bis -027}
+
+\textbf{Ergebnisse.}
+\begin{center}\small
+\begin{tabular}{@{}p{5.4cm}p{3.7cm}p{3.7cm}@{}}\toprule
+Größe & LFP & NMC\\\midrule
+Spannungsabgriffe & 251 & 218\\
+Ausgleich (passiv) & 12,32 h (150 mA) & 14,22 h (130 mA, ENT-146)\\
+CMU-Wärme bei Höchstspannung & 9,85 W & 9,83 W\\
+Vorladung & 8,0 A, 320 J, 300 ms & gleich\\
+Heizung 5 kW, 25 K & 38,5 min & 25,7 min\\
+HV intern Länge, Verlust (v0.4) & 1,176 m, 15,22 W & 1,194 m, 11,34 W\\
+HV intern Länge, Verlust (E2D, v1.1) & 1,08 m, 13,98 W & 1,088 m, 10,34 W\\
+Al-Verbinder Dauerstrom (v1.0) & 73,5 W & 316,0 W (25 × 3 mm)\\
+Al-Verbinder Dauerstrom (E2D, v1.1) & 75,6 W (Erwartung $\le$ 50 W, verfehlt) & 316,0 W (25 × 3 mm; 461,1 W bei 15 × 3 mm)\\
+Elektronikmasse (v1.0 $\to$ v1.1) & 6,34 $\to$ 7,35 kg & 7,15 $\to$ 7,94 kg\\
+Kollisionen E2D & 3 (Berührung und 2 × M8-Kopf an der Trennbrücke) & 0\\
+Packhöhe vorn (Grenze 130 mm) & 134 mm, \emph{über} & 128 mm, ok\\
+Innenhöhe Schaltbox (Annahme 90 mm) & 116 mm, \emph{über} & 110 mm, \emph{über}\\
+Teile im CAD (E2 $\to$ E2D) & 442 $\to$ 956 & 2236 $\to$ 2701\\
+Messleitung FPC & 11,8 m (16 mm breit) & 30,7 m (Band 25 bis 40 m)\\
+\bottomrule\end{tabular}\end{center}
+\tquelle{\path{sim/elektrik/e2_elektronik/ERGEBNIS.md}: Abgleich (Punkte 1 bis 4), Version 0.4 Abschnitt 3, Version 1.0 Abschnitte 2 und 5, Version 1.1 Abschnitte 1 und 2; \path{cad/pack/entwurf/ergebnis_LFP_e2d.json}, \path{ergebnis_NMC_e2d.json} (Felder \texttt{e2.hv\_laenge\_gesamt\_m}, \texttt{e2.hv\_verlust\_W}, \texttt{e2.hoehe\_vorn\_mm}, \texttt{anzahl\_kollisionen}); \path{sim/elektrik/e2_elektronik/verlust_al_e2d.json}.}
+Die Verluste der HV-Leitung gelten beim Schnellladen (LFP 194 A, NMC 139 A; 12,95 bzw. 9,49 W je Meter Leiter) und ohne Zellverbinder. Kontaktwiderstände der Schweißungen und Schrauben sind nicht modelliert. Die Gesamthöhe mit Turm im Bild-Stand v1.0 ist 210 mm (LFP) bzw. 204 mm (NMC); im Ergebnis E2D steht für \texttt{hoehe\_mm} 249 bzw. 237 mm (Ursache nicht geklärt, siehe Offene Punkte).\quelle{\path{sim/elektrik/e2_elektronik/ERGEBNIS.md} v0.4 Abschnitt 3; \path{cad/pack/entwurf/ergebnis_LFP_e2d.json}, \path{ergebnis_NMC_e2d.json}, Feld \texttt{hoehe\_mm}}
+
+\bild{e2_LFP_draufsicht.png}{1.0}{E2 LFP: Draufsicht ohne Deckel mit Überwachungsplatinen, Messleitung, HV-Leitung und Schaltbox (Stand v1.0). Quelle: \path{sim/elektrik/e2_elektronik/e2_LFP_draufsicht.png} (verkleinert).}
+\lesehilfe{Blick von oben auf das Pack ohne Deckel. Rot sind die Überwachungsplatinen an den Stirnseiten, gelb die flachen Messleitungen, magenta die Hochvolt-Leitungen, grün die Schaltbox (hinten rechts, als Turm unter der Rücksitzbank), blau Stecker und Sensor. Der schwarze Balken unten links ist 200 mm lang. Es gibt kein Zielband, das Bild zeigt den Leitungsweg; die Packhöhe mit Turm (210 mm) steht im Bildkopf.}
+\bild{e2_NMC_draufsicht.png}{1.0}{E2 NMC: Draufsicht ohne Deckel (Stand v1.0). Quelle: \path{sim/elektrik/e2_elektronik/e2_NMC_draufsicht.png} (verkleinert).}
+\lesehilfe{Wie das LFP-Bild. Die 868 Zellen sind als Raster zu sehen; die Messleitungen laufen flach über die Zellverbinder, die Hochvolt-Leitung steigt von der Zelle senkrecht auf und biegt mit mindestens 60 mm Radius ab. Kein Zielband (Leitungsplan); die Packhöhe mit Turm steht im Bildkopf.}
+\bild{kabelplan_LFP.png}{0.92}{E2 LFP: Kabelplan, Draufsicht. Quelle: \path{sim/elektrik/e2_elektronik/kabelplan_LFP.png} (verkleinert).}
+\lesehilfe{Der Plan zeigt je Überwachungsplatine (rot) die Länge ihrer Messleitung (gelb) und die Hochvolt-Leitungen (magenta); die Mitte der Reihe liegt vorn auf den Zellen, die Schaltbox (grün) hinten. Ein Zielband gibt es nicht, weil es ein Plan ist; zur Einordnung: erwartet waren 25 bis 40 m Messleitung insgesamt, LFP hat wegen der kurzen Zellreihen nur 11,8 m.}
+\bild{kabelplan_NMC.png}{0.92}{E2 NMC: Kabelplan, Draufsicht (Stand v1.0). Quelle: \path{sim/elektrik/e2_elektronik/kabelplan_NMC.png} (verkleinert).}
+\lesehilfe{Wie das LFP-Bild. Die 13 Messleitungen (gelb) laufen quer durch das Pack, feine Linien sind die Stichleitungen zu den Zellgruppen. NMC liegt mit 30,8 m Messleitung im erwarteten Band (25 bis 40 m); die Hochvolt-Leitung ist 1,18 m lang (Verlust 11,2 W im Bildkopf, Stand v1.0).}
+\bild{schaltbild_LFP.png}{0.95}{E2 LFP: Schaltbild des Packs (Stand v1.0). Quelle: \path{sim/elektrik/e2_elektronik/schaltbild_LFP.png}.}
+\lesehilfe{Der Strompfad (rot) führt von den beiden Zellketten-Hälften über Sicherung, Schütze und Strommessung zum Hochvolt-Stecker; die Messkette (blau) verbindet Überwachungsplatinen und das Hauptsteuergerät. Die Trennbrücke in der Mitte teilt die Kette in zwei Hälften zu je 125 Zellen. Die Reihenfolge der Bauteile ist nur eine Darstellung, keine Auslegung. Es gibt kein Zielband, weil es ein Schaltbild ist.}
+\bild{schaltbild_NMC.png}{0.95}{E2 NMC: Schaltbild des Packs (Stand v1.0). Quelle: \path{sim/elektrik/e2_elektronik/schaltbild_NMC.png}.}
+\lesehilfe{Wie das LFP-Bild; beim NMC-Pack sitzt der Service-Trennstecker hinten in der Reihenmitte bei der Schaltbox. Kein Zielband (Schaltbild).}
+\bild{e2d_LFP_boxoffen.png}{1.0}{E2D LFP: Schaltbox ohne Deckel (Konstruktionsstand). Quelle: \path{sim/elektrik/e2_elektronik/e2d_LFP_boxoffen.png} (verkleinert).}
+\lesehilfe{Blick schräg in die geöffnete Schaltbox: Wanne mit Dichtung und Schrauben, Geräte (Schütze, Shunt, Sicherungen, BMS), sechs Stromschienen (orange mit Schrumpfschlauch) und die Hochvolt-Leitung (magenta) durch die Wand. Das Rauschen kommt von der kurzen Rechenzeit der Bilderzeugung, die Teile sind noch quaderhaft. Im Seitenfeld stehen zwei Grenzen mit Ist-Wert in Rot: Innenhöhe der Schaltbox höchstens 90 mm (Ist 116 mm) und Packhöhe vorn höchstens 130 mm (Ist 134 mm); beide sind Annahmen, nicht freigegeben.}
+\bild{e2d_LFP_bruecke_zu.png}{1.0}{E2D LFP: Trennbrücke mit montiertem Servicedeckel. Quelle: \path{sim/elektrik/e2_elektronik/e2d_LFP_bruecke_zu.png} (verkleinert).}
+\lesehilfe{Der Servicedeckel (blau) verschließt die Öffnung im Pack-Deckel über der Trennbrücke (türkis, zwei Schrauben M8). Bekannter Mangel: Die Schraubenköpfe M8 stehen höher als der Deckel (zwei Kollisionen, Packhöhe vorn 134 mm statt höchstens 130 mm); das Seitenfeld zeigt die Grenzen in Rot.}
+\textbf{Offen (E2).} Die Konstruktion ist noch quaderhaft; eine Überarbeitungsschleife ist geplant (Autor, laut Auftrag B1-c). Offen laut E2 v1.1: Schraubenstapel M8 9,6 mm gegen 8 mm unter dem Servicedeckel, Innenhöhe der Schaltbox gegen die Annahme 90 mm, Seitenspalt LFP nur 1 mm (Lasche als Stumpfstoß), Merkmal „Stromschienen-Querschnitt“ fehlt in \path{struktur.json}, Annahmen aus dem Gedächtnis (Normmaße der Schrauben).\quelle{\path{sim/elektrik/e2_elektronik/ERGEBNIS.md} v1.1, „Offen (v1.1)“ Punkte 2 bis 6}
+
+%======================================================================
+\section{Stückliste und Kosten}\label{k:sl}
+\begriffe{\textbf{Stückliste (SL2)}: Liste aller Bauteile des Packs mit Menge, Masse, Art (K Kaufteil, E Eigenteil) und Werkstoff, hier aus dem Pack-CAD (Stand E2D). \textbf{Teilsumme}: Summe aller Positionen, die Masse und Preis haben; offene Positionen fehlen, die Summe ist eine \emph{Untergrenze}. \textbf{€/kWh}: Packkosten je nutzbarer Energie. \textbf{Zellanteil}: Zellkosten durch Packkosten.}
+\kasten{Alle Preise sind Schätzungen.}{Jeder Preis in der Kostenrechnung ist eine \emph{Annahme} (Opus, Erwartung KO1, Status „Schätzung“). \textbf{Verifiziert ist nur der Marktpreis} für Batteriepacks von Elektroautos 2024: 97 USD/kWh (BNEF, Recherche W29, Zitat geprüft), umgerechnet etwa 89,2 €/kWh mit dem Kurs 0,92 (Annahme). Er dient nur als Vergleichslinie; er ist ein Preis, die Rechnung dagegen ergibt Herstellkosten ohne Gemeinkosten und Marge. 100 \% der Summen beruhen auf Schätzungen. \textbf{REQ-P16 hat keinen Zielwert}; das Zielband der Erwartung ist eine Annahme, kein Ziel des Autors.\quelle{\path{pm/kosten/ergebnis_LFP.json}, \path{ergebnis_NMC.json} (Felder \texttt{anteil\_schaetzung\_an\_summe\_pct}, \texttt{beleg\_packpreis}); \path{forschung/ergebnis/W29.md}; \path{docs/18_kosten.md}}}
+\textbf{Stückliste.} Je Variante 39 Positionen aus dem CAD; fünf Bauteile fehlten im Baum und wurden ergänzt (BT-260 Verguss, BT-361 FPC-Halter, BT-440 Pol-Anschlusslaschen, BT-721 Trennbrücke, BT-722 Servicedeckel).\quelle{\path{docs/13_stueckliste_LFP.md}, \path{docs/13_stueckliste_NMC.md}; \path{BEFUNDE.md} B-BAT-028}
+\begin{center}\small
+\begin{tabular}{@{}p{4.3cm}rr@{}}\toprule
+Masse je Baugruppe in kg & LFP & NMC\\\midrule
+BT-100 Zelle (250 bzw. 868 Zellen) & 462,5 & 308,1\\
+BT-200 Zellstack & 13,5 & 15,7\\
+BT-300 Regelung (BMS) & 2,2 & 3,1\\
+BT-400 Verkabelung und Zellverbinder & 1,5 & 11,6\\
+BT-500 Struktur und Gehäuse & 89,2 & 84,5\\
+BT-600 Kühlung & 46,9 & 44,3\\
+BT-700 Zusatzkomponenten & 3,9 & 4,1\\\midrule
+\textbf{Summe Stückliste} & \textbf{619,8} & \textbf{471,3}\\
+Zielband G4-Erwartung & 560 bis 620 & 390 bis 430 (\emph{verfehlt})\\
+Packmassenrechnung G4 (\texttt{pack\_massen.py}) & 611,9 ($+1{,}29$ \%) & 473,4 ($-0{,}43$ \%)\\
+CAD-Summe E2D (\texttt{masse\_bekannt\_kg}) & 620,6 & 483,2\\
+\bottomrule\end{tabular}\end{center}
+\tquelle{\path{pm/bauteile/stueckliste_LFP.json}, \path{stueckliste_NMC.json}, Feld \texttt{summen.masse\_je\_baugruppe\_kg} und \texttt{summen}; \path{cad/pack/entwurf/ergebnis_<V>_e2d.json}, Feld \texttt{masse\_bekannt\_kg}. Die NMC-Stückliste liegt $-2{,}45$ \% unter der CAD-Summe, weil Verguss, Stromschienen und kleine Teile ohne Position nicht enthalten sind.}
+\bild{stueckliste_massen_LFP.png}{0.95}{Stückliste LFP: Masse je Baugruppe und Gesamtmasse gegen das Zielband. Quelle: \path{docs/bilder/stueckliste_massen_LFP.png}, erzeugt aus \path{pm/bauteile/stueckliste_LFP.json}.}
+\lesehilfe{Links die Masse jeder Baugruppe in kg (logarithmische Achse, weil die Zellen alles andere weit übertreffen). Rechts die Gesamtmasse gegen das grün schraffierte Zielband aus der G4-Erwartung (LFP 560 bis 620 kg) und die gestrichelte Linie der Packmassenrechnung. Der LFP-Balken (620 kg) liegt am oberen Rand des Bandes.}
+\bild{stueckliste_massen_NMC.png}{0.95}{Stückliste NMC: Masse je Baugruppe und Gesamtmasse gegen das Zielband. Quelle: \path{docs/bilder/stueckliste_massen_NMC.png}, erzeugt aus \path{pm/bauteile/stueckliste_NMC.json}.}
+\lesehilfe{Wie das LFP-Bild. Der NMC-Balken (471 kg) liegt \emph{über} dem Zielband 390 bis 430 kg; die Ursache sind vor allem zwei Kühlplatten, Verguss, Zellträger und das Gehäuse.}
+\clearpage
+\textbf{Kosten.}
+\begin{center}\small
+\begin{tabular}{@{}p{5.6cm}rr@{}}\toprule
+ & LFP & NMC\\\midrule
+Energie (kWh) & 73,92 & 74,27\\
+Teilsumme je Pack (€) & 5\,935 & 8\,149\\
+€/kWh & 80,3 & 109,7\\
+Zellkosten (€) / Zellanteil & 3\,696 / 62,3 \% & 5\,570 / 68,4 \%\\
+Fertigung (€) & 249 & 280\\
+Offene Positionen & 16 & 13\\
+Zellpreis $\pm$ 20 \% $\to$ Pack & $\pm$ 12,5 \% & $\pm$ 13,7 \%\\
+Abstand zum Marktpreis 89,2 €/kWh & $-8{,}9$ €/kWh & $+20{,}5$ €/kWh\\
+Zielband Erwartung (Annahme): Pack, €/kWh & 5\,500 bis 7\,000; 75 bis 95: im Band & 7\,000 bis 9\,000; 95 bis 120: im Band\\
+Zellanteil Erwartung 65 bis 80 \% & unter dem Band & im Band\\
+\bottomrule\end{tabular}\end{center}
+\tquelle{\path{pm/kosten/ergebnis_LFP.json}, \path{ergebnis_NMC.json} (Felder \texttt{summe\_eur\_pack}, \texttt{summe\_eur\_je\_kWh}, \texttt{zellkosten\_eur}, \texttt{fertigung}, \texttt{positionen\_offen\_gesamt}, \texttt{empfindlichkeit}, \texttt{pruefung\_erwartung}); Zielband \path{pm/kosten/eingaben.json} (\texttt{zielband}, Annahme aus \path{pm/kosten/ERWARTUNG.md}). Fertigung: 10 \% der Nicht-Zell-Summe plus 50 € je Pack (Annahme).}
+\bild{kosten_vergleich.png}{0.78}{Kosten: Teilsumme je kWh nach Baugruppen, LFP gegen NMC. Quelle: \path{pm/kosten/kosten_vergleich.png}, erzeugt aus \path{pm/kosten/ergebnis_<V>.json}.}
+\lesehilfe{Jeder Balken ist ein Pack mit rund 74 kWh; die Farbstücke zeigen, wohin das Geld geht (unten die Zelle). Der schwarze Rahmen ist das erwartete Zielband (eine Annahme), die rote gestrichelte Linie ist der veröffentlichte Marktpreis 89,2 €/kWh (der einzige verifizierte Wert). Die Balken sind \emph{Untergrenzen}: offene Stücklistenpositionen sind nicht mitgezählt. Alle Balkenhöhen beruhen auf geschätzten Preisen. LFP liegt im Band, aber unter dem Marktpreis; NMC liegt im Band und darüber.}
+\textbf{Zählwidersprüche zwischen CAD und E1 (offen, B-BAT-028).} LFP-Reihenverbinder: CAD 130, E1 249 (bei 250 Zellen in Reihe sind 249 nötig). NMC-Zellabgriffe: CAD 868, E1 1736 (Definitionsfrage: je Zelle 2 Pole). NMC-Gruppenverbinder: CAD 217, E1 216. HV-Leitung: CAD 0,47 bzw. 0,34 kg (nur Kupfer) gegen E1 1,81 bzw. 1,22 kg (Schätzung mit Isolierung).\quelle{\path{pm/bauteile/stueckliste_LFP.json}, \path{stueckliste_NMC.json}, Feld \texttt{widersprueche\_akte\_cad}; \path{BEFUNDE.md} B-BAT-028}
+
+\textbf{Neu gegen alt (Neuerzeugung aus dem Detailstand E2D).} Die Stückliste liest jetzt \path{ergebnis_<V>_e2d.json} statt \path{ergebnis_<V>_e2.json}; die HV-Leitungslänge der Kosten kommt direkt aus dem CAD-Ergebnis (\texttt{e2.hv\_laenge\_gesamt\_m}: LFP 1,0795 m, NMC 1,0885 m) statt aus dem Volumen.
+\begin{center}\small
+\begin{tabular}{@{}lrrr@{}}\toprule
+ & alt (B-BAT-028/029) & neu (E2D) & Abweichung\\\midrule
+Masse LFP (kg) & 619,42 & 619,80 & $+0{,}06$ \%\\
+Masse NMC (kg) & 471,38 & 471,32 & $-0{,}01$ \%\\
+Teilsumme LFP (€) & 5\,933 & 5\,935 & $+0{,}03$ \%\\
+Teilsumme NMC (€) & 8\,151 & 8\,149 & $-0{,}02$ \%\\
+€/kWh LFP / NMC & 80,3 / 109,8 & 80,3 / 109,7 & $\le$ 0,1 \%\\
+Offene Positionen LFP / NMC & 15 / 12 & 16 / 13 & je +1 (Stromschiene ohne Zuordnung)\\
+\bottomrule\end{tabular}\end{center}
+\tquelle{alt: \path{BEFUNDE.md} B-BAT-028, B-BAT-029 und die vor dem Lauf gesicherten Dateien \path{docs/13_stueckliste_<V>.md}, \path{pm/kosten/ergebnis_<V>.json}; neu: \path{pm/bauteile/stueckliste_<V>.json}, \path{pm/kosten/ergebnis_<V>.json}. Abweichungen aus den genannten Zahlen berechnet; alle unter 3 \%.}
 
 %======================================================================
 \section{Fehler und Korrekturen}\label{k:fehler}
@@ -663,70 +812,95 @@ Dieses Kapitel ist der Kern für die Frage „KI im Engineering“: Wer machte w
 16 & W22: Paketgrenze 8000 Zeichen je Quelle schnitt die Maßstellen ab (Suchbegriffe zu breit; W21 ohne Maße, 12/0) & Opus (Themenliste) / Werkzeug
  & Opus an der leeren Maßtabelle von W21 & Suchbegriffe enger, Lauf 3: 13/1, Querträgermaße gefunden; SSAB „1,8 mm“ gesperrt (B-BAT, W22-Eintrag)\\
 17 & Wartebefehl (Monitor) für eine Rechnung fand sich selbst statt der Rechnung & Opus (Wartebefehl)
- & Opus & Befehl neu gesetzt (Quelle: Auftrag B1-b; keine Befundnummer)\\\bottomrule
+ & Opus & Befehl neu gesetzt (Quelle: Auftrag B1-b; keine Befundnummer)\\\midrule
+18 & E2: Erwartung „HV intern höchstens 15 W bei 3 bis 5 m Leitung“ war mit 50 mm² physikalisch nicht erreichbar (etwa 13 W je Meter Leiter beim Schnellladen) & Opus (Erwartung E2)
+ & Rechnung (Sonnet, E2 Teil 1); Opus erkannte den Fehler in der Erwartung & Nachtrag 1: 12,95 bzw. 9,49 W je Meter; gebaut 1,2 m, 15,2 bzw. 11,3 W (B-BAT-024, -026)\\
+19 & E2: Vorgabe „Plus, Minus und Mitte hinten“ erzeugte einen Scheinkonflikt: LFP-Verschaltung ohne Platz (9 Kollisionen FPC--Querträger, 6 von 14 FPC ohne Platz) & Opus (Vorgabe im Auftrag)
+ & CAD und Kollisionsprüfung (Sonnet); Opus nannte die Vorgabe zu streng (docs/08) & LFP-Schleife in zwei Reihen mit der Mitte vorn (ENT-148), Nachtrag 2 (B-BAT-025, -026)\\
+20 & E2: Schaltbox auf dem Deckel vorn (Fall b, ENT-109) verletzte die Packhöhe 130 mm & Opus (Variante Fall b) und Autor (Wahl vorn)
+ & E2-CAD (Sonnet) gegen die Höhengrenze M0 & Autor: Box unter der Rücksitzbank, ENT-144 (Turm hinten, lokal 210 mm) (B-BAT-024)\\
+21 & KO1 Lauf 1: Fertigungszuschlag auf die Zellen gerechnet, Kühlplatte als Vollmaterial gewertet & Opus (Rechenvorgabe, laut Befund)
+ & Opus bei der Gegenrechnung (Zellanteil 3696/6465, docs/08) & Nachtrag 1: Fertigung nur auf die Nicht-Zell-Summe, Kühlplatte $\times$ 0,6 (B-BAT-029)\\
+22 & E2: Detailtiefe (Teile bis zur Schraube) stand nicht im Auftrag; erster Stand zeigte Quader & Opus (Auftrag E2)
+ & nicht dokumentiert (Auftrag B1-c, Punkt 5; keine Befundnummer) & E2D Konstruktionsstand (Fortsetzung 5); Darstellung weiter quaderhaft, Überarbeitungsschleife geplant (Autor)\\
+23 & E1 wählte für die NMC-Gruppenverbinder 15 × 3 mm, die Akte ENT-096/097 und das CAD 25 × 3 mm: Verlust 461 W gegen 316 W & Sonnet (E1 ohne Abgleich mit der Akte)
+ & Sonnet in E2 v1.0 (beide Werte gerechnet); Opus bestätigte die Akte (docs/08) & E2D rechnet mit 25 × 3 mm = 316,0 W, 15 × 3 nur zum Vergleich (B-BAT-027, E2 v1.1)\\\bottomrule
 \end{longtable}
-Die Zeilen 1 bis 7 sind inhaltliche Fehler im Entwurf, die Zeilen 8 bis 11 Werkzeug- und Erwartungsfehler. Neu in Fassung 0.2: Zeilen 12 und 15 Fehler in Erwartung und Vorgabe (Opus), 13 und 14 Fehler in Methode und Modell (Sonnet), 16 Recherchewerkzeug, 17 Ablauf. Das Muster: \emph{Die Prüfroutine fand formale Fehler (Wortlaut), die inhaltlichen Fehler (falsche Spalte,
+Die Zeilen 1 bis 7 sind inhaltliche Fehler im Entwurf, die Zeilen 8 bis 11 Werkzeug- und Erwartungsfehler. Neu in Fassung 0.3: Zeilen 18 bis 23 (Erwartungs- und Vorgabefehler von Opus in E2 und KO1, ein Abstimmungsfehler E1 gegen Akte). Neu in Fassung 0.2: Zeilen 12 und 15 Fehler in Erwartung und Vorgabe (Opus), 13 und 14 Fehler in Methode und Modell (Sonnet), 16 Recherchewerkzeug, 17 Ablauf. Das Muster: \emph{Die Prüfroutine fand formale Fehler (Wortlaut), die inhaltlichen Fehler (falsche Spalte,
 unplausibler Wert, falsche Ableitung, zu große Masse) fand erst die Gegenlesung durch Opus am Rohtext, am Zielband bzw. die Rechnung.} Fehler im Werkzeug gehen nach \texttt{BEFUNDE.md}; das Modell wird nicht geändert, damit eine Zahl passt.\quelle{\path{BEFUNDE.md} B-BAT-002 bis B-BAT-016; \path{sim/kuehlung/k1_schnellladen/DEUTUNG.md}; \path{sim/elektrik/e1_querschnitte/ERGEBNIS.md}; \path{cad/pack/ERGEBNIS.md}; \path{AGENTS.md}, Grundsatz 4}
 
 %======================================================================
 \section{Entscheidungen}
-Alle Akten \path{pm/entscheidungen/ENT-*.md}; Register \path{docs/04_entscheidungen.md} (erzeugt von \texttt{pm.py register}, nicht von Hand ändern). Stand: 103 Akten (ENT-001 bis ENT-103), davon 36 entschieden und 67 „vorgeschlagen“ (Zählung der Statusspalte).
+Alle Akten \path{pm/entscheidungen/ENT-*.md}; Register \path{docs/04_entscheidungen.md} (erzeugt von \texttt{pm.py register}, nicht von Hand ändern). Stand 2026-11-18: 150 Akten (ENT-001 bis ENT-150), davon 106 entschieden (104 „entschieden (Mensch)“, 1 „entschieden (Autor)“, 1 „entschieden (Autor, Regel aus Moltbot)“), 43 „vorgeschlagen“ und 1 „ersetzt“ (ENT-109) (Zählung der Statusspalte in \path{docs/04_entscheidungen.md}). Die Zellakten ENT-014 bis ENT-080 sind inzwischen entschieden.
 \textbf{„entschieden (Mensch)“} setzt nur der Autor; „vorgeschlagen“ heißt: dem Autor vorgelegt, noch nicht entschieden.
 
 \subsection*{Gemeinsam für beide Varianten}
 \begin{longtable}{@{}p{1.6cm}p{7.0cm}p{3.8cm}p{2.0cm}@{}}\toprule
 \textbf{Akte} & \textbf{Entscheidung} & \textbf{Merkmal} & \textbf{Status}\\\midrule\endhead
 ENT-001 & PI recherchiert ohne Werkzeuge in drei Stufen & – & entschieden (Autor)\\
-ENT-002 & Zellmodell mit PyBaMM & BT-100 & vorgeschlagen\\
+ENT-002 & Zellmodell mit PyBaMM & BT-100 & entschieden (Mensch)\\
 ENT-003 & Opus leitet und verteilt an Sonnet, Haiku, PI & – & entschieden (Autor)\\
 ENT-004 & Bauteilbaum bis Stücklistenebene, Schutzteile in Schaltbox (BT-700) & Baum & entschieden (Mensch)\\
 ENT-006 & Systemspannung 800 V & BT-000 nennspannung & entschieden (Mensch)\\
 ENT-012 & Baum für zwei Varianten (Zellhalter BT-250, Rundzellmaße) & Baum & entschieden (Mensch)\\
 ENT-013 & Bauraumlänge 1950 mm & BT-000 bauraum\_laenge & entschieden (Mensch)\\
 ENT-030 & Bauraumbreite 1430 mm & BT-000 bauraum\_breite & entschieden (Mensch)\\
-ENT-031 & Bauteilbaum Innenaufbau der Zelle (BT-111 bis 116, 121, 122, 131, 132, 140) & Baum & vorgeschlagen\\
+ENT-031 & Bauteilbaum Innenaufbau der Zelle (BT-111 bis 116, 121, 122, 131, 132, 140) & Baum & entschieden (Mensch)\\
 ENT-081 & Kühlart Kühlplatte unten (ersetzt durch ENT-088) & BT-600 kuehlart & entschieden (Mensch)\\
 ENT-082 bis 086 & Querträger: 3 Stück quer zur Fahrtrichtung, Profil 26 × 54 mm, Wand 2,5 mm, Aluminium-Strangpressprofil & BT-530 & entschieden (Mensch)\\
 ENT-087 & Seitenrahmen 30 mm je Seite & BT-540 & entschieden (Mensch)\\
 ENT-088 bis 090 & Kühlart Kühlplatte oben und unten (ersetzt ENT-081), 2 Platten, Dicke 8 mm & BT-600/610 & entschieden (Mensch)\\
 ENT-091 & Bauraumlänge 2030 mm für beide (ersetzt durch ENT-102) & BT-000 & entschieden (Mensch)\\
-ENT-096 bis 098 & Reihenverbinder Al 25 × 3 mm (75 mm²) & BT-420 & entschieden (Mensch)\\\bottomrule
+ENT-096 bis 098 & Reihenverbinder Al 25 × 3 mm (75 mm²) & BT-420 & entschieden (Mensch)\\
+ENT-104 bis 106 & Kühlplatte: Kanal 4 × 5 mm, gelötet, parallele Kanäle quer, ein Durchgang & BT-610 & vorgeschlagen\\
+ENT-109 & Schaltbox auf dem Deckel vorn (ersetzt durch ENT-144) & BT-710 & ersetzt\\
+ENT-110 bis 111, 114, 118 bis 121, 123 bis 127, 130, 132 bis 141 & Elektronik: zentrales BMS mit CMU (18 Kanäle) und Daisy-Chain, passiver Ausgleich, Shunt, Isolationswächter, FPC, Schütze 250 A, Vorladung, Pyro- und Schmelzsicherung, Stecker, Heizung 5 kW, Gas-/Drucksensor, BMS-Maße (34 Akten ENT-110 bis 143 insgesamt) & BT-300 bis 770 & vorgeschlagen\\
+ENT-144 & Schaltbox als Turm hinten unter der Rücksitzbank (ersetzt ENT-109) & BT-710 einbauort & entschieden (Mensch)\\\bottomrule
 \end{longtable}
 \subsection*{Variante LFP}
 \begin{longtable}{@{}p{1.9cm}p{7.2cm}p{3.5cm}p{2.0cm}@{}}\toprule
 \textbf{Akte} & \textbf{Entscheidung} & \textbf{Merkmal} & \textbf{Status}\\\midrule\endhead
 ENT-005 & Zellchemie LFP (Blade-Format) als Hauptvariante & BT-100 chemie & entschieden (Mensch)\\
-ENT-014 bis 020 & Zellformat, Länge 681 mm, Breite 90 mm, Dicke 14 mm, 92,4 Ah, 3,2 V, 1850 g & BT-100 & vorgeschlagen\\
-ENT-021, 022 & Z-gefalteter Stapel, 38 Kathodenlagen & BT-110 & vorgeschlagen\\
-ENT-023, 024 & Gehäuse Aluminium, Wand 0,3 mm & BT-120 & vorgeschlagen\\
-ENT-032 bis 056 & Innenaufbau: Elektroden, Separator, Isolierrand, Fixierung, Gehäusefolie, Füllöffnung, Stromschiene, Fügeverfahren, Polisolation, Ventil & BT-111 bis 140 & vorgeschlagen\\
+ENT-014 bis 020 & Zellformat, Länge 681 mm, Breite 90 mm, Dicke 14 mm, 92,4 Ah, 3,2 V, 1850 g & BT-100 & entschieden (Mensch)\\
+ENT-021, 022 & Z-gefalteter Stapel, 38 Kathodenlagen & BT-110 & entschieden (Mensch)\\
+ENT-023, 024 & Gehäuse Aluminium, Wand 0,3 mm & BT-120 & entschieden (Mensch)\\
+ENT-032 bis 056 & Innenaufbau: Elektroden, Separator, Isolierrand, Fixierung, Gehäusefolie, Füllöffnung, Stromschiene, Fügeverfahren, Polisolation, Ventil & BT-111 bis 140 & entschieden (Mensch)\\
 ENT-100 & HV-Hauptleitung 50 mm² Cu & BT-430 & entschieden (Mensch)\\
-ENT-102 & Bauraumlänge 2030 mm, eigenes Gehäuse (ersetzt ENT-091) & BT-000 & entschieden (Mensch)\\\bottomrule
+ENT-102 & Bauraumlänge 2030 mm, eigenes Gehäuse (ersetzt ENT-091) & BT-000 & entschieden (Mensch)\\
+ENT-107 & Kühlmitteldurchfluss 23 L/min (10 K) & BT-660 & entschieden (Mensch)\\
+ENT-112, 115, 116, 128, 142 & Elektronik LFP: 14 CMU, Ausgleichsstrom 150 mA, 56 Temperaturfühler, Sicherung 350 A, Biegeradius 70 mm & BT-320, 330, 713, 430 & vorgeschlagen\\
+ENT-147 & Bauraumlänge 2050 mm (E2-Stand) & BT-000 & vorgeschlagen\\
+ENT-148 bis 150 & Schleife in zwei Reihen, FPC 16 mm, Trennbrücke unter dem Servicedeckel vorn & BT-200, 360, 720 & vorgeschlagen\\\bottomrule
 \end{longtable}
 \subsection*{Variante NMC}
 \begin{longtable}{@{}p{1.9cm}p{7.2cm}p{3.5cm}p{2.0cm}@{}}\toprule
 \textbf{Akte} & \textbf{Entscheidung} & \textbf{Merkmal} & \textbf{Status}\\\midrule\endhead
 ENT-007 bis 011 & NMC811, Rundzelle 4680, 23,125 Ah, 3,7 V, 355 g (Wahl des Autors, Werte W20) & BT-100 & entschieden (Mensch)\\
-ENT-025, 026 & Durchmesser 46 mm, Höhe 80 mm & BT-100 & vorgeschlagen\\
-ENT-027 bis 029 & Wickel (tabless), Stahlgehäuse, Wand 0,4 mm & BT-110, BT-120 & vorgeschlagen\\
-ENT-057 bis 080 & Innenaufbau: Bänder, Kern Ø 12,5 mm (ENT-074), Fixierung, Blindniet, Tab-Scheiben, Fügeverfahren, Polisolation, Ventil im Boden & BT-111 bis 140 & vorgeschlagen\\
+ENT-025, 026 & Durchmesser 46 mm, Höhe 80 mm & BT-100 & entschieden (Mensch)\\
+ENT-027 bis 029 & Wickel (tabless), Stahlgehäuse, Wand 0,4 mm & BT-110, BT-120 & entschieden (Mensch)\\
+ENT-057 bis 080 & Innenaufbau: Bänder, Kern Ø 12,5 mm (ENT-074), Fixierung, Blindniet, Tab-Scheiben, Fügeverfahren, Polisolation, Ventil im Boden & BT-111 bis 140 & entschieden (Mensch)\\
 ENT-092 bis 095 & Zellhalter Kunststoffträger unten plus Verguss; Zellverbinder oben Al, Laserschweißen; isolierende Wärmeleitschicht oben & BT-250, BT-410, BT-230 & entschieden (Mensch)\\
 ENT-099 & Zellabgriff 12 × 1 mm Al & BT-410 & entschieden (Mensch)\\
 ENT-101 & HV-Hauptleitung 35 mm² Cu & BT-430 & entschieden (Mensch)\\
-ENT-103 & Bauraumlänge 1950 mm, eigenes Gehäuse & BT-000 & entschieden (Mensch)\\\bottomrule
+ENT-103 & Bauraumlänge 1950 mm, eigenes Gehäuse & BT-000 & entschieden (Mensch)\\
+ENT-108 & Kühlmitteldurchfluss 20 L/min (5 K) & BT-660 & entschieden (Mensch)\\
+ENT-113, 117, 122, 129, 143 & Elektronik NMC: 13 CMU, 52 Temperaturfühler, FPC 20 mm, Sicherung 315 A, Biegeradius 60 mm & BT-320, 330, 360, 713, 430 & vorgeschlagen\\
+ENT-131, 145, 146 & Trennstecker in der Reihenmitte, Mäander-Verschaltung, Ausgleichsstrom 130 mA & BT-720, 200, 320 & vorgeschlagen\\\bottomrule
 \end{longtable}
 
 %======================================================================
 \section{Offene Punkte und nächste Schritte}\label{k:offen}
 \begin{itemize}[nosep]
-\item \textbf{Freigaben:} etwa 30 vorgeschlagene Werte je Variante (Zellmaße und Innenaufbau, ENT-014 bis ENT-080), dazu ENT-002 (PyBaMM) und ENT-031 (Baum Innenaufbau); insgesamt 67 Akten im Status „vorgeschlagen“.\quelle{\path{docs/04_entscheidungen.md}}
+\item \textbf{Freigaben:} 43 Akten im Status „vorgeschlagen“: ENT-104 bis 106 (Kühlkanäle), ENT-110 bis 143 (Elektronik, 34 Akten) und ENT-145 bis 150 (Verschaltung, LFP-Länge 2050 mm, Trennbrücke). Die Zellakten ENT-014 bis ENT-080 sind entschieden.\quelle{\path{docs/04_entscheidungen.md}}
 \item \textbf{Polmaße und Fahnen-Lesart:} Polgrößen sind Annahmen; die Bedeutung der Fahnenmaße in W20 Abb. 5A (LFP 27,1/9 und 20,5/7 mm; 4680 2,5/5 und 7,5/2,5 mm) ist offen. Isolierrand und Klebeband sind nicht modelliert.
-\item \textbf{Kühlplatte BT-610, Kanäle:} Kanalgeometrie und Strömung (FluidX3D) sind nicht gerechnet; der Füllgrad 0,4 der Massenrechnung und $h$ 500 W/(m²·K) sind Annahmen.
-\item \textbf{Crash und Festigkeit (X):} Seitencrash quasistatisch (CalculiX) fehlt; die Seitenlast 600 kN aus W22 gilt für Fahrzeuge über 2600 kg, der Lastfall für 1500 kg ist offen (Autor-Frage aus M0). Seitenrahmenprofil (Wand 2,5 mm, 3 Kammern) ist Annahme Opus.
-\item \textbf{Zellmodell C1 bis C3} (PyBaMM): Eichung des Innenwiderstands am Blade-Pulsdatensatz (Borealis, CC-BY 4.0, BYD Blade 135 Ah, 10-s-Pulse, $-10$ bis 40 °C). Der Innenwiderstand ist die stärkste Annahme der Wärmerechnung.
+\item \textbf{Kühlplatte BT-610:} K2 ist eine 1D-Rechnung (Kanal 4 × 5 mm, laminar). Nicht gerechnet: Strömung im 3D-Modell (FluidX3D), Kontaktwiderstände Zelle--Pad--Blech; K1 wurde mit dem berechneten Wärmedurchgang (565 bis 595 statt der Annahme 500 W/(m²·K)) nicht wiederholt. Der Füllgrad 0,4 der Massenrechnung ist Annahme.
+\item \textbf{Crash und Festigkeit (X1):} Der Seitenpfahl quasistatisch (CalculiX) läuft laut Protokoll noch; es liegt kein Ergebnis vor. Die Seitenlast 600 kN aus W22 gilt für Fahrzeuge über 2600 kg, der Lastfall für 1500 kg ist offen (Autor-Frage aus M0). Seitenrahmenprofil (Wand 2,5 mm, 3 Kammern) ist Annahme Opus.\quelle{\path{docs/08_ki_einsatz_protokoll.md} (Zeile X1, Status „läuft“)}
+\item \textbf{Zellmodell C3:} Der LFP-Parametersatz passt nicht (Temperaturfit 158 mV, Ruhespannung 143 mV daneben); für die 4680 fehlen Messdaten. Ohne sie bleiben R-PLAT (Plating) und R-4680W (Wärme 7,4 bis 11,5 W) offen.\quelle{\path{BEFUNDE.md} B-BAT-022, -023; \path{docs/05_risiken_fmea.md}}
 \item \textbf{Bericht EN} (englische Fassung), Schlussbericht, Video und Präsentation.
-\item \textbf{NMC-Masse:} 473,4 kg verfehlt das Zielband 390 bis 430 kg ($+15{,}2$ \% gegen C0b); Deutung offen (Opus).
-\item \textbf{NMC-Verluste Elektrik:} 385,4 W über der Verfehlt-Grenze 300 W; Nachrechnung mit dem entschiedenen Gruppenverbinder (25 × 3 mm) fehlt. LFP 105,2 W knapp über 100 W.
+\item \textbf{NMC-Masse:} Die Stückliste (471,3 kg) und G4 (473,4 kg) verfehlen das Zielband 390 bis 430 kg; Deutung offen (Opus).
+\item \textbf{Elektrik E2:} Al-Verlust LFP 75,6 W gegen die Erwartung $\le$ 50 W; Packhöhe vorn LFP 134 mm über 130 mm (M8-Köpfe der Trennbrücke); Innenhöhe der Schaltbox 116 bzw. 110 mm gegen die Annahme 90 mm; im Ergebnis E2D steht für die Gesamthöhe mit Turm 249 bzw. 237 mm gegen 210 mm in ENT-144 (Ursache nicht geklärt); NMC-Verlust 316,0 W bei Akte 25 × 3 mm (461 W bei 15 × 3 mm). \textbf{Überarbeitungsschleife} der Konstruktion (noch quaderhaft) geplant (Autor).\quelle{\path{sim/elektrik/e2_elektronik/ERGEBNIS.md} v1.1; \path{cad/pack/entwurf/ergebnis_LFP_e2d.json}, \path{ergebnis_NMC_e2d.json}}
+\item \textbf{Zählwidersprüche CAD gegen E1:} LFP-Reihenverbinder 130 gegen 249, NMC-Zellabgriffe 868 gegen 1736, Gruppenverbinder 217 gegen 216, HV-Leitung nur Kupfer gegen Schätzung mit Isolierung (B-BAT-028).
+\item \textbf{Kosten:} Alle Preise sind Annahmen (nur 97 USD/kWh verifiziert); 16 (LFP) und 13 (NMC) Positionen sind offen; REQ-P16 hat keinen Zielwert (Autor).
 \item \textbf{K1b:} Annahmen zum oberen Kühlpfad der 4680 ($\varphi$ 0,5, Pad $k$ 3 W/(m·K), 1 mm); Opus-Deutung steht aus. Ebenso die Spaltleitfähigkeit $k_z$ 31 W/(m·K) der Tab-Scheibe (K3).
 \item \textbf{Zahlenabweichung in \path{sim/kuehlung/TABELLEN_TEMPERATUR.md}:} Die K1-Tabelle der Sammeldatei enthält für die 4680 teils Werte des alten Netzes (z. B. P0 53,6 °C / 16,0 K gegen 53,4 °C / 15,7 K in \path{ergebnis.json}, P3 mit K1b 36,9 / 5,5 gegen 36,8 / 5,4). Dieser Bericht verwendet \path{ergebnis.json}; die Sammeldatei ist nachzuziehen (Opus).
 \item \textbf{Gehäusewand 4680:} Akte ENT-029 setzt 0,4 mm (W20 Tab. 1), W24 und W25 nennen 0,5 bis 0,6 mm für die Tesla-4680; welche Zahl gilt, ist offen.
@@ -743,14 +917,20 @@ ENT-103 & Bauraumlänge 1950 mm, eigenes Gehäuse & BT-000 & entschieden (Mensch
 \begin{tabularx}{\linewidth}{@{}lX@{}}\toprule
 Anode / Kathode & Minus- bzw. Pluselektrode einer Zelle.\\
 Akte (ENT) & Entscheidungsdokument mit Wert, Begründung, Belegen, Status.\\
+CMU / FPC & Zellüberwachungsplatine / flache Messleitung.\\
+DCIR & Gleichstrom-Innenwiderstand einer Zelle nach einem 10-s-Puls.\\
 Annahme & Wert ohne Beleg; wird im Dokument so benannt.\\
 BMS & Batteriemanagementsystem (Spannung, Temperatur, Schutz).\\
 Fall A / Fall B & 1500 kg mit bzw. ohne Batterie.\\
 G1 / G2 / G3 / G4 & Vorgänge: Zellanordnung im Bauraum / Zell-CAD / Verschaltung / Pack.\\
 K0 & Wärmesimulation einer Zelle je Variante.\\
 Kühlplatte & flache Platte mit Kühlmittelkanälen unter den Zellen.\\
+K1c / K2 & Wärme aus dem Zellmodell / Kühlplatten-Hydraulik.\\
 LFP / NMC & Lithium-Eisenphosphat / Nickel-Mangan-Kobalt-Oxid.\\
 orthotrop & Eigenschaft hängt von der Richtung ab (z. B. Wärmeleitung).\\
+Plating & Lithium-Ablagerung an der Anode (Alterung, Kurzschlussgefahr).\\
+Schaltbox & Gehäuse mit Schützen, Sicherungen, Shunt und BMS.\\
+SL2 / KO1 & Vorgänge: Stückliste auf Konstruktionsstand / Kostenbewertung.\\
 Packfaktor k & Anteil der Zellmasse an der Packmasse.\\
 Separator & poröse Trennfolie zwischen Anode und Kathode.\\
 tabless & ohne einzelne Anschlussfahnen.\\
@@ -773,7 +953,8 @@ Recherche-Themen (\path{forschung/themen_wissen.tsv}); die Texte selbst liegen n
 \item W18 314-Ah-LFP-Zelle, thermische Kennwerte: \url{https://www.techscience.com/fhmt/online/detail/29043/TSP_FHMT_92550.pdf}
 \item W19 Blade-Zelle (Sekundärquelle, teils gesperrt): \url{https://drpress.org/ojs/index.php/HSET/article/download/5087/4928}
 \item W20 Zerlegungsstudie BYD Blade gegen Tesla 4680, Cell Reports Physical Science 6, 102453 (2025), doi:10.1016/j.xcrp.2025.102453, \textbf{Lizenz CC-BY}; PDF vom Autor in \path{quellen/blade_zerlegung/}, nicht im Repository.
-\item Pulsdatensatz „Battery State-of-power Measurement“, Borealis, doi:10.5683/SP3/RPCWBY, CC-BY 4.0 (für C2/C3 vorgesehen).
+\item Pulsdatensatz „Battery State-of-power Measurement“, Borealis, doi:10.5683/SP3/RPCWBY, CC-BY 4.0 (in C2 verwendet).
+\item W29 Kosten (BNEF-Packpreis 97 USD/kWh, BEV 2024): \path{https://about.bnef.com/blog/lithium-ion-battery-pack-prices-see-largest-drop-since-2017-falling-to-115-per-kilowatt-hour-bloombergnef/}
 \end{itemize}
 Lizenzliste: \path{docs/10_lizenzen_und_quellen.md}.
 
@@ -784,5 +965,5 @@ PyBaMM 26.10.1.1; ParaView (System); CalculiX 2.21; pdflatex (System). Lokaler A
 (\path{requirements.txt}).
 
 \vfill
-\kigen{Dokument BAT-DOC-17, Version 0.1, Status Entwurf, Ersteller Claude Opus/Sonnet. Nicht vom Menschen freigegeben. Fassung EN folgt.}
+\kigen{Dokument BAT-DOC-17, Version 0.3, Status Entwurf, Ersteller Claude Opus/Sonnet. Nicht vom Menschen freigegeben. Fassung EN folgt.}
 \end{document}

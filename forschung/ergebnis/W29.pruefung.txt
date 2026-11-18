@@ -1,0 +1,6 @@
+Z12: FEHLT im Text der Quelle: "Nominal cell voltage \| 3.2 V" (https://en.wikipedia.org/wiki/Lithium_iron_phosphate_battery)
+Z13: FEHLT im Text der Quelle: "Specific power \| Up to 2,400 W/kg" (https://en.wikipedia.org/wiki/Lithium_iron_phosphate_battery)
+Z14: FEHLT im Text der Quelle: "Cycle durability \| 2,500–9,000 cycles" (https://en.wikipedia.org/wiki/Lithium_iron_phosphate_battery)
+Z15: FEHLT im Text der Quelle: "Time durability \| > 10 years" (https://en.wikipedia.org/wiki/Lithium_iron_phosphate_battery)
+
+8 Belege bestaetigt, 4 Fehler

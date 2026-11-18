@@ -75,3 +75,25 @@ Schaltbox passt in Fall a nicht ohne > 400 mm Länge; Ausgleich > 24 h; Kollisio
   - Elektronikmasse mit HV-Leitungen je Variante 7–12 kg. Das Band 12–18 kg war zu hoch.
   - Bei NMC brauchen die Gruppenverbinder an den Wendestellen eigene Brücken, sonst Kollision.
 **Verfehlt:** Kollision, die bleibt; LFP-Trennstecker von oben nicht zugänglich.
+
+## Nachtrag 3 (Opus, 2026-11-18): Detailierung bis Konstruktionsstand
+Autor: „ich hätte mir einen höheren detailierungsstand erwartet“. Gewählt sind alle vier Bereiche, Stufe Konstruktionsstand: erkennbare Serienteile, Bolzen und Schrauben ab M5, Biegeradien, Dichtungen. **Alle Maße sind Annahmen Opus (Herkunft „ERW-E2 N3“)**, typische Serienteile, ohne Beleg.
+| Bereich | Teil | Annahme |
+|---|---|---|
+| Box innen | Hauptschütz | Körper wie N1. 2 Bolzen M8 oben, Abstand 40, Ø8×15. 2 Fußlaschen M5. Spulenstecker 15×10×12 |
+| | Stromschienen | Cu LFP 25×3, NMC 20×3, Bohrung 8,5, Biegeradius innen = Dicke, Schrumpfschlauch 0,5 (außer an den Kontaktflächen) |
+| | Pyro- / Schmelzsicherung | Laschen M8. Schmelzsicherung im Kunststoffhalter 40×40×95 |
+| | Shunt | Manganin-Steg 3 mm zwischen Cu-Enden M8, Messplatine 80×40×1,6 mit Stecker 4-polig |
+| | BMS-Platine | 200×150×1,6 auf 4 Abstandsbolzen M4 h 8, Stecker 26-polig, 2 × Daisy-Chain, 12-polig intern (je 30×15×12) |
+| | Gehäuse | Flansch 12, Deckel 2, Dichtung 3×3 umlaufend, M5 alle 60 mm, Druckausgleich Ø 20 |
+| Kabel | HV-Leitung | Bahn als Sweep mit R ≥ 5 D. Schnitt: Leiter, Isolierung, Schirm, Mantel. Rohrkabelschuh M8 (Hülse 40, Lasche 20×4). Clips 20×15×10 alle 200 mm |
+| | FPC | Abgriff je Zellpol: Ni-Tab 8×4×0,2 auf den Verbinder. NTC 3×2×1 auf 4 Verbindern je CMU. Stecker 20-polig 25×8×6 an der CMU |
+| | Daisy-Chain | verdrillte Leitung Ø 4 zwischen den CMUs, Stecker 15×8×8, R ≥ 20 |
+| Stecker | HV 250 A | Flansch 90×70×8, 4 × M5, O-Ring, Steckkörper Ø 50×60, Verriegelungshebel 60×10×10, 90° gewinkelt |
+| | HV 40 A / NV 26-polig | Flansch 50×40×6, 4 × M4 / Flansch 50×30×5, 2 × M4 |
+| | Trennbrücke LFP | Brücke Cu 25×3×80, 2 × M8 mit Scheibe, HVIL-Brücke 15×10×8, Servicedeckel 120×80×2 mit 6 × M5 und Dichtung 3×3 |
+| Verbinder | Zellverbinder | Dehnbogen (Omega) h 4. Laserschweißnaht dargestellt: 2 Linien 10×1, Vertiefung 0,2 je Pol. Berührschutz-Abdeckung aus Kunststoff 1 mm über jeder Polreihe |
+| | Laschen | LFP: statt Stumpfstoß im 1-mm-Spalt 90° nach oben in die Endzone abkanten, Überlappung 25, M8. NMC: Überlappung 25 wie N1 |
+| | NMC-Querschnitt | Das CAD liest den Querschnitt der Gruppenverbinder aus der E1-Akte (15×3), nicht 25×3 (B-BAT-027). Verlust neu rechnen |
+**Erwartung:** 0 Kollisionen, nach Anpassungen höchstens an der Lage, nicht an den Maßen. Elektronikmasse +1…3 kg je Variante. NMC-Verbinderverlust ≈ 460 W mit 15×3; ob 15×3 thermisch reicht, entscheidet Opus danach. Teilezahl etwa 3–5 × höher.
+**Verfehlt:** ein Maß müsste geändert werden, damit es passt; Packhöhe vorn > 130 mm; Lasche LFP auch abgekantet nicht unterzubringen.

@@ -18,3 +18,4 @@ cad/**/netz_*.json
 quellen/
 *.jsonl
 forschung/recherche_ablage/
+.obsidian/workspace*.json

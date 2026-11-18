@@ -1,0 +1,5 @@
+Z15: FEHLT im Text der Quelle: "Specific heat capacity 896.894 J/(kg·K)" (https://en.wikipedia.org/wiki/Aluminium)
+Z16: FEHLT im Text der Quelle: "Molar heat capacity 24.20 J/(mol·K)" (https://en.wikipedia.org/wiki/Aluminium)
+LINK NIE ABGERUFEN: https://en.wikipedia.org/wiki/Pyrotechnic_fastener`
+
+6 Belege bestaetigt, 3 Fehler

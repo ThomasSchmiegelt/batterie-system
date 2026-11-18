@@ -32,6 +32,7 @@ Vorschlagswerte für REQ-P01…P10 aus einem Startsatz: `docs/startparameter.md`
 | REQ-P13 | Schutzart, Isolation, Berührschutz | nach Norm | Norm | Muss | offen |
 | REQ-P14 | Mechanik: Stoß, Schwingung, Crash | nach Norm | Norm | Muss | offen |
 | REQ-P15 | Messung und BMS: Zellspannung, Temperatur, Isolationswächter | Umfang offen | Autor | Muss | offen |
+| REQ-P16 | Herstellkosten je Variante ausweisen (€/kWh Pack, Anteile je Baugruppe) | kein Zielwert (Autor 2026-11-18: „lass offen“); Preise als Schätzung oder verifiziert kennzeichnen | Autor (2026-11-18) | Soll | vorgeschlagen |
 
 ## 3 Anforderungen an Entwicklung und Dokumentation (Testprojekt gewerblich)
 | ID | Anforderung | Nachweis | Status |

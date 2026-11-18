@@ -14,6 +14,8 @@ import json, math, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
+if "--variante" in sys.argv and "--alt" not in sys.argv:   # SL2 (2026-11-18): Konstruktionsstand statt Startwert-Entwurf; alter Entwurf mit --alt
+    import subprocess; raise SystemExit(subprocess.call([sys.executable, str(Path(__file__).with_name("stueckliste_v2.py")), "--variante", sys.argv[sys.argv.index("--variante") + 1]]))
 VAR = None
 if "--variante" in sys.argv:
     VAR = sys.argv[sys.argv.index("--variante") + 1]

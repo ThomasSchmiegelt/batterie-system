@@ -1,5 +1,5 @@
 {
- "hinweis": "KI-generiert (Claude Opus, 2026-11-11, erweitert 2026-11-16, Vorschlag ENT-004). Bauteilbaum des Batteriesystems. Reihenfolge = Entstehung im Abschlussvideo. Merkmale bekommen Werte erst über Entscheidungen (pm/entscheidungen/ENT-*.md). Feld stueckliste: Positionen in pm/bauteile/stueckliste.json. Feld art: K Kaufteil, E Eigenteil, S Schnittstelle Fahrzeug, D Detail eines Kaufteils (nur CAD/Video). | 2026-11-16 Opus: Feld \"varianten\" (fehlt = alle), BT-250 Zellhalter (NMC), BT-100 durchmesser/hoehe (ENT-012). | 2026-11-17 Opus: Innenaufbau BT-111…116, 121, 122, 131, 132; BT-140 lage (ENT-031).",
+ "hinweis": "KI-generiert (Claude Opus, 2026-11-11, erweitert 2026-11-16, Vorschlag ENT-004). Bauteilbaum des Batteriesystems. Reihenfolge = Entstehung im Abschlussvideo. Merkmale bekommen Werte erst über Entscheidungen (pm/entscheidungen/ENT-*.md). Feld stueckliste: Positionen in pm/bauteile/stueckliste.json. Feld art: K Kaufteil, E Eigenteil, S Schnittstelle Fahrzeug, D Detail eines Kaufteils (nur CAD/Video). | 2026-11-16 Opus: Feld \"varianten\" (fehlt = alle), BT-250 Zellhalter (NMC), BT-100 durchmesser/hoehe (ENT-012). | 2026-11-17 Opus: Innenaufbau BT-111…116, 121, 122, 131, 132; BT-140 lage (ENT-031). | 2026-11-18 Opus: BT-260 Verguss (NMC), BT-361 FPC-Halter, BT-440 Pol-Anschlusslaschen, BT-721 Trennbrücke, BT-722 Servicedeckel (LFP), BT-720 bauform (SL2, B-BAT-028).",
  "bauteile": [
   {
    "id": "BT-000",
@@ -391,6 +391,24 @@
    ]
   },
   {
+   "id": "BT-260",
+   "name": "Verguss",
+   "eltern": "BT-200",
+   "rolle": "Fixiert und isoliert die 4680-Zellen in den Endzonen und zwischen den Haltern",
+   "anforderungen": [
+    "REQ-P14"
+   ],
+   "art": "K",
+   "stueckliste": [],
+   "merkmale": {
+    "werkstoff": null,
+    "volumen_cm3": null
+   },
+   "varianten": [
+    "NMC"
+   ]
+  },
+  {
    "id": "BT-300",
    "name": "Regelung (BMS)",
    "eltern": "BT-000",
@@ -510,6 +528,20 @@
    }
   },
   {
+   "id": "BT-361",
+   "name": "FPC-Halter",
+   "eltern": "BT-360",
+   "rolle": "Hält die Messleitungen im Seitenspalt bzw. in der Verbinderebene",
+   "anforderungen": [
+    "REQ-P15"
+   ],
+   "art": "K",
+   "stueckliste": [],
+   "merkmale": {
+    "abstand_mm": null
+   }
+  },
+  {
    "id": "BT-400",
    "name": "Verkabelung und Zellverbinder",
    "eltern": "BT-000",
@@ -574,6 +606,21 @@
     "querschnitt_mm2": null,
     "biegeradius_min_mm": null,
     "werkstoff": null
+   }
+  },
+  {
+   "id": "BT-440",
+   "name": "Pol-Anschlusslaschen",
+   "eltern": "BT-400",
+   "rolle": "Verbinden Reihenenden mit den HV-Leitungen (Plus/Minus, Trennstelle)",
+   "anforderungen": [
+    "REQ-P13"
+   ],
+   "art": "E",
+   "stueckliste": [],
+   "merkmale": {
+    "querschnitt_mm2": null,
+    "ueberlappung_mm": null
    }
   },
   {
@@ -942,8 +989,44 @@
    ],
    "merkmale": {
     "nennstrom_A": null,
-    "einbauort": null
+    "einbauort": null,
+    "bauform": null
    }
+  },
+  {
+   "id": "BT-721",
+   "name": "Service-Trennbrücke",
+   "eltern": "BT-720",
+   "rolle": "Verschraubte Cu-Brücke mit HVIL im Querverbinder vorn (ENT-150)",
+   "anforderungen": [
+    "REQ-P13"
+   ],
+   "art": "E",
+   "stueckliste": [],
+   "merkmale": {
+    "luecke_mm": null
+   },
+   "varianten": [
+    "LFP"
+   ]
+  },
+  {
+   "id": "BT-722",
+   "name": "Servicedeckel",
+   "eltern": "BT-720",
+   "rolle": "Abgedichteter Deckel über der Trennbrücke im Gehäusedeckel",
+   "anforderungen": [
+    "REQ-P13"
+   ],
+   "art": "E",
+   "stueckliste": [],
+   "merkmale": {
+    "laenge_mm": null,
+    "breite_mm": null
+   },
+   "varianten": [
+    "LFP"
+   ]
   },
   {
    "id": "BT-730",

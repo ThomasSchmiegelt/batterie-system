@@ -12,6 +12,15 @@ KI-generiert (Claude Opus).
 - E2 Fortsetzung 2 fertig (ENT-145…147, B-BAT-025). Opus-Fehler „Mitte hinten“ (BA-77) → Nachtrag 2, Fortsetzung 3 läuft. Danach GitHub.
 - E2 Fortsetzung 3 fertig (v0.4, B-BAT-026, ENT-148/149). Offen: LFP-Trennstecker +58 mm, Nut Kühlplatte. Freigaben ENT-110…149 offen.
 - GitHub: privates Repo batterie-system angelegt, erster Commit (1376 Dateien, ~154 MB, meist PNG). Kein Auto-Push: nur auf Ansage des Autors.
+- E2 v1.0 fertig (B-BAT-027, ENT-150 Trennbrücke). Offen: NMC-Verbinder 15×3 (E1) vs 25×3 (CAD), LFP-Lasche, Freigaben ENT-110…150. Nächstes: Crash X.
+- Autor: „höheren detailierungsstand erwartet“ → alle 4 Bereiche, Konstruktionsstand. ERWARTUNG Nachtrag 3, Fortsetzung 5 läuft (neue Dateien pack_<V>_e2d.FCStd).
+- Autor: „um die Stückliste kümmern … Kostenbewertung“ → REQ-P16 (vorgeschlagen), AEN-018. Sonnet SL2 (AUFTRAG_STUECKLISTE_V2.md), PI W29 Kosten. Danach Opus: pm/kosten/eingaben.json füllen (Belege W29), ERWARTUNG Kosten.
+- SL2 fertig (B-BAT-028, 5 BT ergänzt). W29: nur BNEF 97 USD/kWh belegt. ERW-KO1 (pm/kosten/ERWARTUNG.md) geschrieben, Sonnet KO1 läuft.
+- KO1 fertig (B-BAT-029): LFP 80, NMC 110 €/kWh, untere Schranke, 100 % Schätzung. Nach E2 v1.1: Stückliste + KO1 neu.
+- E2 v1.1 (e2d) fertig, in FreeCAD geöffnet. Opus-Urteil: noch quaderhaft. Offen: M8-Kopf LFP (134 mm), Box innen 116 > 90, Bilder transparent/verrauscht. NMC 25×3 gilt (ENT-096), E1 15×3 veraltet. Autor-Rückmeldung abwarten vor Fortsetzung 6.
+- Autor: „das lassen wir ersteinmal wie es ist. später machen wir eine überarbeitungsschleife, dass macht dann opus. jetzt bericht ergänzen, hochladen, crash“. → später Überarbeitungsschleife Detailierung durch Opus selbst (Formen Kaufteile, Farben, Renders, M8-Flachkopf, Schütze liegend).
+- Laufen: Sonnet Bericht 0.3 (AUFTRAG_BERICHT_03.md, vorher SL/KO neu), Sonnet X1 (sim/mechanik/x1_seitencrash, ERW-X1), PI W30 Crash-Normen. Nach Bericht: git push.
+- PI-Warteschlange losgelöst (setsid): W31 Bauteilpreise, W32 Al-Kennwerte, W33 MSD/Schütz-Maße; Log forschung/warteschlange.log. Danach Opus: pruefe-Ergebnis lesen, Schätzungen → verifiziert.
 
 ## 2026-11-17 Abend – Übergabe für morgen
 - Autor: „bitte wieder sparsam mit den token. und nimm b. Vielleicht bereitest du erst alles vor speicherst ab und morgen geht es weiter“

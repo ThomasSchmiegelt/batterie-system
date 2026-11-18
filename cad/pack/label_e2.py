@@ -4,8 +4,8 @@ Zahlen (Maße, Höhen) nur aus cad/pack/entwurf/ergebnis_<V>_e2.json. Aufruf: py
 import json, sys, os
 from PIL import Image, ImageDraw, ImageFont
 R = "/home/cae/hermes/batterie"; OUT = f"{R}/cad/pack/entwurf"; NZ = "/home/cae/cae_projekte/batterie/e2/render"; ZIEL = f"{R}/sim/elektrik/e2_elektronik"
-TITEL = {"gesamt": "Gesamtansicht (Zellen ausgeblendet)", "draufsicht": "Draufsicht ohne Deckel: CMU, FPC, HV-Leitungen", "schnitt": "Schnitt durch die Schaltbox (Ebene durch die Boxmitte)", "detail": "Detail: CMU und FPC an der Endzone (Deckel, Kühlplatte oben, Pad oben ausgeblendet)"}
-LEG = [((217, 13, 13), "CMU-Platine (hochkant)"), ((255, 191, 0), "FPC-Messleitung"), ((217, 0, 179), "HV-Leitung"), ((26, 140, 64), "Schaltbox (Gehäuse)"), ((51, 217, 115), "Inhalt Schaltbox"), ((0, 115, 242), "Stecker, Sensor, Trennstecker"), ((140, 145, 153), "übrige Teile (grau, teils transparent)")]
+TITEL = {"gesamt": "Gesamtansicht (Zellen ausgeblendet)", "draufsicht": "Draufsicht ohne Deckel: CMU, FPC, HV-Leitungen", "schnitt": "Schnitt durch die Schaltbox (Ebene durch die Boxmitte)", "bruecke": "Service-Trennbrücke LFP vorn (Servicedeckel, Deckel, Kühlplatte oben, Pad ausgeblendet)", "detail": "Detail: CMU und FPC an der Endzone (Deckel, Kühlplatte oben, Pad oben ausgeblendet)"}
+LEG = [((217, 13, 13), "CMU-Platine (hochkant)"), ((255, 191, 0), "FPC-Messleitung"), ((217, 0, 179), "HV-Leitung"), ((26, 140, 64), "Schaltbox (Gehäuse)"), ((51, 217, 115), "Inhalt Schaltbox"), ((255, 120, 0), "Anschlusslasche Al"), ((0, 200, 230), "Service-Trennbrücke Cu (LFP)"), ((180, 180, 255), "Servicedeckel (LFP)"), ((0, 115, 242), "Stecker, Sensor, Trennstecker (NMC)"), ((140, 145, 153), "übrige Teile (grau, teils transparent)")]
 def font(sz, b=False):
     f = "/usr/share/fonts/truetype/dejavu/DejaVuSans%s.ttf" % ("-Bold" if b else "")
     return ImageFont.truetype(f, sz) if os.path.exists(f) else ImageFont.load_default()

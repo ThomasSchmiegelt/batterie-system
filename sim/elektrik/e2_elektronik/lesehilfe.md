@@ -1,4 +1,4 @@
-| Dok.-Nr. | LH-E2 | Version | 0.3 | Status | Entwurf |
+| Dok.-Nr. | LH-E2 | Version | 0.4 | Status | Entwurf |
 |---|---|---|---|---|---|
 | Titel | Lesehilfe Schaltbilder, Bilder und Kabelplan E2 (Elektronik) | Ersteller | Claude Sonnet (KI) | Prüfer | Opus (offen) |
 
@@ -22,6 +22,23 @@
 ## kabelplan_LFP.png, kabelplan_NMC.png
 - **Was man sieht:** Von oben auf das Pack: rote Rechtecke = CMU in den Endzonen, gelbe Linien = Messleitung je CMU mit Länge, magenta = HV-Leitung mit Länge, grün = Schaltbox, blau = Trennstecker, feine Linien = Stichleitungen zu den Abgriffen (NMC).
 - **Zielband:** keines, weil es ein Plan ist. Zur Einordnung: Erwartung für die Messleitung insgesamt 25–40 m (ERW-E2, Punkt 1), Ergebnis NMC 30.7 m, LFP 11.8 m (kurze Zellreihen). Beim LFP-Plan zeigt die graue Linie vorn den Querverbinder der Mitte.
+
+## e2_LFP_bruecke.png (neu in v1.0)
+- **Was man sieht:** Blick schräg von oben auf den Querverbinder vorn (grau) mit der türkisen Cu-Brücke, die die 30-mm-Lücke überbrückt (2 Schrauben M8). Deckel, Servicedeckel, obere Kühlplatte und Pad sind ausgeblendet. Im Betrieb sitzt darüber ein flacher Servicedeckel, bündig im Gehäusedeckel.
+- **Zielband:** keines im Bild (Maßbild). Das Ziel „Packhöhe vorn ≤ 130 mm“ steht im Schnitt `e2_LFP_schnitt.png` (gestrichelt); Ergebnis vorn 121 mm.
+- **Anschlusslaschen:** orange in `e2_<V>_detail.png` und `e2_<V>_draufsicht.png` (NMC: Platte auf dem Gruppenverbinder, LFP: Steg und Flansch am hinteren Ende der Reihe).
+- Kabelplan LFP: der blaue Kasten ist jetzt die Trennbrücke, gestrichelt die Serviceöffnung 120 × 80 mm.
+
+## e2d_<V>_*.png (neu in v1.1, Konstruktionsstand; V = LFP, NMC)
+- **Was man sieht:** Rechts die Farbtafel. Farbig sind die E2-Teile, alle anderen Teile grau. Die Zellen sind ausgeblendet. Das Rauschen kommt von nur 24 Rechenschritten pro Pixel (Cycles CPU).
+- **boxoffen:** Schaltbox ohne Deckel von schräg oben: Wanne mit Dichtung und M5-Schrauben, Geräte (Schütze, Shunt, Sicherungen, BMS), die 6 Stromschienen (grau, mit Schrumpfschlauch; orange die Enden), Kabelschuhe, die HV-Leitung (magenta) durch die Wand. Blau links: Stecker.
+- **stecker:** Stecker und Durchführungen außen an der Box (HV 250 A als liegender Zylinder mit Flansch, HV 40 A, NV, Sensor), Schrauben grau.
+- **bruecke_offen / bruecke_zu (nur LFP):** Die Trennbrücke (türkis, 2 × M8) in der Serviceöffnung des Deckels, einmal ohne und einmal mit Servicedeckel (blau, auf Dichtung, 6 Senkschrauben). Bekannter Mangel: Die M8-Köpfe ragen höher als der Servicedeckel (2 Kollisionen).
+- **detail:** Nahaufnahme im hintersten Feld. LFP: breites gelbes Band = FPC im Seitenspalt, helle Plättchen = Ni-Tab und NTC, graue Blöcke = Zellverbinder mit Schweißlinien. NMC: rosa, durchscheinend = Berührschutz 1 mm, orange = Gruppenverbinder, gelb = FPC mit Tabs, Omega-Bögen darunter.
+- **kabel:** Draufsicht auf den ganzen Leitungsweg der HV-Leitung von den Anschlusslaschen zur Schaltbox, Maßstab 200 mm, Längen im Seitenfeld.
+- **gesamt:** Pack von schräg, Schaltbox hinten mit Steckern und Leitungen.
+- **Zielband:** Im Seitenfeld stehen zwei Grenzen mit Ist-Wert: Innenhöhe Schaltbox ≤ 90 mm (N1) und Packhöhe vorn ≤ 130 mm (M0), grün = eingehalten, rot = überschritten. Es sind Annahmen, nicht freigegeben.
+- **Nicht dargestellt:** Daisy-Querleitung über die Pack-Länge, Stecker 4 pol am Shunt, Omega/Schweißlinien außerhalb des hintersten Felds.
 
 ---
 *KI-generiert (Claude Sonnet, 2026-11-18), Entwurf, nicht freigegeben.*

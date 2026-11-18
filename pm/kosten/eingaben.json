@@ -1,0 +1,393 @@
+{
+ "hinweis": "KI-generiert (Claude Sonnet, 2026-11-18), Entwurf. Alle Werte aus pm/kosten/ERWARTUNG.md (ERW-KO1, Annahmen Opus); keine eigenen Preise. Basis ergibt sich aus der Einheit: €/kg x Masse, €/Stück x Menge, €/kWh x Energie, €/m x Länge, €/L x Volumen, €/Satz x 1. | Nachtrag 1 (2026-11-18): Fertigung nur auf Nicht-Zell, BT-610 x0,6, Längen BT-360/430 aus E2-JSON. | Autor-Zusatz: je Preis Spalte status (nur zwei Werte: verifiziert nur BNEF-Packpreis W29, sonst Schätzung).",
+ "einheit_standard": "siehe je BT",
+ "kurs_usd_eur": {
+  "wert": 0.92,
+  "herkunft": "ERW-KO1 Annahme",
+  "status": "Schätzung (Annahme Opus, ERW-KO1)"
+ },
+ "beleg_packpreis": {
+  "usd_je_kWh": 97,
+  "herkunft": "W29 forschung/ergebnis/W29.md (BNEF 2024, BEV)",
+  "eur_je_kWh_berechnet": 89.24,
+  "status": "verifiziert (W29, Zitat geprüft)"
+ },
+ "fertigung": {
+  "anteil_auf_summe": 0.1,
+  "endpruefung_eur_pack": 50,
+  "basis": "nicht_zell",
+  "herkunft": "ERW-KO1 Nachtrag 1: 10 % auf die Nicht-Zell-Summe, dazu 50 € Endprüfung",
+  "status": "Schätzung (Annahme Opus, ERW-KO1)"
+ },
+ "zielband": {
+  "LFP": {
+   "pack_eur": [
+    5500,
+    7000
+   ],
+   "eur_kwh": [
+    75,
+    95
+   ]
+  },
+  "NMC": {
+   "pack_eur": [
+    7000,
+    9000
+   ],
+   "eur_kwh": [
+    95,
+    120
+   ]
+  },
+  "zellanteil_pct": [
+   65,
+   80
+  ],
+  "herkunft": "ERW-KO1 Erwartung"
+ },
+ "fehlende_bt_zuordnung": {
+  "Verguss": {
+   "bt": "BT-260",
+   "baugruppe": "BT-200",
+   "basis": "kg"
+  },
+  "E2_Lasche": {
+   "bt": "BT-440",
+   "baugruppe": "BT-400",
+   "basis": "kg"
+  },
+  "E2_Trennbruecke": {
+   "bt": "BT-721",
+   "baugruppe": "BT-700",
+   "basis": "Stück"
+  },
+  "E2_Servicedeckel": {
+   "bt": "BT-722",
+   "baugruppe": "BT-700",
+   "basis": "Stück"
+  },
+  "E2_FPC_Halter": {
+   "bt": "BT-361",
+   "baugruppe": "BT-300",
+   "basis": "Stück"
+  }
+ },
+ "eur_je": {
+  "BT-100": {
+   "wert": {
+    "LFP": 50,
+    "NMC": 75
+   },
+   "einheit": "€/kWh",
+   "herkunft": "ERW-KO1 Annahme (ERW-KO1: LFP 50, NMC 4680 75)",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-210": {
+   "wert": 6,
+   "einheit": "€/kg",
+   "herkunft": "ERW-KO1 Annahme",
+   "notiz": "Al-Profil 6 gewählt (Erw.: Stahl 3 / Al 6); Masse in Stückliste offen",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-220": {
+   "wert": 6,
+   "einheit": "€/kg",
+   "herkunft": "ERW-KO1 Annahme",
+   "notiz": "Masse offen",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-230": {
+   "wert": 20,
+   "einheit": "€/kg",
+   "herkunft": "ERW-KO1 Annahme",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-240": {
+   "wert": 6,
+   "einheit": "€/kg",
+   "herkunft": "ERW-KO1 Annahme",
+   "notiz": "Al-Profil 6 gewählt (Erw.: Stahl 3 / Al 6); Masse offen",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-250": {
+   "wert": 6,
+   "einheit": "€/kg",
+   "herkunft": "ERW-KO1 Annahme",
+   "notiz": "Kunststoff, NMC",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-260": {
+   "wert": 10,
+   "einheit": "€/kg",
+   "herkunft": "ERW-KO1 Annahme",
+   "notiz": "Verguss NMC; Masse aus stueckliste_NMC.json fehlende_bt",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-310": {
+   "wert": 120,
+   "einheit": "€/Stück",
+   "herkunft": "ERW-KO1 Annahme",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-320": {
+   "wert": 15,
+   "einheit": "€/Stück",
+   "herkunft": "ERW-KO1 Annahme",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-330": {
+   "wert": 0.5,
+   "einheit": "€/Stück",
+   "herkunft": "ERW-KO1 Annahme",
+   "notiz": "Menge offen",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-340": {
+   "wert": 40,
+   "einheit": "€/Stück",
+   "herkunft": "ERW-KO1 Annahme",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-350": {
+   "wert": 20,
+   "einheit": "€/Stück",
+   "herkunft": "ERW-KO1 Annahme",
+   "notiz": "Menge offen",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-360": {
+   "wert": 8,
+   "einheit": "€/m",
+   "herkunft": "ERW-KO1 Annahme",
+   "notiz": "Länge nicht in Stückliste (nur Stückzahl) -> offen",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-361": {
+   "wert": 0.3,
+   "einheit": "€/Stück",
+   "herkunft": "ERW-KO1 Annahme",
+   "notiz": "FPC-Halter, aus fehlende_bt (LFP 2 Stück)",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-410": {
+   "wert": 8,
+   "einheit": "€/kg",
+   "herkunft": "ERW-KO1 Annahme",
+   "notiz": "Al; LFP Masse offen, NMC Zellabgriff aus Stückliste",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-420": {
+   "wert": 8,
+   "einheit": "€/kg",
+   "herkunft": "ERW-KO1 Annahme",
+   "notiz": "Al (Stückliste: Al)",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-430": {
+   "wert": 25,
+   "einheit": "€/m",
+   "herkunft": "ERW-KO1 Annahme",
+   "notiz": "HV-Leitung: Länge nicht in Stückliste (nur kg) -> offen",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-440": {
+   "wert": 8,
+   "einheit": "€/kg",
+   "herkunft": "ERW-KO1 Annahme",
+   "notiz": "Pol-Anschlusslaschen Al (Gruppe E2_Lasche Werkstoff Al); aus fehlende_bt",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-510": {
+   "wert": 6,
+   "einheit": "€/kg",
+   "herkunft": "ERW-KO1 Annahme",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-520": {
+   "wert": 6,
+   "einheit": "€/kg",
+   "herkunft": "ERW-KO1 Annahme",
+   "notiz": "Dichtung nicht im CAD",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-530": {
+   "wert": 6,
+   "einheit": "€/kg",
+   "herkunft": "ERW-KO1 Annahme",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-540": {
+   "wert": 6,
+   "einheit": "€/kg",
+   "herkunft": "ERW-KO1 Annahme",
+   "notiz": "Vollprofil Obergrenze",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-550": {
+   "wert": 6,
+   "einheit": "€/kg",
+   "herkunft": "ERW-KO1 Annahme",
+   "notiz": "Al (Stückliste: Al)",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-560": {
+   "wert": 0.5,
+   "einheit": "€/Stück",
+   "herkunft": "ERW-KO1 Annahme",
+   "notiz": "Schrauben, Menge offen",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-570": {
+   "wert": 5,
+   "einheit": "€/Stück",
+   "herkunft": "ERW-KO1 Annahme",
+   "notiz": "Menge offen",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-610": {
+   "wert": 12,
+   "einheit": "€/kg",
+   "herkunft": "ERW-KO1 Annahme",
+   "notiz": "Al gelötet; Masse x 0,6 (Kanalanteil ca. 40 %, ERW-KO1 Nachtrag 1) bis K2 eine Hohlmasse liefert",
+   "massefaktor": 0.6,
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-620": {
+   "wert": 12,
+   "einheit": "€/kg",
+   "herkunft": "ERW-KO1 Annahme",
+   "notiz": "Masse offen",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-630": {
+   "wert": 10,
+   "einheit": "€/Stück",
+   "herkunft": "ERW-KO1 Annahme",
+   "notiz": "Menge offen",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-640": {
+   "wert": 3,
+   "einheit": "€/Stück",
+   "herkunft": "ERW-KO1 Annahme",
+   "notiz": "Menge offen",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-650": {
+   "wert": 3,
+   "einheit": "€/L",
+   "herkunft": "ERW-KO1 Annahme",
+   "notiz": "Volumen offen",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-660": {
+   "wert": 0,
+   "einheit": "€/Stück",
+   "herkunft": "ERW-KO1 Annahme",
+   "notiz": "Fahrzeug (Erw.: 0)",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-710": {
+   "wert": 8,
+   "einheit": "€/kg",
+   "herkunft": "ERW-KO1 Annahme",
+   "notiz": "Gehäuse Al",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-711": {
+   "wert": 45,
+   "einheit": "€/Stück",
+   "herkunft": "ERW-KO1 Annahme",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-712": {
+   "wert": 25,
+   "einheit": "€/Stück",
+   "herkunft": "ERW-KO1 Annahme",
+   "notiz": "Menge 2 aus Stückliste (Schütz + Widerstand), 25 je Stück angesetzt (Auslegung)",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-713": {
+   "wert": 55,
+   "einheit": "€/Satz",
+   "herkunft": "ERW-KO1 Annahme",
+   "notiz": "1 Satz = Pyro 35 + Schmelzsicherung 20; Stückliste Menge 2 = ein Satz",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-720": {
+   "wert": 40,
+   "einheit": "€/Stück",
+   "herkunft": "ERW-KO1 Annahme",
+   "notiz": "NMC Stecker 40; LFP: ersetzt durch BT-721/722",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-721": {
+   "wert": 15,
+   "einheit": "€/Satz",
+   "herkunft": "ERW-KO1 Annahme",
+   "notiz": "Trennbrücke(n) + Servicedeckel (BT-721/722) zusammen 15 € (Opus Nachtrag 1 bestätigt); Satz = 1",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-722": {
+   "wert": 0,
+   "einheit": "€/Stück",
+   "herkunft": "ERW-KO1 Annahme",
+   "notiz": "in BT-721 enthalten (zusammen 15 €), Nachtrag 1",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-730": {
+   "wert": 80,
+   "einheit": "€/Satz",
+   "herkunft": "ERW-KO1 Annahme",
+   "notiz": "1 Satz = 1x 250 A (60) + 1x 40 A (20); Stückliste Menge 2 = ein Satz (Massen 0.4 + 0.15 kg in ergebnis_*_e2.json annahmen)",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-740": {
+   "wert": 15,
+   "einheit": "€/Stück",
+   "herkunft": "ERW-KO1 Annahme",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-750": {
+   "wert": 8,
+   "einheit": "€/Stück",
+   "herkunft": "ERW-KO1 Annahme",
+   "notiz": "Menge offen",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-760": {
+   "wert": 0,
+   "einheit": "€/Stück",
+   "herkunft": "ERW-KO1 Annahme",
+   "notiz": "PTC im Fahrzeug (Erw.: 0)",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-770": {
+   "wert": 25,
+   "einheit": "€/Stück",
+   "herkunft": "ERW-KO1 Annahme",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-780": {
+   "wert": 2,
+   "einheit": "€/Stück",
+   "herkunft": "ERW-KO1 Annahme",
+   "notiz": "Menge offen",
+   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  }
+ },
+ "laengen_aus_cad": {
+  "BT-360": {
+   "methode": "gruppen.E2_FPC.masse_kg / annahmen.A_e2_fpc_masse_kg_m.wert (kg/m)"
+  },
+  "BT-430": {
+   "methode": "gruppen.E2_HV_Leitung.volumen_cm3 / (pi/4 x A_e2_hv_aussendurchmesser_<V>_mm^2), Summe aller Leitungen"
+  },
+  "herkunft": "cad/pack/entwurf/ergebnis_<V>_e2.json (ERW-E2 N1); ERW-KO1 Nachtrag 1"
+ },
+ "status_werte": [
+  "verifiziert (W29, Zitat geprüft)",
+  "Schätzung (Annahme Opus, ERW-KO1)"
+ ]
+}

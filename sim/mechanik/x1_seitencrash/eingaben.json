@@ -1,0 +1,111 @@
+{
+ "hinweis": "KI-generiert, Entwurf. Jeder Wert mit Herkunft.",
+ "werkstoff": {
+  "E_MPa": {
+   "wert": 70000,
+   "herkunft": "ERW-X1 Annahme Opus (EN AW-6082 T6)"
+  },
+  "nu": {
+   "wert": 0.33,
+   "herkunft": "ERW-X1 Annahme Opus"
+  },
+  "Rp02_MPa": {
+   "wert": 260,
+   "herkunft": "ERW-X1 Annahme Opus"
+  },
+  "Rm_MPa": {
+   "wert": 310,
+   "herkunft": "ERW-X1 Annahme Opus"
+  },
+  "Bruchdehnung": {
+   "wert": 0.1,
+   "herkunft": "ERW-X1 Annahme Opus"
+  },
+  "bilinear_hinweis": "Modellierung: Fliessgrenze 260 bei PEEQ 0, 310 bei PEEQ 0.10 (Gerade Rp0,2 -> Rm bei Bruchdehnung; Umsetzung von 'bilinear' aus ERW-X1)"
+ },
+ "pfahl": {
+  "durchmesser_mm": {
+   "wert": 254,
+   "herkunft": "ERW-X1 Annahme Opus"
+  },
+  "starr": {
+   "wert": true,
+   "herkunft": "ERW-X1; umgesetzt als Hex-Platte mit E = 100 x E_Stahl (2.1e7 MPa), Verschiebung vorgegeben"
+  },
+  "richtung": {
+   "wert": "quer (+y), Achse senkrecht (z)",
+   "herkunft": "ERW-X1 Annahme Opus (90 Grad)"
+  }
+ },
+ "last_restkraft_kN": {
+  "wert": 100,
+  "herkunft": "ERW-X1 Annahme Opus (Linie im Bild)"
+ },
+ "lastfaelle": {
+  "LF1": "Pfahlmitte x = Mitte zwischen Querträger 1 und 2",
+  "LF2": "Pfahlmitte x = Mitte Querträger 2"
+ },
+ "frei_weg": {
+  "LFP": {
+   "Zellverbinder_mm": 1.0,
+   "Zellkoerper_mm": 4.0,
+   "herkunft": "pack.py: Zellverbinder bei y = rand+1, Zellen ab y = rand+4; ERW-X1 nennt 30 + 1 mm"
+  },
+  "NMC": {
+   "gerade_Reihen_mm": 0.0,
+   "ungerade_Reihen_mm": 24.0,
+   "herkunft": "pack.py: Hexagonalraster, gerade Reihen beginnen bei y = rand (Zelle berührt Rahmeninnenseite), ungerade bei rand + t/2. ERW-X1 '41,6 mm' = Reihenabstand in x (t*sqrt(3)/2), nicht ein Weg in y -> Opus fragen"
+  }
+ },
+ "varianten": {
+  "LFP": {
+   "L_mm": 2050.0,
+   "B_mm": 1430.0,
+   "rahmen_breite_mm": 30,
+   "rahmen_hoehe_mm": 108.0,
+   "rahmen_wand_mm": 2.5,
+   "rahmen_kammern": 3,
+   "quertraeger_x0_mm": [
+    524.0,
+    1018.0,
+    1512.0
+   ],
+   "quertraeger_breite_mm": 26,
+   "quertraeger_hoehe_mm": 54,
+   "quertraeger_wand_mm": 2.5,
+   "quertraeger_spiel_mm": 2,
+   "quertraeger_zmitte_ueber_rahmenunterkante_mm": 54.0,
+   "boden_dicke_mm": 3,
+   "herkunft": "cad/pack/entwurf/parameter_LFP.json (BT-000 Länge/Breite, Block A), Formeln aus cad/pack/pack.py (nur gelesen)"
+  },
+  "NMC": {
+   "L_mm": 1950.0,
+   "B_mm": 1430.0,
+   "rahmen_breite_mm": 30,
+   "rahmen_hoehe_mm": 102.0,
+   "rahmen_wand_mm": 2.5,
+   "rahmen_kammern": 3,
+   "quertraeger_x0_mm": [
+    482.0,
+    962.0,
+    1442.0
+   ],
+   "quertraeger_breite_mm": 26,
+   "quertraeger_hoehe_mm": 54,
+   "quertraeger_wand_mm": 2.5,
+   "quertraeger_spiel_mm": 2,
+   "quertraeger_zmitte_ueber_rahmenunterkante_mm": 49.0,
+   "boden_dicke_mm": 3,
+   "herkunft": "cad/pack/entwurf/parameter_NMC.json (BT-000 Länge/Breite, Block A), Formeln aus cad/pack/pack.py (nur gelesen)"
+  }
+ },
+ "modell_ausschnitt": {
+  "quertraeger_laenge_mm": {
+   "wert": 300,
+   "herkunft": "ERW-X1 'Querträger auf 300 mm Länge angeschlossen'"
+  },
+  "boden_streifen": "Boden (3 mm) als Streifen y = Rahmeninnenseite bis 300 mm, x volle Länge (Auslegung aus ERW-X1 'Bodenwanne als Streifen', Streifenbreite 300 = Querträgerlänge: Modellierungsdetail, Opus bestätigen)",
+  "festhaltung": "Gegenseite fest (ERW-X1): Querträgerenden und Bodenstreifenrand bei y = 300 sowie Rahmenenden x = 0 und x = L voll eingespannt (Modelldetail, Opus bestätigen)",
+  "kontakt": "reibungsfrei, Penalty linear (Zahlenwert numerisch, kein Material)"
+ }
+}

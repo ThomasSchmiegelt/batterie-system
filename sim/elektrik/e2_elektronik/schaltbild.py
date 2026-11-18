@@ -13,7 +13,7 @@ def bild(v):
     ER = json.load(open(f"{R}/cad/pack/entwurf/ergebnis_{v}_e2.json"))["e2"]; vs = ER["verschaltung"]
     if v == "LFP":
         t1, t2 = f"Zellstring Hälfte 1 (Reihe 0)\n{vs['zellen_je_reihe']} Zellen, Plus hinten → vorn", f"Zellstring Hälfte 2 (Reihe 1)\n{s - vs['zellen_je_reihe']} Zellen, vorn → Minus hinten"
-        t3 = f"Service-\nTrennstecker vorn\n(Deckelöffnung)\n{g('BT-720','nennstrom_A'):.0f} A"
+        t3 = "Service-Trennbrücke\nvorn im Querverbinder\n(Servicedeckel, ENT-150,\n0 mm über Deckel)"
     else:
         t1, t2 = f"Zellstring Hälfte 1 (Band 1+2)\n{vs['gruppen_hälfte_A']} Gruppen à {p} Zellen, Plus hinten", f"Zellstring Hälfte 2 (Band 3+4)\n{vs['gruppen_hälfte_B']} Gruppen à {p} Zellen, Minus hinten"
         t3 = f"Service-\nTrennstecker hinten\n(über den Mittenanschlüssen)\n{g('BT-720','nennstrom_A'):.0f} A"
@@ -23,7 +23,7 @@ def bild(v):
     def linie(pts, c="#b00020", lw=2.4, ls="-"):
         ax.plot([q[0] for q in pts], [q[1] for q in pts], color=c, lw=lw, ls=ls, solid_capstyle="round")
     ax.text(2, 92, f"Schaltbild Pack {v} ({s}s{p}p)", fontsize=16, weight="bold")
-    ax.text(2, 85.2, f"HV intern {ER['hv_laenge_gesamt_m']:.2f} m (Cu {g('BT-430','querschnitt_mm2'):.0f} mm²), Verlust {ER['hv_verlust_W']:.1f} W bei Ladestrom; Stand v0.4", fontsize=9, color="#444")
+    ax.text(2, 85.2, f"HV intern {ER['hv_laenge_gesamt_m']:.2f} m (Cu {g('BT-430','querschnitt_mm2'):.0f} mm²), Verlust {ER['hv_verlust_W']:.1f} W bei Ladestrom; Stand v1.0", fontsize=9, color="#444")
     ax.text(2, 88.5, "HV rot, Messkette blau, NV grau. Werte aus Akten (vorgeschlagen, Annahme ERW-E2). HV-Reihenfolge nur Darstellung.", fontsize=10, color="#444")
     ax.add_patch(Rectangle((118, 85), 40, 8, fc="#ffe5e5", ec="#a00", lw=2)); ax.text(138, 89, "KI-generiert · Entwurf", ha="center", va="center", fontsize=14, weight="bold", color="#a00")
     # Zellstring

@@ -40,29 +40,29 @@
   },
   "Kuehlplatte": {
    "anzahl": 2,
-   "volumen_cm3": 43548.08141524401,
-   "masse_kg": 47.03192792846353,
+   "volumen_cm3": 43478.25043630111,
+   "masse_kg": 46.9565104712052,
    "masse_bekannt": true,
    "werkstoff": "Al (Vollmaterial, Obergrenze)"
   },
   "Pad": {
    "anzahl": 2,
-   "volumen_cm3": 5418.091908056262,
-   "masse_kg": 13.545229770140654,
+   "volumen_cm3": 5411.050000000001,
+   "masse_kg": 13.527625000000002,
    "masse_bekannt": true,
    "werkstoff": "Pad"
   },
   "Deckel": {
    "anzahl": 1,
-   "volumen_cm3": 5854.377812131689,
-   "masse_kg": 15.80682009275556,
+   "volumen_cm3": 5843.181103891076,
+   "masse_kg": 15.776588980505906,
    "masse_bekannt": true,
    "werkstoff": "Al"
   },
   "Zellverbinder": {
    "anzahl": 130,
-   "volumen_cm3": 373.5000000000007,
-   "masse_kg": 1.0084499999999983,
+   "volumen_cm3": 371.698407105256,
+   "masse_kg": 1.0035856991841876,
    "masse_bekannt": true,
    "werkstoff": "Al"
   },
@@ -102,18 +102,39 @@
    "werkstoff": "E2 Teil (Masse ERW-E2 N1)"
   },
   "E2_Stecker_Sensor": {
-   "anzahl": 5,
-   "volumen_cm3": 776.0,
-   "masse_kg": 0.8300000000000001,
+   "anzahl": 4,
+   "volumen_cm3": 536.0,
+   "masse_kg": 0.6300000000000001,
    "masse_bekannt": true,
    "werkstoff": "E2 Teil (Masse ERW-E2 N1)"
   },
   "E2_HV_Leitung": {
-   "anzahl": 4,
-   "volumen_cm3": 177.93874855997848,
-   "masse_kg": 0.517848345616576,
+   "anzahl": 2,
+   "volumen_cm3": 176.09149207966766,
+   "masse_kg": 0.512472345616576,
    "masse_bekannt": true,
    "werkstoff": "Cu (Leiter, Isolierung ohne Wert)"
+  },
+  "E2_Lasche": {
+   "anzahl": 2,
+   "volumen_cm3": 10.573407105255379,
+   "masse_kg": 0.028548199184189525,
+   "masse_bekannt": true,
+   "werkstoff": "Al"
+  },
+  "E2_Trennbruecke": {
+   "anzahl": 3,
+   "volumen_cm3": 6.301592894744621,
+   "masse_kg": 0.0510577276630882,
+   "masse_bekannt": true,
+   "werkstoff": "Cu"
+  },
+  "E2_Servicedeckel": {
+   "anzahl": 1,
+   "volumen_cm3": 19.2,
+   "masse_kg": 0.05184,
+   "masse_bekannt": true,
+   "werkstoff": "Al"
   },
   "E2_FPC": {
    "anzahl": 14,
@@ -130,25 +151,25 @@
    "werkstoff": "Halter (Masse offen, 0 gesetzt)"
   }
  },
- "masse_bekannt_kg": 619.7523241369821,
+ "masse_bekannt_kg": 619.5502764233647,
  "schwerpunkt_mm": [
-  1029.030214488052,
-  715.0258209331873,
-  62.59347283644123
+  1029.4283033854183,
+  715.0258289418482,
+  62.56684585355876
  ],
  "mitte_mm": [
   1025.0,
   715.0
  ],
  "schwerpunkt_abw_mm": [
-  4.0302144880520245,
-  0.02582093318733314
+  4.428303385418303,
+  0.025828941848203613
  ],
- "teile": 439,
- "kollisionspaare_geprueft": 1045,
+ "teile": 442,
+ "kollisionspaare_geprueft": 1050,
  "kollisionen": [],
  "anzahl_kollisionen": 0,
- "rechenzeit_s": 3.663459062576294,
+ "rechenzeit_s": 3.783480405807495,
  "e2": {
   "fall": "hinten (ENT-144)",
   "verschaltung": {
@@ -375,38 +396,62 @@
    {
     "strecke": "Minus Zelle -> Schaltbox",
     "laenge_mm": 571.9557428756427
-   },
-   {
-    "strecke": "Mitte_A -> Trennstecker",
-    "laenge_mm": 6.0
-   },
-   {
-    "strecke": "Mitte_B -> Trennstecker",
-    "laenge_mm": 6.0
    }
   ],
-  "hv_laenge_gesamt_m": 1.1759114857512853,
+  "hv_laenge_gesamt_m": 1.1639114857512856,
   "hv_W_je_m": 12.946784000000001,
-  "hv_verlust_W": 15.22427200914097,
-  "hv_cu_masse_kg": 0.526808345616576,
+  "hv_verlust_W": 15.068910601140972,
+  "hv_cu_masse_kg": 0.5214323456165759,
   "stecker_lfp": {
+   "bauform": "trennbruecke_servicedeckel (ENT-150)",
    "x": 55.5,
    "y": 715.0,
-   "oberkante_mm": 179.0,
-   "ueber_deckel_mm": 58.0,
-   "deckeloeffnung_mm": [
-    80.0,
-    50.0
+   "oberkante_mm": 121.0,
+   "ueber_deckel_mm": 0.0,
+   "serviceoeffnung_mm": [
+    120.0,
+    80.0
    ],
-   "querverbinder_laenge_mm": 1358.0
+   "oeffnung_x0_mm": 32,
+   "bruecke_mm": [
+    25.0,
+    3.0,
+    80.0
+   ],
+   "luecke_mm": 30,
+   "querverbinder_laenge_mm": 1338.0,
+   "laschen": [
+    {
+     "name": "Plus",
+     "pfad_mm": 68.5,
+     "querschnitt_mm2": 75.0
+    },
+    {
+     "name": "Minus",
+     "pfad_mm": 68.5,
+     "querschnitt_mm2": 75.0
+    }
+   ],
+   "nut": {
+    "kuehlflaeche_oben_mm2": 2726300.0,
+    "nut_flaeche_gesamt_mm2": 34200.0,
+    "nut_flaeche_ohne_oeffnung_mm2": 31200.0,
+    "nut_tiefe_in_kuehlplatte_mm": 2,
+    "nut_anteil_prozent": 1.1444081722481019,
+    "oeffnung_flaeche_mm2": 9600.0,
+    "nut_plus_oeffnung_anteil_prozent": 1.4965337637090563,
+    "oeffnung_anteil_prozent": 0.3521255914609544
+   }
   },
+  "hoehe_vorn_mm": 121.0,
+  "hoehe_vorn_grenze_x_mm": 1600.0,
   "hv_gebaut": true,
   "hv_kurze_leitungen_box_stecker_mm": 20,
-  "masse_elektronik_ohne_hv_leitungen_kg": 5.898132999999993,
+  "masse_elektronik_ohne_hv_leitungen_kg": 5.8295789268472715,
   "aussparungen_mm3": {
-   "Pad_oben": 34508.09194373805,
-   "Kuehlplatte_oben": 72718.58475599438,
-   "Deckel": 8622.187868312001
+   "Pad_oben": 41549.999999999534,
+   "Kuehlplatte_oben": 142549.56369889528,
+   "Deckel": 19818.89610892441
   },
   "geometrie": {
    "cmu": [
@@ -803,26 +848,6 @@
       [
        2012.0,
        860.0
-      ]
-     ]
-    },
-    {
-     "name": "Mitte_A",
-     "laenge_mm": 6.0,
-     "xy": [
-      [
-       55.5,
-       703.0
-      ]
-     ]
-    },
-    {
-     "name": "Mitte_B",
-     "laenge_mm": 6.0,
-     "xy": [
-      [
-       55.5,
-       727.0
       ]
      ]
     }
@@ -1836,9 +1861,9 @@
   },
   "biegeradius_mm": 70.0,
   "hv_aussendurchmesser_mm": 14,
-  "masse_elektronik_gesamt_kg": 6.4159813456165695,
-  "masse_hv_leiter_cu_kg": 0.526808345616576,
-  "querverbinder_mitte_al_kg": 0.274995
+  "masse_elektronik_gesamt_kg": 6.342051272463848,
+  "masse_hv_leiter_cu_kg": 0.5214323456165759,
+  "querverbinder_mitte_al_kg": 0.2701306991841895
  },
  "annahmen": {
   "A_deckel_mm": {
@@ -2105,6 +2130,43 @@
   "A_e2_trennstecker_masse_kg": {
    "wert": 0.2,
    "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_bruecke_luecke_mm": {
+   "wert": 30,
+   "herkunft": "ERW-E2 N3 (Platzhalter Opus/Sonnet): Lücke im Querverbinder LFP für die Service-Trennbrücke"
+  },
+  "A_e2_bruecke_ueberlappung_mm": {
+   "wert": 25,
+   "herkunft": "ERW-E2 N3: Überlappung Brücke auf Querverbinder je Seite"
+  },
+  "A_e2_bruecke_querschnitt_mm": {
+   "wert": [
+    25,
+    3
+   ],
+   "herkunft": "ERW-E2 N3: Cu-Brücke 25 x 3, 2 x M8 (je Seite eine Schraube), HV-Interlock-Kontakt nicht modelliert"
+  },
+  "A_e2_serviceoeffnung_mm": {
+   "wert": [
+    120,
+    80
+   ],
+   "herkunft": "ERW-E2 N3: Öffnung 120 (y) x 80 (x) durch Pad, obere Kühlplatte, Deckel; Servicedeckel flach, bündig, Dicke = A_deckel_mm"
+  },
+  "A_e2_lasche_mm": {
+   "wert": [
+    25,
+    3
+   ],
+   "herkunft": "ERW-E2 N3: Anschlusslasche Querschnitt wie Verbinder 25 x 3, Überlappung 25 mm, Bohrung M8"
+  },
+  "A_e2_lasche_bohrung_mm": {
+   "wert": 8,
+   "herkunft": "ERW-E2 N3: Bohrung M8 (Nennmaß 8, Durchgangsloch nicht gesetzt)"
+  },
+  "A_e2_lasche_ueberlappung_mm": {
+   "wert": 25,
+   "herkunft": "ERW-E2 N3"
   },
   "A_e2_gas_mm": {
    "wert": [

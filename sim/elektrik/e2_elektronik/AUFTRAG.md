@@ -38,3 +38,37 @@ Grundlage ist ERWARTUNG Nachtrag 2. ENT-138 hat Opus auf deckel_hinten gesetzt.
    - Dann Kollisionsprüfung.
 3. HV-Leitungsmasse mit Cu 8,96 g/cm³. Schaltbild auf v0.3 bringen. Renders und Kabelplan neu. ERGEBNIS.md v0.4 mit Abgleich gegen Nachtrag 2. Baustein E2 nachführen.
 Abbruch → OPUS wie oben.
+
+## Fortsetzung 4 (2026-11-18, Opus → Sonnet), Abschluss E2
+1. Anschlusslaschen Verbinder → HV-Leitung zeichnen. Maß: Querschnitt wie Verbinder, Bohrung M8, Überlappung 25 mm (Annahme Opus, „ERW-E2 N3“).
+2. Verlust der Al-Verbinder mit ρ_Al 2,82e-8 Ωm (Stoffwert) je Variante. Erwartung Opus: LFP ≤ 50 W, NMC wie E1 (≈ 385 W bei Spitze). Abweichung > 30 % → OPUS.
+3. LFP-Nut 2 mm in der oberen Kühlplatte für den Querverbinder im CAD setzen. Für K2 melden: Fläche der Nut gegen die Kühlfläche in %.
+4. Trennstecker LFP vorn: Lage so lassen, im Bild markieren als „offen beim Autor (+58 mm)“.
+5. ERGEBNIS.md v1.0 (Status geprüft (KI) erst nach Opus), Lesehilfe, Baustein E2, Renders neu, wo sich etwas geändert hat. FCStd-Pfade in die Rückgabe.
+**Änderung zu Punkt 4 (Opus, Autor 2026-11-18: „Mach den lfp trennstrecker wie du meinst“):** Der LFP-Trennstecker wird eine **Service-Trennbrücke im Querverbinder vorn**. Das ist eine verschraubte Cu-Brücke, 2 × M8, mit HV-Interlock-Kontakt. Sie liegt in der Verbinderebene unter einem abgedichteten Servicedeckel im Gehäusedeckel (Öffnung 120 × 80 mm, Deckel 2 mm, flach).
+- Höhenzuwachs: 0 mm über dem Deckel. Die Packhöhe bleibt ≤ 130 mm.
+- Grund: Ein steckbarer Stecker baut mindestens 50 mm hoch. Die Beispielseite des Autors zeigt nur, dass es 250-A/1000-V-Stecker gerade und um 90° gewinkelt gibt; Maße nennt sie nicht (Hinweis, kein Beleg).
+- Nachteil: Trennen nur mit Werkzeug durch die Werkstatt. Das ist zulässig, weil die Pyrosicherung und die Schütze im Fehlerfall trennen.
+- Akte BT-720 bauform = „trennbruecke_servicedeckel“, nur LFP, vorgeschlagen. Annahmen mit Herkunft „ERW-E2 N3“.
+- NMC behält den Stecker hinten an der Box.
+
+## Fortsetzung 5 (2026-11-18, Opus → Sonnet): Detailierung Konstruktionsstand
+Grundlage ist ERWARTUNG Nachtrag 3, die Tabelle gilt vollständig.
+- Maße als A_e2_* in `entwurf_parameter.py` (Herkunft „ERW-E2 N3“). Akten nur für die Stromschienen-Querschnitte (BT-710) anlegen, Status vorgeschlagen. Fehlt das Merkmal, auflisten.
+- Reihenfolge:
+  1. NMC-Verbinder-Querschnitt aus der Akte lesen, Verlust neu.
+  2. Box innen.
+  3. Stecker und Trennbrücke.
+  4. Verbinder und Laschen.
+  5. Kabel.
+  - Nach jedem Schritt Kollisionsprüfung.
+- Wird die Datei zu groß oder der Lauf zu lang (> 20 min): Zellverbinder-Details nur in einem Ausschnitt (je Variante 1 CMU-Feld) voll, sonst vereinfacht. Das in der Lesehilfe angeben.
+- Bilder neu, Cycles CPU:
+  - Box offen ohne Deckel
+  - Stecker und Durchführungen
+  - Trennbrücke mit Servicedeckel offen und zu
+  - Zellverbinder- und FPC-Nahaufnahme
+  - HV-Kabelbahn
+  - Gesamtansicht
+- ERGEBNIS.md v1.1, Lesehilfe, Baustein E2.
+Abbruch → OPUS wie oben und nach „Verfehlt“ in Nachtrag 3.

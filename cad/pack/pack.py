@@ -189,6 +189,8 @@ if E2:
             ca, cb = cells[mw["gruppen"][gi_][-1]], cells[mw["gruppen"][gi_ + 1][0]]
             add(f"Gruppenbruecke_g{gi_:03d}", "Gruppenbruecke", strip((ca["cx"], ca["cy"]), (cb["cx"], cb["cy"])).cut(gsh[gi_]).cut(gsh[gi_ + 1]), mat="Al (Annahme, Cu offen)"); n_br += 1
         vers.update(gruppenverbinder=len(gsh), wendebruecken_in_gruppen=n_wende, gruppenbruecken=n_br)
+        dd_ = lambda a, b: math.hypot(cells[a]["cx"] - cells[b]["cx"], cells[a]["cy"] - cells[b]["cy"])      # Abstände Zellmitte-Zellmitte entlang der Mäander-Folge (für Verlustrechnung Al, verlust_al.py)
+        vers["al_sammel_schritte_mm"] = [[dd_(a_, b_) for a_, b_ in zip(g_, g_[1:])] for g_ in mw["gruppen"]]; vers["al_bruecken_mm"] = [dd_(mw["gruppen"][i][-1], mw["gruppen"][i + 1][0]) for i in range(len(mw["gruppen"]) - 1)]
     geo["taps"] = [[t[0], t[1]] for t in taps]
     # ---- CMU: Zuordnung, Lage (hochkant, an den Rahmen gelehnt)
     asg = EV.cmu_zuordnung(taps, ncmu, nkan, xv_in + cmuD / 2, xh_in - cmuD / 2, ymin_, ymax_, cmuL)
@@ -206,7 +208,7 @@ if E2:
     for j in sorted(range(ncmu), key=lambda j: ypos[j]):
         for dd in sorted(range(-int(cmuL / 2 - fw / 2), int(cmuL / 2 - fw / 2) + 1), key=abs):
             y = ypos[j] + dd
-            if all(abs(y - h) >= rhv + fw / 2 + 1 for h in hv_y if VAR == "NMC") and all(abs(y - l) >= fw + 2 for l in lane if l is not None): lane[j] = y; break
+            if all(abs(y - h) >= max(rhv, A3("A_e2_lasche_mm")[0] / 2) + fw / 2 + 1 for h in hv_y if VAR == "NMC") and all(abs(y - l) >= fw + 2 for l in lane if l is not None): lane[j] = y; break
         assert lane[j] is not None, j
     cmu_x = {"vorn": (xv_in, xv_in + cmuD), "hinten": (xh_in - cmuD, xh_in)}
     for j in range(ncmu):
@@ -246,8 +248,12 @@ if E2:
     if VAR == "NMC":
         add("Service_Trennstecker", "E2_Stecker_Sensor", box(plug_x - plL / 2, plug_y - plB / 2, z_top, plug_x + plL / 2, plug_y + plB / 2, z_top + plH), mass=A["A_e2_trennstecker_masse_kg"], mat="E2 Teil (Masse ERW-E2 N1)")
         z_h = z_top + plH + gap + rhv                         # Höhe der Leitung über dem Trennstecker (Abstand = Teilabstand-Platzhalter)
+        lw_, lz_ = A3("A_e2_lasche_mm"); lbo = A["A_e2_lasche_bohrung_mm"]      # NMC Anschlusslasche: Platte 25 x 25 x 3 auf dem Gruppenverbinder (Überlappung 25 mm), Bohrung M8 im Zellmittelpunkt
+        for nm in ("Plus", "Minus", "Mitte_A_Ende_Band2", "Mitte_B_Anfang_Band3"):
+            c = ans[nm]; pl_ = box(c["cx"] - lw_ / 2, c["cy"] - lw_ / 2, z_pad2, c["cx"] + lw_ / 2, c["cy"] + lw_ / 2, z_pad2 + lz_)
+            add(f"Lasche_{nm}", "E2_Lasche", pl_.cut(cyl(c["cx"], c["cy"], z_pad2 - 1, z_pad2 + lz_ + 1, lbo / 2)), mat="Al"); cutter.append((pl_, ("Pad_oben", "Kuehlplatte_oben")))
         for nm, ywall, sgn in (("Plus", by0, 1), ("Minus", by0 + bB, -1)):
-            c = ans[nm]; x, y = c["cx"], c["cy"]; z0 = z_pad2; za = z_h - Rb
+            c = ans[nm]; x, y = c["cx"], c["cy"]; z0 = z_pad2 + lz_; za = z_h - Rb
             assert abs(ywall - y) > Rb, (nm, y, ywall)
             p1, p2 = V(x, y, z0), V(x, y, za); p3 = V(x, y + sgn * Rb, z_h); p4 = V(x, ywall, z_h)
             pm_ = V(x, y + sgn * Rb * (1 - math.cos(math.pi / 4)), za + Rb * math.sin(math.pi / 4))
@@ -258,30 +264,45 @@ if E2:
             geo["hv"].append(dict(name=nm, laenge_mm=L_, xy=[[x, y], [x, ywall]]))
         for nm in ("Mitte_A_Ende_Band2", "Mitte_B_Anfang_Band3"):
             c = ans[nm]; x, y = c["cx"], c["cy"]
-            add(f"HV_{nm}", "E2_HV_Leitung", cyl(x, y, z_pad2, z_top, rhv), mass=cu_kg(z_top - z_pad2), mat="Cu (Leiter, Isolierung ohne Wert)"); hv_len.append((f"{nm} -> Trennstecker", z_top - z_pad2)); vert_cut.append(cyl(x, y, z_pad2, z_top, rhv))
-            geo["hv"].append(dict(name=nm, laenge_mm=z_top - z_pad2, xy=[[x, y]]))
+            add(f"HV_{nm}", "E2_HV_Leitung", cyl(x, y, z_pad2 + lz_, z_top, rhv), mass=cu_kg(z_top - z_pad2 - lz_), mat="Cu (Leiter, Isolierung ohne Wert)"); hv_len.append((f"{nm} -> Trennstecker", z_top - z_pad2 - lz_)); vert_cut.append(cyl(x, y, z_pad2, z_top, rhv))
+            geo["hv"].append(dict(name=nm, laenge_mm=z_top - z_pad2 - lz_, xy=[[x, y]]))
     else:   # LFP (ENT-148): Plus/Minus hinten zur Box; Mitte vorn: Querverbinder (Flachschiene auf den vordersten Zellen) -> 2 Leitungen -> Service-Trennstecker in der Deckelöffnung
         gz_, gt_ = A["A_zellverbinder_LFP_mm"]; z_ht = z_top_cell; x_c0 = min(c["cx"] for c in cells) - Dc / 2
-        xlead = xh_in - x_hinten_frei / 2; z_h = z_ht + Rb
+        zl_ = A3("A_e2_lasche_mm")[1]; xlead = xh_in - x_hinten_frei / 2; z_h = z_ht + zl_ + Rb      # Leitungsfuß liegt auf dem Flansch der Lasche (3 mm über Zellober-/FPC-Ebene)
         assert z_top + wd + rhv <= z_h <= z_top + bH - wd - rhv, ("Leitungshöhe außerhalb der Box", z_h - z_top, bH)
         for nm, y, ywall, sgn in (("Plus", ymin_ + 1 + rhv, by0, 1), ("Minus", ymax_ - 1 - rhv, by0 + bB, -1)):
             za = z_h - Rb; p2 = V(xlead, y, za); p3 = V(xlead, y + sgn * Rb, z_h); p4 = V(xlead, ywall, z_h)
-            pm_ = V(xlead, y + sgn * Rb * (1 - math.cos(math.pi / 4)), za + Rb * math.sin(math.pi / 4)); p1 = V(xlead, y, z_ht)
-            segs = ([Part.makeLine(p1, p2)] if za - z_ht > 1e-6 else []) + [Part.Arc(p2, pm_, p3).toShape(), Part.makeLine(p3, p4)]
+            pm_ = V(xlead, y + sgn * Rb * (1 - math.cos(math.pi / 4)), za + Rb * math.sin(math.pi / 4)); p1 = V(xlead, y, z_ht + zl_)
+            segs = ([Part.makeLine(p1, p2)] if za - z_ht - zl_ > 1e-6 else []) + [Part.Arc(p2, pm_, p3).toShape(), Part.makeLine(p3, p4)]
             shp = Part.Wire(segs).makePipeShell([Part.Wire(Part.makeCircle(rhv, p1, V(0, 0, 1)))], True, True)
-            L_ = (za - z_ht) + math.pi * Rb / 2 + (abs(ywall - y) - Rb)
+            L_ = (za - z_ht - zl_) + math.pi * Rb / 2 + (abs(ywall - y) - Rb)
             add(f"HV_{nm}", "E2_HV_Leitung", shp, mass=cu_kg(L_), mat="Cu (Leiter, Isolierung ohne Wert)"); hv_len.append((f"{nm} Zelle -> Schaltbox", L_)); cutter.append((shp, ("Pad_oben", "Kuehlplatte_oben", "Deckel")))
             geo["hv"].append(dict(name=nm, laenge_mm=L_, xy=[[xlead, y], [xlead, ywall]]))
-        yA, yB = B / 2 - rhv - gap / 2, B / 2 + rhv + gap / 2; px = x_c0 + gz_ / 2; py = B / 2
-        add("Querverbinder_Mitte_A", "Zellverbinder", box(x_c0, ymin_ + 1, z_ht, x_c0 + gz_, yA + rhv, z_ht + gt_), mat="Al (wie Zellverbinder G4)")
-        add("Querverbinder_Mitte_B", "Zellverbinder", box(x_c0, yB - rhv, z_ht, x_c0 + gz_, ymax_ - 1, z_ht + gt_), mat="Al (wie Zellverbinder G4)")
-        cutter.append((box(x_c0, ymin_ + 1, z_ht, x_c0 + gz_, ymax_ - 1, z_ht + gt_), ("Pad_oben", "Kuehlplatte_oben")))   # Schiene 3 mm dick, Pad dünner: Nut in der oberen Kühlplatte (Aussparung gemeldet)
-        add("Service_Trennstecker", "E2_Stecker_Sensor", box(px - plL / 2, py - plB / 2, z_dk, px + plL / 2, py + plB / 2, z_dk + plH), mass=A["A_e2_trennstecker_masse_kg"], mat="E2 Teil (Masse ERW-E2 N1)")
-        cutter.append((box(px - plL / 2, py - plB / 2, z_dk - 1, px + plL / 2, py + plB / 2, z_top + 1), ("Deckel",)))   # Deckelöffnung
-        for nm, y in (("Mitte_A", yA), ("Mitte_B", yB)):
-            L_ = z_dk - (z_ht + gt_); add(f"HV_{nm}", "E2_HV_Leitung", cyl(px, y, z_ht + gt_, z_dk, rhv), mass=cu_kg(L_), mat="Cu (Leiter, Isolierung ohne Wert)")
-            hv_len.append((f"{nm} -> Trennstecker", L_)); vert_cut.append(cyl(px, y, z_ht + gt_, z_dk, rhv)); geo["hv"].append(dict(name=nm, laenge_mm=L_, xy=[[px, y]]))
-        quer_L = (yA + rhv - ymin_ - 1) + (ymax_ - 1 - (yB - rhv)); lfp_stecker = dict(x=px, y=py, oberkante_mm=z_dk + plH, ueber_deckel_mm=z_dk + plH - z_top, deckeloeffnung_mm=[plL, plB], querverbinder_laenge_mm=quer_L)
+        # Laschen Plus/Minus (ERW-E2 N3): Platte 25 breit (y) x 3 dick (x) am Ende des hintersten Zellverbinders (Stumpfstoß, Überlappung 25 mm im Seitenspalt nicht darstellbar), Steg hoch bis unter den Leitungsfuß, Flansch 3 mm unter dem Leitungsfuß mit Bohrung M8
+        lw_, lt_ = A3("A_e2_lasche_mm"); lbo = A["A_e2_lasche_bohrung_mm"]; xe_ = xh_in - x_hinten_frei; la_info = []
+        for nm, y0_, sg in (("Plus", ymin_ + 1, 1), ("Minus", ymax_ - 1, -1)):
+            y0_ = y0_ + sg * (fh - 1 + 0.2)        # hinter dem FPC-Stapel (Stapel 3 mm ab Rahmeninnenkante), Lasche beginnt 0,2 mm danach
+            ya, yb_ = (y0_, y0_ + lw_) if sg == 1 else (y0_ - lw_, y0_)
+            steg = box(xe_, ya, zc - gz_ / 2, xe_ + lt_, yb_, z_ht + lt_); fl = box(xe_, ya, z_ht, xlead + rhv, yb_, z_ht + lt_)
+            las = steg.fuse(fl).removeSplitter().cut(cyl(xlead, ymin_ + 1 + rhv if sg == 1 else ymax_ - 1 - rhv, z_ht - 1, z_ht + lt_ + 1, lbo / 2))
+            add(f"Lasche_{nm}", "E2_Lasche", las, mat="Al"); la_info.append(dict(name=nm, pfad_mm=(z_ht + lt_ - (zc - gz_ / 2)) + (xlead - xe_), querschnitt_mm2=lw_ * lt_)); cutter.append((fl, ("Pad_oben", "Kuehlplatte_oben")))
+        # Service-Trennbrücke (ENT-150): Querverbinder mit Lücke, Cu-Brücke 25 x 3 darüber (Überlappung je Seite), 2 x M8, Öffnung 120 (y) x 80 (x) bis unter den Servicedeckel
+        bg_, bov_, (bw_, bt_) = A["A_e2_bruecke_luecke_mm"], A["A_e2_bruecke_ueberlappung_mm"], A3("A_e2_bruecke_querschnitt_mm"); oy_, ox_ = A3("A_e2_serviceoeffnung_mm")
+        py = B / 2; yA, yB = py - bg_ / 2, py + bg_ / 2; px = x_c0 + gz_ / 2; ox0 = xv_in + 2
+        assert ox0 <= px - bw_ / 2 and px + bw_ / 2 <= ox0 + ox_, "Brücke außerhalb der Öffnung"
+        zb0 = z_ht + gt_; bo_ = (lbo / 2)
+        holes = [cyl(px, yA - bov_ / 2, z_ht - 1, zb0 + bt_ + 1, bo_), cyl(px, yB + bov_ / 2, z_ht - 1, zb0 + bt_ + 1, bo_)]
+        qa = box(x_c0, ymin_ + 1, z_ht, x_c0 + gz_, yA, zb0); qb_ = box(x_c0, yB, z_ht, x_c0 + gz_, ymax_ - 1, zb0)
+        add("Querverbinder_Mitte_A", "Zellverbinder", qa.cut(holes[0]), mat="Al (wie Zellverbinder G4)"); add("Querverbinder_Mitte_B", "Zellverbinder", qb_.cut(holes[1]), mat="Al (wie Zellverbinder G4)")
+        br_ = box(x_c0, yA - bov_, zb0, x_c0 + bw_, yB + bov_, zb0 + bt_).cut(holes[0]).cut(holes[1])
+        add("Trennbruecke_Cu", "E2_Trennbruecke", br_, mass=br_.Volume * rhoCu * 1e-9, mat="Cu"); sch_ = [add(f"Schraube_M8_{k}", "E2_Trennbruecke", h_.common(box(px - 10, 0, z_ht, px + 10, B, zb0 + bt_)), mass=0.0, mat="Stahl (Masse offen, 0 gesetzt)") for k, h_ in enumerate(holes)]
+        cutter.append((box(x_c0, ymin_ + 1, z_ht, x_c0 + gz_, ymax_ - 1, zb0), ("Pad_oben", "Kuehlplatte_oben")))   # Schiene 3 mm dick, Pad dünner: Nut in der oberen Kühlplatte
+        cutter.append((box(ox0, py - oy_ / 2, z_ht, ox0 + ox_, py + oy_ / 2, z_top + 1), ("Pad_oben", "Kuehlplatte_oben", "Deckel")))   # Serviceöffnung durch Pad, Kühlplatte, Deckel
+        add("Servicedeckel", "E2_Servicedeckel", box(ox0, py - oy_ / 2, z_dk, ox0 + ox_, py + oy_ / 2, z_top), mat="Al")
+        kf_ = (Lg - 2 * rand) * (B - 2 * rand); nut_ = gz_ * ((ymax_ - 1) - (ymin_ + 1)); ov_ = gz_ * oy_
+        nut_info = dict(kuehlflaeche_oben_mm2=kf_, nut_flaeche_gesamt_mm2=nut_, nut_flaeche_ohne_oeffnung_mm2=nut_ - ov_, nut_tiefe_in_kuehlplatte_mm=gt_ - A["A_pad_mm"], nut_anteil_prozent=100 * (nut_ - ov_) / kf_,
+                        oeffnung_flaeche_mm2=ox_ * oy_, nut_plus_oeffnung_anteil_prozent=100 * (nut_ - ov_ + ox_ * oy_) / kf_, oeffnung_anteil_prozent=100 * ox_ * oy_ / kf_)
+        quer_L = (yA - ymin_ - 1) + (ymax_ - 1 - yB); lfp_stecker = dict(bauform="trennbruecke_servicedeckel (ENT-150)", x=px, y=py, oberkante_mm=z_top, ueber_deckel_mm=0.0, serviceoeffnung_mm=[oy_, ox_], oeffnung_x0_mm=ox0, bruecke_mm=[bw_, bt_, (yB - yA) + 2 * bov_], luecke_mm=bg_, querverbinder_laenge_mm=quer_L, laschen=la_info, nut=nut_info)
     # ---- FPC (Länge immer berechnet; gebaut, wenn Platz)
     face = {"vorn": xv_in + cmuD, "hinten": xh_in - cmuD}; sgnx = {"vorn": 1, "hinten": -1}
     fpc_info = []; fpc_mass_kg = 0.0
@@ -355,7 +376,7 @@ if E2:
                  freier_abstand_endzone_vorn_mm=x_vorn_frei, freier_abstand_endzone_hinten_mm=x_hinten_frei, cmu_dicke_mm=cmuD, abgriffe=len(taps), cmu_y=ypos,
                  fpc=fpc_info, fpc_laenge_gesamt_m=sum(f["laenge_mm"] for f in fpc_info) / 1000, fpc_laenge_platziert_m=sum(f["laenge_mm"] for f in fpc_info if f["platziert"]) / 1000,
                  fpc_stuecke=len(fpc_info), fpc_nicht_platziert=sum(1 for f in fpc_info if not f["platziert"]), fpc_masse_kg=kg_fpc_m * sum(f["laenge_mm"] for f in fpc_info) / 1000,
-                 hv=[dict(strecke=n, laenge_mm=l) for n, l in hv_len], hv_laenge_gesamt_m=hvl / 1000, hv_W_je_m=Whv, hv_verlust_W=hvl / 1000 * Whv, hv_cu_masse_kg=sum(cu_kg(l) for _, l in hv_len) + cu_kg(2 * gap), stecker_lfp=(lfp_stecker if VAR == "LFP" else None),
+                 hv=[dict(strecke=n, laenge_mm=l) for n, l in hv_len], hv_laenge_gesamt_m=hvl / 1000, hv_W_je_m=Whv, hv_verlust_W=hvl / 1000 * Whv, hv_cu_masse_kg=sum(cu_kg(l) for _, l in hv_len) + cu_kg(2 * gap), stecker_lfp=(lfp_stecker if VAR == "LFP" else None), hoehe_vorn_mm=max(p["shape"].BoundBox.ZMax for p in teile if p["shape"].BoundBox.XMax < bx0 - 100), hoehe_vorn_grenze_x_mm=bx0 - 100,
                  hv_gebaut=True, hv_kurze_leitungen_box_stecker_mm=2 * gap,
                  masse_elektronik_ohne_hv_leitungen_kg=mass_e2, aussparungen_mm3=ausspar, geometrie=geo, biegeradius_mm=Rb, hv_aussendurchmesser_mm=dhv)
 
