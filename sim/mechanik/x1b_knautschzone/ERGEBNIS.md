@@ -1,4 +1,4 @@
-| Dok.-Nr. | ERG-X1b | Version | 0.1 | Status | Entwurf |
+| Dok.-Nr. | ERG-X1b | Version | 0.1 | Status | geprüft (KI) |
 |---|---|---|---|---|---|
 | Titel | Ergebnis X1b/X2: Knautschzone, CalculiX abgebrochen, OpenCourant LFP w15/20/30 und NMC w20 | Ersteller | Claude Sonnet (KI) | Prüfer | Opus (offen) |
 
@@ -61,3 +61,15 @@ Mit `/RFILE/2` und Zyklusabstand 2000 bis 5000 schreibt die Engine `X2_0001_0001
 Dateien: `energie_bis_zellberuehrung_ueber_w.png`, `x2.py` (Netz und Deck), `lauf_oc.sh`, `neustart.sh` (OpenCourant), `neustart_ccx.sh`, `auswerten_oc.py`, `auswerten.py` (CalculiX), `energieverlust.py`, `ergebnis_oc.json`, `kraft_eindringung_oc.png`, `energiebilanz_oc.png`, `verformung_oc_LFP_w20.png`, `lesehilfe.md`, `LIESMICH_NEUSTART.md`.
 
 *KI-generiert, Entwurf. Dokument ERG-X1b, Version 0.1.*
+
+## Prüfung Opus (2026-11-18, am Deck x2.py und an ergebnis_oc.json)
+| Punkt | Befund | Wirkung auf die Aussage |
+|---|---|---|
+| Pfahl | /RWALL/CYL mit Masse 1500 kg und v0, Kontakt auf Profil und Rahmen | richtig |
+| Elemente | Schale Ishell 24 (QEPH), Dreiecke Ish3n 2, /DT 0,9 ohne Massenskalierung, Energiefehler 0,007 % | richtig |
+| Selbstkontakt | TYPE7 nur im Knautschprofil; Rahmenkammern ohne Selbstkontakt, sie stauchen nur 0,2–1,3 mm | ausreichend |
+| Randbedingungen | Rahmenenden und Streifenende bei y = 300 voll eingespannt | eher zu steif → reale Energie bis zur Zellberührung **kleiner** |
+| Werkstoff | bilinear ohne Versagen, PEEQ im Profil 69 % gegen 10 % Bruchdehnung | Profil würde reißen → reale Energie **kleiner** |
+| Zellen | nicht modelliert, Kriterium ist die Berührung | richtig für die Frage |
+| Hauptunsicherheit | 5 kJ Restenergie und Pfahl Ø 254 sind Annahmen (W30 ohne Normwerte) | ändert den Maßstab, nicht den Trend über w |
+**Urteil:** Die Studie ist methodisch tragfähig für den Variantenvergleich. Die beiden Vereinfachungen (Einspannung, kein Versagen) wirken in dieselbe Richtung, die reale Reserve ist also eher noch kleiner. Die Empfehlung „keine Knautschzone im Pack, der Schweller trägt“ ist damit **robust**. Kein Nachweis: Ausschnittmodell, ohne Fahrzeug. Status: geprüft (KI).

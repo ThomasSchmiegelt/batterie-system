@@ -26,6 +26,7 @@ KI-generiert (Claude Opus).
 - Autor: „ja mach das, kannst du das auch hiemit OpenCourant rechnen“ → X1b Knautschzone w 15/20/30 + X2 OpenCourant (RESF-Fork, AGPLv3, github.com/OpenCourant/OpenCourant, per Websuche bestätigt). Sonnet läuft.
 - X1b CalculiX: alle Läufe bei 13–33 % Weg divergiert (Faltung) → Opus gestoppt 18:05. Methodenwechsel X1b+X2 explizit OpenCourant (ERWARTUNG Nachtrag 1, AUFTRAG_X2.md), Sonnet läuft.
 - X1b/X2 fertig (B-BAT-031): Knautschprofil bringt nur 0,4–0,6 kJ bis Zellberührung (Ziel 5 kJ), Innenwand biegt zwischen Querträgern. Opus-Empfehlung: keine Knautschzone im Pack, Schweller trägt; optional Studie engere Querträger. Autor entscheidet.
+- Opus-Prüfung X1b/X2 (ERGEBNIS.md): tragfähig, Vereinfachungen konservativ → Empfehlung robust. Autor: „opus zum abschluss die studie überprüfen und dann … überarbeitung“; 32 GB RAM (Crash Stufe 2 ≤ 1 Mio Schalen). Nächstes: Überarbeitungsschleife E2 durch Opus.
 - OpenCourant latest-20261011 (cb760c2) installiert in ~/cae_projekte/werkzeuge/opencourant, Rauchtest ok (miniqa SMOKE_TEST). X2 wartet auf w-Wahl.
 
 ## 2026-11-17 Abend – Übergabe für morgen
