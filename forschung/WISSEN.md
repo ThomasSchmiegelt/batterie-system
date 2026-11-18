@@ -1585,3 +1585,98 @@ Ein **Contactor** (deutsch: Leistungsschalter bzw. Kontaktor) ist ein elektromag
 
 
 Prüfung: 6 Belege bestaetigt, 3 Fehler
+
+## W32
+
+# W32: Aluminiumlegierungen der 6000er-Serie (6082, 6061, 6005)
+
+## Erklärung
+
+Die Legierungen 6082, 6061 und 6005 gehören zur Aluminium-Magnesium-Silicon-Familie (6xxx-Reihe) und werden durch **Auslagerungshärtung** (Precipitation Hardening) ihre volle Festigkeit erreichen: Magnesium und Silizium bilden feine Mg₂Si-Ausscheidungen, die das Versetzen von Kristallgitterfehler behindern. „Temper" bezeichnet dabei den Wärmebehandlungszustand – O (geglüht, weich), T4 (natürlich ausgelagert) oder T6 (künstlich ausgelagert, maximal fest). Diese Legierungen lassen sich **nicht** spannungsfestig durch plastische Verformung härten; ihre Festigkeit hängt ausschließlich vom Temper ab. Die übliche Umformung erfolgt durch Extrusion (Profilen, Rohre), Kalt- und Warmumformung oder Walzen; als umformbare (wrought) Werkstoffe eignen sie sich nicht für den Guss. 6061 ist besonders gut schweißbar (TIG/MIG), verliert in der Schweißnaht allerdings etwa 40 % der Festigkeit und muss nachgeschweißt oder neu wärmebehandelt werden. Für ein Batteriesystem sind diese Werkstoffe relevant als Gehäuse, Tragstrukturen, Kühlkörper oder Busbar-Träger, weil sie ein gutes Verhältnis aus spezifischer Festigkeit, thermischer Leitfähigkeit und Prozessierbarkeit bieten.
+
+## Kennwerte
+
+| Größe | Wert | Einheit | Beleg |
+|---|---|---|---|
+| Zugfestigkeit 6082 (Infobox) | 150–310 | MPa | Beleg: "Tensile strength ( σ t ) | 150–310 MPa" (https://en.wikipedia.org/wiki/6082_aluminium_alloy) |
+| Schmelztemperatur 6082 | 585–650 | °C | Beleg: "Melting temperature ( T m ) \| 585–650 °C" (https://en.wikipedia.org/wiki/6082_aluminium_alloy) |
+| E-Modul 6061 (Infobox) | 68 | GPa | Beleg: "Young's modulus ( E ) \| 68 GPa (9,900 ksi)" (https://en.wikipedia.org/wiki/6061_aluminium_alloy) |
+| Zugfestigkeit 6061 (Temper-übergreifend) | 124–290 | MPa | Beleg: "Tensile strength ( σ t ) \| 124–290 MPa (18.0–42.1 ksi)" (https://en.wikipedia.org/wiki/6061_aluminium_alloy) |
+| Dehnung 6061 | 12–25 | % | Beleg: "Elongation ( ε ) at break \| 12–25%" (https://en.wikipedia.org/wiki/6061_aluminium_alloy) |
+| Volumenresistivität 6061 | 32,5–39,2 | nΩ·m | Beleg: "Volume resistivity ( ρ ) \| 32.5–39.2 nOhm·m" (https://en.wikipedia.org/wiki/6061_aluminium_alloy) |
+| Zugfestigkeit 6061-T6 (Min.) | ≥ 290 | MPa | Beleg: "ultimate tensile strength of at least 290 MPa (42 ksi)" (https://en.wikipedia.org/wiki/6061_aluminium_alloy) |
+| Wärmeleitfähigkeit 6061-T6 (25 °C) | ≈ 152 | W/(m·K) | Beleg: "thermal conductivity for 6061-T6 at 25 °C (77 °F) is around 152 W/m K" (https://en.wikipedia.org/wiki/6061_aluminium_alloy) |
+| E-Modul 6005 | 69 | GPa | Beleg: "Young's modulus: 69 GPa, or 10 Msi" (https://en.wikipedia.org/wiki/6005_aluminium_alloy) |
+| Zugfestigkeit 6005 | 190–300 | MPa | Beleg: "Ultimate tensile strength: 190 to 300 MPa, or 28 to 44 ksi" (https://en.wikipedia.org/wiki/6005_aluminium_alloy) |
+| Fließgrenze 6005 | 100–260 | MPa | Beleg: "Yield strength: 100 to 260 MPa, or 15 to 38 ksi" (https://en.wikipedia.org/wiki/6005_aluminium_alloy) |
+| Dichte 6005 | 2,70 | g/cm³ | Beleg: "Density: 2.70 g/cm 3 , or 169 lb/ft 3" (https://en.wikipedia.org/wiki/6005_aluminium_alloy) |
+
+## Bedeutung für unser Batteriesystem
+
+- **Gehäuse / Tragstruktur:** (Folgerung) Die E-Modul-Werte von 68–71 GPa sind ca. 50 % niedriger als bei Stahl; bei gleicher Steifigkeit sind dickere Wandungen nötig – das wirkt sich auf Masse und Bauraum aus.
+- **Kühlung:** (Folgerung) Eine Wärmeleitfähigkeit von ~152 W/(m·K) bei 6061-T6 macht Legierungen dieser Serie attraktiv als passive Kühlkörper oder Thermokoppler zwischen Zelle und Gehäuse, ohne zusätzliche Kupferblätter.
+- **Schweißbarkeit / Zusammenbau:** (Folgerung) 6061 lässt sich TIG/MIG schweißen, die Nahtzone liegt aber nur bei T4-Niveau (≈ 210 MPa). Für tragende Nähte im Gehäuse muss entweder Nachlagerung oder eine Fügebemessung mit 165 MPa (laut Aluminum Design Manual) eingeplant werden.
+- **CTE-Abgleich mit Zelle:** (Folgerung) Die thermische Ausdehnung (≈ 23 µm/m·K bei 6005, 2,32·10⁻⁵ K⁻¹ bei 6061) ist deutlich höher als bei den keramischen Elektroden; bei Zyklen im Temperaturfenster 0–60 °C entsteht ein Differenzdehnungsspannung, die in der FEM zu prüfen ist.
+- **Sicherheit / Brand:** (Folgerung) Schmelztemperatur 585–650 °C liegt oberhalb des typischen Zelltemperatur-Excursionsbereichs, aber unter der Zündtemperatur vieler Elektrolyt-Dämpfe; das Gehäuse schützt daher primär mechanisch, nicht thermisch.
+
+## Offene Fragen
+
+1. Welcher Temper (O / T4 / T6) ist im Lastfall „Crash / Sturz" und im Normalbetriebsfall vorgesehen – die Festigkeitsfenster unterscheiden sich um Faktor ~2 (z. B. 6061-O ≤ 150 MPa vs. 6061-T6 ≥ 290 MPa); welche Werte gelten für die FEM-Bemessung?
+2. Werden die Gehäusewände geschweißt oder umformt + gefügt? Falls geschweißt: Ist eine ortsnahe Nachlagerung (re-T6) einplanbar, oder muss mit der 165-MPa-Nahtfestigkeit bemessen werden?
+3. Welche zulässige Verformung (Delle, Verjüngung) ist bei Crash-Lasteinwirkung erlaubt, um die Zellen nicht zu deformieren – und genügt die 12–25 % Dehnung von 6061 als Energieaufnahmekriterium?
+4. Muss die elektrische Isolierung zwischen Gehäuse und Busbar/Battariestack gewährleistet werden, oder darf das Aluminiumgehäuse gleichzeitig Potentialausgleich / Schutzkontakt sein? (Volumenresistivität 32,5–39,2 nΩ·m relevant)
+
+## Auffälliges
+
+- **Widerspruch 6082:** Die Infobox gibt Zugfestigkeit mit **150–310 MPa** an, der Fließtext (tabelle) nennt **140–330 MPa** – unterschiedliche Quellenangaben in derselben Artikelversion (makeitfrom.com vs. Marks' Handbook).
+- **Widerspruch 6061:** E-Modul in der Infobox: **68 GPa**; im Fließtext: **69 GPa** – Abweichung von ca. 1,5 %.
+- Keine eingebetteten Instruktionen oder Aufforderungen im Fremdtext erkannt.
+
+
+Prüfung: 7 Belege bestaetigt, 5 Fehler
+
+## W33
+
+# W33 – BMS, Kontaktoren, elektrische Verbindungen im Batteriesystem
+
+## Erklärung
+
+Ein Batteriemanagementsystem (BMS) ist die elektronische Steuereinheit einer wiederaufladbaren Batterie: Es überwacht Spannung, Strom, Temperatur und Kühlungszustand einzelner Zellen und des Gesamtpacks, berechnet Zustandsgrößen wie den Ladezustand (State of Charge, SoC) und den Gesundheitszustand (State of Health, SoH) und greift bei Grenzwertüberschreitung ein – sei es durch Schalten, Drosseln oder Aktivieren der Kühlung. In einem Fahrzeug steuert das BMS zudem die Rückführung der rekuperativen Bremsenergie in den Batteriesatz. Die thermische Auslegung umspannt passive Konvektion bis aktive Flüssigkeitskühlung; dabei weist Flüssigkeitskühlung ein höheres natürliches Kühlpotential auf, weil die Wärmeleitfähigkeit der Kühlmittel deutlich über der von Luft liegt, erzeugt aber bei indirekter Kühlung durch längere Kühlkanäle größere thermische Gradienten. Ein Kontaktor (auch Schütze) ist ein elektromagnetisch betätigter Lastschalter, also ein Relais für hohe Ströme; er schließt seine Kontakte, indem ein Strom durch eine Spule fließt, ein Magnetfeld erzeugt und ein Eisenstück in die Spule zieht, das die Kontakte mechanisch gegen eine Feder drückt. Beim Abschalten wird die Spule spannungsfrei, und die Feder öffnet die Kontakte. Kontaktoren sind im Unterschied zu Leistungsschaltern ausdrücklich nicht für den Kurzschlussstromauschaltvorgang ausgelegt; ihre Ausschaltstromstärke reicht von einigen über Hunderte bis Tausende Ampere. Die Ansteuerungsspannung der Spule liegt typischerweise zwischen 24 V und 600 V. In einer Batterie-EV-Architektur verbindet das BMS die Trennung zwischen Batterie und Lastkreis über solche Kontaktoren; eine sogenannte Precharge-Schaltung (Vorschaltwiderstand) begrenzt dabei den Einschaltstrom in Lastkondensatoren, bevor der Kontaktor endgültig klappt. Die elektrischen Verbindungen selbst – Crimpanschlüsse, Steckverbinder, Klemmen – sind rein passive Bauteile, die den Stromkreis lediglich durchleiten; ihre Fehlersumme wird aber dominiert von offenen Kontakten (61 %) und schlechtem Kontakt (23 %), während Kurzschlüsse nur 16 % ausmachen. Zusammen bilden BMS, Kontaktor und Verbindungstechnik die Schalt- und Stromlaufkette, in der jeder Baustein ein potenzieller Ausfallpunkt ist.
+
+## Kennwerte
+
+| Größe | Wert | Einheit | Beleg |
+|---|---|---|---|
+| Max. Zahl der Zellen-Knoten (modulare BMS-Architektur) | 255 | Knoten | Beleg: „most hardware is limited to a maximum of 255 nodes" (https://en.wikipedia.org/wiki/Battery_management_system) |
+| USB-Power-Delivery-Zielgrenze | 240 | W | Beleg: „universal negotiation protocol across devices of up to 240 watts" (https://en.wikipedia.org/wiki/Battery_management_system) |
+| Abschwellwert Strom (Kontaktor vs. Relais) | > 15 | A | Beleg: „Contactors usually refer to devices switching more than 15 amperes" (https://en.wikipedia.org/wiki/Contactor) |
+| Spulenspannungsbereich (Kontaktor) | 24 – 600 | V AC/DC | Beleg: „Coil voltages for contactors are often from 24 V AC/DC all the way up to 600 V AC" (https://en.wikipedia.org/wiki/Contactor) |
+| Ausschaltstrom DC (Basis → mit Magnetblase, Albright) | 600 → 1 500 | A | Beleg: „increasing it from 600 A to 1,500 A" (https://en.wikipedia.org/wiki/Contactor) |
+| Anteil der Steckerfehler: offene Verbindung | 61 | % | Beleg: „Open circuit \| 61 %" (https://en.wikipedia.org/wiki/Cable_lug) |
+| Anteil der Steckerfehler: Poor contact | 23 | % | Beleg: „Poor contact \| 23 %" (https://en.wikipedia.org/wiki/Cable_lug) |
+| Anteil der Steckerfehler: Kurzschluss | 16 | % | Beleg: „Short circuit \| 16 %" (https://en.wikipedia.org/wiki/Cable_lug) |
+
+## Bedeutung für unser Batteriesystem
+
+- **Elektrik / Sicherheit – Folgerung:** Der Kontaktor ist die einzige mechanische Trennstelle zwischen Hochvoltbatterie und Lastkreis; seine Kontaktschweißneigung und Lebensdauer in Schaltzyklen bestimmt die verfügbare Sicherheitsreserve. Da Kontaktoren nicht für Kurzschlussauschaltung ausgelegt sind, muss ein separater Leistungsschalter parallel geschaltet sein.
+- **Zusammenbau / Elektrik – Folgerung:** Mit > 80 % zusammengenommen (offener Kontakt + schlechter Kontakt) dominiert die Kontaktqualität die Stecker-Fehlerstatistik; Crimp- und Klemmenanschlüsse benötigen definiertes Anzugsmoment, Korrosionsschutz und gegebenenfalls gold- oder nickelbasierte Beschichtung gegen Passivierung.
+- **Kühlung – Folgerung:** Weil indirekte Flüssigkeitskühlung längere Kühlkanäle erzeugt und damit thermische Gradienten über das BMS-Modul verteilbar sind, muss die Pumpendimensionierung gegen die zulässige Maximaltemperaturdifferenz der Zellen abgeglichen werden.
+- **Elektrik / Architektur – Folgerung:** Bei einer modular gestapelten Zellarchitektur mit > 255 Zellen ist die interne BMS-Buss-Topologie (optisch isoliert oder drahtlos) ein architekturbedeutender Entcheid, weil die BMS-Artikel die Spannungssprünge zwischen Zellmassen und die limitierte Knotenanzahl als Engpass benennen.
+- **Sicherheit / Inbetriebnahme – Folgerung:** Die Precharge-Schaltung (Vorschaltwiderstand vor Kontaktor) ist zwingend, um Spannungssprünge an Lastkondensatoren bei jedem Kaltstart zu begrenzen; ein Kontaktor ohne Precharge erzeugt excessive Einschaltströme.
+
+## Offene Fragen
+
+1. Welche DC-Ausschaltstromstärke ist für den konkreten Batteriestromkreis erforderlich, und reicht die im Paket genannte 600-A-Basisbewertung, oder zwingt die Anwendung auf einen Kontaktor mit Magnetblase (→ 1 500 A)?
+2. Welche Kontaktmateriallegierung (Silber/Cadmiumoxid vs. Wolfram/Cuplegierung) wird für reinen DC-Betrieb empfohlen, und wie viele Schaltzyklen sind dabei realistisch?
+3. Wie hoch ist die garantierte Steckerverbinderzyklenlebensdauer für den gewählten Verbindungstyp, und bleibt sie unter der erwarteten In-Betrieb-Zyklenzahl des Batteriekonzepts?
+4. Welcher Kühlkanal-Aufbau (direktes Untertauchen vs. indirekte Leitungskühlung) ist im Batteriemechanismus vorgesehen – und damit die zulässige Temperaturspreizung über das Modul?
+
+## Auffälliges
+
+- Die Seite *„Cable lug"* ist umgeleitet auf den allgemeineren Wikipedia-Artikel *„Electrical connector"*; spezifische Angaben zu Kabelschuhen, Lötanschlüssen oder Klemmenverbindern im engeren Sinne fehlen im Paket.
+- Mehrere Abschnitte des BMS-Artikels tragen das Wikipedia-Wartungsfeld **[citation needed]** (z. B. Nachteil der Luftkühlung, externe Kommunikationsmethoden) sowie **[clarification needed]** (periodische Spannungsmessstellen), was die Quellenbasis für diese Passagen schwächt.
+- Der Kontaktor-Artikel führt einen Wikipedia-Sonntag-Hinweis *„This article needs more citations"* an; quantitative Angaben (z. B. 15-A-Abschwellwert) sind nicht mit externen Quellen belegt.
+- Kein inhaltlicher Widerspruch zwischen den drei Quellen; die BMS-Artikel und Kontaktor-Artikel bekräftigen sich gegenseitig (BMS steuert „electromagnetic relays called contactors").
+
+
+Prüfung: 5 Belege bestaetigt, 3 Fehler

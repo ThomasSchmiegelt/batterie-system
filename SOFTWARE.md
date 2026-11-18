@@ -20,6 +20,7 @@ KI-generiert (Claude Opus). Jeder Eintrag wurde auf diesem Rechner aufgerufen.
 | Skizze am 3D-Modell → Prompt (Pre/Post) | Sketch-to-Prompt (eigenes Projekt, MIT) | – | `python3 -m sketch_to_prompt.server <ordner>` in `~/sketch-to-prompt` | aus Fusion |
 | Wissensgraph (Notizen aus dem Wissensnetz) | Obsidian (kostenlos auch gewerblich laut obsidian.md/license, Stand 20.02.2025; nicht quelloffen) | – | **nicht installiert**; Vault = Projektordner, Notizen unter `wissen/` | – |
 | Unternehmenspräsentation (.pptx, PDF) | python-pptx (MIT) + LibreOffice (System, Umwandlung in PDF) | – | **python-pptx nicht installiert**, erst mit Vorgang B5; `soffice --headless --convert-to pdf` | LibreOffice vorhanden |
+| Dynamische Crash-Rechnung X2 (explizit) | OpenCourant latest-20261011 (AGPLv3, intern genutzt, nicht weitergegeben) | latest-20261011 | `source /home/cae/cae_projekte/werkzeuge/opencourant/umgebung.sh`, dann `starter_linux64_gf -i <_0000.rad> -np 1` und `engine_linux64_gf -i <_0001.rad>` (nur CPU, `OMP_NUM_THREADS`); Rauchtest TWISBEAM bestanden (Referenz ref.extract identisch) | nur Nutzerverzeichnis, ohne sudo |
 
 Nicht vorhanden und nicht nötig: OpenFOAM (FluidX3D und Elmer decken die Strömung ab), ngspice (die Elektrik wird in Python gerechnet, die Netzwerke sind klein).
 Mögliche spätere Ergänzung: Cantera (Gaszusammensetzung beim thermischen Durchgehen), nur wenn Schritt 1 das verlangt.

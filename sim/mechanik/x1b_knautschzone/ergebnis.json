@@ -1,0 +1,363 @@
+{
+ "hinweis": "KI-generiert, Entwurf. Aus lauf/*/x1.dat, x1.frd. Zellberuehrung = groesste y-Verschiebung der Rahmeninnenseite (|x-xp|<500, ausser Querträgerzonen) erreicht den Spalt (LFP 1 mm Verbinder, 4 mm Zellkoerper, NMC 0 mm, Naeherung 1 mm).",
+ "laeufe": {
+  "LFP_w15": {
+   "var": "LFP",
+   "w": 15,
+   "xp": 784.0,
+   "pfahlweg_ende_mm": 5.39375,
+   "kraft_ende_kN": 61.356370000000005,
+   "kraft_max_kN": 61.356370000000005,
+   "energie_ende_J": 225.8849025875,
+   "kraft_mittel_bis_w_kN": null,
+   "energie_bei_w_J": null,
+   "peeq_max_ende": 0.952488,
+   "peeq_max_rahmen_ende": 0.105504,
+   "peeq_ort_ende": [
+    784.4,
+    -10.0,
+    2.2
+   ],
+   "uy_innen_ende_mm": 4.7878,
+   "n_frames": 6,
+   "kurve": {
+    "s_mm": [
+     0.0,
+     0.269,
+     1.294,
+     2.319,
+     3.344,
+     4.369,
+     5.394
+    ],
+    "F_kN": [
+     0.0,
+     8.358,
+     29.311,
+     42.515,
+     53.254,
+     59.343,
+     61.356
+    ],
+    "E_J": [
+     0.0,
+     1.1,
+     20.4,
+     57.2,
+     106.3,
+     164.0,
+     225.9
+    ]
+   },
+   "frames": {
+    "s_mm": [
+     0.269,
+     1.294,
+     2.319,
+     3.344,
+     4.369,
+     5.394
+    ],
+    "uy_innen_max_mm": [
+     0.242,
+     1.181,
+     2.104,
+     3.041,
+     3.951,
+     4.788
+    ]
+   },
+   "zellberuehrung_bei_spalt_mm": {
+    "1": {
+     "pfahlweg_mm": 1.096,
+     "kraft_kN": 25.27,
+     "energie_J": 16.7,
+     "peeq_max_gesamt": 0.1405,
+     "peeq_max_rahmen": 0.0059
+    },
+    "4": {
+     "pfahlweg_mm": 4.429,
+     "kraft_kN": 59.46,
+     "energie_J": 167.6,
+     "peeq_max_gesamt": 0.6827,
+     "peeq_max_rahmen": 0.1092
+    }
+   },
+   "energieverlust_proz": 1.62,
+   "fertig": false
+  },
+  "LFP_w20": {
+   "var": "LFP",
+   "w": 20,
+   "xp": 784.0,
+   "pfahlweg_ende_mm": 3.00625,
+   "kraft_ende_kN": 44.40966,
+   "kraft_max_kN": 44.40966,
+   "energie_ende_J": 85.56400334375002,
+   "kraft_mittel_bis_w_kN": null,
+   "energie_bei_w_J": null,
+   "peeq_max_ende": 0.9044,
+   "peeq_max_rahmen_ende": 0.00298484,
+   "peeq_ort_ende": [
+    776.4,
+    -15.6,
+    2.2
+   ],
+   "uy_innen_ende_mm": 3.76463,
+   "n_frames": 4,
+   "kurve": {
+    "s_mm": [
+     0.0,
+     0.456,
+     1.731,
+     3.006
+    ],
+    "F_kN": [
+     0.0,
+     14.44,
+     35.1,
+     44.41
+    ],
+    "E_J": [
+     0.0,
+     3.3,
+     34.9,
+     85.6
+    ]
+   },
+   "frames": {
+    "s_mm": [
+     0.456,
+     1.731,
+     3.006,
+     3.006
+    ],
+    "uy_innen_max_mm": [
+     0.41,
+     1.551,
+     2.691,
+     3.765
+    ]
+   },
+   "zellberuehrung_bei_spalt_mm": {
+    "1": {
+     "pfahlweg_mm": 1.116,
+     "kraft_kN": 25.13,
+     "energie_J": 19.6,
+     "peeq_max_gesamt": 0.1474,
+     "peeq_max_rahmen": 0.0
+    },
+    "4": null
+   },
+   "energieverlust_proz": 2.35,
+   "fertig": false
+  },
+  "LFP_w30": {
+   "var": "LFP",
+   "w": 30,
+   "xp": 784.0,
+   "pfahlweg_ende_mm": 2.42875,
+   "kraft_ende_kN": 35.5792,
+   "kraft_max_kN": 35.5792,
+   "energie_ende_J": 54.315711875000005,
+   "kraft_mittel_bis_w_kN": null,
+   "energie_bei_w_J": null,
+   "peeq_max_ende": 0.786386,
+   "peeq_max_rahmen_ende": 0.0021352,
+   "peeq_ort_ende": [
+    784.5,
+    -21.8,
+    2.2
+   ],
+   "uy_innen_ende_mm": 3.49868,
+   "n_frames": 3,
+   "kurve": {
+    "s_mm": [
+     0.0,
+     0.654,
+     2.429
+    ],
+    "F_kN": [
+     0.0,
+     18.725,
+     35.579
+    ],
+    "E_J": [
+     0.0,
+     6.1,
+     54.3
+    ]
+   },
+   "frames": {
+    "s_mm": [
+     0.654,
+     2.429,
+     2.429
+    ],
+    "uy_innen_max_mm": [
+     0.578,
+     2.121,
+     3.499
+    ]
+   },
+   "zellberuehrung_bei_spalt_mm": {
+    "1": {
+     "pfahlweg_mm": 1.139,
+     "kraft_kN": 23.33,
+     "energie_J": 19.3,
+     "peeq_max_gesamt": 0.2242,
+     "peeq_max_rahmen": 0.0
+    },
+    "4": null
+   },
+   "energieverlust_proz": 3.82,
+   "fertig": false
+  },
+  "NMC_w15": {
+   "var": "NMC",
+   "w": 15,
+   "xp": 735.0,
+   "pfahlweg_ende_mm": 5.39375,
+   "kraft_ende_kN": 60.74595,
+   "kraft_max_kN": 60.74595,
+   "energie_ende_J": 226.59126638125,
+   "kraft_mittel_bis_w_kN": null,
+   "energie_bei_w_J": null,
+   "peeq_max_ende": 1.0482,
+   "peeq_max_rahmen_ende": 0.0987485,
+   "peeq_ort_ende": [
+    723.5,
+    -11.4,
+    2.2
+   ],
+   "uy_innen_ende_mm": 4.72056,
+   "n_frames": 6,
+   "kurve": {
+    "s_mm": [
+     0.0,
+     0.269,
+     1.294,
+     2.319,
+     3.344,
+     4.369,
+     5.394
+    ],
+    "F_kN": [
+     0.0,
+     8.413,
+     29.492,
+     42.901,
+     53.814,
+     59.176,
+     60.746
+    ],
+    "E_J": [
+     0.0,
+     1.1,
+     20.6,
+     57.7,
+     107.2,
+     165.1,
+     226.6
+    ]
+   },
+   "frames": {
+    "s_mm": [
+     0.269,
+     1.294,
+     2.319,
+     3.344,
+     4.369,
+     5.394
+    ],
+    "uy_innen_max_mm": [
+     0.241,
+     1.174,
+     2.089,
+     3.021,
+     3.903,
+     4.721
+    ]
+   },
+   "zellberuehrung_bei_spalt_mm": {
+    "1": {
+     "pfahlweg_mm": 1.103,
+     "kraft_kN": 25.56,
+     "energie_J": 16.9,
+     "peeq_max_gesamt": 0.1629,
+     "peeq_max_rahmen": 0.0059
+    },
+    "4": {
+     "pfahlweg_mm": 4.49,
+     "kraft_kN": 59.36,
+     "energie_J": 172.4,
+     "peeq_max_gesamt": 0.8457,
+     "peeq_max_rahmen": 0.1021
+    }
+   },
+   "energieverlust_proz": 0.0,
+   "fertig": false
+  },
+  "NMC_w20": {
+   "var": "NMC",
+   "w": 20,
+   "xp": 735.0,
+   "pfahlweg_ende_mm": 1.7312499999999997,
+   "kraft_ende_kN": 35.49892,
+   "kraft_max_kN": 35.49892,
+   "energie_ende_J": 35.219060218749995,
+   "kraft_mittel_bis_w_kN": null,
+   "energie_bei_w_J": null,
+   "peeq_max_ende": 0.631925,
+   "peeq_max_rahmen_ende": 0.00113522,
+   "peeq_ort_ende": [
+    731.4,
+    -15.6,
+    2.2
+   ],
+   "uy_innen_ende_mm": 2.67085,
+   "n_frames": 3,
+   "kurve": {
+    "s_mm": [
+     0.0,
+     0.456,
+     1.731
+    ],
+    "F_kN": [
+     0.0,
+     14.543,
+     35.499
+    ],
+    "E_J": [
+     0.0,
+     3.3,
+     35.2
+    ]
+   },
+   "frames": {
+    "s_mm": [
+     0.456,
+     1.731,
+     1.731
+    ],
+    "uy_innen_max_mm": [
+     0.407,
+     1.538,
+     2.671
+    ]
+   },
+   "zellberuehrung_bei_spalt_mm": {
+    "1": {
+     "pfahlweg_mm": 1.125,
+     "kraft_kN": 25.53,
+     "energie_J": 20.0,
+     "peeq_max_gesamt": 0.1488,
+     "peeq_max_rahmen": 0.0
+    },
+    "4": null
+   },
+   "energieverlust_proz": 0.0,
+   "fertig": false
+  }
+ }
+}

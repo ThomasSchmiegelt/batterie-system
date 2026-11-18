@@ -46,6 +46,27 @@ Folge: Vor dem CAD (G1/G4) stehen drei Schritte: (a) Bauteilbaum bis zur Stückl
 ## B-BAT-025 (2026-11-18) E2 Fortsetzung 2: NMC-Mäander machbar, LFP nicht; LFP-FPC passt nicht an den Querträgern vorbei
 Quelle `cad/pack/entwurf/ergebnis_{LFP,NMC}_e2.json`, `sim/elektrik/e2_elektronik/ERGEBNIS.md` v0.3. NMC: 4 Bänder à 7 Spalten, Plus/Mitte/Minus hinten, HV intern 1,19 m, 11,34 W, 0 Kollisionen, FPC 30,7 m, Hälften 112/105 Gruppen. LFP: 2 Reihen reichen nicht (4 Durchläufe nötig), 9 Kollisionen FPC–Querträger (18 mm frei über dem Profil, FPC 20 mm), 6 von 14 FPC-Stücken ohne Platz.
 
+## B-BAT-031 (2026-11-18) X1b/X2 OpenCourant: Knautschprofil bringt kaum Reserve, die Rahmen-Innenwand gibt zuerst nach
+- Explizit (OpenCourant latest-20261011), Pfahl 1500 kg mit 5 kJ. Energie bis zur Zellberührung (4 mm):
+
+  | Variante | Energie | Anteil an 5 kJ |
+  |---|---|---|
+  | LFP w15 | 416 J | 8 % |
+  | LFP w20 | 455 J | 9 % |
+  | LFP w30 | 568 J | 11 % |
+  | NMC w20 | 523 J | 10 % |
+
+- Eindringung 49–52 mm, Energiefehler ≤ 0,01 %. Gegenprüfung mit CalculiX bei 2 mm: +7…14 %.
+- **Deutung (Opus):** Das Profil staucht mit ≈ 80 kN. Diese Kraft biegt die Innenwand zwischen den Querträgern (Spannweite ≈ 500 mm) schon, bevor das Profil zusammengefaltet ist. Mehr Breite w hilft daher kaum, von 15 auf 30 mm sind es nur +37 %.
+- 5 kJ bei 80 kN brauchen etwa 60 mm Weg. Das ist bei fester Breite nicht unterzubringen.
+- **Folge:** Eine Knautschzone im Pack lohnt sich nicht (LFP −2,4 % Energie für +10 % Reserve). Der Seitencrash bleibt beim Schweller (ENT 2026-11-17). Wer Reserve will, braucht eine steifere Innenwand bzw. engere Querträger, als eigene Studie.
+- **Werkzeug:** /RFILE-Zwischendateien in OpenCourant latest-20261011 nicht lesbar (Segfault). Der Neustart läuft über 10 Abschnitte (Vergleich 0 Abweichung). Opus-Fehler in ERW-X1b: Erwartung ab w 20 mm, 5 kJ, ohne die Rahmenbiegung zu bedenken. Vorgang: [X1] [X2]
+
+## B-BAT-030 (2026-11-18) X1 Seitenpfahl: Pack hat keine Knautschzone, Zellberührung bei ≈ 30 kN
+- CalculiX quasistatisch, Pfahl Ø 254 (Annahme). Die Innenwand des Seitenrahmens erreicht die Zellen nach 1 mm (LFP-Verbinder) bzw. 0 mm (NMC, gerade Reihen). Das geschieht bei 29–31 kN und 18–20 J, auch auf dem Querträger (LF2 ≈ LF1). PEEQ 21 % nach 5,5 mm. Netzstudie < 1 %.
+- Opus-Fehler: In der Erwartung (1–3 kJ, 30–80 kN) waren die 30 mm Rahmen als freier Weg gezählt.
+- Folge: Der Seitencrash muss vollständig über den Schweller gehen (Autor 2026-11-17). Eine Knautschzone im Pack (≈ 15–30 mm je Seite, Annahme) kostet bei fester Breite Zellen → Frage an den Autor. X2 (dynamisch) bringt erst mit Fahrzeugstruktur etwas. Vorgang: [X1]
+
 ## B-BAT-029 (2026-11-18) KO1 Kosten: LFP ≈ 80 €/kWh, NMC ≈ 110 €/kWh, vollständig geschätzt
 - Untere Schranke: 15 Positionen bei LFP und 12 bei NMC haben keine Masse bzw. Menge. Werte:
 

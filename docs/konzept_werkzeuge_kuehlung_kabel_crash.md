@@ -36,6 +36,7 @@ Entscheidung mit einer 1D-Wärmebilanz: Wärme beim Schnellladen (aus dem Zellmo
 **Ja, in zwei Stufen:**
 - **X1 quasistatisch** mit CalculiX (vorhanden: `~/.local/bin/ccx`): Ein starrer Pfahl drückt seitlich auf Gehäuse und Querträger, mit plastischem Werkstoff und Kontakt. Ergebnis: Eindringung, verglichen mit dem Abstand zur ersten Zelle (Zielband: keine Zelle berührt; Grenze als Annahme, bis W17 die Prüfnorm nennt). Aussagekraft: Steifigkeit und Reserve, keine Crashdynamik.
 - **X2 dynamisch** mit OpenRadioss (expliziter Crashlöser, offen; Lizenz in T08). **Nicht installiert.** Herunterladen und Installieren nur nach ausdrücklicher Freigabe des Autors.
+- **Nachtrag 2026-11-18 (Autor, eingefügter Text, von Opus nicht geprüft):** Siemens hat das offizielle OpenRadioss-Projekt am 1. Oktober 2026 eingestellt, Repository und Website sind gelöscht. Fortführung aus der Community: OpenCourant (auf Basis des letzten AGPL-Codes); dazu GitHub-Mirrors bzw. Forks. Für X2 kommen nur OpenCourant oder ein Mirror in Frage, mit Lizenzprüfung (AGPL) in docs/10 und Installation nur nach Freigabe. Alternative ohne Installation: X1 mit CalculiX dynamisch-implizit, eingeschränkt.
 - Grenzen: ohne Fahrzeugstruktur und ohne Werkstoffkennwerte für hohe Dehnraten nur ein Vergleich von Varianten, kein Nachweis.
 
 ## 5 Wo es im Plan steht

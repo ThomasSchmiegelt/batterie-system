@@ -21,6 +21,12 @@ KI-generiert (Claude Opus).
 - Autor: „das lassen wir ersteinmal wie es ist. später machen wir eine überarbeitungsschleife, dass macht dann opus. jetzt bericht ergänzen, hochladen, crash“. → später Überarbeitungsschleife Detailierung durch Opus selbst (Formen Kaufteile, Farben, Renders, M8-Flachkopf, Schütze liegend).
 - Laufen: Sonnet Bericht 0.3 (AUFTRAG_BERICHT_03.md, vorher SL/KO neu), Sonnet X1 (sim/mechanik/x1_seitencrash, ERW-X1), PI W30 Crash-Normen. Nach Bericht: git push.
 - PI-Warteschlange losgelöst (setsid): W31 Bauteilpreise, W32 Al-Kennwerte, W33 MSD/Schütz-Maße; Log forschung/warteschlange.log. Danach Opus: pruefe-Ergebnis lesen, Schätzungen → verifiziert.
+- Autor-Info: OpenRadioss offiziell eingestellt (Siemens, 01.10.2026), Fortführung OpenCourant/Mirrors → X2 nur damit, nach Freigabe (konzept_werkzeuge…crash.md §4).
+- X1 fertig (B-BAT-030): keine Knautschzone im Pack, Zellberührung ≈ 30 kN/20 J. Opus-Fehler in ERW-X1. Frage Autor: Knautschzone im Pack (kostet Zellen) oder alles über Schweller.
+- Autor: „ja mach das, kannst du das auch hiemit OpenCourant rechnen“ → X1b Knautschzone w 15/20/30 + X2 OpenCourant (RESF-Fork, AGPLv3, github.com/OpenCourant/OpenCourant, per Websuche bestätigt). Sonnet läuft.
+- X1b CalculiX: alle Läufe bei 13–33 % Weg divergiert (Faltung) → Opus gestoppt 18:05. Methodenwechsel X1b+X2 explizit OpenCourant (ERWARTUNG Nachtrag 1, AUFTRAG_X2.md), Sonnet läuft.
+- X1b/X2 fertig (B-BAT-031): Knautschprofil bringt nur 0,4–0,6 kJ bis Zellberührung (Ziel 5 kJ), Innenwand biegt zwischen Querträgern. Opus-Empfehlung: keine Knautschzone im Pack, Schweller trägt; optional Studie engere Querträger. Autor entscheidet.
+- OpenCourant latest-20261011 (cb760c2) installiert in ~/cae_projekte/werkzeuge/opencourant, Rauchtest ok (miniqa SMOKE_TEST). X2 wartet auf w-Wahl.
 
 ## 2026-11-17 Abend – Übergabe für morgen
 - Autor: „bitte wieder sparsam mit den token. und nimm b. Vielleicht bereitest du erst alles vor speicherst ab und morgen geht es weiter“

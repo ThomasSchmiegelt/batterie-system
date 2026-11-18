@@ -22,6 +22,7 @@ KI-generiert (Claude Opus, 2026-11-11). Regeln übernommen aus den Projekten Fus
 ## Rechnen
 - Jede Rechnung läuft in einem Scope `hermes-batterie-*`, ist pausierbar (`~/bin/rechnung pause|weiter`), speichert paketweise und bietet `--weiter`. Vor dem Start wird die Dauer genannt.
 - Eine Rechnung startet losgelöst (setsid/systemd-run), damit sie einen Absturz der Sitzung übersteht.
+- **Wiederaufsetzpunkt (Autor 2026-11-18):** Jede Rechnung über 30 min schreibt Wiederaufsetzpunkte. CalculiX: Last in Schritte teilen (≥ 10 *STEP), `*RESTART,WRITE,FREQUENCY=1`, Fortsetzen mit `*RESTART,READ`. OpenCourant/Radioss: Restart-Dateien (/RFILE) einschalten. PyBaMM/Elmer: Zwischenstände speichern. Dazu gehört je Rechnungsordner ein `neustart.sh`, das der Autor ohne Claude ausführen kann. Es überspringt fertige Läufe, setzt angefangene am letzten Punkt fort, startet die übrigen losgelöst im Scope `hermes-batterie-*` (pausierbar mit `~/bin/rechnung`) und erzeugt am Ende die Auswertung. Laufende Skripte nie in place ändern, sondern neu schreiben und mit `mv` ersetzen. Prozesse nur per PID beenden, nie `pkill -f` mit einem Muster, das im eigenen Befehl steht.
 - Die **GPU** ist geteilt: ollama (PI), GX (Fusion) und FluidX3D laufen nicht gleichzeitig. Es gibt 32 GB RAM. Die Platte / ist zu 91 % voll; große Daten kommen nach `/home/cae/cae_projekte`.
 - Python: `source /home/cae/hermes/batterie/umgebung.sh` (venv `.venv`).
 - FreeCAD: `$FREECAD_APPIMAGE freecadcmd -c "..."` oder `freecadcmd skript.py`. Ein Modell wird parametrisch gebaut und am Ende in der GUI geöffnet.

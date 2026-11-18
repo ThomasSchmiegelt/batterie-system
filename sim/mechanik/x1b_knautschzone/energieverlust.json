@@ -1,0 +1,77 @@
+{
+ "hinweis": "KI-generiert, Entwurf. Nachbildung der Formeln aus cad/pack/pack.py, kein CAD-Lauf.",
+ "ergebnis": {
+  "LFP": {
+   "0": {
+    "Innenbreite_mm": 1370.0,
+    "Reserve_w0_mm": 8.0,
+    "Zelllaenge_neu_mm": 681.0,
+    "Energieverlust_proz": 0.0
+   },
+   "15": {
+    "Innenbreite_mm": 1340.0,
+    "Reserve_w0_mm": 8.0,
+    "Zelllaenge_neu_mm": 670.0,
+    "Energieverlust_proz": 1.62
+   },
+   "20": {
+    "Innenbreite_mm": 1330.0,
+    "Reserve_w0_mm": 8.0,
+    "Zelllaenge_neu_mm": 665.0,
+    "Energieverlust_proz": 2.35
+   },
+   "30": {
+    "Innenbreite_mm": 1310.0,
+    "Reserve_w0_mm": 8.0,
+    "Zelllaenge_neu_mm": 655.0,
+    "Energieverlust_proz": 3.82
+   }
+  },
+  "NMC": {
+   "0": {
+    "Innenbreite_mm": 1370.0,
+    "Zellen_gerade_Reihe": 28,
+    "Zellen_ungerade_Reihe": 28,
+    "Reihen_verfuegbar": 10,
+    "Reihen_noetig": 8,
+    "Zellen_je_Feld_soll": 217,
+    "Kapazitaet_Feld": 280,
+    "Zellen_je_Feld_ist": 217,
+    "Energieverlust_proz": 0.0
+   },
+   "15": {
+    "Innenbreite_mm": 1340.0,
+    "Zellen_gerade_Reihe": 27,
+    "Zellen_ungerade_Reihe": 27,
+    "Reihen_verfuegbar": 10,
+    "Reihen_noetig": 9,
+    "Zellen_je_Feld_soll": 217,
+    "Kapazitaet_Feld": 270,
+    "Zellen_je_Feld_ist": 217,
+    "Energieverlust_proz": 0.0
+   },
+   "20": {
+    "Innenbreite_mm": 1330.0,
+    "Zellen_gerade_Reihe": 27,
+    "Zellen_ungerade_Reihe": 27,
+    "Reihen_verfuegbar": 10,
+    "Reihen_noetig": 9,
+    "Zellen_je_Feld_soll": 217,
+    "Kapazitaet_Feld": 270,
+    "Zellen_je_Feld_ist": 217,
+    "Energieverlust_proz": 0.0
+   },
+   "30": {
+    "Innenbreite_mm": 1310.0,
+    "Zellen_gerade_Reihe": 27,
+    "Zellen_ungerade_Reihe": 26,
+    "Reihen_verfuegbar": 10,
+    "Reihen_noetig": 9,
+    "Zellen_je_Feld_soll": 217,
+    "Kapazitaet_Feld": 265,
+    "Zellen_je_Feld_ist": 217,
+    "Energieverlust_proz": 0.0
+   }
+  }
+ }
+}

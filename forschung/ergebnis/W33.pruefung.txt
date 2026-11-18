@@ -1,0 +1,5 @@
+Z16: FEHLT im Text der Quelle: "Open circuit \| 61 %" (https://en.wikipedia.org/wiki/Cable_lug)
+Z17: FEHLT im Text der Quelle: "Poor contact \| 23 %" (https://en.wikipedia.org/wiki/Cable_lug)
+Z18: FEHLT im Text der Quelle: "Short circuit \| 16 %" (https://en.wikipedia.org/wiki/Cable_lug)
+
+5 Belege bestaetigt, 3 Fehler

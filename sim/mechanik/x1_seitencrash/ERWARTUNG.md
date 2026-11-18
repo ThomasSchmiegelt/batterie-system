@@ -43,3 +43,12 @@ Wie viel Kraft und Energie nimmt das Gehäuse mit Seitenrahmen und Querträgern 
 - LF1 < 15 kN: Rahmen schwächer als angenommen, Querschnitt prüfen.
 - Keine Konvergenz bis 80 % des freien Wegs.
 - Energie bei Zellberührung < 0,5 kJ.
+
+## Nachtrag 1 (Opus, 2026-11-18, nach dem Lauf)
+**Deutung:** Mein Fehler in der Erwartung: Ich habe die 30 mm Seitenrahmen als freien Weg bis zur Zelle gezählt. Der Rahmen ist aber selbst der Bauraum. Hinter seiner Innenwand liegen die Zellen mit 0–4 mm Abstand (LFP 1 mm zum Verbinder, 4 mm zur Zelle; NMC gerade Reihen 0 mm). Das Kriterium im Lauf ist richtig gewählt: Die Innenwand verschiebt sich bis zum Spalt. Ergebnis:
+- Bei 29–31 kN und etwa 20 J berührt die Innenwand die erste Zelle, in beiden Varianten. Das Pack hat **keine eigene Knautschzone**.
+- PEEQ > 10 % schon ab 1,5 mm Pfahlweg.
+- LF2 ≈ LF1, weil die Querträger auf diesem kurzen Weg nicht mittragen.
+- Die Netzstudie ist erfüllt (< 1 %).
+**Folge:** Die Entscheidung „Seitencrash über den Schweller“ (2026-11-17) ist zwingend. Der Schweller muss die ganze Seitenenergie aufnehmen, das Pack trägt keine 100 kN. Will man Reserve im Pack, braucht es eine Knautschzone von etwa 15–30 mm je Seite (Annahme). Bei fester Breite 1430 mm kostet das Zellbreite: LFP hat nur 8 mm Reserve, NMC eine Zellreihe → Autor.
+Die Randbedingungen, die Sonnet gesetzt hat (Einspannung bei y = 300, Bodenstreifen 300 mm, Penalty 1e5), bestätige ich für einen Variantenvergleich.

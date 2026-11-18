@@ -42,7 +42,7 @@ Dokumentkopf (Nummer, Version, Status, Ersteller, Prüfer), Hinweis „KI-generi
 | BAT-DOC-14 | ../praesentation/STORYBOARD.md | Unternehmenspräsentation: Folienplan, Bausteine je Vorgang |
 | BAT-DOC-15 | 15_foerdermoeglichkeiten.md | Recherche staatliche Förderung (KI/Open Source, Batterie, Wasserstoff), privat und KMU, Voraussetzungen |
 | BAT-DOC-16 | 16_ergebnisbilder.md | Ergebnisbilder mit Lesehilfe, erzeugt von pm/plan/bilder.py |
-| BAT-DOC-17 | ../bericht/bericht.tex (PDF: ../bericht/bericht.pdf) | Projektbericht Batteriesystem BT-000, Fassung 0.3 (DE, Stand 2026-11-18), Zwischenstand, Entwurf (KI-generiert) |
+| BAT-DOC-17 | ../bericht/bericht.tex (PDF: ../bericht/bericht.pdf) | Projektbericht Batteriesystem BT-000, Fassung 0.4 (DE, Stand 2026-11-18), Zwischenstand, Entwurf (KI-generiert) |
 
 ---
 *KI-generiert (Claude Opus, 2026-11-11). Status Entwurf. Freigabe nur durch den Autor.*

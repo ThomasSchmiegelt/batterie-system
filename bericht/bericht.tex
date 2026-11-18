@@ -1,4 +1,4 @@
-%% KI-generiert (Claude Opus/Sonnet), Entwurf. BAT-DOC-17, Version 0.3.
+%% KI-generiert (Claude Opus/Sonnet), Entwurf. BAT-DOC-17, Version 0.4.
 %% Praeambel und Makros \bild, \lesehilfe, \kasten nach ~/hermes/fusion/bericht/projektbericht/projektbericht.tex
 \documentclass[10pt,a4paper]{article}
 \usepackage[utf8]{inputenc}\usepackage[T1]{fontenc}\usepackage[german]{babel}
@@ -12,7 +12,7 @@
 \DeclareUnicodeCharacter{03A9}{\ensuremath{\Omega}}
 \DeclareUnicodeCharacter{0394}{\ensuremath{\Delta}}
 \DeclareUnicodeCharacter{221D}{\ensuremath{\propto}}
-\hypersetup{pdfauthor={Thomas Schmiegelt},pdftitle={Projektbericht Batteriesystem BT-000, Fassung 0.3 (KI-generiert, Entwurf)}}
+\hypersetup{pdfauthor={Thomas Schmiegelt},pdftitle={Projektbericht Batteriesystem BT-000, Fassung 0.4 (KI-generiert, Entwurf)}}
 \emergencystretch=3em
 \urlstyle{tt}
 \newcommand{\bild}[3]{\begin{figure}[H]\centering\includegraphics[width=#2\linewidth]{bilder/#1}\caption[]{#3}\end{figure}}
@@ -26,7 +26,7 @@
 \newcommand{\tquelle}[1]{\par\smallskip{\raggedright\footnotesize Quelle: #1\par}\smallskip}
 \newcommand{\annahme}{\textit{(Annahme)}}
 \pagestyle{fancy}\fancyhf{}
-\fancyhead[L]{\small BAT-DOC-17 \textbar{} Version 0.3 \textbar{} Entwurf}
+\fancyhead[L]{\small BAT-DOC-17 \textbar{} Version 0.4 \textbar{} Entwurf}
 \fancyhead[R]{\small Projektbericht Batteriesystem BT-000}
 \fancyfoot[L]{\footnotesize\textbf{KI-generiert} (Claude Opus/Sonnet), Entwurf, nicht vom Menschen freigegeben.}
 \fancyfoot[R]{\small Seite \thepage}
@@ -39,14 +39,14 @@
 \thispagestyle{fancy}
 \begin{center}{\LARGE\textbf{Projektbericht Batteriesystem BT-000}}\\[4pt]
 {\large Zwei Zellvarianten (LFP-Blade und NMC-4680) bei gleicher Spezifikation, entworfen und nachgerechnet mit KI-Agenten}\\[2pt]
-{\large Zwischenstand, Fassung 0.3 (Deutsch), Stand 2026-11-18}\end{center}
+{\large Zwischenstand, Fassung 0.4 (Deutsch), Stand 2026-11-18}\end{center}
 
 \begin{center}\small
 \begin{tabularx}{\linewidth}{|l|X|l|X|}\hline
-\textbf{Dok.-Nr.} & BAT-DOC-17 & \textbf{Version} & 0.3\\\hline
+\textbf{Dok.-Nr.} & BAT-DOC-17 & \textbf{Version} & 0.4\\\hline
 \textbf{Status} & Entwurf & \textbf{Datum} & 2026-11-18\\\hline
 \textbf{Ersteller} & Claude Opus/Sonnet (KI) & \textbf{Prüfer} & Opus (Inhalt, Zahlen); Mensch (Freigabe) offen\\\hline
-\textbf{Autor / Auftraggeber} & Thomas Schmiegelt & \textbf{Vorgang} & B1-c (Fassung 0.3)\\\hline
+\textbf{Autor / Auftraggeber} & Thomas Schmiegelt & \textbf{Vorgang} & B1-d (Fassung 0.4)\\\hline
 \end{tabularx}\end{center}
 
 \kigen{Dieses Dokument ist von KI-Agenten erstellt (Claude Sonnet nach Gliederung von Claude Opus) und nicht vom Menschen
@@ -55,8 +55,8 @@ Fundstelle steht als Fußnote oder in Klammern. Keine Zahl ist in diesem Bericht
 \textit{Annahme} gekennzeichnet. „Freigegeben“ setzt nur der Mensch.}
 
 \kasten{Testprojekt.}{Das Batteriesystem ist ein Testprojekt für den gewerblichen Einsatz von KI-Agenten, kein Produkt.
-Der Bericht beschreibt den Stand vom 2026-11-18 (Fassung 0.3, gegenüber 0.2 neu: Zellmodell C1/C2, Wärme K1c und Kühlplatte K2, Elektronik und Kabel E2,
-Stückliste SL2 und Kosten KO1, Entscheidungen bis ENT-150). Es ist ein Zwischenstand: Crash (X1), das Zellmodell C3 und die Überarbeitung der
+Der Bericht beschreibt den Stand vom 2026-11-18 (Fassung 0.4, gegenüber 0.3 neu: Seitencrash X1 und X1b/X2, Wiederaufsetzregel; gegenüber 0.2 neu: Zellmodell C1/C2, Wärme K1c und Kühlplatte K2, Elektronik und Kabel E2,
+Stückliste SL2 und Kosten KO1, Entscheidungen bis ENT-150). Es ist ein Zwischenstand: Fahrzeug-Crash (X2 mit Struktur), das Zellmodell C3 und die Überarbeitung der
 Elektronik-Konstruktion fehlen. Beim Lesen gilt: Was „vorgeschlagen“ heißt, hat der Autor noch nicht entschieden.}
 
 \tableofcontents
@@ -78,10 +78,11 @@ derselben Spezifikation parallel entwickelt: ein \textbf{LFP-Blade-Pack} (prisma
 \item \textbf{Elektrik.} E1: Verluste der Verbinder bei Dauerstrom LFP 105,2 W, NMC 385,4 W (Querschnitt 15 × 3 mm).\quelle{\path{sim/elektrik/e1_querschnitte/ERGEBNIS.md}}
   E2: Die Schaltbox steht als Turm unter der Rücksitzbank (ENT-144); beide Packs sind verdrahtet. Konstruktionsstand E2D: Al-Verlust LFP 75,6 W, NMC 316,0 W (Akte 25 × 3 mm); Packhöhe vorn LFP 134 mm (Grenze 130 mm überschritten), NMC 128 mm.\quelle{\path{sim/elektrik/e2_elektronik/ERGEBNIS.md} v1.1; \path{cad/pack/entwurf/ergebnis_LFP_e2d.json}}
 \item \textbf{Kosten (alles Schätzung).} Teilsumme LFP 5\,935 € je Pack (80,3 €/kWh), NMC 8\,149 € (109,7 €/kWh); 16 bzw. 13 Positionen sind offen, die Werte sind Untergrenzen. Verifiziert ist nur der Marktpreis 97 USD/kWh (W29), die Pack-Preise selbst sind Annahmen. REQ-P16 hat keinen Zielwert.\quelle{\path{pm/kosten/ergebnis_LFP.json}, \path{ergebnis_NMC.json}; \path{docs/18_kosten.md}}
+\item \textbf{Seitencrash (X1, X1b/X2).} Quasistatisch (CalculiX) erreicht die Rahmeninnenwand die Zellen nach 1 mm Pfahlweg bei 29 bis 31 kN und 18 bis 20 J; dynamisch (OpenCourant) nehmen Knautschprofile bis zur Zellberührung nur 416 bis 568 J auf (8 bis 11\,\% der angenommenen 5 kJ). Empfehlung Opus: keine Knautschzone im Pack, der Schweller trägt; offen ist eine Studie zu Querträgerabstand bzw. Innenwand. Ausschnittmodell ohne Fahrzeug, Pfahl, 100 kN und 5 kJ sind Annahmen.\quelle{\path{sim/mechanik/x1_seitencrash/ERGEBNIS.md}; \path{sim/mechanik/x1b_knautschzone/ergebnis_oc.json}; \path{BEFUNDE.md} B-BAT-030, -031}
 \item \textbf{Stand der Akten:} 150 Akten: 106 entschieden (104 „Mensch“, 2 „Autor“), 43 „vorgeschlagen“, 1 ersetzt (ENT-109).\quelle{\path{docs/04_entscheidungen.md} (Zählung der Statusspalte, 2026-11-18)}
 \item \textbf{Lehre für KI im Engineering.} Die erste Chemie-Empfehlung hielt nicht: Sie beruhte auf einer unbelegten
-  Annahme und wurde erst durch Messwerte aus einer Zerlegungsstudie korrigiert. Kapitel~\ref{k:fehler} listet 23 Fehler und Korrekturen
-  und ihre Entdeckung; die meisten fand erst die Gegenprüfung am Rohwert oder die Rechnung selbst. Neu in 0.3: Opus-Erwartungen, die physikalisch nicht erreichbar oder zu streng waren (Elektronik, Kosten).
+  Annahme und wurde erst durch Messwerte aus einer Zerlegungsstudie korrigiert. Kapitel~\ref{k:fehler} listet 28 Fehler und Korrekturen
+  und ihre Entdeckung; die meisten fand erst die Gegenprüfung am Rohwert oder die Rechnung selbst. Neu in 0.3: Opus-Erwartungen, die physikalisch nicht erreichbar oder zu streng waren (Elektronik, Kosten). Neu in 0.4: Die Rechnung widerlegt eine Freigabe des Autors (Kapitel~\ref{k:crash}).
 \end{itemize}
 
 %======================================================================
@@ -775,6 +776,38 @@ Offene Positionen LFP / NMC & 15 / 12 & 16 / 13 & je +1 (Stromschiene ohne Zuord
 \tquelle{alt: \path{BEFUNDE.md} B-BAT-028, B-BAT-029 und die vor dem Lauf gesicherten Dateien \path{docs/13_stueckliste_<V>.md}, \path{pm/kosten/ergebnis_<V>.json}; neu: \path{pm/bauteile/stueckliste_<V>.json}, \path{pm/kosten/ergebnis_<V>.json}. Abweichungen aus den genannten Zahlen berechnet; alle unter 3 \%.}
 
 %======================================================================
+\section{Seitencrash (X1, X1b/X2)}\label{k:crash}
+\begriffe{\textbf{Seitenpfahl}: starrer Zylinder, der seitlich auf das Pack drückt (Pfahlaufprall). \textbf{quasistatisch}: langsam, Kraft über Weg, ohne Trägheit. \textbf{explizit}: Zeitschritt für Zeitschritt, für schnelle Stöße mit Falten und Kontakt. \textbf{Knautschzone}: Profil im Rahmen, das sich zusammenfaltet und Energie aufnimmt. \textbf{PEEQ}: bleibende (plastische) Dehnung. \textbf{Zellberührung}: Die Innenwand des Seitenrahmens erreicht die Zellen (Spalt 1 mm Zellverbinder, 4 mm Zellkörper bei LFP, 0 mm bei NMC).}
+\kasten{Grenzen vorweg.}{Es ist ein \emph{Ausschnittmodell} des Seitenrahmens mit Querträgern, \emph{ohne Fahrzeug} und ohne Schweller. Pfahl Ø 254 mm, Restkraft 100 kN und die aufzunehmende Energie 5 kJ (Pfahl 1500 kg) sind \annahme: Die Recherche W30 lieferte keine Normwerte. Die Aussage gilt für diese Annahmen.\quelle{\path{sim/mechanik/x1_seitencrash/ERGEBNIS.md} (Kopf); \path{sim/mechanik/x1b_knautschzone/ergebnis_oc.json} (\texttt{energie\_start\_J} 5000, \texttt{v0\_m\_s} 2,58); \path{BEFUNDE.md} B-BAT-030}}
+\textbf{Vorgehen.} X1 rechnet quasistatisch mit CalculiX (Schalenmodell, Pfahl weggesteuert, vier Läufe: LFP und NMC, Pfahl zwischen zwei Querträgern LF1 bzw. auf dem Querträger LF2; Netzstudie 12 gegen 8 mm: Abweichung höchstens 0,6\,\%).\quelle{\path{sim/mechanik/x1_seitencrash/ergebnis.json} (\texttt{netzstudie\_LFP\_LF1}); \path{sim/mechanik/x1_seitencrash/ERGEBNIS.md}} X1b/X2 untersucht ein Knautschprofil der Breite $w$ im Seitenrahmen und rechnet dynamisch (Pfahl 1500 kg mit 2,58 m/s) mit dem expliziten Löser OpenCourant. OpenRadioss wird nicht mehr verwendet; OpenCourant ist dessen Fortsetzung (Fork), Lizenz AGPLv3, nur intern genutzt (\path{docs/10_lizenzen_und_quellen.md}, \path{SOFTWARE.md}).
+
+\textbf{X1, quasistatisch (B-BAT-030).} Die Innenwand erreicht die Zellen nach 1,04 bis 1,08 mm Pfahlweg (LFP-Verbinder; NMC 0 mm Spalt) bei 28,9 bis 31,1 kN und 18 bis 20 J, auf dem Querträger nicht anders als dazwischen. Bei 4 mm Weg (LFP-Zellkörper) sind es 61 bis 64 kN und 164 bis 178 J. Nach 5,5 mm Pfahlweg erreicht die Kraft 69,3 bis 72,1 kN (nie die angenommenen 100 kN), die bleibende Dehnung 20,5 bis 21,1\,\% an der Rahmenunterkante. Das Pack hat damit \emph{keine Knautschzone}: Der Rahmen gibt kaum Weg her.\quelle{\path{sim/mechanik/x1_seitencrash/ERGEBNIS.md} Tabelle „Zahlen bei Zellberührung“; \path{sim/mechanik/x1_seitencrash/ergebnis.json} (\texttt{läufe.<V>\_<LF>}: \texttt{kraft\_ende\_kN}, \texttt{peeq\_max\_ende}, \texttt{energie\_ende\_J}); \path{BEFUNDE.md} B-BAT-030}
+\bild{x1_kraft_weg.png}{0.85}{X1: Pfahlkraft über Pfahlweg, vier Läufe. Kreis: Spalt 1 mm erreicht, Quadrat: 4 mm; grau: Erwartungsband 30 bis 80 kN, gestrichelt: 100 kN Restkraft, Annahme. Quelle: \path{sim/mechanik/x1_seitencrash/kraft_weg.png}.}
+\lesehilfe{Die Kurven zeigen, wie fest der Pfahl drücken muss, um sich Millimeter für Millimeter ins Gehäuse zu schieben. Je steiler, desto steifer das Gehäuse. Die Kreise und Quadrate markieren, wo die Innenwand die Zellen erreichen würde. Das Bild zeigt: Alle Kurven liegen im grauen Band, bleiben aber unter der gestrichelten 100-kN-Linie, und die Zellen werden nach nur 1 bis 4 mm erreicht. Die Fläche unter der Kurve ist die aufgenommene Energie, und die ist bis dahin klein. Alle vier Kurven liegen dicht beieinander; die Lage des Pfahls (zwischen oder auf dem Querträger) ändert wenig.}
+
+\textbf{X1b/X2, dynamisch mit Knautschprofil (B-BAT-031).} Rechnung mit Profilbreite $w$ = 15, 20 und 30 mm (LFP) sowie 20 mm (NMC). Der Pfahl dringt 49,4 bis 52,1 mm ein, die Kraft steigt auf 132 bis 138 kN, der Energiefehler bleibt unter 0,01\,\%. Bis die Innenwand 4 mm nach innen gewandert ist, nimmt der Aufbau nur 416 J (LFP $w$ 15), 455 J ($w$ 20), 568 J ($w$ 30) und 523 J (NMC $w$ 20) auf, also 8 bis 11\,\% der 5 kJ. Die Gegenprüfung mit CalculiX bei 2 mm Weg liegt 6,7 bis 14,0\,\% darunter.\quelle{\path{sim/mechanik/x1b_knautschzone/ergebnis_oc.json} (je Fall \texttt{zerlegung\_bei\_zellberuehrung.4.energie\_J}, \texttt{eindringung\_max\_mm}, \texttt{kraft\_max\_kN}, \texttt{energiefehler\_proz\_max}, \texttt{ccx\_gegenpruefung.abw\_proz}); \path{BEFUNDE.md} B-BAT-031}
+\begin{center}\small
+\begin{tabular}{@{}lrrrr@{}}\toprule
+ & LFP $w$ 15 & LFP $w$ 20 & LFP $w$ 30 & NMC $w$ 20\\\midrule
+Energie bis 4 mm Innenwand (J) & 416 & 455 & 568 & 523\\
+Anteil an 5 kJ & 8\,\% & 9\,\% & 11\,\% & 10\,\%\\
+Eindringung gesamt (mm) & 49,7 & 50,1 & 52,1 & 49,4\\
+Kraft maximal (kN) & 137,8 & 131,7 & 133,9 & 134,9\\\bottomrule
+\end{tabular}\end{center}
+\tquelle{\path{sim/mechanik/x1b_knautschzone/ergebnis_oc.json} (Felder siehe Fußnote oben); Zielband: 5 kJ vor Zellberührung \annahme.}
+\bild{x1b_energie_ueber_w.png}{0.95}{X1b: links Energie bis zur Zellberührung über der Profilbreite $w$, grün: Zielband ab 5 kJ; rechts, woher der Weg bis 4 mm Innenwandverschiebung kommt. Quelle: \path{sim/mechanik/x1b_knautschzone/energie_bis_zellberuehrung_ueber_w.png}.}
+\lesehilfe{Links liegt die Energie bis zur Zellberührung weit unter dem grünen Zielband (ab 5 kJ), und eine breitere Knautschzone hebt sie nur wenig. Rechts steht, woher der Weg kommt: Blau ist das gestauchte Profil, Orange sind gestauchte Rahmenkammern, Grün die Innenwand, die als Ganzes nach innen gebogen wird. Der grüne Anteil ist groß: Die Wand weicht aus, bevor das Profil gefaltet ist.}
+\bild{x2_kraft_eindringung_oc.png}{0.85}{X2 (OpenCourant): Kraft, innere Energie und Innenwandverschiebung über der Eindringung; grün: Zielbänder (Annahmen). Quelle: \path{sim/mechanik/x1b_knautschzone/kraft_eindringung_oc.png}.}
+\lesehilfe{Oben: Die Kraft steigt nach den ersten Millimetern auf etwa 80 bis 100 kN und bleibt dann dort; das grüne Band ab 100 kN ist die angenommene wirksame Restkraft. Mitte: Die aufgenommene Energie wächst langsam und erreicht die 5 kJ erst nach rund 50 mm Weg. Unten: Die Innenwand wandert schon nach wenigen Millimetern über die Marken von 1 mm (Spalt Zellverbinder) und 4 mm (Spalt Zellkörper); das grüne Zielband (unter 1 mm) wird nur ganz am Anfang erreicht. Kreis und Quadrat markieren die Berührung bei 1 bzw. 4 mm.}
+\bild{x2_verformung_oc_LFP_w20.png}{0.9}{X2: Verformung LFP $w$ 20 bei maximaler Eindringung (50,1 mm, t = 36,0 ms). Quelle: \path{sim/mechanik/x1b_knautschzone/verformung_oc_LFP_w20.png}.}
+\lesehilfe{Oben der Blick von oben: Die schwarze Linie ist der Pfahl, rot gestrichelt die Sollage der Rahmeninnenseite (30 mm, dahinter die Zellen). Die Punkte sind die verformten Elemente von Profil und Rahmen; die Innenwand soll hinter der roten Linie bleiben, wird aber vom Pfahl nach innen in Richtung der Zellen gedrückt (Verschiebung der Innenwand-Mitte maximal 26,3 mm, \path{ergebnis_oc.json}, \texttt{innenwand\_dy\_max\_mm\_TH}). Unten die Innenwand von der Seite: Die Farbe zeigt die bleibende Dehnung, gelb heißt über 60\,\% an der Rahmenunterkante. Die Marke bei 10\,\% ist die angenommene Bruchdehnung von Aluminium.}
+
+\textbf{Deutung (Opus, B-BAT-031).} Das Profil staucht bei etwa 80 kN. Diese Kraft biegt die Innenwand zwischen den Querträgern (Spannweite etwa 500 mm) schon, bevor das Profil zusammengefaltet ist. Deshalb hilft mehr Breite wenig: Von $w$ 15 auf 30 mm steigt die Energie nur um 37\,\%. 5 kJ bei 80 kN brauchen etwa 60 mm Weg, der bei fester Breite nicht unterzubringen ist.\quelle{\path{BEFUNDE.md} B-BAT-031 (Deutung Opus)}
+
+\kasten{Empfehlung (Opus).}{\textbf{Keine Knautschzone im Pack; der Seitencrash geht über den Schweller} (Entscheidung des Autors 2026-11-17, Quelle \path{BEFUNDE.md} B-BAT-030/-031). Die Rechnung stellt die vom Autor freigegebene Knautschzone in Frage; die Rücknahme entscheidet der Mensch. \emph{Offen} ist eine Studie zu engerem Querträgerabstand bzw. steiferer Innenwand. X2 sagt erst mit Fahrzeugstruktur etwas über das Gesamtfahrzeug.}
+\textbf{Grenzen.} Ausschnittmodell ohne Fahrzeug, kein Schweller. Pfahl Ø 254 mm, 100 kN und 5 kJ sind Annahmen. Plastizität bilinear (260 MPa, 310 MPa bei 10\,\% PEEQ), Schalenvereinfachung; kein Bruchmodell. Für die Zellen selbst (Eindrückung, Kurzschluss) gibt es kein Modell; die Rechnung endet bei der Berührung.\quelle{\path{sim/mechanik/x1_seitencrash/ERGEBNIS.md} (Modell und „Nicht untersucht“); \path{BEFUNDE.md} B-BAT-030}
+
+%======================================================================
 \section{Fehler und Korrekturen}\label{k:fehler}
 Dieses Kapitel ist der Kern für die Frage „KI im Engineering“: Wer machte welchen Fehler, wer fand ihn, wie, und was folgte. Nummern B-BAT-NNN sind Befunde in \texttt{BEFUNDE.md}.
 \begin{longtable}{@{}p{0.4cm}p{3.6cm}p{2.5cm}p{4.4cm}p{3.0cm}@{}}\toprule
@@ -824,10 +857,30 @@ Dieses Kapitel ist der Kern für die Frage „KI im Engineering“: Wer machte w
 22 & E2: Detailtiefe (Teile bis zur Schraube) stand nicht im Auftrag; erster Stand zeigte Quader & Opus (Auftrag E2)
  & nicht dokumentiert (Auftrag B1-c, Punkt 5; keine Befundnummer) & E2D Konstruktionsstand (Fortsetzung 5); Darstellung weiter quaderhaft, Überarbeitungsschleife geplant (Autor)\\
 23 & E1 wählte für die NMC-Gruppenverbinder 15 × 3 mm, die Akte ENT-096/097 und das CAD 25 × 3 mm: Verlust 461 W gegen 316 W & Sonnet (E1 ohne Abgleich mit der Akte)
- & Sonnet in E2 v1.0 (beide Werte gerechnet); Opus bestätigte die Akte (docs/08) & E2D rechnet mit 25 × 3 mm = 316,0 W, 15 × 3 nur zum Vergleich (B-BAT-027, E2 v1.1)\\\bottomrule
+ & Sonnet in E2 v1.0 (beide Werte gerechnet); Opus bestätigte die Akte (docs/08) & E2D rechnet mit 25 × 3 mm = 316,0 W, 15 × 3 nur zum Vergleich (B-BAT-027, E2 v1.1)\\\midrule
+24 & X1-Erwartung (1 bis 3 kJ, 30 bis 80 kN): die 30 mm Rahmen als freier Weg gezählt; tatsächlich 1 mm (LFP) bzw. 0 mm (NMC) & Opus (Erwartung X1)
+ & Rechnung (Sonnet): 18 bis 20 J bei Zellberührung, 0,02 bis 0,17 kJ statt 1 bis 3 kJ & Pack hat keine Knautschzone (B-BAT-030)\\
+25 & X1b-Erwartung: Wirkung ab $w$ 20 mm, 5 kJ; Biegung der Innenwand zwischen den Querträgern übersehen & Opus (Erwartung X1b)
+ & Rechnung (OpenCourant): 0,4 bis 0,6 kJ statt 5 kJ; Opus deutete die Rahmenbiegung (Kraft des Profils etwa 80 kN) & Knautschzone bringt kaum Reserve (B-BAT-031)\\
+26 & CalculiX divergiert beim Falten der Knautschprofile (impliziter Löser, alle Läufe) & Methodenwahl (Opus)
+ & Rechnung: Abbruch bei 13 bis 33 \% Weg (x1b\_knautschzone/ERWARTUNG.md, Nachtrag 1) & Methodenwechsel auf OpenCourant; CalculiX nur als Gegenprüfung bei 2 mm (B-BAT-031)\\
+27 & Opus beendete zweimal die eigene Shell mit \texttt{pkill -f}: das Muster passte auf den eigenen Befehl & Opus (Werkzeugfalle)
+ & Opus selbst (AGENTS.md, Regel kill nur mit PID) & Shell zweimal neu gestartet; keine Befundnummer\\
+28 & Die vom Autor freigegebene Knautschzone im Pack wird durch die Rechnung widerlegt & Freigabe des Menschen (Autor)
+ & Rechnung (X1b/X2); Opus empfahl mit Zahlen, sie \emph{nicht} zu bauen (B-BAT-031) & Entscheidung beim Autor; Schweller trägt (B-BAT-031)\\
+\bottomrule
 \end{longtable}
-Die Zeilen 1 bis 7 sind inhaltliche Fehler im Entwurf, die Zeilen 8 bis 11 Werkzeug- und Erwartungsfehler. Neu in Fassung 0.3: Zeilen 18 bis 23 (Erwartungs- und Vorgabefehler von Opus in E2 und KO1, ein Abstimmungsfehler E1 gegen Akte). Neu in Fassung 0.2: Zeilen 12 und 15 Fehler in Erwartung und Vorgabe (Opus), 13 und 14 Fehler in Methode und Modell (Sonnet), 16 Recherchewerkzeug, 17 Ablauf. Das Muster: \emph{Die Prüfroutine fand formale Fehler (Wortlaut), die inhaltlichen Fehler (falsche Spalte,
+Die Zeilen 1 bis 7 sind inhaltliche Fehler im Entwurf, die Zeilen 8 bis 11 Werkzeug- und Erwartungsfehler. Neu in Fassung 0.4: Zeilen 24 bis 28 (Erwartungsfehler X1 und X1b, Methode und Werkzeug, eine widerlegte Freigabe; Quelle B-BAT-030, -031). Neu in Fassung 0.3: Zeilen 18 bis 23 (Erwartungs- und Vorgabefehler von Opus in E2 und KO1, ein Abstimmungsfehler E1 gegen Akte). Neu in Fassung 0.2: Zeilen 12 und 15 Fehler in Erwartung und Vorgabe (Opus), 13 und 14 Fehler in Methode und Modell (Sonnet), 16 Recherchewerkzeug, 17 Ablauf. Das Muster: \emph{Die Prüfroutine fand formale Fehler (Wortlaut), die inhaltlichen Fehler (falsche Spalte,
 unplausibler Wert, falsche Ableitung, zu große Masse) fand erst die Gegenlesung durch Opus am Rohtext, am Zielband bzw. die Rechnung.} Fehler im Werkzeug gehen nach \texttt{BEFUNDE.md}; das Modell wird nicht geändert, damit eine Zahl passt.\quelle{\path{BEFUNDE.md} B-BAT-002 bis B-BAT-016; \path{sim/kuehlung/k1_schnellladen/DEUTUNG.md}; \path{sim/elektrik/e1_querschnitte/ERGEBNIS.md}; \path{cad/pack/ERGEBNIS.md}; \path{AGENTS.md}, Grundsatz 4}
+
+%======================================================================
+\section{Werkzeuge und Rechenregeln}\label{k:werkzeuge}
+\textbf{Wiederaufsetzpunkt-Regel (Autor, 2026-11-18).} Jede Rechnung über 30 min schreibt Wiederaufsetzpunkte: CalculiX mit mindestens 10 Lastschritten und \texttt{*RESTART}, OpenCourant mit Restart-Dateien (\texttt{/RFILE}), PyBaMM und Elmer mit Zwischenständen. Zu jedem Rechnungsordner gehört ein \texttt{neustart.sh}, das der Autor ohne Claude ausführen kann: Es überspringt fertige Läufe, setzt angefangene am letzten Punkt fort, startet losgelöst im pausierbaren Scope \texttt{hermes-batterie-*} und erzeugt am Ende die Auswertung.\quelle{\path{AGENTS.md}, Abschnitt „Rechnen“}
+Für X1b/X2 liegt es unter \path{sim/mechanik/x1b_knautschzone/neustart.sh} (Anleitung \path{LIESMICH_NEUSTART.md}): zehn Abschnitte je Lauf, Verlust bei Abbruch höchstens ein Abschnitt (1 bis 2 min); die Läufe dauerten 750 bis 1073 s.\quelle{\path{sim/mechanik/x1b_knautschzone/LIESMICH_NEUSTART.md}; \path{ergebnis_oc.json} (\texttt{laufzeit\_s\_summe}, \texttt{abschnitte})}
+
+\textbf{Befund /RFILE-Segfault (B-BAT-031).} In OpenCourant latest-20261011 sind die \texttt{/RFILE}-Zwischendateien nicht lesbar (Absturz). Ersatz: Der Lauf besteht aus zehn eigenständig endenden Abschnitten mit je einer Restart-Datei. Der Vergleich eines in Abschnitten gerechneten Laufs mit einem durchgehenden ergab 0 Abweichung.\quelle{\path{BEFUNDE.md} B-BAT-031 (Werkzeug)}
+
+\textbf{CalculiX gegen OpenCourant.} Die impliziten CalculiX-Läufe konvergierten beim Falten der Knautschprofile nicht; für Zellberührung bei kleinen Wegen (X1) genügt CalculiX, für Faltung und Stoß ist der explizite Löser nötig (Methodenwechsel durch Opus, BA-87).
 
 %======================================================================
 \section{Entscheidungen}
@@ -894,7 +947,7 @@ ENT-131, 145, 146 & Trennstecker in der Reihenmitte, Mäander-Verschaltung, Ausg
 \item \textbf{Freigaben:} 43 Akten im Status „vorgeschlagen“: ENT-104 bis 106 (Kühlkanäle), ENT-110 bis 143 (Elektronik, 34 Akten) und ENT-145 bis 150 (Verschaltung, LFP-Länge 2050 mm, Trennbrücke). Die Zellakten ENT-014 bis ENT-080 sind entschieden.\quelle{\path{docs/04_entscheidungen.md}}
 \item \textbf{Polmaße und Fahnen-Lesart:} Polgrößen sind Annahmen; die Bedeutung der Fahnenmaße in W20 Abb. 5A (LFP 27,1/9 und 20,5/7 mm; 4680 2,5/5 und 7,5/2,5 mm) ist offen. Isolierrand und Klebeband sind nicht modelliert.
 \item \textbf{Kühlplatte BT-610:} K2 ist eine 1D-Rechnung (Kanal 4 × 5 mm, laminar). Nicht gerechnet: Strömung im 3D-Modell (FluidX3D), Kontaktwiderstände Zelle--Pad--Blech; K1 wurde mit dem berechneten Wärmedurchgang (565 bis 595 statt der Annahme 500 W/(m²·K)) nicht wiederholt. Der Füllgrad 0,4 der Massenrechnung ist Annahme.
-\item \textbf{Crash und Festigkeit (X1):} Der Seitenpfahl quasistatisch (CalculiX) läuft laut Protokoll noch; es liegt kein Ergebnis vor. Die Seitenlast 600 kN aus W22 gilt für Fahrzeuge über 2600 kg, der Lastfall für 1500 kg ist offen (Autor-Frage aus M0). Seitenrahmenprofil (Wand 2,5 mm, 3 Kammern) ist Annahme Opus.\quelle{\path{docs/08_ki_einsatz_protokoll.md} (Zeile X1, Status „läuft“)}
+\item \textbf{Crash (X1, X1b/X2):} Ergebnisse liegen vor (Kapitel~\ref{k:crash}). Offen: Entscheidung des Autors zur Knautschzone (Empfehlung Opus: nicht bauen), Studie Querträgerabstand bzw. steifere Innenwand, Fahrzeugstruktur und Schweller (X2 mit Fahrzeug), Normwerte für Pfahl und Energie (W30 ohne Normwerte; Pfahl Ø 254, 100 kN, 5 kJ sind Annahmen). Die Seitenlast 600 kN aus W22 gilt für Fahrzeuge über 2600 kg; der Lastfall für 1500 kg bleibt Autor-Frage. Seitenrahmenprofil (Wand 2,5 mm, 3 Kammern) ist Annahme Opus.\quelle{\path{BEFUNDE.md} B-BAT-030, -031; \path{sim/mechanik/x1_seitencrash/ERGEBNIS.md}}
 \item \textbf{Zellmodell C3:} Der LFP-Parametersatz passt nicht (Temperaturfit 158 mV, Ruhespannung 143 mV daneben); für die 4680 fehlen Messdaten. Ohne sie bleiben R-PLAT (Plating) und R-4680W (Wärme 7,4 bis 11,5 W) offen.\quelle{\path{BEFUNDE.md} B-BAT-022, -023; \path{docs/05_risiken_fmea.md}}
 \item \textbf{Bericht EN} (englische Fassung), Schlussbericht, Video und Präsentation.
 \item \textbf{NMC-Masse:} Die Stückliste (471,3 kg) und G4 (473,4 kg) verfehlen das Zielband 390 bis 430 kg; Deutung offen (Opus).
@@ -961,9 +1014,9 @@ Lizenzliste: \path{docs/10_lizenzen_und_quellen.md}.
 \section*{Anhang C: Software}
 \addcontentsline{toc}{section}{Anhang C: Software}
 Versionen laut \path{SOFTWARE.md} (Stand 2026-11-11): FreeCAD 1.1.4 (AppImage, headless); Blender 4.0.2 (Render, Cycles auf der CPU); ElmerFEM 26.2; gmsh 4.12.1 (System) bzw. 4.15.2 (Python);
-PyBaMM 26.10.1.1; ParaView (System); CalculiX 2.21; pdflatex (System). Lokaler Agent: PI mit ollama \texttt{qwen-gross} (27B, 64k), ohne Werkzeuge. Python-Umgebung \texttt{.venv}
+OpenCourant latest-20261011 (AGPLv3, nur intern); PyBaMM 26.10.1.1; ParaView (System); CalculiX 2.21; pdflatex (System). Lokaler Agent: PI mit ollama \texttt{qwen-gross} (27B, 64k), ohne Werkzeuge. Python-Umgebung \texttt{.venv}
 (\path{requirements.txt}).
 
 \vfill
-\kigen{Dokument BAT-DOC-17, Version 0.3, Status Entwurf, Ersteller Claude Opus/Sonnet. Nicht vom Menschen freigegeben. Fassung EN folgt.}
+\kigen{Dokument BAT-DOC-17, Version 0.4, Status Entwurf, Ersteller Claude Opus/Sonnet. Nicht vom Menschen freigegeben. Fassung EN folgt.}
 \end{document}

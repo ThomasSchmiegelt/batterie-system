@@ -1,0 +1,12 @@
+Z12: FEHLT im Text der Quelle: "Melting temperature ( T m ) \| 585–650 °C" (https://en.wikipedia.org/wiki/6082_aluminium_alloy)
+Z13: FEHLT im Text der Quelle: "Young's modulus ( E ) \| 68 GPa (9,900 ksi)" (https://en.wikipedia.org/wiki/6061_aluminium_alloy)
+Z14: FEHLT im Text der Quelle: "Tensile strength ( σ t ) \| 124–290 MPa (18.0–42.1 ksi)" (https://en.wikipedia.org/wiki/6061_aluminium_alloy)
+Z15: FEHLT im Text der Quelle: "Elongation ( ε ) at break \| 12–25%" (https://en.wikipedia.org/wiki/6061_aluminium_alloy)
+Z16: FEHLT im Text der Quelle: "Volume resistivity ( ρ ) \| 32.5–39.2 nOhm·m" (https://en.wikipedia.org/wiki/6061_aluminium_alloy)
+Z28: WERT OHNE BELEG: - **Schweißbarkeit / Zusammenbau:** (Folgerung) 6061 lässt sich TIG/MIG schweißen, die Nahtzone lieg
+Z29: WERT OHNE BELEG: - **CTE-Abgleich mit Zelle:** (Folgerung) Die thermische Ausdehnung (≈ 23 µm/m·K bei 6005, 2,32·10⁻⁵
+Z30: WERT OHNE BELEG: - **Sicherheit / Brand:** (Folgerung) Schmelztemperatur 585–650 °C liegt oberhalb des typischen Zell
+Z34: WERT OHNE BELEG: 1. Welcher Temper (O / T4 / T6) ist im Lastfall „Crash / Sturz" und im Normalbetriebsfall vorgesehen
+Z41: WERT OHNE BELEG: - **Widerspruch 6082:** Die Infobox gibt Zugfestigkeit mit **150–310 MPa** an, der Fließtext (tabell
+
+7 Belege bestaetigt, 5 Fehler

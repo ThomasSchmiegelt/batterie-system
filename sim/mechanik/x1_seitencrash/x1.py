@@ -155,8 +155,8 @@ with open(T / "x1.inp", "w") as fo:
     w("*BOUNDARY\nNEND, 1, 3\nNFAR, 1, 3\n*BOUNDARY\nNBACK, 1, 1\nNBACK, 3, 3\n")
     w("*STEP, NLGEOM, INC=400\n*STATIC\n0.01, 1.0, 1.e-5, 0.02\n")
     w(f"*BOUNDARY\nNBACK, 2, 2, {UMAX}\n")
-    w("*NODE PRINT, NSET=NBACK, TOTALS=ONLY, FREQUENCY=1\nRF\n*NODE PRINT, NSET=NINN, FREQUENCY=1\nU\n")
-    w("*NODE FILE, FREQUENCY=10\nU\n*EL FILE, FREQUENCY=10\nPEEQ\n*END STEP\n")
+    w("*NODE PRINT, NSET=NBACK, TOTALS=ONLY, FREQUENCY=3\nRF\n")
+    w("*NODE FILE, FREQUENCY=3\nU\n*EL FILE, FREQUENCY=3\nPEEQ\n*END STEP\n")
 json.dump({"var": var, "lf": lf, "netz": netz, "xp": xp, "h_nah": hn, "umax": UMAX, "cl": cl, "n_knoten": len(used), "n_elem": eid, "pole_back_nodes": len(backn),
            "inn_x": {str(n): node[n][0] for n in ninn}, "L": L, "h": h, "quer_x0": qx, "qb": qb, "spos": len(spos), "sneg": len(sneg)}, open(T / "modell.json", "w"))
 print("Deck", T / "x1.inp", "Knoten", len(used), "Elemente", eid, "spos/sneg", len(spos), len(sneg), "xp", xp)
