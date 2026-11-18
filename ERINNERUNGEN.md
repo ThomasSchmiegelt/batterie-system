@@ -11,6 +11,7 @@ KI-generiert (Claude Opus).
 - Autor: nach GitHub laden. Privates Repo, schlank (.gitignore vorbereitet), erst nach E2 und Prüfung. Größe dann mit `du` gegen die .gitignore prüfen. Kein git im Projekt bisher, also git init.
 - E2 Fortsetzung 2 fertig (ENT-145…147, B-BAT-025). Opus-Fehler „Mitte hinten“ (BA-77) → Nachtrag 2, Fortsetzung 3 läuft. Danach GitHub.
 - E2 Fortsetzung 3 fertig (v0.4, B-BAT-026, ENT-148/149). Offen: LFP-Trennstecker +58 mm, Nut Kühlplatte. Freigaben ENT-110…149 offen.
+- GitHub: privates Repo batterie-system angelegt, erster Commit (1376 Dateien, ~154 MB, meist PNG). Kein Auto-Push: nur auf Ansage des Autors.
 
 ## 2026-11-17 Abend – Übergabe für morgen
 - Autor: „bitte wieder sparsam mit den token. und nimm b. Vielleicht bereitest du erst alles vor speicherst ab und morgen geht es weiter“
