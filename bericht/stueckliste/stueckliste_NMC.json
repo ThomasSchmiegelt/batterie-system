@@ -1,0 +1,2158 @@
+{
+ "hinweis": "KI-generiert (Claude Sonnet, 2026-11-19), Auftrag G5.1, ergänzt SL3.1 (Auftrag KO2). Entwurf. Stückliste v0.3 als Quelle der Geometrie (cad/baukasten/PLAN.md), Kosten nur als Anzeige (Feld preis, aus pm/kosten/eingaben.json).",
+ "variante": "NMC",
+ "version": "0.3",
+ "quellen": [
+  "cad/pack/entwurf/ergebnis_NMC_e2d.json",
+  "cad/pack/entwurf/parameter_NMC_e2d.json",
+  "pm/bauteile/parameter_NMC.json",
+  "sim/elektrik/e1_querschnitte/ergebnis.json",
+  "sim/elektrik/e2_elektronik/eingaben.json",
+  "pm/bauteile/struktur.json",
+  "pm/entscheidungen/ENT-*.md",
+  "cad/baukasten/PLAN.md"
+ ],
+ "summen": {
+  "masse_stueckliste_kg": 485.675,
+  "zellen": 868,
+  "energie_kWh": 74.27,
+  "hinweis": "Kompatibilität zu pm/kosten/kosten.py (liest summen.energie_kWh)"
+ },
+ "fehlende_bt": [],
+ "pruefsummen": {
+  "abweichung_gegen_e2d_gruppen": {
+   "schaltbox_inhalt_kg": 0.24,
+   "stecker_sensor_kg": -0.015
+  },
+  "positionen_gesamt": 55,
+  "positionen_je_detailstufe": {
+   "F": 28,
+   "-": 4,
+   "K": 19,
+   "H": 4
+  },
+  "anteil_H_prozent": 7.3,
+  "positionen_masse_offen": 8,
+  "masse_gesamt_kg": 485.675,
+  "masse_je_baugruppe_kg": {
+   "BT-100": 308.14,
+   "BT-200": 27.038,
+   "BT-300": 3.153,
+   "BT-400": 12.597,
+   "BT-500": 80.105,
+   "BT-600": 50.361,
+   "BT-700": 4.282
+  },
+  "masse_cad_e2d_kg": 483.153,
+  "quelle_masse_cad": "cad/pack/entwurf/ergebnis_NMC_e2d.json masse_bekannt_kg",
+  "abweichung_gegen_cad_prozent": 0.52,
+  "hinweis_abweichung": "SL3 enthält Stückzahlkorrekturen (PLAN §4.3) und Massen der im CAD mit 0 gesetzten Teile (CAD-Volumen x Dichte); das CAD zieht in G5.2/G5.7 nach.",
+  "zellen": 868,
+  "energie_kWh": 74.27,
+  "erwartung_cad_baukasten_ERWARTUNG_md": {
+   "positionen_band": [
+    47,
+    63
+   ],
+   "positionen_im_band": true,
+   "masse_band_kg": [
+    470,
+    486
+   ],
+   "masse_im_band": true
+  }
+ },
+ "dichten_kg_m3": {
+  "Al": {
+   "wert": 2700,
+   "einheit": "kg/m3",
+   "herkunft": "cad/pack/entwurf/ergebnis_NMC_e2d.json annahmen.A_alu_dichte_kg_m3"
+  },
+  "Cu": {
+   "wert": 8960,
+   "einheit": "kg/m3",
+   "herkunft": "sim/elektrik/e2_elektronik/eingaben.json stoffe.rho_Cu_kg_m3 (Opus 2026-11-18)"
+  },
+  "Pad": {
+   "wert": 2500,
+   "einheit": "kg/m3",
+   "herkunft": "cad/pack/entwurf/ergebnis_NMC_e2d.json annahmen.A_dichte_pad_kg_m3"
+  },
+  "Zelltraeger": {
+   "wert": 1200,
+   "einheit": "kg/m3",
+   "herkunft": "cad/pack/entwurf/ergebnis_NMC_e2d.json annahmen.A_dichte_zelltraeger_kg_m3 (PC)"
+  },
+  "Verguss": {
+   "wert": 300,
+   "einheit": "kg/m3",
+   "herkunft": "cad/pack/entwurf/ergebnis_NMC_e2d.json annahmen.A_dichte_verguss_kg_m3 (PU-Schaum)"
+  },
+  "Stahl": {
+   "wert": 7850,
+   "einheit": "kg/m3",
+   "herkunft": "cad/baukasten/farben.json werkstoffe.Stahl (Annahme Opus (Handbuchwert))"
+  },
+  "Kunststoff": {
+   "wert": 1200,
+   "einheit": "kg/m3",
+   "herkunft": "cad/baukasten/farben.json werkstoffe.Kunststoff (wie A_dichte_zelltraeger_kg_m3 (SL3 G5.1, von Opus bestätigt 2026-11-19))"
+  },
+  "Dichtung": {
+   "wert": 1150,
+   "einheit": "kg/m3",
+   "herkunft": "cad/baukasten/farben.json werkstoffe.EPDM (Annahme Opus (Handbuchwert))"
+  },
+  "Mica": {
+   "wert": 300,
+   "einheit": "kg/m3",
+   "herkunft": "cad/baukasten/farben.json werkstoffe.Schaum_Zwischenlage (Opus 2026-11-19: Zwischenlage BT-220 als komprimierbares Schaumpad (Quellausgleich, Wärmeschutz), Dichte wie A_dichte_verguss_kg_m3 (PU-Schaum, Annahme); ersetzt Mica-Vollmaterial (41,5 kg, Opus-Fehler))"
+  }
+ },
+ "neue_annahmen_dichte": [],
+ "entfaellt": [
+  "200.4 Verspannung der Zellreihen (Endplatte/Band)"
+ ],
+ "positionen": [
+  {
+   "pos": "100.1",
+   "bt": "BT-100",
+   "benennung": "Zelle (Rundzelle 4680, NMC)",
+   "art": "K",
+   "werkstoff": "Zelle (Masse aus Akte, Hüllkörper)",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json gruppen.Zellen; parameter_NMC.json BT-100 masse_g = 355.0",
+   "menge_NMC": 868,
+   "masse_ges_kg": 308.14,
+   "masse_je_kg": 0.355,
+   "masse_quelle": "Akte (BT-100 masse_g)",
+   "geometrie": {
+    "generator": "zelle.zelle_rund",
+    "detailstufe": "F",
+    "lage": "Zellfeld zwischen den Kühlplatten, Raster nach A_zellabstand",
+    "farbe": "zelle_gruen"
+   },
+   "akten": [
+    "ENT-002",
+    "ENT-007",
+    "ENT-008",
+    "ENT-009",
+    "ENT-010",
+    "ENT-011",
+    "ENT-012",
+    "ENT-025",
+    "ENT-026"
+   ],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-100",
+   "bt_name": "Zelle",
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 75,
+    "einheit": "€/kWh",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (ERW-KO1: LFP 50, NMC 4680 75) (Schlüssel BT-100)"
+   }
+  },
+  {
+   "pos": "200.1",
+   "bt": "BT-210",
+   "benennung": "Zellreihe zwischen Querträgern (Anordnung, kein Eigenteil)",
+   "art": "E",
+   "werkstoff": "-",
+   "bemerkung": "",
+   "quelle": "",
+   "menge_NMC": "offen",
+   "masse_ges_kg": "offen",
+   "masse_je_kg": "offen",
+   "masse_quelle": "offen (keine CAD-Geometrie, keine Akte)",
+   "geometrie": {
+    "generator": null,
+    "detailstufe": "-",
+    "lage": "-",
+    "farbe": "-"
+   },
+   "akten": [],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-200",
+   "bt_name": "Zellreihe",
+   "hinweis_opus": "Anordnung der Zellen, keine eigene Geometrie; Masse steckt in 100.1. Opus bestätigen.",
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 6,
+    "einheit": "€/kg",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-210)"
+   }
+  },
+  {
+   "pos": "220.2",
+   "bt": "BT-220",
+   "benennung": "Verguss Zellfeld (Zellen bis halbe Höhe)",
+   "art": "E",
+   "werkstoff": "PU-Schaum (Annahme A_dichte_verguss)",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json gruppen.Verguss",
+   "menge_NMC": 4,
+   "masse_ges_kg": 11.361119,
+   "masse_je_kg": 2.84028,
+   "masse_quelle": "CAD-Volumen x Dichte",
+   "geometrie": {
+    "generator": "zelle.verguss",
+    "detailstufe": "K",
+    "lage": "Zellfeld unten, bis A_vergusshoehe_anteil_NMC",
+    "farbe": "kunststoff_schwarz"
+   },
+   "akten": [
+    "ENT-012"
+   ],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-200",
+   "bt_name": "Zwischenlage",
+   "hinweis_opus": "PLAN §4.2: BT-220 (varianten in struktur.json nur LFP); ENT-092 nennt Verguss unter BT-250. Zuordnung Opus klären.",
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 10,
+    "einheit": "€/kg",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-260)"
+   }
+  },
+  {
+   "pos": "200.3",
+   "bt": "BT-230",
+   "benennung": "Wärmeleitmaterial / Pad Zelle-Kühlplatte",
+   "art": "K",
+   "werkstoff": "Pad",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json gruppen.Pad",
+   "menge_NMC": 2,
+   "masse_ges_kg": 12.608259,
+   "masse_je_kg": 6.30413,
+   "masse_quelle": "CAD-Volumen x Dichte",
+   "geometrie": {
+    "generator": "zelle.pad",
+    "detailstufe": "F",
+    "lage": "zwischen Zellfeld und Kühlplatte (oben und unten)",
+    "farbe": "pad_grau"
+   },
+   "akten": [
+    "ENT-095"
+   ],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-200",
+   "bt_name": "Wärmeleitmaterial",
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 20,
+    "einheit": "€/kg",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-230)"
+   }
+  },
+  {
+   "pos": "200.5",
+   "bt": "BT-250",
+   "benennung": "Zellhalter / Zellträger",
+   "art": "E",
+   "werkstoff": "Kunststoff (PC, Annahme A_dichte_zelltraeger)",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json gruppen.Zelltraeger",
+   "menge_NMC": 4,
+   "masse_ges_kg": 3.068534,
+   "masse_je_kg": 0.767133,
+   "masse_quelle": "CAD-Volumen x Dichte",
+   "geometrie": {
+    "generator": "zelle.zelltraeger",
+    "detailstufe": "K",
+    "lage": "unter den Zellen, 4 Träger (ENT-092)",
+    "farbe": "kunststoff_schwarz"
+   },
+   "akten": [
+    "ENT-012",
+    "ENT-092"
+   ],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-200",
+   "bt_name": "Zellhalter",
+   "hinweis_opus": "PLAN §4.2 nennt BT-240 (varianten nur LFP), ENT-092 und v0.2 führen BT-250 (varianten NMC). BT-250 beibehalten, Opus bestätigen.",
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 6,
+    "einheit": "€/kg",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-250)"
+   }
+  },
+  {
+   "pos": "300.1",
+   "bt": "BT-310",
+   "benennung": "BMS-Platine",
+   "art": "K",
+   "werkstoff": "Platine",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json annahmen A_e2_*_masse_kg (ERW-E2 N1)",
+   "menge_NMC": 1,
+   "masse_ges_kg": 0.4,
+   "masse_je_kg": 0.4,
+   "masse_quelle": "Annahme (ERW-E2 N1)",
+   "geometrie": {
+    "generator": "elektronik.bms_platine",
+    "detailstufe": "F",
+    "lage": "Schaltbox, Platine auf 4 Abstandsbolzen M4",
+    "farbe": "platine_gruen"
+   },
+   "akten": [
+    "ENT-138",
+    "ENT-139",
+    "ENT-140",
+    "ENT-141"
+   ],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-300",
+   "bt_name": "BMS-Hauptsteuergerät",
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 120,
+    "einheit": "€/Stück",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-310)"
+   }
+  },
+  {
+   "pos": "300.2",
+   "bt": "BT-320",
+   "benennung": "Zellüberwachung CMU (Platine)",
+   "art": "K",
+   "werkstoff": "Platine (Masse ERW-E2 N1)",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json gruppen.E2_CMU",
+   "menge_NMC": 13,
+   "masse_ges_kg": 1.04,
+   "masse_je_kg": 0.08,
+   "masse_quelle": "Annahme (ERW-E2 N1 A_e2_cmu_masse_kg)",
+   "geometrie": {
+    "generator": "elektronik.cmu",
+    "detailstufe": "F",
+    "lage": "Endzonen vorn/hinten am Zellfeldrand (E2-Anordnung)",
+    "farbe": "platine_gruen"
+   },
+   "akten": [
+    "ENT-111",
+    "ENT-113",
+    "ENT-114",
+    "ENT-146"
+   ],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-300",
+   "bt_name": "Zellüberwachung",
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 15,
+    "einheit": "€/Stück",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-320)"
+   }
+  },
+  {
+   "pos": "300.3",
+   "bt": "BT-330",
+   "benennung": "Temperaturfühler Zelle (NTC)",
+   "art": "K",
+   "werkstoff": "Kunststoff/Keramik (Annahme Kunststoff)",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json e2.details.ntc, annahmen.A_e2d_ntc_mm; Dichte Kunststoff aus farben.json",
+   "menge_NMC": 50,
+   "masse_ges_kg": 6.1e-05,
+   "masse_je_kg": 1e-06,
+   "masse_quelle": "CAD-Volumen x Dichte",
+   "geometrie": {
+    "generator": "elektronik.ntc",
+    "detailstufe": "F",
+    "lage": "auf FPC an der Zelle, 3 x 2 x 1 mm (A_e2d_ntc_mm)",
+    "farbe": "kunststoff_schwarz"
+   },
+   "akten": [
+    "ENT-117"
+   ],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-300",
+   "bt_name": "Temperaturfühler Zelle",
+   "hinweis_opus": "NTC-Volumen aus A_e2d_ntc_mm x Anzahl; CAD-Gruppe E2_FPC_Detail fasst Tabs, NTC und Stecker zusammen und wird dafür geteilt. Datenblattmasse 0.0003 kg weicht von der Annahmemasse 6.1e-05 kg ab (CAD zieht nach Freigabe nach).",
+   "hersteller_typ": "Vishay NTCS0603E3 (10 kΩ, Typ 0603)",
+   "datenblatt": [
+    {
+     "datei": "BT-330_vishay_NTCS0603E3.pdf",
+     "seite": "S. 1, 2"
+    }
+   ],
+   "masse_datenblatt_kg": 0.0003,
+   "masse_datenblatt_hinweis": "0,006 g je Stück (S. 1)",
+   "preis": {
+    "wert": 0.13,
+    "einheit": "€/Stück",
+    "status": "abgeleitet aus Distributorpreis",
+    "herkunft": "ERW-KO2 Punkt 2: 0,37 € (Distributor Menge 1) x f_serie 0,35 = 0,13 € (Schlüssel BT-330)"
+   }
+  },
+  {
+   "pos": "300.4",
+   "bt": "BT-340",
+   "benennung": "Shunt (Strommessung)",
+   "art": "K",
+   "werkstoff": "Cu/Manganin mit Platine",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json annahmen A_e2_*_masse_kg (ERW-E2 N1)",
+   "menge_NMC": 1,
+   "masse_ges_kg": 0.1,
+   "masse_je_kg": 0.1,
+   "masse_quelle": "Annahme (ERW-E2 N1)",
+   "geometrie": {
+    "generator": "elektronik.shunt",
+    "detailstufe": "F",
+    "lage": "Schaltbox",
+    "farbe": "platine_gruen"
+   },
+   "akten": [
+    "ENT-118",
+    "ENT-119"
+   ],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-300",
+   "bt_name": "Strommessung",
+   "hersteller_typ": "Isabellenhütte IVT-S (Shunt, 100–2500 A)",
+   "datenblatt": [
+    {
+     "datei": "BT-340_isabellenhuette_IVT-S.pdf",
+     "seite": "S. 1, 2"
+    }
+   ],
+   "masse_datenblatt_kg": null,
+   "masse_datenblatt_hinweis": "Datenblatt nennt keine Masse",
+   "preis": {
+    "wert": 40,
+    "einheit": "€/Stück",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-340)"
+   }
+  },
+  {
+   "pos": "300.5",
+   "bt": "BT-350",
+   "benennung": "Isolationswächter",
+   "art": "K",
+   "werkstoff": "offen",
+   "bemerkung": "",
+   "quelle": "",
+   "menge_NMC": 1,
+   "masse_ges_kg": "offen",
+   "masse_je_kg": "offen",
+   "masse_quelle": "offen (keine CAD-Geometrie, keine Akte)",
+   "geometrie": {
+    "generator": "elektronik.isolationswaechter",
+    "detailstufe": "H",
+    "lage": "Schaltbox (ENT-120 nennt nur den Ansprechwert)",
+    "farbe": "platine_gruen"
+   },
+   "akten": [
+    "ENT-120"
+   ],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-300",
+   "bt_name": "Isolationswächter",
+   "hinweis_opus": "Menge 1 (Opus 2026-11-19). Keine Formangabe in W33, Akte oder Annahme: Stufe H bis W34.",
+   "hersteller_typ": "Bender iso1685 (Typ für 800 V, Datenblatt auf Autorliste)",
+   "datenblatt": [],
+   "masse_datenblatt_kg": null,
+   "masse_datenblatt_hinweis": "Datenblatt nicht geladen (forschung/datenblaetter_fuer_autor.md)",
+   "preis": {
+    "wert": 20,
+    "einheit": "€/Stück",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-350)"
+   }
+  },
+  {
+   "pos": "300.6",
+   "bt": "BT-360",
+   "benennung": "Flexleiterplatte FPC Zelle -> CMU",
+   "art": "K",
+   "werkstoff": "FPC (Masse ERW-E2 N1)",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json gruppen.E2_FPC",
+   "menge_NMC": 13,
+   "masse_ges_kg": 1.53989,
+   "masse_je_kg": 0.118453,
+   "masse_quelle": "Annahme (ERW-E2 N1 A_e2_fpc_masse_kg_m)",
+   "geometrie": {
+    "generator": "elektronik.fpc",
+    "detailstufe": "F",
+    "lage": "Seitenspalt bzw. Verbinderebene, Pfade aus e2.geometrie.fpc",
+    "farbe": "platine_gruen"
+   },
+   "akten": [
+    "ENT-121",
+    "ENT-122"
+   ],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-300",
+   "bt_name": "Messleitungen",
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 8,
+    "einheit": "€/m",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-360)"
+   }
+  },
+  {
+   "pos": "360.3",
+   "bt": "BT-360",
+   "benennung": "FPC-Detail (Tabs, FPC-Stecker an der CMU)",
+   "art": "K",
+   "werkstoff": "Cu-Tab/Kunststoff (Annahme Kunststoff)",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json gruppen.E2_FPC_Detail Volumen minus NTC; Dichte Kunststoff aus farben.json",
+   "menge_NMC": 231,
+   "masse_ges_kg": 0.020677,
+   "masse_je_kg": 9e-05,
+   "masse_quelle": "CAD-Volumen x Dichte",
+   "geometrie": {
+    "generator": "elektronik.fpc_detail",
+    "detailstufe": "F",
+    "lage": "Zelltabs am Pol, Stecker an der CMU",
+    "farbe": "kunststoff_schwarz"
+   },
+   "akten": [
+    "ENT-121",
+    "ENT-122"
+   ],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-300",
+   "bt_name": "Messleitungen",
+   "hinweis_opus": "Mischteil (Cu-Tab 0,2 mm, Kunststoffstecker) mit Kunststoffdichte gerechnet; Masse klein, Opus bestätigen.",
+   "menge_quelle": "CAD",
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 0,
+    "einheit": "€/Stück",
+    "status": "Schätzung (Annahme Opus, ERW-KO2)",
+    "herkunft": "Opus 2026-11-19 (Nachtrag KO2): FPC-Detail (Tabs, Stecker) im FPC-Preis enthalten (Schlüssel BT-360:Detail)"
+   }
+  },
+  {
+   "pos": "360.4",
+   "bt": "BT-360",
+   "benennung": "Daisy-Chain-Leitung mit Steckern",
+   "art": "K",
+   "werkstoff": "Kabel/Kunststoff (Annahme Kunststoff)",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json gruppen.E2_Daisy (Kabel + Stecker); Dichte Kunststoff aus farben.json",
+   "menge_NMC": 11,
+   "masse_ges_kg": 0.051883,
+   "masse_je_kg": 0.004717,
+   "masse_quelle": "CAD-Volumen x Dichte",
+   "geometrie": {
+    "generator": "elektronik.daisy_kette",
+    "detailstufe": "F",
+    "lage": "CMU zu CMU / BMS, Ø4 mm, Radius ≥ 20 mm",
+    "farbe": "kunststoff_schwarz"
+   },
+   "akten": [
+    "ENT-121",
+    "ENT-122"
+   ],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-300",
+   "bt_name": "Messleitungen",
+   "hinweis_opus": "PLAN §4.2 nennt 360.2/360.3 für drei Teile; hier 361.1 Halter, 360.3 Detail, 360.4 Daisy. Menge = Kabelzahl, Masse inkl. Stecker.",
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 3,
+    "einheit": "€/Stück",
+    "status": "Schätzung (Annahme Opus, ERW-KO2)",
+    "herkunft": "Opus 2026-11-19 (Nachtrag KO2): Daisy-Kette 3 €/Stück (Schlüssel BT-360:Daisy)"
+   }
+  },
+  {
+   "pos": "400.1",
+   "bt": "BT-410",
+   "benennung": "Zellabgriff (Plus und Minus je Zelle)",
+   "art": "E",
+   "werkstoff": "Al",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json gruppen.Zellabgriff (CAD 868 Stück, Masse je Stück); Stückzahl nach PLAN §4.3 = E1 1736",
+   "menge_NMC": 1736,
+   "masse_ges_kg": 0.53011,
+   "masse_je_kg": 0.000305,
+   "masse_quelle": "CAD-Volumen x Dichte",
+   "geometrie": {
+    "generator": "verbinder.zellabgriff",
+    "detailstufe": "K",
+    "lage": "Scheibe 12 x 1 auf jedem Pol, Laserschweißung",
+    "farbe": "al_blank"
+   },
+   "akten": [
+    "ENT-093",
+    "ENT-094",
+    "ENT-099"
+   ],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-400",
+   "bt_name": "Zellverbinder",
+   "hinweis_opus": "Widerspruch CAD 868 / E1 1736: 1736 gilt (PLAN §4.3), CAD zieht nach.",
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 8,
+    "einheit": "€/kg",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-410)"
+   }
+  },
+  {
+   "pos": "400.2",
+   "bt": "BT-420",
+   "benennung": "Gruppenverbinder = Sammelblech (je 4 Zellen)",
+   "art": "E",
+   "werkstoff": "Al (Annahme, Cu offen)",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json gruppen.Gruppenverbinder",
+   "menge_NMC": 217,
+   "masse_ges_kg": 7.940355,
+   "masse_je_kg": 0.036591,
+   "masse_quelle": "CAD-Volumen x Dichte",
+   "geometrie": {
+    "generator": "verbinder.gruppenverbinder",
+    "detailstufe": "K",
+    "lage": "über 4 Zellen je Gruppe",
+    "farbe": "al_blank"
+   },
+   "akten": [
+    "ENT-096",
+    "ENT-097",
+    "ENT-098"
+   ],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-400",
+   "bt_name": "Reihenverbinder",
+   "hinweis_opus": "E1 nennt 216 Stück (6.32 kg): PLAN §4.3, CAD gilt (217 Sammelbleche).",
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 8,
+    "einheit": "€/kg",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-420)"
+   }
+  },
+  {
+   "pos": "420.2",
+   "bt": "BT-420",
+   "benennung": "Gruppenbrücke (Reihenbrücke)",
+   "art": "E",
+   "werkstoff": "Al (Annahme, Cu offen)",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json gruppen.Gruppenbruecke",
+   "menge_NMC": 216,
+   "masse_ges_kg": 3.016203,
+   "masse_je_kg": 0.013964,
+   "masse_quelle": "CAD-Volumen x Dichte",
+   "geometrie": {
+    "generator": "verbinder.gruppenbruecke",
+    "detailstufe": "K",
+    "lage": "zwischen benachbarten Gruppen",
+    "farbe": "al_blank"
+   },
+   "akten": [
+    "ENT-096",
+    "ENT-097",
+    "ENT-098"
+   ],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-400",
+   "bt_name": "Reihenverbinder",
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 8,
+    "einheit": "€/kg",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-420)"
+   }
+  },
+  {
+   "pos": "400.3",
+   "bt": "BT-430",
+   "benennung": "HV-Leitung im Pack (Leiter Cu)",
+   "art": "K",
+   "werkstoff": "Cu (Leiter, Isolierung ohne Wert)",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json gruppen.E2_HV_Leitung; A_CAD parameter_NMC.json BT-430 querschnitt_mm2",
+   "menge_NMC": 4,
+   "masse_ges_kg": 0.33508,
+   "masse_je_kg": 0.08377,
+   "masse_quelle": "CAD-Volumen x Dichte (Länge x A_CAD x Dichte Cu)",
+   "geometrie": {
+    "generator": "verbinder.hv_leitung",
+    "detailstufe": "F",
+    "lage": "Zelle -> Schaltbox, Verlegung hinten (ENT-144), Radius ≥ 5 D",
+    "farbe": "hv_orange"
+   },
+   "akten": [
+    "ENT-101",
+    "ENT-143"
+   ],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-400",
+   "bt_name": "HV-Hauptleitung",
+   "hinweis_opus": "A_CAD 35.0 mm2 = A_E1 35 mm2 (sim/elektrik/e1_querschnitte/ergebnis.json). Masse CAD 0.335 kg (Länge gesamt 1.088 m, ergebnis e2d e2.hv_laenge_gesamt_m), E1 1.223 kg (2 x 1950 mm). CAD-Verlegung gilt (PLAN §4.3).",
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 25,
+    "einheit": "€/m",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-430)"
+   }
+  },
+  {
+   "pos": "440.1",
+   "bt": "BT-440",
+   "benennung": "Plus-/Minus-Anschlusslasche (Pol)",
+   "art": "E",
+   "werkstoff": "Al",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json gruppen.E2_Lasche",
+   "menge_NMC": 4,
+   "masse_ges_kg": 0.018621,
+   "masse_je_kg": 0.004655,
+   "masse_quelle": "CAD-Volumen x Dichte",
+   "geometrie": {
+    "generator": "verbinder.pol_lasche",
+    "detailstufe": "K",
+    "lage": "Reihenenden hinten, M8, Überlappung 25 mm",
+    "farbe": "al_blank"
+   },
+   "akten": [],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-400",
+   "bt_name": "Stromschiene",
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 8,
+    "einheit": "€/kg",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-440)"
+   }
+  },
+  {
+   "pos": "440.2",
+   "bt": "BT-440",
+   "benennung": "Stromschienen der Schaltbox (Cu)",
+   "art": "E",
+   "werkstoff": "Cu 20 x 3",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json gruppen.E2_Stromschiene",
+   "menge_NMC": 6,
+   "masse_ges_kg": 0.450444,
+   "masse_je_kg": 0.075074,
+   "masse_quelle": "CAD-Volumen x Dichte",
+   "geometrie": {
+    "generator": "verbinder.stromschiene",
+    "detailstufe": "K",
+    "lage": "Schaltbox, biegeweich, Bohrung 8,5, Schrumpfschlauch",
+    "farbe": "cu"
+   },
+   "akten": [],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-400",
+   "bt_name": "Stromschiene",
+   "hinweis_opus": "Stückzahl aus CAD: 12 Verbindungen nach ctx.schaltbox[schienen] (SL3 hatte 6 aus E2d, Sonnet G5.4).",
+   "menge_quelle": "CAD",
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 8,
+    "einheit": "€/kg",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-440)"
+   }
+  },
+  {
+   "pos": "450.1",
+   "bt": "BT-450",
+   "benennung": "Berührschutz über den Verbindern (Platten)",
+   "art": "E",
+   "werkstoff": "Kunststoff (Annahme)",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json gruppen.E2_Beruehrschutz; Dichte Kunststoff aus farben.json",
+   "menge_NMC": 8,
+   "masse_ges_kg": 0.305785,
+   "masse_je_kg": 0.038223,
+   "masse_quelle": "CAD-Volumen x Dichte",
+   "geometrie": {
+    "generator": "verbinder.beruehrschutz",
+    "detailstufe": "K",
+    "lage": "über Gruppenverbindern, Dicke 1 mm",
+    "farbe": "kunststoff_schwarz"
+   },
+   "akten": [],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-400",
+   "bt_name": "Berührschutz",
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 6,
+    "einheit": "€/kg",
+    "status": "Schätzung (Annahme Opus, ERW-KO2)",
+    "herkunft": "ERW-KO2 Punkt 6 Annahme Opus (Schlüssel BT-450)"
+   }
+  },
+  {
+   "pos": "500.1",
+   "bt": "BT-510",
+   "benennung": "Gehäusewanne (im CAD: Boden)",
+   "art": "E",
+   "werkstoff": "Al",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json gruppen.Boden",
+   "menge_NMC": 1,
+   "masse_ges_kg": 22.5563,
+   "masse_je_kg": 22.5563,
+   "masse_quelle": "G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json)",
+   "geometrie": {
+    "generator": "gehaeuse.wanne",
+    "detailstufe": "K",
+    "lage": "Packboden über Unterfahrschutz, X 0 bis Gehäuselänge, Y Mitte 0",
+    "farbe": "al_blank"
+   },
+   "akten": [],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-500",
+   "bt_name": "Gehäusewanne",
+   "masse_alt_kg": 22.58685,
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 6,
+    "einheit": "€/kg",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-510)"
+   }
+  },
+  {
+   "pos": "520.1",
+   "bt": "BT-520",
+   "benennung": "Deckel",
+   "art": "E",
+   "werkstoff": "Al",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json gruppen.Deckel",
+   "menge_NMC": 1,
+   "masse_ges_kg": 15.0351,
+   "masse_je_kg": 15.0351,
+   "masse_quelle": "G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json)",
+   "geometrie": {
+    "generator": "gehaeuse.deckel",
+    "detailstufe": "K",
+    "lage": "über den Zellen, Aussparungen Service/Schaltbox",
+    "farbe": "al_eloxiert"
+   },
+   "akten": [],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-500",
+   "bt_name": "Deckel mit Dichtung",
+   "masse_alt_kg": 15.055457,
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 6,
+    "einheit": "€/kg",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-520)"
+   }
+  },
+  {
+   "pos": "500.3",
+   "bt": "BT-530",
+   "benennung": "Querträger",
+   "art": "E",
+   "werkstoff": "Al",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json gruppen.Quertraeger",
+   "menge_NMC": 3,
+   "masse_ges_kg": 4.1387,
+   "masse_je_kg": 1.379567,
+   "masse_quelle": "G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json)",
+   "geometrie": {
+    "generator": "gehaeuse.quertraeger",
+    "detailstufe": "K",
+    "lage": "quer im Zellfeld, x aus ergebnis quertraeger_x_mm",
+    "farbe": "al_blank"
+   },
+   "akten": [
+    "ENT-082",
+    "ENT-083",
+    "ENT-084",
+    "ENT-085",
+    "ENT-086"
+   ],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-500",
+   "bt_name": "Querträger",
+   "masse_alt_kg": 4.161375,
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 6,
+    "einheit": "€/kg",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-530)"
+   }
+  },
+  {
+   "pos": "500.4",
+   "bt": "BT-540",
+   "benennung": "Seitenrahmen (Rahmenprofil, keine Knautschzone nach ENT-151)",
+   "art": "E",
+   "werkstoff": "Al (Vollprofil, Obergrenze)",
+   "bemerkung": "Menge 4 = 2 Längs- und 2 Querprofile (Opus 2026-11-19)",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json gruppen.Seitenrahmen",
+   "menge_NMC": 4,
+   "masse_ges_kg": 13.1114,
+   "masse_je_kg": 3.27785,
+   "masse_quelle": "G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json)",
+   "geometrie": {
+    "generator": "gehaeuse.seitenrahmen",
+    "detailstufe": "K",
+    "lage": "umlaufend außen, Breite 30 (ENT-087), Mehrkammer",
+    "farbe": "al_blank"
+   },
+   "akten": [
+    "ENT-087",
+    "ENT-151"
+   ],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-500",
+   "bt_name": "Seitenrahmen",
+   "masse_alt_kg": 20.07936,
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 6,
+    "einheit": "€/kg",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-540)"
+   }
+  },
+  {
+   "pos": "500.5",
+   "bt": "BT-550",
+   "benennung": "Unterfahrschutz",
+   "art": "E",
+   "werkstoff": "Al",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json gruppen.Unterfahrschutz",
+   "menge_NMC": 1,
+   "masse_ges_kg": 22.5563,
+   "masse_je_kg": 22.5563,
+   "masse_quelle": "G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json)",
+   "geometrie": {
+    "generator": "gehaeuse.unterfahrschutz",
+    "detailstufe": "K",
+    "lage": "unter der Wanne, Z = 0",
+    "farbe": "al_blank"
+   },
+   "akten": [],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-500",
+   "bt_name": "Unterfahrschutz",
+   "masse_alt_kg": 22.58685,
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 6,
+    "einheit": "€/kg",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-550)"
+   }
+  },
+  {
+   "pos": "500.6",
+   "bt": "BT-560",
+   "benennung": "Befestigungspunkte am Fahrzeug (Stahlhülse)",
+   "art": "E",
+   "werkstoff": "Stahl (Hülse)",
+   "bemerkung": "",
+   "quelle": "",
+   "menge_NMC": 12,
+   "masse_ges_kg": 2.3366,
+   "masse_je_kg": 0.194717,
+   "masse_quelle": "G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json)",
+   "geometrie": {
+    "generator": "gehaeuse.befestigung",
+    "detailstufe": "K",
+    "lage": "6 je Längsseite am Seitenrahmen",
+    "farbe": "stahl_blank"
+   },
+   "akten": [],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-500",
+   "bt_name": "Befestigungspunkte",
+   "hinweis_opus": "Menge 12 = 6 je Längsseite, Annahme Opus A_g5_befestigung_n_je_seite (Vorgabe Opus 2026-11-19, noch nicht in annahmen.json, da A-Blöcke e2d sie nicht enthalten).",
+   "masse_alt_kg": "offen",
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 1.5,
+    "einheit": "€/Stück",
+    "status": "Schätzung (Annahme Opus, ERW-KO2)",
+    "herkunft": "ERW-KO2 Punkt 6 Annahme Opus (Schlüssel BT-560)"
+   }
+  },
+  {
+   "pos": "500.7",
+   "bt": "BT-570",
+   "benennung": "Druckausgleichselement (atmend, wasserdicht)",
+   "art": "K",
+   "werkstoff": "offen",
+   "bemerkung": "",
+   "quelle": "",
+   "menge_NMC": 1,
+   "masse_ges_kg": "offen",
+   "masse_je_kg": "offen",
+   "masse_quelle": "offen (keine CAD-Geometrie, keine Akte)",
+   "geometrie": {
+    "generator": "kaufteile.druckausgleich",
+    "detailstufe": "F",
+    "lage": "Rückwand, Ø 20 mm (A_e2d_box_druckausgleich_d_mm)",
+    "farbe": "kunststoff_schwarz"
+   },
+   "akten": [],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-500",
+   "bt_name": "Druckausgleichselement",
+   "hinweis_opus": "Ø20 mm stammt aus ERW-E2 N3 für die Schaltbox (Annahme); Übertragung auf das Pack-Element und Masse offen, W34 abwarten.",
+   "hersteller_typ": "Gore PolyVent AVS 70 (High Airflow)",
+   "datenblatt": [
+    {
+     "datei": "BT-570_gore_auto-batteries-snapfit.pdf",
+     "seite": "S. 2"
+    }
+   ],
+   "masse_datenblatt_kg": null,
+   "masse_datenblatt_hinweis": "Datenblatt nennt keine Masse",
+   "preis": {
+    "wert": 5,
+    "einheit": "€/Stück",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (unverändert) (Schlüssel BT-570)"
+   }
+  },
+  {
+   "pos": "580.1",
+   "bt": "BT-580",
+   "benennung": "Dichtungen (Deckel, Schaltbox, Servicedeckel)",
+   "art": "K",
+   "werkstoff": "EPDM",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json gruppen.E2_Dichtung; Dichte Dichtung (EPDM) aus farben.json",
+   "menge_NMC": 2,
+   "masse_ges_kg": 0.014615,
+   "masse_je_kg": 0.007307,
+   "masse_quelle": "CAD-Volumen x Dichte",
+   "geometrie": {
+    "generator": "normteile.dichtung",
+    "detailstufe": "F",
+    "lage": "Flächen- bzw. Schnurdichtung 3 x 3 mm an den Flanschen",
+    "farbe": "dichtung"
+   },
+   "akten": [],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-500",
+   "bt_name": "Dichtungen",
+   "menge_quelle": "CAD",
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 4,
+    "einheit": "€/Stück",
+    "status": "Schätzung (Annahme Opus, ERW-KO2)",
+    "herkunft": "ERW-KO2 Punkt 6 Annahme Opus (Schlüssel BT-580)"
+   }
+  },
+  {
+   "pos": "590.1",
+   "bt": "BT-590",
+   "benennung": "Schrauben (M4/M5/M8, Stahl)",
+   "art": "K",
+   "werkstoff": "Stahl (Annahme)",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json gruppen.E2_Schraube; Dichte Stahl = farben.json",
+   "menge_NMC": 72,
+   "masse_ges_kg": 0.115169,
+   "masse_je_kg": 0.0016,
+   "masse_quelle": "CAD-Volumen x Dichte",
+   "geometrie": {
+    "generator": "normteile.schraube",
+    "detailstufe": "F",
+    "lage": "Schaltbox, Stecker, Schütze, Verbinder",
+    "farbe": "stahl_blank"
+   },
+   "akten": [],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-500",
+   "bt_name": "Verbindungs- und Normteile",
+   "menge_quelle": "CAD",
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 0.1,
+    "einheit": "€/Stück",
+    "status": "Schätzung (Annahme Opus, ERW-KO2)",
+    "herkunft": "ERW-KO2 Punkt 6 Annahme Opus (Schlüssel BT-590:Schraube)"
+   }
+  },
+  {
+   "pos": "590.2",
+   "bt": "BT-590",
+   "benennung": "Kabelschuhe (Hülse + Palme)",
+   "art": "K",
+   "werkstoff": "Cu",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json gruppen.E2_Kabelschuh; Dichte Cu = Cu aus E2-Eingaben",
+   "menge_NMC": 8,
+   "masse_ges_kg": 0.213738,
+   "masse_je_kg": 0.026717,
+   "masse_quelle": "CAD-Volumen x Dichte",
+   "geometrie": {
+    "generator": "normteile.kabelschuh",
+    "detailstufe": "F",
+    "lage": "an den HV-Leitungen",
+    "farbe": "cu"
+   },
+   "akten": [],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-500",
+   "bt_name": "Verbindungs- und Normteile",
+   "menge_quelle": "CAD",
+   "hersteller_typ": "Pfisterer Kabelschuh DIN 46235 M8, 50 mm² (Art. 300 013 260) / 35 mm² (Art. 300 010 010)",
+   "datenblatt": [
+    {
+     "datei": "BT-590_pfisterer_300013260.pdf",
+     "seite": "S. 1, 2"
+    },
+    {
+     "datei": "BT-590_pfisterer_300010010.pdf",
+     "seite": "S. 1, 2"
+    }
+   ],
+   "masse_datenblatt_kg": null,
+   "masse_datenblatt_hinweis": "Datenblatt nennt keine Masse",
+   "preis": {
+    "wert": 1.5,
+    "einheit": "€/Stück",
+    "status": "Schätzung (Annahme Opus, ERW-KO2)",
+    "herkunft": "ERW-KO2 Punkt 6 Annahme Opus (Schlüssel BT-590:Kabelschuh)"
+   }
+  },
+  {
+   "pos": "590.3",
+   "bt": "BT-590",
+   "benennung": "Kabelclips",
+   "art": "K",
+   "werkstoff": "Kunststoff (Annahme)",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json gruppen.E2_Clip; Dichte Kunststoff = farben.json",
+   "menge_NMC": 4,
+   "masse_ges_kg": 0.008971,
+   "masse_je_kg": 0.002243,
+   "masse_quelle": "CAD-Volumen x Dichte",
+   "geometrie": {
+    "generator": "normteile.clip",
+    "detailstufe": "F",
+    "lage": "Kabelführung, alle 200 mm",
+    "farbe": "kunststoff_schwarz"
+   },
+   "akten": [],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-500",
+   "bt_name": "Verbindungs- und Normteile",
+   "menge_quelle": "CAD",
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 0.1,
+    "einheit": "€/Stück",
+    "status": "Schätzung (Annahme Opus, ERW-KO2)",
+    "herkunft": "ERW-KO2 Punkt 6 Annahme Opus (Schlüssel BT-590:Clip)"
+   }
+  },
+  {
+   "pos": "590.4",
+   "bt": "BT-590",
+   "benennung": "Schrumpfschlauch 0,5 mm",
+   "art": "K",
+   "werkstoff": "Kunststoff (Annahme)",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json gruppen.E2_Schrumpfschlauch; Dichte Kunststoff = farben.json",
+   "menge_NMC": 6,
+   "masse_ges_kg": 0.017744,
+   "masse_je_kg": 0.002957,
+   "masse_quelle": "CAD-Volumen x Dichte",
+   "geometrie": {
+    "generator": "normteile.schrumpfschlauch",
+    "detailstufe": "F",
+    "lage": "über den Stromschienen",
+    "farbe": "hv_orange"
+   },
+   "akten": [],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-500",
+   "bt_name": "Verbindungs- und Normteile",
+   "menge_quelle": "CAD",
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 0.2,
+    "einheit": "€/Stück",
+    "status": "Schätzung (Annahme Opus, ERW-KO2)",
+    "herkunft": "ERW-KO2 Punkt 6 Annahme Opus (Schlüssel BT-590:Schrumpfschlauch)"
+   }
+  },
+  {
+   "pos": "600.1",
+   "bt": "BT-610",
+   "benennung": "Kühlplatte (Blech 1/4/1 mm, Mäander 8 Bahnen laengs, Teilkanal 8 mm)",
+   "art": "E",
+   "werkstoff": "Al-Blech 1/4/1 mm gelötet (hohl, ENT-152…156)",
+   "bemerkung": "",
+   "quelle": "sim/kuehlung/k2_kuehlplatte/ergebnis_k2b.json fall NMC_P4, laengs, 8 Bahnen, Teilkanal 8 mm (masse_2_platten_kg); Wahl A_g5_maeander in annahmen_g5.json",
+   "menge_NMC": 2,
+   "masse_ges_kg": 46.5514,
+   "masse_je_kg": 23.2757,
+   "masse_quelle": "G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json)",
+   "geometrie": {
+    "generator": "kuehlung.kuehlplatte",
+    "detailstufe": "K",
+    "lage": "über und unter dem Zellfeld, mit Kanälen (ENT-104/105)",
+    "farbe": "al_blank"
+   },
+   "akten": [
+    "ENT-089",
+    "ENT-090",
+    "ENT-104",
+    "ENT-105",
+    "ENT-106",
+    "ENT-152",
+    "ENT-153",
+    "ENT-154",
+    "ENT-155",
+    "ENT-156"
+   ],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-600",
+   "bt_name": "Kühlplatte",
+   "masse_alt_kg": 44.342246,
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 12,
+    "einheit": "€/kg",
+    "status": "Schätzung (Annahme Opus, ERW-KO2)",
+    "herkunft": "ERW-KO1 Annahme; ERW-KO2 Punkt 4: echte Blech-Hohlmasse (ENT-152…156), Faktor 0,6 entfällt (Schlüssel BT-610)"
+   }
+  },
+  {
+   "pos": "600.2",
+   "bt": "BT-620",
+   "benennung": "Verteiler und Sammler",
+   "art": "E",
+   "werkstoff": "offen",
+   "bemerkung": "",
+   "quelle": "",
+   "menge_NMC": 2,
+   "masse_ges_kg": 0.4611,
+   "masse_je_kg": 0.23055,
+   "masse_quelle": "G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json)",
+   "geometrie": {
+    "generator": "kuehlung.verteiler",
+    "detailstufe": "K",
+    "lage": "an der Kühlplatte, Kanäle quer (ENT-106)",
+    "farbe": "al_blank"
+   },
+   "akten": [],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-600",
+   "bt_name": "Verteiler und Sammler",
+   "hinweis_opus": "Menge 2 (Opus-Vorgabe 2026-11-19).",
+   "masse_alt_kg": "offen",
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 12,
+    "einheit": "€/kg",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-620)"
+   }
+  },
+  {
+   "pos": "600.3",
+   "bt": "BT-630",
+   "benennung": "Kühlmittelanschlüsse Ein/Aus",
+   "art": "K",
+   "werkstoff": "offen",
+   "bemerkung": "",
+   "quelle": "",
+   "menge_NMC": 2,
+   "masse_ges_kg": 0.0199,
+   "masse_je_kg": 0.00995,
+   "masse_quelle": "G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json)",
+   "geometrie": {
+    "generator": "kuehlung.anschluss",
+    "detailstufe": "K",
+    "lage": "Kühlplattenende",
+    "farbe": "al_blank"
+   },
+   "akten": [],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-600",
+   "bt_name": "Kühlmittelanschlüsse",
+   "hinweis_opus": "Generator kuehlung.anschluss, Menge 2, Stufe K (Opus-Vorgabe 2026-11-19).",
+   "masse_alt_kg": "offen",
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 10,
+    "einheit": "€/Stück",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-630)"
+   }
+  },
+  {
+   "pos": "600.4",
+   "bt": "BT-640",
+   "benennung": "Temperaturfühler Kühlmittel",
+   "art": "K",
+   "werkstoff": "offen",
+   "bemerkung": "",
+   "quelle": "",
+   "menge_NMC": 2,
+   "masse_ges_kg": 0.034,
+   "masse_je_kg": 0.017,
+   "masse_quelle": "Datenblatt",
+   "geometrie": {
+    "generator": "kaufteile.temperaturfuehler_kuehlmittel",
+    "detailstufe": "H",
+    "lage": "an den Anschlüssen (Ein/Aus)",
+    "farbe": "kunststoff_schwarz"
+   },
+   "akten": [],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-600",
+   "bt_name": "Temperaturfühler Kühlmittel",
+   "hinweis_opus": "Menge 2 (Opus 2026-11-19). Keine Formangabe: Stufe H bis W34.",
+   "hersteller_typ": "Kyocera AVX 94082 (NTC M12×1,5, Einschraub)",
+   "datenblatt": [
+    {
+     "datei": "BT-640_kyocera-avx_94082.pdf",
+     "seite": "S. 3"
+    }
+   ],
+   "masse_datenblatt_kg": 0.034,
+   "masse_datenblatt_hinweis": "17 g je Stück (S. 3)",
+   "preis": {
+    "wert": 3,
+    "einheit": "€/Stück",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-640)"
+   }
+  },
+  {
+   "pos": "600.5",
+   "bt": "BT-650",
+   "benennung": "Kühlmittel Wasser-Glykol",
+   "art": "K",
+   "werkstoff": "Flüssigkeit",
+   "bemerkung": "",
+   "quelle": "",
+   "menge_NMC": "offen",
+   "masse_ges_kg": "offen",
+   "masse_je_kg": "offen",
+   "masse_quelle": "offen (keine CAD-Geometrie, keine Akte)",
+   "geometrie": {
+    "generator": null,
+    "detailstufe": "-",
+    "lage": "in den Kanälen",
+    "farbe": "-"
+   },
+   "akten": [],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-600",
+   "bt_name": "Kühlmittel",
+   "hinweis_opus": "Flüssigkeit, keine Geometrie (PLAN §3: Detailstufe -).",
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 3,
+    "einheit": "€/L",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-650)"
+   }
+  },
+  {
+   "pos": "600.6",
+   "bt": "BT-660",
+   "benennung": "Pumpe, Wärmetauscher/Kältemittelkühler",
+   "art": "S",
+   "werkstoff": "außerhalb",
+   "bemerkung": "",
+   "quelle": "",
+   "menge_NMC": "offen",
+   "masse_ges_kg": "offen",
+   "masse_je_kg": "offen",
+   "masse_quelle": "offen (keine CAD-Geometrie, keine Akte)",
+   "geometrie": {
+    "generator": null,
+    "detailstufe": "-",
+    "lage": "Fahrzeugkreis (jetzt BT-661…665, Positionen 660.1…660.5)",
+    "farbe": "-"
+   },
+   "akten": [
+    "ENT-108",
+    "ENT-157"
+   ],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-600",
+   "bt_name": "Schnittstelle Fahrzeugkreis",
+   "hinweis_opus": "Art S; Kühlkreis wird seit Opus-Zusatz 2026-11-19 als Positionen 660.1…660.5 modelliert (Detailstufe -).",
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 0.0,
+    "einheit": "–",
+    "status": "entfällt",
+    "herkunft": "ersetzt durch BT-661…665 (ENT-157, ERW-KO2 Punkt 5)"
+   }
+  },
+  {
+   "pos": "660.1",
+   "bt": "BT-661",
+   "benennung": "Kühlmittelpumpe (elektrisch)",
+   "art": "K",
+   "werkstoff": "offen",
+   "bemerkung": "",
+   "quelle": "",
+   "menge_NMC": 1,
+   "masse_ges_kg": 1.0,
+   "masse_je_kg": 1.0,
+   "masse_quelle": "G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json)",
+   "geometrie": {
+    "generator": "kuehlung.pumpe",
+    "detailstufe": "F",
+    "lage": "im Kühlkreis außerhalb der Kühlplatten",
+    "farbe": "kunststoff_schwarz"
+   },
+   "akten": [],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-600",
+   "bt_name": "Kühlmittelpumpe (elektrisch)",
+   "hinweis_opus": "Opus-Zusatz 2026-11-19 (Autor: Kühlkreis modellieren). Masse aus G5-CAD (folgt).",
+   "masse_alt_kg": "offen",
+   "hersteller_typ": "Pierburg CWA100-3 (12 V PWM)",
+   "datenblatt": [
+    {
+     "datei": "BT-661_pierburg_CWA100-3.pdf",
+     "seite": "S. 1"
+    }
+   ],
+   "masse_datenblatt_kg": 1.0,
+   "masse_datenblatt_hinweis": "ca. 1000 g (S. 1)",
+   "preis": {
+    "wert": 60,
+    "einheit": "€/Stück",
+    "status": "Schätzung (Annahme Opus, ERW-KO2)",
+    "herkunft": "ERW-KO2 Punkt 5: Serienschätzung Opus (ENT-157, Kühlkreis im Lieferumfang) (Schlüssel BT-661)"
+   }
+  },
+  {
+   "pos": "660.2",
+   "bt": "BT-662",
+   "benennung": "Chiller (Kältemittel-Wasser-Wärmetauscher)",
+   "art": "K",
+   "werkstoff": "offen",
+   "bemerkung": "",
+   "quelle": "",
+   "menge_NMC": 1,
+   "masse_ges_kg": 1.2,
+   "masse_je_kg": 1.2,
+   "masse_quelle": "G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json)",
+   "geometrie": {
+    "generator": "kuehlung.chiller",
+    "detailstufe": "F",
+    "lage": "im Kühlkreis",
+    "farbe": "kunststoff_schwarz"
+   },
+   "akten": [],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-600",
+   "bt_name": "Chiller (Kältemittel-Wasser-Wärmetauscher)",
+   "hinweis_opus": "Opus-Zusatz 2026-11-19 (Autor: Kühlkreis modellieren). Masse aus G5-CAD (folgt).",
+   "masse_alt_kg": "offen",
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 70,
+    "einheit": "€/Stück",
+    "status": "Schätzung (Annahme Opus, ERW-KO2)",
+    "herkunft": "ERW-KO2 Punkt 5: Serienschätzung Opus (ENT-157, Kühlkreis im Lieferumfang) (Schlüssel BT-662)"
+   }
+  },
+  {
+   "pos": "660.3",
+   "bt": "BT-663",
+   "benennung": "3/2-Wege-Ventil",
+   "art": "K",
+   "werkstoff": "offen",
+   "bemerkung": "",
+   "quelle": "",
+   "menge_NMC": 1,
+   "masse_ges_kg": 0.4,
+   "masse_je_kg": 0.4,
+   "masse_quelle": "G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json)",
+   "geometrie": {
+    "generator": "kuehlung.ventil",
+    "detailstufe": "F",
+    "lage": "im Kühlkreis",
+    "farbe": "kunststoff_schwarz"
+   },
+   "akten": [],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-600",
+   "bt_name": "3/2-Wege-Ventil",
+   "hinweis_opus": "Opus-Zusatz 2026-11-19 (Autor: Kühlkreis modellieren). Masse aus G5-CAD (folgt).",
+   "masse_alt_kg": "offen",
+   "hersteller_typ": "Pierburg 3/2-Wege (Broschüre F0001)",
+   "datenblatt": [
+    {
+     "datei": "BT-663_pierburg_CoolantValves.pdf",
+     "seite": "S. 1"
+    }
+   ],
+   "masse_datenblatt_kg": null,
+   "masse_datenblatt_hinweis": "Broschüre nennt keine Masse",
+   "preis": {
+    "wert": 35,
+    "einheit": "€/Stück",
+    "status": "Schätzung (Annahme Opus, ERW-KO2)",
+    "herkunft": "ERW-KO2 Punkt 5: Serienschätzung Opus (ENT-157, Kühlkreis im Lieferumfang) (Schlüssel BT-663)"
+   }
+  },
+  {
+   "pos": "660.4",
+   "bt": "BT-664",
+   "benennung": "Kühlmittelschläuche",
+   "art": "K",
+   "werkstoff": "offen",
+   "bemerkung": "",
+   "quelle": "",
+   "menge_NMC": 1,
+   "masse_ges_kg": 0.3944,
+   "masse_je_kg": 0.3944,
+   "masse_quelle": "G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json)",
+   "geometrie": {
+    "generator": "kuehlung.schlauch",
+    "detailstufe": "F",
+    "lage": "zwischen Packanschlüssen, Pumpe, Chiller, Ventil, Behälter",
+    "farbe": "kunststoff_schwarz"
+   },
+   "akten": [],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-600",
+   "bt_name": "Kühlmittelschläuche",
+   "hinweis_opus": "Opus-Zusatz 2026-11-19 (Autor: Kühlkreis modellieren). Masse aus G5-CAD (folgt).",
+   "menge_quelle": "CAD",
+   "masse_alt_kg": "offen",
+   "hersteller_typ": "EPDM DN19 (Gates 4175EC, Autorliste)",
+   "datenblatt": [],
+   "masse_datenblatt_kg": null,
+   "masse_datenblatt_hinweis": "kein Herstellerdatenblatt (Autorliste)",
+   "preis": {
+    "wert": 15,
+    "einheit": "€/Satz",
+    "status": "Schätzung (Annahme Opus, ERW-KO2)",
+    "herkunft": "ERW-KO2 Punkt 5: Serienschätzung Opus (ENT-157, Kühlkreis im Lieferumfang) (Schlüssel BT-664)"
+   }
+  },
+  {
+   "pos": "660.5",
+   "bt": "BT-665",
+   "benennung": "Ausgleichsbehälter",
+   "art": "K",
+   "werkstoff": "offen",
+   "bemerkung": "",
+   "quelle": "",
+   "menge_NMC": 1,
+   "masse_ges_kg": 0.3,
+   "masse_je_kg": 0.3,
+   "masse_quelle": "G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json)",
+   "geometrie": {
+    "generator": "kuehlung.ausgleichsbehaelter",
+    "detailstufe": "F",
+    "lage": "im Kühlkreis",
+    "farbe": "kunststoff_schwarz"
+   },
+   "akten": [],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-600",
+   "bt_name": "Ausgleichsbehälter",
+   "hinweis_opus": "Opus-Zusatz 2026-11-19 (Autor: Kühlkreis modellieren). Masse aus G5-CAD (folgt).",
+   "masse_alt_kg": "offen",
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 8,
+    "einheit": "€/Stück",
+    "status": "Schätzung (Annahme Opus, ERW-KO2)",
+    "herkunft": "ERW-KO2 Punkt 5: Serienschätzung Opus (ENT-157, Kühlkreis im Lieferumfang) (Schlüssel BT-665)"
+   }
+  },
+  {
+   "pos": "700.1",
+   "bt": "BT-710",
+   "benennung": "Schaltbox (Gehäuse)",
+   "art": "E",
+   "werkstoff": "Al",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json gruppen.E2_Schaltbox",
+   "menge_NMC": 1,
+   "masse_ges_kg": 1.32948,
+   "masse_je_kg": 1.32948,
+   "masse_quelle": "CAD-Volumen x Dichte",
+   "geometrie": {
+    "generator": "schaltbox.gehaeuse",
+    "detailstufe": "K",
+    "lage": "Deckel hinten (ENT-144), x0,y0,z0 = [1588.0, 748.0, 115.0]",
+    "farbe": "al_blank"
+   },
+   "akten": [
+    "ENT-144"
+   ],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-700",
+   "bt_name": "Schaltbox",
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 8,
+    "einheit": "€/kg",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-710)"
+   }
+  },
+  {
+   "pos": "700.1b",
+   "bt": "BT-710",
+   "benennung": "Schaltbox-Deckel",
+   "art": "E",
+   "werkstoff": "Al",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json gruppen.E2_Schaltbox_Deckel",
+   "menge_NMC": 2,
+   "masse_ges_kg": 0.597621,
+   "masse_je_kg": 0.298811,
+   "masse_quelle": "CAD-Volumen x Dichte",
+   "geometrie": {
+    "generator": "schaltbox.deckel",
+    "detailstufe": "K",
+    "lage": "auf der Schaltbox, Dichtung 3 x 3, M5 alle 60 mm",
+    "farbe": "al_eloxiert"
+   },
+   "akten": [
+    "ENT-144"
+   ],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-700",
+   "bt_name": "Schaltbox",
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 8,
+    "einheit": "€/kg",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-710)"
+   }
+  },
+  {
+   "pos": "700.2",
+   "bt": "BT-711",
+   "benennung": "Hauptschütz",
+   "art": "K",
+   "werkstoff": "E2 Teil (Masse ERW-E2 N1)",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json annahmen A_e2_*_masse_kg (ERW-E2 N1)",
+   "menge_NMC": 2,
+   "masse_ges_kg": 0.8,
+   "masse_je_kg": 0.4,
+   "masse_quelle": "Datenblatt (cad/baukasten/annahmen_g5.json, Opus 2026-11-19)",
+   "geometrie": {
+    "generator": "kaufteile.schuetz_haupt",
+    "detailstufe": "F",
+    "lage": "liegend in der Schaltbox, Bolzen 2 x M8",
+    "farbe": "kunststoff_schwarz"
+   },
+   "akten": [
+    "ENT-123",
+    "ENT-124"
+   ],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-700",
+   "bt_name": "Hauptschütze",
+   "hersteller_typ": "GLVAC GLFX250/…-HC5 (12–800 VDC, 250 A)",
+   "datenblatt": [
+    {
+     "datei": "BT-711_glvac_GLFX250.pdf",
+     "seite": "S. 1, 2, 6"
+    }
+   ],
+   "masse_datenblatt_kg": null,
+   "masse_datenblatt_hinweis": "Datenblatt ca. 400 g je Schütz (S. 1/2/6); gültige Masse laut Opus 2026-11-19 in cad/baukasten/annahmen_g5.json A_e2_schuetz_masse_kg",
+   "preis": {
+    "wert": 45,
+    "einheit": "€/Stück",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-711)"
+   }
+  },
+  {
+   "pos": "700.3",
+   "bt": "BT-712",
+   "benennung": "Vorladeschütz und Vorladewiderstand (Widerstandsmasse 0 gesetzt)",
+   "art": "K",
+   "werkstoff": "E2 Teil (Masse ERW-E2 N1)",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json annahmen A_e2_*_masse_kg (ERW-E2 N1)",
+   "menge_NMC": 2,
+   "masse_ges_kg": 0.41,
+   "masse_je_kg": 0.205,
+   "masse_quelle": "Datenblatt (cad/baukasten/annahmen_g5.json, Opus 2026-11-19)",
+   "geometrie": {
+    "generator": "kaufteile.schuetz_vorlade",
+    "detailstufe": "F",
+    "lage": "liegend in der Schaltbox",
+    "farbe": "kunststoff_schwarz"
+   },
+   "akten": [
+    "ENT-125",
+    "ENT-126"
+   ],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-700",
+   "bt_name": "Vorladung",
+   "hersteller_typ": "Gigavac GV200 (Vorladeschütz) + Vishay RH050 (Vorladewiderstand)",
+   "datenblatt": [
+    {
+     "datei": "BT-712_gigavac_GV200.pdf",
+     "seite": "S. 2, 3"
+    },
+    {
+     "datei": "BT-712_vishay_RH050.pdf",
+     "seite": "S. 1, 2"
+    }
+   ],
+   "masse_datenblatt_kg": null,
+   "masse_datenblatt_hinweis": "GV200 380 g (S. 2) + RH050 28 g (S. 1); gültige Masse laut Opus 2026-11-19 in cad/baukasten/annahmen_g5.json A_e2_vorlade_masse_kg",
+   "preis": {
+    "wert": 25,
+    "einheit": "€/Stück",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-712)"
+   }
+  },
+  {
+   "pos": "700.4",
+   "bt": "BT-713",
+   "benennung": "Pyrosicherung und Schmelzsicherung",
+   "art": "K",
+   "werkstoff": "E2 Teil (Masse ERW-E2 N1)",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json annahmen A_e2_*_masse_kg (ERW-E2 N1)",
+   "menge_NMC": 2,
+   "masse_ges_kg": 0.33,
+   "masse_je_kg": 0.165,
+   "masse_quelle": "Annahme (ERW-E2 N1)",
+   "geometrie": {
+    "generator": "kaufteile.sicherungen",
+    "detailstufe": "F",
+    "lage": "Schaltbox, Pyro Ø30 x 80, Schmelz im Halter 40 x 40 x 95",
+    "farbe": "kunststoff_schwarz"
+   },
+   "akten": [
+    "ENT-127",
+    "ENT-129"
+   ],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-700",
+   "bt_name": "Hauptsicherung",
+   "hersteller_typ": "Sensata PyroFuse STPS500 (Pyro) + Eaton EKC14-40 (Schmelzsicherung)",
+   "datenblatt": [
+    {
+     "datei": "BT-713_sensata_pyrofuse.pdf",
+     "seite": "S. 1, 2"
+    },
+    {
+     "datei": "nicht geladen (Eaton EKC14-40, nur Händlerangabe Digi-Key)",
+     "seite": "–"
+    }
+   ],
+   "masse_datenblatt_kg": null,
+   "masse_datenblatt_hinweis": "Pyro 230 g ±5 % (S. 1/2); Masse der Schmelzsicherung fehlt (Datenblatt nicht geladen): Gesamtmasse nicht aus Datenblättern bildbar",
+   "preis": {
+    "wert": 44.04,
+    "einheit": "€/Satz",
+    "status": "Schätzung (Annahme Opus, ERW-KO2)",
+    "herkunft": "ERW-KO2 Punkt 3: Pyro 35 (Schätzung) + Schmelzsicherung 9,04 (abgeleitet) = 44,04 (Schlüssel BT-713)",
+    "teile": [
+     {
+      "name": "Pyrosicherung",
+      "wert": 35,
+      "status": "Schätzung (Annahme Opus, ERW-KO2)"
+     },
+     {
+      "name": "Schmelzsicherung (Eaton EKC14-40)",
+      "wert": 9.04,
+      "status": "abgeleitet aus Distributorpreis"
+     }
+    ]
+   }
+  },
+  {
+   "pos": "700.5",
+   "bt": "BT-720",
+   "benennung": "Service-Trennstecker",
+   "art": "K",
+   "werkstoff": "E2 Teil (Masse ERW-E2 N1)",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json annahmen A_e2_*_masse_kg (ERW-E2 N1)",
+   "menge_NMC": 1,
+   "masse_ges_kg": 0.2,
+   "masse_je_kg": 0.2,
+   "masse_quelle": "Annahme (ERW-E2 N1)",
+   "geometrie": {
+    "generator": "kaufteile.trennstecker",
+    "detailstufe": "F",
+    "lage": "in der Reihenmitte, oben zugänglich (ENT-131)",
+    "farbe": "hv_orange"
+   },
+   "akten": [
+    "ENT-130",
+    "ENT-131"
+   ],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-700",
+   "bt_name": "Service-Trennstecker",
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 40,
+    "einheit": "€/Stück",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-720)"
+   }
+  },
+  {
+   "pos": "700.6",
+   "bt": "BT-730",
+   "benennung": "HV-Steckverbinder 250 A und 40 A",
+   "art": "K",
+   "werkstoff": "E2 Teil (Masse ERW-E2 N1)",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json annahmen A_e2_*_masse_kg (ERW-E2 N1)",
+   "menge_NMC": 2,
+   "masse_ges_kg": 0.55,
+   "masse_je_kg": 0.275,
+   "masse_quelle": "Annahme (ERW-E2 N1)",
+   "geometrie": {
+    "generator": "kaufteile.hv_stecker",
+    "detailstufe": "F",
+    "lage": "Schaltbox, Flansch 90 x 70 x 8 bzw. 50 x 40 x 6",
+    "farbe": "kunststoff_schwarz"
+   },
+   "akten": [
+    "ENT-132",
+    "ENT-133"
+   ],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-700",
+   "bt_name": "HV-Steckverbinder",
+   "hersteller_typ": "TE HVP 800 (250 A) / TE HVA 280 (40 A)",
+   "datenblatt": [
+    {
+     "datei": "BT-730_te_HVP800_katalog.pdf",
+     "seite": "S. 2, 3"
+    },
+    {
+     "datei": "BT-730_te_HVA280_katalog.pdf",
+     "seite": "S. 2, 7"
+    }
+   ],
+   "masse_datenblatt_kg": null,
+   "masse_datenblatt_hinweis": "Datenblätter nennen keine Masse",
+   "preis": {
+    "wert": 80,
+    "einheit": "€/Satz",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-730)"
+   }
+  },
+  {
+   "pos": "700.7",
+   "bt": "BT-740",
+   "benennung": "NV-Steckverbinder 26-polig",
+   "art": "K",
+   "werkstoff": "E2 Teil (Masse ERW-E2 N1)",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json annahmen A_e2_*_masse_kg (ERW-E2 N1)",
+   "menge_NMC": 1,
+   "masse_ges_kg": 0.05,
+   "masse_je_kg": 0.05,
+   "masse_quelle": "Annahme (ERW-E2 N1)",
+   "geometrie": {
+    "generator": "kaufteile.nv_stecker",
+    "detailstufe": "F",
+    "lage": "Schaltbox, Flansch 50 x 30 x 5",
+    "farbe": "kunststoff_schwarz"
+   },
+   "akten": [
+    "ENT-134"
+   ],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-700",
+   "bt_name": "NV-Steckverbinder",
+   "hersteller_typ": "TE AMPSEAL (26-polig offen, Autorliste)",
+   "datenblatt": [],
+   "masse_datenblatt_kg": null,
+   "masse_datenblatt_hinweis": "kein 26-poliges Datenblatt gefunden",
+   "preis": {
+    "wert": 15,
+    "einheit": "€/Stück",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-740)"
+   }
+  },
+  {
+   "pos": "700.8",
+   "bt": "BT-750",
+   "benennung": "Entgasungsventil mit Entgasungskanal",
+   "art": "K",
+   "werkstoff": "offen",
+   "bemerkung": "",
+   "quelle": "",
+   "menge_NMC": 1,
+   "masse_ges_kg": "offen",
+   "masse_je_kg": "offen",
+   "masse_quelle": "offen (keine CAD-Geometrie, keine Akte)",
+   "geometrie": {
+    "generator": "kaufteile.entgasungsventil",
+    "detailstufe": "H",
+    "lage": "Rückwand",
+    "farbe": "kunststoff_schwarz"
+   },
+   "akten": [],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-700",
+   "bt_name": "Pack-Entgasung",
+   "hinweis_opus": "Menge 1 (Opus 2026-11-19). Keine Formangabe (W34 läuft): Stufe H bis W34.",
+   "hersteller_typ": "Vernay VoltaVent",
+   "datenblatt": [
+    {
+     "datei": "BT-750_vernay_VoltaVent.pdf",
+     "seite": "S. 3"
+    }
+   ],
+   "masse_datenblatt_kg": null,
+   "masse_datenblatt_hinweis": "Datenblatt nennt keine Masse",
+   "preis": {
+    "wert": 8,
+    "einheit": "€/Stück",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-750)"
+   }
+  },
+  {
+   "pos": "700.9",
+   "bt": "BT-760",
+   "benennung": "Heizung (Kälte, −20 °C laut REQ-P08)",
+   "art": "K",
+   "werkstoff": "im Fahrzeug-Kühlkreis (ENT-135)",
+   "bemerkung": "",
+   "quelle": "",
+   "menge_NMC": "offen",
+   "masse_ges_kg": "offen",
+   "masse_je_kg": "offen",
+   "masse_quelle": "offen (keine CAD-Geometrie, keine Akte)",
+   "geometrie": {
+    "generator": null,
+    "detailstufe": "-",
+    "lage": "außerhalb des Packs (PTC im Kühlkreis des Fahrzeugs, ENT-135 vorgeschlagen)",
+    "farbe": "-"
+   },
+   "akten": [
+    "ENT-135",
+    "ENT-136"
+   ],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-700",
+   "bt_name": "Heizung",
+   "hinweis_opus": "Heizung im Fahrzeug-Kühlkreis, keine Pack-Geometrie. Opus bestätigen.",
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 0,
+    "einheit": "€/Stück",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-760)"
+   }
+  },
+  {
+   "pos": "700.10",
+   "bt": "BT-770",
+   "benennung": "Gas- und Drucksensor",
+   "art": "K",
+   "werkstoff": "E2 Teil (Masse ERW-E2 N1)",
+   "bemerkung": "",
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json annahmen A_e2_*_masse_kg (ERW-E2 N1)",
+   "menge_NMC": 1,
+   "masse_ges_kg": 0.015,
+   "masse_je_kg": 0.015,
+   "masse_quelle": "Annahme (ERW-E2 N1)",
+   "geometrie": {
+    "generator": "kaufteile.gassensor",
+    "detailstufe": "F",
+    "lage": "Schaltbox",
+    "farbe": "kunststoff_schwarz"
+   },
+   "akten": [
+    "ENT-137"
+   ],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-700",
+   "bt_name": "Gas- und Drucksensor",
+   "hersteller_typ": "Amphenol SGX Sensortech TRDU5",
+   "datenblatt": [
+    {
+     "datei": "BT-770_amphenol_SGX_TRDU5.pdf",
+     "seite": "S. 3"
+    }
+   ],
+   "masse_datenblatt_kg": null,
+   "masse_datenblatt_hinweis": "Datenblatt nennt nur „< 15 g“ (Obergrenze, keine Masse)",
+   "preis": {
+    "wert": 25,
+    "einheit": "€/Stück",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-770)"
+   }
+  },
+  {
+   "pos": "700.11",
+   "bt": "BT-780",
+   "benennung": "Kennzeichnung (Typschild, HV-Warnung)",
+   "art": "K",
+   "werkstoff": "offen",
+   "bemerkung": "",
+   "quelle": "",
+   "menge_NMC": 1,
+   "masse_ges_kg": "offen",
+   "masse_je_kg": "offen",
+   "masse_quelle": "offen (keine CAD-Geometrie, keine Akte)",
+   "geometrie": {
+    "generator": "kaufteile.typschild",
+    "detailstufe": "H",
+    "lage": "auf dem Deckel",
+    "farbe": "kunststoff_schwarz"
+   },
+   "akten": [],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-700",
+   "bt_name": "Kennzeichnung",
+   "hinweis_opus": "Menge 1 (Opus 2026-11-19). Keine Formangabe: Stufe H bis W34.",
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 2,
+    "einheit": "€/Stück",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-780)"
+   }
+  }
+ ]
+}

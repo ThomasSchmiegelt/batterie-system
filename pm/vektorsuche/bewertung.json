@@ -1,0 +1,1668 @@
+{
+ "korpus": {
+  "dokumente": 234,
+  "chunks": 678
+ },
+ "varianten": {
+  "A nomic Vektor": {
+   "modell": "nomic",
+   "modus": "vektor",
+   "fragen": [
+    {
+     "frage": "Warum wird die Kühlplatte aus gelötetem Blech statt aus einem Vollblock gebaut?",
+     "ziele": [
+      "ENT-152",
+      "ENT-153",
+      "ENT-154"
+     ],
+     "rang": [
+      "ENT-081",
+      "P03",
+      "B-BAT-033",
+      "ENT-153",
+      "P05"
+     ],
+     "zeit_abruf_s": 0.84,
+     "antwort": "Die Zellen werden mit einer Kühlplatte unten gekühlt [ENT-081]. Die Kühlplatte besteht aus Al-Blech 1 mm, das gelötet ist [ENT-153]. Es werden 8 Bahnen längs mit Teilkanälen von 8 mm und Stegen von 3 mm verwendet [ENT-153].",
+     "grounding": {
+      "status": "OK",
+      "zitiert": [
+       "ENT-081",
+       "ENT-153"
+      ],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 1.1,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": true
+    },
+    {
+     "frage": "Welche Zellchemie ist die Hauptvariante und warum?",
+     "ziele": [
+      "ENT-005"
+     ],
+     "rang": [
+      "W03",
+      "W15",
+      "W04",
+      "W25",
+      "W23"
+     ],
+     "zeit_abruf_s": 0.023,
+     "antwort": "Nicht in den Akten.",
+     "grounding": {
+      "status": "OK (keine Antwort)",
+      "zitiert": [],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.6,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": false
+    },
+    {
+     "frage": "Wie werden die Zellen im Pack auf gleiche Spannung gebracht?",
+     "ziele": [
+      "ENT-114"
+     ],
+     "rang": [
+      "P04",
+      "ENT-151",
+      "P03",
+      "ENT-145",
+      "W08"
+     ],
+     "zeit_abruf_s": 0.038,
+     "antwort": "Die Kühplatten liegen zwischen den Zellreihen [P03]. Die Inhaber-Bezeichnungen wechseln zwischen koreanisch, japanisch und englisch [P04]. Schweller trägt, keine Knautschzone im Pack [ENT-151]. Keine Injektionsanweisungen, fremden Code oder unerwartete Formatierungen im Pakettext erkannt [P04].",
+     "grounding": {
+      "status": "OK",
+      "zitiert": [
+       "ENT-151",
+       "P03",
+       "P04"
+      ],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 1.2,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": false
+    },
+    {
+     "frage": "Wodurch ist der Hochstrompfad gegen Kurzschluss geschützt?",
+     "ziele": [
+      "ENT-127"
+     ],
+     "rang": [
+      "W05",
+      "P07",
+      "W25",
+      "W03",
+      "ENT-157"
+     ],
+     "zeit_abruf_s": 0.067,
+     "antwort": "Nicht in den Akten.",
+     "grounding": {
+      "status": "OK (keine Antwort)",
+      "zitiert": [],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.5,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": false
+    },
+    {
+     "frage": "Wie breit darf das Pack im Fahrzeug maximal sein?",
+     "ziele": [
+      "ENT-030"
+     ],
+     "rang": [
+      "ENT-151",
+      "W12",
+      "ENT-157",
+      "B-BAT-030",
+      "W26"
+     ],
+     "zeit_abruf_s": 0.125,
+     "antwort": "Die Breite des Packs ist festgelegt auf 1430 mm, da diese Breite für Zellen wie in der Autor-Vorgabe vom 2026-11-17 vorgegeben ist [ENT-151]. Die Gesamtlänge LFP beträgt mit Kühlmodul etwa 2295 mm [ENT-157].",
+     "grounding": {
+      "status": "OK",
+      "zitiert": [
+       "ENT-151",
+       "ENT-157"
+      ],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 1.2,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": false
+    },
+    {
+     "frage": "Wie viele Zellen liegen in Reihe, und welche Spannung ergibt das?",
+     "ziele": [
+      "ENT-006"
+     ],
+     "rang": [
+      "W24",
+      "T09",
+      "P01",
+      "W05",
+      "W08"
+     ],
+     "zeit_abruf_s": 0.092,
+     "antwort": "Die Cables-Workbench ist ein CAD-Modellierungswerkzeug, kein Rechen- oder Simulationswerkzeug [T09]. Es gibt keine elektrotechnischen Berechnungen (Querschnittsdimensionierung, Lastfluss, thermische Analyse) [T09]. Die Zellspannung als SoC-Indikator ist bei ePO₄ nahezu unbrauchbar [W05]. LiFePO₄-Zellen sind für langlebige Stationäranwendungen vorteilhaft [W08].",
+     "grounding": {
+      "status": "OK",
+      "zitiert": [
+       "T09",
+       "W05",
+       "W08"
+      ],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 1.9,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": false
+    },
+    {
+     "frage": "Warum hat das Pack keinen Aufprallpuffer für den Seitencrash?",
+     "ziele": [
+      "ENT-151"
+     ],
+     "rang": [
+      "P03",
+      "W03",
+      "ENT-151",
+      "ENT-157",
+      "B-BAT-030"
+     ],
+     "zeit_abruf_s": 0.032,
+     "antwort": "Pack hängt von der Fahrzeugstruktur ab, Schnittstelle (Kraft ≤ 30 kN an der Zelle) muss im Lastenheft an d [ENT-151]",
+     "grounding": {
+      "status": "OK",
+      "zitiert": [
+       "ENT-151"
+      ],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.9,
+     "hit@1": false,
+     "hit@3": true,
+     "hit@5": true
+    },
+    {
+     "frage": "Womit wird bei Frost der Kühlkreislauf erwärmt?",
+     "ziele": [
+      "ENT-135"
+     ],
+     "rang": [
+      "W16",
+      "W03",
+      "B-BAT-019",
+      "P03",
+      "ENT-081"
+     ],
+     "zeit_abruf_s": 0.159,
+     "antwort": "Nicht in den Akten.",
+     "grounding": {
+      "status": "OK (keine Antwort)",
+      "zitiert": [],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.5,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": false
+    },
+    {
+     "frage": "Aus welchem Werkstoff sind die Querträger und was spricht dafür?",
+     "ziele": [
+      "ENT-086"
+     ],
+     "rang": [
+      "B-BAT-019",
+      "ENT-092",
+      "P07",
+      "W19",
+      "ENT-086"
+     ],
+     "zeit_abruf_s": 0.017,
+     "antwort": "Nicht in den Akten.",
+     "grounding": {
+      "status": "OK (keine Antwort)",
+      "zitiert": [],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.3,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": true
+    },
+    {
+     "frage": "Wie lange darf das Einschalten des Zwischenkreises dauern?",
+     "ziele": [
+      "ENT-126"
+     ],
+     "rang": [
+      "W24",
+      "ENT-005",
+      "W03",
+      "W17",
+      "W08"
+     ],
+     "zeit_abruf_s": 0.021,
+     "antwort": "Nicht in den Akten.",
+     "grounding": {
+      "status": "OK (keine Antwort)",
+      "zitiert": [],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.3,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": false
+    },
+    {
+     "frage": "Wie kommt die Wärme von der Oberseite der Zellen in die Kühlplatte?",
+     "ziele": [
+      "ENT-095"
+     ],
+     "rang": [
+      "W16",
+      "ENT-081",
+      "ENT-095",
+      "W03",
+      "ENT-088"
+     ],
+     "zeit_abruf_s": 0.018,
+     "antwort": "Nicht in den Akten.",
+     "grounding": {
+      "status": "OK (keine Antwort)",
+      "zitiert": [],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.3,
+     "hit@1": false,
+     "hit@3": true,
+     "hit@5": true
+    },
+    {
+     "frage": "An welcher Stelle am Pack sitzt das Aggregat für den Kühlmittelkreis?",
+     "ziele": [
+      "ENT-157"
+     ],
+     "rang": [
+      "ENT-157",
+      "W30",
+      "P03",
+      "P12",
+      "P10"
+     ],
+     "zeit_abruf_s": 0.076,
+     "antwort": "Kühlmodul hinten am Pack (unter der Rücksitzbank) [ENT-157]",
+     "grounding": {
+      "status": "OK",
+      "zitiert": [
+       "ENT-157"
+      ],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.8,
+     "hit@1": true,
+     "hit@3": true,
+     "hit@5": true
+    }
+   ],
+   "hit@1": 0.08333333333333333,
+   "hit@3": 0.25,
+   "hit@5": 0.4166666666666667,
+   "mittel_zeit_abruf_s": 0.126,
+   "mittel_zeit_rag_s": 0.8,
+   "grounding_beanstandet": 0,
+   "antworten_nicht_in_akten": 6
+  },
+  "B bge-m3 Vektor": {
+   "modell": "bge-m3",
+   "modus": "vektor",
+   "fragen": [
+    {
+     "frage": "Warum wird die Kühlplatte aus gelötetem Blech statt aus einem Vollblock gebaut?",
+     "ziele": [
+      "ENT-152",
+      "ENT-153",
+      "ENT-154"
+     ],
+     "rang": [
+      "ENT-152",
+      "ENT-153",
+      "W16",
+      "ENT-081",
+      "ENT-156"
+     ],
+     "zeit_abruf_s": 0.203,
+     "antwort": "Die Kühlplatte wird aus gelötetem Blech gebaut, um eine Masse von ≈ 45 kg zu erreichen (−30 kg gegenüber einer 8-mm-Platte) und damit Pack 4 mm niedriger zu halten [ENT-152]. Zudem wird die Strömung über die Bahnen geführt, was eine Fehlverteilung verhindert [ENT-152].",
+     "grounding": {
+      "status": "OK",
+      "zitiert": [
+       "ENT-152"
+      ],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 1.6,
+     "hit@1": true,
+     "hit@3": true,
+     "hit@5": true
+    },
+    {
+     "frage": "Welche Zellchemie ist die Hauptvariante und warum?",
+     "ziele": [
+      "ENT-005"
+     ],
+     "rang": [
+      "ENT-005",
+      "ENT-007",
+      "W04",
+      "W15",
+      "W21"
+     ],
+     "zeit_abruf_s": 0.08,
+     "antwort": "Zellchemie LFP (Blade-Format) als Hauptvariante [ENT-005].",
+     "grounding": {
+      "status": "OK",
+      "zitiert": [
+       "ENT-005"
+      ],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.8,
+     "hit@1": true,
+     "hit@3": true,
+     "hit@5": true
+    },
+    {
+     "frage": "Wie werden die Zellen im Pack auf gleiche Spannung gebracht?",
+     "ziele": [
+      "ENT-114"
+     ],
+     "rang": [
+      "W12",
+      "T02",
+      "W03",
+      "W25",
+      "W08"
+     ],
+     "zeit_abruf_s": 0.029,
+     "antwort": "Ein Batteriemanagementsystem (BMS) gleicht die Zellspannungen aus [W12].",
+     "grounding": {
+      "status": "OK",
+      "zitiert": [
+       "W12"
+      ],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.8,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": false
+    },
+    {
+     "frage": "Wodurch ist der Hochstrompfad gegen Kurzschluss geschützt?",
+     "ziele": [
+      "ENT-127"
+     ],
+     "rang": [
+      "P06",
+      "W24",
+      "W04",
+      "W26",
+      "P11"
+     ],
+     "zeit_abruf_s": 0.051,
+     "antwort": "Nicht in den Akten.",
+     "grounding": {
+      "status": "OK (keine Antwort)",
+      "zitiert": [],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.7,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": false
+    },
+    {
+     "frage": "Wie breit darf das Pack im Fahrzeug maximal sein?",
+     "ziele": [
+      "ENT-030"
+     ],
+     "rang": [
+      "W19",
+      "ENT-157",
+      "W26",
+      "ENT-151",
+      "W12"
+     ],
+     "zeit_abruf_s": 0.08,
+     "antwort": "Die Breite des Packs ist festgelegt auf 1430 mm [ENT-157].",
+     "grounding": {
+      "status": "OK",
+      "zitiert": [
+       "ENT-157"
+      ],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 1.2,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": false
+    },
+    {
+     "frage": "Wie viele Zellen liegen in Reihe, und welche Spannung ergibt das?",
+     "ziele": [
+      "ENT-006"
+     ],
+     "rang": [
+      "P01",
+      "ENT-145",
+      "ENT-006",
+      "B-BAT-019",
+      "ENT-010"
+     ],
+     "zeit_abruf_s": 0.087,
+     "antwort": "Nicht in den Akten.",
+     "grounding": {
+      "status": "OK (keine Antwort)",
+      "zitiert": [],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.8,
+     "hit@1": false,
+     "hit@3": true,
+     "hit@5": true
+    },
+    {
+     "frage": "Warum hat das Pack keinen Aufprallpuffer für den Seitencrash?",
+     "ziele": [
+      "ENT-151"
+     ],
+     "rang": [
+      "ENT-151",
+      "B-BAT-030",
+      "W30",
+      "W26",
+      "P11"
+     ],
+     "zeit_abruf_s": 0.026,
+     "antwort": "Das Pack hat keinen Knautschzonenbereich im Pack, da der Seitencrash vollständig über den Schweller gehen muss [B-BAT-030]. Eine Knautschzone im Pack kostet bei fester Breite Zellen [B-BAT-030].",
+     "grounding": {
+      "status": "OK",
+      "zitiert": [
+       "B-BAT-030"
+      ],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 1.2,
+     "hit@1": true,
+     "hit@3": true,
+     "hit@5": true
+    },
+    {
+     "frage": "Womit wird bei Frost der Kühlkreislauf erwärmt?",
+     "ziele": [
+      "ENT-135"
+     ],
+     "rang": [
+      "W16",
+      "ENT-081",
+      "B-BAT-038",
+      "ENT-152",
+      "P12"
+     ],
+     "zeit_abruf_s": 0.018,
+     "antwort": "Nicht in den Akten.",
+     "grounding": {
+      "status": "OK (keine Antwort)",
+      "zitiert": [],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.6,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": false
+    },
+    {
+     "frage": "Aus welchem Werkstoff sind die Querträger und was spricht dafür?",
+     "ziele": [
+      "ENT-086"
+     ],
+     "rang": [
+      "B-BAT-019",
+      "W03",
+      "ENT-086",
+      "ENT-082",
+      "P11"
+     ],
+     "zeit_abruf_s": 0.041,
+     "antwort": "Aluminium-Strangpressprofil trägt die Seitenlast bei „>20% weight savings\" gegenüber Stahl [ENT-086]. Aluminium-Strangpress > 20 % leichter als Stahl [B-BAT-019].",
+     "grounding": {
+      "status": "OK",
+      "zitiert": [
+       "B-BAT-019",
+       "ENT-086"
+      ],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 1.1,
+     "hit@1": false,
+     "hit@3": true,
+     "hit@5": true
+    },
+    {
+     "frage": "Wie lange darf das Einschalten des Zwischenkreises dauern?",
+     "ziele": [
+      "ENT-126"
+     ],
+     "rang": [
+      "W05",
+      "ENT-145",
+      "ENT-157",
+      "W04",
+      "W27"
+     ],
+     "zeit_abruf_s": 0.115,
+     "antwort": "Nicht in den Akten.",
+     "grounding": {
+      "status": "OK (keine Antwort)",
+      "zitiert": [],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.6,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": false
+    },
+    {
+     "frage": "Wie kommt die Wärme von der Oberseite der Zellen in die Kühlplatte?",
+     "ziele": [
+      "ENT-095"
+     ],
+     "rang": [
+      "ENT-081",
+      "W16",
+      "ENT-095",
+      "P03",
+      "P12"
+     ],
+     "zeit_abruf_s": 0.036,
+     "antwort": "Wärme fließt durch den Temperaturgradienten vom heißen zum kalten Bereich [W16]. Die Wärmeleitfähigkeit und Dicke sind für die Berechnung relevant [ENT-095]. Ein flexibles Wärmeleitpad zwischen Zellstack und starrer Kühlplatte kompensiert Zellausdehnung und Schwingungen [P12].",
+     "grounding": {
+      "status": "OK",
+      "zitiert": [
+       "ENT-095",
+       "P12",
+       "W16"
+      ],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 1.4,
+     "hit@1": false,
+     "hit@3": true,
+     "hit@5": true
+    },
+    {
+     "frage": "An welcher Stelle am Pack sitzt das Aggregat für den Kühlmittelkreis?",
+     "ziele": [
+      "ENT-157"
+     ],
+     "rang": [
+      "ENT-157",
+      "ENT-152",
+      "P03",
+      "W30",
+      "W26"
+     ],
+     "zeit_abruf_s": 0.03,
+     "antwort": "Der äußere Kühlkreis (Pumpe, 3/2-Wege-Ventil, Chiller, Ausgleichsbehälter, Schläuche) sitzt hinten am Pack unter der Rücksitzbank [ENT-157]. Die Geräte sind quer in einer Reihe auf Stutzenhöhe angeordnet [ENT-157]. Der Kühlmittelkreis wird als BT-661…665 modelliert und liegt außerhalb des Packs [ENT-152].",
+     "grounding": {
+      "status": "OK",
+      "zitiert": [
+       "ENT-152",
+       "ENT-157"
+      ],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 1.5,
+     "hit@1": true,
+     "hit@3": true,
+     "hit@5": true
+    }
+   ],
+   "hit@1": 0.3333333333333333,
+   "hit@3": 0.5833333333333334,
+   "hit@5": 0.5833333333333334,
+   "mittel_zeit_abruf_s": 0.066,
+   "mittel_zeit_rag_s": 1.0,
+   "grounding_beanstandet": 0,
+   "antworten_nicht_in_akten": 4
+  },
+  "C bge-m3+BM25 Hybrid (RRF)": {
+   "modell": "bge-m3",
+   "modus": "hybrid",
+   "fragen": [
+    {
+     "frage": "Warum wird die Kühlplatte aus gelötetem Blech statt aus einem Vollblock gebaut?",
+     "ziele": [
+      "ENT-152",
+      "ENT-153",
+      "ENT-154"
+     ],
+     "rang": [
+      "ENT-152",
+      "ENT-153",
+      "W16",
+      "B-BAT-034",
+      "B-BAT-036"
+     ],
+     "zeit_abruf_s": 0.192,
+     "antwort": "Nicht in den Akten.",
+     "grounding": {
+      "status": "OK (keine Antwort)",
+      "zitiert": [],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.6,
+     "hit@1": true,
+     "hit@3": true,
+     "hit@5": true
+    },
+    {
+     "frage": "Welche Zellchemie ist die Hauptvariante und warum?",
+     "ziele": [
+      "ENT-005"
+     ],
+     "rang": [
+      "ENT-005",
+      "ENT-007",
+      "W27",
+      "W04",
+      "W05"
+     ],
+     "zeit_abruf_s": 0.031,
+     "antwort": "Die Hauptvariante hat die Zellchemie LFP [ENT-005].",
+     "grounding": {
+      "status": "OK",
+      "zitiert": [
+       "ENT-005"
+      ],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.6,
+     "hit@1": true,
+     "hit@3": true,
+     "hit@5": true
+    },
+    {
+     "frage": "Wie werden die Zellen im Pack auf gleiche Spannung gebracht?",
+     "ziele": [
+      "ENT-114"
+     ],
+     "rang": [
+      "W12",
+      "P02",
+      "T02",
+      "P12",
+      "W03"
+     ],
+     "zeit_abruf_s": 0.039,
+     "antwort": "Ein Batteriemanagementsystem (BMS) gleicht die Zellspannungen aus [W12].",
+     "grounding": {
+      "status": "OK",
+      "zitiert": [
+       "W12"
+      ],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.9,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": false
+    },
+    {
+     "frage": "Wodurch ist der Hochstrompfad gegen Kurzschluss geschützt?",
+     "ziele": [
+      "ENT-127"
+     ],
+     "rang": [
+      "P06",
+      "W21",
+      "W24",
+      "W16",
+      "W04"
+     ],
+     "zeit_abruf_s": 0.023,
+     "antwort": "Nicht in den Akten.",
+     "grounding": {
+      "status": "OK (keine Antwort)",
+      "zitiert": [],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.6,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": false
+    },
+    {
+     "frage": "Wie breit darf das Pack im Fahrzeug maximal sein?",
+     "ziele": [
+      "ENT-030"
+     ],
+     "rang": [
+      "W19",
+      "P05",
+      "ENT-157",
+      "W30",
+      "W26"
+     ],
+     "zeit_abruf_s": 0.021,
+     "antwort": "Nicht in den Akten.",
+     "grounding": {
+      "status": "OK (keine Antwort)",
+      "zitiert": [],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.6,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": false
+    },
+    {
+     "frage": "Wie viele Zellen liegen in Reihe, und welche Spannung ergibt das?",
+     "ziele": [
+      "ENT-006"
+     ],
+     "rang": [
+      "P01",
+      "P03",
+      "ENT-145",
+      "P07",
+      "ENT-006"
+     ],
+     "zeit_abruf_s": 0.03,
+     "antwort": "Der Autor hat 800 V gewählt [ENT-006]. Nennspannung 250 × 3,2 V = 800 V [ENT-006]. BT-310 BMS: 250 Zellspannungen [ENT-006].",
+     "grounding": {
+      "status": "OK",
+      "zitiert": [
+       "ENT-006"
+      ],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 1.4,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": true
+    },
+    {
+     "frage": "Warum hat das Pack keinen Aufprallpuffer für den Seitencrash?",
+     "ziele": [
+      "ENT-151"
+     ],
+     "rang": [
+      "ENT-151",
+      "B-BAT-030",
+      "B-BAT-004",
+      "W30",
+      "P12"
+     ],
+     "zeit_abruf_s": 0.087,
+     "antwort": "Das Pack hat keinen Aufprallpuffer für den Seitencrash, da es keine Knautschzone im Pack gibt [ENT-151]. Der Seitencrash muss vollständig über den Schweller gehen [B-BAT-030]. Eine Knautschzone im Pack kostet bei fester Breite Zellen [B-BAT-030].",
+     "grounding": {
+      "status": "OK",
+      "zitiert": [
+       "B-BAT-030",
+       "ENT-151"
+      ],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 1.6,
+     "hit@1": true,
+     "hit@3": true,
+     "hit@5": true
+    },
+    {
+     "frage": "Womit wird bei Frost der Kühlkreislauf erwärmt?",
+     "ziele": [
+      "ENT-135"
+     ],
+     "rang": [
+      "W16",
+      "P03",
+      "W17",
+      "ENT-081",
+      "B-BAT-038"
+     ],
+     "zeit_abruf_s": 0.065,
+     "antwort": "Nicht in den Akten.",
+     "grounding": {
+      "status": "OK (keine Antwort)",
+      "zitiert": [],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.8,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": false
+    },
+    {
+     "frage": "Aus welchem Werkstoff sind die Querträger und was spricht dafür?",
+     "ziele": [
+      "ENT-086"
+     ],
+     "rang": [
+      "B-BAT-019",
+      "W04",
+      "W03",
+      "ENT-098",
+      "ENT-086"
+     ],
+     "zeit_abruf_s": 0.044,
+     "antwort": "Querträger bestehen aus Aluminium-Strangpressprofil [ENT-086]. Dafür spricht, dass dieses Profil bei einer Seitenlast von > 2600 kg eine Gewichtsersparnis von über 20 % gegenüber Stahl bietet [B-BAT-019], [ENT-086].",
+     "grounding": {
+      "status": "OK",
+      "zitiert": [
+       "B-BAT-019",
+       "ENT-086"
+      ],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 1.5,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": true
+    },
+    {
+     "frage": "Wie lange darf das Einschalten des Zwischenkreises dauern?",
+     "ziele": [
+      "ENT-126"
+     ],
+     "rang": [
+      "W05",
+      "W23",
+      "ENT-145",
+      "P05",
+      "ENT-157"
+     ],
+     "zeit_abruf_s": 0.065,
+     "antwort": "Nicht in den Akten.",
+     "grounding": {
+      "status": "OK (keine Antwort)",
+      "zitiert": [],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.6,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": false
+    },
+    {
+     "frage": "Wie kommt die Wärme von der Oberseite der Zellen in die Kühlplatte?",
+     "ziele": [
+      "ENT-095"
+     ],
+     "rang": [
+      "ENT-081",
+      "W16",
+      "ENT-013",
+      "ENT-095",
+      "T02"
+     ],
+     "zeit_abruf_s": 0.058,
+     "antwort": "Wärme fließt durch den Temperaturgradienten vom heißen zum kalten Bereich [W16]. Die Übertragungsgeschwindigkeit steigt mit dem Querschnitt und der thermischen Leitfähigkeit des Materials [W16]. Wärme oben: Al-Ableiterscheibe → Deckel → Verbinder → Pad → Platte [ENT-095].",
+     "grounding": {
+      "status": "OK",
+      "zitiert": [
+       "ENT-095",
+       "W16"
+      ],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 1.7,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": true
+    },
+    {
+     "frage": "An welcher Stelle am Pack sitzt das Aggregat für den Kühlmittelkreis?",
+     "ziele": [
+      "ENT-157"
+     ],
+     "rang": [
+      "ENT-157",
+      "ENT-152",
+      "W26",
+      "P03",
+      "W12"
+     ],
+     "zeit_abruf_s": 0.044,
+     "antwort": "Das Aggregat für den Kühlmittelkreis sitzt hinten am Pack, hinter der Rückwand [ENT-157].",
+     "grounding": {
+      "status": "OK",
+      "zitiert": [
+       "ENT-157"
+      ],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 1.1,
+     "hit@1": true,
+     "hit@3": true,
+     "hit@5": true
+    }
+   ],
+   "hit@1": 0.3333333333333333,
+   "hit@3": 0.3333333333333333,
+   "hit@5": 0.5833333333333334,
+   "mittel_zeit_abruf_s": 0.058,
+   "mittel_zeit_rag_s": 1.0,
+   "grounding_beanstandet": 0,
+   "antworten_nicht_in_akten": 5
+  },
+  "D Hybrid Aktenebene": {
+   "modell": "bge-m3",
+   "modus": "hybrid-dok",
+   "fragen": [
+    {
+     "frage": "Warum wird die Kühlplatte aus gelötetem Blech statt aus einem Vollblock gebaut?",
+     "ziele": [
+      "ENT-152",
+      "ENT-153",
+      "ENT-154"
+     ],
+     "rang": [
+      "ENT-152",
+      "ENT-153",
+      "B-BAT-034",
+      "P03",
+      "W19"
+     ],
+     "zeit_abruf_s": 0.029,
+     "antwort": "Die Kühlplatte wird aus gelötetem Blech (1 mm oben und unten, 4 mm Wasserraum) aufgebaut, um das Gewicht von 75,5 kg auf ≈ 45 kg zu reduzieren [ENT-152]. Zudem verhindert diese Bauweise eine ungleiche Verteilung des Kühlmittels im Vergleich zu Sammelkanälen in einer 8-mm-gelöteten Platte [ENT-152]. Die Entscheidung für die gelötete Blech-Kühlplatte mit Mäander folgt dem Autor-Vorschlag [B-BAT-034].",
+     "grounding": {
+      "status": "OK",
+      "zitiert": [
+       "B-BAT-034",
+       "ENT-152"
+      ],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 2.3,
+     "hit@1": true,
+     "hit@3": true,
+     "hit@5": true
+    },
+    {
+     "frage": "Welche Zellchemie ist die Hauptvariante und warum?",
+     "ziele": [
+      "ENT-005"
+     ],
+     "rang": [
+      "ENT-005",
+      "ENT-007",
+      "P01",
+      "P12",
+      "W08"
+     ],
+     "zeit_abruf_s": 0.132,
+     "antwort": "Zellchemie LFP (Blade-Format) als Hauptvariante [ENT-005].",
+     "grounding": {
+      "status": "OK",
+      "zitiert": [
+       "ENT-005"
+      ],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.9,
+     "hit@1": true,
+     "hit@3": true,
+     "hit@5": true
+    },
+    {
+     "frage": "Wie werden die Zellen im Pack auf gleiche Spannung gebracht?",
+     "ziele": [
+      "ENT-114"
+     ],
+     "rang": [
+      "T02",
+      "W12",
+      "P12",
+      "W25",
+      "W19"
+     ],
+     "zeit_abruf_s": 0.054,
+     "antwort": "Ein Batteriemanagementsystem (BMS) gleicht die Zellspannungen aus [W12].",
+     "grounding": {
+      "status": "OK",
+      "zitiert": [
+       "W12"
+      ],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.9,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": false
+    },
+    {
+     "frage": "Wodurch ist der Hochstrompfad gegen Kurzschluss geschützt?",
+     "ziele": [
+      "ENT-127"
+     ],
+     "rang": [
+      "W24",
+      "W21",
+      "W16",
+      "W03",
+      "P06"
+     ],
+     "zeit_abruf_s": 0.113,
+     "antwort": "Nicht in den Akten.",
+     "grounding": {
+      "status": "OK (keine Antwort)",
+      "zitiert": [],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.6,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": false
+    },
+    {
+     "frage": "Wie breit darf das Pack im Fahrzeug maximal sein?",
+     "ziele": [
+      "ENT-030"
+     ],
+     "rang": [
+      "W30",
+      "ENT-157",
+      "ENT-151",
+      "W12",
+      "W03"
+     ],
+     "zeit_abruf_s": 0.221,
+     "antwort": "Die Breite von 1430 mm bleibt fest [ENT-157].",
+     "grounding": {
+      "status": "OK",
+      "zitiert": [
+       "ENT-157"
+      ],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.7,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": false
+    },
+    {
+     "frage": "Wie viele Zellen liegen in Reihe, und welche Spannung ergibt das?",
+     "ziele": [
+      "ENT-006"
+     ],
+     "rang": [
+      "P01",
+      "B-BAT-019",
+      "W12",
+      "W23",
+      "ENT-006"
+     ],
+     "zeit_abruf_s": 0.039,
+     "antwort": "Der Autor hat 800 V gewählt [ENT-006]. Nennspannung 250 × 3,2 V = 800 V [ENT-006]. BT-310 BMS: 250 Zellspannungen [ENT-006].",
+     "grounding": {
+      "status": "OK",
+      "zitiert": [
+       "ENT-006"
+      ],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 1.4,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": true
+    },
+    {
+     "frage": "Warum hat das Pack keinen Aufprallpuffer für den Seitencrash?",
+     "ziele": [
+      "ENT-151"
+     ],
+     "rang": [
+      "B-BAT-030",
+      "ENT-151",
+      "B-BAT-031",
+      "W26",
+      "ENT-087"
+     ],
+     "zeit_abruf_s": 0.04,
+     "antwort": "Das Pack hat keinen Aufprallpuffer für den Seitencrash, da eine Knautschzone im Pack die Zellen nach der Innenwand des Seitenrahmens erreicht und somit nicht mehr schützt [B-BAT-030]. Der Seitencrash muss daher vollständig über den Schweller gehen [B-BAT-030]. Eine Knautschzone im Pack lohnt sich nicht, da bei fester Breite die Energieaufnahme begrenzt ist und der Seitencrash beim Schweller bleibt [B-BAT-031].",
+     "grounding": {
+      "status": "OK",
+      "zitiert": [
+       "B-BAT-030",
+       "B-BAT-031"
+      ],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 1.9,
+     "hit@1": false,
+     "hit@3": true,
+     "hit@5": true
+    },
+    {
+     "frage": "Womit wird bei Frost der Kühlkreislauf erwärmt?",
+     "ziele": [
+      "ENT-135"
+     ],
+     "rang": [
+      "P03",
+      "P12",
+      "W16",
+      "B-BAT-038",
+      "W21"
+     ],
+     "zeit_abruf_s": 0.047,
+     "antwort": "Nicht in den Akten.",
+     "grounding": {
+      "status": "OK (keine Antwort)",
+      "zitiert": [],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.7,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": false
+    },
+    {
+     "frage": "Aus welchem Werkstoff sind die Querträger und was spricht dafür?",
+     "ziele": [
+      "ENT-086"
+     ],
+     "rang": [
+      "B-BAT-019",
+      "ENT-086",
+      "ENT-098",
+      "ENT-091",
+      "B-BAT-032"
+     ],
+     "zeit_abruf_s": 0.06,
+     "antwort": "Die Querträger bestehen aus Aluminium-Strangpressprofil [ENT-086]. Dafür spricht, dass dieses Profil bei einer Seitenlast von über 2600 kg eine Gewichtsersparnis von mehr als 20 % gegenüber Stahl bietet [B-BAT-019].",
+     "grounding": {
+      "status": "OK",
+      "zitiert": [
+       "B-BAT-019",
+       "ENT-086"
+      ],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 1.3,
+     "hit@1": false,
+     "hit@3": true,
+     "hit@5": true
+    },
+    {
+     "frage": "Wie lange darf das Einschalten des Zwischenkreises dauern?",
+     "ziele": [
+      "ENT-126"
+     ],
+     "rang": [
+      "W05",
+      "ENT-157",
+      "P05",
+      "W23",
+      "W04"
+     ],
+     "zeit_abruf_s": 0.047,
+     "antwort": "Nicht in den Akten.",
+     "grounding": {
+      "status": "OK (keine Antwort)",
+      "zitiert": [],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.5,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": false
+    },
+    {
+     "frage": "Wie kommt die Wärme von der Oberseite der Zellen in die Kühlplatte?",
+     "ziele": [
+      "ENT-095"
+     ],
+     "rang": [
+      "ENT-081",
+      "W16",
+      "P03",
+      "W19",
+      "P12"
+     ],
+     "zeit_abruf_s": 0.251,
+     "antwort": "Nicht in den Akten.",
+     "grounding": {
+      "status": "OK (keine Antwort)",
+      "zitiert": [],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.6,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": false
+    },
+    {
+     "frage": "An welcher Stelle am Pack sitzt das Aggregat für den Kühlmittelkreis?",
+     "ziele": [
+      "ENT-157"
+     ],
+     "rang": [
+      "ENT-157",
+      "P03",
+      "W26",
+      "P12",
+      "W30"
+     ],
+     "zeit_abruf_s": 0.085,
+     "antwort": "hinten am Pack [ENT-157]",
+     "grounding": {
+      "status": "OK",
+      "zitiert": [
+       "ENT-157"
+      ],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.7,
+     "hit@1": true,
+     "hit@3": true,
+     "hit@5": true
+    }
+   ],
+   "hit@1": 0.25,
+   "hit@3": 0.4166666666666667,
+   "hit@5": 0.5,
+   "mittel_zeit_abruf_s": 0.093,
+   "mittel_zeit_rag_s": 1.1,
+   "grounding_beanstandet": 0,
+   "antworten_nicht_in_akten": 4
+  },
+  "Basis BM25": {
+   "modell": "bge-m3",
+   "modus": "bm25",
+   "fragen": [
+    {
+     "frage": "Warum wird die Kühlplatte aus gelötetem Blech statt aus einem Vollblock gebaut?",
+     "ziele": [
+      "ENT-152",
+      "ENT-153",
+      "ENT-154"
+     ],
+     "rang": [
+      "ENT-152",
+      "B-BAT-034",
+      "ENT-153",
+      "B-BAT-036",
+      "ENT-006"
+     ],
+     "zeit_abruf_s": 0.001,
+     "antwort": "Die Kühlplatte besteht aus 2 × 1 mm Al-Blech und 4 mm Wasserraum [ENT-152]. Die Stege teilen den Wasserraum in Mäander-Bahnen [ENT-152]. Der Aufbau ist eine Alternative zu gelöteten Platten mit parallelen Querkanälen [ENT-152].",
+     "grounding": {
+      "status": "OK",
+      "zitiert": [
+       "ENT-152"
+      ],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 1.3,
+     "hit@1": true,
+     "hit@3": true,
+     "hit@5": true
+    },
+    {
+     "frage": "Welche Zellchemie ist die Hauptvariante und warum?",
+     "ziele": [
+      "ENT-005"
+     ],
+     "rang": [
+      "ENT-005",
+      "W27",
+      "W05",
+      "P11",
+      "P12"
+     ],
+     "zeit_abruf_s": 0.001,
+     "antwort": "Zellchemie LFP (Blade-Format) als Hauptvariante [ENT-005].",
+     "grounding": {
+      "status": "OK",
+      "zitiert": [
+       "ENT-005"
+      ],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.7,
+     "hit@1": true,
+     "hit@3": true,
+     "hit@5": true
+    },
+    {
+     "frage": "Wie werden die Zellen im Pack auf gleiche Spannung gebracht?",
+     "ziele": [
+      "ENT-114"
+     ],
+     "rang": [
+      "P02",
+      "P12",
+      "W19",
+      "T02",
+      "ENT-151"
+     ],
+     "zeit_abruf_s": 0.002,
+     "antwort": "Nicht in den Akten.",
+     "grounding": {
+      "status": "OK (keine Antwort)",
+      "zitiert": [],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.6,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": false
+    },
+    {
+     "frage": "Wodurch ist der Hochstrompfad gegen Kurzschluss geschützt?",
+     "ziele": [
+      "ENT-127"
+     ],
+     "rang": [
+      "W21",
+      "W16",
+      "W24",
+      "ENT-109",
+      "W03"
+     ],
+     "zeit_abruf_s": 0.001,
+     "antwort": "Nicht in den Akten.",
+     "grounding": {
+      "status": "OK (keine Antwort)",
+      "zitiert": [],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.6,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": false
+    },
+    {
+     "frage": "Wie breit darf das Pack im Fahrzeug maximal sein?",
+     "ziele": [
+      "ENT-030"
+     ],
+     "rang": [
+      "P05",
+      "W30",
+      "W03",
+      "W12",
+      "ENT-151"
+     ],
+     "zeit_abruf_s": 0.001,
+     "antwort": "Keine konkreten Angaben zur maximalen Pack-Breite sind in den Textstücken enthalten. [ENT-151]",
+     "grounding": {
+      "status": "OK",
+      "zitiert": [
+       "ENT-151"
+      ],
+      "falsch": [],
+      "saetze_ohne_beleg": 1
+     },
+     "zeit_rag_s": 0.9,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": false
+    },
+    {
+     "frage": "Wie viele Zellen liegen in Reihe, und welche Spannung ergibt das?",
+     "ziele": [
+      "ENT-006"
+     ],
+     "rang": [
+      "P03",
+      "P07",
+      "W12",
+      "W15",
+      "W24"
+     ],
+     "zeit_abruf_s": 0.002,
+     "antwort": "Nicht in den Akten.",
+     "grounding": {
+      "status": "OK (keine Antwort)",
+      "zitiert": [],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.6,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": false
+    },
+    {
+     "frage": "Warum hat das Pack keinen Aufprallpuffer für den Seitencrash?",
+     "ziele": [
+      "ENT-151"
+     ],
+     "rang": [
+      "B-BAT-030",
+      "B-BAT-004",
+      "ENT-151",
+      "P12",
+      "W25"
+     ],
+     "zeit_abruf_s": 0.001,
+     "antwort": "Das Pack hat keinen Aufprallpuffer für den Seitencrash [W25]. Der Seitencrash muss vollständig über den Schweller gehen [B-BAT-030]. Es gibt keine Knautschzone im Pack [ENT-151].",
+     "grounding": {
+      "status": "OK",
+      "zitiert": [
+       "B-BAT-030",
+       "ENT-151",
+       "W25"
+      ],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 1.0,
+     "hit@1": false,
+     "hit@3": true,
+     "hit@5": true
+    },
+    {
+     "frage": "Womit wird bei Frost der Kühlkreislauf erwärmt?",
+     "ziele": [
+      "ENT-135"
+     ],
+     "rang": [
+      "P03",
+      "W17",
+      "P12",
+      "T08",
+      "P13"
+     ],
+     "zeit_abruf_s": 0.001,
+     "antwort": "Nicht in den Akten.",
+     "grounding": {
+      "status": "OK (keine Antwort)",
+      "zitiert": [],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.5,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": false
+    },
+    {
+     "frage": "Aus welchem Werkstoff sind die Querträger und was spricht dafür?",
+     "ziele": [
+      "ENT-086"
+     ],
+     "rang": [
+      "W04",
+      "ENT-098",
+      "B-BAT-019",
+      "ENT-012",
+      "P02"
+     ],
+     "zeit_abruf_s": 0.001,
+     "antwort": "Nicht in den Akten.",
+     "grounding": {
+      "status": "OK (keine Antwort)",
+      "zitiert": [],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.6,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": false
+    },
+    {
+     "frage": "Wie lange darf das Einschalten des Zwischenkreises dauern?",
+     "ziele": [
+      "ENT-126"
+     ],
+     "rang": [
+      "W23",
+      "P05",
+      "W05",
+      "W24",
+      "ENT-144"
+     ],
+     "zeit_abruf_s": 0.001,
+     "antwort": "Nicht in den Akten.",
+     "grounding": {
+      "status": "OK (keine Antwort)",
+      "zitiert": [],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.5,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": false
+    },
+    {
+     "frage": "Wie kommt die Wärme von der Oberseite der Zellen in die Kühlplatte?",
+     "ziele": [
+      "ENT-095"
+     ],
+     "rang": [
+      "ENT-081",
+      "ENT-013",
+      "T02",
+      "W04",
+      "W16"
+     ],
+     "zeit_abruf_s": 0.002,
+     "antwort": "Nicht in den Akten.",
+     "grounding": {
+      "status": "OK (keine Antwort)",
+      "zitiert": [],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.6,
+     "hit@1": false,
+     "hit@3": false,
+     "hit@5": false
+    },
+    {
+     "frage": "An welcher Stelle am Pack sitzt das Aggregat für den Kühlmittelkreis?",
+     "ziele": [
+      "ENT-157"
+     ],
+     "rang": [
+      "ENT-157",
+      "W26",
+      "P03",
+      "W12",
+      "W24"
+     ],
+     "zeit_abruf_s": 0.002,
+     "antwort": "Nicht in den Akten.",
+     "grounding": {
+      "status": "OK (keine Antwort)",
+      "zitiert": [],
+      "falsch": [],
+      "saetze_ohne_beleg": 0
+     },
+     "zeit_rag_s": 0.5,
+     "hit@1": true,
+     "hit@3": true,
+     "hit@5": true
+    }
+   ],
+   "hit@1": 0.25,
+   "hit@3": 0.3333333333333333,
+   "hit@5": 0.3333333333333333,
+   "mittel_zeit_abruf_s": 0.001,
+   "mittel_zeit_rag_s": 0.7,
+   "grounding_beanstandet": 0,
+   "antworten_nicht_in_akten": 8
+  }
+ },
+ "hinweis": "KI-generiert (Claude Sonnet, 2026-11-21), Entwurf; Fragen identisch zum ersten Lauf"
+}

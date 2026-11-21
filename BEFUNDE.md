@@ -46,6 +46,45 @@ Folge: Vor dem CAD (G1/G4) stehen drei Schritte: (a) Bauteilbaum bis zur Stückl
 ## B-BAT-025 (2026-11-18) E2 Fortsetzung 2: NMC-Mäander machbar, LFP nicht; LFP-FPC passt nicht an den Querträgern vorbei
 Quelle `cad/pack/entwurf/ergebnis_{LFP,NMC}_e2.json`, `sim/elektrik/e2_elektronik/ERGEBNIS.md` v0.3. NMC: 4 Bänder à 7 Spalten, Plus/Mitte/Minus hinten, HV intern 1,19 m, 11,34 W, 0 Kollisionen, FPC 30,7 m, Hälften 112/105 Gruppen. LFP: 2 Reihen reichen nicht (4 Durchläufe nötig), 9 Kollisionen FPC–Querträger (18 mm frei über dem Profil, FPC 20 mm), 6 von 14 FPC-Stücken ohne Platz.
 
+## B-BAT-038 (2026-11-21) Thermik K3/K4 Probe: Pack ΔT 16 K, Erwartung von Opus falsch, LBM an der Stabilitätsgrenze
+- K4 LFP Schnellladen (sim/kuehlung/k3_gesamt/elmer/ergebnis.json): T_max 42,6 °C, ΔT 16,4 K. Die Erwartung 33–37 °C hatte die Kühlmittelaufwärmung von 10,2 K aus K2b vergessen (Opus-Fehler). Das Ergebnis ist plausibel, **verfehlt aber ΔT ≤ 5 K** und wird zum Verbesserungsvorschlag. Varianten gegensinnig und Durchfluss ×2 sind beauftragt.
+- K3 FluidX3D: τ ≈ 0,502 bei Re 760 mit 2 Zellen/mm, also Δp +228 %, h +129 %, Temperatur NaN. Methode geändert: Re 100/200, 4 Zellen/mm, Nu und f·Re der ausgebildeten Strömung übertragen.
+
+## B-BAT-037 (2026-11-21) Nachtrag Zahlen zur Kollisionsbereinigung G5 (Opus, aus den Laufausgaben der Sitzung 2026-11-19/20)
+- Erster Gesamtlauf LFP (2026-11-19): 1342 Teile, 628,89 kg, 67 Fehler (Massenabweichungen und Kollisionen zusammen). Größte Kollisionen: Zellen 217/218/248/249 ↔ Verteiler/Sammler je 18 253–21 092 mm³, weil die Verteiler in der Endzone lagen.
+- NMC aus G5.4 (Sonnet): 5 Kollisionen des Trennsteckers mit der Schaltbox, die größte Hauptschütz minus 60 381 mm³, Wanne 7 960 mm³.
+- Nach Verteiler außen, Kragen und Einbauorten (2026-11-20): LFP 31 Fehler, darunter 17 Kollisionen, NMC 15. Größte: Kabelschuh HV ↔ Kühlplatte 1 190 mm³ bzw. 1 217 mm³.
+- Danach LFP 1 Kollision, dann 0 und NMC 0.
+- HV-Leitung: Der Eintritt knapp über dem Boxboden hätte eine Schlaufe bis z ≈ 275 mm erfordert (Sonnet G5.4). Behoben mit Eintritt auf Höhe Hülsenende + Biegeradius.
+- Schützmasse: 0,8 kg je Stück statt 0,4 kg, bei 2 Stück also 0,8 kg zu viel in Stückliste und CAD (vor der Korrektur).
+- Warteschlange: Nach G5_ALLE ging sie ins Leere, 21 h ohne Rechnung (2026-11-20 10:29 bis 2026-11-21 07:50, rechnen/verlauf.log). Bemerkt hat es Opus, erst bei der Fortsetzung.
+
+## B-BAT-036 (2026-11-20) G5 kollisionsfrei, Datenblätter eingearbeitet
+- Montage LFP 1343 Teile, 628,8 kg und NMC 3601 Teile, 480,0 kg: 0 Kollisionen (cad/baukasten/ausgabe/pruefung_<V>.txt).
+- Die Kühlplatte (Wunsch Autor) bleibt unverändert. Kabelschuhe und Kühlmittelfühler bekommen Durchführungen mit wasserfreiem Kragen bzw. sitzen hinter der Plattenlasche. Die Steckerschrauben enden im Deckel (Einnietmutter). Das Typschild ist verschoben. Über dem HV-Eintritt sitzt keine Flanschschraube.
+- DB2 (Sonnet): 7 Datenblattwerte in cad/baukasten/annahmen_datenblatt.json (wird zuletzt gelesen), forschung/datenblaetter_eingearbeitet.md.
+- Offen aus DB2 (Stufe F, nicht gelöst): Der Schütz hat Innengewinde statt Bolzen. Die Pyrosicherung verlangt eine Schiene 23,75 × 4 mit M6 (Modell 25 × 3, M8). HV40 ist 22 % höher. Zwei Werte sind aus der Zeichnung gelesen.
+- Rechnungen laufen ab jetzt über die anhaltbare Warteschlange rechnen/ (LIESMICH.md).
+
+## B-BAT-035 (2026-11-19) KO2 Kosten mit Datenblättern und Kühlkreis; Opus-Fehler Zwischenlage
+- KO2 (pm/kosten/ergebnis_<V>.json): LFP 6 793 € / 91,9 €/kWh, NMC 8 717 € / 117,4 €/kWh. ERW-KO2: LFP +8,7 % **verfehlt**, NMC +1,4 % erfüllt. Verifiziert + abgeleitet nur 0,2 % der Summe.
+- Ursache LFP: Opus hatte die Zwischenlage BT-220 als 1 mm Mica-Vollmaterial festgelegt (242 Stück, 41,5 kg, 249 €). Korrektur: Schaumpad 300 kg/m³ (≈ 4,5 kg). Erwartet werden danach ≈ 89 €/kWh, der Neulauf läuft.
+- Datenblattmassen: Hauptschütz GLFX250 0,8 kg statt 0,45 kg, Vorladeschütz + Widerstand 0,41 kg statt 0,15 kg (annahmen_g5.json).
+
+## B-BAT-034 (2026-11-19) K2b Blech-Kühlplatte 1/4/1 mm mit Mäander (Autor-Vorschlag ENT-152)
+- 48 Varianten je Pack (sim/kuehlung/k2_kuehlplatte/ergebnis_k2b.json). U ≥ 500 nur mit mehr Bahnen oder schmalen Teilkanälen. **Auswahl Opus n = 8 Bahnen längs, w = 8 mm: U 558 W/(m²K), Δp 0,215 bar, 46,6 kg für 2 Platten** (statt 75,5 kg), Plattendicke 6 statt 8 mm (ENT-152…156).
+- ERW-K2b teils verfehlt: n = 4, w = 8 längs ergibt U 487 statt ≈ 550. Breite Kanäle (w = 40) liegen bei 405–518 statt 350–420, weil die Einlaufströmung (Graetz-Term) Nu anhebt. Δp bei n = 8 ist mit 0,215 bar kleiner als erwartet (0,4–1). Erfüllt: Δp bei n = 4 (0,05 bar), Masse 38–49 kg.
+- Offen: Der Kontaktwiderstand Zelle–Pad–Blech ist nicht gerechnet, die Reserve beträgt 12 %.
+
+## B-BAT-033 (2026-11-19) G5 Zwischenstand: Kühlplatte mit echten Kanälen +28 kg, Recherche liefert keine Kaufteilmaße
+- Kühlplatten (2 Stück) mit den K2-Kanälen (4 × 5 mm, Steg 3, 281 je Platte, Blech 1,5): **75,5 kg statt 46,9 kg**. Der alte Füllgrad 0,4 (A_KUEHLPLATTE_FUELLGRAD) passte nicht zur K2-Geometrie (dort 0,64). Erwartung ERW-G5 75 kg: erfüllt. Fundstelle cad/baukasten/ausgabe/ergebnis_LFP.json (Teillauf gehaeuse,kuehlung).
+- Seitenrahmen 3-Kammer-Profil 14,5 kg. ERW-G5 6–7 kg **verfehlt**: Opus hielt die alten 21,8 kg für ein Vollprofil, sie enthielten aber schon Kammern (Vollprofil wären 60 kg). Profilfläche 790 mm² ist geprüft.
+- Schaltbox mit liegenden Geräten: Innenhöhe 70 mm (Ziel ≤ 90), Turm 77 mm über dem Packdeckel, Oberkante LFP 198 mm (Grenze 210). Erwartung erfüllt.
+- W31 (Preise) und W34 (Kaufteilformen): Die Quellen (Wikipedia) nennen keine Preise und keine Maße. Von den Kaufteilen sind 4–6 Positionen weiter in Stufe H. W32: Al-Dichte 2,70 g/cm³, E 69 GPa, Rp0,2 100–260 MPa (6005) sind bestätigt, die Dichte gilt jetzt als belegt. Für Maße und Preise braucht es Datenblätter von Herstellern (Frage an den Autor).
+
+## B-BAT-032 (2026-11-19) Entscheidung: keine Knautschzone im Pack (ENT-151)
+- Autor folgt der Opus-Empfehlung aus B-BAT-031. Studie engere Querträger entfällt. Schnittstelle: Schweller stoppt den Pfahl vor dem Rahmen (Zellberührung ≈ 30 kN, X1). Erwartung: –.
+
 ## B-BAT-031 (2026-11-18) X1b/X2 OpenCourant: Knautschprofil bringt kaum Reserve, die Rahmen-Innenwand gibt zuerst nach
 - Explizit (OpenCourant latest-20261011), Pfahl 1500 kg mit 5 kJ. Energie bis zur Zellberührung (4 mm):
 
@@ -228,3 +267,11 @@ Vorgang: [K1] [M1]
 - Zyklenbedarf 1000: LFP erfüllt, NMC unsicher. Zellen in Reihe bei 800 V: 250 / 220. Bauraum (214 Wh/L nötig): für LFP offen.
 - Stärkste Annahme: LFP Zellanteil am Pack (Hub 196 kg), NMC Zellband (Hub 434 kg).
 - Folge: Vorschlag ENT-005 LFP-Blade als Hauptvariante. Die NMC-Wahl in startwerte.py beruhte auf einer unbelegten Annahme. Rückfrage an den Autor: 1500 kg mit oder ohne Batterie? Vorgang: [C0] [V1]
+
+## B-BAT-039 Crash LFP_a ungültig: Zellreihen ohne gegenseitigen Kontakt (2026-11-21, Opus)
+Die Kennzahlen von LFP_a sahen gut aus: Eindringung 13,9 mm, Zellreihe 8,1 mm, Energiefehler 0,19 %. Das Verformungsbild zeigte aber in Packmitte einen Streifen, der sich um 60 mm verschoben hatte, und am Ende stand eine Restbewegung von 750 J. Die Rohdaten belegen: 3426 Zellknoten verschieben sich in x um bis zu 319 mm. Ursache ist, dass jede Reihe ein eigener Block mit 1 mm Spalt ist und es zwischen den Reihen keinen Kontakt gibt. Die Reihen unter dem Pfahl neben dem Querträgerspalt durchdringen ihre Nachbarreihen. Korrektur nach ERWARTUNG Nachtrag 3: 4 homogene Blöcke, Füllgrad 14/15, und eine neue automatische Modellprüfung (max |U| der Zellen ≤ 1,5 × Pfahlweg, Restbewegung < 5 %). Lehre: Energiebilanz und Kennzahlen allein erkennen diesen Fehler nicht. Erst das Bild hat ihn gezeigt.
+
+## B-BAT-040 Thermik-Varianten K4 und Crash LFP_a neu (2026-11-21, Opus)
+- K4, Tabelle T_max/ΔT aus rechnen/log_K4_*.txt, LFP-Schnellladen: V0 42,6/16,4; V1 gegensinnig 38,4/10,5; V2 Durchfluss ×2 37,0/11,1; V3 beides 34,8/8,1. Die Schätzung von Opus vorab (11–12 / 10–11 / 7–8 K) traf. Keine Variante erreicht ΔT ≤ 5 K, daher wird eine Parallelführung mit Z-Verteiler zum Verbesserungsvorschlag. NMC 30 min: V0 34,1/5,9, V3 30,1/1,5. Dauerfahrt: LFP 29,0/3,8, NMC 29,7/3,0.
+- X3 LFP_a nach der Korrektur (Nachtrag 3): Pfahl 13,6 mm, Zellblock 6,7 mm, Innenwand 7,8 mm, 472 kN, Energiefehler 0,18 %, max |U| der Zellen 7,4 mm. Opus-Fehler im Kriterium „kinetische Energie am Ende < 5 %“: Darin steckte auch der Rückprall des Pfahls (17,6 %). Neu gilt die kinetische Energie ohne Pfahl, das sind 2,4 %. Modellprüfung bestanden. Das Kennzahlenbild entspricht dem ungültigen Lauf (13,9/8,1 mm), weil die gleitenden Reihen weit vom Pfahl wenig zur Steifigkeit beitrugen.
+- Zweiter Fehler: In der untesteten Auswertung von Sonnet war `pw` nicht definiert; bei der Reparatur der Zeile hat Opus den Rest der Zeile in einen Kommentar verschoben. Beides ist behoben, die Auswertung ist an LFP_a getestet.

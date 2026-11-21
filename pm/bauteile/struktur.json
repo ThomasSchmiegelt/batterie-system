@@ -1,5 +1,5 @@
 {
- "hinweis": "KI-generiert (Claude Opus, 2026-11-11, erweitert 2026-11-16, Vorschlag ENT-004). Bauteilbaum des Batteriesystems. Reihenfolge = Entstehung im Abschlussvideo. Merkmale bekommen Werte erst über Entscheidungen (pm/entscheidungen/ENT-*.md). Feld stueckliste: Positionen in pm/bauteile/stueckliste.json. Feld art: K Kaufteil, E Eigenteil, S Schnittstelle Fahrzeug, D Detail eines Kaufteils (nur CAD/Video). | 2026-11-16 Opus: Feld \"varianten\" (fehlt = alle), BT-250 Zellhalter (NMC), BT-100 durchmesser/hoehe (ENT-012). | 2026-11-17 Opus: Innenaufbau BT-111…116, 121, 122, 131, 132; BT-140 lage (ENT-031). | 2026-11-18 Opus: BT-260 Verguss (NMC), BT-361 FPC-Halter, BT-440 Pol-Anschlusslaschen, BT-721 Trennbrücke, BT-722 Servicedeckel (LFP), BT-720 bauform (SL2, B-BAT-028).",
+ "hinweis": "KI-generiert (Claude Opus, 2026-11-11, erweitert 2026-11-16, Vorschlag ENT-004). Bauteilbaum des Batteriesystems. Reihenfolge = Entstehung im Abschlussvideo. Merkmale bekommen Werte erst über Entscheidungen (pm/entscheidungen/ENT-*.md). Feld stueckliste: Positionen in pm/bauteile/stueckliste.json. Feld art: K Kaufteil, E Eigenteil, S Schnittstelle Fahrzeug, D Detail eines Kaufteils (nur CAD/Video). | 2026-11-16 Opus: Feld \"varianten\" (fehlt = alle), BT-250 Zellhalter (NMC), BT-100 durchmesser/hoehe (ENT-012). | 2026-11-17 Opus: Innenaufbau BT-111…116, 121, 122, 131, 132; BT-140 lage (ENT-031). | 2026-11-18 Opus: BT-260 Verguss (NMC), BT-361 FPC-Halter, BT-440 Pol-Anschlusslaschen, BT-721 Trennbrücke, BT-722 Servicedeckel (LFP), BT-720 bauform (SL2, B-BAT-028). | 2026-11-19 Opus (Auftrag Autor): Kühlkreis BT-661…665 unter BT-660.",
  "bauteile": [
   {
    "id": "BT-000",
@@ -325,7 +325,8 @@
     "dicke_mm": null
    },
    "varianten": [
-    "LFP"
+    "LFP",
+    "NMC"
    ]
   },
   {
@@ -536,7 +537,9 @@
     "REQ-P15"
    ],
    "art": "K",
-   "stueckliste": [],
+   "stueckliste": [
+    "361.1"
+   ],
    "merkmale": {
     "abstand_mm": null
    }
@@ -610,18 +613,45 @@
   },
   {
    "id": "BT-440",
-   "name": "Pol-Anschlusslaschen",
+   "name": "Stromschiene",
    "eltern": "BT-400",
-   "rolle": "Verbinden Reihenenden mit den HV-Leitungen (Plus/Minus, Trennstelle)",
+   "rolle": "Plus-/Minus-Anschlusslaschen an den Reihenenden und Stromschienen der Schaltbox: führen den HV-Strom zwischen Zellstack, Schaltbox und HV-Leitungen",
    "anforderungen": [
     "REQ-P13"
    ],
    "art": "E",
-   "stueckliste": [],
+   "stueckliste": [
+    "440.1",
+    "440.2"
+   ],
    "merkmale": {
     "querschnitt_mm2": null,
-    "ueberlappung_mm": null
+    "ueberlappung_mm": null,
+    "masse_g": null,
+    "bauform": null,
+    "werkstoff": null
    }
+  },
+  {
+   "id": "BT-450",
+   "name": "Berührschutz",
+   "eltern": "BT-400",
+   "rolle": "deckt die spannungsführenden Zellverbinder gegen Berührung ab (NMC)",
+   "anforderungen": [
+    "REQ-P13"
+   ],
+   "art": "E",
+   "stueckliste": [
+    "450.1"
+   ],
+   "merkmale": {
+    "masse_g": null,
+    "bauform": null,
+    "werkstoff": null
+   },
+   "varianten": [
+    "NMC"
+   ]
   },
   {
    "id": "BT-500",
@@ -700,7 +730,7 @@
    "id": "BT-540",
    "name": "Seitenrahmen",
    "eltern": "BT-500",
-   "rolle": "nimmt den Seitencrash auf, bevor er die Zellen erreicht",
+   "rolle": "Rahmen des Packs; leitet Seitenkräfte in den Schweller, baut selbst keine Crashenergie ab (ENT-151)",
    "anforderungen": [
     "REQ-P14"
    ],
@@ -713,7 +743,8 @@
     "breite_mm": null,
     "hoehe_mm": null,
     "wandstaerke_mm": null,
-    "kammern": null
+    "kammern": null,
+    "crashkonzept": null
    }
   },
   {
@@ -766,6 +797,45 @@
    ],
    "merkmale": {
     "anzahl": null
+   }
+  },
+  {
+   "id": "BT-580",
+   "name": "Dichtungen",
+   "eltern": "BT-500",
+   "rolle": "dichten Deckel, Schaltbox und Servicedeckel gegen Wasser und Staub",
+   "anforderungen": [
+    "REQ-P13"
+   ],
+   "art": "K",
+   "stueckliste": [
+    "580.1"
+   ],
+   "merkmale": {
+    "masse_g": null,
+    "bauform": null,
+    "werkstoff": null
+   }
+  },
+  {
+   "id": "BT-590",
+   "name": "Verbindungs- und Normteile",
+   "eltern": "BT-500",
+   "rolle": "Schrauben, Kabelschuhe, Clips und Schrumpfschlauch: verbinden, fixieren und isolieren",
+   "anforderungen": [
+    "REQ-P13"
+   ],
+   "art": "K",
+   "stueckliste": [
+    "590.1",
+    "590.2",
+    "590.3",
+    "590.4"
+   ],
+   "merkmale": {
+    "masse_g": null,
+    "bauform": null,
+    "werkstoff": null
    }
   },
   {
@@ -887,7 +957,103 @@
    ],
    "merkmale": {
     "durchfluss_L_min": null,
-    "eintritt_max_C": null
+    "eintritt_max_C": null,
+    "einbauort": null
+   }
+  },
+  {
+   "id": "BT-661",
+   "name": "Kühlmittelpumpe (elektrisch)",
+   "eltern": "BT-660",
+   "rolle": "fördert das Kühlmittel durch die Kühlplatten",
+   "anforderungen": [
+    "REQ-P05",
+    "REQ-P09"
+   ],
+   "art": "K",
+   "stueckliste": [
+    "660.1"
+   ],
+   "merkmale": {
+    "masse_g": null,
+    "bauform": null,
+    "werkstoff": null
+   }
+  },
+  {
+   "id": "BT-662",
+   "name": "Chiller (Kältemittel-Wasser-Wärmetauscher)",
+   "eltern": "BT-660",
+   "rolle": "kühlt das Kühlmittel mit dem Kältemittelkreis",
+   "anforderungen": [
+    "REQ-P05",
+    "REQ-P09"
+   ],
+   "art": "K",
+   "stueckliste": [
+    "660.2"
+   ],
+   "merkmale": {
+    "masse_g": null,
+    "bauform": null,
+    "werkstoff": null
+   }
+  },
+  {
+   "id": "BT-663",
+   "name": "3/2-Wege-Ventil",
+   "eltern": "BT-660",
+   "rolle": "schaltet das Kühlmittel zwischen Chiller und Bypass",
+   "anforderungen": [
+    "REQ-P05",
+    "REQ-P09"
+   ],
+   "art": "K",
+   "stueckliste": [
+    "660.3"
+   ],
+   "merkmale": {
+    "masse_g": null,
+    "bauform": null,
+    "werkstoff": null
+   }
+  },
+  {
+   "id": "BT-664",
+   "name": "Kühlmittelschläuche",
+   "eltern": "BT-660",
+   "rolle": "verbinden Pumpe, Chiller, Ventil, Ausgleichsbehälter und Packanschlüsse",
+   "anforderungen": [
+    "REQ-P05",
+    "REQ-P09"
+   ],
+   "art": "K",
+   "stueckliste": [
+    "660.4"
+   ],
+   "merkmale": {
+    "masse_g": null,
+    "bauform": null,
+    "werkstoff": null
+   }
+  },
+  {
+   "id": "BT-665",
+   "name": "Ausgleichsbehälter",
+   "eltern": "BT-660",
+   "rolle": "gleicht das Kühlmittelvolumen aus",
+   "anforderungen": [
+    "REQ-P05",
+    "REQ-P09"
+   ],
+   "art": "K",
+   "stueckliste": [
+    "660.5"
+   ],
+   "merkmale": {
+    "masse_g": null,
+    "bauform": null,
+    "werkstoff": null
    }
   },
   {

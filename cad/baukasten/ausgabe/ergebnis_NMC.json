@@ -1,0 +1,1111 @@
+{
+ "hinweis": "KI-generiert (Claude Opus, G5 montage.py), Entwurf",
+ "variante": "NMC",
+ "stueckliste_version": "0.3",
+ "teile": 3601,
+ "masse_kg": 479.976,
+ "laenge_mm": 2235.0,
+ "breite_mm": 1430.0,
+ "hoehe_max_mm": 227.8,
+ "stufen": {
+  "F": 28,
+  "K": 19,
+  "H": 4
+ },
+ "positionen": [
+  {
+   "pos": "100.1",
+   "bt": "BT-100",
+   "generator": "zelle.zelle_rund",
+   "stufe": "F",
+   "soll": 868,
+   "ist": 868,
+   "masse_cad_kg": 308.14,
+   "masse_sl_kg": 308.14,
+   "sekunden": 0.1
+  },
+  {
+   "pos": "220.2",
+   "bt": "BT-220",
+   "generator": "zelle.verguss",
+   "stufe": "K",
+   "soll": 4,
+   "ist": 4,
+   "masse_cad_kg": 4.5466,
+   "masse_sl_kg": 11.361119,
+   "sekunden": 5.0
+  },
+  {
+   "pos": "200.3",
+   "bt": "BT-230",
+   "generator": "zelle.pad",
+   "stufe": "F",
+   "soll": 2,
+   "ist": 2,
+   "masse_cad_kg": 12.6123,
+   "masse_sl_kg": 12.608259,
+   "sekunden": 0.0
+  },
+  {
+   "pos": "200.5",
+   "bt": "BT-250",
+   "generator": "zelle.zelltraeger",
+   "stufe": "K",
+   "soll": 4,
+   "ist": 4,
+   "masse_cad_kg": 1.2124,
+   "masse_sl_kg": 3.068534,
+   "sekunden": 4.8
+  },
+  {
+   "pos": "700.1",
+   "bt": "BT-710",
+   "generator": "schaltbox.gehaeuse",
+   "stufe": "K",
+   "soll": 1,
+   "ist": 1,
+   "masse_cad_kg": 1.8378,
+   "masse_sl_kg": 1.32948,
+   "sekunden": 0.3
+  },
+  {
+   "pos": "700.1b",
+   "bt": "BT-710",
+   "generator": "schaltbox.deckel",
+   "stufe": "K",
+   "soll": 2,
+   "ist": 2,
+   "masse_cad_kg": 0.9367,
+   "masse_sl_kg": 0.597621,
+   "sekunden": 0.1
+  },
+  {
+   "pos": "400.1",
+   "bt": "BT-410",
+   "generator": "verbinder.zellabgriff",
+   "stufe": "K",
+   "soll": 1736,
+   "ist": 1736,
+   "masse_cad_kg": 0.5301,
+   "masse_sl_kg": 0.53011,
+   "sekunden": 0.2
+  },
+  {
+   "pos": "400.2",
+   "bt": "BT-420",
+   "generator": "verbinder.gruppenverbinder",
+   "stufe": "K",
+   "soll": 217,
+   "ist": 217,
+   "masse_cad_kg": 7.9391,
+   "masse_sl_kg": 7.940355,
+   "sekunden": 22.9
+  },
+  {
+   "pos": "420.2",
+   "bt": "BT-420",
+   "generator": "verbinder.gruppenbruecke",
+   "stufe": "K",
+   "soll": 216,
+   "ist": 216,
+   "masse_cad_kg": 3.0156,
+   "masse_sl_kg": 3.016203,
+   "sekunden": 8.9
+  },
+  {
+   "pos": "400.3",
+   "bt": "BT-430",
+   "generator": "verbinder.hv_leitung",
+   "stufe": "F",
+   "soll": 4,
+   "ist": 4,
+   "masse_cad_kg": 0.4298,
+   "masse_sl_kg": 0.33508,
+   "sekunden": 0.0
+  },
+  {
+   "pos": "440.1",
+   "bt": "BT-440",
+   "generator": "verbinder.pol_lasche",
+   "stufe": "K",
+   "soll": 4,
+   "ist": 4,
+   "masse_cad_kg": 0.0186,
+   "masse_sl_kg": 0.018621,
+   "sekunden": 0.0
+  },
+  {
+   "pos": "440.2",
+   "bt": "BT-440",
+   "generator": "verbinder.stromschiene",
+   "stufe": "K",
+   "soll": 6,
+   "ist": 12,
+   "masse_cad_kg": 1.8228,
+   "masse_sl_kg": 0.450444,
+   "sekunden": 1.3,
+   "hinweis": "Stückzahl aus CAD (Normteile), Stückliste übernimmt sie"
+  },
+  {
+   "pos": "450.1",
+   "bt": "BT-450",
+   "generator": "verbinder.beruehrschutz",
+   "stufe": "K",
+   "soll": 8,
+   "ist": 8,
+   "masse_cad_kg": 0.304,
+   "masse_sl_kg": 0.305785,
+   "sekunden": 0.0
+  },
+  {
+   "pos": "300.1",
+   "bt": "BT-310",
+   "generator": "elektronik.bms_platine",
+   "stufe": "F",
+   "soll": 1,
+   "ist": 1,
+   "masse_cad_kg": 0.4,
+   "masse_sl_kg": 0.4,
+   "sekunden": 0.1
+  },
+  {
+   "pos": "300.2",
+   "bt": "BT-320",
+   "generator": "elektronik.cmu",
+   "stufe": "F",
+   "soll": 13,
+   "ist": 13,
+   "masse_cad_kg": 1.04,
+   "masse_sl_kg": 1.04,
+   "sekunden": 0.4
+  },
+  {
+   "pos": "300.3",
+   "bt": "BT-330",
+   "generator": "elektronik.ntc",
+   "stufe": "F",
+   "soll": 50,
+   "ist": 50,
+   "masse_cad_kg": 0.0001,
+   "masse_sl_kg": 0.00036,
+   "sekunden": 0.0
+  },
+  {
+   "pos": "300.4",
+   "bt": "BT-340",
+   "generator": "elektronik.shunt",
+   "stufe": "F",
+   "soll": 1,
+   "ist": 1,
+   "masse_cad_kg": 0.1,
+   "masse_sl_kg": 0.1,
+   "sekunden": 0.0
+  },
+  {
+   "pos": "300.5",
+   "bt": "BT-350",
+   "generator": "elektronik.isolationswaechter",
+   "stufe": "H",
+   "soll": 1,
+   "ist": 1,
+   "masse_cad_kg": 0.0659,
+   "masse_sl_kg": "offen",
+   "sekunden": 0.0
+  },
+  {
+   "pos": "300.6",
+   "bt": "BT-360",
+   "generator": "elektronik.fpc",
+   "stufe": "F",
+   "soll": 13,
+   "ist": 13,
+   "masse_cad_kg": 1.5399,
+   "masse_sl_kg": 1.53989,
+   "sekunden": 0.1
+  },
+  {
+   "pos": "360.3",
+   "bt": "BT-360",
+   "generator": "elektronik.fpc_detail",
+   "stufe": "F",
+   "soll": 231,
+   "ist": 231,
+   "masse_cad_kg": 0.0312,
+   "masse_sl_kg": 0.020379,
+   "sekunden": 0.0,
+   "hinweis": "Stückzahl aus CAD (Normteile), Stückliste übernimmt sie"
+  },
+  {
+   "pos": "360.4",
+   "bt": "BT-360",
+   "generator": "elektronik.daisy_kette",
+   "stufe": "F",
+   "soll": 11,
+   "ist": 11,
+   "masse_cad_kg": 0.0519,
+   "masse_sl_kg": 0.051883,
+   "sekunden": 0.0
+  },
+  {
+   "pos": "500.7",
+   "bt": "BT-570",
+   "generator": "kaufteile.druckausgleich",
+   "stufe": "F",
+   "soll": 1,
+   "ist": 1,
+   "masse_cad_kg": 0.0023,
+   "masse_sl_kg": "offen",
+   "sekunden": 0.0
+  },
+  {
+   "pos": "600.4",
+   "bt": "BT-640",
+   "generator": "kaufteile.temperaturfuehler_kuehlmittel",
+   "stufe": "H",
+   "soll": 2,
+   "ist": 2,
+   "masse_cad_kg": 0.034,
+   "masse_sl_kg": 0.034,
+   "sekunden": 0.0
+  },
+  {
+   "pos": "700.2",
+   "bt": "BT-711",
+   "generator": "kaufteile.schuetz_haupt",
+   "stufe": "F",
+   "soll": 2,
+   "ist": 2,
+   "masse_cad_kg": 0.8,
+   "masse_sl_kg": 0.8,
+   "sekunden": 0.1
+  },
+  {
+   "pos": "700.3",
+   "bt": "BT-712",
+   "generator": "kaufteile.schuetz_vorlade",
+   "stufe": "F",
+   "soll": 2,
+   "ist": 2,
+   "masse_cad_kg": 0.41,
+   "masse_sl_kg": 0.41,
+   "sekunden": 0.0
+  },
+  {
+   "pos": "700.4",
+   "bt": "BT-713",
+   "generator": "kaufteile.sicherungen",
+   "stufe": "F",
+   "soll": 2,
+   "ist": 2,
+   "masse_cad_kg": 0.33,
+   "masse_sl_kg": 0.25,
+   "sekunden": 0.0
+  },
+  {
+   "pos": "700.5",
+   "bt": "BT-720",
+   "generator": "kaufteile.trennstecker",
+   "stufe": "F",
+   "soll": 1,
+   "ist": 1,
+   "masse_cad_kg": 0.2,
+   "masse_sl_kg": 0.2,
+   "sekunden": 0.0
+  },
+  {
+   "pos": "700.6",
+   "bt": "BT-730",
+   "generator": "kaufteile.hv_stecker",
+   "stufe": "F",
+   "soll": 2,
+   "ist": 2,
+   "masse_cad_kg": 0.55,
+   "masse_sl_kg": 0.55,
+   "sekunden": 0.1
+  },
+  {
+   "pos": "700.7",
+   "bt": "BT-740",
+   "generator": "kaufteile.nv_stecker",
+   "stufe": "F",
+   "soll": 1,
+   "ist": 1,
+   "masse_cad_kg": 0.05,
+   "masse_sl_kg": 0.05,
+   "sekunden": 0.0
+  },
+  {
+   "pos": "700.8",
+   "bt": "BT-750",
+   "generator": "kaufteile.entgasungsventil",
+   "stufe": "H",
+   "soll": 1,
+   "ist": 1,
+   "masse_cad_kg": 0.1286,
+   "masse_sl_kg": "offen",
+   "sekunden": 0.0
+  },
+  {
+   "pos": "700.10",
+   "bt": "BT-770",
+   "generator": "kaufteile.gassensor",
+   "stufe": "F",
+   "soll": 1,
+   "ist": 1,
+   "masse_cad_kg": 0.015,
+   "masse_sl_kg": 0.03,
+   "sekunden": 0.0
+  },
+  {
+   "pos": "700.11",
+   "bt": "BT-780",
+   "generator": "kaufteile.typschild",
+   "stufe": "H",
+   "soll": 1,
+   "ist": 1,
+   "masse_cad_kg": 0.0049,
+   "masse_sl_kg": "offen",
+   "sekunden": 0.0
+  },
+  {
+   "pos": "580.1",
+   "bt": "BT-580",
+   "generator": "normteile.dichtung",
+   "stufe": "F",
+   "soll": 2,
+   "ist": 1,
+   "masse_cad_kg": 0.0172,
+   "masse_sl_kg": 0.014615,
+   "sekunden": 0.0,
+   "hinweis": "Stückzahl aus CAD (Normteile), Stückliste übernimmt sie"
+  },
+  {
+   "pos": "590.1",
+   "bt": "BT-590",
+   "generator": "normteile.schraube",
+   "stufe": "F",
+   "soll": 72,
+   "ist": 130,
+   "masse_cad_kg": 0.487,
+   "masse_sl_kg": 0.115169,
+   "sekunden": 0.1,
+   "hinweis": "Stückzahl aus CAD (Normteile), Stückliste übernimmt sie"
+  },
+  {
+   "pos": "590.2",
+   "bt": "BT-590",
+   "generator": "normteile.kabelschuh",
+   "stufe": "F",
+   "soll": 8,
+   "ist": 4,
+   "masse_cad_kg": 0.2873,
+   "masse_sl_kg": 0.213738,
+   "sekunden": 0.0,
+   "hinweis": "Stückzahl aus CAD (Normteile), Stückliste übernimmt sie"
+  },
+  {
+   "pos": "590.3",
+   "bt": "BT-590",
+   "generator": "normteile.clip",
+   "stufe": "F",
+   "soll": 4,
+   "ist": 2,
+   "masse_cad_kg": 0.0045,
+   "masse_sl_kg": 0.008971,
+   "sekunden": 0.0,
+   "hinweis": "Stückzahl aus CAD (Normteile), Stückliste übernimmt sie"
+  },
+  {
+   "pos": "590.4",
+   "bt": "BT-590",
+   "generator": "normteile.schrumpfschlauch",
+   "stufe": "F",
+   "soll": 6,
+   "ist": 9,
+   "masse_cad_kg": 0.0193,
+   "masse_sl_kg": 0.017744,
+   "sekunden": 3.4,
+   "hinweis": "Stückzahl aus CAD (Normteile), Stückliste übernimmt sie"
+  },
+  {
+   "pos": "500.1",
+   "bt": "BT-510",
+   "generator": "gehaeuse.wanne",
+   "stufe": "K",
+   "soll": 1,
+   "ist": 1,
+   "masse_cad_kg": 22.5563,
+   "masse_sl_kg": 22.5563,
+   "sekunden": 0.0
+  },
+  {
+   "pos": "520.1",
+   "bt": "BT-520",
+   "generator": "gehaeuse.deckel",
+   "stufe": "K",
+   "soll": 1,
+   "ist": 1,
+   "masse_cad_kg": 15.0351,
+   "masse_sl_kg": 15.0404,
+   "sekunden": 0.1
+  },
+  {
+   "pos": "500.3",
+   "bt": "BT-530",
+   "generator": "gehaeuse.quertraeger",
+   "stufe": "K",
+   "soll": 3,
+   "ist": 3,
+   "masse_cad_kg": 4.1387,
+   "masse_sl_kg": 4.1387,
+   "sekunden": 0.1
+  },
+  {
+   "pos": "500.4",
+   "bt": "BT-540",
+   "generator": "gehaeuse.seitenrahmen",
+   "stufe": "K",
+   "soll": 4,
+   "ist": 4,
+   "masse_cad_kg": 13.1114,
+   "masse_sl_kg": 13.1114,
+   "sekunden": 0.0
+  },
+  {
+   "pos": "500.5",
+   "bt": "BT-550",
+   "generator": "gehaeuse.unterfahrschutz",
+   "stufe": "K",
+   "soll": 1,
+   "ist": 1,
+   "masse_cad_kg": 22.5563,
+   "masse_sl_kg": 22.5563,
+   "sekunden": 0.0
+  },
+  {
+   "pos": "500.6",
+   "bt": "BT-560",
+   "generator": "gehaeuse.befestigung",
+   "stufe": "K",
+   "soll": 12,
+   "ist": 12,
+   "masse_cad_kg": 2.3366,
+   "masse_sl_kg": 2.3366,
+   "sekunden": 0.1
+  },
+  {
+   "pos": "600.1",
+   "bt": "BT-610",
+   "generator": "kuehlung.kuehlplatte",
+   "stufe": "K",
+   "soll": 2,
+   "ist": 2,
+   "masse_cad_kg": 46.5514,
+   "masse_sl_kg": 46.562,
+   "sekunden": 12.0
+  },
+  {
+   "pos": "600.2",
+   "bt": "BT-620",
+   "generator": "kuehlung.verteiler",
+   "stufe": "K",
+   "soll": 2,
+   "ist": 2,
+   "masse_cad_kg": 0.4611,
+   "masse_sl_kg": 0.4814,
+   "sekunden": 0.2
+  },
+  {
+   "pos": "600.3",
+   "bt": "BT-630",
+   "generator": "kuehlung.anschluss",
+   "stufe": "K",
+   "soll": 2,
+   "ist": 2,
+   "masse_cad_kg": 0.0199,
+   "masse_sl_kg": 0.0199,
+   "sekunden": 0.0
+  },
+  {
+   "pos": "660.1",
+   "bt": "BT-661",
+   "generator": "kuehlung.pumpe",
+   "stufe": "F",
+   "soll": 1,
+   "ist": 1,
+   "masse_cad_kg": 1.0,
+   "masse_sl_kg": 1.0,
+   "sekunden": 0.0
+  },
+  {
+   "pos": "660.2",
+   "bt": "BT-662",
+   "generator": "kuehlung.chiller",
+   "stufe": "F",
+   "soll": 1,
+   "ist": 1,
+   "masse_cad_kg": 1.2,
+   "masse_sl_kg": 1.2,
+   "sekunden": 0.1
+  },
+  {
+   "pos": "660.3",
+   "bt": "BT-663",
+   "generator": "kuehlung.ventil",
+   "stufe": "F",
+   "soll": 1,
+   "ist": 1,
+   "masse_cad_kg": 0.4,
+   "masse_sl_kg": 0.4,
+   "sekunden": 0.1
+  },
+  {
+   "pos": "660.4",
+   "bt": "BT-664",
+   "generator": "kuehlung.schlauch",
+   "stufe": "F",
+   "soll": 1,
+   "ist": 8,
+   "masse_cad_kg": 0.3944,
+   "masse_sl_kg": 0.3944,
+   "sekunden": 0.5,
+   "hinweis": "Stückzahl aus CAD (Normteile), Stückliste übernimmt sie"
+  },
+  {
+   "pos": "660.5",
+   "bt": "BT-665",
+   "generator": "kuehlung.ausgleichsbehaelter",
+   "stufe": "F",
+   "soll": 1,
+   "ist": 1,
+   "masse_cad_kg": 0.3,
+   "masse_sl_kg": 0.3,
+   "sekunden": 0.1
+  }
+ ],
+ "kollisionen": [],
+ "fehler": [
+  "220.2 zelle.verguss: Masse CAD 4.547 kg gegen Stückliste 11.361 kg (-60.0 %)",
+  "200.5 zelle.zelltraeger: Masse CAD 1.212 kg gegen Stückliste 3.069 kg (-60.5 %)",
+  "700.1 schaltbox.gehaeuse: Masse CAD 1.838 kg gegen Stückliste 1.329 kg (+38.2 %)",
+  "700.1b schaltbox.deckel: Masse CAD 0.937 kg gegen Stückliste 0.598 kg (+56.7 %)",
+  "400.3 verbinder.hv_leitung: Masse CAD 0.430 kg gegen Stückliste 0.335 kg (+28.3 %)",
+  "440.2 verbinder.stromschiene: Masse CAD 1.823 kg gegen Stückliste 0.450 kg (+304.7 %)",
+  "300.3 elektronik.ntc: Masse CAD 0.000 kg gegen Stückliste 0.000 kg (-72.2 %)",
+  "360.3 elektronik.fpc_detail: Masse CAD 0.031 kg gegen Stückliste 0.020 kg (+53.1 %)",
+  "700.4 kaufteile.sicherungen: Masse CAD 0.330 kg gegen Stückliste 0.250 kg (+32.0 %)",
+  "700.10 kaufteile.gassensor: Masse CAD 0.015 kg gegen Stückliste 0.030 kg (-50.0 %)",
+  "580.1 normteile.dichtung: Masse CAD 0.017 kg gegen Stückliste 0.015 kg (+17.7 %)",
+  "590.1 normteile.schraube: Masse CAD 0.487 kg gegen Stückliste 0.115 kg (+322.9 %)",
+  "590.2 normteile.kabelschuh: Masse CAD 0.287 kg gegen Stückliste 0.214 kg (+34.4 %)",
+  "590.3 normteile.clip: Masse CAD 0.004 kg gegen Stückliste 0.009 kg (-49.8 %)",
+  "590.4 normteile.schrumpfschlauch: Masse CAD 0.019 kg gegen Stückliste 0.018 kg (+8.8 %)",
+  "600.2 kuehlung.verteiler: Masse CAD 0.461 kg gegen Stückliste 0.481 kg (-4.2 %)"
+ ],
+ "ctx": {
+  "var": "NMC",
+  "B": 1430.0,
+  "L": 1950.0,
+  "rand": 30.0,
+  "ufs": 3.0,
+  "luft": 5.0,
+  "bod": 3.0,
+  "kp": 6.0,
+  "pad": 1.0,
+  "dec": 2.0,
+  "z_boden_ok": 11.0,
+  "z_kp_u_ok": 17.0,
+  "z_zelle_u": 18.0,
+  "h_zelle": 80.0,
+  "h_ueber": 4.0,
+  "z_zelle_o": 98.0,
+  "z_pad_o_u": 102.0,
+  "z_kp_o_u": 103.0,
+  "z_deckel_u": 109.0,
+  "z_deckel_o": 111.0,
+  "z_mitte_zelle": 58.0,
+  "nq": 3,
+  "qb": 26.0,
+  "quertraeger_x": [
+   482.0,
+   962.0,
+   1442.0
+  ],
+  "felder": [
+   [
+    30.0,
+    480.0
+   ],
+   [
+    510.0,
+    960.0
+   ],
+   [
+    990.0,
+    1440.0
+   ],
+   [
+    1470.0,
+    1920.0
+   ]
+  ],
+  "zellpaket_x0": 30.0,
+  "zellpaket_x1": 1920.0,
+  "endzone_vorn": [
+   30.0,
+   30.0
+  ],
+  "endzone_hinten": [
+   1920.0,
+   1920.0
+  ],
+  "deckelschrauben": [
+   [
+    15.0,
+    15.0
+   ],
+   [
+    15.0,
+    1415.0
+   ],
+   [
+    116.05263157894737,
+    15.0
+   ],
+   [
+    116.05263157894737,
+    1415.0
+   ],
+   [
+    217.10526315789474,
+    15.0
+   ],
+   [
+    217.10526315789474,
+    1415.0
+   ],
+   [
+    318.1578947368421,
+    15.0
+   ],
+   [
+    318.1578947368421,
+    1415.0
+   ],
+   [
+    419.2105263157895,
+    15.0
+   ],
+   [
+    419.2105263157895,
+    1415.0
+   ],
+   [
+    520.2631578947369,
+    15.0
+   ],
+   [
+    520.2631578947369,
+    1415.0
+   ],
+   [
+    621.3157894736842,
+    15.0
+   ],
+   [
+    621.3157894736842,
+    1415.0
+   ],
+   [
+    722.3684210526316,
+    15.0
+   ],
+   [
+    722.3684210526316,
+    1415.0
+   ],
+   [
+    823.421052631579,
+    15.0
+   ],
+   [
+    823.421052631579,
+    1415.0
+   ],
+   [
+    924.4736842105264,
+    15.0
+   ],
+   [
+    924.4736842105264,
+    1415.0
+   ],
+   [
+    1025.5263157894738,
+    15.0
+   ],
+   [
+    1025.5263157894738,
+    1415.0
+   ],
+   [
+    1126.578947368421,
+    15.0
+   ],
+   [
+    1126.578947368421,
+    1415.0
+   ],
+   [
+    1227.6315789473683,
+    15.0
+   ],
+   [
+    1227.6315789473683,
+    1415.0
+   ],
+   [
+    1328.6842105263158,
+    15.0
+   ],
+   [
+    1328.6842105263158,
+    1415.0
+   ],
+   [
+    1429.7368421052631,
+    15.0
+   ],
+   [
+    1429.7368421052631,
+    1415.0
+   ],
+   [
+    1530.7894736842106,
+    15.0
+   ],
+   [
+    1530.7894736842106,
+    1415.0
+   ],
+   [
+    1631.842105263158,
+    15.0
+   ],
+   [
+    1631.842105263158,
+    1415.0
+   ],
+   [
+    1732.8947368421052,
+    15.0
+   ],
+   [
+    1732.8947368421052,
+    1415.0
+   ],
+   [
+    1833.9473684210527,
+    15.0
+   ],
+   [
+    1833.9473684210527,
+    1415.0
+   ],
+   [
+    1935.0,
+    15.0
+   ],
+   [
+    1935.0,
+    1415.0
+   ],
+   [
+    15.0,
+    115.0
+   ],
+   [
+    1935.0,
+    115.0
+   ],
+   [
+    15.0,
+    215.0
+   ],
+   [
+    1935.0,
+    215.0
+   ],
+   [
+    15.0,
+    315.0
+   ],
+   [
+    1935.0,
+    315.0
+   ],
+   [
+    15.0,
+    415.0
+   ],
+   [
+    1935.0,
+    415.0
+   ],
+   [
+    15.0,
+    515.0
+   ],
+   [
+    1935.0,
+    515.0
+   ],
+   [
+    15.0,
+    615.0
+   ],
+   [
+    1935.0,
+    615.0
+   ],
+   [
+    15.0,
+    715.0
+   ],
+   [
+    1935.0,
+    715.0
+   ],
+   [
+    15.0,
+    815.0
+   ],
+   [
+    1935.0,
+    815.0
+   ],
+   [
+    15.0,
+    915.0
+   ],
+   [
+    1935.0,
+    915.0
+   ],
+   [
+    15.0,
+    1015.0
+   ],
+   [
+    1935.0,
+    1015.0
+   ],
+   [
+    15.0,
+    1115.0
+   ],
+   [
+    1935.0,
+    1115.0
+   ],
+   [
+    15.0,
+    1215.0
+   ],
+   [
+    1935.0,
+    1215.0
+   ],
+   [
+    15.0,
+    1315.0
+   ],
+   [
+    1935.0,
+    1315.0
+   ]
+  ],
+  "einbau_aussen_fertig": true,
+  "zellen_anzahl": 868
+ },
+ "akten_genutzt": [
+  "BT-000/bauraum_breite_mm ← ENT-030",
+  "BT-000/bauraum_laenge_mm ← ENT-103",
+  "BT-100/durchmesser_mm ← ENT-025",
+  "BT-100/hoehe_mm ← ENT-026",
+  "BT-100/masse_g ← ENT-011",
+  "BT-310/breite_mm ← ENT-140",
+  "BT-310/hoehe_mm ← ENT-141",
+  "BT-310/laenge_mm ← ENT-139",
+  "BT-320/anzahl ← ENT-113",
+  "BT-320/kanaele ← ENT-111",
+  "BT-360/breite_mm ← ENT-122",
+  "BT-420/breite_mm ← ENT-096",
+  "BT-420/dicke_mm ← ENT-097",
+  "BT-430/biegeradius_min_mm ← ENT-143",
+  "BT-430/querschnitt_mm2 ← ENT-101",
+  "BT-530/breite_mm ← ENT-083",
+  "BT-530/hoehe_mm ← ENT-084",
+  "BT-530/wandstaerke_mm ← ENT-085",
+  "BT-610/dicke_mm ← ENT-152",
+  "BT-610/kanal_anzahl ← ENT-156",
+  "BT-610/kanal_breite_mm ← ENT-155",
+  "BT-610/kanal_hoehe_mm ← ENT-154"
+ ],
+ "annahmen_genutzt": [
+  "A_boden_mm",
+  "A_deckel_mm",
+  "A_e2_bms_masse_kg",
+  "A_e2_box_rand_mm",
+  "A_e2_box_teilabstand_mm",
+  "A_e2_box_wand_mm",
+  "A_e2_cmu_masse_kg",
+  "A_e2_cmu_mm",
+  "A_e2_fpc_dicke_mm",
+  "A_e2_fpc_masse_kg_m",
+  "A_e2_gas_masse_kg",
+  "A_e2_gas_mm",
+  "A_e2_hv250_masse_kg",
+  "A_e2_hv250_mm",
+  "A_e2_hv40_masse_kg",
+  "A_e2_hv40_mm",
+  "A_e2_hv_aussendurchmesser_NMC_mm",
+  "A_e2_lasche_bohrung_mm",
+  "A_e2_lasche_mm",
+  "A_e2_nv_masse_kg",
+  "A_e2_nv_mm",
+  "A_e2_pyro_masse_kg",
+  "A_e2_pyro_mm",
+  "A_e2_schmelz_masse_kg",
+  "A_e2_schuetz_masse_kg",
+  "A_e2_schuetz_mm",
+  "A_e2_shunt_masse_kg",
+  "A_e2_shunt_mm",
+  "A_e2_trennstecker_masse_kg",
+  "A_e2_trennstecker_mm",
+  "A_e2_vorlade_masse_kg",
+  "A_e2_vorladeschuetz_mm",
+  "A_e2_vorladewiderstand_mm",
+  "A_e2d_beruehrschutz_dicke_mm",
+  "A_e2d_bms_abstandsbolzen",
+  "A_e2d_bms_abstandsbolzen_aussen_mm",
+  "A_e2d_bms_abstandsbolzen_einzug_mm",
+  "A_e2d_bms_platine_dicke_mm",
+  "A_e2d_bms_stecker_mm",
+  "A_e2d_box_deckel_mm",
+  "A_e2d_box_dichtung_mm",
+  "A_e2d_box_druckausgleich_d_mm",
+  "A_e2d_box_flansch_dicke_mm",
+  "A_e2d_box_flansch_mm",
+  "A_e2d_box_schraube_gewinde_mm",
+  "A_e2d_box_schraube_teilung_mm",
+  "A_e2d_clip_abstand_mm",
+  "A_e2d_clip_mm",
+  "A_e2d_daisy_d_mm",
+  "A_e2d_daisy_stecker_mm",
+  "A_e2d_fpc_stecker_mm",
+  "A_e2d_fpc_tab_mm",
+  "A_e2d_hv250_flansch_mm",
+  "A_e2d_hv250_hebel_mm",
+  "A_e2d_hv250_koerper_mm",
+  "A_e2d_hv250_schrauben",
+  "A_e2d_hv40_flansch_mm",
+  "A_e2d_hv40_schrauben",
+  "A_e2d_kabelschuh_huelse_mm",
+  "A_e2d_kabelschuh_lasche_laenge_mm",
+  "A_e2d_kabelschuh_lasche_mm",
+  "A_e2d_lasche_pyro_schmelz_mm",
+  "A_e2d_m8_kopf_mm",
+  "A_e2d_ntc_je_cmu",
+  "A_e2d_ntc_mm",
+  "A_e2d_nv_flansch_mm",
+  "A_e2d_nv_schrauben",
+  "A_e2d_schiene_bohrung_mm",
+  "A_e2d_schiene_cu_NMC_mm",
+  "A_e2d_schmelz_halter_mm",
+  "A_e2d_schrumpfschlauch_mm",
+  "A_e2d_schuetz_bolzen_abstand_mm",
+  "A_e2d_schuetz_bolzen_d_mm",
+  "A_e2d_schuetz_bolzen_h_mm",
+  "A_e2d_schuetz_fusslasche_gewinde_mm",
+  "A_e2d_schuetz_fusslaschen_n",
+  "A_e2d_shunt_platine_mm",
+  "A_e2d_shunt_steg_mm",
+  "A_e2d_stecker_koerper_einzug_mm",
+  "A_e2d_stecker_schraube_einzug_mm",
+  "A_g54_beruehrschutz_z_mm",
+  "A_g54_bms_stecker_y_mm",
+  "A_g54_cmu_bauteile_mm",
+  "A_g54_cmu_bohrung_mm",
+  "A_g54_hv250_hebel_x_mm",
+  "A_g54_iso4017_mm",
+  "A_g54_iso7380_mm",
+  "A_g54_isolationsw_eckradius_mm",
+  "A_g54_kabelschuh_box_abstand_mm",
+  "A_g54_kabelschuh_huelse_wand_mm",
+  "A_g54_lasche_lfp_riser_mm",
+  "A_g54_mutter_mm",
+  "A_g54_nmc_kopfrundung_mm",
+  "A_g54_nmc_minus_abgriff_mm",
+  "A_g54_nmc_nut_mm",
+  "A_g54_schiene_pad_abstand_mm",
+  "A_g54_schuetz_fusslasche_mm",
+  "A_g5_anschluss_mm",
+  "A_g5_aussen_teile",
+  "A_g5_befestigung_huelse_mm",
+  "A_g5_befestigung_n_je_seite",
+  "A_g5_befestigung_rand_x_mm",
+  "A_g5_behaelter_masse_kg",
+  "A_g5_behaelter_mm",
+  "A_g5_blech_mm",
+  "A_g5_box_eckradius_mm",
+  "A_g5_box_freiraum_oben_mm",
+  "A_g5_chiller_masse_kg",
+  "A_g5_chiller_mm",
+  "A_g5_deckelschraube_mm",
+  "A_g5_druckausgleich_mm",
+  "A_g5_eckradius_platte_mm",
+  "A_g5_entgasungsventil_mm",
+  "A_g5_hv_eingang_abstand_mm",
+  "A_g5_isolationswaechter_mm",
+  "A_g5_kaeltemittel_stutzen_mm",
+  "A_g5_kanal_steg_mm",
+  "A_g5_kantenradius_profil_mm",
+  "A_g5_kragen_kuehlplatte_mm",
+  "A_g5_kuehlmittelfuehler_form_mm",
+  "A_g5_kuehlmittelfuehler_masse_kg",
+  "A_g5_kuehlmittelfuehler_mm",
+  "A_g5_kuehlmodul_abstand_mm",
+  "A_g5_kuehlmodul_teilabstand_mm",
+  "A_g5_maeander",
+  "A_g5_pumpe_masse_kg",
+  "A_g5_pumpe_mm",
+  "A_g5_rahmen_kammern_lage",
+  "A_g5_sammler_mm",
+  "A_g5_schienengasse_mm",
+  "A_g5_schlauch_biegeradius_mm",
+  "A_g5_schlauch_mm",
+  "A_g5_typschild_mm",
+  "A_g5_umlenk_mm",
+  "A_g5_ventil_masse_kg",
+  "A_g5_ventil_mm",
+  "A_g5_verteiler_mm",
+  "A_luft_mm",
+  "A_pad_mm",
+  "A_quertraeger_anzahl",
+  "A_quertraeger_breite_mm",
+  "A_quertraeger_spiel_mm",
+  "A_rand_mm",
+  "A_seitenrahmen_kammern",
+  "A_seitenrahmen_wand_mm",
+  "A_traeger_dicke_NMC_mm",
+  "A_unterfahrschutz_mm",
+  "A_vergusshoehe_anteil_NMC",
+  "A_zellabgriff_NMC_mm",
+  "A_zellabstand_NMC_mm",
+  "A_zellverbinder_LFP_mm",
+  "A_zellzahl_NMC"
+ ],
+ "sekunden": 526.3,
+ "nur": []
+}

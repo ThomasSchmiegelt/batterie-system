@@ -1,0 +1,5 @@
+Z18: FEHLT im Text der Quelle: "A 50 A shunt resistor, with provision for four-terminal sensing" (https://en.wikipedia.org/wiki/Shunt_(electrical))
+Z22: FEHLT im Text der Quelle: "the relief valve becomes the path of least resistance as the valve is forced ope" (https://en.wikipedia.org/wiki/Relief_valve)
+Z35: WERT OHNE BELEG: 2. Welche zulässige Kontaktdauer- und Kontaktpunkts-Widerstandsanforderung (µΩ) gibt es für die Stec
+
+10 Belege bestaetigt, 2 Fehler

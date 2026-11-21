@@ -1,0 +1,250 @@
+{
+ "_hinweis": "KI-generiert (Claude Opus, 2026-11-19), G5.2. Werkstoff → Dichte (kg/m³) und Renderfarbe (sRGB 0–1). Dichten: Herkunft je Eintrag; ohne Herkunft = Annahme Opus (Handbuchwert, nicht belegt). Farben: Konvention für Bilder, keine Technik.",
+ "werkstoffe": {
+  "Al": {
+   "dichte_kg_m3": 2700,
+   "herkunft": "W32 bestätigt (6005: Dichte 2,70 g/cm³, forschung/W31_W33_bestaetigt.md Z22); vorher A_alu_dichte_kg_m3",
+   "farbe": [
+    0.78,
+    0.8,
+    0.82
+   ],
+   "rauheit": 0.35,
+   "metall": 1
+  },
+  "Al_eloxiert": {
+   "dichte_kg_m3": 2700,
+   "herkunft": "W32 bestätigt (6005: Dichte 2,70 g/cm³, forschung/W31_W33_bestaetigt.md Z22); vorher A_alu_dichte_kg_m3",
+   "farbe": [
+    0.2,
+    0.22,
+    0.25
+   ],
+   "rauheit": 0.45,
+   "metall": 1
+  },
+  "Al_Kuehlplatte": {
+   "dichte_kg_m3": 2700,
+   "herkunft": "W32 bestätigt (6005: Dichte 2,70 g/cm³, forschung/W31_W33_bestaetigt.md Z22); vorher A_alu_dichte_kg_m3",
+   "farbe": [
+    0.7,
+    0.74,
+    0.8
+   ],
+   "rauheit": 0.3,
+   "metall": 1
+  },
+  "Cu": {
+   "dichte_kg_m3": 8960,
+   "herkunft": "Annahme Opus (Handbuchwert)",
+   "farbe": [
+    0.85,
+    0.48,
+    0.3
+   ],
+   "rauheit": 0.25,
+   "metall": 1
+  },
+  "Cu_verzinnt": {
+   "dichte_kg_m3": 8960,
+   "herkunft": "wie Cu",
+   "farbe": [
+    0.8,
+    0.8,
+    0.78
+   ],
+   "rauheit": 0.3,
+   "metall": 1
+  },
+  "Stahl": {
+   "dichte_kg_m3": 7850,
+   "herkunft": "Annahme Opus (Handbuchwert)",
+   "farbe": [
+    0.55,
+    0.56,
+    0.58
+   ],
+   "rauheit": 0.4,
+   "metall": 1
+  },
+  "Stahl_verzinkt": {
+   "dichte_kg_m3": 7850,
+   "herkunft": "wie Stahl",
+   "farbe": [
+    0.66,
+    0.68,
+    0.7
+   ],
+   "rauheit": 0.5,
+   "metall": 1
+  },
+  "Pad": {
+   "dichte_kg_m3": 2500,
+   "herkunft": "A_dichte_pad_kg_m3 (Annahme Opus 2026-11-17)",
+   "farbe": [
+    0.55,
+    0.58,
+    0.62
+   ],
+   "rauheit": 0.8,
+   "metall": 0
+  },
+  "PC": {
+   "dichte_kg_m3": 1200,
+   "herkunft": "A_dichte_zelltraeger_kg_m3 (Annahme Opus 2026-11-17)",
+   "farbe": [
+    0.15,
+    0.15,
+    0.16
+   ],
+   "rauheit": 0.6,
+   "metall": 0
+  },
+  "PA66GF30": {
+   "dichte_kg_m3": 1350,
+   "herkunft": "Annahme Opus (Handbuchwert)",
+   "farbe": [
+    0.1,
+    0.1,
+    0.11
+   ],
+   "rauheit": 0.65,
+   "metall": 0
+  },
+  "PA_HV": {
+   "dichte_kg_m3": 1350,
+   "herkunft": "wie PA66GF30; Farbe HV-orange",
+   "farbe": [
+    0.95,
+    0.42,
+    0.05
+   ],
+   "rauheit": 0.55,
+   "metall": 0
+  },
+  "PU_Schaum": {
+   "dichte_kg_m3": 300,
+   "herkunft": "A_dichte_verguss_kg_m3 (Annahme Opus 2026-11-17)",
+   "farbe": [
+    0.85,
+    0.82,
+    0.7
+   ],
+   "rauheit": 0.9,
+   "metall": 0
+  },
+  "EPDM": {
+   "dichte_kg_m3": 1150,
+   "herkunft": "Annahme Opus (Handbuchwert)",
+   "farbe": [
+    0.05,
+    0.05,
+    0.05
+   ],
+   "rauheit": 0.9,
+   "metall": 0
+  },
+  "Silikon_HV": {
+   "dichte_kg_m3": 1200,
+   "herkunft": "Annahme Opus (Leitungsmantel)",
+   "farbe": [
+    0.95,
+    0.42,
+    0.05
+   ],
+   "rauheit": 0.7,
+   "metall": 0
+  },
+  "Leiterplatte": {
+   "dichte_kg_m3": 1850,
+   "herkunft": "Annahme Opus (FR4)",
+   "farbe": [
+    0.05,
+    0.35,
+    0.15
+   ],
+   "rauheit": 0.5,
+   "metall": 0
+  },
+  "FPC": {
+   "dichte_kg_m3": 1500,
+   "herkunft": "Annahme Opus (PI + Cu)",
+   "farbe": [
+    0.8,
+    0.55,
+    0.1
+   ],
+   "rauheit": 0.4,
+   "metall": 0
+  },
+  "Mica": {
+   "dichte_kg_m3": 2800,
+   "herkunft": "Annahme Opus (Glimmer-Zwischenlage)",
+   "farbe": [
+    0.75,
+    0.7,
+    0.6
+   ],
+   "rauheit": 0.7,
+   "metall": 0
+  },
+  "Zelle_LFP": {
+   "dichte_kg_m3": null,
+   "herkunft": "Masse aus Akte BT-100 masse_g",
+   "farbe": [
+    0.1,
+    0.3,
+    0.6
+   ],
+   "rauheit": 0.4,
+   "metall": 0
+  },
+  "Zelle_NMC": {
+   "dichte_kg_m3": null,
+   "herkunft": "Masse aus Akte BT-100 masse_g",
+   "farbe": [
+    0.1,
+    0.45,
+    0.25
+   ],
+   "rauheit": 0.4,
+   "metall": 0
+  },
+  "Kunststoff": {
+   "dichte_kg_m3": 1200,
+   "herkunft": "wie A_dichte_zelltraeger_kg_m3 (SL3 G5.1, von Opus bestätigt 2026-11-19)",
+   "farbe": [
+    0.1,
+    0.1,
+    0.11
+   ],
+   "rauheit": 0.65,
+   "metall": 0
+  },
+  "Schaum_Zwischenlage": {
+   "dichte_kg_m3": 300,
+   "herkunft": "Opus 2026-11-19: Zwischenlage BT-220 als komprimierbares Schaumpad (Quellausgleich, Wärmeschutz), Dichte wie A_dichte_verguss_kg_m3 (PU-Schaum, Annahme); ersetzt Mica-Vollmaterial (41,5 kg, Opus-Fehler)",
+   "farbe": [
+    0.85,
+    0.82,
+    0.7
+   ],
+   "rauheit": 0.9,
+   "metall": 0
+  }
+ },
+ "farbnamen": {
+  "_hinweis": "Farbnamen aus der Stückliste (geometrie.farbe) → Werkstoffeintrag oben",
+  "al_blank": "Al",
+  "al_eloxiert": "Al_eloxiert",
+  "cu": "Cu",
+  "stahl_blank": "Stahl",
+  "zelle_blau": "Zelle_LFP",
+  "zelle_gruen": "Zelle_NMC",
+  "kunststoff_schwarz": "PA66GF30",
+  "pad_grau": "Pad",
+  "platine_gruen": "Leiterplatte",
+  "hv_orange": "PA_HV",
+  "dichtung": "EPDM"
+ }
+}

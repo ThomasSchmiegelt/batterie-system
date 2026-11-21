@@ -107,5 +107,43 @@
   "U": "1/U = 1/h_eff + t_pad/k_pad + t_blech/k_Al",
   "maeander": "N Durchgaenge in Reihe: Kanallaenge x N, parallele Kanaele / N; Umlenkverluste nur ueber 30 %-Zuschlag (Annahme, bei vielen Durchgaengen zu klein moeglich)",
   "auswahl": "U >= 500 W/(m2K) und dp <= 0,5 bar, kleinste hydraulische Pumpenleistung (je Fall; zusaetzlich mit dT <= 5 K)"
+ },
+ "k2b": {
+  "herkunft": "ERWARTUNG.md Nachtrag K2b (Opus 2026-11-19), ENT-152",
+  "hoehe_mm": 4,
+  "blech_mm": 1.0,
+  "steg_mm": 3,
+  "trennsteg_mm": 3,
+  "n_bahnen": [
+   2,
+   4,
+   6,
+   8
+  ],
+  "breiten_mm": [
+   6,
+   8,
+   10,
+   15,
+   20,
+   40
+  ],
+  "fuehrung": [
+   "laengs",
+   "quer"
+  ],
+  "zeta_umlenkung": 1.5,
+  "rho_Al": 2700,
+  "V_pack_L_min": {
+   "LFP_P0": 23,
+   "NMC_P4": 20
+  },
+  "V_herkunft": "ENT-107/108, hälftig je Platte",
+  "pad": {
+   "dicke_mm": 1,
+   "k_W_mK": 3
+  },
+  "U_ziel": 500,
+  "dp_ziel_bar": 0.5
  }
 }

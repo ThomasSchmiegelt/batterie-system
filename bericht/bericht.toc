@@ -8,14 +8,15 @@
 \contentsline {section}{\numberline {7}Zelle: Maße, Innenaufbau, CAD}{16}{section.7}%
 \contentsline {section}{\numberline {8}Wärme der Einzelzelle (K0, K1, K1b)}{20}{section.8}%
 \contentsline {section}{\numberline {9}Gehäuse und Pack}{32}{section.9}%
-\contentsline {section}{\numberline {10}Elektrik E1: Querschnitte und Verluste}{37}{section.10}%
-\contentsline {section}{\numberline {11}Elektronik und Kabel E2}{39}{section.11}%
-\contentsline {section}{\numberline {12}Stückliste und Kosten}{47}{section.12}%
-\contentsline {section}{\numberline {13}Seitencrash (X1, X1b/X2)}{51}{section.13}%
-\contentsline {section}{\numberline {14}Fehler und Korrekturen}{55}{section.14}%
-\contentsline {section}{\numberline {15}Werkzeuge und Rechenregeln}{59}{section.15}%
-\contentsline {section}{\numberline {16}Entscheidungen}{60}{section.16}%
-\contentsline {section}{\numberline {17}Offene Punkte und nächste Schritte}{63}{section.17}%
-\contentsline {section}{Anhang A: Begriffe (Glossar)}{64}{section.17}%
-\contentsline {section}{Anhang B: Quellen}{65}{section.17}%
-\contentsline {section}{Anhang C: Software}{66}{section.17}%
+\contentsline {section}{\numberline {10}Elektrik E1: Querschnitte und Verluste}{44}{section.10}%
+\contentsline {section}{\numberline {11}Elektronik und Kabel E2}{46}{section.11}%
+\contentsline {section}{\numberline {12}Stückliste und Kosten}{54}{section.12}%
+\contentsline {section}{\numberline {13}Seitencrash (X1, X1b/X2)}{58}{section.13}%
+\contentsline {section}{\numberline {14}Fehler und Korrekturen}{62}{section.14}%
+\contentsline {section}{\numberline {15}Werkzeuge und Rechenregeln}{66}{section.15}%
+\contentsline {section}{\numberline {16}Entscheidungen}{67}{section.16}%
+\contentsline {section}{\numberline {17}Geometrische Integration durch KI: Grenzen, Fehler, Unsicherheiten}{70}{section.17}%
+\contentsline {section}{\numberline {18}Offene Punkte und nächste Schritte}{75}{section.18}%
+\contentsline {section}{Anhang A: Begriffe (Glossar)}{76}{section.18}%
+\contentsline {section}{Anhang B: Quellen}{77}{section.18}%
+\contentsline {section}{Anhang C: Software}{78}{section.18}%

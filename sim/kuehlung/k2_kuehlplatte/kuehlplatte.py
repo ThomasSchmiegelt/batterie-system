@@ -98,3 +98,31 @@ def nachtrag():
             out["auswahl"][f"{fn}|{tag}"] = min(c_, key=lambda x: x["P_hyd_W"]) if c_ else None
         out["auswahl"][f"{fn}|bestes_U"] = max([x for x in out["faelle"] if x["fall"] == fn and x["ok_dp"]], key=lambda x: x["U_gesamt"])
     json.dump(out, open(f"{H}/ergebnis_nachtrag.json", "w"), indent=1, ensure_ascii=False); return out
+
+
+def k2b():
+    """K2b (KI-generiert, Claude Sonnet, 2026-11-19, Entwurf): Blech 1/4/1 mm, Maeander n Bahnen je m Teilkanaele. Eingaben eingaben.json 'k2b'."""
+    Q = E["k2b"]; Hh = Q["hoehe_mm"]/1000; tb = Q["blech_mm"]/1000; s = Q["steg_mm"]/1000; ts = Q["trennsteg_mm"]/1000
+    kal = E["nachtrag"]["k_Al_W_mK"]; tp = Q["pad"]["dicke_mm"]/1000; kp = Q["pad"]["k_W_mK"]; z = Q["zeta_umlenkung"]
+    out = {"hinweis": "KI-generiert (Claude Sonnet, 2026-11-19), Entwurf. Erzeugt von kuehlplatte.k2b() aus eingaben.json (k2b).", "faelle": []}
+    pl = {v: platte(v) for v in ("LFP", "NMC")}
+    for fn, V in Q["V_pack_L_min"].items():
+        F = E["waerme"]["faelle"][fn]; v = F["var"]; P = pl[v]
+        Wp = K1[fn]["E_quelle_exakt_J"]/F["dauer_s"]*P["zellen"]/E["platten"]["anzahl"]
+        Vp = V/2/6e4; dT = Wp/(rho*c*Vp); A = P["L"]*P["B"]
+        for fh in Q["fuehrung"]:
+            Lb, Bq = (P["L"], P["B"]) if fh == "laengs" else (P["B"], P["L"])
+            for n in Q["n_bahnen"]:
+                bb = (Bq-(n-1)*ts)/n
+                for w_mm in Q["breiten_mm"]:
+                    w = w_mm/1000; m = int(math.floor((bb+s)/(w+s)))
+                    if m < 1: continue
+                    r = kanal(w, Lb, Vp/m, Hh)
+                    mm_ = math.sqrt(2*r["h"]/(kal*s)); eta = math.tanh(mm_*Hh)/(mm_*Hh)
+                    heff = r["h"]*(w+2*eta*Hh)/(w+s); U = 1/(1/heff+tp/kp+tb/kal)
+                    dp = n*r["dp_kanal_Pa"]+(n-1)*z*rho*r["u_m_s"]**2/2
+                    Akan = n*m*w*Lb; mass = 2*(2*tb*A+(A-Akan)*Hh)*Q["rho_Al"]
+                    out["faelle"].append(dict(fall=fn, var=v, fuehrung=fh, n_bahnen=n, breite_mm=w_mm, m_teilkanaele=m, bahnbreite_mm=bb*1000, weg_m=n*Lb,
+                        V_pack_L_min=V, Re=r["Re"], h_Kanal=r["h"], eta_steg=eta, h_eff=heff, U_gesamt=U, dp_bar=dp/1e5, P_hyd_W=dp*2*Vp, dT_K=dT, masse_2_platten_kg=mass,
+                        ok_U=U >= Q["U_ziel"], ok_dp=dp/1e5 <= Q["dp_ziel_bar"]))
+    json.dump(out, open(f"{H}/ergebnis_k2b.json", "w"), indent=1, ensure_ascii=False); return out

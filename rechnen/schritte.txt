@@ -1,0 +1,36 @@
+# ID | GPU | Befehl   (KI-generiert Claude Opus 2026-11-20; Reihenfolge = Plan Autor 2026-11-20; neue Schritte von Opus nach ERWARTUNG anhängen)
+G5_ALLE | nein | bash cad/baukasten/lauf_g5.sh alle
+G5_NACH | nein | bash cad/baukasten/lauf_g5_nach.sh
+X3_LFP_a | nein | bash sim/mechanik/x3_crash_g5/lauf_x3.sh LFP a
+X3_LFP_a_AUSW | nein | bash sim/mechanik/x3_crash_g5/auswerten.sh LFP_a
+# Opus 2026-11-21: Thermik (kurz, GPU) vor die restlichen Crashfälle gezogen
+K3_bahn_100 | ja | bash sim/kuehlung/k3_gesamt/lauf.sh bahn 100
+K3_bahn_200 | ja | bash sim/kuehlung/k3_gesamt/lauf.sh bahn 200
+K3_umlenk_100 | ja | bash sim/kuehlung/k3_gesamt/lauf.sh umlenk 100
+K3_umlenk_200 | ja | bash sim/kuehlung/k3_gesamt/lauf.sh umlenk 200
+K3_AUSW | nein | bash sim/kuehlung/k3_gesamt/lauf.sh auswerten
+K3_FILM | ja | bash sim/kuehlung/k3_gesamt/lauf.sh film
+K4_LFP_V0 | nein | bash sim/kuehlung/k3_gesamt/lauf.sh k4 LFP_P0 V0
+K4_LFP_V1 | nein | bash sim/kuehlung/k3_gesamt/lauf.sh k4 LFP_P0 V1
+K4_LFP_V2 | nein | bash sim/kuehlung/k3_gesamt/lauf.sh k4 LFP_P0 V2
+K4_LFP_V3 | nein | bash sim/kuehlung/k3_gesamt/lauf.sh k4 LFP_P0 V3
+K4_NMC_V0 | nein | bash sim/kuehlung/k3_gesamt/lauf.sh k4 NMC_P4 V0
+K4_NMC_V3 | nein | bash sim/kuehlung/k3_gesamt/lauf.sh k4 NMC_P4 V3
+K4_LFP_DAUER | nein | bash sim/kuehlung/k3_gesamt/lauf.sh k4 LFP_DAUER V0
+K4_NMC_DAUER | nein | bash sim/kuehlung/k3_gesamt/lauf.sh k4 NMC_DAUER V0
+PI_K3 | nein | bash rechnen/pi_pruefung.sh sim/kuehlung/k3_gesamt
+BILDER_K | nein | bash rechnen/bilder_sammeln.sh
+X3_LFP_a2 | nein | bash sim/mechanik/x3_crash_g5/lauf_x3.sh LFP a2
+X3_LFP_a2_AUSW | nein | bash sim/mechanik/x3_crash_g5/auswerten.sh LFP_a2
+X3_LFP_a_s10 | nein | bash sim/mechanik/x3_crash_g5/lauf_x3.sh LFP a_s10
+X3_LFP_a_s10_AUSW | nein | bash sim/mechanik/x3_crash_g5/auswerten.sh LFP_a_s10
+X3_LFP_a_s40 | nein | bash sim/mechanik/x3_crash_g5/lauf_x3.sh LFP a_s40
+X3_LFP_a_s40_AUSW | nein | bash sim/mechanik/x3_crash_g5/auswerten.sh LFP_a_s40
+X3_LFP_b | nein | bash sim/mechanik/x3_crash_g5/lauf_x3.sh LFP b
+X3_LFP_b_AUSW | nein | bash sim/mechanik/x3_crash_g5/auswerten.sh LFP_b
+X3_NMC_a | nein | bash sim/mechanik/x3_crash_g5/lauf_x3.sh NMC a
+X3_NMC_a_AUSW | nein | bash sim/mechanik/x3_crash_g5/auswerten.sh NMC_a
+X3_NMC_b | nein | bash sim/mechanik/x3_crash_g5/lauf_x3.sh NMC b
+X3_NMC_b_AUSW | nein | bash sim/mechanik/x3_crash_g5/auswerten.sh NMC_b
+PI_X3_ALLE | nein | bash rechnen/pi_pruefung.sh sim/mechanik/x3_crash_g5
+BILDER_X | nein | bash rechnen/bilder_sammeln.sh

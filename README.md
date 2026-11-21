@@ -1,50 +1,58 @@
-# Batteriesystem: Zelle, Pack, Elektrik, Kühlung – entwickelt mit KI-Agenten
+# Batteriesystem mit KI-Agenten: ein Agentic Workflow für nachweispflichtige Entwicklung
 
-> **KI-generiert.** Aufbau, Skripte und Texte von Claude Opus (Anthropic) für Thomas Schmiegelt, angelegt 2026-11-11.
-> Hobbyprojekt zum Thema „KI im Engineering“, nicht begutachtet.
+> **KI-generiert.** Aufbau, Skripte und Texte von Claude Opus, Sonnet und Haiku (Anthropic) sowie einem lokalen LLM, gesteuert und geprüft von Thomas Schmiegelt. Angelegt 2026-11-11. Testprojekt zum Thema „KI im Engineering“, nicht begutachtet. Den Status „freigegeben“ setzt nur der Mensch.
 
-**Testprojekt für den gewerblichen Einsatz von KI-Agenten.** Anforderungen, Nachverfolgung, Entscheidungen, Risiken und KI-Einsatzprotokoll liegen in [`docs/`](docs/00_dokumentenlenkung.md). Opus leitet und verteilt die Arbeit selbstständig an Sonnet, Haiku und PI ([`CLAUDE.md`](CLAUDE.md)).
+**Um die Batterie geht es hier nur am Rande. Im Mittelpunkt steht die Frage, wie KI-Agenten Entwicklungsarbeit so übernehmen können, dass man ihren Ergebnissen trauen kann.** Als Anwendungsfall dient ein vollständiges Batteriepack für einen Kompaktwagen (400 km Reichweite, 10–80 % in 20 min). Von wenigen Vorgaben bis zum Bericht reicht die Kette über Lastenheft, Zellmodell, Verschaltung, parametrisches CAD, Kühlung, Hochvolt, Crash, Stückliste und Kosten.
 
-**Stand: nur vorbereitet.** Es ist noch nichts gerechnet und nichts recherchiert. Offene Vorgaben stehen in [`PLAN.md`](PLAN.md).
+## Agentenarchitektur (Orchestrator-Worker)
 
-## Ziel
+| Rolle | Modell / Werkzeug | Aufgabe |
+|---|---|---|
+| Orchestrator | Claude Opus (Claude Code) | Anforderungen, Methodenwahl, **Erwartung vor jeder Rechnung**, Deutung, Fehlersuche, Prüfung an Rohdaten |
+| Worker | Claude Sonnet (Subagent `sonnet-umsetzer`) | Skripte, Rechnungen, Auswertungen und Berichtsentwürfe, jeweils nach schriftlichem Auftrag |
+| Worker | Claude Haiku (Subagent `haiku-helfer`) | Mechanisches: Logs, Listen, Formatprüfung |
+| Lokales LLM | PI-Agent über Ollama, offline | Recherche, Zweitmeinung, automatischer Prüfschritt nach Rechnungen |
+| Maschine | FreeCAD (headless), Elmer FEM, FluidX3D (LBM, GPU), OpenCourant (explizit), PyBaMM | Rechnen, losgelöst und unterbrechbar |
+| Mensch | Autor | Vorgaben, Freigaben, alles nach außen |
 
-Ein vollständiges Batteriesystem für ein Elektrofahrzeug, von der Zellchemie bis zum fertigen Pack:
+Regeln: [`CLAUDE.md`](CLAUDE.md), [`AGENTS.md`](AGENTS.md). Jede Delegation steht im [KI-Einsatzprotokoll](docs/08_ki_einsatz_protokoll.md) mit wer, was, Prüfung und Ergebnis.
 
-1. **Chemie der Zelle:** Kathode, Anode, Elektrolyt. Spannung, Kapazität und Alterung werden mit einem elektrochemischen Modell (PyBaMM) gerechnet.
-2. **Zellgeometrie:** Form und Abmessungen, parametrisches CAD.
-3. **Zusammenbau:** Zellen, Träger, Gehäuse und Deckel zum Pack, Explosionsdarstellung.
-4. **Elektrik:** Verschaltung der Zellen in Reihe und parallel, Zellverbinder, Sicherung, Schütze, Vorladung und Messung (BMS).
-5. **Kühlung:** Kühlplatte, Strömung, Temperaturverteilung, schnelles Laden als Auslegungsfall.
-6. **Wissensaufbau und Patentrecherche:** Stand der Technik mit wörtlichen Belegen.
+## Was den Workflow nachprüfbar macht
 
-Beispiel als Bezug: BYD Blade Battery (https://www.byd.com/de/technologie/blade-battery). Das sind lange, flache LFP-Zellen, die ohne Module direkt im Pack sitzen. Die Herstellerseite lädt ihren Inhalt per JavaScript nach und liefert beim automatischen Abruf keinen Text. Die Kennwerte holt deshalb die Recherche (`forschung/`, Thema W03 und P01) mit Belegen.
+- **Anforderungen zuerst:** 30 Anforderungen ([Lastenheft](docs/01_lastenheft.md)) und eine automatisch erzeugte [Anforderungsverfolgung](docs/03_anforderungsverfolgung.md).
+- **Entscheidungsakten:** 157 Akten `pm/entscheidungen/ENT-*.md` mit Begründung, Alternativen, Belegen und Status. Das CAD liest Maße **nur** aus Akten mit Status „entschieden“ (`pm.py parameter`).
+- **Erwartung vor dem Ergebnis:** Ohne `ERWARTUNG.md` mit Zielband rechnet kein Agent. Jede Grafik zeigt dieses Zielband.
+- **Prüfung an Rohdaten, nicht am Agentenbericht:** Opus prüft jedes Ergebnis selbst, bei Haiku reicht eine Stichprobe.
+- **Recherche mit Grounding-Prüfung** (`forschung/`): Stufe A holt die Quellen ohne KI, Stufe B lässt das lokale LLM offline nur auf diesen Texten arbeiten, Stufe C prüft jedes Zitat wörtlich gegen die Quelle (`pruefe.py`). Nur geprüfte Werte dürfen als Beleg in eine Akte.
+- **Vektorsuche und RAG über die Projektakten** (`pm/vektorsuche/`): Embeddings lokal über Ollama, ChromaDB, Antworten mit Belegpflicht, und eine Prüfung im Code, ob jede zitierte Akte wirklich abgerufen wurde.
+- **Unterbrechbare Rechenwarteschlange** (`rechnen/`): Fertig-Marken, Stop-Datei, Wiederaufsetzen nach einem Neustart des Rechners. Sie läuft auch weiter, wenn das Token-Kontingent des Cloud-Modells aufgebraucht ist.
+- **Ehrliches Fehlerprotokoll:** [`BEFUNDE.md`](BEFUNDE.md) und ein eigenes Berichtskapitel über Grenzen, Fehler und Unsicherheiten der KI.
 
-## Arbeitsweise (übernommen aus Fusion, Wasserstoff und E-Maschine)
+## Beispiele aus dem Fehlerprotokoll
 
-- **Rollen:** Claude Code schreibt den Code, der rechnet, startet ihn und dokumentiert. PI (lokales Sprachmodell) recherchiert und prüft gegen. Hermes führt die Skills.
-- **Erwartung vorher:** Vor jeder Rechnung werden Erwartung und Deutung festgelegt (`ERWARTUNG.md` im Rechenordner). Danach wird verglichen.
-- **Zielband in jeder Grafik:** Jede Grafik zeigt einen beschrifteten Zielbereich. Ein unbelegter Grenzwert ist als **Annahme** gekennzeichnet.
-- **Befunde:** Jeder Befund kommt in den Hermes-Skill und mit Zahl und Fundstelle nach `BEFUNDE.md`, im selben Schritt.
-- **Pausierbar:** Jede Rechnung läuft in einem eigenen Scope (`~/bin/rechnung pause|weiter`), speichert paketweise und nennt ihre Dauer.
-- **Kennzeichnung:** Jedes Dokument ist als KI-generiert gekennzeichnet (Titelkasten und Fußzeile).
+- **Crash:** Kennzahlen und Energiebilanz waren unauffällig (Fehler 0,19 %). Erst das Verformungsbild zeigte, dass Zellreihen ohne gegenseitigen Kontakt bis zu 319 mm wegrutschten. Seitdem gibt es eine automatische Plausibilitätsprüfung für jeden Crashfall (B-BAT-039/040).
+- **Kosten:** Die vorab festgelegte Erwartung deckte eine falsche Vorgabe des Orchestrators selbst auf: 41,5 kg Glimmer im Pack (B-BAT-035).
+- **Thermik:** Die Erwartung des Orchestrators hatte die Aufwärmung des Kühlmittels vergessen. Das Ergebnis von 16 K Temperaturunterschied war richtig, die Erwartung falsch (B-BAT-038).
+- **Geometrie:** Die Kollisionsbereinigung der Gesamtmontage begann mit 67 Fehlern und endete bei 0, Schritt für Schritt nachvollziehbar (B-BAT-036/037).
+
+## Stand (2026-11-21)
+
+- Gesamtmontage G5 mit Blech-Kühlplatte (Mäander) für LFP und NMC kollisionsfrei, Stückliste und Kosten aktualisiert.
+- Thermik: FluidX3D (Kanalströmung) und Elmer (ganzes Pack), mit Varianten. Ergebnis: Die Kühlung verfehlt das Ziel ΔT ≤ 5 K; der Verbesserungsvorschlag ist Parallelführung mit Z-Verteiler.
+- Crash: Pfahlaufprall und Quetschung mit OpenCourant, mehrere Lastfälle laufen.
+- Bericht: [`bericht/bericht.pdf`](bericht/bericht.pdf), 78 Seiten, Version 0.5 (Entwurf).
 
 ## Aufbau
 
-| Ordner | Inhalt | Werkzeug |
-|---|---|---|
-| `forschung/` | PI-Rechercheagent: Patente (P01–P10) und Wissensaufbau (W01–W07), in drei Stufen und sicher | Skill `patent-recherche`, `web-recherche` |
-| `quellen/` | Fremde PDFs und Datenblätter. **Nicht im Repo** | – |
-| `sim/chemie/` | Zellmodell: Entladekurve, Innenwiderstand, Wärmeentwicklung, Alterung | PyBaMM 26.10 |
-| `cad/zelle/` | Parametrische Zelle (Länge, Breite, Dicke, Pole, Entgasungsventil) | FreeCAD 1.1.4 (Textmodus), Blender |
-| `cad/pack/` | Pack: Zellanordnung, Träger, Kühlplatte, Gehäuse, Deckel | FreeCAD, Blender, gmsh |
-| `sim/elektrik/` | Verschaltung, Spannungslage, Ströme, Verluste in Verbindern, Schutzkonzept | Python (scipy) |
-| `sim/kuehlung/` | Kühlplatte: Verteilung im Kanal, Temperatur der Zellen beim Schnellladen | ElmerFEM 26.2, FluidX3D (eigene Kopie) |
-| `sim/mechanik/` | Lasten auf den Pack (Stoß, Schwingung, Verspannung der Zellen) | ElmerFEM |
-| `pm/` | Projektmanagement: Bauteilbaum, Entscheidungsakten ENT-*, Parameter fürs CAD, Bauteilgespräch mit PI | pm.py, gespraech.sh |
-| `video/` | Abschlussvideo (Storyboard; entsteht am Schluss) | FreeCAD → Blender → ffmpeg |
-| `bericht/` | Bericht DE und EN, kapitelweise | LaTeX |
-| `docs/` | Dokumentationssatz BAT-DOC-00 bis 11: Lastenheft, Pflichtenheft, Nachverfolgung, Entscheidungen, FMEA, Verifikationsplan, Normenliste, KI-Einsatzprotokoll, Änderungen, Lizenzen, Prozess | Markdown |
-| `.claude/agents/` | Agenten `sonnet-umsetzer`, `haiku-helfer` | Claude Code |
+| Ordner | Inhalt |
+|---|---|
+| `docs/` | Dokumentationssatz: Lastenheft, Pflichtenheft, Nachverfolgung, Entscheidungen, FMEA, Verifikationsplan, Normen, KI-Einsatzprotokoll, Änderungen, Lizenzen |
+| `pm/` | Bauteilbaum, Entscheidungsakten, Parameter für das CAD, Stückliste, Kosten, Netzplan, Vektorsuche |
+| `forschung/` | Recherche in drei Stufen mit Zitatprüfung (fremde Quelltexte sind nicht im Repo) |
+| `cad/` | Parametrisches CAD (FreeCAD headless), Baukasten für die Gesamtmontage mit Kollisions- und Massenprüfung |
+| `sim/` | Chemie (PyBaMM), Elektrik, Kühlung (Elmer, FluidX3D), Mechanik/Crash (CalculiX, OpenCourant); jeder Rechenordner mit `ERWARTUNG.md` |
+| `rechnen/` | Unterbrechbare Warteschlange für die Rechnungen |
+| `bericht/` | Bericht (LaTeX) |
+| `.claude/agents/` | Definitionen der Worker-Agenten |
 
-Software und Umgebung: [`SOFTWARE.md`](SOFTWARE.md). Regeln für Agenten: [`AGENTS.md`](AGENTS.md).
+Software und Umgebung: [`SOFTWARE.md`](SOFTWARE.md). Fremde Inhalte und Lizenzen: [`docs/10_lizenzen_und_quellen.md`](docs/10_lizenzen_und_quellen.md).

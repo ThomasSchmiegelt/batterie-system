@@ -1,0 +1,50 @@
+{
+ "_hinweis": "KI-generiert (Claude Sonnet, 2026-11-20), Auftrag DB2. Datenblattwerte überschreiben annahmen.json/annahmen_g5.json (kern.py liest diese Datei zuletzt). Herkunft je Eintrag. Entwurf.",
+ "A_e2d_schuetz_bolzen_abstand_mm": {
+  "wert": 25.5,
+  "einheit": "mm",
+  "herkunft": "KI-generiert (Claude Sonnet, 2026-11-20), Auftrag DB2. Datenblatt BT-711_glvac_GLFX250.pdf S. 6 (PDF-Zeichnung, aus Zeichnung: 25,5 ±0,5 Lastanschlüsse; Wert im PDF-Text geprüft: nein). Gilt im Modell auch für Vorladeschütz GV200 (BT-712_gigavac_GV200.pdf S. 3: 26,7, aus Zeichnung), ein gemeinsamer Schlüssel"
+ },
+ "A_e2_pyro_masse_kg": {
+  "wert": 0.23,
+  "einheit": "kg",
+  "herkunft": "KI-generiert (Claude Sonnet, 2026-11-20), Auftrag DB2. Datenblatt BT-713_sensata_pyrofuse.pdf S. 1 'Total weight: 230g' (Wert im PDF-Text geprüft: ja; PDF-Text nennt ±34,85 %, datenblaetter.md nannte ±5 %)"
+ },
+ "A_e2d_ntc_mm": {
+  "wert": [
+   1.6,
+   0.8,
+   0.8
+  ],
+  "einheit": "mm",
+  "herkunft": "KI-generiert (Claude Sonnet, 2026-11-20), Auftrag DB2. Datenblatt BT-330_vishay_NTCS0603E3.pdf S. 2: L 1,6 ±0,15, W 0,8 ±0,15, T 0,8 ±0,15 (Wert im PDF-Text geprüft: ja)"
+ },
+ "A_e2d_box_druckausgleich_d_mm": {
+  "wert": 7.8,
+  "einheit": "mm",
+  "herkunft": "KI-generiert (Claude Sonnet, 2026-11-20), Auftrag DB2. Datenblatt BT-570_gore_auto-batteries-snapfit.pdf S. 2: Einbauloch Ø7,8 ±0,1 (Wert im PDF-Text geprüft: ja); Kopf Ø17 steht in A_g5_druckausgleich_mm"
+ },
+ "A_e2_gas_masse_kg": {
+  "wert": 0.015,
+  "einheit": "kg",
+  "herkunft": "KI-generiert (Claude Sonnet, 2026-11-20), Auftrag DB2. Datenblatt BT-770_amphenol_SGX_TRDU5.pdf S. 3 'Weight < 15 g' (Wert im PDF-Text geprüft: ja). OBERGRENZE, keine Messmasse"
+ },
+ "A_e2_hv40_mm": {
+  "wert": [
+   45.4,
+   40.6,
+   49
+  ],
+  "einheit": "mm",
+  "herkunft": "KI-generiert (Claude Sonnet, 2026-11-20), Auftrag DB2. Datenblatt BT-730_te_HVA280_header_1-2103124-1.pdf S. 2 (Händlerblatt: Product Length 45,4, Width 40,6, Connector Height 49; Wert im PDF-Text geprüft: ja; ohne Zeichnung, Ausrichtung L/B/H angenommen, Gehäuse 2-polig)"
+ },
+ "A_e2_vorladewiderstand_mm": {
+  "wert": [
+   49.99,
+   28.96,
+   21.44
+  ],
+  "einheit": "mm",
+  "herkunft": "KI-generiert (Claude Sonnet, 2026-11-20), Auftrag DB2. Datenblatt BT-712_vishay_RH050.pdf S. 2: Körper C 49,99 (Länge), F 28,96 (Breite), B 21,44 (Höhe) (aus Zeichnung gelesen; Zuordnung der Buchstaben nicht eindeutig; Wert im PDF-Text geprüft: nein)"
+ }
+}

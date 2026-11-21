@@ -1,0 +1,6 @@
+cad/baukasten/lauf_g5.sh: Zeile 7: cad/baukasten/ausgabe/lauf_g5.log: Datei oder Verzeichnis nicht gefunden
+cad/baukasten/lauf_g5.sh: Zeile 7: cad/baukasten/ausgabe/lauf_g5.log: Datei oder Verzeichnis nicht gefunden
+cad/baukasten/lauf_g5.sh: Zeile 7: cad/baukasten/ausgabe/lauf_g5.log: Datei oder Verzeichnis nicht gefunden
+cad/baukasten/lauf_g5.sh: Zeile 7: cad/baukasten/ausgabe/lauf_g5.log: Datei oder Verzeichnis nicht gefunden
+cad/baukasten/lauf_g5.sh: Zeile 7: cad/baukasten/ausgabe/lauf_g5.log: Datei oder Verzeichnis nicht gefunden
+cad/baukasten/lauf_g5.sh: Zeile 7: cad/baukasten/ausgabe/lauf_g5.log: Datei oder Verzeichnis nicht gefunden

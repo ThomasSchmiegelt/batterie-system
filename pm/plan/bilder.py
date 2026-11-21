@@ -37,8 +37,9 @@ for p in bilder:
     erg = os.path.join(ordner, "ergebnis.json")
     if not os.path.exists(erg): erg = os.path.join(ordner, "ergebnis_detail.json")
     if not os.path.exists(erg): erg = os.path.join(os.path.dirname(ordner), "ergebnis.json")  # render/ -> entwurf/..
+    if rel == "cad/baukasten/bilder" and name.startswith("g5_"): erg = os.path.join(R, "cad/baukasten/ausgabe", "ergebnis_" + name.split("_")[1] + ".json")   # G5.8
     quelle = os.path.relpath(erg, R) if os.path.exists(erg) else "ergebnis.json fehlt"
-    vorg = "G4" if rel.startswith("cad/pack") else VORGANG.get(os.path.basename(ordner), "unbekannt")
+    vorg = "G5" if rel.startswith("cad/baukasten") else "G4" if rel.startswith("cad/pack") else VORGANG.get(os.path.basename(ordner), "unbekannt")
     if os.path.basename(ordner) == "bilder" and os.path.basename(os.path.dirname(ordner)) in VORGANG: vorg = VORGANG[os.path.basename(os.path.dirname(ordner))]
     out.append(f"### {name}\n\n![{name}]({os.path.relpath(p, os.path.join(R, 'docs'))})\n")
     out.append(f"**Lesehilfe:** {lh if lh else 'Lesehilfe fehlt'}\n")

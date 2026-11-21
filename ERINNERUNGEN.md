@@ -2,6 +2,59 @@
 
 KI-generiert (Claude Opus).
 
+## 2026-11-21 12:15 Pause (Autor)
+- Warteschlange angehalten (rechnen/halt.sh). Weiter mit: `bash rechnen/start.sh`.
+- Crash LFP_a ungültig (B-BAT-039, ERWARTUNG X3 Nachtrag 3): Zellreihen ohne Kontakt. Sonnet stellt auf 4 Blöcke um, Probe; danach rechnet die Warteschlange LFP_a neu. Kapitel 17 im Bericht um diesen Fall ergänzen.
+
+## 2026-11-21 – Stand (Opus)
+- Warteschlange läuft (rechnen/status.sh): X3_LFP_a (Crash, CPU) → K3 FluidX3D (GPU) → K4 Elmer V0–V3, NMC, Dauerfahrt → PI_K3 → restliche Crashfälle (a2, s10, s40, b, NMC a/b) → PI_X3_ALLE.
+- Befunde: B-BAT-037 (Zahlen der Kollisionsbereinigung), B-BAT-038 (Thermik: ΔT 16 K > 5 K, Opus-Erwartungsfehler, LBM τ).
+- Kapitel 17 „Geometrische Integration durch KI“ im Bericht (S. 70–74), Opus hat Stichproben geprüft.
+- K3_FILM (Durchströmungsfilm) liegt in der Warteschlange nach K3_AUSW. Danach ergebnis_film.json Punkt 1 (Massenerhalt ±5 %) prüfen und die Standbilder ins K-Kapitel setzen.
+- Weiter mit: Nach den Läufen PI_PRUEFUNG.md in sim/kuehlung/k3_gesamt und sim/mechanik/x3_crash_g5 lesen, Bilder prüfen → Nachrechnen E/KO/K2b → Abschlussbericht 1.0 mit Verbesserungsvorschlägen (ΔT → V1–V3, Crash).
+- Herunterfahren auf „fahre die rechnung herunter“: bash rechnen/halt.sh. Neustart: bash rechnen/start.sh.
+
+## 2026-11-20 – Stand (Opus)
+- Plan des Autors: Datenblätter → Kollisionen (Kühlplatte bleibt) → Thermik FluidX3D (K3) + Elmer (K4) → Crash Box mit Inhalt (X3, Verformungsfilm) → alles nachrechnen → Abschlussbericht mit Verbesserungsvorschlägen.
+- Erledigt: DB2, Kollisionen 0/0 (B-BAT-036). Warteschlange `rechnen/` läuft (G5_ALLE, G5_NACH). Anhalten `bash rechnen/halt.sh`, weiter `bash rechnen/start.sh`.
+- Läuft: Sonnet richtet K3/K4 (sim/kuehlung/k3_gesamt) und X3 (sim/mechanik/x3_crash_g5) ein und hängt die Läufe an rechnen/schritte.txt. Die Erwartungen stehen dort in ERWARTUNG.md.
+- Weiter mit: Rückgaben prüfen → `bash rechnen/start.sh`, falls die Warteschlange steht → nach den Läufen PI_PRUEFUNG.md lesen → Nachrechnen E/KO/K2b → Abschlussbericht 1.0.
+- Frage an den Autor offen: Gilt „die Kühlplatte möchte ich haben“ als Freigabe von ENT-152…156?
+
+## 2026-11-19 spät – Übergabe (Wochenlimit, Opus)
+**Stand:** SL3.1 und KO2 sind fertig (LFP 6 588 € / 89,1 €/kWh, NMC 8 753 € / 117,9 €/kWh, beide im Band ERW-KO2). Den Opus-Fehler „Mica 1 mm“ bei BT-220 habe ich korrigiert: jetzt Schaumpad, 41,5 kg → 4,5 kg (B-BAT-035). Für Hauptschütz, Vorladeschütz und Widerstand gelten jetzt die Datenblattmassen: 0,4 kg je Hauptschütz, 0,41 kg für Vorladeschütz + Widerstand (annahmen_g5.json, im PDF geprüft).
+**Gesamtmontage G5.7 (Opus-Änderungen heute):**
+- Verteiler und Sammler BT-620 sitzen jetzt AUSSEN hinter der Rückwand. In den Endzonen war kein Platz (LFP 16 mm, NMC 0 mm). Die Platten greifen mit einer Lasche durch einen Schlitz im Rahmen (kuehlung._ecken/_laschen).
+- Um jede Durchführung durch die Kühlplatte liegt ein Kragen ohne Wasser (A_g5_kragen_kuehlplatte_mm 3).
+- Der HV-Eintritt der Schaltbox liegt auf Hülsenende + Biegeradius, damit die Leitung ohne Schlaufe hineingeht. Die Box wird dafür höher, wenn nötig.
+- NMC: Liegt der Trennstecker unter der Box, rückt die Box in y daneben. Der Einbauort BT-720 wird gesetzt.
+- gehaeuse.einbau_aussen() legt fest: Druckausgleich und Entgasungsventil an der Rückwand ±150 mm, Kühlmittelfühler oben in den Blöcken, Typschild vorn auf dem Deckel, Deckelschrauben samt Gewindebohrung im Rahmen. Aufgerufen wird es aus schaltbox._layout, also vor kaufteile und normteile.
+- Fühler und Typschild sind gebaut (kaufteile.py). Die Serviceöffnung reicht bis 2 mm vor die Trennbrücke.
+**Letzter Lauf LFP:** 1345 Teile, 628,8 kg, 2335 × 1430 × 247 mm, 31 Fehler, darunter die Kollisionen:
+- Die Kühlmittelfühler treffen Kuehlplatte_oben (238 mm³), weil die Lasche der Platte durch den Block geht. Abhilfe: Fühler seitlich in den Block setzen (Achse x) oder kürzer.
+- Typschild ↔ Servicedeckel-Dichtung und Schraube: typschild_x in A_g5_aussen_teile verschieben, z. B. auf 400.
+- 4 × M5 der HV-Stecker BT-730 treffen Kuehlplatte_oben. Die Schrauben sind zu lang oder brauchen einen Kragen bzw. Ausschnitt (BT-610 in deren ziele).
+- Linsenkopf M5 BT-710 ↔ Kabelschuh_Plus_Box (6 mm³), Kleinigkeit.
+- Übrige Fehler sind Massenabweichungen gegenüber der Stückliste. Sie verschwinden mit `python3 pm/bauteile/stueckliste_v3.py --aus-cad`.
+- NMC mit diesem Stand nicht neu gelaufen. Der vorige NMC-Lauf: 3600 Teile, 480 kg, Kollisionen nur M6-Deckelschrauben, die jetzt behoben sind.
+**G5.8 erledigt (Sonnet):** 12 Renders cad/baukasten/bilder/g5_*.png (render_g5_export.py → render_g5.py → label_g5.py), Bericht 0.5 (73 S.). Nach Kollisionsbereinigung neu rendern. NMC-FCStd ist vom Stand vor Fühler/Typschild (79 Kollisionen, meist M6-Deckelschrauben).
+**2026-11-20:** Rechenkette `nohup bash cad/baukasten/lauf_g5.sh alle &` läuft ohne KI (Log cad/baukasten/ausgabe/lauf_g5.log, Ende „LAUF_G5 PI ENDE“, Stopp: touch cad/baukasten/STOP). Am Ende schreibt PI cad/baukasten/ausgabe/PI_BERICHT_G5.md. Im Bericht sind Abb. 43–49 (E2-Draufsicht, Kabelplan, Box offen, Brücke) auf g5_*-Bilder umgestellt. Erledigt 09:29: 18 Bilder, Bericht 0.5 mit G5-Bildern (73 S., 0 Fehler). LFP 17 / NMC 15 Kollisionen, größte: Kabelschuh HV ↔ Kuehlplatte_oben 1190 mm³, Kühlmittelfühler 238 mm³. KO aus CAD: LFP 88,7, NMC 117,7 €/kWh.
+**Nächste Schritte:** Kollisionen oben beheben → LFP und NMC laufen lassen (`PACK_VARIANTE=<V> G5_STEP=0 $FREECAD_APPIMAGE freecadcmd cad/baukasten/montage.py`) → `stueckliste_v3.py --aus-cad && kosten.py && bilder.py && doku.py` → G5.8 Renders, LIESMICH, Katalog → G5.9 Bericht 0.5, Folie G5. Nichts committet. Freigaben des Autors stehen noch aus: ENT-104…150, ENT-152…156.
+
+## 2026-11-19 · G5 Geometrie aus Stückliste
+- Autor: „verwerfe die knautschzone. Überarbeite die geometrie. vielleicht erst die stückliste und anhand der stückliste die Modelle generieren. planung und komplexe Modelle sollten Opus übernehmen … code speichern und dokumentieren. Lagere tätigkeiten aus.“
+- ENT-151 (keine Knautschzone, entschieden Mensch), BT-540 Rolle angepasst. Plan cad/baukasten/PLAN.md, ERW-G5 ERWARTUNG.md.
+- Laufen: Sonnet SL3 (G5.1), Haiku W31–W33 bestätigte Werte (G5.6), PI W34 Kaufteilformen (forschung/w34.log). Opus: kern.py + montage.py (G5.2), danach Gehäuse/Kühlplatte/Schaltbox.
+- Autor: „besorge dir die datenblätter, schreibe mir ggf eine liste welche ich für dich herunterladen muss“ → Sonnet G5.5b (AUFTRAG_DATENBLAETTER.md), PDFs nach quellen/datenblaetter/ (nicht im Repo), Liste für den Autor forschung/datenblaetter_fuer_autor.md.
+- G5.5b fertig: 18 PDFs, Maße von 8 Typen; Opus-Stichprobe GX14 ok. Übernommen (annahmen_g5.json): Schütz GLVAC GLFX250, Vorladeschütz GV200, Pyro Sensata STPS500, Shunt IVT-S, Gore AVS 70, Vernay VoltaVent, Kabelschuh Pfisterer. Schaltbox damit 66 mm innen, Turm 73 mm. Preise: keine.
+- Autor: „kühlplatten aus blech … 1mm … 4mm … schleifen … pumpe und ventile und schläuche“ → ENT-152 (6 mm), K2b (Sonnet): Opus-Auswahl 8 Bahnen längs, 8 mm, U 558, Δp 0,22 bar, 46,6 kg (ENT-153…156, B-BAT-034). kuehlung.py v2: Mäander + Kühlmodul hinten (Behälter→Pumpe CWA100-3→3/2-Ventil→Chiller→T→Pack, Bypass), +245 mm Länge. Bild cad/baukasten/bilder/kuehlplatte_maeander_schnitt.png.
+- Autor: „ja das darf hinten sitzen“ → ENT-157 Kühlmodul hinten (entschieden Mensch).
+
+## 2026-11-18 Abend – Übergabe
+- Autor: „jetzt geht es ins bett“.
+- Heute erledigt: E2 bis Detailstand (e2d), Stückliste SL2, Kosten KO1 (100 % Schätzung), Bericht 0.4 (66 S.), Crash X1 und X1b/X2 (OpenCourant installiert), GitHub privat (batterie-system), Wiederaufsetzregel und neustart.sh.
+- Weiter mit: (1) Autor: Knautschzone verwerfen oder Studie engere Querträger (Opus-Empfehlung: verwerfen). (2) Überarbeitungsschleife E2 durch Opus selbst (Formen Kaufteile, Farben, Renders, M8-Flachkopf, Schütze liegend → Turm ≤ 210 mm), danach SL/KO/Bericht neu. (3) PI W31–W33 lesen (pruefe.py) → Preise/Kennwerte verifizieren. (4) Freigaben ENT-104…150 beim Autor.
+
 ## 2026-11-18 · E2 Fortsetzung 2 fertig (Sonnet, 09:40)
 - ENT-145 (NMC Mäander), ENT-146 (130 mA NMC), ENT-147 (LFP 2050) vorgeschlagen; ENT-115 auf [LFP]. Ergebnis `sim/elektrik/e2_elektronik/ERGEBNIS.md` v0.3, B-BAT-025. Offen für Opus: LFP-Verschaltung, LFP-FPC, ENT-138 vs ENT-144.
 

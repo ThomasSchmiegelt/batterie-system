@@ -27,3 +27,4 @@
 | AEN-016 | 2026-11-17 | ENT-092…101 entschieden (4680 Halter/Verbinder, Verbinderquerschnitte, HV-Leitung); eigenes Gehäuse je Variante: LFP 2030 (ENT-102 ersetzt ENT-091), NMC 1950 (ENT-103) | ENT-092…103 | Autor 2026-11-17 |
 | AEN-017 | 2026-11-17 | 67 Akten (Zellmaße, Innenaufbau, Bäume ENT-002/031) entschieden; alle 103 Akten entschieden | ENT-002, 014…080 | Autor 2026-11-17 |
 | AEN-018 | 2026-11-18 | Lastenheft: REQ-P16 Herstellkosten je Variante (vorgeschlagen, Zielwert offen); Stückliste auf Konstruktionsstand je Variante | REQ-P16, docs/13 | Autor 2026-11-18 („kümmern um die Stückliste … Kostenbewertung“) |
+| AEN-019 | 2026-11-19 | Keine Knautschzone im Pack (ENT-151), BT-540 Rolle; Geometrie wird aus der Stückliste erzeugt (G5, cad/baukasten), neue BT-440/450/580/590 | ENT-151, struktur.json, docs/13 | Autor 2026-11-19 („verwerfe die knautschzone. Überarbeite die geometrie“) |

@@ -1,0 +1,7 @@
+Erledigt. `sim/kuehlung/k3_gesamt/PI_PRUEFUNG.md` geschrieben (25 Zeilen). Inhalt:
+
+- **Erwartungspunkte 1–5** (Hauptblock): Δp +231,9 % (verfehlt), h −0,93 % und Totzonen 1,9/3,6 % (erfüllt), Bilanz 83325,9 % bzw. NaN (verfehlt), LFP 42,56 °C / 16,44 K (verfehlt), NMC 34,12 °C (verfehlt), Grenzen: T_max erfüllt, ΔT verfehlt — jeweils mit Datei und Schlüssel.
+- **Film-Nachtrag 1–4**: Rückbahn-Fluss 0,490 (verfehlt), Totzonen 7,9 %/1,4 % (erfüllt), Kanäle 0,945–1,009 (erfüllt), Temperatur qualitativ (NaN-frei, stationär).
+- **Logs**: `grep -rni 'FEHLER|Error|Traceback' --include='*.log' .` über alle Laufordner (auch Proben) → **keine Treffer**.
+
+Nur diese eine Datei angefasst, keine Deutung.

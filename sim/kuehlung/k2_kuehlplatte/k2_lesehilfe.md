@@ -12,3 +12,6 @@
 *KI-generiert (Claude Sonnet, 2026-11-17), Entwurf.*
 
 **Lesehilfe zu nachtrag_U_leistung.png.** Jeder Punkt ist eine Bauvariante (Farbe Kanalbreite, Kreis 5 mm Höhe, Dreieck 3 mm). Waagerecht steht die Pumpenleistung (logarithmisch, nur Varianten unter 0,5 bar), senkrecht der Gesamtwärmedurchgang von der Zelle über Pad und Blech ins Kühlmittel, bezogen auf die Plattenfläche. Oberhalb der grünen Linie (500, Annahme aus K0/K1) ist das Ziel erreicht. Je weiter links, desto weniger Pumpenleistung. Der schwarze Ring ist die Auswahl für ΔT ≤ 5 K.
+
+
+**Lesehilfe zu k2b_U_dp.png.** Jeder Punkt ist eine Bauvariante der Blechplatte 1/4/1 mm mit Mäander (Farbe = Zahl der Bahnen n). Waagerecht steht der Druckverlust je Platte (logarithmisch), senkrecht der Gesamtwärmedurchgang U von der Zelle ins Kühlmittel. Das grün schattierte Feld oben links ist das Zielband (U mindestens 500, Druckverlust höchstens 0,5 bar, Annahmen aus ERWARTUNG.md). Je weiter links und höher ein Punkt, desto besser. Der schwarze Ring ist der Vorschlag mit dem kleinsten Druckverlust im Zielband. Links LFP (23 L/min je Pack), rechts NMC (20 L/min). Quelle: ergebnis_k2b.json.

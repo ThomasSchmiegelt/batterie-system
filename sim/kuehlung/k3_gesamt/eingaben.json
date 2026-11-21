@@ -1,0 +1,102 @@
+{
+ "hinweis": "KI-generiert (Claude Sonnet, 2026-11-20), Entwurf. Eingaben K3/K4. Herkunft je Wert. Keine neuen Grenzwerte.",
+ "fall": "LFP_P0",
+ "k2b_fall": {
+  "var": "LFP",
+  "fuehrung": "laengs",
+  "n_bahnen": 8,
+  "breite_mm": 8,
+  "quelle": "sim/kuehlung/k2_kuehlplatte/ergebnis_k2b.json faelle[LFP_P0, laengs, 8, 8]"
+ },
+ "geometrie_mm": {
+  "hoehe": 4,
+  "blech": 1,
+  "steg": 3,
+  "trennsteg": 3,
+  "kammer": 30,
+  "bahnbreite": 168.625,
+  "teilkanaele_je_bahn": 15,
+  "bahnlaenge": 1970,
+  "quelle": "ERWARTUNG.md K3 (Mäander 8 Bahnen, Teilkanal 8x4, Steg 3, Kammer 30); bahnbreite/teilkanaele/bahnlaenge aus ergebnis_k2b.json (bahnbreite_mm, m_teilkanaele, weg_m/8)"
+ },
+ "kuehlmittel": {
+  "rho": 1070,
+  "c": 3300,
+  "mu": 0.003,
+  "k": 0.4,
+  "quelle": "sim/kuehlung/k2_kuehlplatte/eingaben.json kuehlmittel (Annahme dort)"
+ },
+ "q_platte_W": {
+  "wert_aus": "sim/kuehlung/k1_schnellladen/ergebnis.json faelle.LFP_P0.E_quelle_exakt_J / 1200 s * 250 Zellen / 2 Platten",
+  "dauer_s": 1200,
+  "zellen": 250,
+  "platten": 2
+ },
+ "V_pack_L_min": 23,
+ "V_herkunft": "ENT-107/108, hälftig je Platte (K2b eingaben.json)",
+ "fx": {
+  "zellen_je_mm": 4,
+  "zellen_je_mm_probe": 4,
+  "u_gitter": 0.05,
+  "Pr": "mu*c/k",
+  "u_herkunft": "Gittergeschwindigkeit (Wahl, Ma = 0,087); Re aus ergebnis_k2b.json",
+  "lane_lang_umlenk_mm": 60,
+  "lane_lang_herkunft": "Wahl Sonnet (Rechenaufwand bei 4 Zellen/mm): 60 mm Bahnstueck je Seite",
+  "schritte_bahn": 600000,
+  "Pr_sim": 1.0,
+  "Pr_sim_herkunft": "ERWARTUNG.md Nachtrag 1 (Opus 2026-11-21): Nu ausgebildet unabhaengig von Pr",
+  "schritte_umlenk": 150000,
+  "Re_liste": [
+   100,
+   200
+  ],
+  "Re_herkunft": "ERWARTUNG.md Nachtrag 1",
+  "tau_min": 0.52,
+  "tau_ziel": 0.53,
+  "u_gitter_je_Re": "u0 = 0,05 * Re/100 (haelt tau ~ 0,532), Ma <= 0,17"
+ },
+ "grenzen": {
+  "T_max_C": 45,
+  "dT_K": 5,
+  "herkunft": "Annahme Opus (ERWARTUNG.md K3, bisher K1)"
+ },
+ "elmer": {
+  "siehe": "k4_elmer.py, eigener Block k4 weiter unten"
+ },
+ "k4": {
+  "herkunft": "Auftrag K3/K4, ERWARTUNG.md; alle 'NEUE ANNAHME' sind von Sonnet benannt, von Opus zu pruefen",
+  "k1_fall": "LFP_P0",
+  "dauer_s": {
+   "LFP": 1200,
+   "NMC": 1800
+  },
+  "dt_s": 10,
+  "segment_schritte": 120,
+  "T_ein_C": 25,
+  "T_ein_herkunft": "K1 eingaben.json basis.T_kuehl_C = 25",
+  "blech_mm": 1.0,
+  "h_plan_mm": 50,
+  "h_probe_mm": 200,
+  "stoffe": {
+   "k_Al": 237,
+   "rho_Al": 2700,
+   "cp_Al": 900,
+   "cp_Al_herkunft": "NEUE ANNAHME (Lehrbuch)",
+   "k_pad": 3,
+   "rho_pad": 2500,
+   "cp_pad": 1000,
+   "cp_pad_herkunft": "NEUE ANNAHME",
+   "k_schaum_W_mK": 0.05,
+   "k_schaum_herkunft": "NEUE ANNAHME (BT-220 hat keinen Wert)",
+   "herkunft_rest": "k_Al: k2 eingaben nachtrag; k_pad: k2b pad; rho_pad: A_dichte_pad_kg_m3",
+   "k_zwischenraum_NMC": 0.05,
+   "k_zwischenraum_NMC_herkunft": "NEUE ANNAHME Sonnet: Zwischenraum Zellen/Verguss 0,05 W/mK (A_dichte_verguss 300 kg/m3 sehr leicht)"
+  },
+  "segment_hinweis": "Lauf wenige Minuten (< 30 min): ein Segment, kein Wiederaufsetzpunkt noetig; STOP wird vor dem Start geprueft (restart.dat-Segmente nicht eingerichtet)",
+  "h_quelle": "k2b",
+  "h_quelle_hinweis": "k2b = h_Kanal aus ergebnis_k2b.json; fx = h aus K3 ergebnis.json (erst nach Freigabe durch Opus, siehe ERGEBNIS.md Befund)",
+  "dauer_herkunft": "K1: LFP_P0 20 min, NMC_P4 30 min (k2 eingaben waerme.faelle)",
+  "nmc_hinweis": "NEUE ANNAHME Sonnet: NMC homogenisiert als Block ueber die ganze Plattenflaeche, Hoehe 80 mm; k = phi*k_Kern(K0 Mischung) + (1-phi)*k_Zwischenraum",
+  "dauerfahrt": "Q = (1C*Ah)^2*R0 (K0 rechnen.waermequelle), stationaer; Durchfluss und Eintritt wie Schnellladen (Annahme Sonnet)"
+ }
+}

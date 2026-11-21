@@ -1,0 +1,390 @@
+{
+ "hinweis": "KI-generiert (Claude Sonnet, 2026-11-20), Entwurf. Jeder Wert mit Herkunft. Platzhalter sind offene Fragen an Opus (siehe ERGEBNIS.md).",
+ "L_mm": {
+  "wert": 2050.0,
+  "herkunft": "cad/baukasten/ausgabe/netz/LFP/BT-540__Al.stl Hüllquader x 0..2050 (Rahmen ohne Schaltbox)"
+ },
+ "B_mm": {
+  "wert": 1430.0,
+  "herkunft": "cad/baukasten/ausgabe/netz/LFP/BT-540__Al.stl y 0..1430; Breite fest (Autor)"
+ },
+ "rahmen_z_mm": {
+  "wert": [
+   11.0,
+   115.0
+  ],
+  "herkunft": "cad/baukasten/ausgabe/netz/LFP/BT-540__Al.stl z 11..115"
+ },
+ "rand_mm": {
+  "wert": 30,
+  "herkunft": "cad/baukasten/annahmen.json A_rand_mm"
+ },
+ "rahmen_wand_mm": {
+  "wert": 2.5,
+  "herkunft": "cad/baukasten/annahmen.json A_seitenrahmen_wand_mm"
+ },
+ "rahmen_kammern": {
+  "wert": 3,
+  "herkunft": "cad/baukasten/annahmen.json A_seitenrahmen_kammern (übereinander, annahmen_g5.json A_g5_rahmen_kammern_lage)"
+ },
+ "quertraeger_x0_mm": {
+  "wert": [
+   524.0,
+   1018.0,
+   1512.0
+  ],
+  "herkunft": "sim/mechanik/x1_seitencrash/eingaben.json varianten.LFP.quertraeger_x0_mm"
+ },
+ "quertraeger_breite_mm": {
+  "wert": 26,
+  "herkunft": "cad/baukasten/annahmen.json A_quertraeger_breite_mm"
+ },
+ "quertraeger_z_mm": {
+  "wert": [
+   36.0,
+   90.0
+  ],
+  "herkunft": "cad/baukasten/ausgabe/netz/LFP/BT-530__Al.stl z 36..90"
+ },
+ "quertraeger_wand_mm": {
+  "wert": 2.5,
+  "herkunft": "cad/baukasten/annahmen.json A_quertraeger_wand_mm"
+ },
+ "boden_mm": {
+  "wert": 3,
+  "herkunft": "cad/baukasten/annahmen.json A_boden_mm"
+ },
+ "deckel_mm": {
+  "wert": 2,
+  "herkunft": "cad/baukasten/annahmen.json A_deckel_mm"
+ },
+ "ufs_mm": {
+  "wert": 3,
+  "herkunft": "cad/baukasten/annahmen.json A_unterfahrschutz_mm"
+ },
+ "ufs_huelse_mm": {
+  "wert": 20,
+  "herkunft": "cad/baukasten/annahmen_g5.json A_g5_befestigung_huelse_mm (Außen-Ø; im Modell als Vierkant 20x20, Dicke = UFS)"
+ },
+ "befestigung_n_je_seite": {
+  "wert": 6,
+  "herkunft": "cad/baukasten/annahmen_g5.json A_g5_befestigung_n_je_seite"
+ },
+ "befestigung_rand_x_mm": {
+  "wert": 80,
+  "herkunft": "cad/baukasten/annahmen_g5.json A_g5_befestigung_rand_x_mm"
+ },
+ "kuehlplatte_ersatz_mm": {
+  "wert": 2.0,
+  "herkunft": "ERWARTUNG.md X3: Kühlplatten Blech 1/4/1 als Ersatzschale mit 2 mm"
+ },
+ "kuehlplatte_z_mm": {
+  "wert": [
+   14.0,
+   112.0
+  ],
+  "herkunft": "ANNAHME Sonnet: Mittelebenen unten/oben = Mitte zwischen Rahmeninnenkante (11/115) und Pad (17/109) aus BT-230__Pad.stl; Opus bestätigen"
+ },
+ "zellreihen_x0_mm": {
+  "wert": [
+   43.0,
+   58.0,
+   73.0,
+   88.0,
+   103.0,
+   118.0,
+   133.0,
+   148.0,
+   163.0,
+   178.0,
+   193.0,
+   208.0,
+   223.0,
+   238.0,
+   253.0,
+   268.0,
+   283.0,
+   298.0,
+   313.0,
+   328.0,
+   343.0,
+   358.0,
+   373.0,
+   388.0,
+   403.0,
+   418.0,
+   433.0,
+   448.0,
+   463.0,
+   478.0,
+   493.0,
+   508.0,
+   552.0,
+   567.0,
+   582.0,
+   597.0,
+   612.0,
+   627.0,
+   642.0,
+   657.0,
+   672.0,
+   687.0,
+   702.0,
+   717.0,
+   732.0,
+   747.0,
+   762.0,
+   777.0,
+   792.0,
+   807.0,
+   822.0,
+   837.0,
+   852.0,
+   867.0,
+   882.0,
+   897.0,
+   912.0,
+   927.0,
+   942.0,
+   957.0,
+   972.0,
+   987.0,
+   1002.0,
+   1046.0,
+   1061.0,
+   1076.0,
+   1091.0,
+   1106.0,
+   1121.0,
+   1136.0,
+   1151.0,
+   1166.0,
+   1181.0,
+   1196.0,
+   1211.0,
+   1226.0,
+   1241.0,
+   1256.0,
+   1271.0,
+   1286.0,
+   1301.0,
+   1316.0,
+   1331.0,
+   1346.0,
+   1361.0,
+   1376.0,
+   1391.0,
+   1406.0,
+   1421.0,
+   1436.0,
+   1451.0,
+   1466.0,
+   1481.0,
+   1496.0,
+   1540.0,
+   1555.0,
+   1570.0,
+   1585.0,
+   1600.0,
+   1615.0,
+   1630.0,
+   1645.0,
+   1660.0,
+   1675.0,
+   1690.0,
+   1705.0,
+   1720.0,
+   1735.0,
+   1750.0,
+   1765.0,
+   1780.0,
+   1795.0,
+   1810.0,
+   1825.0,
+   1840.0,
+   1855.0,
+   1870.0,
+   1885.0,
+   1900.0,
+   1915.0,
+   1930.0,
+   1945.0,
+   1960.0,
+   1975.0,
+   1990.0
+  ],
+  "herkunft": "cad/baukasten/ausgabe/netz/LFP/BT-100__Zelle_LFP.stl, 125 zusammenhängende Reihen (je 2 Zellen), x-Beginn je Reihe, Rasterabstand 15, 3 Lücken 44 für Querträger"
+ },
+ "zelle_dicke_mm": {
+  "wert": 14.0,
+  "herkunft": "cad/baukasten/ausgabe/netz/LFP/BT-100__Zelle_LFP.stl Reihenbreite x"
+ },
+ "zelle_y_mm": {
+  "wert": [
+   33.0,
+   1397.0
+  ],
+  "herkunft": "cad/baukasten/ausgabe/netz/LFP/BT-100__Zelle_LFP.stl y 33..1397"
+ },
+ "zelle_z_mm": {
+  "wert": [
+   18.0,
+   108.0
+  ],
+  "herkunft": "cad/baukasten/ausgabe/netz/LFP/BT-100__Zelle_LFP.stl z 18..108"
+ },
+ "zellmasse_gesamt_kg": {
+  "wert": 462.5,
+  "herkunft": "cad/baukasten/ausgabe/ergebnis_LFP.json positionen[pos=100.1].masse_cad_kg"
+ },
+ "zelle_E_GPa": {
+  "wert": 1.0,
+  "herkunft": "ERWARTUNG.md X3 Nachtrag 1 (Opus 2026-11-21) Punkt 3: 1 GPa (Annahme Opus, nicht belegt)"
+ },
+ "zelle_fliess_GPa": {
+  "wert": 0.02,
+  "herkunft": "ERWARTUNG.md X3 Nachtrag 1 (Opus 2026-11-21) Punkt 3: 20 MPa ideal plastisch (Annahme Opus, nicht belegt); Empfindlichkeit 10/40 MPa über Lastfall a_s10/a_s40"
+ },
+ "zelle_nu": {
+  "wert": 0.3,
+  "herkunft": "PLATZHALTER Sonnet"
+ },
+ "pfahl_d_mm": {
+  "wert": 254,
+  "herkunft": "sim/mechanik/x1_seitencrash/eingaben.json pfahl.durchmesser_mm"
+ },
+ "pfahl_masse_kg": {
+  "wert": 1500,
+  "herkunft": "sim/mechanik/x1b_knautschzone/x2.py MP"
+ },
+ "pfahl_energie_J": {
+  "wert": 5000,
+  "herkunft": "sim/mechanik/x1b_knautschzone/x2.py EJ (gleiche Energie wie X1/X1b, ERWARTUNG X3 (a))"
+ },
+ "E_MPa": {
+  "wert": 70000,
+  "herkunft": "sim/mechanik/x1_seitencrash/eingaben.json werkstoff.E_MPa"
+ },
+ "nu": {
+  "wert": 0.33,
+  "herkunft": "sim/mechanik/x1_seitencrash/eingaben.json werkstoff.nu"
+ },
+ "Rp02_MPa": {
+  "wert": 260,
+  "herkunft": "sim/mechanik/x1_seitencrash/eingaben.json werkstoff.Rp02_MPa"
+ },
+ "Rm_MPa": {
+  "wert": 310,
+  "herkunft": "sim/mechanik/x1_seitencrash/eingaben.json werkstoff.Rm_MPa"
+ },
+ "Bruchdehnung": {
+  "wert": 0.1,
+  "herkunft": "sim/mechanik/x1_seitencrash/eingaben.json werkstoff.Bruchdehnung"
+ },
+ "rho_Al_kg_mm3": {
+  "wert": 2.7e-06,
+  "herkunft": "sim/mechanik/x1b_knautschzone/x2.py RHO"
+ },
+ "lager": {
+  "wert": "huelsen",
+  "herkunft": "ERWARTUNG.md X3 Nachtrag 1 (Opus 2026-11-21) Punkt 1: nur die 12 Befestigungshülsen BT-560 fest"
+ },
+ "pfahl_energie_a2_J": {
+  "wert": 20000,
+  "herkunft": "ERWARTUNG.md X3 Nachtrag 1 (Opus 2026-11-21) Punkt 2: Fall a2 (Annahme Opus: Anteil des Packs, nicht belegt)"
+ },
+ "quetschplatte": {
+  "wert": {
+   "platte_mm": [
+    600,
+    600
+   ],
+   "halbzylinder_R_mm": 75,
+   "anzahl": 3,
+   "abstand_mm": 30,
+   "kraft_kN": 100,
+   "geschw_mm_ms": 1.0
+  },
+  "herkunft": "ERWARTUNG.md X3 Nachtrag 1 (Opus 2026-11-21) Punkt 4 (Annahme Opus aus dem Gedächtnis nach ECE R100 Anh. 8D, nicht am Normtext geprüft); Geschwindigkeit 1 mm/ms = Annahme Sonnet (quasistatisch, Weggeber)"
+ },
+ "NMC": {
+  "_hinweis": "überschreibt gleichnamige Werte für die Variante NMC",
+  "L_mm": {
+   "wert": 1950.0,
+   "herkunft": "cad/baukasten/ausgabe/netz/NMC/BT-540__Al.stl x 0..1950"
+  },
+  "rahmen_z_mm": {
+   "wert": [
+    11.0,
+    109.0
+   ],
+   "herkunft": "cad/baukasten/ausgabe/netz/NMC/BT-540__Al.stl z 11..109"
+  },
+  "quertraeger_x0_mm": {
+   "wert": [
+    482.0,
+    962.0,
+    1442.0
+   ],
+   "herkunft": "sim/mechanik/x1_seitencrash/eingaben.json varianten.NMC"
+  },
+  "quertraeger_z_mm": {
+   "wert": [
+    31.0,
+    85.0
+   ],
+   "herkunft": "cad/baukasten/ausgabe/netz/NMC/BT-530__Al.stl z 31..85"
+  },
+  "kuehlplatte_z_mm": {
+   "wert": [
+    14.0,
+    106.0
+   ],
+   "herkunft": "ANNAHME Sonnet: Mittelebene zwischen Rahmeninnenkante 11/109 und Pad 17/103 (BT-230__Pad.stl)"
+  },
+  "zelle_z_mm": {
+   "wert": [
+    18.0,
+    98.0
+   ],
+   "herkunft": "cad/baukasten/ausgabe/netz/NMC/BT-100__Zelle_NMC.stl z 18..98"
+  },
+  "zellbloecke": {
+   "wert": [
+    [
+     71.57,
+     408.55,
+     30.01,
+     1395.99,
+     0.7823
+    ],
+    [
+     551.57,
+     888.55,
+     30.01,
+     1395.99,
+     0.7823
+    ],
+    [
+     1031.57,
+     1368.55,
+     30.01,
+     1395.99,
+     0.7823
+    ],
+    [
+     1511.57,
+     1848.55,
+     30.01,
+     1395.99,
+     0.7823
+    ]
+   ],
+   "herkunft": "Zeilen [x0,x1,y0,y1,Füllgrad]: Hüllquader der Rundzellen je Feld (BT-100__Zelle_NMC.stl, 868 Zellen, 217 je Feld, Felder getrennt durch Querträger ±2 mm) und Füllgrad = Zellvolumen/Blockvolumen; ERWARTUNG Nachtrag 1 Punkt 5"
+  },
+  "zellmasse_gesamt_kg": {
+   "wert": 308.14,
+   "herkunft": "cad/baukasten/ausgabe/ergebnis_NMC.json positionen[pos=100.1].masse_cad_kg"
+  }
+ }
+}

@@ -56,3 +56,16 @@ Die Auslegungen in docs/18 bestätige ich:
 - BT-721 und BT-722 zusammen 15 €.
 - BT-713 und BT-730 als Satz.
 **Offene Positionen** (17/14): Sie bleiben als untere Schranke ausgewiesen und gelten nicht als Abbruch. Neu gerechnet wird nach der Stückliste zu E2 v1.1. Längen für BT-360/430 aus `ergebnis_<V>_e2.json`, Kühlmittelvolumen offen bis K2.
+
+## Nachtrag 2 = ERW-KO2 (Opus, 2026-11-19, vor dem Lauf): Stückliste SL3.1, Datenblätter, Blech-Kühlplatte, Kühlkreis
+Autor 2026-11-19: „pass bitte auch die stückliste an und die Preisgestaltung“.
+**Preisregeln (Opus):**
+1. Status je Preis eine von drei Stufen: „verifiziert (Wxx/Datenblatt)“, „abgeleitet aus Distributorpreis“, „Schätzung (Annahme Opus)“.
+2. Distributorpreis (Menge 1) ist kein Serienpreis. Serie = Distributorpreis × f_serie, **f_serie = 0,35** (Annahme Opus, Schätzung für ≥ 50 000 Packs/Jahr), Status „abgeleitet aus Distributorpreis“. Belegt sind: EKC14-40 25,84 € → 9,04 €; NTCS0603 0,37 € → 0,13 €. Arcol HS50 (5,64 £) wird nicht verwendet, weil Datenblatt und Preis nicht zum gewählten Typ (Vishay RH050) gehören.
+3. BT-713 Satz = Pyro 35 (Schätzung) + Schmelzsicherung 9,04 (abgeleitet) = 44,04 €.
+4. BT-610 Kühlplatte: 12 €/kg × **echte CAD-Masse** (Blech 1/4/1, ENT-152…156). Der Faktor 0,6 aus Nachtrag 1 entfällt, weil die Masse jetzt hohl gerechnet ist.
+5. Kühlkreis außen (ENT-157, jetzt im Lieferumfang des Packs, BT-660 = 0 entfällt), Serienschätzung Opus: Pumpe BT-661 60 €, Chiller BT-662 70 €, Ventil BT-663 35 €, Schläuche + T-Stück BT-664 15 €/Satz, Ausgleichsbehälter BT-665 8 €.
+6. Neue/geklärte Mengen: BT-350 1, BT-570 1, BT-630 2, BT-640 2, BT-750 1, BT-780 1 (SL3). BT-560 Befestigung 1,50 €/Stück (Hülse + M10). BT-580 Dichtungen 4 €/Stück (Mittel aus Deckel- und Kleindichtungen). BT-590: Schraube 0,10, Kabelschuh 1,50, Clip 0,10, Schrumpfschlauch 0,20 €/Stück. BT-450 Berührschutz 6 €/kg. BT-240 entfällt (keine Verspannung).
+7. HV-Leitung BT-430 und FPC BT-360 nach Länge aus der Geometrie (€/m), sobald G5.7 die Längen liefert, sonst offen.
+**Erwartung KO2:** LFP ≈ 6 250 € ≈ 85 €/kWh (KO1 80; + Kühlplatte ≈ +225 €, + Kühlkreis 188 €, + Normteile/Dichtungen ≈ +40 €, Sicherung −11 €). NMC ≈ 8 600 € ≈ 116 €/kWh (KO1 110, gleiche Zuschläge). Anteil „verifiziert/abgeleitet“ an der Summe < 1 % (Zellpreis bleibt Schätzung). Verfehlt, wenn eine Variante außerhalb ± 8 % liegt oder eine Position ohne Menge/Masse nicht als „offen“ ausgewiesen wird.
+**Deutung KO2 (Opus, nach dem Lauf):** LFP 6 793 € (+8,7 %) verfehlt. Die Ursache ist ein Fehler von Opus in G5.1b: Ich hatte die Zwischenlage BT-220 als 1 mm Mica-Vollmaterial festgelegt. Das ergibt 242 × 0,17 kg = 41,5 kg und 249 €. Real ist das ein komprimierbares Schaumpad zum Quellausgleich. Korrektur: Werkstoff Schaum_Zwischenlage 300 kg/m³ (≈ 4,5 kg), 6 €/kg (Schätzung) → LFP ≈ 6 570 € ≈ 89 €/kWh, im Band. Weitere Entscheidungen: FPC-Detail 360.3 ist im FPC-Preis enthalten (0 €). Daisy-Kette 360.4 kostet 3 €/Stück (Schätzung). Datenblattmassen gelten für Hauptschütz 0,8 kg und Vorladeschütz + Widerstand 0,41 kg (annahmen_g5.json, damit CAD und Stückliste gleich rechnen).

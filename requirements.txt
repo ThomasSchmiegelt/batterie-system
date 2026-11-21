@@ -57,3 +57,4 @@ urllib3==2.8.0
 vtk==9.7.2
 xarray==2026.9.0
 openpyxl
+chromadb==1.5.9

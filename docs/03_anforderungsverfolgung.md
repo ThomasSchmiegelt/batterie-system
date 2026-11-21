@@ -16,10 +16,10 @@
 | REQ-P08 | Umgebungstemperatur Betrieb und Laden | V1, V2 | B-BAT-004, B-BAT-006, B-BAT-007, B-BAT-008, B-BAT-009, B-BAT-010, B-BAT-011, B-BAT-013, pm/startwerte.json | in Arbeit |
 | REQ-P09 | max. Zelltemperatur und Spreizung | V1, V2, K0, K1, K2, K3, K4, K5, U4 | B-BAT-004, B-BAT-006, B-BAT-007, B-BAT-008, B-BAT-009, B-BAT-010, B-BAT-011, B-BAT-013, B-BAT-017, B-BAT-018, B-BAT-019, B-BAT-020, B-BAT-021, pm/startwerte.json | in Arbeit |
 | REQ-P10 | Lebensdauer (Zyklen, Jahre, Restkapazität) | V1, V2, C5 | B-BAT-004, B-BAT-005, B-BAT-006, B-BAT-007, B-BAT-008, B-BAT-009, B-BAT-010, B-BAT-011, B-BAT-013, pm/startwerte.json | in Arbeit |
-| REQ-P11 | Sicherheit: keine Ausbreitung des thermischen Durchgehens bzw. Warnzei | E2, X1, F1 | B-BAT-002, B-BAT-004, B-BAT-024, B-BAT-026, B-BAT-027 | offen |
+| REQ-P11 | Sicherheit: keine Ausbreitung des thermischen Durchgehens bzw. Warnzei | E2, X1, F1 | B-BAT-002, B-BAT-004, B-BAT-024, B-BAT-026, B-BAT-027, B-BAT-030, B-BAT-031 | offen |
 | REQ-P12 | Kühlmittel und Anschlüsse | K0 | B-BAT-004, B-BAT-017, B-BAT-018 | offen |
 | REQ-P13 | Schutzart, Isolation, Berührschutz | G5, E2, L1, E4 | B-BAT-002, B-BAT-004, B-BAT-024, B-BAT-026, B-BAT-027 | offen |
-| REQ-P14 | Mechanik: Stoß, Schwingung, Crash | M1, X1, X2 | B-BAT-002, B-BAT-019, sim/mechanik/* | in Arbeit |
+| REQ-P14 | Mechanik: Stoß, Schwingung, Crash | M1, X1, X2 | B-BAT-002, B-BAT-019, B-BAT-030, B-BAT-031, sim/mechanik/* | in Arbeit |
 | REQ-P15 | Messung und BMS: Zellspannung, Temperatur, Isolationswächter | E3 | B-BAT-002, B-BAT-004, B-BAT-013 | offen |
 | REQ-P16 | Herstellkosten je Variante ausweisen (€/kWh Pack, Anteile je Baugruppe | – | – | kein Vorgang |
 | REQ-D01 | Jede Zahl ist rückverfolgbar (Rechnung mit Datei oder Quelle mit wörtl | R1, R2, R4, SL1, C4, U3, SL2, B5 | B-BAT-001, B-BAT-002, B-BAT-003, B-BAT-004, B-BAT-005, B-BAT-007, B-BAT-008, B-BAT-009, B-BAT-028, docs/13_stueckliste.md, forschung/WERKZEUGE.md, forschung/WISSEN.md, pm/bauteile/stueckliste.json | in Arbeit |

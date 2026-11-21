@@ -1,0 +1,180 @@
+{
+ "_kopf": "KI-generiert (Claude Sonnet, 2026-11-19), Auftrag SL3.1/KO2. Entwurf. Gewählte Typen und Datenblatt-Fundstellen je Stücklistenposition, übernommen aus forschung/datenblaetter.md und cad/baukasten/annahmen_g5.json. Datenblätter liegen in quellen/datenblaetter/ (nicht im Repo, Herstellerdatenblatt nur intern). Keine eigenen Werte: Masse nur, wo forschung/datenblaetter.md eine Zahl nennt. | 2026-11-19 Opus-Nachtrag: Typen für 300.5, 700.6, 700.7, 660.3, 660.4; Schützmassen aus annahmen_g5.json.",
+ "700.2": {
+  "hersteller_typ": "GLVAC GLFX250/…-HC5 (12–800 VDC, 250 A)",
+  "datenblatt": [
+   {
+    "datei": "BT-711_glvac_GLFX250.pdf",
+    "seite": "S. 1, 2, 6"
+   }
+  ],
+  "masse_hinweis": "Datenblatt ca. 400 g je Schütz (S. 1/2/6); gültige Masse laut Opus 2026-11-19 in cad/baukasten/annahmen_g5.json A_e2_schuetz_masse_kg",
+  "masse_ges_kg": null
+ },
+ "700.3": {
+  "hersteller_typ": "Gigavac GV200 (Vorladeschütz) + Vishay RH050 (Vorladewiderstand)",
+  "datenblatt": [
+   {
+    "datei": "BT-712_gigavac_GV200.pdf",
+    "seite": "S. 2, 3"
+   },
+   {
+    "datei": "BT-712_vishay_RH050.pdf",
+    "seite": "S. 1, 2"
+   }
+  ],
+  "masse_ges_kg": null,
+  "masse_hinweis": "GV200 380 g (S. 2) + RH050 28 g (S. 1); gültige Masse laut Opus 2026-11-19 in cad/baukasten/annahmen_g5.json A_e2_vorlade_masse_kg"
+ },
+ "700.4": {
+  "hersteller_typ": "Sensata PyroFuse STPS500 (Pyro) + Eaton EKC14-40 (Schmelzsicherung)",
+  "datenblatt": [
+   {
+    "datei": "BT-713_sensata_pyrofuse.pdf",
+    "seite": "S. 1, 2"
+   },
+   {
+    "datei": "nicht geladen (Eaton EKC14-40, nur Händlerangabe Digi-Key)",
+    "seite": "–"
+   }
+  ],
+  "masse_ges_kg": null,
+  "masse_hinweis": "Pyro 230 g ±5 % (S. 1/2); Masse der Schmelzsicherung fehlt (Datenblatt nicht geladen): Gesamtmasse nicht aus Datenblättern bildbar"
+ },
+ "300.4": {
+  "hersteller_typ": "Isabellenhütte IVT-S (Shunt, 100–2500 A)",
+  "datenblatt": [
+   {
+    "datei": "BT-340_isabellenhuette_IVT-S.pdf",
+    "seite": "S. 1, 2"
+   }
+  ],
+  "masse_ges_kg": null,
+  "masse_hinweis": "Datenblatt nennt keine Masse"
+ },
+ "300.3": {
+  "hersteller_typ": "Vishay NTCS0603E3 (10 kΩ, Typ 0603)",
+  "datenblatt": [
+   {
+    "datei": "BT-330_vishay_NTCS0603E3.pdf",
+    "seite": "S. 1, 2"
+   }
+  ],
+  "masse_je_kg": 6e-06,
+  "masse_hinweis": "0,006 g je Stück (S. 1)"
+ },
+ "500.7": {
+  "hersteller_typ": "Gore PolyVent AVS 70 (High Airflow)",
+  "datenblatt": [
+   {
+    "datei": "BT-570_gore_auto-batteries-snapfit.pdf",
+    "seite": "S. 2"
+   }
+  ],
+  "masse_ges_kg": null,
+  "masse_hinweis": "Datenblatt nennt keine Masse"
+ },
+ "700.8": {
+  "hersteller_typ": "Vernay VoltaVent",
+  "datenblatt": [
+   {
+    "datei": "BT-750_vernay_VoltaVent.pdf",
+    "seite": "S. 3"
+   }
+  ],
+  "masse_ges_kg": null,
+  "masse_hinweis": "Datenblatt nennt keine Masse"
+ },
+ "700.10": {
+  "hersteller_typ": "Amphenol SGX Sensortech TRDU5",
+  "datenblatt": [
+   {
+    "datei": "BT-770_amphenol_SGX_TRDU5.pdf",
+    "seite": "S. 3"
+   }
+  ],
+  "masse_ges_kg": null,
+  "masse_hinweis": "Datenblatt nennt nur „< 15 g“ (Obergrenze, keine Masse)"
+ },
+ "600.4": {
+  "hersteller_typ": "Kyocera AVX 94082 (NTC M12×1,5, Einschraub)",
+  "datenblatt": [
+   {
+    "datei": "BT-640_kyocera-avx_94082.pdf",
+    "seite": "S. 3"
+   }
+  ],
+  "masse_je_kg": 0.017,
+  "masse_hinweis": "17 g je Stück (S. 3)"
+ },
+ "590.2": {
+  "hersteller_typ": "Pfisterer Kabelschuh DIN 46235 M8, 50 mm² (Art. 300 013 260) / 35 mm² (Art. 300 010 010)",
+  "datenblatt": [
+   {
+    "datei": "BT-590_pfisterer_300013260.pdf",
+    "seite": "S. 1, 2"
+   },
+   {
+    "datei": "BT-590_pfisterer_300010010.pdf",
+    "seite": "S. 1, 2"
+   }
+  ],
+  "masse_ges_kg": null,
+  "masse_hinweis": "Datenblatt nennt keine Masse"
+ },
+ "660.1": {
+  "hersteller_typ": "Pierburg CWA100-3 (12 V PWM)",
+  "datenblatt": [
+   {
+    "datei": "BT-661_pierburg_CWA100-3.pdf",
+    "seite": "S. 1"
+   }
+  ],
+  "masse_je_kg": 1.0,
+  "masse_hinweis": "ca. 1000 g (S. 1)"
+ },
+ "300.5": {
+  "hersteller_typ": "Bender iso1685 (Typ für 800 V, Datenblatt auf Autorliste)",
+  "datenblatt": [],
+  "masse_ges_kg": null,
+  "masse_hinweis": "Datenblatt nicht geladen (forschung/datenblaetter_fuer_autor.md)"
+ },
+ "700.6": {
+  "hersteller_typ": "TE HVP 800 (250 A) / TE HVA 280 (40 A)",
+  "datenblatt": [
+   {
+    "datei": "BT-730_te_HVP800_katalog.pdf",
+    "seite": "S. 2, 3"
+   },
+   {
+    "datei": "BT-730_te_HVA280_katalog.pdf",
+    "seite": "S. 2, 7"
+   }
+  ],
+  "masse_ges_kg": null,
+  "masse_hinweis": "Datenblätter nennen keine Masse"
+ },
+ "700.7": {
+  "hersteller_typ": "TE AMPSEAL (26-polig offen, Autorliste)",
+  "datenblatt": [],
+  "masse_ges_kg": null,
+  "masse_hinweis": "kein 26-poliges Datenblatt gefunden"
+ },
+ "660.3": {
+  "hersteller_typ": "Pierburg 3/2-Wege (Broschüre F0001)",
+  "datenblatt": [
+   {
+    "datei": "BT-663_pierburg_CoolantValves.pdf",
+    "seite": "S. 1"
+   }
+  ],
+  "masse_ges_kg": null,
+  "masse_hinweis": "Broschüre nennt keine Masse"
+ },
+ "660.4": {
+  "hersteller_typ": "EPDM DN19 (Gates 4175EC, Autorliste)",
+  "datenblatt": [],
+  "masse_ges_kg": null,
+  "masse_hinweis": "kein Herstellerdatenblatt (Autorliste)"
+ }
+}

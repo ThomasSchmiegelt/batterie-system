@@ -1,0 +1,53 @@
+{
+ "hinweis": "KI-generiert (Claude Sonnet, 2026-11-21), Entwurf. Erzeugt von k3_fluidx3d.py auswerten (Methode ERWARTUNG.md Nachtrag 1).",
+ "re": {
+  "100": {
+   "tau": 0.532,
+   "f_Re_Darcy": 62.37234056770196,
+   "f_Re_theorie": null,
+   "Nu_quelle": 5.732426387046551,
+   "Nu_wand_umgerechnet": 4.100094200856912,
+   "h_760_W_m2K": 471.05651889785327,
+   "zeta": 94.51184844970703,
+   "Re_eff_umlenk": 52.5622444152832,
+   "fluss_lane1_zu_einlass": 0.5256223678588867,
+   "fluss_lane2_zu_lane1": 1.1063694953918457,
+   "totzone_kammer": 0.04482695139911635,
+   "totzone_gesamt": 0.01857077486272117,
+   "bilanz_abw_prozent": 83325.875
+  },
+  "200": {
+   "tau": 0.532,
+   "f_Re_Darcy": 62.665356885890496,
+   "f_Re_theorie": null,
+   "Nu_quelle": 5.714966067388975,
+   "Nu_wand_umgerechnet": 4.087605779630099,
+   "h_760_W_m2K": 469.62173424622193,
+   "zeta": 84.94078063964844,
+   "Re_eff_umlenk": 87.21793365478516,
+   "fluss_lane1_zu_einlass": 0.4360896050930023,
+   "fluss_lane2_zu_lane1": 1.2842522859573364,
+   "totzone_kammer": 0.08681885125184094,
+   "totzone_gesamt": 0.03596705308114704,
+   "bilanz_abw_prozent": NaN
+  }
+ },
+ "graetz_faktor_k2b": 1.5318559227229571,
+ "Nu_ausgebildet_theorie_wand": 4.125812203124999,
+ "Nu_quellenmodell_numerisch": 5.768383257206484,
+ "dp_platte_bar_fx": 0.7151609251942681,
+ "dp_platte_bar_k2b": 0.21547119251211672,
+ "dp_abw_prozent": 231.9055864760446,
+ "h_fx": 469.62173424622193,
+ "h_k2b_Kanal": 474.01123945497625,
+ "h_abw_prozent": -0.9260339931604578,
+ "fRe_Re100_gegen_Re200_prozent": 0.4697856702531089,
+ "Nu_Re100_gegen_Re200_prozent": -0.3045886415049437,
+ "erwartung": {
+  "f_Re": 62,
+  "f_Re_band_prozent": 10,
+  "Nu_band_prozent": 15,
+  "bilanz_band_prozent": 5,
+  "quelle": "ERWARTUNG.md Nachtrag 1"
+ }
+}

@@ -15,3 +15,12 @@
 4. Kühlmittelseitige Spreizung entlang des Packs ist neben REQ-P09 (in der Zelle) ein neuer Beitrag zur Zell-zu-Zell-Spreizung (offen beim Autor, ob Vorgabe).
 ## Verfehlt
 h im Kanal < 300 W/(m²K) (dann K0/K1-Annahme zu optimistisch); Druckverlust > 1 bar bei Zielfluss.
+
+## Nachtrag K2b (2026-11-19, Opus, vor der Rechnung): Blech 1/4/1 mm mit Mäander (ENT-152, Autor-Vorschlag)
+Eingaben: Blech 1 mm Al (statt 1,5), Wasserraum 4 mm, Stege 3 mm (gelötet), Platte innen ≈ 1370 × 1990 (LFP) bzw. 1370 × 1890 (NMC). Mäander mit n Bahnen (n = 2, 4, 6, 8, gerade → Ein- und Austritt hinten), jede Bahn aus m parallelen Teilkanälen der Breite w (w = 6, 8, 10, 15, 20, 40 mm), Bahnen längs (in x) oder quer (in y). Durchfluss wie ENT-107/108 (LFP 23, NMC 20 L/min je Pack, hälftig je Platte). Umlenkung: Zuschlag ζ = 1,5 je Umlenkung (statt 30 % pauschal), Annahme Opus. Pad 1 mm k 3, Stegwirkungsgrad wie K2 (Steghöhe jetzt 4 mm).
+Erwartung:
+1. U ≥ 500 W/(m²K) nur mit w ≤ ≈ 10 mm. Breite Bahnen ohne Teilkanäle (w ≥ 40) liegen bei U ≈ 350–420 (Dh ≈ 8 mm, laminar Nu ≈ 5,4).
+2. Δp wächst mit n etwa wie n² … n³ (Weg × Geschwindigkeit). Für w = 8, n = 4, LFP: Δp ≈ 0,05–0,2 bar; n = 8: ≈ 0,4–1 bar.
+3. Auswahl voraussichtlich n = 4, w = 8 mm, Bahnen längs: U ≈ 550, Δp < 0,3 bar, hydraulische Leistung < 15 W.
+4. Masse beider Platten ≈ 45 kg (Bleche 2 × 1 mm + Stege 27 % des Wasserraums).
+Verfehlt, wenn: keine Variante U ≥ 500 bei Δp ≤ 0,5 bar erreicht (dann zurück an Opus: Höhe 4 mm zu klein oder Turbulatoren), oder Masse > 55 kg.

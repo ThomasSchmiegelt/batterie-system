@@ -1680,3 +1680,54 @@ Ein Batteriemanagementsystem (BMS) ist die elektronische Steuereinheit einer wie
 
 
 Prüfung: 5 Belege bestaetigt, 3 Fehler
+
+## W34
+
+# Wissensaufbau W34: Elektrische Schutz- und Verbindungsbauteile
+
+## Erklärung
+
+Ein elektrisches Batteriesystem braucht nicht nur die Zellen selbst, sondern eine Menge passiver und elektromechanischer Bauteile, die Strom schalten, messen, begrenzen und Systeme vor Überdruck schützen. Ein **Kontaktor** ist ein elektromagnetisch betriebener Lastschalter: Bei Anspannung seiner Spule erzeugt ein Elektromagnet eine Kraft, die einen beweglichen Kern anzieht und damit Kontakte schließt, die dann Lastströme (Mehrfache-Amperes bis Tausende-Ampere) führen. Beim Abschalten öffnet eine Feder oder die Schwerkraft die Kontakte; spezielle Strukturen dämpfen den dabei entstehenden Lichtbogen. Ein **Sicherungselement** (Sicherung) ist ein dünn dimensionierter Metalldraht oder -streifen, der bei Überstrom schmilzt und den Stromkreis physisch unterbricht – ein Wegwerfbestandteil, nach dem die Stromflussfähigkeit der Zelle wiederhergestellt werden muss (Folgerung). Ein **Shunt** ist ein Widerstand mit sehr niedrigem, aber genau bekanntem Wert, in den Stromkreis eingeschleift; man misst die Spannung über ihm und berechnet daraus den Strom (Ohm'sches Gesetz), sodass große Ströme indirekt gemessen werden können. Ein elektrischer **Stecker/Konnektor** ist die mechanisch-elektrische Schnittstelle, an der Kabel, Zellblöcke oder Module verbunden werden; seine Eigenschaften (Kontaktwiderstand, Material, IP-Schutz, Lebensdauer) entscheiden über Kontaktverluste, Erwärmung und Montageaufwand. Ein **Sicherheitsventil** (Druckentlastungsventil) öffnet bei einem einstellbaren Öffnungsdruck einen Weg nach außen und verhindert damit, dass ein geschlossenes System – z. B. ein Gasraum in einer Hochvoltszelle oder ein Gehäuse – platzt (Folgerung). Für den Mechanik-/CAE-Ingenieur sind diese Bauteile relevant, weil sie mechanische Abmessungen, Kräfte (Kontaktor-Kerndruck), Wärmeentwicklung (Kontaktwiderstand, Schmelzen der Sicherung) und Drucklasten (Ventilöffnung) in das strukturelle Konzept überführen.
+
+## Kennwerte
+
+| Größe | Wert | Einheit | Beleg |
+|---|---|---|---|
+| Schaltstrom-Kontaktor (Untergrenze) | > 15 | A | Beleg: "devices switching more than 15 amperes or in circuits rated more than a few kilowatts" (https://en.wikipedia.org/wiki/Contactor) |
+| Spulenspannung Kontaktor | 24 – 600 | V AC/DC | Beleg: "Coil voltages for contactors are often from 24 V AC/DC all the way up to 600 V AC" (https://en.wikipedia.org/wiki/Contactor) |
+| Sicherung, Normal, Öffnungszeit bei doppeltem Nennstrom | 1 | s | Beleg: "A standard fuse may require twice its rated current to open in one second" (https://en.wikipedia.org/wiki/Fuse_(electrical)) |
+| Sicherung, schnell (fast-blow), Öffnungszeit bei doppeltem Nennstrom | 0,1 | s | Beleg: "a fast-blow fuse may require twice its rated current to blow in 0.1 seconds" (https://en.wikipedia.org/wiki/Fuse_(electrical)) |
+| Sicherungselement-Material | Zn, Cu, Ag, Al | – | Beleg: "The fuse element is made of zinc, copper, silver, aluminium" (https://en.wikipedia.org/wiki/Fuse_(electrical)) |
+| Shunt – Zweck | niedrige Impedanz, Strommessung | – | Beleg: "A shunt is a device designed to provide a low-impedance path for an electrical current" (https://en.wikipedia.org/wiki/Shunt_(electrical)) |
+| Shunt, Messprinzip | Spannung über Shunt → Strom | – | Beleg: "allowing large currents to be measured indirectly via the voltage drop across it" (https://en.wikipedia.org/wiki/Shunt_(electrical)) |
+| Kontakter-Strombelastbarkeit (Beispiel) | 50 | A | Beleg: "A 50 A shunt resistor, with provision for four-terminal sensing" (https://en.wikipedia.org/wiki/Shunt_(electrical)) |
+| Kontaktelektroden-Material | Cu-Legierung (Au, Ni, Sn beschichtet) | – | Beleg: "Electrodes in connectors are usually made of copper alloys, due to their good conductivity and malleability" (https://en.wikipedia.org/wiki/Electrical_connector) |
+| Konnektor – Auslegungsgrenzen | Kontaktwiderstand, IP, Zyklen | – | Beleg: "contact resistance, insulation, mechanical durability, ingress protection, lifetime (number of cycles)" (https://en.wikipedia.org/wiki/Electrical_connector) |
+| Druckentlastung, Blowdown-Band | 2 – 20 | % (vom Öffnungsdruck) | Beleg: "The blowdown can vary roughly 2–20%, and some valves have adjustable blowdowns" (https://en.wikipedia.org/wiki/Relief_valve) |
+| Ventiltätigkeit | bei Überschreitung Öffnungsdruck | – | Beleg: "the relief valve becomes the path of least resistance as the valve is forced open" (https://en.wikipedia.org/wiki/Relief_valve) |
+
+## Bedeutung für unser Batteriesystem
+
+- **Elektrik / Sicherheit (Folgerung):** Der Hauptstromkreis (Zelle ↔ Last, Lade-/Entladepfad) braucht einen Kontaktor zum Schalten und/oder eine Sicherung als letzter Schutz; die Wahl zwischen „resets" (Kontaktor) und „einmalt" (Sicherung) beeinflusst, ob nach einem Fehler das System manuell wieder anlaufen kann.
+- **Messung / Elektrik (Folgerung):** Ein Stromshunt (z. B. 50-A-Klasse mit Vierton-Abgriff) ist der übliche Weg, um Entlade-/Ladestrom für SOC-Berechnung und thermisches Monitoring aufzunehmen; der Spannungsabfall und damit die Verlustleistung (P = I² · R) muss in die Wärmerechnung eingeplant werden.
+- **Zusammenbau / Mechanik (Folgerung):** Die Kontaktflächen in Steckverbindern und am Shunt erzeugen bei hohen Strömen lokale Erwärmung und Reibungswärme; die Auslegung (Druckfeder, Kupferlegierung, ggf. Vergoldung) bestimmt die zulässige Kontakttemperaturen und damit die Wahl von Isoliermaterialien und Distanzstücken.
+- **Sicherheit / Druck (Folgerung):** In geschlossenen Zellgehäusen oder bei Gasentwicklung (z. B. DOD-Überschreitung, Kurzschluss) steigt der Innendruck; ein Dimensionierungs-Sicherheitsventil mit bekanntem Öffnungs- und Blowdown-Druck ist die mechanische „Notauslass-Schutzmaßnahme" und muss in die statische Belastung (Flansch, Wandstärke) des Gehäuses eintreten.
+- **Kühlung (Folgerung):** Jeder dieser Bauteile (Kontaktor-Kern, Sicherungselement, Shunt, Kontaktflächen) wandelt einen Teil der elektrischen Leistung in Wärme um; die Wärmebilanz des Zellmoduls muss diese Verlustquellen neben der Zell-Interna aufnehmen.
+
+## Offene Fragen
+
+1. Welcher maximaler Kurzschluss-/Überstrom (A) muss im Batteriesystem gefahren werden, um Kontaktor-Belastungsklasse (AC/DC) und Sicherung-I²t-Wert korrekt zu dimensionieren?
+2. Welche zulässige Kontaktdauer- und Kontaktpunkts-Widerstandsanforderung (µΩ) gibt es für die Steckverbinder, um die lokale Erwärmung auf dem Modul < z. B. 85 °C zu halten?
+3. Bei welchem maximalen Innendruck (bar) wird das Zellgehäuse entlastet, und muss der Blowdown-Druck des Ventils in die Dichtungs-/Gehäusestatik eingerechnet werden?
+4. Soll der Stromshunt fest verdrahtet oder als Schraub-/Stiftleiste (erneuert) ausgeführt werden, und wie wirkt sich die daraus resultierende Kontaktthermisierung auf die Kühlung der Zelle aus?
+
+## Auffälliges
+
+- Die Kontactor-Wikipedia-Seite trägt ein offenes Wartungsflag („This article needs more citations") und enthält zwei „citation needed"-Markierungen; dort sind Werte (z. B. Spulenspannung, Schaltstrom) mit Vorsicht zu genießen.
+- Die Shunt-Seite wird explizit als „lacks sufficient corresponding inline citations" (Dez 2011) gekennzeichnet; die 50-A-Bemessung stammt aus der Bildunterschrift, nicht aus Fließtext mit Quellenangabe.
+- Es gibt keine direkten Widerspruch zwischen den fünf Quellen; die Bauteile decken disjunkte Funktionsbereiche ab (Schalten / Sicherung / Messen / Verbinden / Druckentlastung).
+- Die Texte sind generische Fach-Artikel und beschreiben keine batterie-spezifischen Auslegungen; alle Übertragungen auf „unser Batteriesystem" sind als Folgerungen gekennzeichnet, nicht als Beleg.
+- Die Wortwahl „at after 100 s" in der Fuse-Bildunterschrift (sic!) deutet auf einen Tippfehler im Original hin; der Wert (100 s bei 0,25 A, 0,1 s bei 15 A) ist dennoch lesbar.
+
+
+Prüfung: 10 Belege bestaetigt, 2 Fehler

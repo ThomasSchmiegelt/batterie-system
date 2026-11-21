@@ -1,0 +1,4 @@
+tau 0.532 u0 0.05 Re 100.0
+STOP erkannt
+tau 0.532 u0 0.05 Re 100.0
+{"modus": "umlenk", "probe": false, "Re_soll": 100.0, "Re_eff": 52.5622444152832, "fluss_lane1_zu_einlass": 0.5256223678588867, "fluss_lane2_zu_lane1": 1.1063694953918457, "tau": 0.532, "gitter": [1360, 24, 362], "zellen_je_mm": 4, "u_bahn_mittel_gitter": 0.026281122118234634, "u_soll": 0.05, "dp_gesamt_lb": 0.0363277792930603, "dp_reibung_lb": 0.003688234370201826, "zeta_umlenkung": 94.51184844970703, "zeta_K2b": 1.5, "totzone_anteil_kammer": 0.04482695139911635, "totzone_anteil_bahn": 0.020946180555555555, "totzone_anteil_gesamtflaeche": 0.01857077486272117, "T_aus_misch_lb": 834.2587890625, "T_aus_bilanz_lb": 1.0, "bilanz_abw_prozent": 83325.875, "fluidzellen": 6309120, "einlass_zellen": 7680, "quelle_lb": 6.086427267194157e-05}

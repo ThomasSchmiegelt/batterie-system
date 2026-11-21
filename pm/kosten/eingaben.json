@@ -1,5 +1,5 @@
 {
- "hinweis": "KI-generiert (Claude Sonnet, 2026-11-18), Entwurf. Alle Werte aus pm/kosten/ERWARTUNG.md (ERW-KO1, Annahmen Opus); keine eigenen Preise. Basis ergibt sich aus der Einheit: €/kg x Masse, €/Stück x Menge, €/kWh x Energie, €/m x Länge, €/L x Volumen, €/Satz x 1. | Nachtrag 1 (2026-11-18): Fertigung nur auf Nicht-Zell, BT-610 x0,6, Längen BT-360/430 aus E2-JSON. | Autor-Zusatz: je Preis Spalte status (nur zwei Werte: verifiziert nur BNEF-Packpreis W29, sonst Schätzung).",
+ "hinweis": "KI-generiert (Claude Sonnet, 2026-11-18), Entwurf. Alle Werte aus pm/kosten/ERWARTUNG.md (ERW-KO1, Annahmen Opus); keine eigenen Preise. Basis ergibt sich aus der Einheit: €/kg x Masse, €/Stück x Menge, €/kWh x Energie, €/m x Länge, €/L x Volumen, €/Satz x 1. | Nachtrag 1 (2026-11-18): Fertigung nur auf Nicht-Zell, BT-610 x0,6, Längen BT-360/430 aus E2-JSON. | Autor-Zusatz: je Preis Spalte status (nur zwei Werte: verifiziert nur BNEF-Packpreis W29, sonst Schätzung). | Nachtrag 2 (2026-11-19, ERW-KO2, KI-generiert Claude Sonnet): Status in 3 Stufen, f_serie, Distributorpreise, BT-610 ohne Faktor 0,6 (echte Blechmasse K2b), Kühlkreis BT-661…665, BT-450/580/590/560, BT-240 und BT-660 entfallen. Alte Werte stehen als wert_ko1.",
  "einheit_standard": "siehe je BT",
  "kurs_usd_eur": {
   "wert": 0.92,
@@ -94,7 +94,7 @@
    "wert": 6,
    "einheit": "€/kg",
    "herkunft": "ERW-KO1 Annahme",
-   "notiz": "Masse offen",
+   "notiz": "LFP Zwischenlage: Schaum_Zwischenlage 300 kg/m3 (Opus 2026-11-19, ersetzt Mica); 6 €/kg bestätigt (Schätzung)",
    "status": "Schätzung (Annahme Opus, ERW-KO1)"
   },
   "BT-230": {
@@ -104,11 +104,12 @@
    "status": "Schätzung (Annahme Opus, ERW-KO1)"
   },
   "BT-240": {
-   "wert": 6,
+   "wert": null,
    "einheit": "€/kg",
-   "herkunft": "ERW-KO1 Annahme",
-   "notiz": "Al-Profil 6 gewählt (Erw.: Stahl 3 / Al 6); Masse offen",
-   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+   "wert_ko1": 6,
+   "entfaellt": "entfällt als Teil (keine Verspannung, Opus 2026-11-19, ERW-KO2 Punkt 6)",
+   "herkunft": "ERW-KO2",
+   "status": "entfällt"
   },
   "BT-250": {
    "wert": 6,
@@ -137,11 +138,12 @@
    "status": "Schätzung (Annahme Opus, ERW-KO1)"
   },
   "BT-330": {
-   "wert": 0.5,
+   "wert": 0.13,
    "einheit": "€/Stück",
-   "herkunft": "ERW-KO1 Annahme",
-   "notiz": "Menge offen",
-   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+   "wert_ko1": 0.5,
+   "herkunft": "ERW-KO2 Punkt 2: 0,37 € (Distributor Menge 1) x f_serie 0,35 = 0,13 €",
+   "notiz": "NTC Zelle, Vishay NTCS0603E3",
+   "status": "abgeleitet aus Distributorpreis"
   },
   "BT-340": {
    "wert": 40,
@@ -153,7 +155,7 @@
    "wert": 20,
    "einheit": "€/Stück",
    "herkunft": "ERW-KO1 Annahme",
-   "notiz": "Menge offen",
+   "notiz": "Menge aus Stückliste SL3 (ERW-KO2 Punkt 6)",
    "status": "Schätzung (Annahme Opus, ERW-KO1)"
   },
   "BT-360": {
@@ -232,26 +234,29 @@
    "status": "Schätzung (Annahme Opus, ERW-KO1)"
   },
   "BT-560": {
-   "wert": 0.5,
+   "wert": 1.5,
    "einheit": "€/Stück",
-   "herkunft": "ERW-KO1 Annahme",
-   "notiz": "Schrauben, Menge offen",
-   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+   "wert_ko1": 0.5,
+   "herkunft": "ERW-KO2 Punkt 6 Annahme Opus",
+   "notiz": "Befestigung Hülse + M10",
+   "status": "Schätzung (Annahme Opus, ERW-KO2)"
   },
   "BT-570": {
    "wert": 5,
    "einheit": "€/Stück",
-   "herkunft": "ERW-KO1 Annahme",
-   "notiz": "Menge offen",
+   "wert_ko1": 5,
+   "herkunft": "ERW-KO1 Annahme (unverändert)",
+   "notiz": "Menge 1 (SL3)",
    "status": "Schätzung (Annahme Opus, ERW-KO1)"
   },
   "BT-610": {
    "wert": 12,
    "einheit": "€/kg",
-   "herkunft": "ERW-KO1 Annahme",
-   "notiz": "Al gelötet; Masse x 0,6 (Kanalanteil ca. 40 %, ERW-KO1 Nachtrag 1) bis K2 eine Hohlmasse liefert",
-   "massefaktor": 0.6,
-   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+   "wert_ko1": 12,
+   "herkunft": "ERW-KO1 Annahme; ERW-KO2 Punkt 4: echte Blech-Hohlmasse (ENT-152…156), Faktor 0,6 entfällt",
+   "notiz": "Al gelötet; Masse = K2b bis G5-CAD",
+   "status": "Schätzung (Annahme Opus, ERW-KO2)",
+   "massefaktor_ko1": 0.6
   },
   "BT-620": {
    "wert": 12,
@@ -264,14 +269,14 @@
    "wert": 10,
    "einheit": "€/Stück",
    "herkunft": "ERW-KO1 Annahme",
-   "notiz": "Menge offen",
+   "notiz": "Menge aus Stückliste SL3 (ERW-KO2 Punkt 6)",
    "status": "Schätzung (Annahme Opus, ERW-KO1)"
   },
   "BT-640": {
    "wert": 3,
    "einheit": "€/Stück",
    "herkunft": "ERW-KO1 Annahme",
-   "notiz": "Menge offen",
+   "notiz": "Menge aus Stückliste SL3 (ERW-KO2 Punkt 6)",
    "status": "Schätzung (Annahme Opus, ERW-KO1)"
   },
   "BT-650": {
@@ -282,11 +287,12 @@
    "status": "Schätzung (Annahme Opus, ERW-KO1)"
   },
   "BT-660": {
-   "wert": 0,
+   "wert": null,
    "einheit": "€/Stück",
-   "herkunft": "ERW-KO1 Annahme",
-   "notiz": "Fahrzeug (Erw.: 0)",
-   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+   "wert_ko1": 0,
+   "entfaellt": "ersetzt durch BT-661…665 (ENT-157, ERW-KO2 Punkt 5)",
+   "herkunft": "ERW-KO2",
+   "status": "entfällt"
   },
   "BT-710": {
    "wert": 8,
@@ -309,11 +315,24 @@
    "status": "Schätzung (Annahme Opus, ERW-KO1)"
   },
   "BT-713": {
-   "wert": 55,
+   "wert": 44.04,
    "einheit": "€/Satz",
-   "herkunft": "ERW-KO1 Annahme",
-   "notiz": "1 Satz = Pyro 35 + Schmelzsicherung 20; Stückliste Menge 2 = ein Satz",
-   "status": "Schätzung (Annahme Opus, ERW-KO1)"
+   "wert_ko1": 55,
+   "herkunft": "ERW-KO2 Punkt 3: Pyro 35 (Schätzung) + Schmelzsicherung 9,04 (abgeleitet) = 44,04",
+   "notiz": "1 Satz = Pyro + Schmelzsicherung; Satz-Status = schlechtere Stufe, Teile siehe teile",
+   "status": "Schätzung (Annahme Opus, ERW-KO2)",
+   "teile": [
+    {
+     "name": "Pyrosicherung",
+     "wert": 35,
+     "status": "Schätzung (Annahme Opus, ERW-KO2)"
+    },
+    {
+     "name": "Schmelzsicherung (Eaton EKC14-40)",
+     "wert": 9.04,
+     "status": "abgeleitet aus Distributorpreis"
+    }
+   ]
   },
   "BT-720": {
    "wert": 40,
@@ -353,7 +372,7 @@
    "wert": 8,
    "einheit": "€/Stück",
    "herkunft": "ERW-KO1 Annahme",
-   "notiz": "Menge offen",
+   "notiz": "Menge aus Stückliste SL3 (ERW-KO2 Punkt 6)",
    "status": "Schätzung (Annahme Opus, ERW-KO1)"
   },
   "BT-760": {
@@ -373,8 +392,97 @@
    "wert": 2,
    "einheit": "€/Stück",
    "herkunft": "ERW-KO1 Annahme",
-   "notiz": "Menge offen",
+   "notiz": "Menge aus Stückliste SL3 (ERW-KO2 Punkt 6)",
    "status": "Schätzung (Annahme Opus, ERW-KO1)"
+  },
+  "BT-580": {
+   "wert": 4,
+   "einheit": "€/Stück",
+   "herkunft": "ERW-KO2 Punkt 6 Annahme Opus",
+   "notiz": "Mittel aus Deckel- und Kleindichtungen",
+   "status": "Schätzung (Annahme Opus, ERW-KO2)"
+  },
+  "BT-661": {
+   "wert": 60,
+   "einheit": "€/Stück",
+   "herkunft": "ERW-KO2 Punkt 5: Serienschätzung Opus (ENT-157, Kühlkreis im Lieferumfang)",
+   "notiz": "Pumpe",
+   "status": "Schätzung (Annahme Opus, ERW-KO2)"
+  },
+  "BT-662": {
+   "wert": 70,
+   "einheit": "€/Stück",
+   "herkunft": "ERW-KO2 Punkt 5: Serienschätzung Opus (ENT-157, Kühlkreis im Lieferumfang)",
+   "notiz": "Chiller",
+   "status": "Schätzung (Annahme Opus, ERW-KO2)"
+  },
+  "BT-663": {
+   "wert": 35,
+   "einheit": "€/Stück",
+   "herkunft": "ERW-KO2 Punkt 5: Serienschätzung Opus (ENT-157, Kühlkreis im Lieferumfang)",
+   "notiz": "3/2-Wege-Ventil",
+   "status": "Schätzung (Annahme Opus, ERW-KO2)"
+  },
+  "BT-664": {
+   "wert": 15,
+   "einheit": "€/Satz",
+   "herkunft": "ERW-KO2 Punkt 5: Serienschätzung Opus (ENT-157, Kühlkreis im Lieferumfang)",
+   "notiz": "Schläuche + T-Stück",
+   "status": "Schätzung (Annahme Opus, ERW-KO2)"
+  },
+  "BT-665": {
+   "wert": 8,
+   "einheit": "€/Stück",
+   "herkunft": "ERW-KO2 Punkt 5: Serienschätzung Opus (ENT-157, Kühlkreis im Lieferumfang)",
+   "notiz": "Ausgleichsbehälter",
+   "status": "Schätzung (Annahme Opus, ERW-KO2)"
+  },
+  "BT-450": {
+   "wert": 6,
+   "einheit": "€/kg",
+   "herkunft": "ERW-KO2 Punkt 6 Annahme Opus",
+   "notiz": "Berührschutz NMC",
+   "status": "Schätzung (Annahme Opus, ERW-KO2)"
+  },
+  "BT-590:Schraube": {
+   "wert": 0.1,
+   "einheit": "€/Stück",
+   "herkunft": "ERW-KO2 Punkt 6 Annahme Opus",
+   "notiz": "Schraube",
+   "status": "Schätzung (Annahme Opus, ERW-KO2)"
+  },
+  "BT-590:Kabelschuh": {
+   "wert": 1.5,
+   "einheit": "€/Stück",
+   "herkunft": "ERW-KO2 Punkt 6 Annahme Opus",
+   "notiz": "Kabelschuh",
+   "status": "Schätzung (Annahme Opus, ERW-KO2)"
+  },
+  "BT-590:Clip": {
+   "wert": 0.1,
+   "einheit": "€/Stück",
+   "herkunft": "ERW-KO2 Punkt 6 Annahme Opus",
+   "notiz": "Clip",
+   "status": "Schätzung (Annahme Opus, ERW-KO2)"
+  },
+  "BT-590:Schrumpfschlauch": {
+   "wert": 0.2,
+   "einheit": "€/Stück",
+   "herkunft": "ERW-KO2 Punkt 6 Annahme Opus",
+   "notiz": "Schrumpfschlauch",
+   "status": "Schätzung (Annahme Opus, ERW-KO2)"
+  },
+  "BT-360:Detail": {
+   "wert": 0,
+   "einheit": "€/Stück",
+   "herkunft": "Opus 2026-11-19 (Nachtrag KO2): FPC-Detail (Tabs, Stecker) im FPC-Preis enthalten",
+   "status": "Schätzung (Annahme Opus, ERW-KO2)"
+  },
+  "BT-360:Daisy": {
+   "wert": 3,
+   "einheit": "€/Stück",
+   "herkunft": "Opus 2026-11-19 (Nachtrag KO2): Daisy-Kette 3 €/Stück",
+   "status": "Schätzung (Annahme Opus, ERW-KO2)"
   }
  },
  "laengen_aus_cad": {
@@ -384,10 +492,66 @@
   "BT-430": {
    "methode": "gruppen.E2_HV_Leitung.volumen_cm3 / (pi/4 x A_e2_hv_aussendurchmesser_<V>_mm^2), Summe aller Leitungen"
   },
-  "herkunft": "cad/pack/entwurf/ergebnis_<V>_e2.json (ERW-E2 N1); ERW-KO1 Nachtrag 1"
+  "herkunft": "cad/pack/entwurf/ergebnis_<V>_e2.json (ERW-E2 N1); ERW-KO1 Nachtrag 1",
+  "position": {
+   "BT-360": "300.6",
+   "BT-430": "400.3",
+   "hinweis": "Länge nur für die Position, deren Masse/Volumen die Länge liefert (FPC, HV-Leitung). Frühere KO1-Läufe haben die Länge von BT-360 dreifach gezählt (Positionen 300.6, 360.3, 360.4). Seit Opus-Nachtrag: 360.3 und 360.4 haben eigene Einträge (BT-360:Detail, BT-360:Daisy)."
+  }
  },
  "status_werte": [
-  "verifiziert (W29, Zitat geprüft)",
-  "Schätzung (Annahme Opus, ERW-KO1)"
- ]
+  "verifiziert (Wxx/Datenblatt)",
+  "abgeleitet aus Distributorpreis",
+  "Schätzung (Annahme Opus)"
+ ],
+ "f_serie": {
+  "wert": 0.35,
+  "herkunft": "ERW-KO2 Punkt 2: Annahme Opus, Serie = Distributorpreis (Menge 1) x f_serie, Schätzung für >= 50 000 Packs/Jahr",
+  "status": "Schätzung (Annahme Opus, ERW-KO2)"
+ },
+ "distributorpreise": {
+  "BT-713_Schmelzsicherung": {
+   "typ": "Eaton EKC14-40-3P",
+   "preis_menge1_eur": 25.84,
+   "herkunft": "forschung/datenblaetter.md Abschnitt Preise (Digi-Key AT, abgerufen 2026-11-19)",
+   "status": "abgeleitet aus Distributorpreis (Preis belegt, Serienfaktor Schätzung)"
+  },
+  "BT-330_NTC": {
+   "typ": "Vishay NTCS0603E3103JHT",
+   "preis_menge1_eur": 0.37,
+   "herkunft": "forschung/datenblaetter.md Abschnitt Preise (Digi-Key NL, abgerufen 2026-11-19)",
+   "status": "abgeleitet aus Distributorpreis (Preis belegt, Serienfaktor Schätzung)"
+  },
+  "nicht_verwendet": "Arcol HS50 (5,64 GBP): Datenblatt und Preis gehören nicht zum gewählten Typ Vishay RH050 (ERW-KO2 Punkt 2)"
+ },
+ "erwartung_ko2": {
+  "LFP": {
+   "pack_eur": 6250,
+   "eur_kwh": 85
+  },
+  "NMC": {
+   "pack_eur": 8600,
+   "eur_kwh": 116
+  },
+  "toleranz_pct": 8,
+  "anteil_verifiziert_abgeleitet_max_pct": 1,
+  "herkunft": "pm/kosten/ERWARTUNG.md Nachtrag 2 (ERW-KO2): verfehlt, wenn eine Variante ausserhalb +-8 % liegt"
+ },
+ "pos_zu_preis": {
+  "220.2": "BT-260",
+  "720.2": "BT-721",
+  "520.2": "BT-722",
+  "361.1": "BT-361",
+  "590.1": "BT-590:Schraube",
+  "590.2": "BT-590:Kabelschuh",
+  "590.3": "BT-590:Clip",
+  "590.4": "BT-590:Schrumpfschlauch",
+  "herkunft": "Positionen ohne eigenes BT-Preisblatt (SL3, frueher POSMAP in kosten.py); BT-590 je Art (ERW-KO2 Punkt 6)",
+  "360.3": "BT-360:Detail",
+  "360.4": "BT-360:Daisy"
+ },
+ "entfaellt": {
+  "BT-240": "entfällt als Teil (keine Verspannung, Opus 2026-11-19, ERW-KO2 Punkt 6)",
+  "BT-660": "ersetzt durch BT-661…665 (ENT-157, ERW-KO2 Punkt 5)"
+ }
 }

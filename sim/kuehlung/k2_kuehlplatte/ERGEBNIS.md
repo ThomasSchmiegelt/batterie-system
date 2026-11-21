@@ -86,3 +86,40 @@ Vergleich Basis (20 x 5 mm, quer, ΔT 5 K, LFP_P0): h_Kanal 316, h_eff 411, U_ge
 Befunde (Entwurf, Opus prüft): Die Stegfläche hebt h auf der Grundfläche etwa auf das Doppelte (η ≈ 0,99). Mit schmalen Kanälen (4 mm, 5 mm hoch) liegt U_gesamt über 500; die Obergrenze setzt das Pad (1 mm/k 3 → 3000 W/(m²K) allein). Mäander (mehr Durchgänge) bringt kein nennenswert höheres U, nur mehr Δp und Pumpenleistung; die Umlenkverluste sind darin nur über den 30-%-Zuschlag erfasst (bei 4-6 Durchgängen vermutlich zu klein, Annahme). Der Re-Anstieg bei Mäander ist reine Kanalverlängerung bei weniger parallelen Kanälen. Offene Frage: Kontaktwiderstand Zelle-Pad und Pad-Blech nicht enthalten; ΔT-Wahl (Opus/Autor); Auswahl 4 mm-Kanäle fertigungstechnisch (Stege 3 mm, 281 Kanäle je Platte) bewerten.
 
 Bild: nachtrag_U_leistung.png (Zielband U ≥ 500 beschriftet). Lesehilfe in k2_lesehilfe.md.
+
+
+## 9 K2b: Blech 1/4/1 mm mit Mäander (ENT-152, Entwurf, Opus prüft)
+Methode: kuehlplatte.k2b(), Eingaben eingaben.json (k2b), Ergebnis ergebnis_k2b.json (96 Varianten). Durchfluss fest 23 bzw. 20 L/min je Pack (ENT-107/108), daraus ΔT Kühlmittel: LFP_P0 10.2 K, NMC_P4 5.0 K (nicht frei gewählt). Umlenkung ζ 1,5 je Umlenkung (n−1), Annahme Opus. Kein Kontaktwiderstand.
+
+**LFP_P0** (Kriterium U ≥ 500, kleinstes Δp; 20 von 48 Varianten erreichen U ≥ 500)
+
+| Rang | Führung | n | w mm | Teilkanäle m | Re | h_Kanal | h_eff | U | Δp bar | P_hyd W | Masse 2 Platten kg |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | quer | 4 | 6 | 54 | 253 | 409 | 634 | 522 | 0.032 | 1.21 | 49.1 |
+| 2 | quer | 6 | 10 | 25 | 391 | 442 | 610 | 506 | 0.049 | 1.87 | 43.1 |
+| 3 | quer | 6 | 8 | 29 | 393 | 440 | 638 | 525 | 0.057 | 2.20 | 46.3 |
+| 4 | laengs | 4 | 6 | 38 | 360 | 408 | 633 | 521 | 0.065 | 2.47 | 48.6 |
+| 5 | quer | 8 | 40 | 5 | 621 | 544 | 607 | 504 | 0.066 | 2.54 | 40.1 |
+
+**NMC_P4** (Kriterium U ≥ 500, kleinstes Δp; 16 von 48 Varianten erreichen U ≥ 500)
+
+| Rang | Führung | n | w mm | Teilkanäle m | Re | h_Kanal | h_eff | U | Δp bar | P_hyd W | Masse 2 Platten kg |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | quer | 4 | 6 | 52 | 229 | 401 | 622 | 514 | 0.028 | 0.95 | 47.0 |
+| 2 | quer | 6 | 8 | 28 | 354 | 430 | 623 | 515 | 0.052 | 1.72 | 44.1 |
+| 3 | laengs | 4 | 6 | 38 | 313 | 401 | 621 | 514 | 0.054 | 1.79 | 46.7 |
+| 4 | quer | 6 | 6 | 35 | 340 | 435 | 674 | 549 | 0.064 | 2.14 | 46.6 |
+| 5 | quer | 8 | 15 | 13 | 481 | 477 | 608 | 505 | 0.066 | 2.20 | 37.7 |
+
+Abgleich mit der Erwartung (Quelle ergebnis_k2b.json):
+1. U ≥ 500 nur mit w ≤ ≈ 10 mm; w ≥ 40 bei U ≈ 350–420: **teilweise verfehlt.** w = 40 liegt bei U 405–518 (n = 4 längs LFP: 449), also über 420; einzelne breite Varianten (quer, n = 6–8) erreichen sogar U ≥ 500 (z. B. LFP n 8, w 40, quer: 504). Grund: kürzere Bahn bzw. weniger Teilkanäle erhöhen Re und Einlaufeffekt; Nu ≈ 5,4-Annahme gilt nur voll entwickelt.
+2. Δp wächst mit n wie n² (LFP w 8 längs: n 2/4/6/8 = 0,013/0,051/0,120/0,215 bar). Δp n = 4: 0.051 bar, im Band 0,05–0,2 **erfüllt**; n = 8: 0.215 bar, Erwartung 0,4–1 **verfehlt** (kleiner).
+3. Auswahl n = 4, w = 8, längs, LFP: U 487 (Erwartung ≈ 550) **verfehlt**, U < 500; Δp 0.051 < 0,3 bar und P_hyd 1.9 W < 15 W **erfüllt**. Die beste Variante nach Tabelle ist n = 4, w = 6, quer, (LFP U 522, Δp 0,032 bar).
+4. Masse beider Platten ≈ 45 kg: **erfüllt** (alle Varianten 31.8–49.1 kg, Grenze 55 kg nicht überschritten).
+Verfehlt-Kriterium (keine Variante U ≥ 500 bei Δp ≤ 0,5 bar): **nicht eingetreten** (LFP max U 594, NMC max U 581). Die Marge ist klein (U 505–525 knapp über 500, ΔU durch Kontaktwiderstände nicht abgedeckt).
+Vorschlag (keine Entscheidung): n = 4, w = 6 mm, Bahnen quer (kürzeste Weglänge je Bahn, kleinstes Δp mit U ≥ 500 bei beiden Packs). Bei w = 8 längs, Erwartungsfall, U < 500. Rückfrage an Opus: Erwartungspunkt 3 verfehlt (U), Auswahl neu zu bewerten.
+
+Bild: k2b_U_dp.png (Zielband beschriftet). Lesehilfe in k2_lesehilfe.md.
+
+---
+*KI-generiert (Claude Sonnet, 2026-11-19), Entwurf.*

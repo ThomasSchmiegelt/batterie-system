@@ -1,0 +1,1508 @@
+{
+ "_kopf": "KI-generiert (Claude Sonnet, 2026-11-19), Auftrag G5.1, ergänzt SL3.1 (Auftrag KO2). Alle Einträge der A-Blöcke von cad/pack/entwurf/parameter_<V>_e2d.json, LFP und NMC zusammengeführt.",
+ "A_deckel_mm": {
+  "wert": 2,
+  "einheit": "mm",
+  "herkunft": "M0 eingaben.json hoehenstapel_mm.deckel (Annahme)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_boden_mm": {
+  "wert": 3,
+  "einheit": "mm",
+  "herkunft": "M0 eingaben.json hoehenstapel_mm.boden (Annahme)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_unterfahrschutz_mm": {
+  "wert": 3,
+  "einheit": "mm",
+  "herkunft": "M0 eingaben.json (Annahme)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_luft_mm": {
+  "wert": 5,
+  "einheit": "mm",
+  "herkunft": "M0 eingaben.json (Annahme)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_kuehlplatte_mm": {
+  "wert": 8,
+  "einheit": "mm",
+  "herkunft": "M0 eingaben.json (Annahme); Vollmaterial, real hohl",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_pad_mm": {
+  "wert": 1,
+  "einheit": "mm",
+  "herkunft": "M0 eingaben.json waermeleitschicht_je (Annahme)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_rand_mm": {
+  "wert": 30,
+  "einheit": "mm",
+  "herkunft": "M0 eingaben.json rand_mm (Annahme)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_hoehe_max_mm": {
+  "wert": 130,
+  "einheit": "mm",
+  "herkunft": "M0 eingaben.json (Annahme)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_quertraeger_anzahl": {
+  "wert": 3,
+  "einheit": "-",
+  "herkunft": "M0 eingaben.json (Annahme Opus)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_quertraeger_hoehe_mm": {
+  "wert": 54,
+  "einheit": "mm",
+  "herkunft": "M0 eingaben.json (W22, US9045030)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_quertraeger_breite_mm": {
+  "wert": 26,
+  "einheit": "mm",
+  "herkunft": "M0 eingaben.json (W22, US9045030)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_quertraeger_wand_mm": {
+  "wert": 2.5,
+  "einheit": "mm",
+  "herkunft": "M0 eingaben.json (Annahme, Mitte 2-3 mm)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_quertraeger_spiel_mm": {
+  "wert": 2,
+  "einheit": "mm",
+  "herkunft": "M0 eingaben.json (Annahme)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_alu_dichte_kg_m3": {
+  "wert": 2700,
+  "einheit": "kg/m3",
+  "herkunft": "M0 eingaben.json (Annahme)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_zellabstand_LFP_mm": {
+  "wert": 1.0,
+  "einheit": "mm",
+  "herkunft": "M0 eingaben.json (G1)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_zellabstand_NMC_mm": {
+  "wert": 2.0,
+  "einheit": "mm",
+  "herkunft": "M0 eingaben.json (G1)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_zellzahl_LFP": {
+  "wert": 250,
+  "einheit": "-",
+  "herkunft": "M0 eingaben.json (G1)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_zellzahl_NMC": {
+  "wert": 868,
+  "einheit": "-",
+  "herkunft": "M0 eingaben.json (G1 Fall A)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_zellverbinder_LFP_mm": {
+  "wert": [
+   25,
+   3
+  ],
+  "einheit": "mm",
+  "herkunft": "AUFTRAG G4: Querschnitt 25 x 3 (Breite x Dicke)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_gruppenverbinder_NMC_mm": {
+  "wert": [
+   25,
+   3
+  ],
+  "einheit": "mm",
+  "herkunft": "AUFTRAG G4: Querschnitt 25 x 3 (Breite x Dicke)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_zellabgriff_NMC_mm": {
+  "wert": [
+   12,
+   1
+  ],
+  "einheit": "mm",
+  "herkunft": "AUFTRAG G4: 12 x 1 (Durchmesser x Dicke, Scheibe auf dem Pluspol)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_vergusshoehe_anteil_NMC": {
+  "wert": 0.5,
+  "einheit": "-",
+  "herkunft": "AUFTRAG G4: Verguss bis halbe Zellhöhe (Annahme)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_KUEHLPLATTE_FUELLGRAD": {
+  "wert": 0.4,
+  "einheit": "-",
+  "herkunft": "Annahme Opus 2026-11-17: 2 Bleche je 1,5 mm + Kanalstege, Füllgrad 0,4 (Masse = Volumen x Füllgrad x Al-Dichte)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_seitenrahmen_wand_mm": {
+  "wert": 2.5,
+  "einheit": "mm",
+  "herkunft": "Annahme Opus 2026-11-17: Mehrkammerprofil, Wand 2,5 mm (W22-Wandbereich)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_seitenrahmen_kammern": {
+  "wert": 3,
+  "einheit": "-",
+  "herkunft": "Annahme Opus 2026-11-17: 3 Kammern über die Rahmenbreite",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_dichte_pad_kg_m3": {
+  "wert": 2500,
+  "einheit": "kg/m3",
+  "herkunft": "Annahme Opus 2026-11-17",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_dichte_zelltraeger_kg_m3": {
+  "wert": 1200,
+  "einheit": "kg/m3",
+  "herkunft": "Annahme Opus 2026-11-17 (PC)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_dichte_verguss_kg_m3": {
+  "wert": 300,
+  "einheit": "kg/m3",
+  "herkunft": "Annahme Opus 2026-11-17 (PU-Schaum)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_schuetz_mm": {
+  "wert": [
+   80,
+   60,
+   75
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N1 Hauptschütz",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_schuetz_masse_kg": {
+  "wert": 0.45,
+  "einheit": "kg",
+  "herkunft": "ERW-E2 N1",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_vorladeschuetz_mm": {
+  "wert": [
+   40,
+   30,
+   40
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N1 Vorladeschütz",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_vorladewiderstand_mm": {
+  "wert": [
+   60,
+   20,
+   20
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N1",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_vorlade_masse_kg": {
+  "wert": 0.15,
+  "einheit": "kg",
+  "herkunft": "ERW-E2 N1 (Schütz + Widerstand zusammen)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_pyro_mm": {
+  "wert": [
+   30,
+   30,
+   80
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N1 Pyrosicherung Ø30 x 80, als Quader 30 x 30 x 80 (Vereinfachung)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_pyro_masse_kg": {
+  "wert": 0.15,
+  "einheit": "kg",
+  "herkunft": "ERW-E2 N1",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_schmelz_mm": {
+  "wert": [
+   30,
+   30,
+   85
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N1",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_schmelz_masse_kg": {
+  "wert": 0.1,
+  "einheit": "kg",
+  "herkunft": "ERW-E2 N1",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_shunt_mm": {
+  "wert": [
+   80,
+   40,
+   15
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N1 Shunt mit Messplatine",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_shunt_masse_kg": {
+  "wert": 0.1,
+  "einheit": "kg",
+  "herkunft": "ERW-E2 N1",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_bms_masse_kg": {
+  "wert": 0.4,
+  "einheit": "kg",
+  "herkunft": "ERW-E2 N1 BMS-Platine (Maße aus Akte BT-310)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_cmu_mm": {
+  "wert": [
+   120,
+   60,
+   10
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N1 CMU-Platine",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_cmu_masse_kg": {
+  "wert": 0.08,
+  "einheit": "kg",
+  "herkunft": "ERW-E2 N1",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_fpc_dicke_mm": {
+  "wert": 0.3,
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N1",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_fpc_masse_kg_m": {
+  "wert": 0.05,
+  "einheit": "kg/m",
+  "herkunft": "ERW-E2 N1",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_fpc_halter_mm": {
+  "wert": 3.0,
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N1 (FPC plus Halter)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_hv250_mm": {
+  "wert": [
+   90,
+   70,
+   60
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N1",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_hv250_masse_kg": {
+  "wert": 0.4,
+  "einheit": "kg",
+  "herkunft": "ERW-E2 N1",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_hv40_mm": {
+  "wert": [
+   50,
+   40,
+   40
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N1",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_hv40_masse_kg": {
+  "wert": 0.15,
+  "einheit": "kg",
+  "herkunft": "ERW-E2 N1",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_nv_mm": {
+  "wert": [
+   50,
+   30,
+   40
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N1",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_nv_masse_kg": {
+  "wert": 0.05,
+  "einheit": "kg",
+  "herkunft": "ERW-E2 N1",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_trennstecker_mm": {
+  "wert": [
+   80,
+   50,
+   60
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N1, oben zugänglich (Deckelöffnung)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_trennstecker_masse_kg": {
+  "wert": 0.2,
+  "einheit": "kg",
+  "herkunft": "ERW-E2 N1",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_bruecke_luecke_mm": {
+  "wert": 30,
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3 (Platzhalter Opus/Sonnet): Lücke im Querverbinder LFP für die Service-Trennbrücke",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_bruecke_ueberlappung_mm": {
+  "wert": 25,
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3: Überlappung Brücke auf Querverbinder je Seite",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_bruecke_querschnitt_mm": {
+  "wert": [
+   25,
+   3
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3: Cu-Brücke 25 x 3, 2 x M8 (je Seite eine Schraube), HV-Interlock-Kontakt nicht modelliert",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_serviceoeffnung_mm": {
+  "wert": [
+   120,
+   80
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3: Öffnung 120 (y) x 80 (x) durch Pad, obere Kühlplatte, Deckel; Servicedeckel flach, bündig, Dicke = A_deckel_mm",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_lasche_mm": {
+  "wert": [
+   25,
+   3
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3: Anschlusslasche Querschnitt wie Verbinder 25 x 3, Überlappung 25 mm, Bohrung M8",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_lasche_bohrung_mm": {
+  "wert": 8,
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3: Bohrung M8 (Nennmaß 8, Durchgangsloch nicht gesetzt)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_lasche_ueberlappung_mm": {
+  "wert": 25,
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_gas_mm": {
+  "wert": [
+   30,
+   30,
+   20
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N1",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_gas_masse_kg": {
+  "wert": 0.03,
+  "einheit": "kg",
+  "herkunft": "ERW-E2 N1",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_hv_aussendurchmesser_LFP_mm": {
+  "wert": 14,
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N1",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_hv_aussendurchmesser_NMC_mm": {
+  "wert": 12,
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N1",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_box_wand_mm": {
+  "wert": 2,
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N1 Schaltbox Al, Wand 2 mm",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_box_rand_mm": {
+  "wert": 15,
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N1 Rand 15 mm um den Inhalt",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_box_hoehe_max_mm": {
+  "wert": 90,
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N1 H ≤ 90",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2_box_teilabstand_mm": {
+  "wert": 10,
+  "einheit": "mm",
+  "herkunft": "NEUE ANNAHME (Platzhalter, in ERW-E2 N1 nicht gesetzt; Opus entscheiden): Abstand zwischen den Teilen in der Schaltbox",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_traeger_dicke_NMC_mm": {
+  "wert": 2.5,
+  "einheit": "mm",
+  "herkunft": "NEUE ANNAHME (Platzhalter, in M0 nicht gesetzt; Opus entscheiden)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_schuetz_bolzen_n": {
+  "wert": 2,
+  "einheit": "-",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_schuetz_bolzen_abstand_mm": {
+  "wert": 40,
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_schuetz_bolzen_d_mm": {
+  "wert": 8,
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_schuetz_bolzen_h_mm": {
+  "wert": 15,
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_schuetz_fusslaschen_n": {
+  "wert": 2,
+  "einheit": "-",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_schuetz_fusslasche_gewinde_mm": {
+  "wert": 5,
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_schuetz_spulenstecker_mm": {
+  "wert": [
+   15,
+   10,
+   12
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_fusslasche_mm": {
+  "wert": [
+   20,
+   9,
+   2
+  ],
+  "einheit": "mm",
+  "herkunft": "abgeleitet (Sonnet): Laschenbreite 20, Auskragung 9 (< Teilabstand 10), Dicke 2; Bohrung M5 nicht in N3 bemaßt",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_schiene_cu_LFP_mm": {
+  "wert": [
+   25,
+   3
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_schiene_cu_NMC_mm": {
+  "wert": [
+   20,
+   3
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_schiene_bohrung_mm": {
+  "wert": 8.5,
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_schiene_biegeradius_innen_faktor_dicke": {
+  "wert": 1.0,
+  "einheit": "-",
+  "herkunft": "ERW-E2 N3: Biegeradius innen = Dicke",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_schrumpfschlauch_mm": {
+  "wert": 0.5,
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_pyro_lasche_gewinde_mm": {
+  "wert": 8,
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_lasche_pyro_schmelz_mm": {
+  "wert": [
+   25,
+   3,
+   25
+  ],
+  "einheit": "mm",
+  "herkunft": "abgeleitet (Sonnet): Laschen = Querschnitt der Schiene Cu 25 x 3 (LFP) bzw. 20 x 3 (NMC) hat Vorrang; Auskragung 25 ohne Vorgabe",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_schmelz_halter_mm": {
+  "wert": [
+   40,
+   40,
+   95
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3: Schmelzsicherung im Kunststoffhalter",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_schmelz_wand_mm": {
+  "wert": 5,
+  "einheit": "mm",
+  "herkunft": "abgeleitet (Sonnet): Halterwand = (40 - 30) / 2 aus Halter 40 und Sicherung 30",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_shunt_steg_mm": {
+  "wert": 3,
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3: Manganin-Steg 3 mm zwischen Cu-Enden M8",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_shunt_platine_mm": {
+  "wert": [
+   80,
+   40,
+   1.6
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_shunt_stecker_pol": {
+  "wert": 4,
+  "einheit": "-",
+  "herkunft": "ERW-E2 N3 (Stecker 4-polig, Maße fehlen)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_bms_platine_dicke_mm": {
+  "wert": 1.6,
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_bms_abstandsbolzen": {
+  "wert": [
+   4,
+   4,
+   8
+  ],
+  "einheit": "-",
+  "herkunft": "ERW-E2 N3: 4 Stück M4, Höhe 8",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_bms_abstandsbolzen_aussen_mm": {
+  "wert": 7,
+  "einheit": "mm",
+  "herkunft": "abgeleitet (Sonnet): Außendurchmesser Sechskant SW7 (Gedächtnis-Normmaß, nicht belegt)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_bms_abstandsbolzen_einzug_mm": {
+  "wert": 5,
+  "einheit": "mm",
+  "herkunft": "abgeleitet (Sonnet): Lage 5 mm von der Platinenkante, Lage nicht in N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_bms_stecker_mm": {
+  "wert": [
+   30,
+   15,
+   12
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3: Stecker 26-polig und 2 x Daisy-Chain 12-polig je 30 x 15 x 12 (Lesart: Maß gilt für alle drei)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_box_flansch_mm": {
+  "wert": 12,
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_box_deckel_mm": {
+  "wert": 2,
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_box_dichtung_mm": {
+  "wert": [
+   3,
+   3
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_box_schraube_teilung_mm": {
+  "wert": 60,
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3: M5 alle 60 mm",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_box_schraube_gewinde_mm": {
+  "wert": 5,
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_box_flansch_dicke_mm": {
+  "wert": 2,
+  "einheit": "mm",
+  "herkunft": "abgeleitet (Sonnet): Flanschdicke = Wanddicke A_e2_box_wand_mm 2 mm",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_box_druckausgleich_d_mm": {
+  "wert": 20,
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_m5_kopf_mm": {
+  "wert": [
+   8.5,
+   5
+  ],
+  "einheit": "mm",
+  "herkunft": "abgeleitet (Sonnet): Zylinderkopf M5: Ø 8,5 x 5 (Gedächtnis-Normmaß ISO 4762, nicht belegt)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_m4_kopf_mm": {
+  "wert": [
+   7,
+   4
+  ],
+  "einheit": "mm",
+  "herkunft": "abgeleitet (Sonnet): Zylinderkopf M4: Ø 7 x 4 (Gedächtnis-Normmaß ISO 4762, nicht belegt)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_m8_kopf_mm": {
+  "wert": [
+   13,
+   8
+  ],
+  "einheit": "mm",
+  "herkunft": "abgeleitet (Sonnet): Zylinderkopf M8: Ø 13 x 8 (Gedächtnis-Normmaß ISO 4762, nicht belegt)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_m8_scheibe_mm": {
+  "wert": [
+   16,
+   1.6
+  ],
+  "einheit": "mm",
+  "herkunft": "abgeleitet (Sonnet): Scheibe M8: Ø 16 x 1,6 (Gedächtnis-Normmaß ISO 7089, nicht belegt)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_kabelschuh_huelse_mm": {
+  "wert": 40,
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_kabelschuh_lasche_mm": {
+  "wert": [
+   20,
+   4
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3: Lasche 20 breit x 4 dick",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_kabelschuh_lasche_laenge_mm": {
+  "wert": 20,
+  "einheit": "mm",
+  "herkunft": "abgeleitet (Sonnet): Palme quadratisch 20 x 20",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_kabel_biegeradius_faktor_D": {
+  "wert": 5,
+  "einheit": "-",
+  "herkunft": "ERW-E2 N3: R >= 5 D",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_kabel_schichten": {
+  "wert": [
+   "Leiter",
+   "Isolierung",
+   "Schirm",
+   "Mantel"
+  ],
+  "einheit": "-",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_kabel_wand_teilung": {
+  "wert": 3,
+  "einheit": "-",
+  "herkunft": "abgeleitet (Sonnet): Radialwand zwischen Leiter und Außendurchmesser in drei gleiche Teile (Isolierung, Schirm, Mantel); N3 nennt keine Schichtdicken",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_clip_mm": {
+  "wert": [
+   20,
+   15,
+   10
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_clip_abstand_mm": {
+  "wert": 200,
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_fpc_tab_mm": {
+  "wert": [
+   8,
+   4,
+   0.2
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_ntc_mm": {
+  "wert": [
+   3,
+   2,
+   1
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_ntc_je_cmu": {
+  "wert": 4,
+  "einheit": "-",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_fpc_stecker_mm": {
+  "wert": [
+   25,
+   8,
+   6
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3: 20-polig, an der CMU",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_daisy_d_mm": {
+  "wert": 4,
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_daisy_stecker_mm": {
+  "wert": [
+   15,
+   8,
+   8
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_daisy_r_min_mm": {
+  "wert": 20,
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_hv250_flansch_mm": {
+  "wert": [
+   90,
+   70,
+   8
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_hv250_schrauben": {
+  "wert": [
+   4,
+   5
+  ],
+  "einheit": "-",
+  "herkunft": "ERW-E2 N3: 4 x M5",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_hv250_koerper_mm": {
+  "wert": [
+   50,
+   60
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3: Ø 50 x 60, 90 Grad gewinkelt (liegend)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_hv250_hebel_mm": {
+  "wert": [
+   60,
+   10,
+   10
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_hv250_oring_mm": {
+  "wert": [
+   60,
+   3
+  ],
+  "einheit": "mm",
+  "herkunft": "abgeleitet (Sonnet): O-Ring Mittendurchmesser 60, Schnur 3 (Schnur = Dichtungsmaß 3 aus N3)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_hv40_flansch_mm": {
+  "wert": [
+   50,
+   40,
+   6
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_hv40_schrauben": {
+  "wert": [
+   4,
+   4
+  ],
+  "einheit": "-",
+  "herkunft": "ERW-E2 N3: 4 x M4",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_nv_flansch_mm": {
+  "wert": [
+   50,
+   30,
+   5
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_nv_schrauben": {
+  "wert": [
+   2,
+   4
+  ],
+  "einheit": "-",
+  "herkunft": "ERW-E2 N3: 2 x M4",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_stecker_schraube_einzug_mm": {
+  "wert": 5,
+  "einheit": "mm",
+  "herkunft": "abgeleitet (Sonnet): Schrauben 5 mm von der Flanschkante",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_stecker_koerper_einzug_mm": {
+  "wert": 8,
+  "einheit": "mm",
+  "herkunft": "abgeleitet (Sonnet): Körper von HV 40 A / NV: Flanschfläche minus 8 mm je Kante (Platz für Schraubenköpfe); Höhe = Hülle aus N1 minus Flansch",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_bruecke_mm": {
+  "wert": [
+   25,
+   3,
+   80
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_bruecke_schrauben": {
+  "wert": [
+   2,
+   8
+  ],
+  "einheit": "-",
+  "herkunft": "ERW-E2 N3: 2 x M8 mit Scheibe",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_hvil_mm": {
+  "wert": [
+   15,
+   10,
+   8
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_servicedeckel_mm": {
+  "wert": [
+   120,
+   80,
+   2
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_servicedeckel_schrauben": {
+  "wert": [
+   6,
+   5
+  ],
+  "einheit": "-",
+  "herkunft": "ERW-E2 N3: 6 x M5 (Senkkopf bündig, Kopfhöhe = Deckeldicke)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_servicedeckel_dichtung_mm": {
+  "wert": [
+   3,
+   3
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_servicedeckel_rand_mm": {
+  "wert": 12,
+  "einheit": "mm",
+  "herkunft": "abgeleitet (Sonnet): Rand des Haupt-Deckels um die Serviceöffnung für Dichtung (3) und Senkschrauben; Öffnung im Deckel = 120 x 80 minus 2 x 12",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_omega_h_mm": {
+  "wert": 4,
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3: Dehnbogen (Omega) h 4",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_schweiss_mm": {
+  "wert": [
+   10,
+   1,
+   0.2,
+   2
+  ],
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3: 2 Linien 10 x 1, Vertiefung 0,2 je Pol",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_schweiss_abstand_mm": {
+  "wert": 5,
+  "einheit": "mm",
+  "herkunft": "abgeleitet (Sonnet): Abstand der zwei Linien 5 mm (Mitte zu Mitte)",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_beruehrschutz_dicke_mm": {
+  "wert": 1,
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_lasche_lfp_gewinde_mm": {
+  "wert": 8,
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_lasche_ueberlappung_mm": {
+  "wert": 25,
+  "einheit": "mm",
+  "herkunft": "ERW-E2 N3",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ },
+ "A_e2d_fenster": {
+  "wert": "letztes Feld (hinten)",
+  "einheit": "-",
+  "herkunft": "abgeleitet (Sonnet): Zellverbinder-Details (Omega, Schweißnaht, Berührschutz) nur im hintersten Querträger-Feld voll, sonst vereinfacht; Auftrag AUFTRAG.md Fortsetzung 5 erlaubt das bei zu großer Datei",
+  "varianten": [
+   "LFP",
+   "NMC"
+  ]
+ }
+}

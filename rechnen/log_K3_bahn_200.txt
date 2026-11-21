@@ -1,0 +1,3 @@
+tau 0.532 u0 0.1 Re 200.0
+Versuch 0 fz 7.292496093750004e-05 Re 198.5953
+{"modus": "bahn", "probe": false, "gitter": [44, 24, 64], "zellen_je_mm": 4, "Re": 198.60829999999999, "Re_soll": 200.0, "Pr": 24.75, "Pr_sim": 1.0, "f_Darcy": 0.31552234667881707, "f_Re_Darcy": 62.665356885890496, "tau": 0.532, "u0": 0.1, "Nu": 5.714966067388975, "h_W_m2K": 428.6224550541731, "T_m_schwankung": 4.25968420538462e-07, "T_m_drift_letztes_fuenftel": -1.1429932135106623e-06, "fz": 7.292496093750004e-05, "versuche": 1, "k2b": {"h_Kanal": 474.01123945497625, "f_Darcy": null, "quelle": "ergebnis_k2b.json"}}

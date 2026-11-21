@@ -1,0 +1,3 @@
+{'n_knoten': 15785, 'n_hex': 13600, 'plan_mm': [1970.0, 1370.0], 'block_mm': [1875.0, 1362.0, 90.0], 'block_start_mm': [47.5, 4.0], 'lagen_z_mm': [1.0, 1.0, 15.0, 15.0, 15.0, 15.0, 15.0, 15.0, 1.0, 1.0], 'xs': 40, 'ys': 34}
+fertig 1 Segmente
+{'datei': '/home/cae/hermes/batterie/sim/kuehlung/k3_gesamt/elmer_LFP_P0_V1/k4_0_t0001.vtu', 'T_max_C': 38.376452433497384, 'T_min_C': 24.529960671994072, 'x_Tmax_mm': 96.84210500000002, 'y_Tmax_mm': 1284.375, 'T_max_Zellblock_C': 38.376452433497384, 'dT_Zellblock_K': 10.5357097310342}

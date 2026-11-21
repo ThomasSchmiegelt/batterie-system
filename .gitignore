@@ -19,3 +19,23 @@ quellen/
 *.jsonl
 forschung/recherche_ablage/
 .obsidian/workspace*.json
+pm/vektorsuche/db/
+# Große Rechenausgaben (Opus 2026-11-21, vor Veröffentlichung)
+cad/baukasten/ausgabe/netz/
+*.npz
+*.bin
+*.rst
+*.dat
+X3A*.gz
+*.out
+*.frd
+sim/**/lauf/*/X3T*
+sim/**/lauf/*/*.unfertig
+sim/kuehlung/k3_gesamt/fluidx3d/
+sim/**/netz/
+pm/vektorsuche/db/
+sim/**/lauf/
+sim/**/lauf_*/
+sim/**/elmer_*/
+sim/**/_th/
+sim/**/_film/
