@@ -3,6 +3,8 @@
 Aufruf: python3 k4_elmer.py netz | sif | rechnen | auswerten   [--probe: grobes Netz, 3 Schritte]
 Schichten (z): Blech - Pad - Zellblock (6 Lagen) - Pad - Blech; Plan = Plattenflaeche. Aussenflaechen adiabat (Annahme, Rahmen/Boden/Deckel nicht modelliert).
 Randbedingung Blech aussen: Robin, h_eff aus K3 (h_fx, eta aus K2b), T_Fluid(Ort) linear entlang des Maeanders (8 Bahnen laengs, wechselnde Richtung, Ober-/Unterplatte gleichsinnig = Annahme).
+V4 nach ENT-158, Auftrag Opus 2026-11-23: gruppierte Parallelfuehrung (Nachtrag 1 ERWARTUNG K5; k = bestes k aus ../k5_parallel/ergebnis_verteiler.json, je 8/k Bahnen in Reihe, Gruppen gleich durchstroemt), Fluidtemperatur linear ueber den Gruppenweg,
+Durchfluss x3, obere Platte gegenlaeufig; h aus K3-Korrelation (kuehlplatte.kanal) fuer Q/(k*m_teilkanaele) je Teilkanal.
 Alle Zahlen aus eingaben.json (Herkunft dort) und Ergebnisdateien. Zwischenstand je Segment (restart.dat), STOP-Pruefung zwischen Segmenten."""
 import json, os, sys, subprocess, math, glob
 import numpy as np
@@ -10,7 +12,9 @@ H = os.path.dirname(os.path.abspath(__file__)); R = os.path.abspath(os.path.join
 E = json.load(open(f"{H}/eingaben.json")); K4 = E["k4"]; probe = "--probe" in sys.argv
 arg = lambda n, d: sys.argv[sys.argv.index(n)+1] if n in sys.argv else d
 FALL = arg("--fall", "LFP_P0"); VAR = arg("--var", "V0"); VF = "LFP" if FALL.startswith("LFP") else "NMC"; DAUER = FALL.endswith("_DAUER")
-K2FALL = "LFP_P0" if VF == "LFP" else "NMC_P4"; V_GEGEN = VAR in ("V1", "V3"); V_FLOW = 2.0 if VAR in ("V2", "V3") else 1.0
+K2FALL = "LFP_P0" if VF == "LFP" else "NMC_P4"; V_GEGEN = VAR in ("V1", "V3", "V4"); V_FLOW = 3.0 if VAR in ("V4", "V4p") else 2.0 if VAR in ("V2", "V3") else 1.0; PARALLEL = VAR in ("V4", "V4p")   # V4p (Opus 2026-11-23): wie V4, aber ohne Gegenlauf (gebautes CAD G5.9, V_GEGEN False)
+KG = json.load(open(f"{R}/sim/kuehlung/k5_parallel/ergebnis_verteiler.json"))["gruppen"]["bestes"] if PARALLEL else None   # z. B. "k2_d25_x3"
+KGRP = int(KG.split("_")[0][1:]) if PARALLEL else 1        # Zahl paralleler Gruppen k (je 8/k Bahnen in Reihe); k = 8 = Einzelbahnen parallel
 D = f"{H}/elmer_{FALL}_{VAR}{'_probe' if probe else ''}"; os.makedirs(D, exist_ok=True)
 P = json.load(open(f"{R}/cad/pack/entwurf/parameter_{VF}.json"))["A"]; PG = json.load(open(f"{R}/cad/pack/entwurf/ergebnis_{VF}.json"))
 rand = P["A_rand_mm"]["wert"]; Lx, Ly = PG["laenge_mm"]-2*rand, PG["breite_mm"]-2*rand           # Plattenflaeche (wie k2 platte())
@@ -79,7 +83,7 @@ def sif(segment=0):
     Vz = (cl*cb*pitch if VF == "LFP" else bx*by*cb/ncell)*1e-9; rho = m_kg/Vz; q = Qz/m_kg                      # W/kg, Dichte so, dass rho*q = Q/V
     sys.path.insert(0, f"{R}/sim/kuehlung/k2_kuehlplatte"); import kuehlplatte as KP
     k2 = [f for f in json.load(open(f"{R}/sim/kuehlung/k2_kuehlplatte/ergebnis_k2b.json"))["faelle"] if f["fall"] == K2FALL and f["fuehrung"] == "laengs" and f["n_bahnen"] == 8 and f["breite_mm"] == 8][0]
-    Vp = k2["V_pack_L_min"]/2/6e4*V_FLOW; rk = KP.kanal(0.008, Lx/1000, Vp/k2["m_teilkanaele"], 0.004); kal = 237; mm_ = math.sqrt(2*rk["h"]/(kal*0.003)); eta = math.tanh(mm_*0.004)/(mm_*0.004)
+    Vp = k2["V_pack_L_min"]/2/6e4*V_FLOW; rk = KP.kanal(0.008, Lx/1000, Vp/(k2["m_teilkanaele"]*KGRP), 0.004); kal = 237; mm_ = math.sqrt(2*rk["h"]/(kal*0.003)); eta = math.tanh(mm_*0.004)/(mm_*0.004)
     h_kanal = rk["h"]; h_eff = h_kanal*(8+2*eta*4)/(8+3); dT = Qz*ncell/2/(KP.rho*KP.c*Vp); Tin = K4["T_ein_C"]; Lm = Lx/1000; S = 8*Lm; lane = Ly/8   # tx(0) in Metern (Coordinate Scaling 0.001)
     s = []
     nstep = 3 if probe else (1 if DAUER else int(K4["dauer_s"][VF]/K4["dt_s"])); seg = nstep if not probe else 3
@@ -97,13 +101,19 @@ def sif(segment=0):
     s.append(f"Initial Condition 1\n  Temperature = {Tin}\nEnd\nBody Force 1\n  Heat Source = {q}\nEnd\n")
     for ln in range(8):
         Tf = (f"{Tin}+{dT}*({ln}*{Lm}+tx(0))/{S}" if ln % 2 == 0 else f"{Tin}+{dT}*({ln+1}*{Lm}-tx(0))/{S}")
-        Tf_top = (f"{Tin}+{dT}*({S}-({ln}*{Lm}+tx(0)))/{S}" if ln % 2 == 0 else f"{Tin}+{dT}*({S}-({ln+1}*{Lm}-tx(0)))/{S}") if V_GEGEN else Tf   # V1: obere Platte gegensinnig durchstroemt (s -> S - s)
+        if PARALLEL:   # V4 (verallgemeinert, k Gruppen): T linear ueber den Gruppenweg Sg = (8/k) Bahnen, alle Gruppen gleich, Bahnwechsel wie V0 innerhalb der Gruppe
+            nb = 8//KGRP; l = ln % nb; Sg = nb*Lm
+            Tf = (f"{Tin}+{dT}*({l}*{Lm}+tx(0))/{Sg}" if l % 2 == 0 else f"{Tin}+{dT}*({l+1}*{Lm}-tx(0))/{Sg}")
+            Tf_top = (f"{Tin}+{dT}*({Sg}-({l}*{Lm}+tx(0)))/{Sg}" if l % 2 == 0 else f"{Tin}+{dT}*({Sg}-({l+1}*{Lm}-tx(0)))/{Sg}") if V_GEGEN else Tf   # V4p: ohne Gegenlauf (Korrektur Sonnet 2026-11-23: V_GEGEN wurde im Parallelzweig nicht abgefragt)
+        else: Tf_top = (f"{Tin}+{dT}*({S}-({ln}*{Lm}+tx(0)))/{S}" if ln % 2 == 0 else f"{Tin}+{dT}*({S}-({ln+1}*{Lm}-tx(0)))/{S}") if V_GEGEN else Tf   # V1: obere Platte gegensinnig durchstroemt (s -> S - s)
         for bnd, tag in ((1, 1+ln), (2, 9+ln)):   # ElmerGrid nummeriert die Rand-Gruppen 100..107 -> 1..8, 110..117 -> 9..16 neu
             s.append(f'Boundary Condition {bnd+2*ln}\n  Target Boundaries(1) = {tag}\n  Heat Transfer Coefficient = {h_eff}\n  External Temperature = Variable Coordinate 1\n    Real MATC "{Tf if bnd == 1 else Tf_top}"\nEnd\n')
     open(f"{D}/k4_{segment}.sif", "w").write("\n".join(s))
-    return dict(Q_je_Zelle_W=Qz, fall=FALL, var=VAR, h_eff_Verhaeltnis_k2b=h_eff/(k2["h_Kanal"]*(8+2*k2["eta_steg"]*4)/11), q_W_kg=q, rho_block=rho, h_kanal_fx=h_kanal, h_eff=h_eff, dT_fluid_K=dT, nstep=nstep, seg=seg, k=ks)
+    return dict(Q_je_Zelle_W=Qz, fall=FALL, var=VAR, h_eff_Verhaeltnis_k2b=h_eff/(k2["h_Kanal"]*(8+2*k2["eta_steg"]*4)/11), q_W_kg=q, rho_block=rho, h_kanal_fx=h_kanal, Re_kanal=rk["Re"], u_kanal_m_s=rk["u_m_s"], h_eff=h_eff, dT_fluid_K=dT, nstep=nstep, seg=seg, k=ks)
 def rechnen():
-    info = sif(0); seg = info["seg"]; n_seg = int(math.ceil(info["nstep"]/seg)); stop = os.environ.get("RECHNEN_STOP", "")
+    info = sif(0); seg = info["seg"]
+    if PARALLEL: print("V4 Gruppe", KG, "k", KGRP, "Kanal: Re", info["Re_kanal"], "u", info["u_kanal_m_s"], "m/s, h_Kanal", info["h_kanal_fx"], "W/m2K, h_eff", info["h_eff"], "dT_Fluid", info["dT_fluid_K"], "K")
+    n_seg = int(math.ceil(info["nstep"]/seg)); stop = os.environ.get("RECHNEN_STOP", "")
     fertig = len(glob.glob(f"{D}/k4_*.vtu*"))     # Segmente, die schon da sind, werden uebersprungen (restart.dat = letzter Stand)
     done = sorted(glob.glob(f"{D}/segment_*.fertig")); k0 = len(done)
     for k in range(k0, n_seg):

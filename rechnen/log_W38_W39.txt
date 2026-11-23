@@ -1,0 +1,5 @@
+Running as unit: hermes-batterie-recherche-w38.scope; invocation ID: 3d39d08c2a354f0aa95b279bf42653f3
+2026-11-23 13:51:07 STOP
+2026-11-23 13:51:07 LAUF FERTIG (wissen)
+2026-11-23 13:51:07 STOP
+2026-11-23 13:51:07 LAUF FERTIG (wissen)

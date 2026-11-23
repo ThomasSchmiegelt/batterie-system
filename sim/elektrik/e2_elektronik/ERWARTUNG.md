@@ -97,3 +97,9 @@ Autor: „ich hätte mir einen höheren detailierungsstand erwartet“. Gewählt
 | | NMC-Querschnitt | Das CAD liest den Querschnitt der Gruppenverbinder aus der E1-Akte (15×3), nicht 25×3 (B-BAT-027). Verlust neu rechnen |
 **Erwartung:** 0 Kollisionen, nach Anpassungen höchstens an der Lage, nicht an den Maßen. Elektronikmasse +1…3 kg je Variante. NMC-Verbinderverlust ≈ 460 W mit 15×3; ob 15×3 thermisch reicht, entscheidet Opus danach. Teilezahl etwa 3–5 × höher.
 **Verfehlt:** ein Maß müsste geändert werden, damit es passt; Packhöhe vorn > 130 mm; Lasche LFP auch abgekantet nicht unterzubringen.
+
+## Anforderung (Nachtrag)
+- REQ-P13 (Vorgang E2, pm/plan/wissensnetz.py)
+- REQ-P11 (Vorgang E2, pm/plan/wissensnetz.py)
+
+Vermerk: Nachtrag Sonnet aus wissensnetz.py, Prüfung Opus offen (2026-11-23). Die Zuordnung Rechenordner zu Vorgang E2 ist von Sonnet gewählt.

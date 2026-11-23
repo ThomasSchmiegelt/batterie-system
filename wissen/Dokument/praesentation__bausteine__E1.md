@@ -1,0 +1,26 @@
+---
+typ: dokument
+datei: "praesentation/bausteine/E1.md"
+tags: ["dokument", "kopie"]
+---
+# E1
+
+> KI-generiert, erzeugt aus pm/plan/wissensnetz.json – nicht von Hand bearbeiten
+
+- Kopie von `praesentation/bausteine/E1.md` (Quelle im Repo, hier nur Lesekopie)
+
+## Inhalt
+
+> **KI-generiert** (Claude Sonnet, 2026-11-17), Entwurf. Folienbaustein Vorgang E1 (Querschnitte und Verluste der Stromführung).
+
+# Wie dick muss die Stromschiene sein?
+**Kernaussage (Opus einzusetzen): Der Strom bestimmt den Querschnitt, nicht die Erwärmung; LFP kommt mit 2,6 kg Verbindern und 105 W Verlust aus, NMC braucht 8,8 kg und verliert 385 W (über der 300-W-Grenze).**
+
+**Bild:** sim/elektrik/e1_querschnitte/querschnitte.png (Zielband je Art grün), verluste.png (Zielband < 100 W, Grenze 300 W)
+
+**Zahlen** (Quelle sim/elektrik/e1_querschnitte/ergebnis.json):
+- LFP: 194 A Laden, 249 Verbinder Al 75 mm², HV Cu 50 mm², Verlust 105,2 W, Spannungsabfall 0,068 %
+- NMC: 130 A Pack / 32,4 A je Zelle, Gruppenverbinder Al 45 mm², Zellabgriff 12 mm², HV Cu 35 mm², Verlust 385,4 W, Spannungsabfall 0,442 %
+
+*KI-generiert, Entwurf.*
+

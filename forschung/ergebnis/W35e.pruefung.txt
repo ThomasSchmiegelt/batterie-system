@@ -1,0 +1,5 @@
+Z5: WERT OHNE BELEG: Bei REESS (Rechargeable Energy Storage System) handelt es sich um das im Fahrzeug verbaute Batteries
+Z22: WERT OHNE BELEG: - **Kühlung / Thermomanagement (Folgerung):** Die Stabilisierungskriterien (2 °C/h beim Laden, 4 °C/
+Z31: WERT OHNE BELEG: 3. Gelten die genannten Schutzgrenzen (10 °C, 25 % Nennspannung) auch für Modul-/Paketebene oder nur
+
+7 Belege bestaetigt, 0 Fehler

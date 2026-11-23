@@ -8,7 +8,7 @@ tags: ["software"]
 > KI-generiert, erzeugt aus pm/plan/wissensnetz.json – nicht von Hand bearbeiten
 
 - Status: nicht installiert / nicht geprüft
-- Übersicht: [[SOFTWARE]]
+- Übersicht: [[Dokument/SOFTWARE]]
 
 ## Vorgänge
-- [[wissen/Vorgang/X2|X2]] – Seitencrash dynamisch (OpenRadioss, Installation nur nach Freigabe)
+- [[Vorgang/X2|X2]] – Seitencrash dynamisch (OpenRadioss, Installation nur nach Freigabe)

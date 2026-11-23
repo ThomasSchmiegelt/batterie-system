@@ -2,14 +2,14 @@
  "hinweis": "KI-generiert (Claude Opus, G5 montage.py), Entwurf",
  "variante": "NMC",
  "stueckliste_version": "0.3",
- "teile": 3601,
- "masse_kg": 479.976,
- "laenge_mm": 2235.0,
+ "teile": 3605,
+ "masse_kg": 480.664,
+ "laenge_mm": 2273.0,
  "breite_mm": 1430.0,
  "hoehe_max_mm": 227.8,
  "stufen": {
   "F": 28,
-  "K": 19,
+  "K": 20,
   "H": 4
  },
  "positionen": [
@@ -33,7 +33,7 @@
    "ist": 4,
    "masse_cad_kg": 4.5466,
    "masse_sl_kg": 11.361119,
-   "sekunden": 5.0
+   "sekunden": 4.7
   },
   {
    "pos": "200.3",
@@ -66,7 +66,7 @@
    "ist": 1,
    "masse_cad_kg": 1.8378,
    "masse_sl_kg": 1.32948,
-   "sekunden": 0.3
+   "sekunden": 0.2
   },
   {
    "pos": "700.1b",
@@ -99,7 +99,7 @@
    "ist": 217,
    "masse_cad_kg": 7.9391,
    "masse_sl_kg": 7.940355,
-   "sekunden": 22.9
+   "sekunden": 13.7
   },
   {
    "pos": "420.2",
@@ -110,7 +110,7 @@
    "ist": 216,
    "masse_cad_kg": 3.0156,
    "masse_sl_kg": 3.016203,
-   "sekunden": 8.9
+   "sekunden": 5.0
   },
   {
    "pos": "400.3",
@@ -143,7 +143,7 @@
    "ist": 12,
    "masse_cad_kg": 1.8228,
    "masse_sl_kg": 0.450444,
-   "sekunden": 1.3,
+   "sekunden": 0.9,
    "hinweis": "Stückzahl aus CAD (Normteile), Stückliste übernimmt sie"
   },
   {
@@ -166,7 +166,7 @@
    "ist": 1,
    "masse_cad_kg": 0.4,
    "masse_sl_kg": 0.4,
-   "sekunden": 0.1
+   "sekunden": 0.0
   },
   {
    "pos": "300.2",
@@ -177,7 +177,7 @@
    "ist": 13,
    "masse_cad_kg": 1.04,
    "masse_sl_kg": 1.04,
-   "sekunden": 0.4
+   "sekunden": 0.2
   },
   {
    "pos": "300.3",
@@ -187,7 +187,7 @@
    "soll": 50,
    "ist": 50,
    "masse_cad_kg": 0.0001,
-   "masse_sl_kg": 0.00036,
+   "masse_sl_kg": 6.1e-05,
    "sekunden": 0.0
   },
   {
@@ -231,7 +231,7 @@
    "soll": 231,
    "ist": 231,
    "masse_cad_kg": 0.0312,
-   "masse_sl_kg": 0.020379,
+   "masse_sl_kg": 0.020677,
    "sekunden": 0.0,
    "hinweis": "Stückzahl aus CAD (Normteile), Stückliste übernimmt sie"
   },
@@ -277,7 +277,7 @@
    "ist": 2,
    "masse_cad_kg": 0.8,
    "masse_sl_kg": 0.8,
-   "sekunden": 0.1
+   "sekunden": 0.0
   },
   {
    "pos": "700.3",
@@ -298,7 +298,7 @@
    "soll": 2,
    "ist": 2,
    "masse_cad_kg": 0.33,
-   "masse_sl_kg": 0.25,
+   "masse_sl_kg": 0.33,
    "sekunden": 0.0
   },
   {
@@ -353,7 +353,7 @@
    "soll": 1,
    "ist": 1,
    "masse_cad_kg": 0.015,
-   "masse_sl_kg": 0.03,
+   "masse_sl_kg": 0.015,
    "sekunden": 0.0
   },
   {
@@ -424,7 +424,7 @@
    "ist": 9,
    "masse_cad_kg": 0.0193,
    "masse_sl_kg": 0.017744,
-   "sekunden": 3.4,
+   "sekunden": 2.2,
    "hinweis": "Stückzahl aus CAD (Normteile), Stückliste übernimmt sie"
   },
   {
@@ -446,7 +446,7 @@
    "soll": 1,
    "ist": 1,
    "masse_cad_kg": 15.0351,
-   "masse_sl_kg": 15.0404,
+   "masse_sl_kg": 15.0351,
    "sekunden": 0.1
   },
   {
@@ -458,7 +458,7 @@
    "ist": 3,
    "masse_cad_kg": 4.1387,
    "masse_sl_kg": 4.1387,
-   "sekunden": 0.1
+   "sekunden": 0.0
   },
   {
    "pos": "500.4",
@@ -467,8 +467,8 @@
    "stufe": "K",
    "soll": 4,
    "ist": 4,
-   "masse_cad_kg": 13.1114,
-   "masse_sl_kg": 13.1114,
+   "masse_cad_kg": 13.0815,
+   "masse_sl_kg": 13.0815,
    "sekunden": 0.0
   },
   {
@@ -491,7 +491,7 @@
    "ist": 12,
    "masse_cad_kg": 2.3366,
    "masse_sl_kg": 2.3366,
-   "sekunden": 0.1
+   "sekunden": 0.0
   },
   {
    "pos": "600.1",
@@ -500,20 +500,31 @@
    "stufe": "K",
    "soll": 2,
    "ist": 2,
-   "masse_cad_kg": 46.5514,
-   "masse_sl_kg": 46.562,
-   "sekunden": 12.0
+   "masse_cad_kg": 46.3354,
+   "masse_sl_kg": 46.3354,
+   "sekunden": 7.1
   },
   {
    "pos": "600.2",
    "bt": "BT-620",
    "generator": "kuehlung.verteiler",
    "stufe": "K",
+   "soll": 4,
+   "ist": 4,
+   "masse_cad_kg": 0.9428,
+   "masse_sl_kg": 0.9428,
+   "sekunden": 0.2
+  },
+  {
+   "pos": "600.2b",
+   "bt": "BT-620",
+   "generator": "kuehlung.verteilerrohr",
+   "stufe": "K",
    "soll": 2,
    "ist": 2,
-   "masse_cad_kg": 0.4611,
-   "masse_sl_kg": 0.4814,
-   "sekunden": 0.2
+   "masse_cad_kg": 0.4931,
+   "masse_sl_kg": 0.4931,
+   "sekunden": 0.4
   },
   {
    "pos": "600.3",
@@ -522,8 +533,8 @@
    "stufe": "K",
    "soll": 2,
    "ist": 2,
-   "masse_cad_kg": 0.0199,
-   "masse_sl_kg": 0.0199,
+   "masse_cad_kg": 0.0225,
+   "masse_sl_kg": 0.0225,
    "sekunden": 0.0
   },
   {
@@ -546,7 +557,7 @@
    "ist": 1,
    "masse_cad_kg": 1.2,
    "masse_sl_kg": 1.2,
-   "sekunden": 0.1
+   "sekunden": 0.0
   },
   {
    "pos": "660.3",
@@ -566,9 +577,9 @@
    "stufe": "F",
    "soll": 1,
    "ist": 8,
-   "masse_cad_kg": 0.3944,
-   "masse_sl_kg": 0.3944,
-   "sekunden": 0.5,
+   "masse_cad_kg": 0.3503,
+   "masse_sl_kg": 0.3503,
+   "sekunden": 0.3,
    "hinweis": "Stückzahl aus CAD (Normteile), Stückliste übernimmt sie"
   },
   {
@@ -591,16 +602,13 @@
   "700.1b schaltbox.deckel: Masse CAD 0.937 kg gegen Stückliste 0.598 kg (+56.7 %)",
   "400.3 verbinder.hv_leitung: Masse CAD 0.430 kg gegen Stückliste 0.335 kg (+28.3 %)",
   "440.2 verbinder.stromschiene: Masse CAD 1.823 kg gegen Stückliste 0.450 kg (+304.7 %)",
-  "300.3 elektronik.ntc: Masse CAD 0.000 kg gegen Stückliste 0.000 kg (-72.2 %)",
-  "360.3 elektronik.fpc_detail: Masse CAD 0.031 kg gegen Stückliste 0.020 kg (+53.1 %)",
-  "700.4 kaufteile.sicherungen: Masse CAD 0.330 kg gegen Stückliste 0.250 kg (+32.0 %)",
-  "700.10 kaufteile.gassensor: Masse CAD 0.015 kg gegen Stückliste 0.030 kg (-50.0 %)",
+  "300.3 elektronik.ntc: Masse CAD 0.000 kg gegen Stückliste 0.000 kg (+63.9 %)",
+  "360.3 elektronik.fpc_detail: Masse CAD 0.031 kg gegen Stückliste 0.021 kg (+50.9 %)",
   "580.1 normteile.dichtung: Masse CAD 0.017 kg gegen Stückliste 0.015 kg (+17.7 %)",
   "590.1 normteile.schraube: Masse CAD 0.487 kg gegen Stückliste 0.115 kg (+322.9 %)",
   "590.2 normteile.kabelschuh: Masse CAD 0.287 kg gegen Stückliste 0.214 kg (+34.4 %)",
   "590.3 normteile.clip: Masse CAD 0.004 kg gegen Stückliste 0.009 kg (-49.8 %)",
-  "590.4 normteile.schrumpfschlauch: Masse CAD 0.019 kg gegen Stückliste 0.018 kg (+8.8 %)",
-  "600.2 kuehlung.verteiler: Masse CAD 0.461 kg gegen Stückliste 0.481 kg (-4.2 %)"
+  "590.4 normteile.schrumpfschlauch: Masse CAD 0.019 kg gegen Stückliste 0.018 kg (+8.8 %)"
  ],
  "ctx": {
   "var": "NMC",
@@ -826,7 +834,7 @@
    ],
    [
     1935.0,
-    115.0
+    96.55
    ],
    [
     15.0,
@@ -866,7 +874,7 @@
    ],
    [
     1935.0,
-    615.0
+    608.05
    ],
    [
     15.0,
@@ -882,7 +890,7 @@
    ],
    [
     1935.0,
-    815.0
+    821.95
    ],
    [
     15.0,
@@ -922,7 +930,7 @@
    ],
    [
     1935.0,
-    1315.0
+    1333.45
    ]
   ],
   "einbau_aussen_fertig": true,
@@ -950,7 +958,9 @@
   "BT-610/dicke_mm ← ENT-152",
   "BT-610/kanal_anzahl ← ENT-156",
   "BT-610/kanal_breite_mm ← ENT-155",
-  "BT-610/kanal_hoehe_mm ← ENT-154"
+  "BT-610/kanal_hoehe_mm ← ENT-154",
+  "BT-610/kanalfuehrung ← ENT-158",
+  "BT-610/verteilerrohr_d_mm ← ENT-159"
  ],
  "annahmen_genutzt": [
   "A_boden_mm",
@@ -1062,6 +1072,7 @@
   "A_g5_box_freiraum_oben_mm",
   "A_g5_chiller_masse_kg",
   "A_g5_chiller_mm",
+  "A_g5_deckelschraube_ausweich_mm",
   "A_g5_deckelschraube_mm",
   "A_g5_druckausgleich_mm",
   "A_g5_eckradius_platte_mm",
@@ -1085,11 +1096,15 @@
   "A_g5_schienengasse_mm",
   "A_g5_schlauch_biegeradius_mm",
   "A_g5_schlauch_mm",
+  "A_g5_trennsteg_mm",
   "A_g5_typschild_mm",
   "A_g5_umlenk_mm",
   "A_g5_ventil_masse_kg",
   "A_g5_ventil_mm",
   "A_g5_verteiler_mm",
+  "A_g5_verteilerrohr_abstand_mm",
+  "A_g5_verteilerrohr_spalt_mm",
+  "A_g5_verteilerrohr_wand_mm",
   "A_luft_mm",
   "A_pad_mm",
   "A_quertraeger_anzahl",
@@ -1106,6 +1121,6 @@
   "A_zellverbinder_LFP_mm",
   "A_zellzahl_NMC"
  ],
- "sekunden": 526.3,
+ "sekunden": 337.5,
  "nur": []
 }

@@ -1,18 +1,15 @@
-G5 Montage NMC: 3601 Teile, 479.98 kg, L×B×H 2235×1430×228 mm, Stufen {'F': 28, 'K': 19, 'H': 4}
-16 Fehler
+G5 Montage NMC: 3605 Teile, 480.66 kg, L×B×H 2273×1430×228 mm, Stufen {'F': 28, 'K': 20, 'H': 4}
+13 Fehler
 220.2 zelle.verguss: Masse CAD 4.547 kg gegen Stückliste 11.361 kg (-60.0 %)
 200.5 zelle.zelltraeger: Masse CAD 1.212 kg gegen Stückliste 3.069 kg (-60.5 %)
 700.1 schaltbox.gehaeuse: Masse CAD 1.838 kg gegen Stückliste 1.329 kg (+38.2 %)
 700.1b schaltbox.deckel: Masse CAD 0.937 kg gegen Stückliste 0.598 kg (+56.7 %)
 400.3 verbinder.hv_leitung: Masse CAD 0.430 kg gegen Stückliste 0.335 kg (+28.3 %)
 440.2 verbinder.stromschiene: Masse CAD 1.823 kg gegen Stückliste 0.450 kg (+304.7 %)
-300.3 elektronik.ntc: Masse CAD 0.000 kg gegen Stückliste 0.000 kg (-72.2 %)
-360.3 elektronik.fpc_detail: Masse CAD 0.031 kg gegen Stückliste 0.020 kg (+53.1 %)
-700.4 kaufteile.sicherungen: Masse CAD 0.330 kg gegen Stückliste 0.250 kg (+32.0 %)
-700.10 kaufteile.gassensor: Masse CAD 0.015 kg gegen Stückliste 0.030 kg (-50.0 %)
+300.3 elektronik.ntc: Masse CAD 0.000 kg gegen Stückliste 0.000 kg (+63.9 %)
+360.3 elektronik.fpc_detail: Masse CAD 0.031 kg gegen Stückliste 0.021 kg (+50.9 %)
 580.1 normteile.dichtung: Masse CAD 0.017 kg gegen Stückliste 0.015 kg (+17.7 %)
 590.1 normteile.schraube: Masse CAD 0.487 kg gegen Stückliste 0.115 kg (+322.9 %)
 590.2 normteile.kabelschuh: Masse CAD 0.287 kg gegen Stückliste 0.214 kg (+34.4 %)
 590.3 normteile.clip: Masse CAD 0.004 kg gegen Stückliste 0.009 kg (-49.8 %)
 590.4 normteile.schrumpfschlauch: Masse CAD 0.019 kg gegen Stückliste 0.018 kg (+8.8 %)
-600.2 kuehlung.verteiler: Masse CAD 0.461 kg gegen Stückliste 0.481 kg (-4.2 %)

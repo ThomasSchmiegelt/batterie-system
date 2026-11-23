@@ -1,22 +1,32 @@
 \babel@toc {german}{}\relax 
-\contentsline {section}{\numberline {1}Zusammenfassung}{3}{section.1}%
-\contentsline {section}{\numberline {2}Auftrag und Vorgaben}{4}{section.2}%
-\contentsline {section}{\numberline {3}Vorgehen mit KI-Agenten}{5}{section.3}%
-\contentsline {section}{\numberline {4}Recherche und Datenlage}{6}{section.4}%
-\contentsline {section}{\numberline {5}Chemie: von der Annahme zur Messung}{8}{section.5}%
-\contentsline {section}{\numberline {6}Systemauslegung}{14}{section.6}%
-\contentsline {section}{\numberline {7}Zelle: Maße, Innenaufbau, CAD}{16}{section.7}%
-\contentsline {section}{\numberline {8}Wärme der Einzelzelle (K0, K1, K1b)}{20}{section.8}%
-\contentsline {section}{\numberline {9}Gehäuse und Pack}{32}{section.9}%
-\contentsline {section}{\numberline {10}Elektrik E1: Querschnitte und Verluste}{44}{section.10}%
-\contentsline {section}{\numberline {11}Elektronik und Kabel E2}{46}{section.11}%
-\contentsline {section}{\numberline {12}Stückliste und Kosten}{54}{section.12}%
-\contentsline {section}{\numberline {13}Seitencrash (X1, X1b/X2)}{58}{section.13}%
-\contentsline {section}{\numberline {14}Fehler und Korrekturen}{62}{section.14}%
-\contentsline {section}{\numberline {15}Werkzeuge und Rechenregeln}{66}{section.15}%
-\contentsline {section}{\numberline {16}Entscheidungen}{67}{section.16}%
-\contentsline {section}{\numberline {17}Geometrische Integration durch KI: Grenzen, Fehler, Unsicherheiten}{70}{section.17}%
-\contentsline {section}{\numberline {18}Offene Punkte und nächste Schritte}{75}{section.18}%
-\contentsline {section}{Anhang A: Begriffe (Glossar)}{76}{section.18}%
-\contentsline {section}{Anhang B: Quellen}{77}{section.18}%
-\contentsline {section}{Anhang C: Software}{78}{section.18}%
+\contentsline {section}{Abkürzungsverzeichnis und Glossar}{4}{Doc-Start}%
+\contentsline {section}{\numberline {1}Zusammenfassung}{5}{section.1}%
+\contentsline {section}{\numberline {2}Anforderungsübersicht}{7}{section.2}%
+\contentsline {section}{\numberline {3}Auftrag und Vorgaben}{9}{section.3}%
+\contentsline {section}{\numberline {4}Vorgehen mit KI-Agenten}{10}{section.4}%
+\contentsline {section}{\numberline {5}Recherche und Datenlage}{11}{section.5}%
+\contentsline {section}{\numberline {6}Chemie: von der Annahme zur Messung}{13}{section.6}%
+\contentsline {section}{\numberline {7}Systemauslegung}{19}{section.7}%
+\contentsline {section}{\numberline {8}Zelle: Maße, Innenaufbau, CAD}{21}{section.8}%
+\contentsline {section}{\numberline {9}Zellwärme (K1c) und Kühlplatte (K2)}{25}{section.9}%
+\contentsline {section}{\numberline {10}Thermik des Gesamtsystems (K3 FluidX3D, K4 Elmer, K5)}{27}{section.10}%
+\contentsline {section}{\numberline {11}Gehäuse und Pack (Endstand G5.9)}{37}{section.11}%
+\contentsline {section}{\numberline {12}Elektrik E1: Querschnitte und Verluste}{47}{section.12}%
+\contentsline {section}{\numberline {13}Elektronik und Kabel E2}{49}{section.13}%
+\contentsline {section}{\numberline {14}Stückliste und Kosten (Stand G5.9)}{57}{section.14}%
+\contentsline {section}{\numberline {15}Crash G5 (X3, OpenCourant)}{58}{section.15}%
+\contentsline {section}{\numberline {16}Fehler und Korrekturen}{68}{section.16}%
+\contentsline {section}{\numberline {17}Werkzeuge und Rechenregeln}{74}{section.17}%
+\contentsline {section}{\numberline {18}Entscheidungen}{75}{section.18}%
+\contentsline {section}{\numberline {19}Geometrische Integration durch KI: Grenzen, Fehler, Unsicherheiten}{78}{section.19}%
+\contentsline {section}{\numberline {20}Analyse möglicher Verbesserungen}{83}{section.20}%
+\contentsline {section}{\numberline {21}Lehren für die nächste Konstruktionsschleife}{85}{section.21}%
+\contentsline {section}{\numberline {22}Offene Punkte und nächste Schritte}{86}{section.22}%
+\contentsline {section}{\numberline {A}Anhang: Entwicklungsgang (überholte Zwischenstände)}{88}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Wärme der Einzelzelle (K0, K1, K1b)}{88}{subsection.A.1}%
+\contentsline {subsection}{\numberline {A.2}Pack: M0 und G4}{99}{subsection.A.2}%
+\contentsline {subsection}{\numberline {A.3}Stückliste und Kosten im Stand E2D}{101}{subsection.A.3}%
+\contentsline {subsection}{\numberline {A.4}Seitencrash (X1, X1b/X2)}{103}{subsection.A.4}%
+\contentsline {section}{\numberline {B}Quellen}{108}{appendix.B}%
+\contentsline {section}{\numberline {C}Software}{109}{appendix.C}%
+\contentsline {section}{\numberline {D}Stücklisten (LFP und NMC, Stand G5.9)}{110}{appendix.D}%

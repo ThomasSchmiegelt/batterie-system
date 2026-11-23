@@ -35,3 +35,8 @@
 - Kriterium: keine Zellberührung (Innenwand-Verschiebung < Spalt) bei aufgenommenen 5 kJ. Dazu Spitzenkraft und Energiebilanz.
 - CalculiX bleibt Gegenprüfung der Anfangssteifigkeit: Kraft bei 2 mm, bis 30 % Abweichung erlaubt.
 **Erwartung unverändert:** Ab w ≈ 20 mm werden 5 kJ ohne Zellberührung aufgenommen.
+
+## Anforderung (Nachtrag)
+- REQ-P14 (Vorgang X2, pm/plan/wissensnetz.py)
+
+Vermerk: Nachtrag Sonnet aus wissensnetz.py, Prüfung Opus offen (2026-11-23). Die Zuordnung Rechenordner zu Vorgang X2 ist von Sonnet gewählt.

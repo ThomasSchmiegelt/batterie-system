@@ -5,7 +5,7 @@
 > **KI-generiert.** (KI-generiert (Claude Sonnet, 2026-11-19), Auftrag G5.1, ergänzt SL3.1 (Auftrag KO2).) Nicht von Hand bearbeiten: `python3 pm/bauteile/stueckliste_v3.py --variante NMC` schreibt die Datei neu. Entwurf, nicht freigegeben.
 > Quelle der Geometrie (cad/baukasten/PLAN.md §1): jede Position trägt einen Generator `<modul>.<funktion>`. Preise sind eine Anzeige aus `pm/kosten/eingaben.json` (SL3.1), gerechnet wird in `pm/kosten/kosten.py`. Hersteller/Typ und Datenblatt aus `pm/bauteile/kaufteile_datenblatt.json` (Quelle `forschung/datenblaetter.md`).
 
-**Positionen:** 55 (Stufe K/F/H/-: 19 / 28 / 4 / 4), Stufe H 7.3 %. **Masse gesamt:** 485.68 kg (CAD e2d 483.15 kg, +0.52 %). **Zellen:** 868, 74.27 kWh. Positionen mit Masse „offen“: 8.
+**Positionen:** 56 (Stufe K/F/H/-: 20 / 28 / 4 / 4), Stufe H 7.1 %. **Masse gesamt:** 486.36 kg (CAD e2d 483.15 kg, +0.66 %). **Zellen:** 868, 74.27 kWh. Positionen mit Masse „offen“: 8.
 
 Art: K Kaufteil, E Eigenteil, S Systemteil außerhalb. Stufe: K Konstruktionsstand, F Kaufteilform, H Hüllkörper, - keine Geometrie. Masse „offen“: keine CAD-Geometrie, keine Akte.
 
@@ -56,7 +56,7 @@ Art: K Kaufteil, E Eigenteil, S Systemteil außerhalb. Stufe: K Konstruktionssta
 | 500.1 | BT-510 Gehäusewanne | Gehäusewanne (im CAD: Boden) | – | 1 | 22,556 | 22,556 | G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json) | 6,000 €/kg | Schätzung (Annahme Opus, ERW-KO1) | E | gehaeuse.wanne | K | – |  |
 | 520.1 | BT-520 Deckel mit Dichtung | Deckel | – | 1 | 15,035 | 15,035 | G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json) | 6,000 €/kg | Schätzung (Annahme Opus, ERW-KO1) | E | gehaeuse.deckel | K | – |  |
 | 500.3 | BT-530 Querträger | Querträger | – | 3 | 1,380 | 4,139 | G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json) | 6,000 €/kg | Schätzung (Annahme Opus, ERW-KO1) | E | gehaeuse.quertraeger | K | ENT-082, ENT-083, ENT-084, ENT-085, ENT-086 |  |
-| 500.4 | BT-540 Seitenrahmen | Seitenrahmen (Rahmenprofil, keine Knautschzone nach ENT-151) | – | 4 | 3,278 | 13,111 | G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json) | 6,000 €/kg | Schätzung (Annahme Opus, ERW-KO1) | E | gehaeuse.seitenrahmen | K | ENT-087, ENT-151 |  |
+| 500.4 | BT-540 Seitenrahmen | Seitenrahmen (Rahmenprofil, keine Knautschzone nach ENT-151) | – | 4 | 3,270 | 13,082 | G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json) | 6,000 €/kg | Schätzung (Annahme Opus, ERW-KO1) | E | gehaeuse.seitenrahmen | K | ENT-087, ENT-151 |  |
 | 500.5 | BT-550 Unterfahrschutz | Unterfahrschutz | – | 1 | 22,556 | 22,556 | G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json) | 6,000 €/kg | Schätzung (Annahme Opus, ERW-KO1) | E | gehaeuse.unterfahrschutz | K | – |  |
 | 500.6 | BT-560 Befestigungspunkte | Befestigungspunkte am Fahrzeug (Stahlhülse) | – | 12 | 0,195 | 2,337 | G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json) | 1,500 €/Stück | Schätzung (Annahme Opus, ERW-KO2) | E | gehaeuse.befestigung | K | – | Menge 12 = 6 je Längsseite, Annahme Opus A_g5_befestigung_n_je_seite (Vorgabe Opus 2026-11-19, noch nicht in annahmen.json, da A-Blöcke e2d sie nicht enthalten). |
 | 500.7 | BT-570 Druckausgleichselement | Druckausgleichselement (atmend, wasserdicht) | Gore PolyVent AVS 70 (High Airflow) (BT-570_gore_auto-batteries-snapfit.pdf, S. 2) | 1 | offen | offen | offen (keine CAD-Geometrie, keine Akte) | 5,000 €/Stück | Schätzung (Annahme Opus, ERW-KO1) | K | kaufteile.druckausgleich | F | – | Ø20 mm stammt aus ERW-E2 N3 für die Schaltbox (Annahme); Übertragung auf das Pack-Element und Masse offen, W34 abwarten. |
@@ -70,16 +70,17 @@ Art: K Kaufteil, E Eigenteil, S Systemteil außerhalb. Stufe: K Konstruktionssta
 
 | Pos. | BT | Benennung | Hersteller / Typ (Datenblatt, Seite) | Menge | Masse je [kg] | Masse ges. [kg] | Masse-Quelle | Preis | Preis-Status | Art | Generator | Stufe | Akten | Hinweis an Opus |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 600.1 | BT-610 Kühlplatte | Kühlplatte (Blech 1/4/1 mm, Mäander 8 Bahnen laengs, Teilkanal 8 mm) | – | 2 | 23,276 | 46,551 | G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json) | 12,000 €/kg | Schätzung (Annahme Opus, ERW-KO2) | E | kuehlung.kuehlplatte | K | ENT-089, ENT-090, ENT-104, ENT-105, ENT-106, ENT-152, ENT-153, ENT-154, ENT-155, ENT-156 |  |
-| 600.2 | BT-620 Verteiler und Sammler | Verteiler und Sammler | – | 2 | 0,231 | 0,461 | G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json) | 12,000 €/kg | Schätzung (Annahme Opus, ERW-KO1) | E | kuehlung.verteiler | K | – | Menge 2 (Opus-Vorgabe 2026-11-19). |
-| 600.3 | BT-630 Kühlmittelanschlüsse | Kühlmittelanschlüsse Ein/Aus | – | 2 | 0,010 | 0,020 | G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json) | 10,000 €/Stück | Schätzung (Annahme Opus, ERW-KO1) | K | kuehlung.anschluss | K | – | Generator kuehlung.anschluss, Menge 2, Stufe K (Opus-Vorgabe 2026-11-19). |
+| 600.1 | BT-610 Kühlplatte | Kühlplatte (Blech 1/4/1 mm, Mäander 8 Bahnen laengs, Teilkanal 8 mm) | – | 2 | 23,168 | 46,335 | G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json) | 12,000 €/kg | Schätzung (Annahme Opus, ERW-KO2) | E | kuehlung.kuehlplatte | K | ENT-089, ENT-090, ENT-104, ENT-105, ENT-106, ENT-152, ENT-153, ENT-154, ENT-155, ENT-156, ENT-158, ENT-159 |  |
+| 600.2 | BT-620 Verteiler und Sammler | Verteiler und Sammler | – | 4 | 0,236 | 0,943 | G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json) | 12,000 €/kg | Schätzung (Annahme Opus, ERW-KO1) | E | kuehlung.verteiler | K | – | Menge 4 = je Mäander ein Eintritts- und ein Austrittsblock (ENT-158, G5.9; Sonnet, Opus prüft). |
+| 600.2b | BT-620 Verteiler und Sammler | Verteilerrohr und Sammelrohr (Al, Innen-Ø 25 mm) | – | 2 | 0,247 | 0,493 | G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json) | 12,000 €/kg | Schätzung (Annahme Opus, ERW-KO1) | E | kuehlung.verteilerrohr | K | – | Neu G5.9 (Sonnet, Opus prüft): Rohr Ø25 innen, Wand 1,5 mm (Annahme), Masse nur Al ohne Kühlmittel. |
+| 600.3 | BT-630 Kühlmittelanschlüsse | Kühlmittelanschlüsse Ein/Aus | – | 2 | 0,011 | 0,022 | G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json) | 10,000 €/Stück | Schätzung (Annahme Opus, ERW-KO1) | K | kuehlung.anschluss | K | – | Generator kuehlung.anschluss, Menge 2, Stufe K (Opus-Vorgabe 2026-11-19). |
 | 600.4 | BT-640 Temperaturfühler Kühlmittel | Temperaturfühler Kühlmittel | Kyocera AVX 94082 (NTC M12×1,5, Einschraub) (BT-640_kyocera-avx_94082.pdf, S. 3) | 2 | 0,017 | 0,034 | Datenblatt | 3,000 €/Stück | Schätzung (Annahme Opus, ERW-KO1) | K | kaufteile.temperaturfuehler_kuehlmittel | H | – | Menge 2 (Opus 2026-11-19). Keine Formangabe: Stufe H bis W34. |
 | 600.5 | BT-650 Kühlmittel | Kühlmittel Wasser-Glykol | – | offen | offen | offen | offen (keine CAD-Geometrie, keine Akte) | 3,000 €/L | Schätzung (Annahme Opus, ERW-KO1) | K | – | - | – | Flüssigkeit, keine Geometrie (PLAN §3: Detailstufe -). |
 | 600.6 | BT-660 Schnittstelle Fahrzeugkreis | Pumpe, Wärmetauscher/Kältemittelkühler | – | offen | offen | offen | offen (keine CAD-Geometrie, keine Akte) | 0 (entfällt) | entfällt | S | – | - | ENT-108, ENT-157 | Art S; Kühlkreis wird seit Opus-Zusatz 2026-11-19 als Positionen 660.1…660.5 modelliert (Detailstufe -). |
 | 660.1 | BT-661 Kühlmittelpumpe (elektrisch) | Kühlmittelpumpe (elektrisch) | Pierburg CWA100-3 (12 V PWM) (BT-661_pierburg_CWA100-3.pdf, S. 1) | 1 | 1,000 | 1,000 | G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json) | 60,000 €/Stück | Schätzung (Annahme Opus, ERW-KO2) | K | kuehlung.pumpe | F | – | Opus-Zusatz 2026-11-19 (Autor: Kühlkreis modellieren). Masse aus G5-CAD (folgt). |
 | 660.2 | BT-662 Chiller (Kältemittel-Wasser-Wärmetauscher) | Chiller (Kältemittel-Wasser-Wärmetauscher) | – | 1 | 1,200 | 1,200 | G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json) | 70,000 €/Stück | Schätzung (Annahme Opus, ERW-KO2) | K | kuehlung.chiller | F | – | Opus-Zusatz 2026-11-19 (Autor: Kühlkreis modellieren). Masse aus G5-CAD (folgt). |
 | 660.3 | BT-663 3/2-Wege-Ventil | 3/2-Wege-Ventil | Pierburg 3/2-Wege (Broschüre F0001) (BT-663_pierburg_CoolantValves.pdf, S. 1) | 1 | 0,400 | 0,400 | G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json) | 35,000 €/Stück | Schätzung (Annahme Opus, ERW-KO2) | K | kuehlung.ventil | F | – | Opus-Zusatz 2026-11-19 (Autor: Kühlkreis modellieren). Masse aus G5-CAD (folgt). |
-| 660.4 | BT-664 Kühlmittelschläuche | Kühlmittelschläuche | EPDM DN19 (Gates 4175EC, Autorliste) () | 1 | 0,394 | 0,394 | G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json) | 15,000 €/Satz | Schätzung (Annahme Opus, ERW-KO2) | K | kuehlung.schlauch | F | – | Opus-Zusatz 2026-11-19 (Autor: Kühlkreis modellieren). Masse aus G5-CAD (folgt). |
+| 660.4 | BT-664 Kühlmittelschläuche | Kühlmittelschläuche | EPDM DN19 (Gates 4175EC, Autorliste) () | 1 | 0,350 | 0,350 | G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json) | 15,000 €/Satz | Schätzung (Annahme Opus, ERW-KO2) | K | kuehlung.schlauch | F | – | Opus-Zusatz 2026-11-19 (Autor: Kühlkreis modellieren). Masse aus G5-CAD (folgt). |
 | 660.5 | BT-665 Ausgleichsbehälter | Ausgleichsbehälter | – | 1 | 0,300 | 0,300 | G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json) | 8,000 €/Stück | Schätzung (Annahme Opus, ERW-KO2) | K | kuehlung.ausgleichsbehaelter | F | – | Opus-Zusatz 2026-11-19 (Autor: Kühlkreis modellieren). Masse aus G5-CAD (folgt). |
 
 ## BT-700 Zusatzkomponenten
@@ -107,8 +108,8 @@ Art: K Kaufteil, E Eigenteil, S Systemteil außerhalb. Stufe: K Konstruktionssta
 | BT-200 Zellstack | 27,038 |
 | BT-300 Regelung (BMS) | 3,153 |
 | BT-400 Verkabelung und Zellverbinder | 12,597 |
-| BT-500 Struktur und Gehäuse | 80,105 |
-| BT-600 Kühlung | 50,361 |
+| BT-500 Struktur und Gehäuse | 80,075 |
+| BT-600 Kühlung | 51,078 |
 | BT-700 Zusatzkomponenten | 4,282 |
 
 ## Dichten (kg/m3) und neue Annahmen
@@ -126,4 +127,4 @@ Art: K Kaufteil, E Eigenteil, S Systemteil außerhalb. Stufe: K Konstruktionssta
 | Mica | 300 | cad/baukasten/farben.json werkstoffe.Schaum_Zwischenlage (Opus 2026-11-19: Zwischenlage BT-220 als komprimierbares Schaumpad (Quellausgleich, Wärmeschutz), Dichte wie A_dichte_verguss_kg_m3 (PU-Schaum, Annahme); ersetzt Mica-Vollmaterial (41,5 kg, Opus-Fehler)) |
 
 ---
-*KI-generiert (Claude Sonnet, 2026-11-19), Auftrag G5.1, ergänzt SL3.1 (Auftrag KO2). Entwurf, nicht freigegeben. 55 Positionen. Dokument BAT-DOC-13, Version 0.3.*
+*KI-generiert (Claude Sonnet, 2026-11-19), Auftrag G5.1, ergänzt SL3.1 (Auftrag KO2). Entwurf, nicht freigegeben. 56 Positionen. Dokument BAT-DOC-13, Version 0.3.*

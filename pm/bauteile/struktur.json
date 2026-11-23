@@ -1,1298 +1,1300 @@
 {
- "hinweis": "KI-generiert (Claude Opus, 2026-11-11, erweitert 2026-11-16, Vorschlag ENT-004). Bauteilbaum des Batteriesystems. Reihenfolge = Entstehung im Abschlussvideo. Merkmale bekommen Werte erst über Entscheidungen (pm/entscheidungen/ENT-*.md). Feld stueckliste: Positionen in pm/bauteile/stueckliste.json. Feld art: K Kaufteil, E Eigenteil, S Schnittstelle Fahrzeug, D Detail eines Kaufteils (nur CAD/Video). | 2026-11-16 Opus: Feld \"varianten\" (fehlt = alle), BT-250 Zellhalter (NMC), BT-100 durchmesser/hoehe (ENT-012). | 2026-11-17 Opus: Innenaufbau BT-111…116, 121, 122, 131, 132; BT-140 lage (ENT-031). | 2026-11-18 Opus: BT-260 Verguss (NMC), BT-361 FPC-Halter, BT-440 Pol-Anschlusslaschen, BT-721 Trennbrücke, BT-722 Servicedeckel (LFP), BT-720 bauform (SL2, B-BAT-028). | 2026-11-19 Opus (Auftrag Autor): Kühlkreis BT-661…665 unter BT-660.",
- "bauteile": [
-  {
-   "id": "BT-000",
-   "name": "Batteriesystem",
-   "eltern": null,
-   "rolle": "Gesamtsystem im Fahrzeug",
-   "anforderungen": [
-    "REQ-P01",
-    "REQ-P02",
-    "REQ-P03",
-    "REQ-P07"
-   ],
-   "merkmale": {
-    "energie_brutto_kWh": null,
-    "nennspannung_V": null,
-    "bauraum_laenge_mm": null,
-    "bauraum_breite_mm": null,
-    "bauraum_hoehe_mm": null,
-    "masse_max_kg": null
-   }
-  },
-  {
-   "id": "BT-100",
-   "name": "Zelle",
-   "eltern": "BT-000",
-   "rolle": "speichert Energie (Chemie, Elektroden, Gehäuse, Pole, Ventil)",
-   "anforderungen": [
-    "REQ-P06",
-    "REQ-P10",
-    "REQ-P11"
-   ],
-   "art": "K",
-   "stueckliste": [
-    "100.1"
-   ],
-   "merkmale": {
-    "chemie": null,
-    "format": null,
-    "laenge_mm": null,
-    "breite_mm": null,
-    "dicke_mm": null,
-    "kapazitaet_Ah": null,
-    "nennspannung_V": null,
-    "masse_g": null,
-    "durchmesser_mm": null,
-    "hoehe_mm": null
-   }
-  },
-  {
-   "id": "BT-110",
-   "name": "Elektrodenstapel",
-   "eltern": "BT-100",
-   "rolle": "Kathode, Separator, Anode als Lagen; bestimmt Kapazität und Wärme",
-   "anforderungen": [
-    "REQ-P06"
-   ],
-   "art": "D",
-   "merkmale": {
-    "bauweise": null,
-    "lagen_anzahl": null
-   }
-  },
-  {
-   "id": "BT-111",
-   "name": "Kathode",
-   "eltern": "BT-110",
-   "rolle": "Positive Elektrode: Al-Folie, beidseitig beschichtet",
-   "anforderungen": [
-    "REQ-P06"
-   ],
-   "art": "D",
-   "merkmale": {
-    "laenge_mm": null,
-    "breite_mm": null,
-    "beschichtung_um": null,
-    "folie_um": null,
-    "anzahl": null,
-    "fahne_mm": null
-   },
-   "stueckliste": null
-  },
-  {
-   "id": "BT-112",
-   "name": "Anode",
-   "eltern": "BT-110",
-   "rolle": "Negative Elektrode: Cu-Folie, beidseitig Graphit",
-   "anforderungen": [
-    "REQ-P06"
-   ],
-   "art": "D",
-   "merkmale": {
-    "laenge_mm": null,
-    "breite_mm": null,
-    "beschichtung_um": null,
-    "folie_um": null,
-    "anzahl": null,
-    "fahne_mm": null
-   },
-   "stueckliste": null
-  },
-  {
-   "id": "BT-113",
-   "name": "Separator",
-   "eltern": "BT-110",
-   "rolle": "Trennt Anode und Kathode, lässt Ionen durch",
-   "anforderungen": [
-    "REQ-P06"
-   ],
-   "art": "D",
-   "merkmale": {
-    "laenge_mm": null,
-    "breite_mm": null,
-    "dicke_um": null,
-    "lagen": null,
-    "bauweise": null
-   },
-   "stueckliste": null
-  },
-  {
-   "id": "BT-114",
-   "name": "Isolierbeschichtung Elektrodenrand",
-   "eltern": "BT-110",
-   "rolle": "Schützt Folienränder an den Fahnen gegen Kurzschluss",
-   "anforderungen": [
-    "REQ-P06"
-   ],
-   "art": "D",
-   "merkmale": {
-    "breite_mm": null
-   },
-   "stueckliste": null
-  },
-  {
-   "id": "BT-115",
-   "name": "Wickelkern (Hohlraum)",
-   "eltern": "BT-110",
-   "rolle": "Leere Mitte des Wickels",
-   "anforderungen": [
-    "REQ-P06"
-   ],
-   "art": "D",
-   "merkmale": {
-    "durchmesser_mm": null
-   },
-   "stueckliste": null,
-   "varianten": [
-    "NMC"
-   ]
-  },
-  {
-   "id": "BT-116",
-   "name": "Stapelfixierung und Isolationsbeutel",
-   "eltern": "BT-110",
-   "rolle": "Hält Stapel/Wickel und isoliert gegen Gehäuse",
-   "anforderungen": [
-    "REQ-P06"
-   ],
-   "art": "D",
-   "merkmale": {
-    "art": null,
-    "dicke_um": null
-   },
-   "stueckliste": null
-  },
-  {
-   "id": "BT-120",
-   "name": "Zellgehäuse",
-   "eltern": "BT-100",
-   "rolle": "schließt die Zelle dicht ab, trägt im Cell-to-Pack mit",
-   "anforderungen": [
-    "REQ-P11",
-    "REQ-P14"
-   ],
-   "art": "D",
-   "merkmale": {
-    "werkstoff": null,
-    "wandstaerke_mm": null
-   }
-  },
-  {
-   "id": "BT-121",
-   "name": "Gehäuseisolierfolie",
-   "eltern": "BT-120",
-   "rolle": "Klebefolie außen am Gehäuse",
-   "anforderungen": [
-    "REQ-P06"
-   ],
-   "art": "D",
-   "merkmale": {
-    "werkstoff": null,
-    "dicke_um": null
-   },
-   "stueckliste": null,
-   "varianten": [
-    "LFP"
-   ]
-  },
-  {
-   "id": "BT-122",
-   "name": "Elektrolyt-Füllöffnung",
-   "eltern": "BT-120",
-   "rolle": "Einfüllen des Elektrolyten, danach verschlossen",
-   "anforderungen": [
-    "REQ-P06"
-   ],
-   "art": "D",
-   "merkmale": {
-    "verschluss": null,
-    "lage": null
-   },
-   "stueckliste": null
-  },
-  {
-   "id": "BT-130",
-   "name": "Zellpole",
-   "eltern": "BT-100",
-   "rolle": "führen den Strom aus der Zelle zum Zellverbinder",
-   "anforderungen": [
-    "REQ-P04"
-   ],
-   "art": "D",
-   "merkmale": {
-    "anordnung": null,
-    "breite_mm": null,
-    "dicke_mm": null,
-    "ueberstand_mm": null
-   }
-  },
-  {
-   "id": "BT-131",
-   "name": "Innere Stromschiene / Tab-Scheibe",
-   "eltern": "BT-130",
-   "rolle": "Sammelt Strom der Fahnen und führt ihn zum Pol",
-   "anforderungen": [
-    "REQ-P06"
-   ],
-   "art": "D",
-   "merkmale": {
-    "werkstoff": null,
-    "dicke_mm": null,
-    "fuegeverfahren": null
-   },
-   "stueckliste": null
-  },
-  {
-   "id": "BT-132",
-   "name": "Polisolation und Dichtung",
-   "eltern": "BT-130",
-   "rolle": "Isoliert und dichtet Pole gegen Gehäuse",
-   "anforderungen": [
-    "REQ-P06"
-   ],
-   "art": "D",
-   "merkmale": {
-    "werkstoff": null,
-    "art": null
-   },
-   "stueckliste": null
-  },
-  {
-   "id": "BT-140",
-   "name": "Zellventil",
-   "eltern": "BT-100",
-   "rolle": "lässt Gas aus der Zelle, bevor sie platzt",
-   "anforderungen": [
-    "REQ-P11"
-   ],
-   "art": "D",
-   "merkmale": {
-    "durchmesser_mm": null,
-    "oeffnungsdruck_kPa": null,
-    "lage": null
-   }
-  },
-  {
-   "id": "BT-200",
-   "name": "Zellstack",
-   "eltern": "BT-000",
-   "rolle": "Zellen in Reihe und parallel, mechanisch verspannt",
-   "anforderungen": [
-    "REQ-P02",
-    "REQ-P03"
-   ],
-   "merkmale": {
-    "verschaltung": null,
-    "zellen_anzahl": null,
-    "reihen_anzahl": null
-   }
-  },
-  {
-   "id": "BT-210",
-   "name": "Zellreihe",
-   "eltern": "BT-200",
-   "rolle": "Zellen zwischen zwei Querträgern, ohne Modulgehäuse (Cell-to-Pack)",
-   "anforderungen": [
-    "REQ-P02",
-    "REQ-P07"
-   ],
-   "art": "E",
-   "stueckliste": [
-    "200.1"
-   ],
-   "merkmale": {
-    "zellen_je_reihe": null,
-    "zellteilung_mm": null
-   }
-  },
-  {
-   "id": "BT-220",
-   "name": "Zwischenlage",
-   "eltern": "BT-200",
-   "rolle": "trennt Zellen thermisch, bremst Brandausbreitung, nimmt Quellen auf",
-   "anforderungen": [
-    "REQ-P11",
-    "REQ-P14"
-   ],
-   "art": "K",
-   "stueckliste": [
-    "200.2"
-   ],
-   "merkmale": {
-    "werkstoff": null,
-    "dicke_mm": null
-   },
-   "varianten": [
-    "LFP",
-    "NMC"
-   ]
-  },
-  {
-   "id": "BT-230",
-   "name": "Wärmeleitmaterial",
-   "eltern": "BT-200",
-   "rolle": "leitet Wärme von der Zelle in die Kühlplatte",
-   "anforderungen": [
-    "REQ-P09"
-   ],
-   "art": "K",
-   "stueckliste": [
-    "200.3"
-   ],
-   "merkmale": {
-    "werkstoff": null,
-    "dicke_mm": null,
-    "waermeleitfaehigkeit_W_mK": null
-   }
-  },
-  {
-   "id": "BT-240",
-   "name": "Verspannung",
-   "eltern": "BT-200",
-   "rolle": "hält die Zellreihe unter Druck, auch wenn die Zellen beim Laden quellen",
-   "anforderungen": [
-    "REQ-P14"
-   ],
-   "art": "E",
-   "stueckliste": [
-    "200.4"
-   ],
-   "merkmale": {
-    "art": null,
-    "vorspannkraft_kN": null,
-    "endplatte_dicke_mm": null
-   },
-   "varianten": [
-    "LFP"
-   ]
-  },
-  {
-   "id": "BT-250",
-   "name": "Zellhalter",
-   "eltern": "BT-200",
-   "rolle": "Hält und teilt Rundzellen, Abstand für Kühlung und Isolation (nur Rundzelle)",
-   "anforderungen": [
-    "REQ-P06",
-    "REQ-P11"
-   ],
-   "merkmale": {
-    "werkstoff": null,
-    "anordnung": null,
-    "zellabstand_mm": null,
-    "hoehe_mm": null
-   },
-   "varianten": [
-    "NMC"
-   ],
-   "art": "K",
-   "stueckliste": [
-    "200.5"
-   ]
-  },
-  {
-   "id": "BT-260",
-   "name": "Verguss",
-   "eltern": "BT-200",
-   "rolle": "Fixiert und isoliert die 4680-Zellen in den Endzonen und zwischen den Haltern",
-   "anforderungen": [
-    "REQ-P14"
-   ],
-   "art": "K",
-   "stueckliste": [],
-   "merkmale": {
-    "werkstoff": null,
-    "volumen_cm3": null
-   },
-   "varianten": [
-    "NMC"
-   ]
-  },
-  {
-   "id": "BT-300",
-   "name": "Regelung (BMS)",
-   "eltern": "BT-000",
-   "rolle": "misst, schützt, gleicht aus, schaltet",
-   "anforderungen": [
-    "REQ-P15",
-    "REQ-P11"
-   ],
-   "merkmale": {
-    "architektur": null
-   }
-  },
-  {
-   "id": "BT-310",
-   "name": "BMS-Hauptsteuergerät",
-   "eltern": "BT-300",
-   "rolle": "Ladezustand, Alterung, Schutzlogik, Verbindung zum Fahrzeug (CAN)",
-   "anforderungen": [
-    "REQ-P15"
-   ],
-   "art": "K",
-   "stueckliste": [
-    "300.1"
-   ],
-   "merkmale": {
-    "laenge_mm": null,
-    "breite_mm": null,
-    "hoehe_mm": null,
-    "einbauort": null
-   }
-  },
-  {
-   "id": "BT-320",
-   "name": "Zellüberwachung",
-   "eltern": "BT-300",
-   "rolle": "misst jede Zellspannung und gleicht die Ladung aus",
-   "anforderungen": [
-    "REQ-P15"
-   ],
-   "art": "K",
-   "stueckliste": [
-    "300.2"
-   ],
-   "merkmale": {
-    "anzahl": null,
-    "kanaele": null,
-    "ausgleich": null,
-    "ausgleichsstrom_mA": null
-   }
-  },
-  {
-   "id": "BT-330",
-   "name": "Temperaturfühler Zelle",
-   "eltern": "BT-300",
-   "rolle": "misst Zelltemperaturen für Schutz und Kühlung",
-   "anforderungen": [
-    "REQ-P09",
-    "REQ-P15"
-   ],
-   "art": "K",
-   "stueckliste": [
-    "300.3"
-   ],
-   "merkmale": {
-    "anzahl": null,
-    "zellen_je_fuehler": null
-   }
-  },
-  {
-   "id": "BT-340",
-   "name": "Strommessung",
-   "eltern": "BT-300",
-   "rolle": "misst den Packstrom für Ladezustand und Schutz",
-   "anforderungen": [
-    "REQ-P15"
-   ],
-   "art": "K",
-   "stueckliste": [
-    "300.4"
-   ],
-   "merkmale": {
-    "prinzip": null,
-    "messbereich_A": null
-   }
-  },
-  {
-   "id": "BT-350",
-   "name": "Isolationswächter",
-   "eltern": "BT-300",
-   "rolle": "erkennt Isolationsfehler zwischen Hochvolt und Gehäuse",
-   "anforderungen": [
-    "REQ-P13"
-   ],
-   "art": "K",
-   "stueckliste": [
-    "300.5"
-   ],
-   "merkmale": {
-    "ansprechwert_kOhm": null
-   }
-  },
-  {
-   "id": "BT-360",
-   "name": "Messleitungen",
-   "eltern": "BT-300",
-   "rolle": "verbinden Zellen und Fühler mit der Zellüberwachung",
-   "anforderungen": [
-    "REQ-P15"
-   ],
-   "art": "K",
-   "stueckliste": [
-    "300.6"
-   ],
-   "merkmale": {
-    "art": null,
-    "breite_mm": null
-   }
-  },
-  {
-   "id": "BT-361",
-   "name": "FPC-Halter",
-   "eltern": "BT-360",
-   "rolle": "Hält die Messleitungen im Seitenspalt bzw. in der Verbinderebene",
-   "anforderungen": [
-    "REQ-P15"
-   ],
-   "art": "K",
-   "stueckliste": [
-    "361.1"
-   ],
-   "merkmale": {
-    "abstand_mm": null
-   }
-  },
-  {
-   "id": "BT-400",
-   "name": "Verkabelung und Zellverbinder",
-   "eltern": "BT-000",
-   "rolle": "leitet den Hochvoltstrom von Zelle zu Zelle und zur Schaltbox",
-   "anforderungen": [
-    "REQ-P04",
-    "REQ-P13"
-   ],
-   "merkmale": {}
-  },
-  {
-   "id": "BT-410",
-   "name": "Zellverbinder",
-   "eltern": "BT-400",
-   "rolle": "verbindet benachbarte Zellpole in Reihe",
-   "anforderungen": [
-    "REQ-P04"
-   ],
-   "art": "E",
-   "stueckliste": [
-    "400.1"
-   ],
-   "merkmale": {
-    "werkstoff": null,
-    "breite_mm": null,
-    "dicke_mm": null,
-    "verbindung": null
-   }
-  },
-  {
-   "id": "BT-420",
-   "name": "Reihenverbinder",
-   "eltern": "BT-400",
-   "rolle": "verbindet das Ende einer Zellreihe mit dem Anfang der nächsten",
-   "anforderungen": [
-    "REQ-P04"
-   ],
-   "art": "E",
-   "stueckliste": [
-    "400.2"
-   ],
-   "merkmale": {
-    "werkstoff": null,
-    "breite_mm": null,
-    "dicke_mm": null
-   }
-  },
-  {
-   "id": "BT-430",
-   "name": "HV-Hauptleitung",
-   "eltern": "BT-400",
-   "rolle": "führt Plus und Minus vom Stack zur Schaltbox und zu den Steckern",
-   "anforderungen": [
-    "REQ-P04",
-    "REQ-P13"
-   ],
-   "art": "K",
-   "stueckliste": [
-    "400.3"
-   ],
-   "merkmale": {
-    "querschnitt_mm2": null,
-    "biegeradius_min_mm": null,
-    "werkstoff": null
-   }
-  },
-  {
-   "id": "BT-440",
-   "name": "Stromschiene",
-   "eltern": "BT-400",
-   "rolle": "Plus-/Minus-Anschlusslaschen an den Reihenenden und Stromschienen der Schaltbox: führen den HV-Strom zwischen Zellstack, Schaltbox und HV-Leitungen",
-   "anforderungen": [
-    "REQ-P13"
-   ],
-   "art": "E",
-   "stueckliste": [
-    "440.1",
-    "440.2"
-   ],
-   "merkmale": {
-    "querschnitt_mm2": null,
-    "ueberlappung_mm": null,
-    "masse_g": null,
-    "bauform": null,
-    "werkstoff": null
-   }
-  },
-  {
-   "id": "BT-450",
-   "name": "Berührschutz",
-   "eltern": "BT-400",
-   "rolle": "deckt die spannungsführenden Zellverbinder gegen Berührung ab (NMC)",
-   "anforderungen": [
-    "REQ-P13"
-   ],
-   "art": "E",
-   "stueckliste": [
-    "450.1"
-   ],
-   "merkmale": {
-    "masse_g": null,
-    "bauform": null,
-    "werkstoff": null
-   },
-   "varianten": [
-    "NMC"
-   ]
-  },
-  {
-   "id": "BT-500",
-   "name": "Struktur und Gehäuse",
-   "eltern": "BT-000",
-   "rolle": "trägt, schützt, dichtet, Crash",
-   "anforderungen": [
-    "REQ-P07",
-    "REQ-P13",
-    "REQ-P14"
-   ],
-   "merkmale": {
-    "bauweise": null
-   }
-  },
-  {
-   "id": "BT-510",
-   "name": "Gehäusewanne",
-   "eltern": "BT-500",
-   "rolle": "nimmt Zellstack, Kühlung und Schaltbox auf, Lastpfad zum Fahrzeug",
-   "anforderungen": [
-    "REQ-P07",
-    "REQ-P13",
-    "REQ-P14"
-   ],
-   "art": "E",
-   "stueckliste": [
-    "500.1"
-   ],
-   "merkmale": {
-    "werkstoff": null,
-    "fertigung": null,
-    "wandstaerke_mm": null,
-    "bodendicke_mm": null
-   }
-  },
-  {
-   "id": "BT-520",
-   "name": "Deckel mit Dichtung",
-   "eltern": "BT-500",
-   "rolle": "schließt das Pack dicht, trennt es vom Innenraum",
-   "anforderungen": [
-    "REQ-P13"
-   ],
-   "art": "E",
-   "stueckliste": [
-    "500.2"
-   ],
-   "merkmale": {
-    "werkstoff": null,
-    "dicke_mm": null,
-    "dichtung": null
-   }
-  },
-  {
-   "id": "BT-530",
-   "name": "Querträger",
-   "eltern": "BT-500",
-   "rolle": "trennen die Zellreihen und steifen die Wanne aus",
-   "anforderungen": [
-    "REQ-P14"
-   ],
-   "art": "E",
-   "stueckliste": [
-    "500.3"
-   ],
-   "merkmale": {
-    "anzahl": null,
-    "werkstoff": null,
-    "breite_mm": null,
-    "hoehe_mm": null,
-    "wandstaerke_mm": null
-   }
-  },
-  {
-   "id": "BT-540",
-   "name": "Seitenrahmen",
-   "eltern": "BT-500",
-   "rolle": "Rahmen des Packs; leitet Seitenkräfte in den Schweller, baut selbst keine Crashenergie ab (ENT-151)",
-   "anforderungen": [
-    "REQ-P14"
-   ],
-   "art": "E",
-   "stueckliste": [
-    "500.4"
-   ],
-   "merkmale": {
-    "werkstoff": null,
-    "breite_mm": null,
-    "hoehe_mm": null,
-    "wandstaerke_mm": null,
-    "kammern": null,
-    "crashkonzept": null
-   }
-  },
-  {
-   "id": "BT-550",
-   "name": "Unterfahrschutz",
-   "eltern": "BT-500",
-   "rolle": "schützt den Boden gegen Steinschlag und Aufsetzen",
-   "anforderungen": [
-    "REQ-P14"
-   ],
-   "art": "E",
-   "stueckliste": [
-    "500.5"
-   ],
-   "merkmale": {
-    "werkstoff": null,
-    "dicke_mm": null,
-    "abstand_mm": null
-   }
-  },
-  {
-   "id": "BT-560",
-   "name": "Befestigungspunkte",
-   "eltern": "BT-500",
-   "rolle": "verbinden das Pack mit dem Fahrzeug, als Fest- und Loslager",
-   "anforderungen": [
-    "REQ-P14"
-   ],
-   "art": "E",
-   "stueckliste": [
-    "500.6"
-   ],
-   "merkmale": {
-    "anzahl": null,
-    "lagerung": null,
-    "schraube": null
-   }
-  },
-  {
-   "id": "BT-570",
-   "name": "Druckausgleichselement",
-   "eltern": "BT-500",
-   "rolle": "gleicht Luftdruck aus, hält Wasser draußen",
-   "anforderungen": [
-    "REQ-P13"
-   ],
-   "art": "K",
-   "stueckliste": [
-    "500.7"
-   ],
-   "merkmale": {
-    "anzahl": null
-   }
-  },
-  {
-   "id": "BT-580",
-   "name": "Dichtungen",
-   "eltern": "BT-500",
-   "rolle": "dichten Deckel, Schaltbox und Servicedeckel gegen Wasser und Staub",
-   "anforderungen": [
-    "REQ-P13"
-   ],
-   "art": "K",
-   "stueckliste": [
-    "580.1"
-   ],
-   "merkmale": {
-    "masse_g": null,
-    "bauform": null,
-    "werkstoff": null
-   }
-  },
-  {
-   "id": "BT-590",
-   "name": "Verbindungs- und Normteile",
-   "eltern": "BT-500",
-   "rolle": "Schrauben, Kabelschuhe, Clips und Schrumpfschlauch: verbinden, fixieren und isolieren",
-   "anforderungen": [
-    "REQ-P13"
-   ],
-   "art": "K",
-   "stueckliste": [
-    "590.1",
-    "590.2",
-    "590.3",
-    "590.4"
-   ],
-   "merkmale": {
-    "masse_g": null,
-    "bauform": null,
-    "werkstoff": null
-   }
-  },
-  {
-   "id": "BT-600",
-   "name": "Kühlung",
-   "eltern": "BT-000",
-   "rolle": "führt Wärme ab, beim Schnellladen",
-   "anforderungen": [
-    "REQ-P05",
-    "REQ-P08",
-    "REQ-P09",
-    "REQ-P12"
-   ],
-   "merkmale": {
-    "kuehlart": null
-   }
-  },
-  {
-   "id": "BT-610",
-   "name": "Kühlplatte",
-   "eltern": "BT-600",
-   "rolle": "nimmt die Wärme der Zellen auf und gibt sie ans Kühlmittel",
-   "anforderungen": [
-    "REQ-P09",
-    "REQ-P12"
-   ],
-   "art": "E",
-   "stueckliste": [
-    "600.1"
-   ],
-   "merkmale": {
-    "anzahl": null,
-    "werkstoff": null,
-    "dicke_mm": null,
-    "kanal_anzahl": null,
-    "kanal_breite_mm": null,
-    "kanal_hoehe_mm": null
-   }
-  },
-  {
-   "id": "BT-620",
-   "name": "Verteiler und Sammler",
-   "eltern": "BT-600",
-   "rolle": "verteilt das Kühlmittel gleichmäßig auf die Kanäle",
-   "anforderungen": [
-    "REQ-P09"
-   ],
-   "art": "E",
-   "stueckliste": [
-    "600.2"
-   ],
-   "merkmale": {
-    "anordnung": null,
-    "durchmesser_mm": null
-   }
-  },
-  {
-   "id": "BT-630",
-   "name": "Kühlmittelanschlüsse",
-   "eltern": "BT-600",
-   "rolle": "Ein- und Austritt am Pack",
-   "anforderungen": [
-    "REQ-P12"
-   ],
-   "art": "K",
-   "stueckliste": [
-    "600.3"
-   ],
-   "merkmale": {
-    "durchmesser_ein_mm": null,
-    "durchmesser_aus_mm": null
-   }
-  },
-  {
-   "id": "BT-640",
-   "name": "Temperaturfühler Kühlmittel",
-   "eltern": "BT-600",
-   "rolle": "misst Ein- und Austrittstemperatur",
-   "anforderungen": [
-    "REQ-P09"
-   ],
-   "art": "K",
-   "stueckliste": [
-    "600.4"
-   ],
-   "merkmale": {
-    "anzahl": null
-   }
-  },
-  {
-   "id": "BT-650",
-   "name": "Kühlmittel",
-   "eltern": "BT-600",
-   "rolle": "trägt die Wärme aus dem Pack",
-   "anforderungen": [
-    "REQ-P12"
-   ],
-   "art": "K",
-   "stueckliste": [
-    "600.5"
-   ],
-   "merkmale": {
-    "medium": null,
-    "fuellmenge_L": null
-   }
-  },
-  {
-   "id": "BT-660",
-   "name": "Schnittstelle Fahrzeugkreis",
-   "eltern": "BT-600",
-   "rolle": "Pumpe und Kältemittelkühler auf der Fahrzeugseite; hier nur Anforderung",
-   "anforderungen": [
-    "REQ-P05",
-    "REQ-P12"
-   ],
-   "art": "S",
-   "stueckliste": [
-    "600.6"
-   ],
-   "merkmale": {
-    "durchfluss_L_min": null,
-    "eintritt_max_C": null,
-    "einbauort": null
-   }
-  },
-  {
-   "id": "BT-661",
-   "name": "Kühlmittelpumpe (elektrisch)",
-   "eltern": "BT-660",
-   "rolle": "fördert das Kühlmittel durch die Kühlplatten",
-   "anforderungen": [
-    "REQ-P05",
-    "REQ-P09"
-   ],
-   "art": "K",
-   "stueckliste": [
-    "660.1"
-   ],
-   "merkmale": {
-    "masse_g": null,
-    "bauform": null,
-    "werkstoff": null
-   }
-  },
-  {
-   "id": "BT-662",
-   "name": "Chiller (Kältemittel-Wasser-Wärmetauscher)",
-   "eltern": "BT-660",
-   "rolle": "kühlt das Kühlmittel mit dem Kältemittelkreis",
-   "anforderungen": [
-    "REQ-P05",
-    "REQ-P09"
-   ],
-   "art": "K",
-   "stueckliste": [
-    "660.2"
-   ],
-   "merkmale": {
-    "masse_g": null,
-    "bauform": null,
-    "werkstoff": null
-   }
-  },
-  {
-   "id": "BT-663",
-   "name": "3/2-Wege-Ventil",
-   "eltern": "BT-660",
-   "rolle": "schaltet das Kühlmittel zwischen Chiller und Bypass",
-   "anforderungen": [
-    "REQ-P05",
-    "REQ-P09"
-   ],
-   "art": "K",
-   "stueckliste": [
-    "660.3"
-   ],
-   "merkmale": {
-    "masse_g": null,
-    "bauform": null,
-    "werkstoff": null
-   }
-  },
-  {
-   "id": "BT-664",
-   "name": "Kühlmittelschläuche",
-   "eltern": "BT-660",
-   "rolle": "verbinden Pumpe, Chiller, Ventil, Ausgleichsbehälter und Packanschlüsse",
-   "anforderungen": [
-    "REQ-P05",
-    "REQ-P09"
-   ],
-   "art": "K",
-   "stueckliste": [
-    "660.4"
-   ],
-   "merkmale": {
-    "masse_g": null,
-    "bauform": null,
-    "werkstoff": null
-   }
-  },
-  {
-   "id": "BT-665",
-   "name": "Ausgleichsbehälter",
-   "eltern": "BT-660",
-   "rolle": "gleicht das Kühlmittelvolumen aus",
-   "anforderungen": [
-    "REQ-P05",
-    "REQ-P09"
-   ],
-   "art": "K",
-   "stueckliste": [
-    "660.5"
-   ],
-   "merkmale": {
-    "masse_g": null,
-    "bauform": null,
-    "werkstoff": null
-   }
-  },
-  {
-   "id": "BT-700",
-   "name": "Zusatzkomponenten",
-   "eltern": "BT-000",
-   "rolle": "Schütze, Sicherung, Vorladung, Stecker, Entgasung",
-   "anforderungen": [
-    "REQ-P11",
-    "REQ-P13",
-    "REQ-P15"
-   ],
-   "merkmale": {}
-  },
-  {
-   "id": "BT-710",
-   "name": "Schaltbox",
-   "eltern": "BT-700",
-   "rolle": "Gehäuse für Schütze, Vorladung und Hauptsicherung (Trennstelle zwischen Stack und Fahrzeug)",
-   "anforderungen": [
-    "REQ-P13"
-   ],
-   "art": "E",
-   "stueckliste": [
-    "700.1"
-   ],
-   "merkmale": {
-    "laenge_mm": null,
-    "breite_mm": null,
-    "hoehe_mm": null,
-    "einbauort": null
-   }
-  },
-  {
-   "id": "BT-711",
-   "name": "Hauptschütze",
-   "eltern": "BT-710",
-   "rolle": "schalten Plus und Minus zum Fahrzeug zu und ab",
-   "anforderungen": [
-    "REQ-P04",
-    "REQ-P05",
-    "REQ-P13"
-   ],
-   "art": "K",
-   "stueckliste": [
-    "700.2"
-   ],
-   "merkmale": {
-    "nennstrom_A": null,
-    "nennspannung_V": null
-   }
-  },
-  {
-   "id": "BT-712",
-   "name": "Vorladung",
-   "eltern": "BT-710",
-   "rolle": "lädt die Kondensatoren des Umrichters langsam vor, bevor das Hauptschütz schließt",
-   "anforderungen": [
-    "REQ-P13"
-   ],
-   "art": "K",
-   "stueckliste": [
-    "700.3"
-   ],
-   "merkmale": {
-    "widerstand_Ohm": null,
-    "vorladezeit_ms": null
-   }
-  },
-  {
-   "id": "BT-713",
-   "name": "Hauptsicherung",
-   "eltern": "BT-710",
-   "rolle": "trennt bei Kurzschluss",
-   "anforderungen": [
-    "REQ-P11",
-    "REQ-P13"
-   ],
-   "art": "K",
-   "stueckliste": [
-    "700.4"
-   ],
-   "merkmale": {
-    "art": null,
-    "nennstrom_A": null
-   }
-  },
-  {
-   "id": "BT-720",
-   "name": "Service-Trennstecker",
-   "eltern": "BT-700",
-   "rolle": "macht das Pack in der Werkstatt spannungsfrei",
-   "anforderungen": [
-    "REQ-P13"
-   ],
-   "art": "K",
-   "stueckliste": [
-    "700.5"
-   ],
-   "merkmale": {
-    "nennstrom_A": null,
-    "einbauort": null,
-    "bauform": null
-   }
-  },
-  {
-   "id": "BT-721",
-   "name": "Service-Trennbrücke",
-   "eltern": "BT-720",
-   "rolle": "Verschraubte Cu-Brücke mit HVIL im Querverbinder vorn (ENT-150)",
-   "anforderungen": [
-    "REQ-P13"
-   ],
-   "art": "E",
-   "stueckliste": [],
-   "merkmale": {
-    "luecke_mm": null
-   },
-   "varianten": [
-    "LFP"
-   ]
-  },
-  {
-   "id": "BT-722",
-   "name": "Servicedeckel",
-   "eltern": "BT-720",
-   "rolle": "Abgedichteter Deckel über der Trennbrücke im Gehäusedeckel",
-   "anforderungen": [
-    "REQ-P13"
-   ],
-   "art": "E",
-   "stueckliste": [],
-   "merkmale": {
-    "laenge_mm": null,
-    "breite_mm": null
-   },
-   "varianten": [
-    "LFP"
-   ]
-  },
-  {
-   "id": "BT-730",
-   "name": "HV-Steckverbinder",
-   "eltern": "BT-700",
-   "rolle": "Hochvoltanschluss für Antrieb und Laden",
-   "anforderungen": [
-    "REQ-P04",
-    "REQ-P05",
-    "REQ-P13"
-   ],
-   "art": "K",
-   "stueckliste": [
-    "700.6"
-   ],
-   "merkmale": {
-    "anzahl": null,
-    "nennstrom_A": null
-   }
-  },
-  {
-   "id": "BT-740",
-   "name": "NV-Steckverbinder",
-   "eltern": "BT-700",
-   "rolle": "12 V, CAN und Sensorik zum Fahrzeug",
-   "anforderungen": [
-    "REQ-P15"
-   ],
-   "art": "K",
-   "stueckliste": [
-    "700.7"
-   ],
-   "merkmale": {
-    "polzahl": null
-   }
-  },
-  {
-   "id": "BT-750",
-   "name": "Pack-Entgasung",
-   "eltern": "BT-700",
-   "rolle": "führt Gas bei thermischem Durchgehen gezielt aus dem Pack, weg vom Innenraum",
-   "anforderungen": [
-    "REQ-P11"
-   ],
-   "art": "K",
-   "stueckliste": [
-    "700.8"
-   ],
-   "merkmale": {
-    "durchmesser_mm": null,
-    "oeffnungsdruck_kPa": null,
-    "auslassrichtung": null
-   }
-  },
-  {
-   "id": "BT-760",
-   "name": "Heizung",
-   "eltern": "BT-700",
-   "rolle": "wärmt die Zellen bei Kälte vor dem Laden",
-   "anforderungen": [
-    "REQ-P08"
-   ],
-   "art": "K",
-   "stueckliste": [
-    "700.9"
-   ],
-   "merkmale": {
-    "art": null,
-    "leistung_kW": null
-   }
-  },
-  {
-   "id": "BT-770",
-   "name": "Gas- und Drucksensor",
-   "eltern": "BT-700",
-   "rolle": "erkennt ein thermisches Ereignis früh und warnt",
-   "anforderungen": [
-    "REQ-P11"
-   ],
-   "art": "K",
-   "stueckliste": [
-    "700.10"
-   ],
-   "merkmale": {
-    "prinzip": null
-   }
-  },
-  {
-   "id": "BT-780",
-   "name": "Kennzeichnung",
-   "eltern": "BT-700",
-   "rolle": "Typschild und Hochvoltwarnung",
-   "anforderungen": [
-    "REQ-P13"
-   ],
-   "art": "K",
-   "stueckliste": [
-    "700.11"
-   ],
-   "merkmale": {}
-  }
- ]
+  "hinweis": "KI-generiert (Claude Opus, 2026-11-11, erweitert 2026-11-16, Vorschlag ENT-004). Bauteilbaum des Batteriesystems. Reihenfolge = Entstehung im Abschlussvideo. Merkmale bekommen Werte erst über Entscheidungen (pm/entscheidungen/ENT-*.md). Feld stueckliste: Positionen in pm/bauteile/stueckliste.json. Feld art: K Kaufteil, E Eigenteil, S Schnittstelle Fahrzeug, D Detail eines Kaufteils (nur CAD/Video). | 2026-11-16 Opus: Feld \"varianten\" (fehlt = alle), BT-250 Zellhalter (NMC), BT-100 durchmesser/hoehe (ENT-012). | 2026-11-17 Opus: Innenaufbau BT-111…116, 121, 122, 131, 132; BT-140 lage (ENT-031). | 2026-11-18 Opus: BT-260 Verguss (NMC), BT-361 FPC-Halter, BT-440 Pol-Anschlusslaschen, BT-721 Trennbrücke, BT-722 Servicedeckel (LFP), BT-720 bauform (SL2, B-BAT-028). | 2026-11-19 Opus (Auftrag Autor): Kühlkreis BT-661…665 unter BT-660.",
+  "bauteile": [
+    {
+      "id": "BT-000",
+      "name": "Batteriesystem",
+      "eltern": null,
+      "rolle": "Gesamtsystem im Fahrzeug",
+      "anforderungen": [
+        "REQ-P01",
+        "REQ-P02",
+        "REQ-P03",
+        "REQ-P07"
+      ],
+      "merkmale": {
+        "energie_brutto_kWh": null,
+        "nennspannung_V": null,
+        "bauraum_laenge_mm": null,
+        "bauraum_breite_mm": null,
+        "bauraum_hoehe_mm": null,
+        "masse_max_kg": null
+      }
+    },
+    {
+      "id": "BT-100",
+      "name": "Zelle",
+      "eltern": "BT-000",
+      "rolle": "speichert Energie (Chemie, Elektroden, Gehäuse, Pole, Ventil)",
+      "anforderungen": [
+        "REQ-P06",
+        "REQ-P10",
+        "REQ-P11"
+      ],
+      "art": "K",
+      "stueckliste": [
+        "100.1"
+      ],
+      "merkmale": {
+        "chemie": null,
+        "format": null,
+        "laenge_mm": null,
+        "breite_mm": null,
+        "dicke_mm": null,
+        "kapazitaet_Ah": null,
+        "nennspannung_V": null,
+        "masse_g": null,
+        "durchmesser_mm": null,
+        "hoehe_mm": null
+      }
+    },
+    {
+      "id": "BT-110",
+      "name": "Elektrodenstapel",
+      "eltern": "BT-100",
+      "rolle": "Kathode, Separator, Anode als Lagen; bestimmt Kapazität und Wärme",
+      "anforderungen": [
+        "REQ-P06"
+      ],
+      "art": "D",
+      "merkmale": {
+        "bauweise": null,
+        "lagen_anzahl": null
+      }
+    },
+    {
+      "id": "BT-111",
+      "name": "Kathode",
+      "eltern": "BT-110",
+      "rolle": "Positive Elektrode: Al-Folie, beidseitig beschichtet",
+      "anforderungen": [
+        "REQ-P06"
+      ],
+      "art": "D",
+      "merkmale": {
+        "laenge_mm": null,
+        "breite_mm": null,
+        "beschichtung_um": null,
+        "folie_um": null,
+        "anzahl": null,
+        "fahne_mm": null
+      },
+      "stueckliste": null
+    },
+    {
+      "id": "BT-112",
+      "name": "Anode",
+      "eltern": "BT-110",
+      "rolle": "Negative Elektrode: Cu-Folie, beidseitig Graphit",
+      "anforderungen": [
+        "REQ-P06"
+      ],
+      "art": "D",
+      "merkmale": {
+        "laenge_mm": null,
+        "breite_mm": null,
+        "beschichtung_um": null,
+        "folie_um": null,
+        "anzahl": null,
+        "fahne_mm": null
+      },
+      "stueckliste": null
+    },
+    {
+      "id": "BT-113",
+      "name": "Separator",
+      "eltern": "BT-110",
+      "rolle": "Trennt Anode und Kathode, lässt Ionen durch",
+      "anforderungen": [
+        "REQ-P06"
+      ],
+      "art": "D",
+      "merkmale": {
+        "laenge_mm": null,
+        "breite_mm": null,
+        "dicke_um": null,
+        "lagen": null,
+        "bauweise": null
+      },
+      "stueckliste": null
+    },
+    {
+      "id": "BT-114",
+      "name": "Isolierbeschichtung Elektrodenrand",
+      "eltern": "BT-110",
+      "rolle": "Schützt Folienränder an den Fahnen gegen Kurzschluss",
+      "anforderungen": [
+        "REQ-P06"
+      ],
+      "art": "D",
+      "merkmale": {
+        "breite_mm": null
+      },
+      "stueckliste": null
+    },
+    {
+      "id": "BT-115",
+      "name": "Wickelkern (Hohlraum)",
+      "eltern": "BT-110",
+      "rolle": "Leere Mitte des Wickels",
+      "anforderungen": [
+        "REQ-P06"
+      ],
+      "art": "D",
+      "merkmale": {
+        "durchmesser_mm": null
+      },
+      "stueckliste": null,
+      "varianten": [
+        "NMC"
+      ]
+    },
+    {
+      "id": "BT-116",
+      "name": "Stapelfixierung und Isolationsbeutel",
+      "eltern": "BT-110",
+      "rolle": "Hält Stapel/Wickel und isoliert gegen Gehäuse",
+      "anforderungen": [
+        "REQ-P06"
+      ],
+      "art": "D",
+      "merkmale": {
+        "art": null,
+        "dicke_um": null
+      },
+      "stueckliste": null
+    },
+    {
+      "id": "BT-120",
+      "name": "Zellgehäuse",
+      "eltern": "BT-100",
+      "rolle": "schließt die Zelle dicht ab, trägt im Cell-to-Pack mit",
+      "anforderungen": [
+        "REQ-P11",
+        "REQ-P14"
+      ],
+      "art": "D",
+      "merkmale": {
+        "werkstoff": null,
+        "wandstaerke_mm": null
+      }
+    },
+    {
+      "id": "BT-121",
+      "name": "Gehäuseisolierfolie",
+      "eltern": "BT-120",
+      "rolle": "Klebefolie außen am Gehäuse",
+      "anforderungen": [
+        "REQ-P06"
+      ],
+      "art": "D",
+      "merkmale": {
+        "werkstoff": null,
+        "dicke_um": null
+      },
+      "stueckliste": null,
+      "varianten": [
+        "LFP"
+      ]
+    },
+    {
+      "id": "BT-122",
+      "name": "Elektrolyt-Füllöffnung",
+      "eltern": "BT-120",
+      "rolle": "Einfüllen des Elektrolyten, danach verschlossen",
+      "anforderungen": [
+        "REQ-P06"
+      ],
+      "art": "D",
+      "merkmale": {
+        "verschluss": null,
+        "lage": null
+      },
+      "stueckliste": null
+    },
+    {
+      "id": "BT-130",
+      "name": "Zellpole",
+      "eltern": "BT-100",
+      "rolle": "führen den Strom aus der Zelle zum Zellverbinder",
+      "anforderungen": [
+        "REQ-P04"
+      ],
+      "art": "D",
+      "merkmale": {
+        "anordnung": null,
+        "breite_mm": null,
+        "dicke_mm": null,
+        "ueberstand_mm": null
+      }
+    },
+    {
+      "id": "BT-131",
+      "name": "Innere Stromschiene / Tab-Scheibe",
+      "eltern": "BT-130",
+      "rolle": "Sammelt Strom der Fahnen und führt ihn zum Pol",
+      "anforderungen": [
+        "REQ-P06"
+      ],
+      "art": "D",
+      "merkmale": {
+        "werkstoff": null,
+        "dicke_mm": null,
+        "fuegeverfahren": null
+      },
+      "stueckliste": null
+    },
+    {
+      "id": "BT-132",
+      "name": "Polisolation und Dichtung",
+      "eltern": "BT-130",
+      "rolle": "Isoliert und dichtet Pole gegen Gehäuse",
+      "anforderungen": [
+        "REQ-P06"
+      ],
+      "art": "D",
+      "merkmale": {
+        "werkstoff": null,
+        "art": null
+      },
+      "stueckliste": null
+    },
+    {
+      "id": "BT-140",
+      "name": "Zellventil",
+      "eltern": "BT-100",
+      "rolle": "lässt Gas aus der Zelle, bevor sie platzt",
+      "anforderungen": [
+        "REQ-P11"
+      ],
+      "art": "D",
+      "merkmale": {
+        "durchmesser_mm": null,
+        "oeffnungsdruck_kPa": null,
+        "lage": null
+      }
+    },
+    {
+      "id": "BT-200",
+      "name": "Zellstack",
+      "eltern": "BT-000",
+      "rolle": "Zellen in Reihe und parallel, mechanisch verspannt",
+      "anforderungen": [
+        "REQ-P02",
+        "REQ-P03"
+      ],
+      "merkmale": {
+        "verschaltung": null,
+        "zellen_anzahl": null,
+        "reihen_anzahl": null
+      }
+    },
+    {
+      "id": "BT-210",
+      "name": "Zellreihe",
+      "eltern": "BT-200",
+      "rolle": "Zellen zwischen zwei Querträgern, ohne Modulgehäuse (Cell-to-Pack)",
+      "anforderungen": [
+        "REQ-P02",
+        "REQ-P07"
+      ],
+      "art": "E",
+      "stueckliste": [
+        "200.1"
+      ],
+      "merkmale": {
+        "zellen_je_reihe": null,
+        "zellteilung_mm": null
+      }
+    },
+    {
+      "id": "BT-220",
+      "name": "Zwischenlage",
+      "eltern": "BT-200",
+      "rolle": "trennt Zellen thermisch, bremst Brandausbreitung, nimmt Quellen auf",
+      "anforderungen": [
+        "REQ-P11",
+        "REQ-P14"
+      ],
+      "art": "K",
+      "stueckliste": [
+        "200.2"
+      ],
+      "merkmale": {
+        "werkstoff": null,
+        "dicke_mm": null
+      },
+      "varianten": [
+        "LFP",
+        "NMC"
+      ]
+    },
+    {
+      "id": "BT-230",
+      "name": "Wärmeleitmaterial",
+      "eltern": "BT-200",
+      "rolle": "leitet Wärme von der Zelle in die Kühlplatte",
+      "anforderungen": [
+        "REQ-P09"
+      ],
+      "art": "K",
+      "stueckliste": [
+        "200.3"
+      ],
+      "merkmale": {
+        "werkstoff": null,
+        "dicke_mm": null,
+        "waermeleitfaehigkeit_W_mK": null
+      }
+    },
+    {
+      "id": "BT-240",
+      "name": "Verspannung",
+      "eltern": "BT-200",
+      "rolle": "hält die Zellreihe unter Druck, auch wenn die Zellen beim Laden quellen",
+      "anforderungen": [
+        "REQ-P14"
+      ],
+      "art": "E",
+      "stueckliste": [
+        "200.4"
+      ],
+      "merkmale": {
+        "art": null,
+        "vorspannkraft_kN": null,
+        "endplatte_dicke_mm": null
+      },
+      "varianten": [
+        "LFP"
+      ]
+    },
+    {
+      "id": "BT-250",
+      "name": "Zellhalter",
+      "eltern": "BT-200",
+      "rolle": "Hält und teilt Rundzellen, Abstand für Kühlung und Isolation (nur Rundzelle)",
+      "anforderungen": [
+        "REQ-P06",
+        "REQ-P11"
+      ],
+      "merkmale": {
+        "werkstoff": null,
+        "anordnung": null,
+        "zellabstand_mm": null,
+        "hoehe_mm": null
+      },
+      "varianten": [
+        "NMC"
+      ],
+      "art": "K",
+      "stueckliste": [
+        "200.5"
+      ]
+    },
+    {
+      "id": "BT-260",
+      "name": "Verguss",
+      "eltern": "BT-200",
+      "rolle": "Fixiert und isoliert die 4680-Zellen in den Endzonen und zwischen den Haltern",
+      "anforderungen": [
+        "REQ-P14"
+      ],
+      "art": "K",
+      "stueckliste": [],
+      "merkmale": {
+        "werkstoff": null,
+        "volumen_cm3": null
+      },
+      "varianten": [
+        "NMC"
+      ]
+    },
+    {
+      "id": "BT-300",
+      "name": "Regelung (BMS)",
+      "eltern": "BT-000",
+      "rolle": "misst, schützt, gleicht aus, schaltet",
+      "anforderungen": [
+        "REQ-P15",
+        "REQ-P11"
+      ],
+      "merkmale": {
+        "architektur": null
+      }
+    },
+    {
+      "id": "BT-310",
+      "name": "BMS-Hauptsteuergerät",
+      "eltern": "BT-300",
+      "rolle": "Ladezustand, Alterung, Schutzlogik, Verbindung zum Fahrzeug (CAN)",
+      "anforderungen": [
+        "REQ-P15"
+      ],
+      "art": "K",
+      "stueckliste": [
+        "300.1"
+      ],
+      "merkmale": {
+        "laenge_mm": null,
+        "breite_mm": null,
+        "hoehe_mm": null,
+        "einbauort": null
+      }
+    },
+    {
+      "id": "BT-320",
+      "name": "Zellüberwachung",
+      "eltern": "BT-300",
+      "rolle": "misst jede Zellspannung und gleicht die Ladung aus",
+      "anforderungen": [
+        "REQ-P15"
+      ],
+      "art": "K",
+      "stueckliste": [
+        "300.2"
+      ],
+      "merkmale": {
+        "anzahl": null,
+        "kanaele": null,
+        "ausgleich": null,
+        "ausgleichsstrom_mA": null
+      }
+    },
+    {
+      "id": "BT-330",
+      "name": "Temperaturfühler Zelle",
+      "eltern": "BT-300",
+      "rolle": "misst Zelltemperaturen für Schutz und Kühlung",
+      "anforderungen": [
+        "REQ-P09",
+        "REQ-P15"
+      ],
+      "art": "K",
+      "stueckliste": [
+        "300.3"
+      ],
+      "merkmale": {
+        "anzahl": null,
+        "zellen_je_fuehler": null
+      }
+    },
+    {
+      "id": "BT-340",
+      "name": "Strommessung",
+      "eltern": "BT-300",
+      "rolle": "misst den Packstrom für Ladezustand und Schutz",
+      "anforderungen": [
+        "REQ-P15"
+      ],
+      "art": "K",
+      "stueckliste": [
+        "300.4"
+      ],
+      "merkmale": {
+        "prinzip": null,
+        "messbereich_A": null
+      }
+    },
+    {
+      "id": "BT-350",
+      "name": "Isolationswächter",
+      "eltern": "BT-300",
+      "rolle": "erkennt Isolationsfehler zwischen Hochvolt und Gehäuse",
+      "anforderungen": [
+        "REQ-P13"
+      ],
+      "art": "K",
+      "stueckliste": [
+        "300.5"
+      ],
+      "merkmale": {
+        "ansprechwert_kOhm": null
+      }
+    },
+    {
+      "id": "BT-360",
+      "name": "Messleitungen",
+      "eltern": "BT-300",
+      "rolle": "verbinden Zellen und Fühler mit der Zellüberwachung",
+      "anforderungen": [
+        "REQ-P15"
+      ],
+      "art": "K",
+      "stueckliste": [
+        "300.6"
+      ],
+      "merkmale": {
+        "art": null,
+        "breite_mm": null
+      }
+    },
+    {
+      "id": "BT-361",
+      "name": "FPC-Halter",
+      "eltern": "BT-360",
+      "rolle": "Hält die Messleitungen im Seitenspalt bzw. in der Verbinderebene",
+      "anforderungen": [
+        "REQ-P15"
+      ],
+      "art": "K",
+      "stueckliste": [
+        "361.1"
+      ],
+      "merkmale": {
+        "abstand_mm": null
+      }
+    },
+    {
+      "id": "BT-400",
+      "name": "Verkabelung und Zellverbinder",
+      "eltern": "BT-000",
+      "rolle": "leitet den Hochvoltstrom von Zelle zu Zelle und zur Schaltbox",
+      "anforderungen": [
+        "REQ-P04",
+        "REQ-P13"
+      ],
+      "merkmale": {}
+    },
+    {
+      "id": "BT-410",
+      "name": "Zellverbinder",
+      "eltern": "BT-400",
+      "rolle": "verbindet benachbarte Zellpole in Reihe",
+      "anforderungen": [
+        "REQ-P04"
+      ],
+      "art": "E",
+      "stueckliste": [
+        "400.1"
+      ],
+      "merkmale": {
+        "werkstoff": null,
+        "breite_mm": null,
+        "dicke_mm": null,
+        "verbindung": null
+      }
+    },
+    {
+      "id": "BT-420",
+      "name": "Reihenverbinder",
+      "eltern": "BT-400",
+      "rolle": "verbindet das Ende einer Zellreihe mit dem Anfang der nächsten",
+      "anforderungen": [
+        "REQ-P04"
+      ],
+      "art": "E",
+      "stueckliste": [
+        "400.2"
+      ],
+      "merkmale": {
+        "werkstoff": null,
+        "breite_mm": null,
+        "dicke_mm": null
+      }
+    },
+    {
+      "id": "BT-430",
+      "name": "HV-Hauptleitung",
+      "eltern": "BT-400",
+      "rolle": "führt Plus und Minus vom Stack zur Schaltbox und zu den Steckern",
+      "anforderungen": [
+        "REQ-P04",
+        "REQ-P13"
+      ],
+      "art": "K",
+      "stueckliste": [
+        "400.3"
+      ],
+      "merkmale": {
+        "querschnitt_mm2": null,
+        "biegeradius_min_mm": null,
+        "werkstoff": null
+      }
+    },
+    {
+      "id": "BT-440",
+      "name": "Stromschiene",
+      "eltern": "BT-400",
+      "rolle": "Plus-/Minus-Anschlusslaschen an den Reihenenden und Stromschienen der Schaltbox: führen den HV-Strom zwischen Zellstack, Schaltbox und HV-Leitungen",
+      "anforderungen": [
+        "REQ-P13"
+      ],
+      "art": "E",
+      "stueckliste": [
+        "440.1",
+        "440.2"
+      ],
+      "merkmale": {
+        "querschnitt_mm2": null,
+        "ueberlappung_mm": null,
+        "masse_g": null,
+        "bauform": null,
+        "werkstoff": null
+      }
+    },
+    {
+      "id": "BT-450",
+      "name": "Berührschutz",
+      "eltern": "BT-400",
+      "rolle": "deckt die spannungsführenden Zellverbinder gegen Berührung ab (NMC)",
+      "anforderungen": [
+        "REQ-P13"
+      ],
+      "art": "E",
+      "stueckliste": [
+        "450.1"
+      ],
+      "merkmale": {
+        "masse_g": null,
+        "bauform": null,
+        "werkstoff": null
+      },
+      "varianten": [
+        "NMC"
+      ]
+    },
+    {
+      "id": "BT-500",
+      "name": "Struktur und Gehäuse",
+      "eltern": "BT-000",
+      "rolle": "trägt, schützt, dichtet, Crash",
+      "anforderungen": [
+        "REQ-P07",
+        "REQ-P13",
+        "REQ-P14"
+      ],
+      "merkmale": {
+        "bauweise": null
+      }
+    },
+    {
+      "id": "BT-510",
+      "name": "Gehäusewanne",
+      "eltern": "BT-500",
+      "rolle": "nimmt Zellstack, Kühlung und Schaltbox auf, Lastpfad zum Fahrzeug",
+      "anforderungen": [
+        "REQ-P07",
+        "REQ-P13",
+        "REQ-P14"
+      ],
+      "art": "E",
+      "stueckliste": [
+        "500.1"
+      ],
+      "merkmale": {
+        "werkstoff": null,
+        "fertigung": null,
+        "wandstaerke_mm": null,
+        "bodendicke_mm": null
+      }
+    },
+    {
+      "id": "BT-520",
+      "name": "Deckel mit Dichtung",
+      "eltern": "BT-500",
+      "rolle": "schließt das Pack dicht, trennt es vom Innenraum",
+      "anforderungen": [
+        "REQ-P13"
+      ],
+      "art": "E",
+      "stueckliste": [
+        "500.2"
+      ],
+      "merkmale": {
+        "werkstoff": null,
+        "dicke_mm": null,
+        "dichtung": null
+      }
+    },
+    {
+      "id": "BT-530",
+      "name": "Querträger",
+      "eltern": "BT-500",
+      "rolle": "trennen die Zellreihen und steifen die Wanne aus",
+      "anforderungen": [
+        "REQ-P14"
+      ],
+      "art": "E",
+      "stueckliste": [
+        "500.3"
+      ],
+      "merkmale": {
+        "anzahl": null,
+        "werkstoff": null,
+        "breite_mm": null,
+        "hoehe_mm": null,
+        "wandstaerke_mm": null
+      }
+    },
+    {
+      "id": "BT-540",
+      "name": "Seitenrahmen",
+      "eltern": "BT-500",
+      "rolle": "Rahmen des Packs; leitet Seitenkräfte in den Schweller, baut selbst keine Crashenergie ab (ENT-151)",
+      "anforderungen": [
+        "REQ-P14"
+      ],
+      "art": "E",
+      "stueckliste": [
+        "500.4"
+      ],
+      "merkmale": {
+        "werkstoff": null,
+        "breite_mm": null,
+        "hoehe_mm": null,
+        "wandstaerke_mm": null,
+        "kammern": null,
+        "crashkonzept": null
+      }
+    },
+    {
+      "id": "BT-550",
+      "name": "Unterfahrschutz",
+      "eltern": "BT-500",
+      "rolle": "schützt den Boden gegen Steinschlag und Aufsetzen",
+      "anforderungen": [
+        "REQ-P14"
+      ],
+      "art": "E",
+      "stueckliste": [
+        "500.5"
+      ],
+      "merkmale": {
+        "werkstoff": null,
+        "dicke_mm": null,
+        "abstand_mm": null
+      }
+    },
+    {
+      "id": "BT-560",
+      "name": "Befestigungspunkte",
+      "eltern": "BT-500",
+      "rolle": "verbinden das Pack mit dem Fahrzeug, als Fest- und Loslager",
+      "anforderungen": [
+        "REQ-P14"
+      ],
+      "art": "E",
+      "stueckliste": [
+        "500.6"
+      ],
+      "merkmale": {
+        "anzahl": null,
+        "lagerung": null,
+        "schraube": null
+      }
+    },
+    {
+      "id": "BT-570",
+      "name": "Druckausgleichselement",
+      "eltern": "BT-500",
+      "rolle": "gleicht Luftdruck aus, hält Wasser draußen",
+      "anforderungen": [
+        "REQ-P13"
+      ],
+      "art": "K",
+      "stueckliste": [
+        "500.7"
+      ],
+      "merkmale": {
+        "anzahl": null
+      }
+    },
+    {
+      "id": "BT-580",
+      "name": "Dichtungen",
+      "eltern": "BT-500",
+      "rolle": "dichten Deckel, Schaltbox und Servicedeckel gegen Wasser und Staub",
+      "anforderungen": [
+        "REQ-P13"
+      ],
+      "art": "K",
+      "stueckliste": [
+        "580.1"
+      ],
+      "merkmale": {
+        "masse_g": null,
+        "bauform": null,
+        "werkstoff": null
+      }
+    },
+    {
+      "id": "BT-590",
+      "name": "Verbindungs- und Normteile",
+      "eltern": "BT-500",
+      "rolle": "Schrauben, Kabelschuhe, Clips und Schrumpfschlauch: verbinden, fixieren und isolieren",
+      "anforderungen": [
+        "REQ-P13"
+      ],
+      "art": "K",
+      "stueckliste": [
+        "590.1",
+        "590.2",
+        "590.3",
+        "590.4"
+      ],
+      "merkmale": {
+        "masse_g": null,
+        "bauform": null,
+        "werkstoff": null
+      }
+    },
+    {
+      "id": "BT-600",
+      "name": "Kühlung",
+      "eltern": "BT-000",
+      "rolle": "führt Wärme ab, beim Schnellladen",
+      "anforderungen": [
+        "REQ-P05",
+        "REQ-P08",
+        "REQ-P09",
+        "REQ-P12"
+      ],
+      "merkmale": {
+        "kuehlart": null
+      }
+    },
+    {
+      "id": "BT-610",
+      "name": "Kühlplatte",
+      "eltern": "BT-600",
+      "rolle": "nimmt die Wärme der Zellen auf und gibt sie ans Kühlmittel",
+      "anforderungen": [
+        "REQ-P09",
+        "REQ-P12"
+      ],
+      "art": "E",
+      "stueckliste": [
+        "600.1"
+      ],
+      "merkmale": {
+        "anzahl": null,
+        "werkstoff": null,
+        "dicke_mm": null,
+        "kanal_anzahl": null,
+        "kanal_breite_mm": null,
+        "kanal_hoehe_mm": null,
+        "kanalfuehrung": null,
+        "verteilerrohr_d_mm": null
+      }
+    },
+    {
+      "id": "BT-620",
+      "name": "Verteiler und Sammler",
+      "eltern": "BT-600",
+      "rolle": "verteilt das Kühlmittel gleichmäßig auf die Kanäle",
+      "anforderungen": [
+        "REQ-P09"
+      ],
+      "art": "E",
+      "stueckliste": [
+        "600.2"
+      ],
+      "merkmale": {
+        "anordnung": null,
+        "durchmesser_mm": null
+      }
+    },
+    {
+      "id": "BT-630",
+      "name": "Kühlmittelanschlüsse",
+      "eltern": "BT-600",
+      "rolle": "Ein- und Austritt am Pack",
+      "anforderungen": [
+        "REQ-P12"
+      ],
+      "art": "K",
+      "stueckliste": [
+        "600.3"
+      ],
+      "merkmale": {
+        "durchmesser_ein_mm": null,
+        "durchmesser_aus_mm": null
+      }
+    },
+    {
+      "id": "BT-640",
+      "name": "Temperaturfühler Kühlmittel",
+      "eltern": "BT-600",
+      "rolle": "misst Ein- und Austrittstemperatur",
+      "anforderungen": [
+        "REQ-P09"
+      ],
+      "art": "K",
+      "stueckliste": [
+        "600.4"
+      ],
+      "merkmale": {
+        "anzahl": null
+      }
+    },
+    {
+      "id": "BT-650",
+      "name": "Kühlmittel",
+      "eltern": "BT-600",
+      "rolle": "trägt die Wärme aus dem Pack",
+      "anforderungen": [
+        "REQ-P12"
+      ],
+      "art": "K",
+      "stueckliste": [
+        "600.5"
+      ],
+      "merkmale": {
+        "medium": null,
+        "fuellmenge_L": null
+      }
+    },
+    {
+      "id": "BT-660",
+      "name": "Schnittstelle Fahrzeugkreis",
+      "eltern": "BT-600",
+      "rolle": "Pumpe und Kältemittelkühler auf der Fahrzeugseite; hier nur Anforderung",
+      "anforderungen": [
+        "REQ-P05",
+        "REQ-P12"
+      ],
+      "art": "S",
+      "stueckliste": [
+        "600.6"
+      ],
+      "merkmale": {
+        "durchfluss_L_min": null,
+        "eintritt_max_C": null,
+        "einbauort": null
+      }
+    },
+    {
+      "id": "BT-661",
+      "name": "Kühlmittelpumpe (elektrisch)",
+      "eltern": "BT-660",
+      "rolle": "fördert das Kühlmittel durch die Kühlplatten",
+      "anforderungen": [
+        "REQ-P05",
+        "REQ-P09"
+      ],
+      "art": "K",
+      "stueckliste": [
+        "660.1"
+      ],
+      "merkmale": {
+        "masse_g": null,
+        "bauform": null,
+        "werkstoff": null
+      }
+    },
+    {
+      "id": "BT-662",
+      "name": "Chiller (Kältemittel-Wasser-Wärmetauscher)",
+      "eltern": "BT-660",
+      "rolle": "kühlt das Kühlmittel mit dem Kältemittelkreis",
+      "anforderungen": [
+        "REQ-P05",
+        "REQ-P09"
+      ],
+      "art": "K",
+      "stueckliste": [
+        "660.2"
+      ],
+      "merkmale": {
+        "masse_g": null,
+        "bauform": null,
+        "werkstoff": null
+      }
+    },
+    {
+      "id": "BT-663",
+      "name": "3/2-Wege-Ventil",
+      "eltern": "BT-660",
+      "rolle": "schaltet das Kühlmittel zwischen Chiller und Bypass",
+      "anforderungen": [
+        "REQ-P05",
+        "REQ-P09"
+      ],
+      "art": "K",
+      "stueckliste": [
+        "660.3"
+      ],
+      "merkmale": {
+        "masse_g": null,
+        "bauform": null,
+        "werkstoff": null
+      }
+    },
+    {
+      "id": "BT-664",
+      "name": "Kühlmittelschläuche",
+      "eltern": "BT-660",
+      "rolle": "verbinden Pumpe, Chiller, Ventil, Ausgleichsbehälter und Packanschlüsse",
+      "anforderungen": [
+        "REQ-P05",
+        "REQ-P09"
+      ],
+      "art": "K",
+      "stueckliste": [
+        "660.4"
+      ],
+      "merkmale": {
+        "masse_g": null,
+        "bauform": null,
+        "werkstoff": null
+      }
+    },
+    {
+      "id": "BT-665",
+      "name": "Ausgleichsbehälter",
+      "eltern": "BT-660",
+      "rolle": "gleicht das Kühlmittelvolumen aus",
+      "anforderungen": [
+        "REQ-P05",
+        "REQ-P09"
+      ],
+      "art": "K",
+      "stueckliste": [
+        "660.5"
+      ],
+      "merkmale": {
+        "masse_g": null,
+        "bauform": null,
+        "werkstoff": null
+      }
+    },
+    {
+      "id": "BT-700",
+      "name": "Zusatzkomponenten",
+      "eltern": "BT-000",
+      "rolle": "Schütze, Sicherung, Vorladung, Stecker, Entgasung",
+      "anforderungen": [
+        "REQ-P11",
+        "REQ-P13",
+        "REQ-P15"
+      ],
+      "merkmale": {}
+    },
+    {
+      "id": "BT-710",
+      "name": "Schaltbox",
+      "eltern": "BT-700",
+      "rolle": "Gehäuse für Schütze, Vorladung und Hauptsicherung (Trennstelle zwischen Stack und Fahrzeug)",
+      "anforderungen": [
+        "REQ-P13"
+      ],
+      "art": "E",
+      "stueckliste": [
+        "700.1"
+      ],
+      "merkmale": {
+        "laenge_mm": null,
+        "breite_mm": null,
+        "hoehe_mm": null,
+        "einbauort": null
+      }
+    },
+    {
+      "id": "BT-711",
+      "name": "Hauptschütze",
+      "eltern": "BT-710",
+      "rolle": "schalten Plus und Minus zum Fahrzeug zu und ab",
+      "anforderungen": [
+        "REQ-P04",
+        "REQ-P05",
+        "REQ-P13"
+      ],
+      "art": "K",
+      "stueckliste": [
+        "700.2"
+      ],
+      "merkmale": {
+        "nennstrom_A": null,
+        "nennspannung_V": null
+      }
+    },
+    {
+      "id": "BT-712",
+      "name": "Vorladung",
+      "eltern": "BT-710",
+      "rolle": "lädt die Kondensatoren des Umrichters langsam vor, bevor das Hauptschütz schließt",
+      "anforderungen": [
+        "REQ-P13"
+      ],
+      "art": "K",
+      "stueckliste": [
+        "700.3"
+      ],
+      "merkmale": {
+        "widerstand_Ohm": null,
+        "vorladezeit_ms": null
+      }
+    },
+    {
+      "id": "BT-713",
+      "name": "Hauptsicherung",
+      "eltern": "BT-710",
+      "rolle": "trennt bei Kurzschluss",
+      "anforderungen": [
+        "REQ-P11",
+        "REQ-P13"
+      ],
+      "art": "K",
+      "stueckliste": [
+        "700.4"
+      ],
+      "merkmale": {
+        "art": null,
+        "nennstrom_A": null
+      }
+    },
+    {
+      "id": "BT-720",
+      "name": "Service-Trennstecker",
+      "eltern": "BT-700",
+      "rolle": "macht das Pack in der Werkstatt spannungsfrei",
+      "anforderungen": [
+        "REQ-P13"
+      ],
+      "art": "K",
+      "stueckliste": [
+        "700.5"
+      ],
+      "merkmale": {
+        "nennstrom_A": null,
+        "einbauort": null,
+        "bauform": null
+      }
+    },
+    {
+      "id": "BT-721",
+      "name": "Service-Trennbrücke",
+      "eltern": "BT-720",
+      "rolle": "Verschraubte Cu-Brücke mit HVIL im Querverbinder vorn (ENT-150)",
+      "anforderungen": [
+        "REQ-P13"
+      ],
+      "art": "E",
+      "stueckliste": [],
+      "merkmale": {
+        "luecke_mm": null
+      },
+      "varianten": [
+        "LFP"
+      ]
+    },
+    {
+      "id": "BT-722",
+      "name": "Servicedeckel",
+      "eltern": "BT-720",
+      "rolle": "Abgedichteter Deckel über der Trennbrücke im Gehäusedeckel",
+      "anforderungen": [
+        "REQ-P13"
+      ],
+      "art": "E",
+      "stueckliste": [],
+      "merkmale": {
+        "laenge_mm": null,
+        "breite_mm": null
+      },
+      "varianten": [
+        "LFP"
+      ]
+    },
+    {
+      "id": "BT-730",
+      "name": "HV-Steckverbinder",
+      "eltern": "BT-700",
+      "rolle": "Hochvoltanschluss für Antrieb und Laden",
+      "anforderungen": [
+        "REQ-P04",
+        "REQ-P05",
+        "REQ-P13"
+      ],
+      "art": "K",
+      "stueckliste": [
+        "700.6"
+      ],
+      "merkmale": {
+        "anzahl": null,
+        "nennstrom_A": null
+      }
+    },
+    {
+      "id": "BT-740",
+      "name": "NV-Steckverbinder",
+      "eltern": "BT-700",
+      "rolle": "12 V, CAN und Sensorik zum Fahrzeug",
+      "anforderungen": [
+        "REQ-P15"
+      ],
+      "art": "K",
+      "stueckliste": [
+        "700.7"
+      ],
+      "merkmale": {
+        "polzahl": null
+      }
+    },
+    {
+      "id": "BT-750",
+      "name": "Pack-Entgasung",
+      "eltern": "BT-700",
+      "rolle": "führt Gas bei thermischem Durchgehen gezielt aus dem Pack, weg vom Innenraum",
+      "anforderungen": [
+        "REQ-P11"
+      ],
+      "art": "K",
+      "stueckliste": [
+        "700.8"
+      ],
+      "merkmale": {
+        "durchmesser_mm": null,
+        "oeffnungsdruck_kPa": null,
+        "auslassrichtung": null
+      }
+    },
+    {
+      "id": "BT-760",
+      "name": "Heizung",
+      "eltern": "BT-700",
+      "rolle": "wärmt die Zellen bei Kälte vor dem Laden",
+      "anforderungen": [
+        "REQ-P08"
+      ],
+      "art": "K",
+      "stueckliste": [
+        "700.9"
+      ],
+      "merkmale": {
+        "art": null,
+        "leistung_kW": null
+      }
+    },
+    {
+      "id": "BT-770",
+      "name": "Gas- und Drucksensor",
+      "eltern": "BT-700",
+      "rolle": "erkennt ein thermisches Ereignis früh und warnt",
+      "anforderungen": [
+        "REQ-P11"
+      ],
+      "art": "K",
+      "stueckliste": [
+        "700.10"
+      ],
+      "merkmale": {
+        "prinzip": null
+      }
+    },
+    {
+      "id": "BT-780",
+      "name": "Kennzeichnung",
+      "eltern": "BT-700",
+      "rolle": "Typschild und Hochvoltwarnung",
+      "anforderungen": [
+        "REQ-P13"
+      ],
+      "art": "K",
+      "stueckliste": [
+        "700.11"
+      ],
+      "merkmale": {}
+    }
+  ]
 }

@@ -1,0 +1,39 @@
+---
+typ: dokument
+datei: "praesentation/bausteine/E2.md"
+tags: ["dokument", "kopie"]
+---
+# E2
+
+> KI-generiert, erzeugt aus pm/plan/wissensnetz.json – nicht von Hand bearbeiten
+
+- Kopie von `praesentation/bausteine/E2.md` (Quelle im Repo, hier nur Lesekopie)
+
+## Inhalt
+
+> **KI-generiert** (Claude Sonnet, 2026-11-18), Entwurf. Folienbaustein Vorgang E2 (Elektronik und Kabel), Stand v1.1 (Konstruktionsstand E2D), v1.0-Zahlen unten bleiben als Basis.
+
+# Elektronik im Pack: Schaltbox als Turm hinten, beide Varianten verdrahtet
+**Kernaussage (Opus einzusetzen): Die Schaltbox (320 × 290 × 89 mm) steht als Turm hinten unter der Rücksitzbank; beide Packs sind ohne Kollision verdrahtet: LFP als Schleife mit Service-Trennbrücke vorn unter einem flachen Servicedeckel (HV intern 1,16 m, 15,1 W, Höhe vorn 121 mm), NMC als Mäander mit allen Anschlüssen hinten (1,19 m, 11,3 W).**
+
+**Bilder** (mit Zielband/Grenze, in `sim/elektrik/e2_elektronik/`): `e2_NMC_schnitt.png`, `e2_LFP_schnitt.png` (Höhengrenze 130 mm gestrichelt, Packhöhe), `e2_NMC_draufsicht.png`, `e2_LFP_draufsicht.png` (Kabelweg), `e2_NMC_detail.png`, `e2_LFP_detail.png`, `kabelplan_NMC.png`, `kabelplan_LFP.png`, `schaltbild_NMC.png`, `schaltbild_LFP.png`. Lesehilfe: `lesehilfe.md`.
+
+**Zahlen** (Quelle `cad/pack/entwurf/ergebnis_LFP_e2.json`, `ergebnis_NMC_e2.json`, `sim/elektrik/e2_elektronik/ergebnis.json`):
+- Kollisionen LFP 0 (1050 Paare), NMC 0 (7488 Paare)
+- HV intern LFP 1.176 m, 15.2 W bei 194 A (Band 6–20 W); NMC 1.194 m, 11.3 W bei 139 A
+- Elektronikmasse mit HV-Leitern LFP 6.42 kg, NMC 7.13 kg (Band 7–12 kg; LFP knapp darunter)
+- Messleitung FPC LFP 11.8 m (16 mm breit, 14 von 14 Stücken platziert), NMC 30.7 m (Band 25–40 m)
+- Schaltbox 320 × 290 × 89 mm, Packhöhe LFP 210 mm, NMC 204 mm; LFP-Gehäuse 2050 mm (ENT-147)
+- LFP-Trennbrücke vorn (ENT-150): 0 mm über dem Deckel, Packhöhe vorn 121 mm (Grenze 130 mm erfüllt); Nut Kühlplatte 1,14 % der Kühlfläche, Öffnung 0,35 %
+- Ausgleich NMC 14,2 h bei 130 mA, CMU-Wärme 9,8 W (ENT-146); Vorladung 8 A, 320 J, 300 ms
+
+- Verlust Al-Verbinder (Dauerstrom): LFP 73,5 W (Erwartung ≤ 50 W, verfehlt), NMC 461 W mit E1-Querschnitt 45 mm² bzw. 316 W mit CAD-Querschnitt 75 mm² (Erwartung ≈ 385 W); Quelle `sim/elektrik/e2_elektronik/verlust_al.json`
+
+**Offen:** Entscheidung zum Al-Verlust, Merkmal „bauform“ in BT-720, LFP-Lasche (ERGEBNIS.md v1.0).
+
+## Ergänzung v1.1 (Konstruktionsstand E2D)
+**Kernaussage:** Die Schaltbox ist jetzt bis zur Schraube durchkonstruiert (956 Teile LFP, 2701 NMC); NMC ohne Kollision, LFP mit 2 Restkollisionen am M8-Kopf der Trennbrücke, die Grenzen Boxhöhe 90 mm und Packhöhe vorn 130 mm (LFP 134 mm) sind offen.
+**Bilder** (Zielband als Text im Bild): `sim/elektrik/e2_elektronik/e2d_<V>_boxoffen.png`, `e2d_<V>_kabel.png`, `e2d_LFP_bruecke_offen.png`, `e2d_LFP_bruecke_zu.png`, `e2d_<V>_detail.png`, `e2d_<V>_stecker.png`, `e2d_<V>_gesamt.png`.
+**Zahlen** (Quelle `cad/pack/entwurf/ergebnis_LFP_e2d.json`, `ergebnis_NMC_e2d.json`, `sim/elektrik/e2_elektronik/verlust_al_e2d.json`): Elektronikmasse LFP 7,351 kg, NMC 7,941 kg; HV intern 13,98 W / 10,34 W; Al-Verlust LFP 75,6 W, NMC 316,0 W (Akte 25 x 3) bzw. 461,1 W (15 x 3); Packhöhe vorn LFP 134 mm, NMC 128 mm.
+**Offen:** ERGEBNIS.md v1.1, Abschnitt „Offen (v1.1)“.
+

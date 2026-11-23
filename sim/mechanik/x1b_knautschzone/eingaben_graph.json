@@ -1,0 +1,46 @@
+{
+ "_hinweis": "KI-generiert (Claude Sonnet, 2026-11-23), Entwurf, Nachtrag aus Skripten und eingaben*.json des Ordners (Prüfung Opus offen). Nur Verweise, die dort wörtlich stehen und eindeutig sind: A_-Namen, eindeutige Merkmalsnamen in Anführungszeichen, Ergebnisdateien anderer Rechenordner. wert = Stand bei Anlage (2026-11-23), nicht der Stand zur Rechenzeit. Die alte eingaben.json bleibt unverändert.",
+ "_variante": "LFP",
+ "A_quertraeger_anzahl": {
+  "wert": 3,
+  "quelle": "annahme:A_quertraeger_anzahl",
+  "verwendet_in": "energieverlust.py"
+ },
+ "A_quertraeger_breite_mm": {
+  "wert": 26,
+  "quelle": "annahme:A_quertraeger_breite_mm",
+  "verwendet_in": "energieverlust.py"
+ },
+ "A_quertraeger_spiel_mm": {
+  "wert": 2,
+  "quelle": "annahme:A_quertraeger_spiel_mm",
+  "verwendet_in": "energieverlust.py"
+ },
+ "A_rand_mm": {
+  "wert": 30,
+  "quelle": "annahme:A_rand_mm",
+  "verwendet_in": "energieverlust.py"
+ },
+ "A_zellabstand_NMC_mm": {
+  "wert": 2.0,
+  "quelle": "annahme:A_zellabstand_NMC_mm",
+  "verwendet_in": "energieverlust.py"
+ },
+ "A_zellzahl_NMC": {
+  "wert": 868,
+  "quelle": "annahme:A_zellzahl_NMC",
+  "verwendet_in": "energieverlust.py"
+ },
+ "bauraum_breite_mm": {
+  "wert": 1430.0,
+  "quelle": "parameter:bauraum_breite_mm",
+  "bt": "BT-000",
+  "verwendet_in": "energieverlust.py"
+ },
+ "bauraum_laenge_mm": {
+  "wert": null,
+  "quelle": "parameter:bauraum_laenge_mm",
+  "bt": "BT-000",
+  "verwendet_in": "energieverlust.py"
+ }
+}

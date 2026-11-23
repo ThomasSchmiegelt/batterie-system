@@ -12,7 +12,10 @@
 | ElmerFEM | GPL/LGPL (prüfen) | – |
 | FluidX3D | eigene Lizenz, nicht MIT | geänderte Quellen veröffentlichen, Referenzen zitieren |
 | gmsh | GPL (prüfen) | – |
+| networkx | BSD-3-Clause (laut Projekt, prüfen) | Wissensgraph pm/graph/graph.py |
+| lxml | BSD-3-Clause (laut Projekt, prüfen) | ReqIF-Prüfung pm/graph/reqif.py; das OMG-XSD wird nur zur Prüfung in ein Temp-Verzeichnis geladen, nicht abgelegt |
 | Blender | GPL | – |
+| python-pptx 1.0.2 | MIT (pip show, 2026-11-23); Abhängigkeiten lxml, XlsxWriter, Pillow | Vorgang B5, erzeugt praesentation/unternehmenspraesentation.pptx; nur lokal installiert in .venv |
 
 ## Fremdquellen
 Patentschriften, Seiten, PDFs: nur lokal (`quellen/`, `forschung/*_ablage/`), nie ins Repo. Zitate kurz und wörtlich mit URL.

@@ -1,0 +1,42 @@
+{
+ "fall": "NMC_a",
+ "lastfall": "a",
+ "bei_100kN": null,
+ "hinweis": "KI-generiert, Entwurf; Quelle lauf/<Fall>/X3T0*, X3A*.gz",
+ "v0_m_s": 2.581988897471611,
+ "energie_start_J": 5000.0,
+ "energie_total_ende_J": 4996.136,
+ "energiefehler_proz_max": 0.07727999999999155,
+ "hourglass_max_J": 0.0,
+ "kontaktenergie_max_J": 0.5666507,
+ "zeitschritt_min_ms": 4.860595e-05,
+ "pfahl_eindringung_max_mm": 13.88272,
+ "zeit_max_ms": 10.60002,
+ "energie_intern_bei_max_J": 4894.133,
+ "kraft_max_kN": 440.2305291732009,
+ "innenwand_mitte_dy_max_mm": 8.517348,
+ "zellblock_vorderseite_dy_max_mm": 8.278971,
+ "zellreihe_eindringung_mm_Tiefste": 8.278971,
+ "t_ende_ms": 44.95001,
+ "ausgewertet_bis_ms": 44.95001,
+ "quelle_ordner": "NMC_a",
+ "hinweis_instabil": null,
+ "kraft_ende_kN": 7.275957614183426e-12,
+ "zyklen": 1028637,
+ "laufzeit_s_summe": 7971.81,
+ "ziel_eindringung_mm": [
+  25,
+  60
+ ],
+ "zellblock_vorderseite_uy_max_Anim_mm": 8.81726,
+ "film": "film_NMC_a.mp4",
+ "erwartung_pruefung": {
+  "energiebilanz_unter_5_proz": true,
+  "pfahl_eindringung_20_100_mm": false,
+  "pfahl_eindringung_im_Erwartungsband": false,
+  "zellreihe_ab_Rahmenbreite_30mm_eingedrueckt": true
+ },
+ "zell_U_max_mm": 13.514797839941966,
+ "kin_ende_proz": 2.659883635284773,
+ "pruef_modell_ok": true
+}

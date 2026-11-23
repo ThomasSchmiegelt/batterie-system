@@ -1,0 +1,55 @@
+{
+ "hinweis": "KI-generiert (Claude Sonnet, 2026-11-23), Entwurf. Erzeugt von v5_verteiler.py.",
+ "kanal_mm": [
+  8.0,
+  4.0
+ ],
+ "laenge_m": 1.97,
+ "rho": 1070,
+ "mu": 0.003,
+ "seitenverhaeltnis": 0.5,
+ "faelle": [
+  {
+   "faktor": 0.1,
+   "Q_m3_s": 1.5972222222222223e-07,
+   "Re": 9.4945987654321,
+   "dp_exakt_Pa": 32.24864611829239,
+   "dp_shahlondon_Pa": 32.267870899200446,
+   "dp_werkzeug_verteiler_dp_kanal_Pa": 32.267870899200446,
+   "dp_werkzeug_kuehlplatte_kanal_Pa": 32.267870899200446,
+   "abw_werkzeug_gegen_exakt_pct": 0.059614226400506176,
+   "abw_werkzeug_gegen_shahlondon_pct": 0.0,
+   "abw_shahlondon_gegen_exakt_pct": 0.059614226400506176
+  },
+  {
+   "faktor": 0.5,
+   "Q_m3_s": 7.986111111111112e-07,
+   "Re": 47.472993827160494,
+   "dp_exakt_Pa": 161.24323059146198,
+   "dp_shahlondon_Pa": 161.33935449600227,
+   "dp_werkzeug_verteiler_dp_kanal_Pa": 161.33935449600227,
+   "dp_werkzeug_kuehlplatte_kanal_Pa": 161.33935449600227,
+   "abw_werkzeug_gegen_exakt_pct": 0.059614226400506176,
+   "abw_werkzeug_gegen_shahlondon_pct": 0.0,
+   "abw_shahlondon_gegen_exakt_pct": 0.059614226400506176
+  },
+  {
+   "faktor": 1.0,
+   "Q_m3_s": 1.5972222222222223e-06,
+   "Re": 94.94598765432099,
+   "dp_exakt_Pa": 322.48646118292396,
+   "dp_shahlondon_Pa": 322.67870899200454,
+   "dp_werkzeug_verteiler_dp_kanal_Pa": 322.67870899200454,
+   "dp_werkzeug_kuehlplatte_kanal_Pa": 322.67870899200454,
+   "abw_werkzeug_gegen_exakt_pct": 0.059614226400506176,
+   "abw_werkzeug_gegen_shahlondon_pct": 0.0,
+   "abw_shahlondon_gegen_exakt_pct": 0.059614226400506176
+  }
+ ],
+ "laminar_alle": true,
+ "abweichung_fein_pct": 0.059614226400506176,
+ "abweichung_gegen_shahlondon_pct": 0.0,
+ "ordnung_beobachtet": null,
+ "toleranz_pct": 1.0,
+ "bestanden": true
+}

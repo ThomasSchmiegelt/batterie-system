@@ -14,3 +14,8 @@
 3. 4680: 10→80 % in 30 min braucht Startstrom ≈ 1,7–2,0C; mittlere Wärme ≈ 8–12 W (K1b: 6,7 W) → K1b für 4680 mit Modellwärme neu nötig; Plating-Grenze könnte 30 min verhindern.
 ## Verfehlt
 RMS > 30 mV; Blade-DCIR außerhalb 0,5–2 mΩ; 4680 erreicht 30 min auch mit 3C nicht.
+
+## Anforderung (Nachtrag)
+- REQ-P06 (Vorgang C2, pm/plan/wissensnetz.py)
+
+Vermerk: Nachtrag Sonnet aus wissensnetz.py, Prüfung Opus offen (2026-11-23). Die Zuordnung Rechenordner zu Vorgang C2 ist von Sonnet gewählt.

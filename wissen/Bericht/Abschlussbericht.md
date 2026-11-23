@@ -1,0 +1,221 @@
+---
+typ: bericht
+version: "1.2"
+tags: ["bericht"]
+---
+# Abschlussbericht BAT-DOC-17, Version 1.2
+
+> KI-generiert, erzeugt aus pm/plan/wissensnetz.json – nicht von Hand bearbeiten
+
+- PDF: `bericht/bericht.pdf`; Quelle: `bericht/bericht.tex`
+- Status: geprüft (KI), nicht freigegeben (Kopf des Berichts)
+- Kapitelliste aus `bericht/bericht.toc`
+
+## Kapitel
+- Abkürzungsverzeichnis und Glossar (S. 4)
+- 1 Zusammenfassung (S. 5)
+- 2 Anforderungsübersicht (S. 7)
+- 3 Auftrag und Vorgaben (S. 9)
+- 4 Vorgehen mit KI-Agenten (S. 10)
+- 5 Recherche und Datenlage (S. 11)
+- 6 Chemie: von der Annahme zur Messung (S. 13)
+- 7 Systemauslegung (S. 19)
+- 8 Zelle: Maße, Innenaufbau, CAD (S. 21)
+- 9 Zellwärme (K1c) und Kühlplatte (K2) (S. 25)
+- 10 Thermik des Gesamtsystems (K3 FluidX3D, K4 Elmer, K5) (S. 27)
+- 11 Gehäuse und Pack (Endstand G5.9) (S. 37)
+- 12 Elektrik E1: Querschnitte und Verluste (S. 47)
+- 13 Elektronik und Kabel E2 (S. 49)
+- 14 Stückliste und Kosten (Stand G5.9) (S. 57)
+- 15 Crash G5 (X3, OpenCourant) (S. 58)
+- 16 Fehler und Korrekturen (S. 68)
+- 17 Werkzeuge und Rechenregeln (S. 74)
+- 18 Entscheidungen (S. 75)
+- 19 Geometrische Integration durch KI: Grenzen, Fehler, Unsicherheiten (S. 78)
+- 20 Analyse möglicher Verbesserungen (S. 83)
+- 21 Lehren für die nächste Konstruktionsschleife (S. 85)
+- 22 Offene Punkte und nächste Schritte (S. 86)
+- A Anhang: Entwicklungsgang (überholte Zwischenstände) (S. 88)
+  - A.1 Wärme der Einzelzelle (K0, K1, K1b) (S. 88)
+  - A.2 Pack: M0 und G4 (S. 99)
+  - A.3 Stückliste und Kosten im Stand E2D (S. 101)
+  - A.4 Seitencrash (X1, X1b/X2) (S. 103)
+- B Quellen (S. 108)
+- C Software (S. 109)
+- D Stücklisten (LFP und NMC, Stand G5.9) (S. 110)
+
+## Im Bericht genannte Anforderungen, Entscheidungen, Befunde, Bauteile (Textvorkommen in bericht.tex)
+- [[Befund/B-BAT-002|B-BAT-002]]
+- [[Befund/B-BAT-003|B-BAT-003]]
+- [[Befund/B-BAT-004|B-BAT-004]]
+- [[Befund/B-BAT-005|B-BAT-005]]
+- [[Befund/B-BAT-006|B-BAT-006]]
+- [[Befund/B-BAT-007|B-BAT-007]]
+- [[Befund/B-BAT-008|B-BAT-008]]
+- [[Befund/B-BAT-009|B-BAT-009]]
+- [[Befund/B-BAT-010|B-BAT-010]]
+- [[Befund/B-BAT-011|B-BAT-011]]
+- [[Befund/B-BAT-012|B-BAT-012]]
+- [[Befund/B-BAT-013|B-BAT-013]]
+- [[Befund/B-BAT-014|B-BAT-014]]
+- [[Befund/B-BAT-015|B-BAT-015]]
+- [[Befund/B-BAT-016|B-BAT-016]]
+- [[Befund/B-BAT-019|B-BAT-019]]
+- [[Befund/B-BAT-020|B-BAT-020]]
+- [[Befund/B-BAT-021|B-BAT-021]]
+- [[Befund/B-BAT-022|B-BAT-022]]
+- [[Befund/B-BAT-023|B-BAT-023]]
+- [[Befund/B-BAT-024|B-BAT-024]]
+- [[Befund/B-BAT-025|B-BAT-025]]
+- [[Befund/B-BAT-027|B-BAT-027]]
+- [[Befund/B-BAT-028|B-BAT-028]]
+- [[Befund/B-BAT-029|B-BAT-029]]
+- [[Befund/B-BAT-030|B-BAT-030]]
+- [[Befund/B-BAT-031|B-BAT-031]]
+- [[Befund/B-BAT-033|B-BAT-033]]
+- [[Befund/B-BAT-034|B-BAT-034]]
+- [[Befund/B-BAT-035|B-BAT-035]]
+- [[Befund/B-BAT-036|B-BAT-036]]
+- [[Befund/B-BAT-037|B-BAT-037]]
+- [[Befund/B-BAT-038|B-BAT-038]]
+- [[Befund/B-BAT-039|B-BAT-039]]
+- [[Befund/B-BAT-040|B-BAT-040]]
+- [[Befund/B-BAT-041|B-BAT-041]]
+- [[Befund/B-BAT-042|B-BAT-042]]
+- [[Befund/B-BAT-043|B-BAT-043]]
+- [[Bauteil/BT-000|BT-000]]
+- [[Bauteil/BT-100|BT-100]]
+- [[Bauteil/BT-110|BT-110]]
+- [[Bauteil/BT-111|BT-111]]
+- [[Bauteil/BT-114|BT-114]]
+- [[Bauteil/BT-116|BT-116]]
+- [[Bauteil/BT-120|BT-120]]
+- [[Bauteil/BT-140|BT-140]]
+- [[Bauteil/BT-200|BT-200]]
+- [[Bauteil/BT-220|BT-220]]
+- [[Bauteil/BT-230|BT-230]]
+- [[Bauteil/BT-250|BT-250]]
+- [[Bauteil/BT-260|BT-260]]
+- [[Bauteil/BT-300|BT-300]]
+- [[Bauteil/BT-320|BT-320]]
+- [[Bauteil/BT-361|BT-361]]
+- [[Bauteil/BT-400|BT-400]]
+- [[Bauteil/BT-410|BT-410]]
+- [[Bauteil/BT-420|BT-420]]
+- [[Bauteil/BT-430|BT-430]]
+- [[Bauteil/BT-440|BT-440]]
+- [[Bauteil/BT-500|BT-500]]
+- [[Bauteil/BT-530|BT-530]]
+- [[Bauteil/BT-540|BT-540]]
+- [[Bauteil/BT-600|BT-600]]
+- [[Bauteil/BT-610|BT-610]]
+- [[Bauteil/BT-620|BT-620]]
+- [[Bauteil/BT-660|BT-660]]
+- [[Bauteil/BT-700|BT-700]]
+- [[Bauteil/BT-710|BT-710]]
+- [[Bauteil/BT-720|BT-720]]
+- [[Bauteil/BT-721|BT-721]]
+- [[Bauteil/BT-722|BT-722]]
+- [[Bauteil/BT-730|BT-730]]
+- [[Entscheidung/ENT-001|ENT-001]]
+- [[Entscheidung/ENT-002|ENT-002]]
+- [[Entscheidung/ENT-003|ENT-003]]
+- [[Entscheidung/ENT-004|ENT-004]]
+- [[Entscheidung/ENT-005|ENT-005]]
+- [[Entscheidung/ENT-006|ENT-006]]
+- [[Entscheidung/ENT-007|ENT-007]]
+- [[Entscheidung/ENT-009|ENT-009]]
+- [[Entscheidung/ENT-010|ENT-010]]
+- [[Entscheidung/ENT-011|ENT-011]]
+- [[Entscheidung/ENT-012|ENT-012]]
+- [[Entscheidung/ENT-013|ENT-013]]
+- [[Entscheidung/ENT-014|ENT-014]]
+- [[Entscheidung/ENT-015|ENT-015]]
+- [[Entscheidung/ENT-017|ENT-017]]
+- [[Entscheidung/ENT-018|ENT-018]]
+- [[Entscheidung/ENT-019|ENT-019]]
+- [[Entscheidung/ENT-020|ENT-020]]
+- [[Entscheidung/ENT-021|ENT-021]]
+- [[Entscheidung/ENT-022|ENT-022]]
+- [[Entscheidung/ENT-023|ENT-023]]
+- [[Entscheidung/ENT-024|ENT-024]]
+- [[Entscheidung/ENT-025|ENT-025]]
+- [[Entscheidung/ENT-026|ENT-026]]
+- [[Entscheidung/ENT-027|ENT-027]]
+- [[Entscheidung/ENT-028|ENT-028]]
+- [[Entscheidung/ENT-029|ENT-029]]
+- [[Entscheidung/ENT-030|ENT-030]]
+- [[Entscheidung/ENT-031|ENT-031]]
+- [[Entscheidung/ENT-032|ENT-032]]
+- [[Entscheidung/ENT-038|ENT-038]]
+- [[Entscheidung/ENT-044|ENT-044]]
+- [[Entscheidung/ENT-057|ENT-057]]
+- [[Entscheidung/ENT-074|ENT-074]]
+- [[Entscheidung/ENT-080|ENT-080]]
+- [[Entscheidung/ENT-081|ENT-081]]
+- [[Entscheidung/ENT-082|ENT-082]]
+- [[Entscheidung/ENT-087|ENT-087]]
+- [[Entscheidung/ENT-088|ENT-088]]
+- [[Entscheidung/ENT-089|ENT-089]]
+- [[Entscheidung/ENT-090|ENT-090]]
+- [[Entscheidung/ENT-091|ENT-091]]
+- [[Entscheidung/ENT-092|ENT-092]]
+- [[Entscheidung/ENT-095|ENT-095]]
+- [[Entscheidung/ENT-096|ENT-096]]
+- [[Entscheidung/ENT-099|ENT-099]]
+- [[Entscheidung/ENT-100|ENT-100]]
+- [[Entscheidung/ENT-101|ENT-101]]
+- [[Entscheidung/ENT-102|ENT-102]]
+- [[Entscheidung/ENT-103|ENT-103]]
+- [[Entscheidung/ENT-104|ENT-104]]
+- [[Entscheidung/ENT-106|ENT-106]]
+- [[Entscheidung/ENT-107|ENT-107]]
+- [[Entscheidung/ENT-108|ENT-108]]
+- [[Entscheidung/ENT-109|ENT-109]]
+- [[Entscheidung/ENT-110|ENT-110]]
+- [[Entscheidung/ENT-112|ENT-112]]
+- [[Entscheidung/ENT-113|ENT-113]]
+- [[Entscheidung/ENT-131|ENT-131]]
+- [[Entscheidung/ENT-143|ENT-143]]
+- [[Entscheidung/ENT-144|ENT-144]]
+- [[Entscheidung/ENT-145|ENT-145]]
+- [[Entscheidung/ENT-146|ENT-146]]
+- [[Entscheidung/ENT-147|ENT-147]]
+- [[Entscheidung/ENT-148|ENT-148]]
+- [[Entscheidung/ENT-150|ENT-150]]
+- [[Entscheidung/ENT-152|ENT-152]]
+- [[Entscheidung/ENT-158|ENT-158]]
+- [[Entscheidung/ENT-159|ENT-159]]
+- [[Anforderung/REQ-D01|REQ-D01]]
+- [[Anforderung/REQ-D02|REQ-D02]]
+- [[Anforderung/REQ-D03|REQ-D03]]
+- [[Anforderung/REQ-D04|REQ-D04]]
+- [[Anforderung/REQ-D05|REQ-D05]]
+- [[Anforderung/REQ-D06|REQ-D06]]
+- [[Anforderung/REQ-D07|REQ-D07]]
+- [[Anforderung/REQ-D08|REQ-D08]]
+- [[Anforderung/REQ-D09|REQ-D09]]
+- [[Anforderung/REQ-D10|REQ-D10]]
+- [[Anforderung/REQ-D11|REQ-D11]]
+- [[Anforderung/REQ-D12|REQ-D12]]
+- [[Anforderung/REQ-D13|REQ-D13]]
+- [[Anforderung/REQ-D14|REQ-D14]]
+- [[Anforderung/REQ-P01|REQ-P01]]
+- [[Anforderung/REQ-P02|REQ-P02]]
+- [[Anforderung/REQ-P03|REQ-P03]]
+- [[Anforderung/REQ-P04|REQ-P04]]
+- [[Anforderung/REQ-P05|REQ-P05]]
+- [[Anforderung/REQ-P06|REQ-P06]]
+- [[Anforderung/REQ-P07|REQ-P07]]
+- [[Anforderung/REQ-P08|REQ-P08]]
+- [[Anforderung/REQ-P09|REQ-P09]]
+- [[Anforderung/REQ-P10|REQ-P10]]
+- [[Anforderung/REQ-P11|REQ-P11]]
+- [[Anforderung/REQ-P12|REQ-P12]]
+- [[Anforderung/REQ-P13|REQ-P13]]
+- [[Anforderung/REQ-P14|REQ-P14]]
+- [[Anforderung/REQ-P15|REQ-P15]]
+- [[Anforderung/REQ-P16|REQ-P16]]
+
+## Verifikation
+- [[Dokument/06_verifikationsplan]] (REQ-Übersicht im Bericht, Kapitel 2)

@@ -1,0 +1,24 @@
+---
+typ: dokument
+datei: "praesentation/bausteine/G5.md"
+tags: ["dokument", "kopie"]
+---
+# G5
+
+> KI-generiert, erzeugt aus pm/plan/wissensnetz.json – nicht von Hand bearbeiten
+
+- Kopie von `praesentation/bausteine/G5.md` (Quelle im Repo, hier nur Lesekopie)
+
+## Inhalt
+
+> **KI-generiert** (Claude Sonnet, 2026-11-23, Skript), Entwurf. Folienbaustein Vorgang G5 (Baukasten-Renders).
+
+# Das ganze Pack als parametrisches CAD, aus Stückliste und Akten montiert
+**Kernaussage:** Das G5-Modell baut Zellen, Kühlplatte, Rahmen, Schaltbox und Kühlkreis aus der Stückliste zu einem Pack zusammen: LFP 2373 × 1430 × 245 mm, NMC 2273 × 1430 × 228 mm.
+
+**Bild:** cad/baukasten/bilder/g5_LFP_explosion.png (Konstruktionsansicht, kein Zielband; feste Breite 1430 mm beschriftet)
+
+**Zahlen**
+- LFP: Teile 1347, Masse 629,552 kg, Länge 2373 mm, Breite 1430 mm, Höhe max 244,8 mm, Kollisionen 0, Prüfmeldungen 13 (cad/baukasten/ausgabe/ergebnis_LFP.json); Kosten Pack-Teilsumme 6567 € (pm/kosten/ergebnis_LFP.json).
+- NMC: Teile 3605, Masse 480,664 kg, Länge 2273 mm, Breite 1430 mm, Höhe max 227,8 mm, Kollisionen 0, Prüfmeldungen 13 (cad/baukasten/ausgabe/ergebnis_NMC.json); Kosten Pack-Teilsumme 8747 € (pm/kosten/ergebnis_NMC.json).
+

@@ -1,0 +1,52 @@
+{
+ "fall": "NMC_b",
+ "lastfall": "b",
+ "bei_100kN": {
+  "zeit_ms": 1.500039,
+  "weg_platte_mm": 1.000039,
+  "innenwand_mitte_mm": 0.3292927,
+  "zellblock_vorderseite_mm": 0.07405542,
+  "kraft_kN": 275.1476046252967,
+  "erste_100kN_roh_ms": 1.000013,
+  "erste_100kN_roh_weg_mm": 0.500013
+ },
+ "hinweis": "KI-generiert, Entwurf; Quelle lauf/<Fall>/X3T0*, X3A*.gz",
+ "v0_m_s": 2.581988897471611,
+ "energie_start_J": 0.0,
+ "energie_total_ende_J": 2347.537,
+ "energiefehler_proz_max": null,
+ "hourglass_max_J": 0.0,
+ "kontaktenergie_max_J": 0.2714236,
+ "zeitschritt_min_ms": 4.860609e-05,
+ "pfahl_eindringung_max_mm": 4.450012,
+ "zeit_max_ms": 4.950012,
+ "energie_intern_bei_max_J": 2215.723,
+ "kraft_max_kN": 738.8320339831171,
+ "innenwand_mitte_dy_max_mm": 2.780936,
+ "zellblock_vorderseite_dy_max_mm": 2.590763,
+ "zellreihe_eindringung_mm_Tiefste": 2.590763,
+ "t_ende_ms": 4.950012,
+ "ausgewertet_bis_ms": 4.950012,
+ "quelle_ordner": "NMC_b",
+ "hinweis_instabil": null,
+ "kraft_ende_kN": 738.8320339831171,
+ "zyklen": 102866,
+ "laufzeit_s_summe": 819.79,
+ "ziel_eindringung_mm": [
+  0,
+  0
+ ],
+ "zellblock_vorderseite_uy_max_Anim_mm": 2.94487,
+ "film": "film_NMC_b.mp4",
+ "erwartung_pruefung": {
+  "energiebilanz_unter_5_proz": null,
+  "pfahl_eindringung_20_100_mm": false,
+  "pfahl_eindringung_im_Erwartungsband": false,
+  "zellreihe_ab_Rahmenbreite_30mm_eingedrueckt": true,
+  "b_rahmen_unter_10mm": true,
+  "b_zellen_unter_2mm": true
+ },
+ "zell_U_max_mm": 3.262519237721059,
+ "kin_ende_proz": null,
+ "pruef_modell_ok": true
+}

@@ -20,3 +20,6 @@ Welche Chemie ergibt bei 1500 kg und 400 km das bessere Pack? Kriterien: Masse, 
 - Masse: Ein Band liegt vollständig unter dem anderen (kein Überlapp).
 - Fall B: Die Energie steigt um mehr als 35 % oder die Iteration konvergiert nicht.
 - Die Zellzahl weicht um mehr als 10 % von Punkt 4 ab.
+
+## Anforderung (Nachtrag)
+REQ-P02, REQ-P06 (Zuordnung Opus 2026-11-23)

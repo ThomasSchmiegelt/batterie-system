@@ -7,16 +7,16 @@
  "eur_je_stufe": {
   "verifiziert": 0.0,
   "abgeleitet": 16.32,
-  "Schätzung": 6540.505409858159
+  "Schätzung": 6550.743329858158
  },
  "anteil_je_stufe_pct": {
   "verifiziert": 0.0,
-  "abgeleitet": 0.2489009387906371,
-  "Schätzung": 99.75109906120933
+  "abgeleitet": 0.24851290721986213,
+  "Schätzung": 99.7514870927801
  },
- "anteil_schaetzung_an_summe_pct": 99.75109906120933,
+ "anteil_schaetzung_an_summe_pct": 99.7514870927801,
  "anteil_verifiziert_an_summe_pct": 0.0,
- "anteil_abgeleitet_an_summe_pct": 0.2489009387906371,
+ "anteil_abgeleitet_an_summe_pct": 0.24851290721986213,
  "beleg_packpreis": {
   "usd_je_kWh": 97,
   "herkunft": "W29 forschung/ergebnis/W29.md (BNEF 2024, BEV)",
@@ -29,14 +29,14 @@
  "quelle_energie": "pm/bauteile/stueckliste_LFP.json summen.energie_kWh",
  "positionen_offen_gesamt": 3,
  "summe_vollstaendig": false,
- "material_kauf_summe_eur": 6251.295827143782,
+ "material_kauf_summe_eur": 6260.603027143782,
  "fertigung": {
-  "eur_pack": 305.5295827143782,
-  "anteil_an_teilsumme_pct": 4.659718135166687,
-  "eur_je_kWh": 4.133246519404467
+  "eur_pack": 306.4603027143782,
+  "anteil_an_teilsumme_pct": 4.666626272979727,
+  "eur_je_kWh": 4.145837428495376
  },
- "summe_eur_pack": 6556.82540985816,
- "summe_eur_je_kWh": 88.70164244937988,
+ "summe_eur_pack": 6567.063329858161,
+ "summe_eur_je_kWh": 88.84014244937988,
  "zellkosten_eur": 3696.0,
  "je_baugruppe": {
   "BT-100": {
@@ -44,7 +44,7 @@
    "positionen": 1,
    "positionen_offen": 0,
    "offen_liste": [],
-   "anteil_an_teilsumme_pct": 56.368742020232524,
+   "anteil_an_teilsumme_pct": 56.28086428214525,
    "eur_je_kWh": 50.0
   },
   "BT-200": {
@@ -54,7 +54,7 @@
    "offen_liste": [
     "BT-210 (Masse offen)"
    ],
-   "anteil_an_teilsumme_pct": 4.53390666088257,
+   "anteil_an_teilsumme_pct": 4.526838391345631,
    "eur_je_kWh": 4.021649675324675
   },
   "BT-300": {
@@ -62,7 +62,7 @@
    "positionen": 9,
    "positionen_offen": 0,
    "offen_liste": [],
-   "anteil_an_teilsumme_pct": 8.055935105513607,
+   "anteil_an_teilsumme_pct": 8.04337606428121,
    "eur_je_kWh": 7.145746753246752
   },
   "BT-400": {
@@ -72,58 +72,58 @@
    "offen_liste": [
     "BT-410 (Masse offen)"
    ],
-   "anteil_an_teilsumme_pct": 0.7276366863764672,
+   "anteil_an_teilsumme_pct": 0.7265023153783503,
    "eur_je_kWh": 0.6454256918801695
   },
   "BT-500": {
-   "eur_pack": 545.4618,
+   "eur_pack": 545.2818,
    "positionen": 13,
    "positionen_offen": 0,
    "offen_liste": [],
-   "anteil_an_teilsumme_pct": 8.318992285197963,
-   "eur_je_kWh": 7.379082792207792
+   "anteil_an_teilsumme_pct": 8.303282191916631,
+   "eur_je_kWh": 7.376647727272727
   },
   "BT-600": {
-   "eur_pack": 791.8576,
-   "positionen": 11,
+   "eur_pack": 801.3448,
+   "positionen": 12,
    "positionen_offen": 1,
    "offen_liste": [
     "BT-650 (Volumen offen)"
    ],
-   "anteil_an_teilsumme_pct": 12.076844364491473,
-   "eur_je_kWh": 10.712359307359307
+   "anteil_an_teilsumme_pct": 12.202483206710722,
+   "eur_je_kWh": 10.840703463203463
   },
   "BT-700": {
    "eur_pack": 344.77261599999997,
    "positionen": 12,
    "positionen_offen": 0,
    "offen_liste": [],
-   "anteil_an_teilsumme_pct": 5.258224742138715,
+   "anteil_an_teilsumme_pct": 5.250027275242473,
    "eur_je_kWh": 4.66413170995671
   }
  },
  "empfindlichkeit": {
   "zellpreis_x0.8": {
-   "summe_eur_pack": 5817.62540985816,
-   "aenderung_pct": -11.273748404046502
+   "summe_eur_pack": 5827.863329858161,
+   "aenderung_pct": -11.256172856429048
   },
   "zellpreis_x1.2": {
-   "summe_eur_pack": 7296.02540985816,
-   "aenderung_pct": 11.273748404046502
+   "summe_eur_pack": 7306.26332985816,
+   "aenderung_pct": 11.256172856429048
   }
  },
  "pruefung_erwartung": {
-  "zellanteil_pct": 56.368742020232524,
+  "zellanteil_pct": 56.28086428214525,
   "zellanteil_im_band": false,
   "zellanteil_verfehlt_schwelle": true,
   "groesste_nichtzellpositionen_pct": [
    {
-    "pct": 8.72,
+    "pct": 8.67,
     "bt": "BT-610",
     "pos": "600.1"
    },
    {
-    "pct": 4.13,
+    "pct": 4.12,
     "bt": "BT-230",
     "pos": "200.3"
    },
@@ -146,7 +146,7 @@
   "nichtzellposition_ueber_10pct": false,
   "summe_im_band": true,
   "eur_kwh_im_band": true,
-  "abstand_beleg_eur_kwh": -0.5383575506201197,
+  "abstand_beleg_eur_kwh": -0.3998575506201121,
   "beleg_eur_kwh": 89.24
  },
  "pruefung_ko2": {
@@ -161,10 +161,10 @@
    78.2,
    91.80000000000001
   ],
-  "abweichung_pack_pct": 4.909206557730572,
-  "abweichung_eur_kwh_pct": 4.354873469858678,
+  "abweichung_pack_pct": 5.073013277730576,
+  "abweichung_eur_kwh_pct": 4.517814646329277,
   "summe_im_band": true,
-  "anteil_verifiziert_abgeleitet_pct": 0.2489009387906371,
+  "anteil_verifiziert_abgeleitet_pct": 0.24851290721986213,
   "anteil_verifiziert_abgeleitet_unter_grenze": true,
   "offene_ohne_grund": [],
   "herkunft": "pm/kosten/ERWARTUNG.md Nachtrag 2 (ERW-KO2): verfehlt, wenn eine Variante ausserhalb +-8 % liegt"
@@ -614,11 +614,11 @@
    "baugruppe": "BT-500",
    "benennung": "Seitenrahmen (Rahmenprofil, keine Knautschzone nach ENT-151)",
    "menge": 4,
-   "masse_ges_kg": 14.0652,
+   "masse_ges_kg": 14.0352,
    "masse_quelle": "G5-CAD (cad/baukasten/ausgabe/ergebnis_LFP.json)",
    "eur_je": 6,
    "einheit": "€/kg",
-   "eur_ges": 84.3912,
+   "eur_ges": 84.21119999999999,
    "status": "bepreist",
    "grund_offen": null,
    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-540)",
@@ -785,11 +785,11 @@
    "baugruppe": "BT-600",
    "benennung": "Kühlplatte (Blech 1/4/1 mm, Mäander 8 Bahnen laengs, Teilkanal 8 mm)",
    "menge": 2,
-   "masse_ges_kg": 47.6618,
+   "masse_ges_kg": 47.4453,
    "masse_quelle": "G5-CAD (cad/baukasten/ausgabe/ergebnis_LFP.json)",
    "eur_je": 12,
    "einheit": "€/kg",
-   "eur_ges": 571.9416,
+   "eur_ges": 569.3436,
    "status": "bepreist",
    "grund_offen": null,
    "herkunft": "ERW-KO1 Annahme; ERW-KO2 Punkt 4: echte Blech-Hohlmasse (ENT-152…156), Faktor 0,6 entfällt (Schlüssel BT-610)",
@@ -803,12 +803,31 @@
    "preis_schluessel": "BT-620",
    "baugruppe": "BT-600",
    "benennung": "Verteiler und Sammler",
-   "menge": 2,
-   "masse_ges_kg": 0.493,
+   "menge": 4,
+   "masse_ges_kg": 1.007,
    "masse_quelle": "G5-CAD (cad/baukasten/ausgabe/ergebnis_LFP.json)",
    "eur_je": 12,
    "einheit": "€/kg",
-   "eur_ges": 5.916,
+   "eur_ges": 12.084,
+   "status": "bepreist",
+   "grund_offen": null,
+   "herkunft": "ERW-KO1 Annahme (Schlüssel BT-620)",
+   "preis_status": "Schätzung (Annahme Opus, ERW-KO1)",
+   "preis_stufe": "Schätzung",
+   "teile": null
+  },
+  {
+   "pos": "600.2b",
+   "bt": "BT-620",
+   "preis_schluessel": "BT-620",
+   "baugruppe": "BT-600",
+   "benennung": "Verteilerrohr und Sammelrohr (Al, Innen-Ø 25 mm)",
+   "menge": 2,
+   "masse_ges_kg": 0.4931,
+   "masse_quelle": "G5-CAD (cad/baukasten/ausgabe/ergebnis_LFP.json)",
+   "eur_je": 12,
+   "einheit": "€/kg",
+   "eur_ges": 5.917199999999999,
    "status": "bepreist",
    "grund_offen": null,
    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-620)",
@@ -823,7 +842,7 @@
    "baugruppe": "BT-600",
    "benennung": "Kühlmittelanschlüsse Ein/Aus",
    "menge": 2,
-   "masse_ges_kg": 0.0199,
+   "masse_ges_kg": 0.0225,
    "masse_quelle": "G5-CAD (cad/baukasten/ausgabe/ergebnis_LFP.json)",
    "eur_je": 10,
    "einheit": "€/Stück",
@@ -956,7 +975,7 @@
    "baugruppe": "BT-600",
    "benennung": "Kühlmittelschläuche",
    "menge": 1,
-   "masse_ges_kg": 0.3944,
+   "masse_ges_kg": 0.3503,
    "masse_quelle": "G5-CAD (cad/baukasten/ausgabe/ergebnis_LFP.json)",
    "eur_je": 15,
    "einheit": "€/Satz",

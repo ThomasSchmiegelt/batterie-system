@@ -110,7 +110,7 @@
           "rate": 0
         }
       ],
-      "notes": "Stufe 1 | Status: fertig | REQ: REQ-D08 | Wissen: P01, P02, P03, P04, P05, P06, P07, P08, P09, P10 | Befunde: B-BAT-003, B-BAT-004, B-BAT-023, B-BAT-022, B-BAT-020, B-BAT-019, B-BAT-017, B-BAT-013, B-BAT-007 | Software: PI, patent-recherche | Ergebnis: forschung/PATENTE.md ✓",
+      "notes": "Stufe 1 | Status: fertig | REQ: REQ-D08 | Wissen: P01, P02, P03, P04, P05, P06, P07, P08, P09, P10 | Befunde: B-BAT-003, B-BAT-004, B-BAT-023, B-BAT-022, B-BAT-020, B-BAT-019, B-BAT-017, B-BAT-013, B-BAT-007, B-BAT-044, B-BAT-045 | Software: PI, patent-recherche | Ergebnis: forschung/PATENTE.md ✓",
       "is_start": false,
       "is_end": false
     },
@@ -469,7 +469,7 @@
           "rate": 0
         }
       ],
-      "notes": "Stufe 3, PM | Status: ohne Nachweis | REQ: REQ-D11 | Bauteil: BT-100 | Wissen: W03, W08, P01 | Befunde: B-BAT-004, B-BAT-015, B-BAT-014, B-BAT-013, B-BAT-012, B-BAT-010, B-BAT-009, B-BAT-008, B-BAT-007 | ENT: ENT-002, ENT-004, ENT-005, ENT-006, ENT-007, ENT-008, ENT-009, ENT-010, ENT-011, ENT-012, ENT-014, ENT-015, ENT-016, ENT-017, ENT-018, ENT-019, ENT-020, ENT-025, ENT-026 | Stückliste: 100.1 | Doku: pm/bauteile/parameter.json",
+      "notes": "Stufe 3, PM | Status: ohne Nachweis | REQ: REQ-D11 | Bauteil: BT-100 | Wissen: W03, W08, P01 | Befunde: B-BAT-004, B-BAT-015, B-BAT-014, B-BAT-013, B-BAT-012, B-BAT-010, B-BAT-009, B-BAT-008, B-BAT-007, B-BAT-044 | ENT: ENT-002, ENT-004, ENT-005, ENT-006, ENT-007, ENT-008, ENT-009, ENT-010, ENT-011, ENT-012, ENT-014, ENT-015, ENT-016, ENT-017, ENT-018, ENT-019, ENT-020, ENT-025, ENT-026 | Stückliste: 100.1 | Doku: pm/bauteile/parameter.json",
       "is_start": false,
       "is_end": false
     },
@@ -752,7 +752,7 @@
           "rate": 0
         }
       ],
-      "notes": "Stufe 4 | Status: offen | REQ: REQ-P15 | Bauteil: BT-300 | Wissen: W05, W14, T06, P07 | Befunde: B-BAT-002, B-BAT-004, B-BAT-013 | ENT: ENT-004, ENT-110 | Stückliste: 300.1, 300.2, 300.3, 300.4, 300.6, 600.4, 700.7, 700.10 | Software: foxBMS | Ergebnis: sim/elektrik/bms*",
+      "notes": "Stufe 4 | Status: offen | REQ: REQ-P15 | Bauteil: BT-300 | Wissen: W05, W14, T06, P07 | Befunde: B-BAT-002, B-BAT-004, B-BAT-013, B-BAT-045 | ENT: ENT-004, ENT-110 | Stückliste: 300.1, 300.2, 300.3, 300.4, 300.6, 600.4, 700.7, 700.10 | Software: foxBMS | Ergebnis: sim/elektrik/bms*",
       "is_start": false,
       "is_end": false
     },
@@ -838,7 +838,7 @@
           "rate": 0
         }
       ],
-      "notes": "Stufe 5 | Status: offen | REQ: REQ-P09 | Bauteil: BT-600 | Wissen: P03 | Befunde: B-BAT-021, B-BAT-013 | ENT: ENT-004, ENT-081, ENT-088 | Stückliste: 600.2, 600.3, 600.5 | Software: numpy, scipy | Ergebnis: sim/kuehlung/verteilung*",
+      "notes": "Stufe 5 | Status: offen | REQ: REQ-P09 | Bauteil: BT-600 | Wissen: P03 | Befunde: B-BAT-021, B-BAT-013, B-BAT-044 | ENT: ENT-004, ENT-081, ENT-088 | Stückliste: 600.2, 600.3, 600.5 | Software: numpy, scipy | Ergebnis: sim/kuehlung/verteilung*",
       "is_start": false,
       "is_end": false
     },
@@ -1282,7 +1282,7 @@
           "rate": 0
         }
       ],
-      "notes": "Stufe 7 | Status: offen | REQ: REQ-D13 | Software: Blender, FreeCAD | Doku: video/STORYBOARD.md | Ergebnis: video/*.mp4",
+      "notes": "Stufe 7 | Status: fertig | REQ: REQ-D13 | Software: Blender, FreeCAD | Doku: video/STORYBOARD.md | Ergebnis: video/*.mp4 ✓",
       "is_start": false,
       "is_end": false
     },
@@ -1338,7 +1338,7 @@
           "rate": 0
         }
       ],
-      "notes": "Stufe 7, REQ-D14 | Status: offen | REQ: REQ-D14, REQ-D01 | Software: python-pptx, LibreOffice | Doku: praesentation/STORYBOARD.md | Ergebnis: praesentation/*.pptx",
+      "notes": "Stufe 7, REQ-D14 | Status: fertig | REQ: REQ-D14, REQ-D01 | Software: python-pptx, LibreOffice | Doku: praesentation/STORYBOARD.md | Ergebnis: praesentation/*.pptx ✓",
       "is_start": false,
       "is_end": false
     },

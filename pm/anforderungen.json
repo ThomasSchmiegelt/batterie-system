@@ -1,0 +1,1327 @@
+{
+ "hinweis": "KI-generiert (Claude Sonnet, 2026-11-23), Entwurf. Quelle: docs/01_lastenheft.md (Text unverändert) und REQ-Überblick bericht/bericht.tex. Felder nur befüllt, wenn dort wörtlich vorhanden, sonst \"nicht definiert\". Keine neuen Zahlen. Freigabe nur Autor. | 2026-11-23 Sonnet nach pm/AUFTRAG_REQ_SCHAERFEN.md: Kriterien von Opus, je Kriterium herkunft_kriterium; Kriterien ohne Herkunft Autor sind Annahmen/Vorschläge (Freigaberunde).",
+ "felder": "messgroesse, ort, lastfall, methode (A/S/I/T/R), ebene (System/Subsystem/Bauteil), kriterium (dict oder Liste), nachweis [{datei, schluessel (punktgetrennt), groesse, variante}], bestaetigt_autor, herkunft",
+ "anforderungen": [
+  {
+   "id": "REQ-P01",
+   "gruppe": "REQ-P",
+   "text": "Anwendung / Fahrzeugklasse",
+   "wert": "Pkw, Fahrzeugmasse etwa 1500 kg, Anhaltswert (Autor 2026-11-16); Auslegung rechnet Fall A (mit Batterie) und Fall B (ohne Batterie) als Spanne",
+   "quelle_lastenheft": "Autor",
+   "prioritaet": "Muss",
+   "status_lastenheft": "Vorgabe Autor",
+   "messgroesse": "Fahrzeugmasse der Auslegung",
+   "ort": "Fahrzeug",
+   "lastfall": "–",
+   "methode": "R",
+   "ebene": "System",
+   "kriterium": [
+    {
+     "groesse": "m_fahrzeug",
+     "op": "==",
+     "wert": 1500,
+     "einheit": "kg",
+     "herkunft_kriterium": "Autor"
+    }
+   ],
+   "nachweis": [
+    {
+     "datei": "sim/chemie/varianten_lfp_nmc/ergebnis.json",
+     "schluessel": "varianten.LFP.faelle.A.hauptwert.gesamtmasse_kg",
+     "groesse": "m_fahrzeug",
+     "variante": "LFP"
+    },
+    {
+     "datei": "sim/chemie/varianten_lfp_nmc/ergebnis.json",
+     "schluessel": "varianten.NMC.faelle.A.hauptwert.gesamtmasse_kg",
+     "groesse": "m_fahrzeug",
+     "variante": "NMC"
+    }
+   ],
+   "bestaetigt_autor": true,
+   "herkunft": "docs/01_lastenheft.md Zeile 20: „Pkw, Fahrzeugmasse etwa 1500 kg, Anhaltswert (Autor 2026-11-16)“; kein Prüfmaß",
+   "v_modell_vorschlag": "Opus 2026-11-23, Autor offen"
+  },
+  {
+   "id": "REQ-P02",
+   "gruppe": "REQ-P",
+   "text": "nutzbarer Energieinhalt",
+   "wert": "aus Reichweite 400 km (Vorgabe Autor 2026-11-16) × Verbrauch (Annahme), Vergleich sim/chemie/vergleich_lfp_nmc",
+   "quelle_lastenheft": "Autor",
+   "prioritaet": "Muss",
+   "status_lastenheft": "Reichweite: Vorgabe Autor",
+   "messgroesse": "Energieinhalt brutto",
+   "ort": "Pack",
+   "lastfall": "25 °C",
+   "methode": "A",
+   "ebene": "System",
+   "kriterium": [
+    {
+     "groesse": "E_brutto",
+     "op": ">=",
+     "variante": "LFP",
+     "einheit": "kWh",
+     "herkunft_kriterium": "Startwert (Vorschlag)",
+     "wert_aus": {
+      "datei": "pm/startwerte_LFP.json",
+      "schluessel": "abgeleitet.kWh_brutto"
+     }
+    },
+    {
+     "groesse": "E_brutto",
+     "op": ">=",
+     "variante": "NMC",
+     "einheit": "kWh",
+     "herkunft_kriterium": "Startwert (Vorschlag)",
+     "wert_aus": {
+      "datei": "pm/startwerte_NMC.json",
+      "schluessel": "abgeleitet.kWh_brutto"
+     }
+    }
+   ],
+   "nachweis": [
+    {
+     "datei": "pm/bauteile/stueckliste_LFP.json",
+     "schluessel": "summen.energie_kWh",
+     "groesse": "E_brutto",
+     "variante": "LFP"
+    },
+    {
+     "datei": "pm/bauteile/stueckliste_NMC.json",
+     "schluessel": "summen.energie_kWh",
+     "groesse": "E_brutto",
+     "variante": "NMC"
+    }
+   ],
+   "bestaetigt_autor": false,
+   "herkunft": "docs/01_lastenheft.md Zeile 21",
+   "v_modell_vorschlag": "Opus 2026-11-23, Autor offen"
+  },
+  {
+   "id": "REQ-P03",
+   "gruppe": "REQ-P",
+   "text": "Systemspannung (Nenn, min, max)",
+   "wert": "U_nenn 720–880 V, U_min und U_max ausweisen (Autor, Freigaberunde 2026-11-23); 800 V nominal (ENT-006)",
+   "quelle_lastenheft": "Autor",
+   "prioritaet": "Muss",
+   "status_lastenheft": "festgelegt",
+   "messgroesse": "U_nenn; U_min und U_max",
+   "ort": "Pack",
+   "lastfall": "SOC 0 und 100 %",
+   "methode": "A",
+   "ebene": "System",
+   "kriterium": [
+    {
+     "groesse": "U_nenn",
+     "op": "zwischen",
+     "wert": [
+      720,
+      880
+     ],
+     "einheit": "V",
+     "herkunft_kriterium": "Autor (Freigaberunde 2026-11-23)",
+     "hinweis": "Autor: 800 V nominal (ENT-006); Band ±10 % ist Annahme Opus"
+    },
+    {
+     "groesse": "U_min",
+     "op": "vorhanden",
+     "herkunft_kriterium": "Autor (Freigaberunde 2026-11-23)"
+    },
+    {
+     "groesse": "U_max",
+     "op": "vorhanden",
+     "herkunft_kriterium": "Autor (Freigaberunde 2026-11-23)"
+    }
+   ],
+   "nachweis": [
+    {
+     "datei": "sim/chemie/varianten_lfp_nmc/ergebnis.json",
+     "schluessel": "systemspannung_V",
+     "groesse": "U_nenn",
+     "hinweis": "Vorgabe-Eingang der Variantenrechnung, keine gerechnete Pack-Spannung"
+    }
+   ],
+   "bestaetigt_autor": true,
+   "herkunft": "docs/01_lastenheft.md Zeile 22: „800 V nominal (ENT-006, Autor 2026-11-16); min/max folgen aus Zellfenster“",
+   "v_modell_vorschlag": "Opus 2026-11-23, Autor offen | Freigaberunde 2026-11-23: bestätigt (Autor), pm/freigaberunde_2026-11-23.md"
+  },
+  {
+   "id": "REQ-P04",
+   "gruppe": "REQ-P",
+   "text": "Dauer- und Spitzenleistung Entladen",
+   "wert": "P_spitze nach Startwert (10 s), P_dauer ≥ 60 kW (Autor, Freigaberunde 2026-11-23)",
+   "quelle_lastenheft": "Autor",
+   "prioritaet": "Muss",
+   "status_lastenheft": "festgelegt",
+   "messgroesse": "P_dauer; P_spitze 10 s",
+   "ort": "Pack",
+   "lastfall": "25 °C, SOC 50 %",
+   "methode": "S",
+   "ebene": "System",
+   "kriterium": [
+    {
+     "groesse": "P_spitze",
+     "op": ">=",
+     "einheit": "kW",
+     "herkunft_kriterium": "Autor (Freigaberunde 2026-11-23)",
+     "wert_aus": {
+      "datei": "pm/startwerte.json",
+      "schluessel": "fahrzeug_tabelle.p_spitze"
+     },
+     "hinweis": "10 s"
+    },
+    {
+     "groesse": "P_dauer",
+     "op": ">=",
+     "wert": 60,
+     "einheit": "kW",
+     "herkunft_kriterium": "Autor (Freigaberunde 2026-11-23)",
+     "hinweis": "Annahme Opus; startwerte.json nennt dauer_zu_spitze 0,4 (Annahme)"
+    }
+   ],
+   "nachweis": [],
+   "bestaetigt_autor": true,
+   "herkunft": "docs/01_lastenheft.md Zeile 23",
+   "v_modell_vorschlag": " | Freigaberunde 2026-11-23: bestätigt (Autor), pm/freigaberunde_2026-11-23.md"
+  },
+  {
+   "id": "REQ-P05",
+   "gruppe": "REQ-P",
+   "text": "Schnellladen 10 → 80 %",
+   "wert": "LFP 20 min, NMC-4680 30 min (Autor 2026-11-17 „30 minuten“, nach K1b; Variantenunterschied)",
+   "quelle_lastenheft": "Autor",
+   "prioritaet": "Muss",
+   "status_lastenheft": "festgelegt",
+   "messgroesse": "Ladezeit 10 auf 80 %",
+   "ort": "Pack",
+   "lastfall": "Start 25 °C",
+   "methode": "S",
+   "ebene": "System",
+   "kriterium": [
+    {
+     "groesse": "t_10_80",
+     "op": "<=",
+     "variante": "LFP",
+     "wert": 20,
+     "einheit": "min",
+     "herkunft_kriterium": "Autor",
+     "blockiert": "LFP ohne gemessenen Zellparametersatz nicht nachweisbar (bericht/bericht.tex, REQ-P05; sim/chemie/c2_kalibrierung/ERGEBNIS.md)"
+    },
+    {
+     "groesse": "t_10_80",
+     "op": "<=",
+     "variante": "NMC",
+     "wert": 30,
+     "einheit": "min",
+     "herkunft_kriterium": "Autor"
+    }
+   ],
+   "nachweis": [
+    {
+     "datei": "sim/chemie/c2_kalibrierung/ergebnis_schnellladen_n4680.json",
+     "schluessel": "N4680.2.zeit_10_80_min",
+     "groesse": "t_10_80",
+     "variante": "NMC",
+     "hinweis": "Fall 1,5C (C_start 1,5); Plating-Risiko laut Bericht"
+    }
+   ],
+   "bestaetigt_autor": true,
+   "herkunft": "docs/01_lastenheft.md Zeile 24: „LFP 20 min, NMC-4680 30 min (Autor 2026-11-17 ‚30 minuten‘, nach K1b)“; Operator <= ist Lesart von „in 20 min“",
+   "blockiert": "LFP ohne gemessenen Zellparametersatz nicht nachweisbar (bericht/bericht.tex, REQ-P05; sim/chemie/c2_kalibrierung/ERGEBNIS.md)",
+   "v_modell_vorschlag": "Opus 2026-11-23, Autor offen"
+  },
+  {
+   "id": "REQ-P06",
+   "gruppe": "REQ-P",
+   "text": "Zellchemie",
+   "wert": "zwei Varianten gleicher Spezifikation (Autor 2026-11-16): LFP-Blade prismatisch (ENT-005) und NMC811-Rundzelle 4680 (ENT-007…011); Baum ENT-012",
+   "quelle_lastenheft": "Autor",
+   "prioritaet": "Muss",
+   "status_lastenheft": "entschieden",
+   "messgroesse": "Varianten gebaut",
+   "ort": "Pack",
+   "lastfall": "–",
+   "methode": "I",
+   "ebene": "System",
+   "kriterium": [
+    {
+     "groesse": "CAD_Pack",
+     "op": "vorhanden",
+     "variante": "LFP",
+     "herkunft_kriterium": "Autor"
+    },
+    {
+     "groesse": "CAD_Pack",
+     "op": "vorhanden",
+     "variante": "NMC",
+     "herkunft_kriterium": "Autor"
+    }
+   ],
+   "nachweis": [
+    {
+     "datei": "cad/baukasten/ausgabe/ergebnis_LFP.json",
+     "schluessel": "teile",
+     "groesse": "CAD_Pack",
+     "variante": "LFP"
+    },
+    {
+     "datei": "cad/baukasten/ausgabe/ergebnis_NMC.json",
+     "schluessel": "teile",
+     "groesse": "CAD_Pack",
+     "variante": "NMC"
+    }
+   ],
+   "bestaetigt_autor": true,
+   "herkunft": "docs/01_lastenheft.md Zeile 25: Status „entschieden“ (Autor 2026-11-16)",
+   "v_modell_vorschlag": "Opus 2026-11-23, Autor offen"
+  },
+  {
+   "id": "REQ-P07",
+   "gruppe": "REQ-P",
+   "text": "Bauraum (L × B × H) und Masse",
+   "wert": "L ≤ 2400 mm (Autor, Freigaberunde 2026-11-23); B = 1430 mm (ENT-030, Autor 2026-11-17); H ≤ 130 mm im Zellbereich, Dom Schaltbox ≤ 250 mm; Masse LFP ≤ 528 kg, NMC ≤ 370 kg (Startwerte als Ziel)",
+   "quelle_lastenheft": "Autor",
+   "prioritaet": "Muss",
+   "status_lastenheft": "festgelegt",
+   "messgroesse": "L, B, H, Masse",
+   "ort": "Pack",
+   "lastfall": "–",
+   "methode": "I",
+   "ebene": "System",
+   "kriterium": [
+    {
+     "groesse": "B",
+     "op": "<=",
+     "wert": 1430,
+     "einheit": "mm",
+     "herkunft_kriterium": "Autor (Freigaberunde 2026-11-23)"
+    },
+    {
+     "groesse": "L",
+     "op": "<=",
+     "wert": 2400,
+     "einheit": "mm",
+     "herkunft_kriterium": "Autor (Freigaberunde 2026-11-23)",
+     "hinweis": "Freigaberunde 2026-11-23 Runde 1: L ≤ 2400 mm (Radstand Kompaktwagen etwa 2,6–2,7 m, Annahme); ersetzt 1950 (ENT-013)"
+    },
+    {
+     "groesse": "H",
+     "op": "<=",
+     "wert": 130,
+     "einheit": "mm",
+     "herkunft_kriterium": "Autor (Freigaberunde 2026-11-23)",
+     "hinweis": "H ≤ 130 mm im Zellbereich (Runde 1)"
+    },
+    {
+     "groesse": "H_dom",
+     "op": "<=",
+     "wert": 250,
+     "einheit": "mm",
+     "hinweis": "Dom Schaltbox bis 250 mm (Runde 1)",
+     "herkunft_kriterium": "Autor (Freigaberunde 2026-11-23)"
+    },
+    {
+     "groesse": "Masse",
+     "op": "<=",
+     "variante": "LFP",
+     "einheit": "kg",
+     "herkunft_kriterium": "Autor (Freigaberunde 2026-11-23)",
+     "wert_aus": {
+      "datei": "pm/startwerte_LFP.json",
+      "schluessel": "abgeleitet.masse_kg"
+     },
+     "hinweis": "Startwerte als Ziel (Runde 1): LFP ≤ 528 kg, NMC ≤ 370 kg; beide aktuell verfehlt, Leichtbauziel Schleife 2"
+    },
+    {
+     "groesse": "Masse",
+     "op": "<=",
+     "variante": "NMC",
+     "einheit": "kg",
+     "herkunft_kriterium": "Autor (Freigaberunde 2026-11-23)",
+     "wert_aus": {
+      "datei": "pm/startwerte_NMC.json",
+      "schluessel": "abgeleitet.masse_kg"
+     },
+     "hinweis": "Startwerte als Ziel (Runde 1): LFP ≤ 528 kg, NMC ≤ 370 kg; beide aktuell verfehlt, Leichtbauziel Schleife 2"
+    }
+   ],
+   "nachweis": [
+    {
+     "datei": "cad/baukasten/ausgabe/ergebnis_LFP.json",
+     "schluessel": "breite_mm",
+     "groesse": "B",
+     "variante": "LFP"
+    },
+    {
+     "datei": "cad/baukasten/ausgabe/ergebnis_LFP.json",
+     "schluessel": "laenge_mm",
+     "groesse": "L",
+     "variante": "LFP"
+    },
+    {
+     "datei": "cad/baukasten/ausgabe/ergebnis_LFP.json",
+     "schluessel": "ctx.z_deckel_o",
+     "groesse": "H",
+     "variante": "LFP",
+     "hinweis": "Deckeloberkante im Zellbereich (ctx, mm über Unterkante); Bedeutung des Schlüssels von Opus zu bestätigen"
+    },
+    {
+     "datei": "cad/baukasten/ausgabe/ergebnis_LFP.json",
+     "schluessel": "hoehe_max_mm",
+     "groesse": "H_dom",
+     "variante": "LFP",
+     "hinweis": "Gesamthöhe max. inkl. Dom Schaltbox"
+    },
+    {
+     "datei": "pm/bauteile/stueckliste_LFP.json",
+     "schluessel": "summen.masse_stueckliste_kg",
+     "groesse": "Masse",
+     "variante": "LFP"
+    },
+    {
+     "datei": "cad/baukasten/ausgabe/ergebnis_NMC.json",
+     "schluessel": "breite_mm",
+     "groesse": "B",
+     "variante": "NMC"
+    },
+    {
+     "datei": "cad/baukasten/ausgabe/ergebnis_NMC.json",
+     "schluessel": "laenge_mm",
+     "groesse": "L",
+     "variante": "NMC"
+    },
+    {
+     "datei": "cad/baukasten/ausgabe/ergebnis_NMC.json",
+     "schluessel": "ctx.z_deckel_o",
+     "groesse": "H",
+     "variante": "NMC",
+     "hinweis": "Deckeloberkante im Zellbereich (ctx, mm über Unterkante); Bedeutung des Schlüssels von Opus zu bestätigen"
+    },
+    {
+     "datei": "cad/baukasten/ausgabe/ergebnis_NMC.json",
+     "schluessel": "hoehe_max_mm",
+     "groesse": "H_dom",
+     "variante": "NMC",
+     "hinweis": "Gesamthöhe max. inkl. Dom Schaltbox"
+    },
+    {
+     "datei": "pm/bauteile/stueckliste_NMC.json",
+     "schluessel": "summen.masse_stueckliste_kg",
+     "groesse": "Masse",
+     "variante": "NMC"
+    }
+   ],
+   "bestaetigt_autor": true,
+   "herkunft": "docs/01_lastenheft.md Zeile 26: „L = 1950 mm (ENT-013, Autor 2026-11-17); B = 1430 mm (ENT-030, Autor 2026-11-17); H 130 mm Annahme; Masse offen“",
+   "v_modell_vorschlag": "Opus 2026-11-23, Autor offen | Freigaberunde 2026-11-23: bestätigt (Autor), pm/freigaberunde_2026-11-23.md"
+  },
+  {
+   "id": "REQ-P08",
+   "gruppe": "REQ-P",
+   "text": "Umgebungstemperatur Betrieb und Laden",
+   "wert": "Betrieb −20 … +45 °C, Laden 0 … +45 °C (Vorheizen unter 0 °C) (Autor, Freigaberunde 2026-11-23)",
+   "quelle_lastenheft": "Autor / Norm",
+   "prioritaet": "Muss",
+   "status_lastenheft": "festgelegt",
+   "messgroesse": "Umgebungstemperatur",
+   "ort": "Fahrzeug",
+   "lastfall": "Betrieb und Laden",
+   "methode": "S",
+   "ebene": "System",
+   "kriterium": [
+    {
+     "groesse": "T_betrieb",
+     "op": "zwischen",
+     "wert": [
+      -20,
+      45
+     ],
+     "einheit": "°C",
+     "herkunft_kriterium": "Autor (Freigaberunde 2026-11-23)"
+    },
+    {
+     "groesse": "T_laden",
+     "op": "zwischen",
+     "wert": [
+      0,
+      45
+     ],
+     "einheit": "°C",
+     "herkunft_kriterium": "Autor (Freigaberunde 2026-11-23)"
+    }
+   ],
+   "nachweis": [],
+   "bestaetigt_autor": true,
+   "herkunft": "docs/01_lastenheft.md Zeile 27",
+   "v_modell_vorschlag": " | Freigaberunde 2026-11-23: bestätigt (Autor), pm/freigaberunde_2026-11-23.md"
+  },
+  {
+   "id": "REQ-P09",
+   "gruppe": "REQ-P",
+   "text": "max. Zelltemperatur und Spreizung zwischen den Zellen",
+   "wert": "T_max ≤ 45 °C, Spreizung ΔT ≤ 5 K zwischen den Zellen (Autor, Freigaberunde 2026-11-23; Nachweis neu auswerten, Schleife 2)",
+   "quelle_lastenheft": "Autor",
+   "prioritaet": "Muss",
+   "status_lastenheft": "festgelegt",
+   "messgroesse": "T_max Zelle; ΔT zwischen den Zellen",
+   "ort": "Zelle",
+   "lastfall": "Schnellladen 10 auf 80 % (K4, V4p wie gebaut)",
+   "methode": "S",
+   "ebene": "Subsystem",
+   "kriterium": [
+    {
+     "groesse": "T_max",
+     "op": "<=",
+     "wert": 45,
+     "einheit": "°C",
+     "herkunft_kriterium": "Autor (Freigaberunde 2026-11-23)"
+    },
+    {
+     "groesse": "Spreizung",
+     "op": "<=",
+     "wert": 5,
+     "einheit": "K",
+     "herkunft_kriterium": "Autor (Freigaberunde 2026-11-23)"
+    }
+   ],
+   "nachweis": [
+    {
+     "datei": "sim/kuehlung/k3_gesamt/elmer_LFP_P0_V4p/ergebnis.json",
+     "schluessel": "T_max_Zellblock_C",
+     "groesse": "T_max",
+     "variante": "LFP",
+     "hinweis": "Zellblock-Wert; Definition ΔT offen (bericht.tex Kap. k3k4)"
+    },
+    {
+     "datei": "sim/kuehlung/k3_gesamt/elmer_LFP_P0_V4p/ergebnis.json",
+     "schluessel": "dT_Zellblock_K",
+     "groesse": "Spreizung",
+     "variante": "LFP",
+     "hinweis": "Zellblockwert; neu auswerten: ΔT zwischen Zellen (Schleife 2)"
+    },
+    {
+     "datei": "sim/kuehlung/k3_gesamt/elmer_NMC_P4_V4p/ergebnis.json",
+     "schluessel": "T_max_Zellblock_C",
+     "groesse": "T_max",
+     "variante": "NMC",
+     "hinweis": "Zellblock-Wert; Definition ΔT offen (bericht.tex Kap. k3k4)"
+    },
+    {
+     "datei": "sim/kuehlung/k3_gesamt/elmer_NMC_P4_V4p/ergebnis.json",
+     "schluessel": "dT_Zellblock_K",
+     "groesse": "Spreizung",
+     "variante": "NMC",
+     "hinweis": "Zellblockwert; neu auswerten: ΔT zwischen Zellen (Schleife 2)"
+    }
+   ],
+   "bestaetigt_autor": true,
+   "herkunft": "docs/01_lastenheft.md Zeile 28: „T_max ≤ 45 °C, Spreizung in der Zelle ≤ 5 K (Autor 2026-11-17)“",
+   "v_modell_vorschlag": "Opus 2026-11-23, Autor offen | Freigaberunde 2026-11-23: bestätigt (Autor), pm/freigaberunde_2026-11-23.md"
+  },
+  {
+   "id": "REQ-P10",
+   "gruppe": "REQ-P",
+   "text": "Lebensdauer (Zyklen, Jahre, Restkapazität)",
+   "wert": "SOH ≥ 70 % nach 200.000 km (Autor, Freigaberunde 2026-11-23)",
+   "quelle_lastenheft": "Autor",
+   "prioritaet": "Soll",
+   "status_lastenheft": "festgelegt",
+   "messgroesse": "Restkapazität (SOH)",
+   "ort": "Pack",
+   "lastfall": "Laufleistung km_leben = 200000 km (startwerte.json annahmen.km_leben)",
+   "methode": "S",
+   "ebene": "System",
+   "kriterium": [
+    {
+     "groesse": "SOH",
+     "op": ">=",
+     "wert": 70,
+     "einheit": "%",
+     "herkunft_kriterium": "Autor (Freigaberunde 2026-11-23)",
+     "hinweis": "Laufleistung: Startwert (Vorschlag); 70 %: Annahme Opus"
+    }
+   ],
+   "nachweis": [],
+   "bestaetigt_autor": true,
+   "herkunft": "docs/01_lastenheft.md Zeile 29",
+   "v_modell_vorschlag": "Opus 2026-11-23, Autor offen | Freigaberunde 2026-11-23: bestätigt (Autor), pm/freigaberunde_2026-11-23.md"
+  },
+  {
+   "id": "REQ-P11",
+   "gruppe": "REQ-P",
+   "text": "Sicherheit: keine Ausbreitung des thermischen Durchgehens bzw. Warnzeit nach Norm",
+   "wert": "nach Norm (BAT-DOC-07)",
+   "quelle_lastenheft": "Norm",
+   "prioritaet": "Muss",
+   "status_lastenheft": "offen",
+   "messgroesse": "Vorwarnzeit vor gefährlicher Situation im Fahrgastraum",
+   "ort": "Pack",
+   "lastfall": "eine Zelle durchgehend",
+   "methode": "T",
+   "ebene": "System",
+   "kriterium": [
+    {
+     "groesse": "t_warnung",
+     "op": ">=",
+     "wert": 5,
+     "einheit": "min",
+     "herkunft_kriterium": "Norm (W35d belegt: UN R100 42024X1955, Warnung 5 min vor gefährlicher Situation im Fahrgastraum)",
+     "hinweis": "FMVSS 305a (W40b) misst anders: Warnung innerhalb 3 min nach Beginn des Ereignisses; beide ausweisen"
+    }
+   ],
+   "nachweis": [],
+   "bestaetigt_autor": false,
+   "herkunft": "docs/01_lastenheft.md Zeile 30",
+   "v_modell_vorschlag": "Opus 2026-11-23, Autor offen"
+  },
+  {
+   "id": "REQ-P12",
+   "gruppe": "REQ-P",
+   "text": "Kühlmittel und Anschlüsse",
+   "wert": "Kühlmittel Wasser-Glykol, Δp je Platte ≤ 0,5 bar, Verteilung ±10 % (Autor, Freigaberunde 2026-11-23)",
+   "quelle_lastenheft": "Autor",
+   "prioritaet": "Soll",
+   "status_lastenheft": "festgelegt",
+   "messgroesse": "Kühlmittel; Δp je Platte; Durchflussverteilung",
+   "ort": "Kühlplatte",
+   "lastfall": "Schnellladen (Durchfluss ×3, k = 2, Ø 25 mm)",
+   "methode": "S",
+   "ebene": "Subsystem",
+   "kriterium": [
+    {
+     "groesse": "Kuehlmittel",
+     "op": "vorhanden",
+     "herkunft_kriterium": "Autor (Freigaberunde 2026-11-23)"
+    },
+    {
+     "groesse": "dp_Platte",
+     "op": "<=",
+     "wert": 0.5,
+     "einheit": "bar",
+     "herkunft_kriterium": "Autor (Freigaberunde 2026-11-23)"
+    },
+    {
+     "groesse": "Verteilung_abw",
+     "op": "<=",
+     "wert": 10,
+     "einheit": "%",
+     "herkunft_kriterium": "Autor (Freigaberunde 2026-11-23)",
+     "hinweis": "±10 % aus ENT-159 (entschieden, Mensch)"
+    }
+   ],
+   "nachweis": [
+    {
+     "datei": "pm/bauteile/stueckliste_LFP.json",
+     "schluessel": "positionen[bt=BT-650].werkstoff",
+     "groesse": "Kuehlmittel",
+     "variante": "LFP"
+    },
+    {
+     "datei": "sim/kuehlung/k5_parallel/ergebnis_verteiler.json",
+     "schluessel": "gruppen.faelle.k2_d25_x3.dp_bar",
+     "groesse": "dp_Platte"
+    },
+    {
+     "datei": "sim/kuehlung/k5_parallel/ergebnis_verteiler.json",
+     "schluessel": "gruppen.faelle.k2_d25_x3.max_abw_pct",
+     "groesse": "Verteilung_abw"
+    }
+   ],
+   "bestaetigt_autor": true,
+   "herkunft": "docs/01_lastenheft.md Zeile 31",
+   "v_modell_vorschlag": "Opus 2026-11-23: S statt A, 1D-Netz mit angenommenem ζ=1 ist nicht validiert; Autor offen | Freigaberunde 2026-11-23: bestätigt (Autor), pm/freigaberunde_2026-11-23.md"
+  },
+  {
+   "id": "REQ-P13",
+   "gruppe": "REQ-P",
+   "text": "Schutzart, Isolation, Berührschutz",
+   "wert": "IP67, R_iso ≥ 100 Ω/V (UN R100, DC-Bus, W35) (Autor, Freigaberunde 2026-11-23)",
+   "quelle_lastenheft": "Norm",
+   "prioritaet": "Muss",
+   "status_lastenheft": "festgelegt",
+   "messgroesse": "Isolationswiderstand; Schutzart",
+   "ort": "Pack",
+   "lastfall": "neu, trocken",
+   "methode": "T",
+   "ebene": "System",
+   "kriterium": [
+    {
+     "groesse": "R_iso",
+     "op": ">=",
+     "wert": 100,
+     "einheit": "Ω/V",
+     "herkunft_kriterium": "Autor (Freigaberunde 2026-11-23)",
+     "hinweis": "DC"
+    },
+    {
+     "groesse": "Schutzart",
+     "op": "==",
+     "wert": "IP67",
+     "herkunft_kriterium": "Autor (Freigaberunde 2026-11-23)"
+    }
+   ],
+   "nachweis": [],
+   "bestaetigt_autor": true,
+   "herkunft": "docs/01_lastenheft.md Zeile 32",
+   "v_modell_vorschlag": "Opus 2026-11-23, Autor offen; Opus 2026-11-23: R_iso von 500 auf 100 Ω/V korrigiert nach W35 (Opus-Annahme 500 Ω/V DC war falsch) | Freigaberunde 2026-11-23: bestätigt (Autor), pm/freigaberunde_2026-11-23.md"
+  },
+  {
+   "id": "REQ-P14",
+   "gruppe": "REQ-P",
+   "text": "Mechanik: Stoß, Schwingung, Crash",
+   "wert": "Zellverschiebung ≤ 0,5 mm bei Pfahl 5 kJ und bei Quetschung nach R100 (100–105 kN) (Autor, Freigaberunde 2026-11-23)",
+   "quelle_lastenheft": "Norm",
+   "prioritaet": "Muss",
+   "status_lastenheft": "festgelegt",
+   "messgroesse": "Zellblockverschiebung",
+   "ort": "Zellen",
+   "lastfall": "Pfahl 5 kJ (X3 a) und Quetschung nach R100 mit 100–105 kN (X3 b, W35b)",
+   "methode": "S",
+   "ebene": "System",
+   "kriterium": [
+    {
+     "groesse": "dy_a",
+     "op": "<=",
+     "wert": 0.5,
+     "einheit": "mm",
+     "herkunft_kriterium": "Autor (Freigaberunde 2026-11-23)",
+     "hinweis": "Kontaktspalt KONTAKT_B der Auswertung; Lastfälle zu belegen W35/W36"
+    },
+    {
+     "groesse": "dy_b",
+     "op": "<=",
+     "wert": 0.5,
+     "einheit": "mm",
+     "herkunft_kriterium": "Autor (Freigaberunde 2026-11-23)",
+     "hinweis": "Kriterium Zellverschiebung ist Annahme Opus; R100 prüft nach Quetschung auf Feuer, Explosion, Elektrolytaustritt, Isolation (strengere Annahme)"
+    }
+   ],
+   "nachweis": [
+    {
+     "datei": "sim/mechanik/x3_crash_g5/ergebnis.json",
+     "schluessel": "LFP_a.zellblock_vorderseite_dy_max_mm",
+     "groesse": "dy_a",
+     "variante": "LFP"
+    },
+    {
+     "datei": "sim/mechanik/x3_crash_g5/ergebnis.json",
+     "schluessel": "NMC_a.zellblock_vorderseite_dy_max_mm",
+     "groesse": "dy_a",
+     "variante": "NMC"
+    },
+    {
+     "datei": "sim/mechanik/x3_crash_g5/ergebnis.json",
+     "schluessel": "LFP_b.zellblock_vorderseite_dy_max_mm",
+     "groesse": "dy_b",
+     "variante": "LFP"
+    },
+    {
+     "datei": "sim/mechanik/x3_crash_g5/ergebnis.json",
+     "schluessel": "NMC_b.zellblock_vorderseite_dy_max_mm",
+     "groesse": "dy_b",
+     "variante": "NMC"
+    }
+   ],
+   "bestaetigt_autor": true,
+   "herkunft": "docs/01_lastenheft.md Zeile 33",
+   "v_modell_vorschlag": "Opus 2026-11-23, Autor offen | Freigaberunde 2026-11-23: bestätigt (Autor), pm/freigaberunde_2026-11-23.md"
+  },
+  {
+   "id": "REQ-P15",
+   "gruppe": "REQ-P",
+   "text": "Messung und BMS: Zellspannung, Temperatur, Isolationswächter",
+   "wert": "Messumfang: Zellspannung je Reihe, Temperaturfühler, Isolationswächter (Stücklistenposition) (Autor, Freigaberunde 2026-11-23)",
+   "quelle_lastenheft": "Autor",
+   "prioritaet": "Muss",
+   "status_lastenheft": "festgelegt",
+   "messgroesse": "Messumfang BMS",
+   "ort": "Pack",
+   "lastfall": "–",
+   "methode": "I",
+   "ebene": "Subsystem",
+   "kriterium": [
+    {
+     "groesse": "CMU",
+     "op": "vorhanden",
+     "herkunft_kriterium": "Autor (Freigaberunde 2026-11-23)",
+     "hinweis": "Zellspannung je Reihe (BT-320)"
+    },
+    {
+     "groesse": "Temperaturfuehler",
+     "op": "vorhanden",
+     "herkunft_kriterium": "Autor (Freigaberunde 2026-11-23)",
+     "hinweis": "BT-330"
+    },
+    {
+     "groesse": "Isolationswaechter",
+     "op": "vorhanden",
+     "herkunft_kriterium": "Autor (Freigaberunde 2026-11-23)",
+     "hinweis": "BT-350"
+    }
+   ],
+   "nachweis": [
+    {
+     "datei": "pm/bauteile/stueckliste_LFP.json",
+     "schluessel": "positionen[bt=BT-320].pos",
+     "groesse": "CMU",
+     "variante": "LFP"
+    },
+    {
+     "datei": "pm/bauteile/stueckliste_LFP.json",
+     "schluessel": "positionen[bt=BT-330].pos",
+     "groesse": "Temperaturfuehler",
+     "variante": "LFP"
+    },
+    {
+     "datei": "pm/bauteile/stueckliste_LFP.json",
+     "schluessel": "positionen[bt=BT-350].pos",
+     "groesse": "Isolationswaechter",
+     "variante": "LFP"
+    },
+    {
+     "datei": "pm/bauteile/stueckliste_NMC.json",
+     "schluessel": "positionen[bt=BT-320].pos",
+     "groesse": "CMU",
+     "variante": "NMC"
+    },
+    {
+     "datei": "pm/bauteile/stueckliste_NMC.json",
+     "schluessel": "positionen[bt=BT-330].pos",
+     "groesse": "Temperaturfuehler",
+     "variante": "NMC"
+    },
+    {
+     "datei": "pm/bauteile/stueckliste_NMC.json",
+     "schluessel": "positionen[bt=BT-350].pos",
+     "groesse": "Isolationswaechter",
+     "variante": "NMC"
+    }
+   ],
+   "bestaetigt_autor": true,
+   "herkunft": "docs/01_lastenheft.md Zeile 34",
+   "v_modell_vorschlag": "Opus 2026-11-23, Autor offen | Freigaberunde 2026-11-23: bestätigt (Autor), pm/freigaberunde_2026-11-23.md"
+  },
+  {
+   "id": "REQ-P16",
+   "gruppe": "REQ-P",
+   "text": "Herstellkosten je Variante ausweisen (€/kWh Pack, Anteile je Baugruppe)",
+   "wert": "kein Zielwert (Autor 2026-11-18: „lass offen“); Preise als Schätzung oder verifiziert kennzeichnen",
+   "quelle_lastenheft": "Autor (2026-11-18)",
+   "prioritaet": "Soll",
+   "status_lastenheft": "vorgeschlagen",
+   "messgroesse": "Herstellkosten je Variante; Anteil Schätzung",
+   "ort": "Pack",
+   "lastfall": "–",
+   "methode": "A",
+   "ebene": "System",
+   "kriterium": [
+    {
+     "groesse": "Kosten_Summe",
+     "op": "vorhanden",
+     "variante": "LFP",
+     "herkunft_kriterium": "Autor"
+    },
+    {
+     "groesse": "Kosten_Summe",
+     "op": "vorhanden",
+     "variante": "NMC",
+     "herkunft_kriterium": "Autor"
+    },
+    {
+     "groesse": "Anteil_Schaetzung",
+     "op": "vorhanden",
+     "variante": "LFP",
+     "herkunft_kriterium": "Autor"
+    },
+    {
+     "groesse": "Anteil_Schaetzung",
+     "op": "vorhanden",
+     "variante": "NMC",
+     "herkunft_kriterium": "Autor"
+    }
+   ],
+   "nachweis": [
+    {
+     "datei": "pm/kosten/ergebnis_LFP.json",
+     "schluessel": "summe_eur_pack",
+     "groesse": "Kosten_Summe",
+     "variante": "LFP"
+    },
+    {
+     "datei": "pm/kosten/ergebnis_LFP.json",
+     "schluessel": "anteil_schaetzung_an_summe_pct",
+     "groesse": "Anteil_Schaetzung",
+     "variante": "LFP"
+    },
+    {
+     "datei": "pm/kosten/ergebnis_NMC.json",
+     "schluessel": "summe_eur_pack",
+     "groesse": "Kosten_Summe",
+     "variante": "NMC"
+    },
+    {
+     "datei": "pm/kosten/ergebnis_NMC.json",
+     "schluessel": "anteil_schaetzung_an_summe_pct",
+     "groesse": "Anteil_Schaetzung",
+     "variante": "NMC"
+    }
+   ],
+   "bestaetigt_autor": false,
+   "herkunft": "docs/01_lastenheft.md Zeile 35",
+   "v_modell_vorschlag": "Opus 2026-11-23, Autor offen"
+  },
+  {
+   "id": "REQ-D01",
+   "gruppe": "REQ-D",
+   "text": "Jede Zahl ist rückverfolgbar (Rechnung mit Datei oder Quelle mit wörtlichem Beleg)",
+   "lastenheft_nachweis": "Prüfskripte, Stichprobe Opus",
+   "status_lastenheft": "eingerichtet",
+   "messgroesse": "Prüfskripte, Stichprobe Opus",
+   "ort": "Projekt",
+   "lastfall": "–",
+   "methode": "R",
+   "ebene": "Prozess",
+   "kriterium": [
+    {
+     "groesse": "Pruefskript",
+     "op": "rc0",
+     "herkunft_kriterium": "Autor"
+    }
+   ],
+   "nachweis": [
+    {
+     "typ": "skript",
+     "befehl": "python3 pm/pm.py pruefe",
+     "groesse": "Pruefskript"
+    }
+   ],
+   "bestaetigt_autor": false,
+   "herkunft": "docs/01_lastenheft.md Zeile 40",
+   "v_modell_vorschlag": "Opus 2026-11-23, Autor offen"
+  },
+  {
+   "id": "REQ-D02",
+   "gruppe": "REQ-D",
+   "text": "Jedes Dokument hat einen Kopf nach BAT-DOC-00 und ist als KI-generiert gekennzeichnet",
+   "lastenheft_nachweis": "Durchsicht (Haiku)",
+   "status_lastenheft": "eingerichtet",
+   "messgroesse": "Durchsicht (Haiku)",
+   "ort": "Projekt",
+   "lastfall": "–",
+   "methode": "R",
+   "ebene": "Prozess",
+   "kriterium": [
+    {
+     "groesse": "Nachweisdatei",
+     "op": "vorhanden",
+     "herkunft_kriterium": "Autor"
+    }
+   ],
+   "nachweis": [],
+   "bestaetigt_autor": false,
+   "herkunft": "docs/01_lastenheft.md Zeile 41: Nachweis „Durchsicht (Haiku)“; R = Durchsicht nach docs/17 §1",
+   "v_modell_vorschlag": "Opus 2026-11-23, Autor offen"
+  },
+  {
+   "id": "REQ-D03",
+   "gruppe": "REQ-D",
+   "text": "Jede Anforderung hat einen Nachweis in BAT-DOC-03",
+   "lastenheft_nachweis": "Nachverfolgung",
+   "status_lastenheft": "eingerichtet",
+   "messgroesse": "Nachverfolgung",
+   "ort": "Projekt",
+   "lastfall": "–",
+   "methode": "R",
+   "ebene": "Prozess",
+   "kriterium": [
+    {
+     "groesse": "Nachweisdatei",
+     "op": "vorhanden",
+     "herkunft_kriterium": "Autor"
+    }
+   ],
+   "nachweis": [
+    {
+     "typ": "datei",
+     "datei": "docs/03_anforderungsverfolgung.md",
+     "groesse": "Nachweisdatei"
+    }
+   ],
+   "bestaetigt_autor": false,
+   "herkunft": "docs/01_lastenheft.md Zeile 42",
+   "v_modell_vorschlag": "Opus 2026-11-23, Autor offen"
+  },
+  {
+   "id": "REQ-D04",
+   "gruppe": "REQ-D",
+   "text": "KI-Einsatz protokolliert: Modell, Aufgabe, Prüfung",
+   "lastenheft_nachweis": "BAT-DOC-08",
+   "status_lastenheft": "eingerichtet",
+   "messgroesse": "BAT-DOC-08",
+   "ort": "Projekt",
+   "lastfall": "–",
+   "methode": "R",
+   "ebene": "Prozess",
+   "kriterium": [
+    {
+     "groesse": "Nachweisdatei",
+     "op": "vorhanden",
+     "herkunft_kriterium": "Autor"
+    }
+   ],
+   "nachweis": [
+    {
+     "typ": "datei",
+     "datei": "docs/08_ki_einsatz_protokoll.md",
+     "groesse": "Nachweisdatei"
+    }
+   ],
+   "bestaetigt_autor": false,
+   "herkunft": "docs/01_lastenheft.md Zeile 43",
+   "v_modell_vorschlag": "Opus 2026-11-23, Autor offen"
+  },
+  {
+   "id": "REQ-D05",
+   "gruppe": "REQ-D",
+   "text": "Freigabe nur durch den Menschen",
+   "lastenheft_nachweis": "Status in BAT-DOC-00",
+   "status_lastenheft": "eingerichtet",
+   "messgroesse": "Status in BAT-DOC-00",
+   "ort": "Projekt",
+   "lastfall": "–",
+   "methode": "R",
+   "ebene": "Prozess",
+   "kriterium": [
+    {
+     "groesse": "Nachweisdatei",
+     "op": "vorhanden",
+     "herkunft_kriterium": "Autor"
+    }
+   ],
+   "nachweis": [
+    {
+     "typ": "datei",
+     "datei": "docs/00_dokumentenlenkung.md",
+     "groesse": "Nachweisdatei"
+    }
+   ],
+   "bestaetigt_autor": false,
+   "herkunft": "docs/01_lastenheft.md Zeile 44",
+   "v_modell_vorschlag": "Opus 2026-11-23, Autor offen"
+  },
+  {
+   "id": "REQ-D06",
+   "gruppe": "REQ-D",
+   "text": "Erwartung vor jeder Rechnung, Vergleich danach",
+   "lastenheft_nachweis": "ERWARTUNG.md je Rechenordner",
+   "status_lastenheft": "eingerichtet",
+   "messgroesse": "ERWARTUNG.md je Rechenordner",
+   "ort": "Projekt",
+   "lastfall": "–",
+   "methode": "R",
+   "ebene": "Prozess",
+   "kriterium": [
+    {
+     "groesse": "Nachweisdatei",
+     "op": "vorhanden",
+     "herkunft_kriterium": "Autor"
+    }
+   ],
+   "nachweis": [],
+   "bestaetigt_autor": false,
+   "herkunft": "docs/01_lastenheft.md Zeile 45",
+   "v_modell_vorschlag": "Opus 2026-11-23, Autor offen"
+  },
+  {
+   "id": "REQ-D07",
+   "gruppe": "REQ-D",
+   "text": "Fremde Inhalte und Geheimnisse nicht im Repo, Lizenzen erfasst",
+   "lastenheft_nachweis": ".gitignore, BAT-DOC-10",
+   "status_lastenheft": "eingerichtet",
+   "messgroesse": ".gitignore, BAT-DOC-10",
+   "ort": "Projekt",
+   "lastfall": "–",
+   "methode": "R",
+   "ebene": "Prozess",
+   "kriterium": [
+    {
+     "groesse": "Nachweisdatei",
+     "op": "vorhanden",
+     "herkunft_kriterium": "Autor"
+    }
+   ],
+   "nachweis": [
+    {
+     "typ": "datei",
+     "datei": ".gitignore",
+     "groesse": "Nachweisdatei"
+    },
+    {
+     "typ": "datei",
+     "datei": "docs/10_lizenzen_und_quellen.md",
+     "groesse": "Nachweisdatei"
+    }
+   ],
+   "bestaetigt_autor": false,
+   "herkunft": "docs/01_lastenheft.md Zeile 46",
+   "v_modell_vorschlag": "Opus 2026-11-23, Autor offen"
+  },
+  {
+   "id": "REQ-D08",
+   "gruppe": "REQ-D",
+   "text": "Patentrecherche ohne rechtliche Bewertung; Freedom to Operate nur durch Fachleute",
+   "lastenheft_nachweis": "AUFTRAG_PATENTE.md",
+   "status_lastenheft": "eingerichtet",
+   "messgroesse": "AUFTRAG_PATENTE.md",
+   "ort": "Projekt",
+   "lastfall": "–",
+   "methode": "R",
+   "ebene": "Prozess",
+   "kriterium": [
+    {
+     "groesse": "Nachweisdatei",
+     "op": "vorhanden",
+     "herkunft_kriterium": "Autor"
+    }
+   ],
+   "nachweis": [
+    {
+     "typ": "datei",
+     "datei": "forschung/AUFTRAG_PATENTE.md",
+     "groesse": "Nachweisdatei"
+    }
+   ],
+   "bestaetigt_autor": false,
+   "herkunft": "docs/01_lastenheft.md Zeile 47",
+   "v_modell_vorschlag": "Opus 2026-11-23, Autor offen"
+  },
+  {
+   "id": "REQ-D09",
+   "gruppe": "REQ-D",
+   "text": "Rechnungen reproduzierbar: Skript, Eingaben, Softwarestand (requirements.txt, Versionen)",
+   "lastenheft_nachweis": "SOFTWARE.md, Laufordner",
+   "status_lastenheft": "eingerichtet",
+   "messgroesse": "SOFTWARE.md, Laufordner",
+   "ort": "Projekt",
+   "lastfall": "–",
+   "methode": "R",
+   "ebene": "Prozess",
+   "kriterium": [
+    {
+     "groesse": "Nachweisdatei",
+     "op": "vorhanden",
+     "herkunft_kriterium": "Autor"
+    }
+   ],
+   "nachweis": [
+    {
+     "typ": "datei",
+     "datei": "SOFTWARE.md",
+     "groesse": "Nachweisdatei"
+    }
+   ],
+   "bestaetigt_autor": false,
+   "herkunft": "docs/01_lastenheft.md Zeile 48",
+   "v_modell_vorschlag": "Opus 2026-11-23, Autor offen"
+  },
+  {
+   "id": "REQ-D11",
+   "gruppe": "REQ-D",
+   "text": "Jede Entscheidung als Akte an Bauteil und Merkmal gebunden; CAD-Maße nur aus diesen Akten",
+   "lastenheft_nachweis": "pm.py pruefe/parameter",
+   "status_lastenheft": "eingerichtet",
+   "messgroesse": "pm.py pruefe/parameter",
+   "ort": "Projekt",
+   "lastfall": "–",
+   "methode": "R",
+   "ebene": "Prozess",
+   "kriterium": [
+    {
+     "groesse": "Pruefskript",
+     "op": "rc0",
+     "herkunft_kriterium": "Autor"
+    }
+   ],
+   "nachweis": [
+    {
+     "typ": "skript",
+     "befehl": "python3 pm/pm.py pruefe",
+     "groesse": "Pruefskript"
+    }
+   ],
+   "bestaetigt_autor": false,
+   "herkunft": "docs/01_lastenheft.md Zeile 49",
+   "v_modell_vorschlag": "Opus 2026-11-23, Autor offen"
+  },
+  {
+   "id": "REQ-D12",
+   "gruppe": "REQ-D",
+   "text": "Bauteilgespräch: jedes Bauteil begründet seine Form mit Aktenverweisen",
+   "lastenheft_nachweis": "pm/gespraech.sh, Aktenprüfung",
+   "status_lastenheft": "eingerichtet (Test BT-100)",
+   "messgroesse": "pm/gespraech.sh, Aktenprüfung",
+   "ort": "Projekt",
+   "lastfall": "–",
+   "methode": "R",
+   "ebene": "Prozess",
+   "kriterium": [
+    {
+     "groesse": "Nachweisdatei",
+     "op": "vorhanden",
+     "herkunft_kriterium": "Autor"
+    }
+   ],
+   "nachweis": [
+    {
+     "typ": "datei",
+     "datei": "pm/gespraech.sh",
+     "groesse": "Nachweisdatei"
+    }
+   ],
+   "bestaetigt_autor": false,
+   "herkunft": "docs/01_lastenheft.md Zeile 50",
+   "v_modell_vorschlag": "Opus 2026-11-23, Autor offen"
+  },
+  {
+   "id": "REQ-D13",
+   "gruppe": "REQ-D",
+   "text": "Projektdokumentation als Abschlussvideo (Zelle → … → System)",
+   "lastenheft_nachweis": "video/STORYBOARD.md",
+   "status_lastenheft": "geplant",
+   "messgroesse": "video/STORYBOARD.md",
+   "ort": "Projekt",
+   "lastfall": "–",
+   "methode": "R",
+   "ebene": "Prozess",
+   "kriterium": [
+    {
+     "groesse": "Nachweisdatei",
+     "op": "vorhanden",
+     "herkunft_kriterium": "Autor"
+    }
+   ],
+   "nachweis": [
+    {
+     "typ": "datei",
+     "datei": "video/abschluss.mp4",
+     "groesse": "Nachweisdatei"
+    }
+   ],
+   "bestaetigt_autor": false,
+   "herkunft": "docs/01_lastenheft.md Zeile 51",
+   "v_modell_vorschlag": "Opus 2026-11-23, Autor offen"
+  },
+  {
+   "id": "REQ-D14",
+   "gruppe": "REQ-D",
+   "text": "Unternehmenspräsentation am Projektende, erzeugt aus den Projektdaten; jeder Vorgang liefert unterwegs seinen Folienbaustein",
+   "lastenheft_nachweis": "praesentation/STORYBOARD.md",
+   "status_lastenheft": "geplant",
+   "messgroesse": "praesentation/STORYBOARD.md",
+   "ort": "Projekt",
+   "lastfall": "–",
+   "methode": "R",
+   "ebene": "Prozess",
+   "kriterium": [
+    {
+     "groesse": "Nachweisdatei",
+     "op": "vorhanden",
+     "herkunft_kriterium": "Autor"
+    }
+   ],
+   "nachweis": [
+    {
+     "typ": "datei",
+     "datei": "praesentation/unternehmenspraesentation.pptx",
+     "groesse": "Nachweisdatei"
+    }
+   ],
+   "bestaetigt_autor": false,
+   "herkunft": "docs/01_lastenheft.md Zeile 52",
+   "v_modell_vorschlag": "Opus 2026-11-23, Autor offen"
+  },
+  {
+   "id": "REQ-D10",
+   "gruppe": "REQ-D",
+   "text": "Aufwand messbar: Laufzeiten und Agentenaufrufe je Arbeitspaket",
+   "lastenheft_nachweis": "BAT-DOC-08",
+   "status_lastenheft": "eingerichtet",
+   "messgroesse": "BAT-DOC-08",
+   "ort": "Projekt",
+   "lastfall": "–",
+   "methode": "R",
+   "ebene": "Prozess",
+   "kriterium": [
+    {
+     "groesse": "Nachweisdatei",
+     "op": "vorhanden",
+     "herkunft_kriterium": "Autor"
+    }
+   ],
+   "nachweis": [
+    {
+     "typ": "datei",
+     "datei": "docs/08_ki_einsatz_protokoll.md",
+     "groesse": "Nachweisdatei"
+    }
+   ],
+   "bestaetigt_autor": false,
+   "herkunft": "docs/01_lastenheft.md Zeile 53",
+   "v_modell_vorschlag": "Opus 2026-11-23, Autor offen"
+  },
+  {
+   "id": "REQ-G01",
+   "gruppe": "REQ-G",
+   "text": "Maschinenrichtlinie (EU 2023/1230)",
+   "status_lastenheft": "nicht anwendbar (zu belegen, W37)",
+   "messgroesse": "Anwendbarkeit der Maschinenrichtlinie",
+   "ort": "–",
+   "lastfall": "–",
+   "methode": "R",
+   "ebene": "System",
+   "kriterium": [
+    {
+     "groesse": "Anwendbarkeit_belegt",
+     "op": "vorhanden",
+     "herkunft_kriterium": "Norm (W37c.nachtrag belegt: VO 2023/1230 Art. 2 Abs. 2 g)",
+     "hinweis": "„nicht anwendbar“ belegt: W37 liegt als Rechercheergebnis vor, Aussage muss Opus prüfen und Nachweis dann verknüpfen"
+    }
+   ],
+   "nachweis": [
+    {
+     "typ": "datei",
+     "datei": "forschung/ergebnis/W37c.nachtrag.md",
+     "groesse": "Anwendbarkeit_belegt"
+    }
+   ],
+   "bestaetigt_autor": false,
+   "herkunft": "docs/17_workflow_schleife.md §5 und docs/07_normen_und_vorschriften.md: Einschätzung Opus aus dem Gedächtnis, zu belegen (Recherche W37)",
+   "v_modell_vorschlag": "; Deutung Opus 2026-11-23: Pack ist Bauteil eines nach 2018/858 genehmigten Pkw → Maschinenverordnung nicht anwendbar (gilt für Montageanlage/Prüfstände)"
+  },
+  {
+   "id": "REQ-G02",
+   "gruppe": "REQ-G",
+   "text": "Kennzeichnung, CO₂-Fußabdruck und Batteriepass nach VO (EU) 2023/1542",
+   "status_lastenheft": "festgelegt",
+   "messgroesse": "Datensatz Batteriepass und Kennzeichnungsangaben",
+   "ort": "Pack",
+   "lastfall": "–",
+   "methode": "R",
+   "ebene": "System",
+   "kriterium": [
+    {
+     "groesse": "Batteriepass_Datensatz",
+     "op": "vorhanden",
+     "herkunft_kriterium": "Autor (Freigaberunde 2026-11-23)"
+    }
+   ],
+   "nachweis": [],
+   "bestaetigt_autor": true,
+   "herkunft": "docs/20_regelwerke_vergleich.md, Zeile Kennzeichnung/Batteriepass",
+   "wert": "Batteriepass, Kennzeichnung und CO₂-Fußabdruck nach VO (EU) 2023/1542 (Autor, Freigaberunde 2026-11-23)",
+   "quelle_lastenheft": "Vorschlag Opus 2026-11-23",
+   "v_modell_vorschlag": "Opus 2026-11-23, Autor offen | Freigaberunde 2026-11-23: bestätigt (Autor), pm/freigaberunde_2026-11-23.md",
+   "prioritaet": "Muss"
+  }
+ ]
+}

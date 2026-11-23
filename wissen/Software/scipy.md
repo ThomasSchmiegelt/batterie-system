@@ -8,7 +8,7 @@ tags: ["software"]
 > KI-generiert, erzeugt aus pm/plan/wissensnetz.json – nicht von Hand bearbeiten
 
 - Status: im Projekt (SOFTWARE.md)
-- Übersicht: [[SOFTWARE]]
+- Übersicht: [[Dokument/SOFTWARE]]
 
 ## Vorgänge
-- [[wissen/Vorgang/K2|K2]] – Kanalverteilung 1D (Verteiler, Druckverlust)
+- [[Vorgang/K2|K2]] – Kanalverteilung 1D (Verteiler, Druckverlust)

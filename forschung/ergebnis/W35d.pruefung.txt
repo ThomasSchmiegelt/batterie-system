@@ -1,0 +1,4 @@
+Z9: WERT OHNE BELEG: Zur Bauteilprüfung (Annex 1) sind definierte Prüfvorgaben vorgeschrieben: sinusförmige Vibration 7–5
+Z23: FEHLT im Text der Quelle: "at a test temperature equal to – 40 ± 2 °C" (https://publications.europa.eu/resource/celex/42024X1955)
+
+13 Belege bestaetigt, 1 Fehler

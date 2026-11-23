@@ -1,5 +1,5 @@
-G5 Montage LFP: 1343 Teile, 628.83 kg, L×B×H 2335×1430×245 mm, Stufen {'F': 28, 'K': 17, 'H': 4}
-16 Fehler
+G5 Montage LFP: 1347 Teile, 629.55 kg, L×B×H 2373×1430×245 mm, Stufen {'F': 28, 'K': 18, 'H': 4}
+13 Fehler
 700.1 schaltbox.gehaeuse: Masse CAD 1.930 kg gegen Stückliste 1.369 kg (+41.0 %)
 700.1b schaltbox.deckel: Masse CAD 0.937 kg gegen Stückliste 0.598 kg (+56.7 %)
 400.2 verbinder.zellverbinder_lfp: Masse CAD 1.180 kg gegen Stückliste 1.921 kg (-38.6 %)
@@ -7,12 +7,9 @@ G5 Montage LFP: 1343 Teile, 628.83 kg, L×B×H 2335×1430×245 mm, Stufen {'F': 
 440.1 verbinder.pol_lasche: Masse CAD 0.016 kg gegen Stückliste 0.057 kg (-72.4 %)
 440.2 verbinder.stromschiene: Masse CAD 2.339 kg gegen Stückliste 0.613 kg (+281.7 %)
 720.2 verbinder.trennbruecke: Masse CAD 0.052 kg gegen Stückliste 0.078 kg (-32.8 %)
-300.3 elektronik.ntc: Masse CAD 0.000 kg gegen Stückliste 0.000 kg (-75.2 %)
-360.3 elektronik.fpc_detail: Masse CAD 0.035 kg gegen Stückliste 0.022 kg (+56.6 %)
-700.4 kaufteile.sicherungen: Masse CAD 0.330 kg gegen Stückliste 0.250 kg (+32.0 %)
-700.10 kaufteile.gassensor: Masse CAD 0.015 kg gegen Stückliste 0.030 kg (-50.0 %)
+300.3 elektronik.ntc: Masse CAD 0.000 kg gegen Stückliste 0.000 kg (+44.9 %)
+360.3 elektronik.fpc_detail: Masse CAD 0.035 kg gegen Stückliste 0.022 kg (+54.3 %)
 580.1 normteile.dichtung: Masse CAD 0.021 kg gegen Stückliste 0.018 kg (+15.2 %)
 590.1 normteile.schraube: Masse CAD 0.523 kg gegen Stückliste 0.125 kg (+318.2 %)
 590.2 normteile.kabelschuh: Masse CAD 0.358 kg gegen Stückliste 0.283 kg (+26.4 %)
 590.3 normteile.clip: Masse CAD 0.004 kg gegen Stückliste 0.007 kg (-50.1 %)
-600.2 kuehlung.verteiler: Masse CAD 0.493 kg gegen Stückliste 0.514 kg (-4.0 %)

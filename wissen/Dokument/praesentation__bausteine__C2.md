@@ -1,0 +1,28 @@
+---
+typ: dokument
+datei: "praesentation/bausteine/C2.md"
+tags: ["dokument", "kopie"]
+---
+# C2
+
+> KI-generiert, erzeugt aus pm/plan/wissensnetz.json – nicht von Hand bearbeiten
+
+- Kopie von `praesentation/bausteine/C2.md` (Quelle im Repo, hier nur Lesekopie)
+
+## Inhalt
+
+> **KI-generiert** (Claude Sonnet, 2026-11-17), Entwurf. Folienbaustein Vorgang C2 (Kalibrierung Parametersätze).
+
+# Das Blade-Modell passt bei 25 °C, bei Kälte nicht; 4680 schafft 30 min nur mit Lithium-Plating
+**Kernaussage: Das an Messdaten kalibrierte Blade-Modell trifft den 10-s-Widerstand bei 28 °C (0,83 mΩ gegen 0,88 mΩ gemessen, RMS 15,3 mV), versagt aber bei Kälte (RMS 157,8 mV); die 4680 erreicht 10→80 % in 29,7 min bei 1,5C, doch das Anodenpotential fällt dabei auf −0,065 V (Plating-Grenze 0 V).**
+
+**Bild:** sim/chemie/c2_kalibrierung/kalibrierung_blade.png (Zielband ±15 mV), schnellladen_4680.png (Plating-Grenze, 30-min-Linie), dcir_vergleich.png, waerme_vergleich.png
+
+**Zahlen** (Quelle sim/chemie/c2_kalibrierung/ergebnis_blade.json, ergebnis_dcir.json, ergebnis_schnellladen_n4680.json):
+- Blade 50 % SOC: Messung 0,877 mΩ, Modell 0,827 mΩ (28 °C); −7 °C Messung 1,712, Modell 1,299 mΩ
+- 4680 DCIR 6,40 mΩ (Band 5,4–7 mΩ), Wärme 1,5C 7,37 W (gesamt), 11,49 W (I·ΔU)
+- LFP 92,4 Ah DCIR 1,22 mΩ; Schnellladen-Wärme nicht belastbar
+- Annahmen: Prada2013/Chen2020, Fitgrenzen von Sonnet, SOC-Abbildung Identität; Entwurf, nicht von Opus geprüft
+
+*KI-generiert, Entwurf.*
+

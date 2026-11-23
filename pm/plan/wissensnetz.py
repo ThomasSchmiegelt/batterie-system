@@ -1,4 +1,4 @@
-"""geändert 2026-11-16 Sonnet (Feld variante der Akten, AUFTRAG_VARIANTEN).
+"""geändert 2026-11-23 Sonnet (Auftrag AUFTRAG_OBSIDIAN_2: Anforderungen aus pm/anforderungen.json mit VER-Bewertung, Dokumente, Bericht, Bausteine, Steckbriefe, alle Recherchethemen im JSON); geändert 2026-11-16 Sonnet (Feld variante der Akten, AUFTRAG_VARIANTEN).
 wissensnetz.py -- Netzplan als Rückgrat für Wissensmanagement und Projektdokumentation.
 
 KI-generiert (Claude Opus, 2026-11-12). Anstoß des Autors: „vielleicht kann man über den Netzplan auch das
@@ -97,6 +97,9 @@ def sw_status(name):
 
 
 def lese_req():
+    f = ROOT / "pm/anforderungen.json"
+    if f.exists():
+        return {r["id"]: r["text"].strip() for r in json.loads(f.read_text())["anforderungen"]}
     t = (ROOT / "docs/01_lastenheft.md").read_text()
     return {m.group(1): m.group(2).strip() for m in re.finditer(r"^\| (REQ-[PD]\d+) \| ([^|]+)", t, re.M)}
 
@@ -125,6 +128,79 @@ def wissen_status(nr):
     if not e.exists(): return dict(id=nr, status="offen")
     z = p.read_text().strip().splitlines()[-1] if p.exists() else "ungeprüft"
     return dict(id=nr, status="fertig", pruefung=z, datei=str(e.relative_to(ROOT)))
+
+
+def lese_anf_voll():
+    """Anforderungen aus pm/anforderungen.json mit Bewertung nach pm/plan/verifikation.py (keine eigene Rechnung)."""
+    f = ROOT / "pm/anforderungen.json"
+    if not f.exists(): return []
+    sys.path.insert(0, str(HIER)); import verifikation as VF
+    out = []
+    for r in json.loads(f.read_text())["anforderungen"]:
+        b, ist, kt, alle_autor = VF.bewerte(r); lue = list(VF.luecken(r)) if hasattr(VF, "luecken") else []
+        out.append(dict(id=r["id"], gruppe=r.get("gruppe", ""), text=r["text"], wert=r.get("wert", ""), prioritaet=r.get("prioritaet", ""),
+                        methode=r.get("methode", "nicht definiert"), ebene=r.get("ebene", "nicht definiert"), bewertung=b, stufe=(VF.stufe(b) if hasattr(VF, "stufe") else b), kriterium=kt,
+                        ist=ist.replace("<br>", "; "), luecken=lue, bestaetigt_autor=bool(r.get("bestaetigt_autor")),
+                        nachweis=sorted({n["datei"] for n in r.get("nachweis", []) if "datei" in n}),
+                        skripte=sorted({n["befehl"] for n in r.get("nachweis", []) if n.get("typ") == "skript"})))
+    return out
+
+
+def lese_dokumente():
+    """docs/*.md: Kopf (Dok.-Nr., Version, Status, Titel) aus der Kopftabelle, soweit vorhanden."""
+    out = []
+    for f in sorted((ROOT / "docs").glob("*.md")):
+        t = f.read_text(); kopf = t[:1500]
+        def g(label, kopf=kopf):
+            m = re.search(rf"\|\s*{label}\s*\|\s*([^|]*?)\s*\|", kopf); return m.group(1).strip() if m else ""
+        tit = g("Titel") or next((l.lstrip("# ").strip() for l in t.splitlines() if l.startswith("#")), f.stem)
+        m = re.search(r"\|\s*Version\s*\|\s*([^|]*?)\s*\|\s*Status\s*\|\s*([^|]*?)\s*\|", kopf)
+        out.append(dict(datei=f"docs/{f.name}", stem=f.stem, nr=g("Dok.-Nr."), titel=tit, version=m.group(1) if m else "", status=m.group(2) if m else "",
+                        auftrag=f.name.startswith("AUFTRAG")))
+    return out
+
+
+def lese_bericht():
+    f = ROOT / "bericht/bericht.toc"; tex = ROOT / "bericht/bericht.tex"
+    if not f.exists(): return {}
+    kap = []
+    for m in re.finditer(r"\\contentsline \{(section|subsection)\}\{(?:\\numberline \{([^}]*)\})?([^}]*)\}\{(\d+)\}", f.read_text()):
+        kap.append(dict(ebene=m.group(1), nr=m.group(2) or "", titel=m.group(3), seite=int(m.group(4))))
+    t = tex.read_text() if tex.exists() else ""
+    v = re.search(r"BAT-DOC-17, Version (\d+(?:\.\d+)*)", t)
+    ids = sorted(set(re.findall(r"REQ-[A-Z]\d+|ENT-\d+|B-BAT-\d+|BT-\d{3}\b", t)))
+    return dict(version=v.group(1) if v else "?", pdf="bericht/bericht.pdf", tex="bericht/bericht.tex", kapitel=kap, ids=ids)
+
+
+def lese_bausteine():
+    out = []
+    for f in sorted((ROOT / "praesentation/bausteine").glob("*.md")):
+        t = f.read_text(); tit = next((l.lstrip("# ").strip() for l in t.splitlines() if l.startswith("# ")), f.stem)
+        out.append(dict(datei=f"praesentation/bausteine/{f.name}", stem=f.stem, titel=tit,
+                        ids=sorted(set(re.findall(r"REQ-[A-Z]\d+|ENT-\d+|B-BAT-\d+|BT-\d{3}\b", t))),
+                        quellen=sorted(set(re.findall(r"(?:sim|cad|pm|docs|bericht)/[\w./\-]+\.(?:json|md|png|csv|tex)", t)))[:12]))
+    return out
+
+
+def lese_steckbriefe():
+    out = []
+    for f in sorted((ROOT / "pm/steckbriefe").glob("*.md")):
+        t = f.read_text(); m = re.match(r"(BT-\d+)", f.stem)
+        tit = re.search(r"\| Titel \| ([^|]*?) \|", t)
+        out.append(dict(datei=f"pm/steckbriefe/{f.name}", stem=f.stem, bt=m.group(1) if m else "", titel=tit.group(1) if tit else f.stem,
+                        ids=sorted(set(re.findall(r"REQ-[A-Z]\d+|ENT-\d+|B-BAT-\d+", t)))))
+    return out
+
+
+def lese_recherche_alle():
+    out = []
+    for tsv in ("themen_wissen", "themen_werkzeuge", "themen_patente"):
+        f = ROOT / "forschung" / f"{tsv}.tsv"
+        if not f.exists(): continue
+        for z in f.read_text().splitlines():
+            if z.strip() and not z.startswith("#"):
+                p = z.split("\t"); w = wissen_status(p[0]); w["thema"] = (p[3] if len(p) > 3 else ""); out.append(w)
+    return out
 
 
 def lese_teile():
@@ -164,7 +240,9 @@ def main():
                                   if i in re.split(r',\s*', t['vorgang']) or (i in ('SL1', 'SL2'))]))
     ohne = [r for r in req if not any(r in [x["id"] for x in k["req"]] for k in knoten)]
     netz = dict(hinweis="KI-generiert (pm/plan/wissensnetz.py). Dauern sind Annahmen.", projektdauer_AT=ende, knoten=knoten, stueckliste=teile_alle,
-                anforderungen_ohne_vorgang=ohne, pruef_fehler=fehler)
+                anforderungen_ohne_vorgang=ohne, pruef_fehler=fehler,
+                anforderungen=lese_anf_voll(), dokumente=lese_dokumente(), bericht=lese_bericht(), bausteine=lese_bausteine(),
+                steckbriefe=lese_steckbriefe(), recherche_alle=lese_recherche_alle())
     (HIER / "wissensnetz.json").write_text(json.dumps(netz, ensure_ascii=False, indent=1))
 
     # Anforderungsverfolgung erzeugen (REQ-D03): REQ -> Vorgänge -> Nachweise

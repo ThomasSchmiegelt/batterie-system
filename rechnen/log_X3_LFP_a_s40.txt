@@ -1,0 +1,1 @@
+Deck /home/cae/hermes/batterie/sim/mechanik/x3_crash_g5/lauf/LFP_a_s40 Schalenknoten 17584 Schalen 18878 Bricks 51000 v0 2.582

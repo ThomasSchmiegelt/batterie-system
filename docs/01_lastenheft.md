@@ -19,19 +19,19 @@ Vorschlagswerte für REQ-P01…P10 aus einem Startsatz: `docs/startparameter.md`
 
 | REQ-P01 | Anwendung / Fahrzeugklasse | Pkw, Fahrzeugmasse etwa 1500 kg, Anhaltswert (Autor 2026-11-16); Auslegung rechnet Fall A (mit Batterie) und Fall B (ohne Batterie) als Spanne | Autor | Muss | Vorgabe Autor |
 | REQ-P02 | nutzbarer Energieinhalt | aus Reichweite 400 km (Vorgabe Autor 2026-11-16) × Verbrauch (Annahme), Vergleich sim/chemie/vergleich_lfp_nmc | Autor | Muss | Reichweite: Vorgabe Autor |
-| REQ-P03 | Systemspannung (Nenn, min, max) | 800 V nominal (ENT-006, Autor 2026-11-16); min/max folgen aus Zellfenster | Autor | Muss | teilweise |
-| REQ-P04 | Dauer- und Spitzenleistung Entladen | offen (kW, s) | Autor | Muss | offen |
+| REQ-P03 | Systemspannung (Nenn, min, max) | 800 V nominal (ENT-006, Autor 2026-11-16); U_nenn 720–880 V, U_min und U_max ausweisen (Autor, Freigaberunde 2026-11-23) | Autor | Muss | festgelegt |
+| REQ-P04 | Dauer- und Spitzenleistung Entladen | P_spitze 10 s nach Startwert, P_dauer ≥ 60 kW (Autor, Freigaberunde 2026-11-23) | Autor | Muss | festgelegt |
 | REQ-P05 | Schnellladen 10 → 80 % | LFP 20 min, NMC-4680 30 min (Autor 2026-11-17 „30 minuten“, nach K1b; Variantenunterschied) | Autor | Muss | festgelegt |
 | REQ-P06 | Zellchemie | zwei Varianten gleicher Spezifikation (Autor 2026-11-16): LFP-Blade prismatisch (ENT-005) und NMC811-Rundzelle 4680 (ENT-007…011); Baum ENT-012 | Autor | Muss | entschieden |
-| REQ-P07 | Bauraum (L × B × H) und Masse | L = 1950 mm (ENT-013, Autor 2026-11-17); B = 1430 mm (ENT-030, Autor 2026-11-17); H 130 mm Annahme; Masse offen (30 % Gesamtmasse als Annahme) | Autor | Muss | teilweise |
-| REQ-P08 | Umgebungstemperatur Betrieb und Laden | offen (°C) | Autor / Norm | Muss | offen |
-| REQ-P09 | max. Zelltemperatur und Spreizung | T_max ≤ 45 °C, Spreizung in der Zelle ≤ 5 K (Autor 2026-11-17) | Autor | Muss | festgelegt |
-| REQ-P10 | Lebensdauer (Zyklen, Jahre, Restkapazität) | offen | Autor | Soll | offen |
+| REQ-P07 | Bauraum (L × B × H) und Masse | L ≤ 2400 mm; B = 1430 mm (ENT-030, Autor 2026-11-17); H ≤ 130 mm im Zellbereich, Dom Schaltbox ≤ 250 mm; Masse LFP ≤ 528 kg, NMC ≤ 370 kg (Startwerte als Ziel) (Autor, Freigaberunde 2026-11-23) | Autor | Muss | festgelegt |
+| REQ-P08 | Umgebungstemperatur Betrieb und Laden | Betrieb −20 … +45 °C, Laden 0 … +45 °C (Vorheizen unter 0 °C) (Autor, Freigaberunde 2026-11-23) | Autor / Norm | Muss | festgelegt |
+| REQ-P09 | max. Zelltemperatur und Spreizung | T_max ≤ 45 °C, Spreizung ΔT ≤ 5 K zwischen den Zellen (Autor, Freigaberunde 2026-11-23); Nachweis neu auswerten (Schleife 2) | Autor | Muss | festgelegt |
+| REQ-P10 | Lebensdauer (Zyklen, Jahre, Restkapazität) | SOH ≥ 70 % nach 200.000 km (Autor, Freigaberunde 2026-11-23) | Autor | Soll | festgelegt |
 | REQ-P11 | Sicherheit: keine Ausbreitung des thermischen Durchgehens bzw. Warnzeit nach Norm | nach Norm (BAT-DOC-07) | Norm | Muss | offen |
-| REQ-P12 | Kühlmittel und Anschlüsse | Vorschlag Wasser-Glykol | Autor | Soll | offen |
-| REQ-P13 | Schutzart, Isolation, Berührschutz | nach Norm | Norm | Muss | offen |
-| REQ-P14 | Mechanik: Stoß, Schwingung, Crash | nach Norm | Norm | Muss | offen |
-| REQ-P15 | Messung und BMS: Zellspannung, Temperatur, Isolationswächter | Umfang offen | Autor | Muss | offen |
+| REQ-P12 | Kühlmittel und Anschlüsse | Wasser-Glykol, Δp je Platte ≤ 0,5 bar, Verteilung ±10 % (Autor, Freigaberunde 2026-11-23) | Autor | Soll | festgelegt |
+| REQ-P13 | Schutzart, Isolation, Berührschutz | IP67, R_iso ≥ 100 Ω/V (UN R100) (Autor, Freigaberunde 2026-11-23) | Norm | Muss | festgelegt |
+| REQ-P14 | Mechanik: Stoß, Schwingung, Crash | Zellverschiebung ≤ 0,5 mm bei Pfahl 5 kJ und Quetschung nach R100 (100–105 kN) (Autor, Freigaberunde 2026-11-23) | Norm | Muss | festgelegt |
+| REQ-P15 | Messung und BMS: Zellspannung, Temperatur, Isolationswächter | Messumfang: Zellspannung je Reihe, Temperaturfühler, Isolationswächter (Stücklistenposition) (Autor, Freigaberunde 2026-11-23) | Autor | Muss | festgelegt |
 | REQ-P16 | Herstellkosten je Variante ausweisen (€/kWh Pack, Anteile je Baugruppe) | kein Zielwert (Autor 2026-11-18: „lass offen“); Preise als Schätzung oder verifiziert kennzeichnen | Autor (2026-11-18) | Soll | vorgeschlagen |
 
 ## 3 Anforderungen an Entwicklung und Dokumentation (Testprojekt gewerblich)

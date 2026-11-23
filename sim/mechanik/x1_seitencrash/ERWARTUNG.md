@@ -52,3 +52,9 @@ Wie viel Kraft und Energie nimmt das Gehäuse mit Seitenrahmen und Querträgern 
 - Die Netzstudie ist erfüllt (< 1 %).
 **Folge:** Die Entscheidung „Seitencrash über den Schweller“ (2026-11-17) ist zwingend. Der Schweller muss die ganze Seitenenergie aufnehmen, das Pack trägt keine 100 kN. Will man Reserve im Pack, braucht es eine Knautschzone von etwa 15–30 mm je Seite (Annahme). Bei fester Breite 1430 mm kostet das Zellbreite: LFP hat nur 8 mm Reserve, NMC eine Zellreihe → Autor.
 Die Randbedingungen, die Sonnet gesetzt hat (Einspannung bei y = 300, Bodenstreifen 300 mm, Penalty 1e5), bestätige ich für einen Variantenvergleich.
+
+## Anforderung (Nachtrag)
+- REQ-P14 (Vorgang X1, pm/plan/wissensnetz.py)
+- REQ-P11 (Vorgang X1, pm/plan/wissensnetz.py)
+
+Vermerk: Nachtrag Sonnet aus wissensnetz.py, Prüfung Opus offen (2026-11-23). Die Zuordnung Rechenordner zu Vorgang X1 ist von Sonnet gewählt.

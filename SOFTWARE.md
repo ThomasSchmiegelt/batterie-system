@@ -7,6 +7,7 @@ KI-generiert (Claude Opus). Jeder Eintrag wurde auf diesem Rechner aufgerufen.
 | Elektrochemie der Zelle | PyBaMM | 26.10.1.1 | `.venv/bin/python` | LFP `Prada2013`, SPMe, 1C bis 2,0 V: 3,514 → 2,000 V, 1,939 Ah ✓ |
 | Parametrisches CAD | FreeCAD | 1.1.4 (AppImage) | `$FREECAD_APPIMAGE freecadcmd -c "..."` | Quader erzeugt, Volumen berechnet ✓ |
 | Darstellung, Rendering | Blender | 4.0.2 (`/usr/bin`), 4.2.9 in `~/Applications` | `blender -b -P skript.py` | Version ✓ |
+| Video zusammensetzen | ffmpeg | 6.1.1 (`/usr/bin`) | `video/erzeuge_video.sh` (libx264, drawtext) | Version ✓ |
 | Vernetzung | gmsh | 4.12.1 (System), 4.15.2 (Python) | `import gmsh` | Import ✓ |
 | Wärme, Festigkeit (FEM) | ElmerFEM | 26.2 | `ElmerGrid`, `ElmerSolver` | Version ✓ |
 | Strömung Kühlplatte | FluidX3D (OpenCL, RTX 3090) | eigene Kopie anlegen | vorhandene Kopien `~/fluidx3d_*` | in Wasserstoff/Fusion genutzt |
@@ -19,7 +20,7 @@ KI-generiert (Claude Opus). Jeder Eintrag wurde auf diesem Rechner aufgerufen.
 | Festigkeit, Seitencrash quasistatisch | CalculiX | 2.21 | `ccx` (`~/.local/bin/ccx`) | Version ✓ (2026-11-12) |
 | Skizze am 3D-Modell → Prompt (Pre/Post) | Sketch-to-Prompt (eigenes Projekt, MIT) | – | `python3 -m sketch_to_prompt.server <ordner>` in `~/sketch-to-prompt` | aus Fusion |
 | Wissensgraph (Notizen aus dem Wissensnetz) | Obsidian (kostenlos auch gewerblich laut obsidian.md/license, Stand 20.02.2025; nicht quelloffen) | – | **nicht installiert**; Vault = Projektordner, Notizen unter `wissen/` | – |
-| Unternehmenspräsentation (.pptx, PDF) | python-pptx (MIT) + LibreOffice (System, Umwandlung in PDF) | – | **python-pptx nicht installiert**, erst mit Vorgang B5; `soffice --headless --convert-to pdf` | LibreOffice vorhanden |
+| Unternehmenspräsentation (.pptx, PDF) | python-pptx (MIT) + LibreOffice (System, Umwandlung in PDF) | – | python-pptx 1.0.2 installiert in .venv (2026-11-23, Vorgang B5); `soffice --headless --convert-to pdf` | LibreOffice vorhanden |
 | Dynamische Crash-Rechnung X2 (explizit) | OpenCourant latest-20261011 (AGPLv3, intern genutzt, nicht weitergegeben) | latest-20261011 | `source /home/cae/cae_projekte/werkzeuge/opencourant/umgebung.sh`, dann `starter_linux64_gf -i <_0000.rad> -np 1` und `engine_linux64_gf -i <_0001.rad>` (nur CPU, `OMP_NUM_THREADS`); Rauchtest TWISBEAM bestanden (Referenz ref.extract identisch) | nur Nutzerverzeichnis, ohne sudo |
 
 Nicht vorhanden und nicht nötig: OpenFOAM (FluidX3D und Elmer decken die Strömung ab), ngspice (die Elektrik wird in Python gerechnet, die Netzwerke sind klein).

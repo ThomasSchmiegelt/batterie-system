@@ -24,3 +24,8 @@ Erwartung:
 3. Auswahl voraussichtlich n = 4, w = 8 mm, Bahnen längs: U ≈ 550, Δp < 0,3 bar, hydraulische Leistung < 15 W.
 4. Masse beider Platten ≈ 45 kg (Bleche 2 × 1 mm + Stege 27 % des Wasserraums).
 Verfehlt, wenn: keine Variante U ≥ 500 bei Δp ≤ 0,5 bar erreicht (dann zurück an Opus: Höhe 4 mm zu klein oder Turbulatoren), oder Masse > 55 kg.
+
+## Anforderung (Nachtrag)
+- REQ-P09 (Vorgang K2, pm/plan/wissensnetz.py)
+
+Vermerk: Nachtrag Sonnet aus wissensnetz.py, Prüfung Opus offen (2026-11-23). Die Zuordnung Rechenordner zu Vorgang K2 ist von Sonnet gewählt.

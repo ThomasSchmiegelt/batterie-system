@@ -5,6 +5,8 @@ import os, re, glob, datetime
 R = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 VORGANG = {"vergleich_lfp_nmc": "C0", "varianten_lfp_nmc": "C0b", "g1_anordnung": "G1", "entwurf": "G2", "render": "G2", "detail": "G2", "k0_zelle": "K0", "bilder": "K0", "k1_schnellladen": "K1", "e1_querschnitte": "E1"}
 bilder = sorted(p for t in ("sim", "cad") for p in glob.glob(os.path.join(R, t, "**", "*.png"), recursive=True))
+# Filmeinzelbilder (_film, lauf_film) sind Zwischendateien fuer mp4, keine Ergebnisbilder (Opus-Auftrag 2026-11-23)
+bilder = [p for p in bilder if not any(x in p.split(os.sep) for x in ("_film", "lauf_film"))]
 # K0-R (2026-11-17): Workbench-Renderings render_*.png / verlauf_*.mp4 sind Vorstufe, ersetzt durch cycles_*; nicht mehr gezeigt (Dateien bleiben)
 bilder = [p for p in bilder if not (os.path.basename(p).startswith("render_") and "k0_zelle" in p)]
 

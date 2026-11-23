@@ -15,3 +15,5 @@ KI-generiert (Claude Opus, 2026-11-20), Entwurf. Autor 2026-11-20: „ich möcht
 - Jeder Schritt bekommt die Umgebungsvariable `RECHNEN_STOP=/home/cae/hermes/batterie/rechnen/STOP`. Lange Rechnungen müssen diese Datei regelmäßig prüfen und ihren Zwischenstand schreiben (Regel für neue Skripte, AGENTS.md „Wiederaufsetzpunkt“).
 **GPU:** Schritte mit GPU = ja laufen nie gleichzeitig mit PI/ollama. Die Warteschlange arbeitet ohnehin nacheinander.
 **Log:** `rechnen/verlauf.log`.
+
+GPU (Vorgabe Autor 2026-11-23): Schritte mit GPU = ja (FluidX3D, PI/ollama) laufen erst, wenn rechnen/gpu_warten.sh die GPU frei meldet. Sonst Pause, Datei rechnen/GPU_WARTEN, Zeile im verlauf.log; STOP wirkt auch während des Wartens.

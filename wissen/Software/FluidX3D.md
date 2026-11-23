@@ -8,7 +8,7 @@ tags: ["software"]
 > KI-generiert, erzeugt aus pm/plan/wissensnetz.json – nicht von Hand bearbeiten
 
 - Status: im Projekt (SOFTWARE.md)
-- Übersicht: [[SOFTWARE]]
+- Übersicht: [[Dokument/SOFTWARE]]
 
 ## Vorgänge
-- [[wissen/Vorgang/K4|K4]] – FluidX3D: Strömung Kühlplatte bzw. Luftkanal (Gegenprüfung 1D)
+- [[Vorgang/K4|K4]] – FluidX3D: Strömung Kühlplatte bzw. Luftkanal (Gegenprüfung 1D)

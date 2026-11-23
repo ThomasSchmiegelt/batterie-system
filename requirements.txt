@@ -58,3 +58,5 @@ vtk==9.7.2
 xarray==2026.9.0
 openpyxl
 chromadb==1.5.9
+networkx==3.7
+lxml==6.1.3

@@ -1,0 +1,13 @@
+{
+ "_hinweis": "KI-generiert (Claude Sonnet, 2026-11-23), Entwurf. Werte nur aus verteiler.py und seinen Eingabedateien übernommen, nicht verändert. Format siehe pm/masse_abgleich.py.",
+ "_variante": "LFP",
+ "kanal_breite_mm": {"wert": 8, "quelle": "parameter:kanal_breite_mm", "bt": "BT-610", "verwendet_in": "verteiler.py W = 0.008"},
+ "kanal_hoehe_mm": {"wert": 4, "quelle": "parameter:kanal_hoehe_mm", "bt": "BT-610", "verwendet_in": "verteiler.py HK = 0.004"},
+ "bahnen_anzahl": {"wert": 8, "quelle": "parameter:kanal_anzahl", "bt": "BT-610", "verwendet_in": "ergebnis_k2b.json n_bahnen = 8"},
+ "plattenrand_mm": {"wert": 30, "quelle": "annahme:A_rand_mm", "verwendet_in": "verteiler.py P[A_rand_mm] aus cad/pack/entwurf/parameter_LFP.json"},
+ "packlaenge_mm": {"wert": 2030.0, "quelle": "cad:laenge_mm", "verwendet_in": "verteiler.py PG[laenge_mm] aus cad/pack/entwurf/ergebnis_LFP.json (Stand e2d, nicht G5)"},
+ "packbreite_mm": {"wert": 1430.0, "quelle": "cad:breite_mm", "verwendet_in": "verteiler.py PG[breite_mm] aus cad/pack/entwurf/ergebnis_LFP.json (Stand e2d, nicht G5)"},
+ "durchfluss_pack_L_min": {"wert": 23, "quelle": "ergebnis:sim/kuehlung/k2_kuehlplatte/ergebnis_k2b.json#faelle.0.V_pack_L_min", "verwendet_in": "verteiler.py V1 = V_pack_L_min/2"},
+ "zeta_abzweig": {"wert": 1.0, "quelle": "text:Annahme Opus, sim/kuehlung/k5_parallel/ERWARTUNG.md", "verwendet_in": "verteiler.py ZETA"},
+ "sammelkanal_breite_mm": {"wert": 25, "quelle": "text:Annahme Opus, sim/kuehlung/k5_parallel/ERWARTUNG.md (Variante 35 mm)", "verwendet_in": "verteiler.py Schleife b in (25, 35)"}
+}

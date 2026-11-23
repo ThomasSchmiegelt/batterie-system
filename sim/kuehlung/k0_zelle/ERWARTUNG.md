@@ -15,3 +15,9 @@
 - Wärme L1 außerhalb ±10 % von Punkt 1 (Rechenfehler).
 - LFP L1 ΔT > 8 K oder < 1 K.
 - Energiebilanz (Wärmestrom am Kühlrand = Quelle, stationär) weicht > 2 % ab.
+
+## Anforderung (Nachtrag)
+- REQ-P09 (Vorgang K0, pm/plan/wissensnetz.py)
+- REQ-P12 (Vorgang K0, pm/plan/wissensnetz.py)
+
+Vermerk: Nachtrag Sonnet aus wissensnetz.py, Prüfung Opus offen (2026-11-23). Die Zuordnung Rechenordner zu Vorgang K0 ist von Sonnet gewählt.

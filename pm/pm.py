@@ -9,6 +9,8 @@ KI-generiert (Claude Opus, 2026-11-11). Nur Python-Standardbibliothek.
     python3 pm/pm.py parameter         pm/bauteile/parameter.json (gemeinsame Akten) und je Variante parameter_<V>.json (gemeinsam + variantenbezogen)
     python3 pm/pm.py kontext BT-100 [--variante V]   pm/gespraeche/kontext_BT-100[_V].md: alles, was das Bauteil über sich wissen darf
     python3 pm/pm.py neu "Titel" BT-100 merkmal [--variante LFP]   nächste freie ENT-Nummer aus der Vorlage anlegen
+    python3 pm/pm.py folgen <ID> [--json]   Änderungsfolgen aus dem Wissensgraphen (pm/graph/frage.py folgen), vorher python3 pm/graph/graph.py
+    python3 pm/pm.py freigabe          docs/19_freigaberunde.md: offene Akten, REQ „nicht definiert“/unbestätigt, A_*-Annahmen ohne Akte (Sammelliste für den Autor)
 
 Varianten: pm/varianten.json. YAML-Feld `variante: [LFP]` in einer Akte; fehlt es (null), gilt die Akte für alle Varianten.
 
@@ -172,6 +174,46 @@ def neu(titel, bid, merkmal, var=None):
     (E / f"{i}.md").write_text(v); print(f"pm/entscheidungen/{i}.md angelegt (Status vorgeschlagen)")
 
 
+def freigabe():
+    """docs/19_freigaberunde.md (Sonnet 2026-11-23, Auftrag WORKFLOW_V Punkt 6, docs/17 §4). Erfindet nichts: Vorschlag = Wert aus Akte, Anforderung oder Annahmenliste."""
+    import datetime
+    ND = "nicht definiert"; z = lambda s: str(s).replace("|", "/").replace("\n", " ")
+    ents = [e for e in alle() if not str(e.get("status") or "").startswith("entschieden") and not str(e.get("status") or "").startswith(("ersetzt", "verworfen"))]
+    zeilen_e = []
+    for e in ents:
+        t = re.search(r"^titel:\s*(.*)$", (R / e["_datei"]).read_text(), re.M); w = e.get("wert"); u = e.get("einheit")
+        zeilen_e.append(f"| {e['id']} | {z(t.group(1) if t else e.get('merkmal'))} (BT {', '.join(e['bauteile']) if isinstance(e.get('bauteile'), list) else e.get('bauteile')}, Status {e.get('status')}) | Wert {z(w)}{(' ' + str(u)) if u else ''} laut Akte | |")
+    reqs = json.loads((PM / "anforderungen.json").read_text())["anforderungen"] if (PM / "anforderungen.json").exists() else []
+    zeilen_r = []
+    for r in reqs:   # (a) Pflichtfelder fehlen (Tor T0), (b) jedes Kriterium ohne Herkunft „Autor“ als eigene Zeile (AUFTRAG_REQ_SCHAERFEN Regel 4)
+        fehl = [f for f in ("messgroesse", "ort", "lastfall", "methode", "ebene", "kriterium") if r.get(f) in (None, ND)]
+        if fehl: zeilen_r.append(f"| {r['id']} | {z(r['text'])}: Pflichtfelder fehlen: {', '.join(fehl)} | Felder festlegen (Autor) | |")
+        kr = r.get("kriterium"); kr = [kr] if isinstance(kr, dict) else (kr if isinstance(kr, list) else [])
+        for k in kr:
+            if k.get("herkunft_kriterium") == "Autor": continue
+            w = k.get("wert", ("Startwert aus " + k["wert_aus"]["datei"] + " :: " + k["wert_aus"]["schluessel"]) if k.get("wert_aus") else "")
+            txt = f"{k['groesse']}{(' ' + k['variante']) if k.get('variante') else ''} {k['op']} {z(w) if k['op'] not in ('vorhanden', 'rc0') else ''} {k.get('einheit', '')}".replace("  ", " ").strip()
+            zeilen_r.append(f"| {r['id']} / {k['groesse']}{('-' + k['variante']) if k.get('variante') else ''} | {z(r['text'])}: Kriterium {txt}, Herkunft {k.get('herkunft_kriterium') or ND}{(' (' + z(k['hinweis']) + ')') if k.get('hinweis') else ''} | Kriterium so übernehmen | |")
+    akt = "".join(f.read_text() for f in E.glob("ENT-[0-9]*.md")); A = {}
+    for n in ("annahmen.json", "annahmen_g5.json", "annahmen_datenblatt.json"):
+        f = R / "cad" / "baukasten" / n
+        if f.exists():
+            for k, v in json.loads(f.read_text()).items():
+                if k.startswith("A_") and isinstance(v, dict) and not str(v.get("status") or "").startswith(("bestaetigt", "ersetzt")): A[k] = (v, n)
+    zeilen_a = [f"| {k} | Wert {z(v.get('wert'))}{(' ' + str(v['einheit'])) if v.get('einheit') else ''}, Herkunft: {z(v.get('herkunft'))} ({n}) | Wert beibehalten und Akte anlegen | |" for k, (v, n) in sorted(A.items()) if k not in akt]
+    kopf = "| Autor: ja/nein/ändern |"
+    M = ["| Dok.-Nr. | BAT-DOC-19 | Version | 0.1 | Status | Entwurf |", "|---|---|---|---|---|---|",
+         "| Titel | Freigaberunde (Sammelliste) | Ersteller | Claude Sonnet (KI), pm.py freigabe | Prüfer | – (Mensch offen) |", "",
+         f"> **KI-generiert.** Entwurf, nicht vom Menschen freigegeben. Erzeugt am {datetime.date.today().isoformat()} von `python3 pm/pm.py freigabe`, nicht von Hand bearbeiten (Antworten in der Spalte „Autor“ gehören in die Quelle: Akte, `pm/anforderungen.json`, `annahmen*.json`). Konzept: `docs/17_workflow_schleife.md` §4.", "",
+         f"Zählung: {len(zeilen_e)} offene Akten, {len(zeilen_r)} Kriterien ohne Herkunft Autor oder Anforderungen mit Lücke, {len(zeilen_a)} Annahmen A_* ohne Akte. Akten mit Status „ersetzt“ sind nicht aufgeführt. Als „ohne Akte“ gilt eine Annahme, deren Schlüsselname in keiner `pm/entscheidungen/ENT-*.md` vorkommt.", "",
+         "## 1 Offene Akten (Status nicht „entschieden…“)", "", "| ID | Frage | Vorschlag | Autor: ja/nein/ändern |", "|---|---|---|---|"] + zeilen_e + [
+         "", "## 2 Kriterien ohne Herkunft „Autor“ (je Kriterium eine Zeile) und Anforderungen mit fehlendem Pflichtfeld", "", "| ID | Frage | Vorschlag | Autor: ja/nein/ändern |", "|---|---|---|---|"] + zeilen_r + [
+         "", "## 3 Annahmen A_* ohne Akte", "", "| ID | Frage (Wert und Herkunft) | Vorschlag | Autor: ja/nein/ändern |", "|---|---|---|---|"] + zeilen_a + [
+         "", "---", "*KI-generiert (Claude Sonnet, 2026-11-23). Status Entwurf. Freigabe nur durch den Autor.*"]
+    out = R / "docs" / "19_freigaberunde.md"; out.write_text("\n".join(M) + "\n")
+    print(f"{out.relative_to(R)}: {len(zeilen_e)} Akten, {len(zeilen_r)} REQ, {len(zeilen_a)} Annahmen")
+
+
 def flag(a, name):
     """--name WERT aus der Argumentliste herausnehmen."""
     if name in a:
@@ -182,4 +224,4 @@ def flag(a, name):
 if __name__ == "__main__":
     a = sys.argv[1:] or ["hilfe"]; var = flag(a, "--variante")
     {"pruefe": lambda: sys.exit(1 if pruefe() else 0), "register": register, "parameter": parameter,
-     "kontext": lambda: kontext(a[1], var), "neu": lambda: neu(a[1], a[2], a[3], var)}.get(a[0], lambda: print(__doc__))()
+     "kontext": lambda: kontext(a[1], var), "freigabe": freigabe, "folgen": lambda: sys.exit(__import__("subprocess").call([sys.executable, str(Path(__file__).resolve().parent / "graph/frage.py"), "folgen"] + a[1:])), "neu": lambda: neu(a[1], a[2], a[3], var)}.get(a[0], lambda: print(__doc__))()

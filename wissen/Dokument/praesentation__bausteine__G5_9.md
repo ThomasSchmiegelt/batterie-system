@@ -1,0 +1,25 @@
+---
+typ: dokument
+datei: "praesentation/bausteine/G5_9.md"
+tags: ["dokument", "kopie"]
+---
+# G5_9
+
+> KI-generiert, erzeugt aus pm/plan/wissensnetz.json – nicht von Hand bearbeiten
+
+- Kopie von `praesentation/bausteine/G5_9.md` (Quelle im Repo, hier nur Lesekopie)
+
+## Inhalt
+
+# Folienbaustein G5.9 – Kühlplatte mit zwei parallelen Mäandern im CAD (KI-generiert, Entwurf)
+**Kernaussage:** Die freigegebene Kühlplatte (ENT-158, ENT-159) ist im Gesamtpack gebaut: zwei Mäander zu je 4 Bahnen, getrennt durch einen Steg, gespeist aus einem Verteiler- und einem Sammelrohr Ø 25 mm innen, 0 Kollisionen, Breite 1430 mm unverändert.
+**Bild (Zielband beschriftet):** cad/baukasten/bilder/kuehlplatte_maeander_schnitt.png (Trennsteg rot gestrichelt, Lesehilfe im Bild); bericht/bilder/g5_LFP_ecke.png (Rohre und Stutzen von außen), g5_LFP_gesamt.png
+**Zahlen:** cad/baukasten/ausgabe/ergebnis_LFP.json und ergebnis_NMC.json (Schlüssel kollisionen, laenge_mm, breite_mm, positionen 600.1/600.2/600.2b/600.3); Kosten pm/kosten/ergebnis_LFP.json, ergebnis_NMC.json (summe_eur_pack). Verteilung und Δp aus sim/kuehlung/k5_parallel/ergebnis_verteiler.json.
+**Offen:** Gegenläufige Durchströmung von Ober- und Unterplatte ist im CAD nicht abgebildet (beide Platten teilen sich die Steigblöcke).
+
+<!-- AUTO-B5 Anfang -->
+## Stand aus Ergebnisdateien (Skript praesentation/bausteine_aktualisieren.py, 2026-11-23, KI-generiert, Entwurf)
+- LFP: Teile 1347, Masse 629,552 kg, Länge 2373 mm, Breite 1430 mm, Höhe max 244,8 mm, Kollisionen 0, Prüfmeldungen 13 (cad/baukasten/ausgabe/ergebnis_LFP.json); Kosten Pack-Teilsumme 6567 € (pm/kosten/ergebnis_LFP.json).
+- NMC: Teile 3605, Masse 480,664 kg, Länge 2273 mm, Breite 1430 mm, Höhe max 227,8 mm, Kollisionen 0, Prüfmeldungen 13 (cad/baukasten/ausgabe/ergebnis_NMC.json); Kosten Pack-Teilsumme 8747 € (pm/kosten/ergebnis_NMC.json).
+<!-- AUTO-B5 Ende -->
+

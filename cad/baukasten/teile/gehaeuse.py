@@ -115,6 +115,17 @@ def _deckelschrauben(ctx):
         x = m + i * (ctx.L - 2 * m) / nx; pts += [(x, m), (x, ctx.B - m)]
     for j in range(1, ny):
         y = m + j * (ctx.B - 2 * m) / ny; pts += [(m, y), (ctx.L - m, y)]
+    if p("BT-610", "kanalfuehrung", roh=True) == "gruppiert_k2":
+        # G5.9 (Sonnet, Opus prüft): Plattenlaschen der 4 Steigblöcke stecken im hinteren Rahmen; Schrauben der Rückreihe weichen in y aus
+        # (Abstand Lasche-Schraubenachse = halbe Blockbreite + Schaft-Radius + 2 mm, Annahme Sonnet), damit der Schaft nicht in die Lasche greift
+        from teile import kuehlung as _kh
+        hw = a("A_g5_verteiler_mm")[1] / 2 + d / 2 + a("A_g5_deckelschraube_ausweich_mm"); ys = [q["y"] for q in _kh._ports(ctx)]; out = []
+        for (x, y) in pts:
+            if abs(x - (ctx.L - m)) < 1e-6:
+                for yp in ys:
+                    if abs(y - yp) < hw: y = yp + hw if y >= yp else yp - hw
+            out.append((x, y))
+        pts = out
     return pts
 
 
@@ -132,7 +143,8 @@ def einbau_aussen(ctx):
     ctx.einbau["BT-750"] = [einbau(L, ye, zc, (1, 0, 0), 90.0)]
     ctx.schneide(zylinder(min(el, eb) / 4, r + 2, L - r - 1, ye, zc, "x"), ["BT-540"], "entgasung")
     dm = a("A_g5_kuehlmittelfuehler_mm")[0]; bx, by = a("A_g5_verteiler_mm")
-    ys = (r + by / 2, B - r - by / 2); zt = ctx.z_kp_o_u + ctx.kp          # Oberseite der Verteilerblöcke (außen hinter der Rückwand)
+    from teile import kuehlung as _kh   # G5.9: Fühler am ersten Eintritts- und letzten Austrittsblock (alt: die zwei Eckblöcke)
+    _ps = _kh._ports(ctx); ys = ([q["y"] for q in _ps if q["rolle"] == "ein"][0], [q["y"] for q in _ps if q["rolle"] == "aus"][-1]); zt = ctx.z_kp_o_u + ctx.kp          # Oberseite der Verteilerblöcke (außen hinter der Rückwand)
     xf = L + 3 * bx / 4                    # Opus 2026-11-20: hinter der Plattenlasche (reicht bis L + bx/2), Gewinde trifft die senkrechte Bohrung
     ctx.einbau["BT-640"] = [einbau(xf, y, zt, (0, 0, 1)) for y in ys]
     for y in ys:

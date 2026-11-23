@@ -15,3 +15,12 @@
 5. Verluste in allen Verbindern bei 194 A < 100 W (< 0,1 % von 150 kW Ladeleistung).
 ## Verfehlt
 Querschnitt außerhalb der Bänder um > 50 %; Verluste > 300 W.
+
+**Nachtrag G5 (Opus, 2026-11-22): Nachrechnung mit den Längen der Gesamtmontage G5.**
+Anlass: In G5 haben sich die Leitungsführung (HV-Eintritt angehoben, Schaltbox hinten, Verteiler außen) und die Stückzahlen der Verbinder geändert. Die Längen und Stückzahlen kommen jetzt aus cad/baukasten/ausgabe/ergebnis_{LFP,NMC}.json bzw. der Stückliste (bericht/stueckliste/), nicht mehr aus Annahmen.
+Erwartung: Die Zahl der Reihenverbinder bleibt (LFP 249). Die HV-Länge ändert sich um höchstens ±30 %, daher der HV-Verlust LFP 35–70 W (bisher 52,4). Gesamt LFP 90–125 W (bisher 105,2), NMC 360–410 W (bisher 385,4). Die Querschnittswahl ändert sich nicht. Grenzen unverändert (LFP < 100 W bleibt voraussichtlich knapp verfehlt; das wird zum Verbesserungsvorschlag).
+
+## Anforderung (Nachtrag)
+- REQ-P04 (Vorgang E1, pm/plan/wissensnetz.py)
+
+Vermerk: Nachtrag Sonnet aus wissensnetz.py, Prüfung Opus offen (2026-11-23). Die Zuordnung Rechenordner zu Vorgang E1 ist von Sonnet gewählt.

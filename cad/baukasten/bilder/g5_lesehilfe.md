@@ -26,3 +26,5 @@ KI-generiert (Claude Sonnet, 2026-11-19), Entwurf. Auftrag G5.8. Quelle der Zahl
 
 **Lesehilfe zu `g5_NMC_kuehlkreis.png`** Pumpe, Ausgleichsbehälter, Ventil, Chiller und Schläuche am Pack; Zellen und Elektrik ausgeblendet.
 
+
+**Lesehilfe zu `kuehlplatte_maeander_schnitt.png`** Draufsicht auf die untere Kühlplatte in Wassermitte. Die Platte besteht aus zwei getrennten Mäandern zu je 4 Bahnen (Trennsteg rot gestrichelt). Hinten liegen zwei Rohre übereinander: Verteilerrohr (blau, kaltes Wasser hinein) und Sammelrohr (violett schraffiert, warmes Wasser ab). Die Ausschnitte rechts zeigen die Blöcke und Stutzen hinten sowie den Trennsteg vorn. Gegenläufige Durchströmung der oberen Platte ist nicht abgebildet.

@@ -1,0 +1,9 @@
+Running as unit: hermes-batterie-recherche-W43W44.scope; invocation ID: b569ad91842e425cad0ffe988a6db71c
+2026-11-23 16:39:31 W43 PI startet
+W43.md: Werkzeugaufrufe 0, Antwort 6250 Zeichen, Links nicht aus dem Paket 0
+2026-11-23 16:43:30 W43 15 Belege bestaetigt, 2 Fehler
+2026-11-23 16:43:31 LAUF FERTIG (wissen)
+2026-11-23 16:48:34 W44 PI startet
+W44.md: Werkzeugaufrufe 0, Antwort 4264 Zeichen, Links nicht aus dem Paket 0
+2026-11-23 16:49:29 W44 3 Belege bestaetigt, 0 Fehler
+2026-11-23 16:49:30 LAUF FERTIG (wissen)

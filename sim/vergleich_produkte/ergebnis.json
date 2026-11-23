@@ -1,0 +1,106 @@
+{
+ "hinweis": "KI-generiert (Claude Sonnet), Entwurf",
+ "quelle_produkte": "forschung/ergebnis/W43.md (Zitatprüfung W43.pruefung.txt: 15 bestätigt, 2 Fehler, Fehler-Zeilen ausgeschlossen)",
+ "produkte_kWh": [
+  {
+   "name": "Kapazität (BYD Seal, klein)",
+   "kWh_text": "61,4",
+   "kWh_werte": [
+    61.4
+   ],
+   "zitat": "61.4 kWh BYD Blade LFP",
+   "quelle": "https://en.wikipedia.org/wiki/BYD_Seal",
+   "zitat_geprueft": true
+  },
+  {
+   "name": "Kapazität (BYD Seal, groß)",
+   "kWh_text": "82,5",
+   "kWh_werte": [
+    82.5
+   ],
+   "zitat": "82.5 kWh BYD Blade LFP",
+   "quelle": "https://en.wikipedia.org/wiki/BYD_Seal",
+   "zitat_geprueft": true
+  },
+  {
+   "name": "Kapazität (BYD Han EV)",
+   "kWh_text": "76,9",
+   "kWh_werte": [
+    76.9
+   ],
+   "zitat": "all its models are designed with a 76.9 kWh battery pack",
+   "quelle": "https://en.wikipedia.org/wiki/BYD_Han",
+   "zitat_geprueft": true
+  },
+  {
+   "name": "Kapazität (Tesla Model Y)",
+   "kWh_text": "60 – 81",
+   "kWh_werte": [
+    60.0,
+    81.0
+   ],
+   "zitat": "60–81 kWh lithium-ion (LFP on standard range",
+   "quelle": "https://en.wikipedia.org/wiki/Tesla_Model_Y",
+   "zitat_geprueft": true
+  },
+  {
+   "name": "Kapazität (Lucid Air)",
+   "kWh_text": "88 – 118",
+   "kWh_werte": [
+    88.0,
+    118.0
+   ],
+   "zitat": "88, 93, 112 or 118 kWh lithium-ion",
+   "quelle": "https://en.wikipedia.org/wiki/Lucid_Air",
+   "zitat_geprueft": true
+  },
+  {
+   "name": "Kapazität (VW ID.3, China)",
+   "kWh_text": "57,3",
+   "kWh_werte": [
+    57.3
+   ],
+   "zitat": "57.3 kWh CATL NMC lithium-ion",
+   "quelle": "https://en.wikipedia.org/wiki/Volkswagen_ID.3",
+   "zitat_geprueft": true
+  }
+ ],
+ "ausgeschlossen_zitat_fehlt": [
+  "Kapazität (Tesla Model 3)"
+ ],
+ "produktspanne_kWh": [
+  57.3,
+  118.0
+ ],
+ "unser": {
+  "LFP": {
+   "energie_kWh": 73.92,
+   "masse_kg": 626.768,
+   "Wh_kg": 117.9,
+   "huell_l": 830.7,
+   "Wh_l": 89.0,
+   "quelle": "pm/bauteile/stueckliste_LFP.json summen; cad/baukasten/ausgabe/ergebnis_LFP.json (Hüllquader laenge*breite*hoehe_max)"
+  },
+  "NMC": {
+   "energie_kWh": 74.27,
+   "masse_kg": 486.362,
+   "Wh_kg": 152.7,
+   "huell_l": 740.4,
+   "Wh_l": 100.3,
+   "quelle": "pm/bauteile/stueckliste_NMC.json summen; cad/baukasten/ausgabe/ergebnis_NMC.json (Hüllquader laenge*breite*hoehe_max)"
+  }
+ },
+ "pruefung_band_40pct": {
+  "LFP": {
+   "im_band_40pct": true
+  },
+  "NMC": {
+   "im_band_40pct": true
+  }
+ },
+ "wh_kg_vergleich": "nicht möglich: W43 enthält mit bestandener Zitatprüfung keine Packmasse (kg) und kein Packvolumen",
+ "kategorie_V": {
+  "Q8": 1
+ },
+ "kategorie_V_hinweis": "Q8 Stufe 1 nur Energie (Fahrzeugangabe, brutto/netto unklar); Q7 und Q10 ohne Vergleichswert, bleiben 0"
+}

@@ -12,8 +12,10 @@
     "entscheidung": "ENT-006"
    },
    "bauraum_laenge_mm": {
-    "wert": null,
-    "entscheidung": null
+    "wert": 2050.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-147",
+    "variante": "LFP"
    },
    "bauraum_breite_mm": {
     "wert": 1430.0,
@@ -339,12 +341,16 @@
   },
   "BT-200": {
    "verschaltung": {
-    "wert": null,
-    "entscheidung": null
+    "wert": "schleife_2reihen",
+    "einheit": null,
+    "entscheidung": "ENT-148",
+    "variante": "LFP"
    },
    "zellen_anzahl": {
-    "wert": null,
-    "entscheidung": null
+    "wert": 250.0,
+    "einheit": "\"-\"",
+    "entscheidung": "ENT-160",
+    "variante": "LFP"
    },
    "reihen_anzahl": {
     "wert": null,
@@ -417,52 +423,75 @@
     "entscheidung": null
    }
   },
-  "BT-300": {
-   "architektur": {
+  "BT-260": {
+   "werkstoff": {
     "wert": null,
     "entscheidung": null
+   },
+   "volumen_cm3": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-300": {
+   "architektur": {
+    "wert": "zentral_BMS_CMU_Daisy-Chain",
+    "einheit": null,
+    "entscheidung": "ENT-110"
    }
   },
   "BT-310": {
    "laenge_mm": {
-    "wert": null,
-    "entscheidung": null
+    "wert": 200.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-139"
    },
    "breite_mm": {
-    "wert": null,
-    "entscheidung": null
+    "wert": 150.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-140"
    },
    "hoehe_mm": {
-    "wert": null,
-    "entscheidung": null
+    "wert": 20.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-141"
    },
    "einbauort": {
-    "wert": null,
-    "entscheidung": null
+    "wert": "deckel_hinten",
+    "einheit": null,
+    "entscheidung": "ENT-138"
    }
   },
   "BT-320": {
    "anzahl": {
-    "wert": null,
-    "entscheidung": null
+    "wert": 14.0,
+    "einheit": "-",
+    "entscheidung": "ENT-112",
+    "variante": "LFP"
    },
    "kanaele": {
-    "wert": null,
-    "entscheidung": null
+    "wert": 18.0,
+    "einheit": "-",
+    "entscheidung": "ENT-111"
    },
    "ausgleich": {
-    "wert": null,
-    "entscheidung": null
+    "wert": "passiv",
+    "einheit": null,
+    "entscheidung": "ENT-114"
    },
    "ausgleichsstrom_mA": {
-    "wert": null,
-    "entscheidung": null
+    "wert": 150.0,
+    "einheit": "mA",
+    "entscheidung": "ENT-115",
+    "variante": "LFP"
    }
   },
   "BT-330": {
    "anzahl": {
-    "wert": null,
-    "entscheidung": null
+    "wert": 56.0,
+    "einheit": "-",
+    "entscheidung": "ENT-116",
+    "variante": "LFP"
    },
    "zellen_je_fuehler": {
     "wert": null,
@@ -471,26 +500,38 @@
   },
   "BT-340": {
    "prinzip": {
-    "wert": null,
-    "entscheidung": null
+    "wert": "Shunt_Hall_redundant",
+    "einheit": null,
+    "entscheidung": "ENT-118"
    },
    "messbereich_A": {
-    "wert": null,
-    "entscheidung": null
+    "wert": 500.0,
+    "einheit": "A",
+    "entscheidung": "ENT-119"
    }
   },
   "BT-350": {
    "ansprechwert_kOhm": {
-    "wert": null,
-    "entscheidung": null
+    "wert": 400.0,
+    "einheit": "kOhm",
+    "entscheidung": "ENT-120"
    }
   },
   "BT-360": {
    "art": {
-    "wert": null,
-    "entscheidung": null
+    "wert": "FPC",
+    "einheit": null,
+    "entscheidung": "ENT-121"
    },
    "breite_mm": {
+    "wert": 16.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-149",
+    "variante": "LFP"
+   }
+  },
+  "BT-361": {
+   "abstand_mm": {
     "wert": null,
     "entscheidung": null
    }
@@ -539,6 +580,44 @@
     "variante": "LFP"
    },
    "biegeradius_min_mm": {
+    "wert": 70.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-142",
+    "variante": "LFP"
+   },
+   "werkstoff": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-440": {
+   "querschnitt_mm2": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "ueberlappung_mm": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "masse_g": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "bauform": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "werkstoff": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-450": {
+   "masse_g": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "bauform": {
     "wert": null,
     "entscheidung": null
    },
@@ -633,6 +712,12 @@
    "kammern": {
     "wert": null,
     "entscheidung": null
+   },
+   "crashkonzept": {
+    "wert": "schweller_traegt_keine_knautschzone_im_pack",
+    "einheit": null,
+    "entscheidung": "ENT-151",
+    "variante": "LFP"
    }
   },
   "BT-550": {
@@ -669,6 +754,34 @@
     "entscheidung": null
    }
   },
+  "BT-580": {
+   "masse_g": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "bauform": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "werkstoff": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-590": {
+   "masse_g": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "bauform": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "werkstoff": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
   "BT-600": {
    "kuehlart": {
     "wert": "\"Kühlplatte oben und unten\"",
@@ -683,25 +796,44 @@
     "entscheidung": "ENT-089"
    },
    "werkstoff": {
-    "wert": null,
-    "entscheidung": null
+    "wert": "\"Al-Blech 1 mm, gelötet, Mäander 8 Bahnen längs, Teilkanäle\"",
+    "einheit": null,
+    "entscheidung": "ENT-153",
+    "variante": "LFP"
    },
    "dicke_mm": {
-    "wert": 8.0,
+    "wert": 6.0,
     "einheit": "mm",
-    "entscheidung": "ENT-090"
+    "entscheidung": "ENT-152",
+    "variante": "LFP"
    },
    "kanal_anzahl": {
-    "wert": null,
-    "entscheidung": null
+    "wert": 8.0,
+    "einheit": null,
+    "entscheidung": "ENT-156",
+    "variante": "LFP"
    },
    "kanal_breite_mm": {
-    "wert": null,
-    "entscheidung": null
+    "wert": 8.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-155",
+    "variante": "LFP"
    },
    "kanal_hoehe_mm": {
-    "wert": null,
-    "entscheidung": null
+    "wert": 4.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-154",
+    "variante": "LFP"
+   },
+   "kanalfuehrung": {
+    "wert": "gruppiert_k2",
+    "einheit": null,
+    "entscheidung": "ENT-158"
+   },
+   "verteilerrohr_d_mm": {
+    "wert": 25.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-159"
    }
   },
   "BT-620": {
@@ -750,6 +882,82 @@
    "eintritt_max_C": {
     "wert": null,
     "entscheidung": null
+   },
+   "einbauort": {
+    "wert": "hinten_am_pack",
+    "einheit": null,
+    "entscheidung": "ENT-157",
+    "variante": "LFP"
+   }
+  },
+  "BT-661": {
+   "masse_g": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "bauform": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "werkstoff": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-662": {
+   "masse_g": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "bauform": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "werkstoff": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-663": {
+   "masse_g": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "bauform": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "werkstoff": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-664": {
+   "masse_g": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "bauform": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "werkstoff": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-665": {
+   "masse_g": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "bauform": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "werkstoff": {
+    "wert": null,
+    "entscheidung": null
    }
   },
   "BT-700": {},
@@ -775,58 +983,91 @@
   },
   "BT-711": {
    "nennstrom_A": {
-    "wert": null,
-    "entscheidung": null
+    "wert": 250.0,
+    "einheit": "A",
+    "entscheidung": "ENT-123"
    },
    "nennspannung_V": {
-    "wert": null,
-    "entscheidung": null
+    "wert": 1000.0,
+    "einheit": "V",
+    "entscheidung": "ENT-124"
    }
   },
   "BT-712": {
    "widerstand_Ohm": {
-    "wert": null,
-    "entscheidung": null
+    "wert": 100.0,
+    "einheit": "Ohm",
+    "entscheidung": "ENT-125"
    },
    "vorladezeit_ms": {
-    "wert": null,
-    "entscheidung": null
+    "wert": 300.0,
+    "einheit": "ms",
+    "entscheidung": "ENT-126"
    }
   },
   "BT-713": {
    "art": {
-    "wert": null,
-    "entscheidung": null
+    "wert": "Pyro_plus_Schmelzsicherung",
+    "einheit": null,
+    "entscheidung": "ENT-127"
    },
    "nennstrom_A": {
-    "wert": null,
-    "entscheidung": null
+    "wert": 350.0,
+    "einheit": "A",
+    "entscheidung": "ENT-128",
+    "variante": "LFP"
    }
   },
   "BT-720": {
    "nennstrom_A": {
+    "wert": 250.0,
+    "einheit": "A",
+    "entscheidung": "ENT-130"
+   },
+   "einbauort": {
     "wert": null,
     "entscheidung": null
    },
-   "einbauort": {
+   "bauform": {
+    "wert": "trennbruecke_servicedeckel_vorn",
+    "einheit": null,
+    "entscheidung": "ENT-150",
+    "variante": "LFP"
+   }
+  },
+  "BT-721": {
+   "luecke_mm": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-722": {
+   "laenge_mm": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "breite_mm": {
     "wert": null,
     "entscheidung": null
    }
   },
   "BT-730": {
    "anzahl": {
-    "wert": null,
-    "entscheidung": null
+    "wert": 2.0,
+    "einheit": "-",
+    "entscheidung": "ENT-132"
    },
    "nennstrom_A": {
-    "wert": null,
-    "entscheidung": null
+    "wert": 250.0,
+    "einheit": "A",
+    "entscheidung": "ENT-133"
    }
   },
   "BT-740": {
    "polzahl": {
-    "wert": null,
-    "entscheidung": null
+    "wert": 26.0,
+    "einheit": "-",
+    "entscheidung": "ENT-134"
    }
   },
   "BT-750": {
@@ -845,18 +1086,21 @@
   },
   "BT-760": {
    "art": {
-    "wert": null,
-    "entscheidung": null
+    "wert": "PTC_im_Kuehlkreis_Fahrzeug",
+    "einheit": null,
+    "entscheidung": "ENT-135"
    },
    "leistung_kW": {
-    "wert": null,
-    "entscheidung": null
+    "wert": 5.0,
+    "einheit": "kW",
+    "entscheidung": "ENT-136"
    }
   },
   "BT-770": {
    "prinzip": {
-    "wert": null,
-    "entscheidung": null
+    "wert": "Druck_plus_H2_CO2",
+    "einheit": null,
+    "entscheidung": "ENT-137"
    }
   },
   "BT-780": {}

@@ -2,6 +2,33 @@
 
 KI-generiert (Claude Opus).
 
+## 2026-11-23 Abend: Optimierung abgeschlossen, Commit
+- Workflow Schleife 2 (BAT-DOC-17, Tore T0–T6), V-Modell-Matrix docs/06 ohne „nicht definiert“, Wissensgraph pm/graph (ReqIF), Tresor wissen/, Regelwerke docs/20, Qualitätsnachweis docs/22 (alle Q Stufe 0: V und U fehlen), Präsentation und Video erste Fassung.
+- Freigaberunde: REQ-Kriterien vom Autor (pm/freigaberunde_2026-11-23.md); Akten und Annahmen delegiert an Opus (CLAUDE.md Regel). Stellgrößen Schleife 2: 23 Annahmen.
+- Schleife 2 Start: ΔT zwischen Zellen neu auswerten, K5 mit Packlänge 2373 neu, LFP-Zellmodell (−47 % Kapazität), Leichtbau (528/370 kg), Pfahl (Zellen ≤ 0,5 mm), QN5/QN6.
+
+## 2026-11-23 Nachmittag: Workflow Schleife 2
+- BAT-DOC-17 (Tore T0–T6, V-Modell), BAT-DOC-07 v0.2 (Normen, Einschätzung), Werkzeuge: pm/anforderungen.json, pm/plan/verifikation.py → docs/06, pm/tor.py, pm/steckbrief.py, pm/masse_abgleich.py, pm.py freigabe → docs/19, Tor in warteschlange.sh.
+- Befund B-BAT-045: 28 von 31 REQ nicht prüfbar; L 1950/2030/2373 klären; K5 mit alter Packlänge.
+- Offen: Autor-Freigaberunde docs/19; Normtexte R100/R135/2023/1542 als PDF vom Autor (Server sperren Abruf); China Zielmarkt?
+
+## 2026-11-22 Vormittag
+- Warteschlange läuft wieder seit 08:18 (X3 s10 ab Abschnitt 6).
+- Kühlplatte freigegeben (ENT-152 bis 156), Optimierung als ENT-158 vorgeschlagen (Parallel-Z): Verteilerrechnung und K4 stehen noch aus.
+- E1-G5: LFP 73 W (jetzt < 100 W), NMC 364 W (B-BAT-041).
+- Bewerbung FEV vom Autor abgeschlossen.
+- Bericht 0.6 bei Sonnet in Arbeit.
+
+## 2026-11-21 21:25 Rechnung heruntergefahren (Autor)
+- Weiter mit: `bash rechnen/start.sh`. X3_LFP_a_s10 setzt beim unterbrochenen Abschnitt fort (Restart).
+- Offen: s10 Rest, s40, b, NMC_a, NMC_b, PI_X3_ALLE, BILDER_X; danach Bilder in den Bericht, Druckverlust/Einlass K3 klären, Abschlussbericht.
+
+## 2026-11-21 20:10 Veröffentlichung
+- Repo github.com/ThomasSchmiegelt/batterie-system ist öffentlich (Freigabe Autor), Commit ac1679e. Große Rechenausgaben stehen in .gitignore.
+- pm/vektorsuche/: ChromaDB mit bge-m3, hit@3 58 % an 12 Fragen.
+- Bewerbung FEV (Ordner außerhalb des Repos) überarbeitet, PDFs baut die Bewerbungsinstanz.
+- X3_LFP_a2 fertig, prüfen.
+
 ## 2026-11-21 12:15 Pause (Autor)
 - Warteschlange angehalten (rechnen/halt.sh). Weiter mit: `bash rechnen/start.sh`.
 - Crash LFP_a ungültig (B-BAT-039, ERWARTUNG X3 Nachtrag 3): Zellreihen ohne Kontakt. Sonnet stellt auf 4 Blöcke um, Probe; danach rechnet die Warteschlange LFP_a neu. Kapitel 17 im Bericht um diesen Fall ergänzen.
@@ -186,3 +213,9 @@ KI-generiert (Claude Opus).
 - TextFold: vom Nutzer verworfen („Nein. Wir nehmen Obsidian.“), nicht installiert. Notizen/Lesehilfe = Obsidian.
 - Unternehmenspräsentation eingeplant (Nutzer: „…am Ende eine Präsentation mit raus springt. Das ist eine Unternehmenspräsentation“): REQ-D14, praesentation/STORYBOARD.md (BAT-DOC-14), Bausteine praesentation/bausteine/<Vorgang>.md, Vorgänge B0 (Zielgruppe/Firmenvorlage, offen beim Nutzer) und B5 (erzeuge.py, python-pptx noch nicht installiert). Regel in CLAUDE.md. Hinweis: BAT-DOC-13 doppelt vergeben (Stückliste und Video-Storyboard).
 - 2026-11-12 18:00 Nutzer: Patente (P02–P10, 503-Sperre) hinten angestellt.
+- 22.11 11:07 Opus: Autor fährt den PC gegen 20:00 herunter. Zeitgesteuertes halt.sh um 19:15 gestartet (Log rechnen/log_halt_abend.txt). Weiter nach dem Einschalten: bash rechnen/start.sh (X3 setzt am letzten Abschnitt wieder auf).
+- 22.11 22:05 Opus: X3_LFP_b FEHLER 16:06. Abschnitt 2 instabil bei t≈5,16 ms (Kontakt /INTER/TYPE7/1 Zellknoten gegen Schalen, Zeitschritt fällt auf 1e-12, Energie explodiert), lief 2,5 h ohne Restart-Datei weiter → Abschnitt 3 „X3_0002_0001.rst NOT FOUND“. Warteschlange steht (STOP). NICHT einfach start.sh: LFP_b scheitert sonst erneut. Morgen zuerst: Kontaktsteifigkeit/Gapmin bzw. Zeitschritt-Stopp (dtmin, MIN.TIME FLAG 1) für Fall b prüfen, ERWARTUNG Nachtrag, dann LFP_b neu, NMC_a/NMC_b folgen. Prüfen, ob 100 kN schon in Abschnitt 1 erreicht (X3T01).
+- 22.11 22:15 Autor: möchte einen Fachblatt-Artikel „Agentisches Engineering“ schreiben (Gliederung im Chat vorgeschlagen: Crash-Einstieg, Rollen, Spielregeln des Autors, Fehler der KI, Ökonomie, Grenzen, Fazit). Nächster Schritt Opus: Materialsammlung mit Belegen je Absatz, Zielblatt mit Autor klären. Zuschreibung ehrlich trennen.
+- 23.11. 10:15 Opus: Alle Crashfälle X3 fertig (NMC_a, NMC_b, PI, Bilder). Wächter verschärft (Nachtrag 6), GPU-Prüfung vor GPU-Schritten (gpu_warten.sh). Obsidian vollständig (158 ENT, 42 Befunde, 0 tote Links). Exposé Konstruktionspraxis in ~/hermes/buch/artikel/konstruktionspraxis/ (Bild 3 offen, Freigabe Autor). Läuft: K5 Parallelführung (ENT-158) – Sonnet, ERWARTUNG sim/kuehlung/k5_parallel. Danach: Crash-Ergebnisse in den Bericht, Abschlussbericht 1.0.
+- 23.11. Nachmittag Opus: ENT-158/159 freigegeben (Autor), G5.9 im CAD (0 Kollisionen, +38 mm, +0,16 % Kosten), V4p wie gebaut LFP 9,6 K. Abschlussbericht 1.0 (104 S., geprüft KI) mit Verbesserungsanalyse und Lehren Konstruktionsschleife. Offen: Freigabe Bericht, Frage ΔT-Definition, Gegenlauf im CAD, NMC-Querschnitt, 43 offene ENT, Bilder NMC_a/b drucktauglich, bilder.py 2023 Fehler. Nichts committet.
+- 23.11. Opus: Bericht 1.2 (115 S.) nach PI-Gutachten; Sicherungen bericht_1.0.tex/pdf, bericht_0.6.tex. Offen für Autor: Freigabe Bericht, ΔT-Definition, Packhöhe 130 mm (Annahme ohne Akte, 134 mm), 43 ENT. Nichts committet.

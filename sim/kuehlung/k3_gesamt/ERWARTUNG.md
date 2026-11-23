@@ -28,3 +28,8 @@ Erwartung neu: f·Re (Darcy) 62 ± 10 % (Rechteck 2:1), Nu ± 15 % vom K2b-Ansat
   3. Ungleiche Verteilung auf die 8 Teilkanäle nach der Umlenkung: Innenkanal (kurzer Weg) mit bis zu +20 % Durchfluss, Außenkanal −20 %. Gleicht sich nach etwa 20 Kanalhöhen aus.
   4. Temperatur: Wandnahe Grenzschicht wächst entlang der Bahn. Die Mischung in der Umlenkung baut sie ab (heller Streifen hinter der Umlenkung). Aufwärmung bei Re 200 nur qualitativ, nicht auf den Betrieb übertragbar.
 - **Verfehlt**, wenn Punkt 1 > 5 % abweicht oder der Lauf instabil wird (NaN). Dann zurück an Opus.
+
+## Anforderung (Nachtrag)
+- REQ-P09 (Vorgang K3, pm/plan/wissensnetz.py)
+
+Vermerk: Nachtrag Sonnet aus wissensnetz.py, Prüfung Opus offen (2026-11-23). Die Zuordnung Rechenordner zu Vorgang K3/K4 ist von Sonnet gewählt.

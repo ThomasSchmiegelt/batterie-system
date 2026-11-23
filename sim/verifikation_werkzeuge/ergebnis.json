@@ -1,0 +1,53 @@
+{
+ "hinweis": "KI-generiert (Claude Sonnet, 2026-11-23), Entwurf. Zusammenfassung aus ergebnis_V1..V5.json (auswerten.py).",
+ "faelle": {
+  "V1": {
+   "bestanden": true,
+   "abweichung_fein_pct": -0.22675736960000137,
+   "ordnung_beobachtet": [
+    2.000000000023331,
+    2.0000000000395857
+   ],
+   "datei": "ergebnis_V1.json"
+  },
+  "V2": {
+   "bestanden": true,
+   "abweichung_fein_pct": 0.06813406944277123,
+   "ordnung_beobachtet": [
+    2.0696306189332336,
+    2.437127625791744
+   ],
+   "datei": "ergebnis_V2.json"
+  },
+  "V3": {
+   "bestanden": true,
+   "abweichung_fein_pct": -0.48449726125001646,
+   "ordnung_beobachtet": null,
+   "datei": "ergebnis_V3.json"
+  },
+  "V4": {
+   "bestanden": false,
+   "abweichung_fein_pct": 47.37023789967062,
+   "ordnung_beobachtet": null,
+   "datei": "ergebnis_V4.json"
+  },
+  "V5": {
+   "bestanden": true,
+   "abweichung_fein_pct": 0.059614226400506176,
+   "ordnung_beobachtet": null,
+   "datei": "ergebnis_V5.json"
+  }
+ },
+ "alle_bestanden": false,
+ "toleranz": {
+  "V1_T_pct": 1.0,
+  "V1_waermestrom_pct": 0.5,
+  "V2_ueber20_pct": 2.0,
+  "V2_massenerhalt_pct": 0.5,
+  "V3_delta_pct": 3.0,
+  "V3_energie_pct": 1.0,
+  "V4_ladung_pct": 2.0,
+  "V4_spm_dfn_mV": 10.0,
+  "V5_dp_pct": 1.0
+ }
+}

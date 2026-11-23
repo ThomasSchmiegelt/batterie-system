@@ -27,3 +27,8 @@
 - LFP B: Zelle ≈ 840 mm → passt weiter nicht.
 - NMC: etwa eine Reihe mehr (≈ 1270 Plätze), Belegung A ≈ 68 %.
 - Verfehlt, wenn LFP A nicht passt.
+
+## Anforderung (Nachtrag)
+- REQ-D11 (Vorgang G1, pm/plan/wissensnetz.py)
+
+Vermerk: Nachtrag Sonnet aus wissensnetz.py, Prüfung Opus offen (2026-11-23). Die Zuordnung Rechenordner zu Vorgang G1 ist von Sonnet gewählt.

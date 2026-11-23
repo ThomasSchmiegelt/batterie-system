@@ -1,0 +1,73 @@
+{
+ "hinweis": "KI-generiert (Claude Sonnet, 2026-11-23), Entwurf. Erzeugt von v4_pybamm.py.",
+ "pybamm": "26.10.1.1",
+ "c_rate": 0.05,
+ "saetze": {
+  "LFP": {
+   "parametersatz": "Prada2013 (Literatur)",
+   "Nennkapazitaet_Ah": 92.4,
+   "abschaltspannung_V": 2.0,
+   "strom_A": 4.62,
+   "ladung_Ah": {
+    "SPM": 48.63076099098154,
+    "DFN": 48.62984742925689,
+    "SPMe": 48.62990018070435
+   },
+   "ladung_pybamm_Ah": {
+    "SPM": 48.63076099098154,
+    "DFN": 48.62984742925682,
+    "SPMe": 48.62990018070435
+   },
+   "abw_ladung_pct": {
+    "SPM": -47.36930628681652,
+    "DFN": -47.37029498998172,
+    "SPMe": -47.37023789967062
+   },
+   "abw_ladung_projektmodell_SPMe_pct": -47.37023789967062,
+   "spm_dfn_dU_max_mV": 0.642418764480901,
+   "spm_dfn_dU_mittel_mV": 0.589118078200912,
+   "spm_dfn_dU_bei_Q_Ah": 45.8266231413551,
+   "bestanden_ladung": false,
+   "bestanden_spm_dfn": true
+  },
+  "NMC": {
+   "parametersatz": "Chen2020 (Literatur)",
+   "Nennkapazitaet_Ah": 23.125,
+   "abschaltspannung_V": 2.5,
+   "strom_A": 1.15625,
+   "ladung_Ah": {
+    "SPM": 23.188020850132276,
+    "DFN": 23.185359371779736,
+    "SPMe": 23.18533273127546
+   },
+   "ladung_pybamm_Ah": {
+    "SPM": 23.18802085013227,
+    "DFN": 23.185359371779775,
+    "SPMe": 23.185332731275448
+   },
+   "abw_ladung_pct": {
+    "SPM": 0.27252259516659105,
+    "DFN": 0.26101349958804754,
+    "SPMe": 0.2608982974073859
+   },
+   "abw_ladung_projektmodell_SPMe_pct": 0.2608982974073859,
+   "spm_dfn_dU_max_mV": 4.008373520431707,
+   "spm_dfn_dU_mittel_mV": 2.9716741483183866,
+   "spm_dfn_dU_bei_Q_Ah": 6.6824970620417785,
+   "bestanden_ladung": true,
+   "bestanden_spm_dfn": true
+  }
+ },
+ "zusatz_LFP_skaliert": {
+  "faktor_breite": 1.9000655904422978,
+  "Q_integriert_Ah": 93.07879825954367,
+  "abw_pct": 0.7346301510212871,
+  "Quelle_Vergleich": "sim/chemie/c1_zellmodell/ergebnis_LFP_kap.json (93,08 Ah)"
+ },
+ "abweichung_fein_pct": 47.37023789967062,
+ "spm_dfn_dU_max_mV": 4.008373520431707,
+ "ordnung_beobachtet": null,
+ "toleranz_ladung_pct": 2.0,
+ "toleranz_spm_dfn_mV": 10.0,
+ "bestanden": false
+}

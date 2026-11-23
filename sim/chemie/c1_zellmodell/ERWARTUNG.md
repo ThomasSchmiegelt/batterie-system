@@ -10,3 +10,8 @@
 4. Endspannung beim Laden erreicht bei NMC 1,4C die Ladeschlussspannung 4,2 V vor 80 % → CC-CV, Ladezeit länger (Prüfgröße).
 ## Verfehlt
 Kapazität > 10 % daneben; Wärme außerhalb Faktor 1,5 der I²R-Annahme (dann K1 neu mit Modellwärme).
+
+## Anforderung (Nachtrag)
+- REQ-D06 (Vorgang C1, pm/plan/wissensnetz.py)
+
+Vermerk: Nachtrag Sonnet aus wissensnetz.py, Prüfung Opus offen (2026-11-23). Die Zuordnung Rechenordner zu Vorgang C1 ist von Sonnet gewählt.

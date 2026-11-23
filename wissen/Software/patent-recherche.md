@@ -8,7 +8,7 @@ tags: ["software"]
 > KI-generiert, erzeugt aus pm/plan/wissensnetz.json – nicht von Hand bearbeiten
 
 - Status: im Projekt (SOFTWARE.md)
-- Übersicht: [[SOFTWARE]]
+- Übersicht: [[Dokument/SOFTWARE]]
 
 ## Vorgänge
-- [[wissen/Vorgang/R3|R3]] – Patente P01-P10
+- [[Vorgang/R3|R3]] – Patente P01-P10

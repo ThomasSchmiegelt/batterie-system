@@ -42,3 +42,9 @@ Verfehlt: P0 K3b außerhalb 41–49 °C; h_eff im Modell ≠ Formel ± 1 %.
 - LFP: gemessener Blade-10-s-Widerstand 25 °C 0,877 mΩ (Test#5 über C2) → unsere 92,4-Ah-Zelle 1,28 mΩ → 48 W bei 2,1C (statt 55 W). Fall K3 P0 erwartet ≈ 32,8 °C / ≈ 4,0 K (Skalierung ~0,87 auf Erwärmung und ΔT).
 - NMC 4680, 1,5C CC-CV 10→80 % in 29,7 min (C2): Wärme zeitabhängig aus `sim/chemie/c2_kalibrierung/schnellladen_Q_t.csv`; zwei Maße: Modell gesamt (mittel 7,4 W) und I·ΔU (mittel 11,5 W, konservativ). K3b: erwartet mit 7,4 W ≈ 34–35 °C / 4,2–4,6 K (knapp erfüllt), mit 11,5 W ≈ 38–40 °C / 6–7 K (**5 K verfehlt**).
 - Verfehlt: Wärmeintegral ≠ CSV ± 2 %.
+
+## Anforderung (Nachtrag)
+- REQ-D06 (Vorgang K1, pm/plan/wissensnetz.py)
+- REQ-P09 (Vorgang K1, pm/plan/wissensnetz.py)
+
+Vermerk: Nachtrag Sonnet aus wissensnetz.py, Prüfung Opus offen (2026-11-23). Die Zuordnung Rechenordner zu Vorgang K1 ist von Sonnet gewählt.

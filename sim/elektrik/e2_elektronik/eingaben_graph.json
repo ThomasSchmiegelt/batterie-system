@@ -1,0 +1,71 @@
+{
+ "_hinweis": "KI-generiert (Claude Sonnet, 2026-11-23), Entwurf, Nachtrag aus Skripten und eingaben*.json des Ordners (Prüfung Opus offen). Nur Verweise, die dort wörtlich stehen und eindeutig sind: A_-Namen, eindeutige Merkmalsnamen in Anführungszeichen, Ergebnisdateien anderer Rechenordner. wert = Stand bei Anlage (2026-11-23), nicht der Stand zur Rechenzeit. Die alte eingaben.json bleibt unverändert.",
+ "_variante": "LFP",
+ "A_e2_trennstecker_mm": {
+  "wert": [
+   80,
+   50,
+   60
+  ],
+  "quelle": "annahme:A_e2_trennstecker_mm",
+  "verwendet_in": "kabelplan.py"
+ },
+ "ausgleich": {
+  "wert": null,
+  "quelle": "parameter:ausgleich",
+  "bt": "BT-320",
+  "verwendet_in": "eingaben.json, elektronik.py"
+ },
+ "ausgleichsstrom_mA": {
+  "wert": null,
+  "quelle": "parameter:ausgleichsstrom_mA",
+  "bt": "BT-320",
+  "verwendet_in": "schaltbild.py"
+ },
+ "kanaele": {
+  "wert": null,
+  "quelle": "parameter:kanaele",
+  "bt": "BT-320",
+  "verwendet_in": "schaltbild.py"
+ },
+ "messbereich_A": {
+  "wert": null,
+  "quelle": "parameter:messbereich_A",
+  "bt": "BT-340",
+  "verwendet_in": "schaltbild.py"
+ },
+ "polzahl": {
+  "wert": null,
+  "quelle": "parameter:polzahl",
+  "bt": "BT-740",
+  "verwendet_in": "schaltbild.py"
+ },
+ "verschaltung": {
+  "wert": null,
+  "quelle": "parameter:verschaltung",
+  "bt": "BT-200",
+  "verwendet_in": "kabelplan.py, schaltbild.py, verlust_al.py, verlust_al_e2d.py"
+ },
+ "vorladezeit_ms": {
+  "wert": null,
+  "quelle": "parameter:vorladezeit_ms",
+  "bt": "BT-712",
+  "verwendet_in": "schaltbild.py"
+ },
+ "widerstand_Ohm": {
+  "wert": null,
+  "quelle": "parameter:widerstand_Ohm",
+  "bt": "BT-712",
+  "verwendet_in": "schaltbild.py"
+ },
+ "zellen_je_reihe": {
+  "wert": null,
+  "quelle": "parameter:zellen_je_reihe",
+  "bt": "BT-210",
+  "verwendet_in": "schaltbild.py"
+ },
+ "ergebnis_elektrik_e1_querschnitte_ergebnis": {
+  "quelle": "ergebnis:sim/elektrik/e1_querschnitte/ergebnis.json",
+  "hinweis": "Datei ohne Schlüssel, kein Wert verglichen"
+ }
+}

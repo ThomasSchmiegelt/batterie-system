@@ -1,0 +1,20 @@
+{
+ "_hinweis": "KI-generiert (Claude Sonnet, 2026-11-23), Entwurf, Nachtrag aus Skripten und eingaben*.json des Ordners (Prüfung Opus offen). Nur Verweise, die dort wörtlich stehen und eindeutig sind: A_-Namen, eindeutige Merkmalsnamen in Anführungszeichen, Ergebnisdateien anderer Rechenordner. wert = Stand bei Anlage (2026-11-23), nicht der Stand zur Rechenzeit. Die alte eingaben.json bleibt unverändert.",
+ "_variante": "LFP",
+ "lagen": {
+  "wert": 78.0,
+  "quelle": "parameter:lagen",
+  "bt": "BT-113",
+  "verwendet_in": "anordnung.py"
+ },
+ "zellabstand_mm": {
+  "wert": null,
+  "quelle": "parameter:zellabstand_mm",
+  "bt": "BT-250",
+  "verwendet_in": "anordnung.py, eingaben.json"
+ },
+ "ergebnis_chemie_varianten_lfp_nmc_ergebnis": {
+  "quelle": "ergebnis:sim/chemie/varianten_lfp_nmc/ergebnis.json",
+  "hinweis": "Datei ohne Schlüssel, kein Wert verglichen"
+ }
+}

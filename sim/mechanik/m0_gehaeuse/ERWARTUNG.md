@@ -16,3 +16,6 @@
 5. Masse Querträger: Profil-Querschnitt ≈ 2·(54+26)·2,5 = 400 mm² → 0,4·10⁻³ m² · 1,37 m · 2700 kg/m³ ≈ 1,5 kg je Stück, ≈ 4,5 kg für drei.
 ## Verfehlt
 - Höhe > 130 mm bei einer Variante; LFP-Länge außerhalb 2000–2060 mm; NMC Plätze < 868.
+
+## Anforderung (Nachtrag)
+REQ-P14, REQ-P07 (Zuordnung Opus 2026-11-23)

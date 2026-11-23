@@ -2,14 +2,14 @@
  "hinweis": "KI-generiert (Claude Opus, G5 montage.py), Entwurf",
  "variante": "LFP",
  "stueckliste_version": "0.3",
- "teile": 1343,
- "masse_kg": 628.833,
- "laenge_mm": 2335.0,
+ "teile": 1347,
+ "masse_kg": 629.552,
+ "laenge_mm": 2373.0,
  "breite_mm": 1430.0,
  "hoehe_max_mm": 244.8,
  "stufen": {
   "F": 28,
-  "K": 17,
+  "K": 18,
   "H": 4
  },
  "positionen": [
@@ -77,7 +77,7 @@
    "ist": 249,
    "masse_cad_kg": 1.1796,
    "masse_sl_kg": 1.92097,
-   "sekunden": 3.6
+   "sekunden": 3.5
   },
   {
    "pos": "400.3",
@@ -110,7 +110,7 @@
    "ist": 12,
    "masse_cad_kg": 2.3387,
    "masse_sl_kg": 0.612668,
-   "sekunden": 1.2,
+   "sekunden": 0.9,
    "hinweis": "Stückzahl aus CAD (Normteile), Stückliste übernimmt sie"
   },
   {
@@ -154,7 +154,7 @@
    "soll": 56,
    "ist": 56,
    "masse_cad_kg": 0.0001,
-   "masse_sl_kg": 0.000403,
+   "masse_sl_kg": 6.9e-05,
    "sekunden": 0.0
   },
   {
@@ -198,7 +198,7 @@
    "soll": 265,
    "ist": 265,
    "masse_cad_kg": 0.0346,
-   "masse_sl_kg": 0.022088,
+   "masse_sl_kg": 0.022422,
    "sekunden": 0.0,
    "hinweis": "Stückzahl aus CAD (Normteile), Stückliste übernimmt sie"
   },
@@ -276,7 +276,7 @@
    "soll": 2,
    "ist": 2,
    "masse_cad_kg": 0.33,
-   "masse_sl_kg": 0.25,
+   "masse_sl_kg": 0.33,
    "sekunden": 0.0
   },
   {
@@ -320,7 +320,7 @@
    "soll": 1,
    "ist": 1,
    "masse_cad_kg": 0.015,
-   "masse_sl_kg": 0.03,
+   "masse_sl_kg": 0.015,
    "sekunden": 0.0
   },
   {
@@ -391,7 +391,7 @@
    "ist": 9,
    "masse_cad_kg": 0.0212,
    "masse_sl_kg": 0.021709,
-   "sekunden": 2.1,
+   "sekunden": 2.2,
    "hinweis": "Stückzahl aus CAD (Normteile), Stückliste übernimmt sie"
   },
   {
@@ -413,7 +413,7 @@
    "soll": 1,
    "ist": 1,
    "masse_cad_kg": 15.7772,
-   "masse_sl_kg": 15.7822,
+   "masse_sl_kg": 15.7772,
    "sekunden": 0.1
   },
   {
@@ -445,8 +445,8 @@
    "stufe": "K",
    "soll": 4,
    "ist": 4,
-   "masse_cad_kg": 14.0652,
-   "masse_sl_kg": 14.0652,
+   "masse_cad_kg": 14.0352,
+   "masse_sl_kg": 14.0352,
    "sekunden": 0.0
   },
   {
@@ -478,20 +478,31 @@
    "stufe": "K",
    "soll": 2,
    "ist": 2,
-   "masse_cad_kg": 47.6618,
-   "masse_sl_kg": 47.6686,
-   "sekunden": 3.3
+   "masse_cad_kg": 47.4453,
+   "masse_sl_kg": 47.4453,
+   "sekunden": 2.8
   },
   {
    "pos": "600.2",
    "bt": "BT-620",
    "generator": "kuehlung.verteiler",
    "stufe": "K",
+   "soll": 4,
+   "ist": 4,
+   "masse_cad_kg": 1.007,
+   "masse_sl_kg": 1.007,
+   "sekunden": 0.2
+  },
+  {
+   "pos": "600.2b",
+   "bt": "BT-620",
+   "generator": "kuehlung.verteilerrohr",
+   "stufe": "K",
    "soll": 2,
    "ist": 2,
-   "masse_cad_kg": 0.493,
-   "masse_sl_kg": 0.5137,
-   "sekunden": 0.1
+   "masse_cad_kg": 0.4931,
+   "masse_sl_kg": 0.4931,
+   "sekunden": 0.4
   },
   {
    "pos": "600.3",
@@ -500,8 +511,8 @@
    "stufe": "K",
    "soll": 2,
    "ist": 2,
-   "masse_cad_kg": 0.0199,
-   "masse_sl_kg": 0.0199,
+   "masse_cad_kg": 0.0225,
+   "masse_sl_kg": 0.0225,
    "sekunden": 0.0
   },
   {
@@ -544,8 +555,8 @@
    "stufe": "F",
    "soll": 1,
    "ist": 8,
-   "masse_cad_kg": 0.3944,
-   "masse_sl_kg": 0.3944,
+   "masse_cad_kg": 0.3503,
+   "masse_sl_kg": 0.3503,
    "sekunden": 0.3,
    "hinweis": "Stückzahl aus CAD (Normteile), Stückliste übernimmt sie"
   },
@@ -570,15 +581,12 @@
   "440.1 verbinder.pol_lasche: Masse CAD 0.016 kg gegen Stückliste 0.057 kg (-72.4 %)",
   "440.2 verbinder.stromschiene: Masse CAD 2.339 kg gegen Stückliste 0.613 kg (+281.7 %)",
   "720.2 verbinder.trennbruecke: Masse CAD 0.052 kg gegen Stückliste 0.078 kg (-32.8 %)",
-  "300.3 elektronik.ntc: Masse CAD 0.000 kg gegen Stückliste 0.000 kg (-75.2 %)",
-  "360.3 elektronik.fpc_detail: Masse CAD 0.035 kg gegen Stückliste 0.022 kg (+56.6 %)",
-  "700.4 kaufteile.sicherungen: Masse CAD 0.330 kg gegen Stückliste 0.250 kg (+32.0 %)",
-  "700.10 kaufteile.gassensor: Masse CAD 0.015 kg gegen Stückliste 0.030 kg (-50.0 %)",
+  "300.3 elektronik.ntc: Masse CAD 0.000 kg gegen Stückliste 0.000 kg (+44.9 %)",
+  "360.3 elektronik.fpc_detail: Masse CAD 0.035 kg gegen Stückliste 0.022 kg (+54.3 %)",
   "580.1 normteile.dichtung: Masse CAD 0.021 kg gegen Stückliste 0.018 kg (+15.2 %)",
   "590.1 normteile.schraube: Masse CAD 0.523 kg gegen Stückliste 0.125 kg (+318.2 %)",
   "590.2 normteile.kabelschuh: Masse CAD 0.358 kg gegen Stückliste 0.283 kg (+26.4 %)",
-  "590.3 normteile.clip: Masse CAD 0.004 kg gegen Stückliste 0.007 kg (-50.1 %)",
-  "600.2 kuehlung.verteiler: Masse CAD 0.493 kg gegen Stückliste 0.514 kg (-4.0 %)"
+  "590.3 normteile.clip: Masse CAD 0.004 kg gegen Stückliste 0.007 kg (-50.1 %)"
  ],
  "ctx": {
   "var": "LFP",
@@ -812,7 +820,7 @@
    ],
    [
     2035.0,
-    115.0
+    96.55
    ],
    [
     15.0,
@@ -852,7 +860,7 @@
    ],
    [
     2035.0,
-    615.0
+    608.05
    ],
    [
     15.0,
@@ -868,7 +876,7 @@
    ],
    [
     2035.0,
-    815.0
+    821.95
    ],
    [
     15.0,
@@ -908,7 +916,7 @@
    ],
    [
     2035.0,
-    1315.0
+    1333.45
    ]
   ],
   "einbau_aussen_fertig": true,
@@ -936,7 +944,9 @@
   "BT-610/dicke_mm ← ENT-152",
   "BT-610/kanal_anzahl ← ENT-156",
   "BT-610/kanal_breite_mm ← ENT-155",
-  "BT-610/kanal_hoehe_mm ← ENT-154"
+  "BT-610/kanal_hoehe_mm ← ENT-154",
+  "BT-610/kanalfuehrung ← ENT-158",
+  "BT-610/verteilerrohr_d_mm ← ENT-159"
  ],
  "annahmen_genutzt": [
   "A_boden_mm",
@@ -1056,6 +1066,7 @@
   "A_g5_box_freiraum_oben_mm",
   "A_g5_chiller_masse_kg",
   "A_g5_chiller_mm",
+  "A_g5_deckelschraube_ausweich_mm",
   "A_g5_deckelschraube_mm",
   "A_g5_druckausgleich_mm",
   "A_g5_eckradius_platte_mm",
@@ -1079,11 +1090,15 @@
   "A_g5_schienengasse_mm",
   "A_g5_schlauch_biegeradius_mm",
   "A_g5_schlauch_mm",
+  "A_g5_trennsteg_mm",
   "A_g5_typschild_mm",
   "A_g5_umlenk_mm",
   "A_g5_ventil_masse_kg",
   "A_g5_ventil_mm",
   "A_g5_verteiler_mm",
+  "A_g5_verteilerrohr_abstand_mm",
+  "A_g5_verteilerrohr_spalt_mm",
+  "A_g5_verteilerrohr_wand_mm",
   "A_luft_mm",
   "A_pad_mm",
   "A_quertraeger_anzahl",
@@ -1097,6 +1112,6 @@
   "A_zellverbinder_LFP_mm",
   "A_zellzahl_LFP"
  ],
- "sekunden": 47.0,
+ "sekunden": 45.3,
  "nur": []
 }

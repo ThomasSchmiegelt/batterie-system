@@ -1,0 +1,105 @@
+{
+ "hinweis": "Stufen von Opus (2026-11-23), wo sie nicht aus Dateien ableitbar sind. Begründung je Eintrag.",
+ "Q6": {
+  "E": [
+   1,
+   "NMC-Parametersatz aus Literatur (PyBaMM), benannt, nicht an der Projektzelle gemessen"
+  ],
+  "U": [
+   0,
+   "keine Empfindlichkeit gerechnet"
+  ]
+ },
+ "Q7": {
+  "L": [
+   1,
+   "Bilanz CAD gegen Stückliste: Summe < 2 %, aber 29 Positionen > 2 % (B-BAT-047)"
+  ],
+  "U": [
+   0,
+   "kein Band"
+  ],
+  "R": [
+   1,
+   "zwei Wege (CAD, Stückliste), Abweichung je Position unerklärt"
+  ],
+  "D": [
+   2,
+   "Opus und PI-Gutachten Punkt 1 (bericht/pi_gutachten_1.1.md)"
+  ]
+ },
+ "Q8": {
+  "L": [
+   1,
+   "Zellzahl × Zellenergie gegen Stückliste geprüft"
+  ],
+  "U": [
+   0,
+   "kein Band"
+  ],
+  "R": [
+   1,
+   "Startwert und Stückliste stimmen überein, keine unabhängige Methode"
+  ],
+  "D": [
+   1,
+   "Opus"
+  ]
+ },
+ "Q9": {
+  "E": [
+   1,
+   "Preise benannt, 99,8 % geschätzt (pm/kosten)"
+  ],
+  "D": [
+   2,
+   "Opus und PI-Gutachten Punkt 2"
+  ]
+ },
+ "Q10": {
+  "L": [
+   1,
+   "Kollisionsprüfung 0, Maß aus CAD-Hülle"
+  ],
+  "U": [
+   1,
+   "Fertigungstoleranzen nicht betrachtet, Maß deterministisch"
+  ],
+  "R": [
+   1,
+   "nur CAD"
+  ]
+ },
+ "Q5": {
+  "E": [
+   1,
+   "Ströme aus Startwerten (Annahme), Längen aus CAD, Leiterwerkstoff benannt: aufgelöst, nicht belegt"
+  ]
+ },
+ "Q2": {
+  "D": [
+   2,
+   "Opus prüfte K5 an Rohdaten, PI unabhängige Durchsicht (docs/08, K5)"
+  ],
+  "L": [
+   1,
+   "Massenbilanz im Netz geschlossen, keine Diskretisierungsstudie"
+  ]
+ },
+ "Q3": {
+  "L": [
+   1,
+   "Energiefehler 0,18 % geprüft (x3 ergebnis.json), keine Netzstudie"
+  ],
+  "R": [
+   1,
+   "Varianten s10/s40 nahezu gleich"
+  ]
+ },
+ "Q4": {
+  "L": [
+   0,
+   "Lauf ab etwa 5 ms instabil, Ursache ungeklärt (B-BAT-042)"
+  ]
+ }
+}

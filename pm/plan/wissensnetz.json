@@ -492,6 +492,14 @@
     {
      "id": "B-BAT-007",
      "titel": "B-BAT-007 (2026-11-16) Freigaben ENT-004/005; W18 geprüft; Blade-Zerlegungsstudie nicht abrufbar"
+    },
+    {
+     "id": "B-BAT-044",
+     "titel": "B-BAT-044 Unabhängige Durchsicht des Berichts durch das lokale Modell (2026-11-23, Opus)"
+    },
+    {
+     "id": "B-BAT-045",
+     "titel": "B-BAT-045 Erste Prüfung mit den neuen Workflow-Werkzeugen (2026-11-23, Opus)"
     }
    ],
    "entscheidungen": [],
@@ -3299,6 +3307,10 @@
     {
      "id": "B-BAT-007",
      "titel": "B-BAT-007 (2026-11-16) Freigaben ENT-004/005; W18 geprüft; Blade-Zerlegungsstudie nicht abrufbar"
+    },
+    {
+     "id": "B-BAT-044",
+     "titel": "B-BAT-044 Unabhängige Durchsicht des Berichts durch das lokale Modell (2026-11-23, Opus)"
     }
    ],
    "entscheidungen": [
@@ -4951,6 +4963,10 @@
     {
      "id": "B-BAT-013",
      "titel": "B-BAT-013 (2026-11-17) Entscheidungen des Autors: ENT-012 freigegeben, Bauraum verlängert (ENT-013)"
+    },
+    {
+     "id": "B-BAT-045",
+     "titel": "B-BAT-045 Erste Prüfung mit den neuen Workflow-Werkzeugen (2026-11-23, Opus)"
     }
    ],
    "entscheidungen": [
@@ -5336,6 +5352,10 @@
     {
      "id": "B-BAT-013",
      "titel": "B-BAT-013 (2026-11-17) Entscheidungen des Autors: ENT-012 freigegeben, Bauraum verlängert (ENT-013)"
+    },
+    {
+     "id": "B-BAT-044",
+     "titel": "B-BAT-044 Unabhängige Durchsicht des Berichts durch das lokale Modell (2026-11-23, Opus)"
     }
    ],
    "entscheidungen": [
@@ -7016,7 +7036,7 @@
    "ef": 34.5,
    "puffer": 0.0,
    "kritisch": true,
-   "status": "offen",
+   "status": "fertig",
    "req": [
     {
      "id": "REQ-D13",
@@ -7031,7 +7051,7 @@
    "aus": [
     {
      "glob": "video/*.mp4",
-     "vorhanden": false
+     "vorhanden": true
     }
    ],
    "befunde": [],
@@ -7107,7 +7127,7 @@
    "ef": 33.5,
    "puffer": 1.0,
    "kritisch": false,
-   "status": "offen",
+   "status": "fertig",
    "req": [
     {
      "id": "REQ-D14",
@@ -7126,7 +7146,7 @@
    "aus": [
     {
      "glob": "praesentation/*.pptx",
-     "vorhanden": false
+     "vorhanden": true
     }
    ],
    "befunde": [],
@@ -7657,7 +7677,2121 @@
   }
  ],
  "anforderungen_ohne_vorgang": [
-  "REQ-P16"
+  "REQ-P16",
+  "REQ-G01",
+  "REQ-G02"
  ],
- "pruef_fehler": []
+ "pruef_fehler": [],
+ "anforderungen": [
+  {
+   "id": "REQ-P01",
+   "gruppe": "REQ-P",
+   "text": "Anwendung / Fahrzeugklasse",
+   "wert": "Pkw, Fahrzeugmasse etwa 1500 kg, Anhaltswert (Autor 2026-11-16); Auslegung rechnet Fall A (mit Batterie) und Fall B (ohne Batterie) als Spanne",
+   "prioritaet": "Muss",
+   "methode": "R",
+   "ebene": "System",
+   "bewertung": "nachgewiesen",
+   "stufe": "nachgewiesen",
+   "kriterium": "m_fahrzeug == 1500 kg [Autor]",
+   "ist": "LFP m_fahrzeug = 1500 [sim/chemie/varianten_lfp_nmc/ergebnis.json :: varianten.LFP.faelle.A.hauptwert.gesamtmasse_kg]; NMC m_fahrzeug = 1500 [sim/chemie/varianten_lfp_nmc/ergebnis.json :: varianten.NMC.faelle.A.hauptwert.gesamtmasse_kg]",
+   "luecken": [],
+   "bestaetigt_autor": true,
+   "nachweis": [
+    "sim/chemie/varianten_lfp_nmc/ergebnis.json"
+   ],
+   "skripte": []
+  },
+  {
+   "id": "REQ-P02",
+   "gruppe": "REQ-P",
+   "text": "nutzbarer Energieinhalt",
+   "wert": "aus Reichweite 400 km (Vorgabe Autor 2026-11-16) × Verbrauch (Annahme), Vergleich sim/chemie/vergleich_lfp_nmc",
+   "prioritaet": "Muss",
+   "methode": "A",
+   "ebene": "System",
+   "bewertung": "nachgewiesen (Kriterium Annahme, Autor offen)",
+   "stufe": "nachgewiesen",
+   "kriterium": "E_brutto LFP >= 73.9 kWh [Startwert (Vorschlag)]<br>E_brutto NMC >= 73.9 kWh [Startwert (Vorschlag)]",
+   "ist": "[E_brutto LFP] LFP E_brutto = 73.92 [pm/bauteile/stueckliste_LFP.json :: summen.energie_kWh]; [E_brutto NMC] NMC E_brutto = 74.27 [pm/bauteile/stueckliste_NMC.json :: summen.energie_kWh]",
+   "luecken": [],
+   "bestaetigt_autor": false,
+   "nachweis": [
+    "pm/bauteile/stueckliste_LFP.json",
+    "pm/bauteile/stueckliste_NMC.json"
+   ],
+   "skripte": []
+  },
+  {
+   "id": "REQ-P03",
+   "gruppe": "REQ-P",
+   "text": "Systemspannung (Nenn, min, max)",
+   "wert": "800 V nominal (ENT-006, Autor 2026-11-16); min/max folgen aus Zellfenster",
+   "prioritaet": "Muss",
+   "methode": "A",
+   "ebene": "System",
+   "bewertung": "offen",
+   "stufe": "offen",
+   "kriterium": "U_nenn zwischen [720, 880] V [Annahme Opus]<br>U_min vorhanden [Annahme Opus]<br>U_max vorhanden [Annahme Opus]",
+   "ist": "[U_nenn] U_nenn = 800 [sim/chemie/varianten_lfp_nmc/ergebnis.json :: systemspannung_V]; [U_min] kein Nachweis verknüpft; [U_max] kein Nachweis verknüpft",
+   "luecken": [],
+   "bestaetigt_autor": false,
+   "nachweis": [
+    "sim/chemie/varianten_lfp_nmc/ergebnis.json"
+   ],
+   "skripte": []
+  },
+  {
+   "id": "REQ-P04",
+   "gruppe": "REQ-P",
+   "text": "Dauer- und Spitzenleistung Entladen",
+   "wert": "offen (kW, s)",
+   "prioritaet": "Muss",
+   "methode": "S",
+   "ebene": "System",
+   "bewertung": "offen",
+   "stufe": "offen",
+   "kriterium": "P_spitze >= 150 kW [Startwert (Vorschlag)]<br>P_dauer >= 60 kW [Annahme Opus]",
+   "ist": "[P_spitze] kein Nachweis verknüpft; [P_dauer] kein Nachweis verknüpft",
+   "luecken": [],
+   "bestaetigt_autor": false,
+   "nachweis": [],
+   "skripte": []
+  },
+  {
+   "id": "REQ-P05",
+   "gruppe": "REQ-P",
+   "text": "Schnellladen 10 → 80 %",
+   "wert": "LFP 20 min, NMC-4680 30 min (Autor 2026-11-17 „30 minuten“, nach K1b; Variantenunterschied)",
+   "prioritaet": "Muss",
+   "methode": "S",
+   "ebene": "System",
+   "bewertung": "blockiert",
+   "stufe": "blockiert",
+   "kriterium": "t_10_80 LFP <= 20 min [Autor]<br>t_10_80 NMC <= 30 min [Autor]",
+   "ist": "[t_10_80 LFP] blockiert: LFP ohne gemessenen Zellparametersatz nicht nachweisbar (bericht/bericht.tex, REQ-P05; sim/chemie/c2_kalibrierung/ERGEBNIS.md); [t_10_80 NMC] NMC t_10_80 = 29.68 [sim/chemie/c2_kalibrierung/ergebnis_schnellladen_n4680.json :: N4680.2.zeit_10_80_min]",
+   "luecken": [],
+   "bestaetigt_autor": true,
+   "nachweis": [
+    "sim/chemie/c2_kalibrierung/ergebnis_schnellladen_n4680.json"
+   ],
+   "skripte": []
+  },
+  {
+   "id": "REQ-P06",
+   "gruppe": "REQ-P",
+   "text": "Zellchemie",
+   "wert": "zwei Varianten gleicher Spezifikation (Autor 2026-11-16): LFP-Blade prismatisch (ENT-005) und NMC811-Rundzelle 4680 (ENT-007…011); Baum ENT-012",
+   "prioritaet": "Muss",
+   "methode": "I",
+   "ebene": "System",
+   "bewertung": "nachgewiesen",
+   "stufe": "nachgewiesen",
+   "kriterium": "CAD_Pack LFP vorhanden [Autor]<br>CAD_Pack NMC vorhanden [Autor]",
+   "ist": "[CAD_Pack LFP] LFP CAD_Pack = vorhanden [cad/baukasten/ausgabe/ergebnis_LFP.json :: teile]; [CAD_Pack NMC] NMC CAD_Pack = vorhanden [cad/baukasten/ausgabe/ergebnis_NMC.json :: teile]",
+   "luecken": [],
+   "bestaetigt_autor": true,
+   "nachweis": [
+    "cad/baukasten/ausgabe/ergebnis_LFP.json",
+    "cad/baukasten/ausgabe/ergebnis_NMC.json"
+   ],
+   "skripte": []
+  },
+  {
+   "id": "REQ-P07",
+   "gruppe": "REQ-P",
+   "text": "Bauraum (L × B × H) und Masse",
+   "wert": "L = 1950 mm (ENT-013, Autor 2026-11-17); B = 1430 mm (ENT-030, Autor 2026-11-17); H 130 mm Annahme; Masse offen (30 % Gesamtmasse als Annahme)",
+   "prioritaet": "Muss",
+   "methode": "I",
+   "ebene": "System",
+   "bewertung": "verfehlt (Kriterium Annahme, Autor offen)",
+   "stufe": "verfehlt",
+   "kriterium": "B <= 1430 mm [Autor]<br>L <= 1950 mm [Autor]<br>H <= 130 mm [Annahme Opus]<br>Masse LFP <= 528 kg [Startwert (Vorschlag)]<br>Masse NMC <= 370 kg [Startwert (Vorschlag)]",
+   "ist": "[B] LFP B = 1430 [cad/baukasten/ausgabe/ergebnis_LFP.json :: breite_mm]; NMC B = 1430 [cad/baukasten/ausgabe/ergebnis_NMC.json :: breite_mm]; [L] LFP L = 2373 [cad/baukasten/ausgabe/ergebnis_LFP.json :: laenge_mm]; NMC L = 2273 [cad/baukasten/ausgabe/ergebnis_NMC.json :: laenge_mm]; [H] LFP H = 244.8 [cad/baukasten/ausgabe/ergebnis_LFP.json :: hoehe_max_mm]; NMC H = 227.8 [cad/baukasten/ausgabe/ergebnis_NMC.json :: hoehe_max_mm]; [Masse LFP] LFP Masse = 626.8 [pm/bauteile/stueckliste_LFP.json :: summen.masse_stueckliste_kg]; [Masse NMC] NMC Masse = 486.4 [pm/bauteile/stueckliste_NMC.json :: summen.masse_stueckliste_kg]",
+   "luecken": [],
+   "bestaetigt_autor": false,
+   "nachweis": [
+    "cad/baukasten/ausgabe/ergebnis_LFP.json",
+    "cad/baukasten/ausgabe/ergebnis_NMC.json",
+    "pm/bauteile/stueckliste_LFP.json",
+    "pm/bauteile/stueckliste_NMC.json"
+   ],
+   "skripte": []
+  },
+  {
+   "id": "REQ-P08",
+   "gruppe": "REQ-P",
+   "text": "Umgebungstemperatur Betrieb und Laden",
+   "wert": "offen (°C)",
+   "prioritaet": "Muss",
+   "methode": "S",
+   "ebene": "System",
+   "bewertung": "offen",
+   "stufe": "offen",
+   "kriterium": "T_betrieb zwischen [-20, 45] °C [Annahme Opus]<br>T_laden zwischen [0, 45] °C [Annahme Opus]",
+   "ist": "[T_betrieb] kein Nachweis verknüpft; [T_laden] kein Nachweis verknüpft",
+   "luecken": [],
+   "bestaetigt_autor": false,
+   "nachweis": [],
+   "skripte": []
+  },
+  {
+   "id": "REQ-P09",
+   "gruppe": "REQ-P",
+   "text": "max. Zelltemperatur und Spreizung",
+   "wert": "T_max ≤ 45 °C, Spreizung in der Zelle ≤ 5 K (Autor 2026-11-17)",
+   "prioritaet": "Muss",
+   "methode": "S",
+   "ebene": "Subsystem",
+   "bewertung": "verfehlt",
+   "stufe": "verfehlt",
+   "kriterium": "T_max <= 45 °C [Autor]<br>Spreizung <= 5 K [Autor]",
+   "ist": "[T_max] LFP T_max = 35.57 [sim/kuehlung/k3_gesamt/elmer_LFP_P0_V4p/ergebnis.json :: T_max_Zellblock_C]; NMC T_max = 30.6 [sim/kuehlung/k3_gesamt/elmer_NMC_P4_V4p/ergebnis.json :: T_max_Zellblock_C]; [Spreizung] LFP Spreizung = 9.573 [sim/kuehlung/k3_gesamt/elmer_LFP_P0_V4p/ergebnis.json :: dT_Zellblock_K]; NMC Spreizung = 2.574 [sim/kuehlung/k3_gesamt/elmer_NMC_P4_V4p/ergebnis.json :: dT_Zellblock_K]",
+   "luecken": [],
+   "bestaetigt_autor": true,
+   "nachweis": [
+    "sim/kuehlung/k3_gesamt/elmer_LFP_P0_V4p/ergebnis.json",
+    "sim/kuehlung/k3_gesamt/elmer_NMC_P4_V4p/ergebnis.json"
+   ],
+   "skripte": []
+  },
+  {
+   "id": "REQ-P10",
+   "gruppe": "REQ-P",
+   "text": "Lebensdauer (Zyklen, Jahre, Restkapazität)",
+   "wert": "offen",
+   "prioritaet": "Soll",
+   "methode": "S",
+   "ebene": "System",
+   "bewertung": "offen",
+   "stufe": "offen",
+   "kriterium": "SOH >= 70 % [Annahme Opus]",
+   "ist": "kein Nachweis verknüpft",
+   "luecken": [],
+   "bestaetigt_autor": false,
+   "nachweis": [],
+   "skripte": []
+  },
+  {
+   "id": "REQ-P11",
+   "gruppe": "REQ-P",
+   "text": "Sicherheit: keine Ausbreitung des thermischen Durchgehens bzw. Warnzeit nach Norm",
+   "wert": "nach Norm (BAT-DOC-07)",
+   "prioritaet": "Muss",
+   "methode": "T",
+   "ebene": "System",
+   "bewertung": "offen",
+   "stufe": "offen",
+   "kriterium": "t_warnung >= 5 min [Norm (W35d belegt: UN R100 42024X1955, Warnung 5 min vor gefährlicher Situation im Fahrgastraum)]",
+   "ist": "kein Nachweis verknüpft",
+   "luecken": [],
+   "bestaetigt_autor": false,
+   "nachweis": [],
+   "skripte": []
+  },
+  {
+   "id": "REQ-P12",
+   "gruppe": "REQ-P",
+   "text": "Kühlmittel und Anschlüsse",
+   "wert": "Vorschlag Wasser-Glykol",
+   "prioritaet": "Soll",
+   "methode": "S",
+   "ebene": "Subsystem",
+   "bewertung": "rechnerisch erfüllt (nicht validiert) (Kriterium Annahme, Autor offen)",
+   "stufe": "rechnerisch erfüllt (nicht validiert)",
+   "kriterium": "Kuehlmittel vorhanden [Annahme Opus]<br>dp_Platte <= 0.5 bar [Annahme Opus]<br>Verteilung_abw <= 10 % [Autor]",
+   "ist": "[Kuehlmittel] LFP Kuehlmittel = vorhanden [pm/bauteile/stueckliste_LFP.json :: positionen[bt=BT-650].werkstoff]; [dp_Platte] dp_Platte = 0.1709 [sim/kuehlung/k5_parallel/ergebnis_verteiler.json :: gruppen.faelle.k2_d25_x3.dp_bar]; [Verteilung_abw] Verteilung_abw = 2.05 [sim/kuehlung/k5_parallel/ergebnis_verteiler.json :: gruppen.faelle.k2_d25_x3.max_abw_pct]",
+   "luecken": [],
+   "bestaetigt_autor": false,
+   "nachweis": [
+    "pm/bauteile/stueckliste_LFP.json",
+    "sim/kuehlung/k5_parallel/ergebnis_verteiler.json"
+   ],
+   "skripte": []
+  },
+  {
+   "id": "REQ-P13",
+   "gruppe": "REQ-P",
+   "text": "Schutzart, Isolation, Berührschutz",
+   "wert": "nach Norm",
+   "prioritaet": "Muss",
+   "methode": "T",
+   "ebene": "System",
+   "bewertung": "offen",
+   "stufe": "offen",
+   "kriterium": "R_iso >= 100 Ω/V [Norm (W35 belegt: UN R100, DC-Bus 100 Ω/V; AC-Bus bzw. verbundene Busse 500 Ω/V)]<br>Schutzart == IP67 [Annahme Opus]",
+   "ist": "[R_iso] kein Nachweis verknüpft; [Schutzart] kein Nachweis verknüpft",
+   "luecken": [],
+   "bestaetigt_autor": false,
+   "nachweis": [],
+   "skripte": []
+  },
+  {
+   "id": "REQ-P14",
+   "gruppe": "REQ-P",
+   "text": "Mechanik: Stoß, Schwingung, Crash",
+   "wert": "nach Norm",
+   "prioritaet": "Muss",
+   "methode": "S",
+   "ebene": "System",
+   "bewertung": "verfehlt (Kriterium Annahme, Autor offen)",
+   "stufe": "verfehlt",
+   "kriterium": "dy_a <= 0.5 mm [Annahme Opus]<br>dy_b <= 0.5 mm [Annahme Opus]",
+   "ist": "[dy_a] LFP dy_a = 6.732 [sim/mechanik/x3_crash_g5/ergebnis.json :: LFP_a.zellblock_vorderseite_dy_max_mm]; NMC dy_a = 8.279 [sim/mechanik/x3_crash_g5/ergebnis.json :: NMC_a.zellblock_vorderseite_dy_max_mm]; [dy_b] LFP dy_b = 0.0188 [sim/mechanik/x3_crash_g5/ergebnis.json :: LFP_b.zellblock_vorderseite_dy_max_mm]; NMC dy_b = 2.591 [sim/mechanik/x3_crash_g5/ergebnis.json :: NMC_b.zellblock_vorderseite_dy_max_mm]",
+   "luecken": [],
+   "bestaetigt_autor": false,
+   "nachweis": [
+    "sim/mechanik/x3_crash_g5/ergebnis.json"
+   ],
+   "skripte": []
+  },
+  {
+   "id": "REQ-P15",
+   "gruppe": "REQ-P",
+   "text": "Messung und BMS: Zellspannung, Temperatur, Isolationswächter",
+   "wert": "Umfang offen",
+   "prioritaet": "Muss",
+   "methode": "I",
+   "ebene": "Subsystem",
+   "bewertung": "nachgewiesen (Kriterium Annahme, Autor offen)",
+   "stufe": "nachgewiesen",
+   "kriterium": "CMU vorhanden [Annahme Opus]<br>Temperaturfuehler vorhanden [Annahme Opus]<br>Isolationswaechter vorhanden [Annahme Opus]",
+   "ist": "[CMU] LFP CMU = vorhanden [pm/bauteile/stueckliste_LFP.json :: positionen[bt=BT-320].pos]; NMC CMU = vorhanden [pm/bauteile/stueckliste_NMC.json :: positionen[bt=BT-320].pos]; [Temperaturfuehler] LFP Temperaturfuehler = vorhanden [pm/bauteile/stueckliste_LFP.json :: positionen[bt=BT-330].pos]; NMC Temperaturfuehler = vorhanden [pm/bauteile/stueckliste_NMC.json :: positionen[bt=BT-330].pos]; [Isolationswaechter] LFP Isolationswaechter = vorhanden [pm/bauteile/stueckliste_LFP.json :: positionen[bt=BT-350].pos]; NMC Isolationswaechter = vorhanden [pm/bauteile/stueckliste_NMC.json :: positionen[bt=BT-350].pos]",
+   "luecken": [],
+   "bestaetigt_autor": false,
+   "nachweis": [
+    "pm/bauteile/stueckliste_LFP.json",
+    "pm/bauteile/stueckliste_NMC.json"
+   ],
+   "skripte": []
+  },
+  {
+   "id": "REQ-P16",
+   "gruppe": "REQ-P",
+   "text": "Herstellkosten je Variante ausweisen (€/kWh Pack, Anteile je Baugruppe)",
+   "wert": "kein Zielwert (Autor 2026-11-18: „lass offen“); Preise als Schätzung oder verifiziert kennzeichnen",
+   "prioritaet": "Soll",
+   "methode": "A",
+   "ebene": "System",
+   "bewertung": "nachgewiesen",
+   "stufe": "nachgewiesen",
+   "kriterium": "Kosten_Summe LFP vorhanden [Autor]<br>Kosten_Summe NMC vorhanden [Autor]<br>Anteil_Schaetzung LFP vorhanden [Autor]<br>Anteil_Schaetzung NMC vorhanden [Autor]",
+   "ist": "[Kosten_Summe LFP] LFP Kosten_Summe = vorhanden [pm/kosten/ergebnis_LFP.json :: summe_eur_pack]; [Kosten_Summe NMC] NMC Kosten_Summe = vorhanden [pm/kosten/ergebnis_NMC.json :: summe_eur_pack]; [Anteil_Schaetzung LFP] LFP Anteil_Schaetzung = vorhanden [pm/kosten/ergebnis_LFP.json :: anteil_schaetzung_an_summe_pct]; [Anteil_Schaetzung NMC] NMC Anteil_Schaetzung = vorhanden [pm/kosten/ergebnis_NMC.json :: anteil_schaetzung_an_summe_pct]",
+   "luecken": [],
+   "bestaetigt_autor": false,
+   "nachweis": [
+    "pm/kosten/ergebnis_LFP.json",
+    "pm/kosten/ergebnis_NMC.json"
+   ],
+   "skripte": []
+  },
+  {
+   "id": "REQ-D01",
+   "gruppe": "REQ-D",
+   "text": "Jede Zahl ist rückverfolgbar (Rechnung mit Datei oder Quelle mit wörtlichem Beleg)",
+   "wert": "",
+   "prioritaet": "",
+   "methode": "R",
+   "ebene": "Prozess",
+   "bewertung": "nachgewiesen",
+   "stufe": "nachgewiesen",
+   "kriterium": "Pruefskript rc0 [Autor]",
+   "ist": "Pruefskript = rc 0 [python3 pm/pm.py pruefe]",
+   "luecken": [],
+   "bestaetigt_autor": false,
+   "nachweis": [],
+   "skripte": [
+    "python3 pm/pm.py pruefe"
+   ]
+  },
+  {
+   "id": "REQ-D02",
+   "gruppe": "REQ-D",
+   "text": "Jedes Dokument hat einen Kopf nach BAT-DOC-00 und ist als KI-generiert gekennzeichnet",
+   "wert": "",
+   "prioritaet": "",
+   "methode": "R",
+   "ebene": "Prozess",
+   "bewertung": "offen",
+   "stufe": "offen",
+   "kriterium": "Nachweisdatei vorhanden [Autor]",
+   "ist": "kein Nachweis verknüpft",
+   "luecken": [],
+   "bestaetigt_autor": false,
+   "nachweis": [],
+   "skripte": []
+  },
+  {
+   "id": "REQ-D03",
+   "gruppe": "REQ-D",
+   "text": "Jede Anforderung hat einen Nachweis in BAT-DOC-03",
+   "wert": "",
+   "prioritaet": "",
+   "methode": "R",
+   "ebene": "Prozess",
+   "bewertung": "nachgewiesen",
+   "stufe": "nachgewiesen",
+   "kriterium": "Nachweisdatei vorhanden [Autor]",
+   "ist": "Nachweisdatei = vorhanden [docs/03_anforderungsverfolgung.md]",
+   "luecken": [],
+   "bestaetigt_autor": false,
+   "nachweis": [
+    "docs/03_anforderungsverfolgung.md"
+   ],
+   "skripte": []
+  },
+  {
+   "id": "REQ-D04",
+   "gruppe": "REQ-D",
+   "text": "KI-Einsatz protokolliert: Modell, Aufgabe, Prüfung",
+   "wert": "",
+   "prioritaet": "",
+   "methode": "R",
+   "ebene": "Prozess",
+   "bewertung": "nachgewiesen",
+   "stufe": "nachgewiesen",
+   "kriterium": "Nachweisdatei vorhanden [Autor]",
+   "ist": "Nachweisdatei = vorhanden [docs/08_ki_einsatz_protokoll.md]",
+   "luecken": [],
+   "bestaetigt_autor": false,
+   "nachweis": [
+    "docs/08_ki_einsatz_protokoll.md"
+   ],
+   "skripte": []
+  },
+  {
+   "id": "REQ-D05",
+   "gruppe": "REQ-D",
+   "text": "Freigabe nur durch den Menschen",
+   "wert": "",
+   "prioritaet": "",
+   "methode": "R",
+   "ebene": "Prozess",
+   "bewertung": "nachgewiesen",
+   "stufe": "nachgewiesen",
+   "kriterium": "Nachweisdatei vorhanden [Autor]",
+   "ist": "Nachweisdatei = vorhanden [docs/00_dokumentenlenkung.md]",
+   "luecken": [],
+   "bestaetigt_autor": false,
+   "nachweis": [
+    "docs/00_dokumentenlenkung.md"
+   ],
+   "skripte": []
+  },
+  {
+   "id": "REQ-D06",
+   "gruppe": "REQ-D",
+   "text": "Erwartung vor jeder Rechnung, Vergleich danach",
+   "wert": "",
+   "prioritaet": "",
+   "methode": "R",
+   "ebene": "Prozess",
+   "bewertung": "offen",
+   "stufe": "offen",
+   "kriterium": "Nachweisdatei vorhanden [Autor]",
+   "ist": "kein Nachweis verknüpft",
+   "luecken": [],
+   "bestaetigt_autor": false,
+   "nachweis": [],
+   "skripte": []
+  },
+  {
+   "id": "REQ-D07",
+   "gruppe": "REQ-D",
+   "text": "Fremde Inhalte und Geheimnisse nicht im Repo, Lizenzen erfasst",
+   "wert": "",
+   "prioritaet": "",
+   "methode": "R",
+   "ebene": "Prozess",
+   "bewertung": "nachgewiesen",
+   "stufe": "nachgewiesen",
+   "kriterium": "Nachweisdatei vorhanden [Autor]",
+   "ist": "Nachweisdatei = vorhanden [.gitignore]; Nachweisdatei = vorhanden [docs/10_lizenzen_und_quellen.md]",
+   "luecken": [],
+   "bestaetigt_autor": false,
+   "nachweis": [
+    ".gitignore",
+    "docs/10_lizenzen_und_quellen.md"
+   ],
+   "skripte": []
+  },
+  {
+   "id": "REQ-D08",
+   "gruppe": "REQ-D",
+   "text": "Patentrecherche ohne rechtliche Bewertung; Freedom to Operate nur durch Fachleute",
+   "wert": "",
+   "prioritaet": "",
+   "methode": "R",
+   "ebene": "Prozess",
+   "bewertung": "nachgewiesen",
+   "stufe": "nachgewiesen",
+   "kriterium": "Nachweisdatei vorhanden [Autor]",
+   "ist": "Nachweisdatei = vorhanden [forschung/AUFTRAG_PATENTE.md]",
+   "luecken": [],
+   "bestaetigt_autor": false,
+   "nachweis": [
+    "forschung/AUFTRAG_PATENTE.md"
+   ],
+   "skripte": []
+  },
+  {
+   "id": "REQ-D09",
+   "gruppe": "REQ-D",
+   "text": "Rechnungen reproduzierbar: Skript, Eingaben, Softwarestand (requirements.txt, Versionen)",
+   "wert": "",
+   "prioritaet": "",
+   "methode": "R",
+   "ebene": "Prozess",
+   "bewertung": "nachgewiesen",
+   "stufe": "nachgewiesen",
+   "kriterium": "Nachweisdatei vorhanden [Autor]",
+   "ist": "Nachweisdatei = vorhanden [SOFTWARE.md]",
+   "luecken": [],
+   "bestaetigt_autor": false,
+   "nachweis": [
+    "SOFTWARE.md"
+   ],
+   "skripte": []
+  },
+  {
+   "id": "REQ-D11",
+   "gruppe": "REQ-D",
+   "text": "Jede Entscheidung als Akte an Bauteil und Merkmal gebunden; CAD-Maße nur aus diesen Akten",
+   "wert": "",
+   "prioritaet": "",
+   "methode": "R",
+   "ebene": "Prozess",
+   "bewertung": "nachgewiesen",
+   "stufe": "nachgewiesen",
+   "kriterium": "Pruefskript rc0 [Autor]",
+   "ist": "Pruefskript = rc 0 [python3 pm/pm.py pruefe]",
+   "luecken": [],
+   "bestaetigt_autor": false,
+   "nachweis": [],
+   "skripte": [
+    "python3 pm/pm.py pruefe"
+   ]
+  },
+  {
+   "id": "REQ-D12",
+   "gruppe": "REQ-D",
+   "text": "Bauteilgespräch: jedes Bauteil begründet seine Form mit Aktenverweisen",
+   "wert": "",
+   "prioritaet": "",
+   "methode": "R",
+   "ebene": "Prozess",
+   "bewertung": "nachgewiesen",
+   "stufe": "nachgewiesen",
+   "kriterium": "Nachweisdatei vorhanden [Autor]",
+   "ist": "Nachweisdatei = vorhanden [pm/gespraech.sh]",
+   "luecken": [],
+   "bestaetigt_autor": false,
+   "nachweis": [
+    "pm/gespraech.sh"
+   ],
+   "skripte": []
+  },
+  {
+   "id": "REQ-D13",
+   "gruppe": "REQ-D",
+   "text": "Projektdokumentation als Abschlussvideo (Zelle → … → System)",
+   "wert": "",
+   "prioritaet": "",
+   "methode": "R",
+   "ebene": "Prozess",
+   "bewertung": "nachgewiesen",
+   "stufe": "nachgewiesen",
+   "kriterium": "Nachweisdatei vorhanden [Autor]",
+   "ist": "Nachweisdatei = vorhanden [video/abschluss.mp4]",
+   "luecken": [],
+   "bestaetigt_autor": false,
+   "nachweis": [
+    "video/abschluss.mp4"
+   ],
+   "skripte": []
+  },
+  {
+   "id": "REQ-D14",
+   "gruppe": "REQ-D",
+   "text": "Unternehmenspräsentation am Projektende, erzeugt aus den Projektdaten; jeder Vorgang liefert unterwegs seinen Folienbaustein",
+   "wert": "",
+   "prioritaet": "",
+   "methode": "R",
+   "ebene": "Prozess",
+   "bewertung": "nachgewiesen",
+   "stufe": "nachgewiesen",
+   "kriterium": "Nachweisdatei vorhanden [Autor]",
+   "ist": "Nachweisdatei = vorhanden [praesentation/unternehmenspraesentation.pptx]",
+   "luecken": [],
+   "bestaetigt_autor": false,
+   "nachweis": [
+    "praesentation/unternehmenspraesentation.pptx"
+   ],
+   "skripte": []
+  },
+  {
+   "id": "REQ-D10",
+   "gruppe": "REQ-D",
+   "text": "Aufwand messbar: Laufzeiten und Agentenaufrufe je Arbeitspaket",
+   "wert": "",
+   "prioritaet": "",
+   "methode": "R",
+   "ebene": "Prozess",
+   "bewertung": "nachgewiesen",
+   "stufe": "nachgewiesen",
+   "kriterium": "Nachweisdatei vorhanden [Autor]",
+   "ist": "Nachweisdatei = vorhanden [docs/08_ki_einsatz_protokoll.md]",
+   "luecken": [],
+   "bestaetigt_autor": false,
+   "nachweis": [
+    "docs/08_ki_einsatz_protokoll.md"
+   ],
+   "skripte": []
+  },
+  {
+   "id": "REQ-G01",
+   "gruppe": "REQ-G",
+   "text": "Maschinenrichtlinie (EU 2023/1230)",
+   "wert": "",
+   "prioritaet": "",
+   "methode": "R",
+   "ebene": "System",
+   "bewertung": "nachgewiesen (Kriterium Annahme, Autor offen)",
+   "stufe": "nachgewiesen",
+   "kriterium": "Anwendbarkeit_belegt vorhanden [Norm (W37c.nachtrag belegt: VO 2023/1230 Art. 2 Abs. 2 g)] (nicht anwendbar (zu belegen, W37))",
+   "ist": "Anwendbarkeit_belegt = vorhanden [forschung/ergebnis/W37c.nachtrag.md]",
+   "luecken": [],
+   "bestaetigt_autor": false,
+   "nachweis": [
+    "forschung/ergebnis/W37c.nachtrag.md"
+   ],
+   "skripte": []
+  },
+  {
+   "id": "REQ-G02",
+   "gruppe": "REQ-G",
+   "text": "Kennzeichnung, CO₂-Fußabdruck und Batteriepass nach VO (EU) 2023/1542",
+   "wert": "Pflichten der Batterieverordnung für Traktionsbatterien erfüllen (Artikel zu belegen, W37)",
+   "prioritaet": "",
+   "methode": "R",
+   "ebene": "System",
+   "bewertung": "offen",
+   "stufe": "offen",
+   "kriterium": "Batteriepass_Datensatz vorhanden [Norm VO (EU) 2023/1542, belegt in W37b (forschung/ergebnis/W37b.md, Zitatprüfung 13/0): Batteriepass und QR-Code ab 18.02.2027; Wert des Kriteriums unverändert] (vorgeschlagen)",
+   "ist": "kein Nachweis verknüpft",
+   "luecken": [],
+   "bestaetigt_autor": false,
+   "nachweis": [],
+   "skripte": []
+  }
+ ],
+ "dokumente": [
+  {
+   "datei": "docs/00_dokumentenlenkung.md",
+   "stem": "00_dokumentenlenkung",
+   "nr": "BAT-DOC-00",
+   "titel": "Dokumentenlenkung",
+   "version": "0.1",
+   "status": "Entwurf",
+   "auftrag": false
+  },
+  {
+   "datei": "docs/01_lastenheft.md",
+   "stem": "01_lastenheft",
+   "nr": "BAT-DOC-01",
+   "titel": "Lastenheft",
+   "version": "0.1",
+   "status": "Entwurf",
+   "auftrag": false
+  },
+  {
+   "datei": "docs/02_pflichtenheft.md",
+   "stem": "02_pflichtenheft",
+   "nr": "BAT-DOC-02",
+   "titel": "Pflichtenheft",
+   "version": "0.1",
+   "status": "Entwurf",
+   "auftrag": false
+  },
+  {
+   "datei": "docs/03_anforderungsverfolgung.md",
+   "stem": "03_anforderungsverfolgung",
+   "nr": "BAT-DOC-03",
+   "titel": "Anforderungsverfolgung (erzeugt aus dem Netzplan)",
+   "version": "0.2",
+   "status": "Entwurf",
+   "auftrag": false
+  },
+  {
+   "datei": "docs/04_entscheidungen.md",
+   "stem": "04_entscheidungen",
+   "nr": "BAT-DOC-04",
+   "titel": "Entscheidungen (erzeugt von pm/pm.py register aus pm/entscheidungen/)",
+   "version": "automatisch",
+   "status": "Entwurf",
+   "auftrag": false
+  },
+  {
+   "datei": "docs/05_risiken_fmea.md",
+   "stem": "05_risiken_fmea",
+   "nr": "BAT-DOC-05",
+   "titel": "Risiken (FMEA-Vorlage)",
+   "version": "0.1",
+   "status": "Entwurf",
+   "auftrag": false
+  },
+  {
+   "datei": "docs/06_verifikationsplan.md",
+   "stem": "06_verifikationsplan",
+   "nr": "BAT-DOC-06",
+   "titel": "Verifikationsplan (V-Modell-Matrix)",
+   "version": "0.3",
+   "status": "Entwurf",
+   "auftrag": false
+  },
+  {
+   "datei": "docs/07_normen_und_vorschriften.md",
+   "stem": "07_normen_und_vorschriften",
+   "nr": "BAT-DOC-07",
+   "titel": "Normen und Vorschriften: Anwendbarkeit und Recherche",
+   "version": "0.2",
+   "status": "Entwurf",
+   "auftrag": false
+  },
+  {
+   "datei": "docs/08_ki_einsatz_protokoll.md",
+   "stem": "08_ki_einsatz_protokoll",
+   "nr": "BAT-DOC-08",
+   "titel": "KI-Einsatzprotokoll",
+   "version": "0.1",
+   "status": "Entwurf",
+   "auftrag": false
+  },
+  {
+   "datei": "docs/09_aenderungen.md",
+   "stem": "09_aenderungen",
+   "nr": "BAT-DOC-09",
+   "titel": "Änderungen",
+   "version": "0.1",
+   "status": "Entwurf",
+   "auftrag": false
+  },
+  {
+   "datei": "docs/10_lizenzen_und_quellen.md",
+   "stem": "10_lizenzen_und_quellen",
+   "nr": "BAT-DOC-10",
+   "titel": "Lizenzen und Quellen",
+   "version": "0.1",
+   "status": "Entwurf",
+   "auftrag": false
+  },
+  {
+   "datei": "docs/12_projektmanagement.md",
+   "stem": "12_projektmanagement",
+   "nr": "BAT-DOC-12",
+   "titel": "Projektmanagement",
+   "version": "0.1",
+   "status": "Entwurf",
+   "auftrag": false
+  },
+  {
+   "datei": "docs/13_stueckliste.md",
+   "stem": "13_stueckliste",
+   "nr": "BAT-DOC-13",
+   "titel": "Stückliste Konstruktionsstand (SL3), Übersicht",
+   "version": "0.3",
+   "status": "Entwurf",
+   "auftrag": false
+  },
+  {
+   "datei": "docs/13_stueckliste_LFP.md",
+   "stem": "13_stueckliste_LFP",
+   "nr": "BAT-DOC-13",
+   "titel": "Stückliste Konstruktionsstand (SL3) – Variante LFP",
+   "version": "0.3",
+   "status": "Entwurf",
+   "auftrag": false
+  },
+  {
+   "datei": "docs/13_stueckliste_NMC.md",
+   "stem": "13_stueckliste_NMC",
+   "nr": "BAT-DOC-13",
+   "titel": "Stückliste Konstruktionsstand (SL3) – Variante NMC",
+   "version": "0.3",
+   "status": "Entwurf",
+   "auftrag": false
+  },
+  {
+   "datei": "docs/15_foerdermoeglichkeiten.md",
+   "stem": "15_foerdermoeglichkeiten",
+   "nr": "BAT-DOC-15",
+   "titel": "Staatliche Fördermöglichkeiten (KI/Open Source, Batterie, Wasserstoff)",
+   "version": "0.2",
+   "status": "Entwurf (Stichprobe Opus)",
+   "auftrag": false
+  },
+  {
+   "datei": "docs/16_ergebnisbilder.md",
+   "stem": "16_ergebnisbilder",
+   "nr": "BAT-DOC-16",
+   "titel": "Ergebnisbilder mit Lesehilfe",
+   "version": "0.1",
+   "status": "Entwurf",
+   "auftrag": false
+  },
+  {
+   "datei": "docs/17_workflow_schleife.md",
+   "stem": "17_workflow_schleife",
+   "nr": "BAT-DOC-17",
+   "titel": "Workflow für die nächste Konstruktionsschleife (V-Modell)",
+   "version": "0.1",
+   "status": "Entwurf",
+   "auftrag": false
+  },
+  {
+   "datei": "docs/18_kosten.md",
+   "stem": "18_kosten",
+   "nr": "BAT-DOC-18",
+   "titel": "Kostenbewertung je Variante (REQ-P16, Vorgänge KO1, KO2)",
+   "version": "0.3",
+   "status": "Entwurf",
+   "auftrag": false
+  },
+  {
+   "datei": "docs/19_freigaberunde.md",
+   "stem": "19_freigaberunde",
+   "nr": "BAT-DOC-19",
+   "titel": "Freigaberunde (Sammelliste)",
+   "version": "0.1",
+   "status": "Entwurf",
+   "auftrag": false
+  },
+  {
+   "datei": "docs/20_regelwerke_vergleich.md",
+   "stem": "20_regelwerke_vergleich",
+   "nr": "BAT-DOC-20",
+   "titel": "Regelwerke im Vergleich: Prüffälle nach EU/UN, USA und China",
+   "version": "0.1",
+   "status": "Entwurf",
+   "auftrag": false
+  },
+  {
+   "datei": "docs/21_graph_luecken.md",
+   "stem": "21_graph_luecken",
+   "nr": "BAT-DOC-21",
+   "titel": "Lücken im Wissensgraphen",
+   "version": "0.1",
+   "status": "Entwurf",
+   "auftrag": false
+  },
+  {
+   "datei": "docs/22_qualitaetsnachweis.md",
+   "stem": "22_qualitaetsnachweis",
+   "nr": "BAT-DOC-22",
+   "titel": "Qualitätsnachweis: Glaubwürdigkeit der Kernergebnisse",
+   "version": "0.1",
+   "status": "Entwurf",
+   "auftrag": false
+  },
+  {
+   "datei": "docs/22a_prozesskennzahlen.md",
+   "stem": "22a_prozesskennzahlen",
+   "nr": "",
+   "titel": "Prozesskennzahlen (Zählung)",
+   "version": "",
+   "status": "",
+   "auftrag": false
+  },
+  {
+   "datei": "docs/AUFTRAG_FOERDERUNG.md",
+   "stem": "AUFTRAG_FOERDERUNG",
+   "nr": "",
+   "titel": "Auftrag an Sonnet: Recherche staatliche Förderung (2026-11-13, von Claude Opus)",
+   "version": "",
+   "status": "",
+   "auftrag": true
+  },
+  {
+   "datei": "docs/ersatzmodell_einsatz.md",
+   "stem": "ersatzmodell_einsatz",
+   "nr": "",
+   "titel": "Ersatzmodelle (Surrogate): wo und wie sie im Batterieprojekt helfen",
+   "version": "",
+   "status": "",
+   "auftrag": false
+  },
+  {
+   "datei": "docs/konzept_werkzeuge_kuehlung_kabel_crash.md",
+   "stem": "konzept_werkzeuge_kuehlung_kabel_crash",
+   "nr": "",
+   "titel": "Konzept: Pre-/Postprocessing, Kühlart, Kabelverlegung, Seitencrash",
+   "version": "",
+   "status": "",
+   "auftrag": false
+  },
+  {
+   "datei": "docs/prozess.md",
+   "stem": "prozess",
+   "nr": "BAT-DOC-11",
+   "titel": "Prozess: Zusammenarbeit Mensch und KI",
+   "version": "0.1",
+   "status": "Entwurf",
+   "auftrag": false
+  },
+  {
+   "datei": "docs/startparameter.md",
+   "stem": "startparameter",
+   "nr": "",
+   "titel": "Startparameter Batteriesystem",
+   "version": "",
+   "status": "",
+   "auftrag": false
+  },
+  {
+   "datei": "docs/startparameter_LFP.md",
+   "stem": "startparameter_LFP",
+   "nr": "",
+   "titel": "Startparameter Batteriesystem – Variante LFP",
+   "version": "",
+   "status": "",
+   "auftrag": false
+  },
+  {
+   "datei": "docs/startparameter_NMC.md",
+   "stem": "startparameter_NMC",
+   "nr": "",
+   "titel": "Startparameter Batteriesystem – Variante NMC",
+   "version": "",
+   "status": "",
+   "auftrag": false
+  }
+ ],
+ "bericht": {
+  "version": "1.2",
+  "pdf": "bericht/bericht.pdf",
+  "tex": "bericht/bericht.tex",
+  "kapitel": [
+   {
+    "ebene": "section",
+    "nr": "",
+    "titel": "Abkürzungsverzeichnis und Glossar",
+    "seite": 4
+   },
+   {
+    "ebene": "section",
+    "nr": "1",
+    "titel": "Zusammenfassung",
+    "seite": 5
+   },
+   {
+    "ebene": "section",
+    "nr": "2",
+    "titel": "Anforderungsübersicht",
+    "seite": 7
+   },
+   {
+    "ebene": "section",
+    "nr": "3",
+    "titel": "Auftrag und Vorgaben",
+    "seite": 9
+   },
+   {
+    "ebene": "section",
+    "nr": "4",
+    "titel": "Vorgehen mit KI-Agenten",
+    "seite": 10
+   },
+   {
+    "ebene": "section",
+    "nr": "5",
+    "titel": "Recherche und Datenlage",
+    "seite": 11
+   },
+   {
+    "ebene": "section",
+    "nr": "6",
+    "titel": "Chemie: von der Annahme zur Messung",
+    "seite": 13
+   },
+   {
+    "ebene": "section",
+    "nr": "7",
+    "titel": "Systemauslegung",
+    "seite": 19
+   },
+   {
+    "ebene": "section",
+    "nr": "8",
+    "titel": "Zelle: Maße, Innenaufbau, CAD",
+    "seite": 21
+   },
+   {
+    "ebene": "section",
+    "nr": "9",
+    "titel": "Zellwärme (K1c) und Kühlplatte (K2)",
+    "seite": 25
+   },
+   {
+    "ebene": "section",
+    "nr": "10",
+    "titel": "Thermik des Gesamtsystems (K3 FluidX3D, K4 Elmer, K5)",
+    "seite": 27
+   },
+   {
+    "ebene": "section",
+    "nr": "11",
+    "titel": "Gehäuse und Pack (Endstand G5.9)",
+    "seite": 37
+   },
+   {
+    "ebene": "section",
+    "nr": "12",
+    "titel": "Elektrik E1: Querschnitte und Verluste",
+    "seite": 47
+   },
+   {
+    "ebene": "section",
+    "nr": "13",
+    "titel": "Elektronik und Kabel E2",
+    "seite": 49
+   },
+   {
+    "ebene": "section",
+    "nr": "14",
+    "titel": "Stückliste und Kosten (Stand G5.9)",
+    "seite": 57
+   },
+   {
+    "ebene": "section",
+    "nr": "15",
+    "titel": "Crash G5 (X3, OpenCourant)",
+    "seite": 58
+   },
+   {
+    "ebene": "section",
+    "nr": "16",
+    "titel": "Fehler und Korrekturen",
+    "seite": 68
+   },
+   {
+    "ebene": "section",
+    "nr": "17",
+    "titel": "Werkzeuge und Rechenregeln",
+    "seite": 74
+   },
+   {
+    "ebene": "section",
+    "nr": "18",
+    "titel": "Entscheidungen",
+    "seite": 75
+   },
+   {
+    "ebene": "section",
+    "nr": "19",
+    "titel": "Geometrische Integration durch KI: Grenzen, Fehler, Unsicherheiten",
+    "seite": 78
+   },
+   {
+    "ebene": "section",
+    "nr": "20",
+    "titel": "Analyse möglicher Verbesserungen",
+    "seite": 83
+   },
+   {
+    "ebene": "section",
+    "nr": "21",
+    "titel": "Lehren für die nächste Konstruktionsschleife",
+    "seite": 85
+   },
+   {
+    "ebene": "section",
+    "nr": "22",
+    "titel": "Offene Punkte und nächste Schritte",
+    "seite": 86
+   },
+   {
+    "ebene": "section",
+    "nr": "A",
+    "titel": "Anhang: Entwicklungsgang (überholte Zwischenstände)",
+    "seite": 88
+   },
+   {
+    "ebene": "subsection",
+    "nr": "A.1",
+    "titel": "Wärme der Einzelzelle (K0, K1, K1b)",
+    "seite": 88
+   },
+   {
+    "ebene": "subsection",
+    "nr": "A.2",
+    "titel": "Pack: M0 und G4",
+    "seite": 99
+   },
+   {
+    "ebene": "subsection",
+    "nr": "A.3",
+    "titel": "Stückliste und Kosten im Stand E2D",
+    "seite": 101
+   },
+   {
+    "ebene": "subsection",
+    "nr": "A.4",
+    "titel": "Seitencrash (X1, X1b/X2)",
+    "seite": 103
+   },
+   {
+    "ebene": "section",
+    "nr": "B",
+    "titel": "Quellen",
+    "seite": 108
+   },
+   {
+    "ebene": "section",
+    "nr": "C",
+    "titel": "Software",
+    "seite": 109
+   },
+   {
+    "ebene": "section",
+    "nr": "D",
+    "titel": "Stücklisten (LFP und NMC, Stand G5.9)",
+    "seite": 110
+   }
+  ],
+  "ids": [
+   "B-BAT-002",
+   "B-BAT-003",
+   "B-BAT-004",
+   "B-BAT-005",
+   "B-BAT-006",
+   "B-BAT-007",
+   "B-BAT-008",
+   "B-BAT-009",
+   "B-BAT-010",
+   "B-BAT-011",
+   "B-BAT-012",
+   "B-BAT-013",
+   "B-BAT-014",
+   "B-BAT-015",
+   "B-BAT-016",
+   "B-BAT-019",
+   "B-BAT-020",
+   "B-BAT-021",
+   "B-BAT-022",
+   "B-BAT-023",
+   "B-BAT-024",
+   "B-BAT-025",
+   "B-BAT-027",
+   "B-BAT-028",
+   "B-BAT-029",
+   "B-BAT-030",
+   "B-BAT-031",
+   "B-BAT-033",
+   "B-BAT-034",
+   "B-BAT-035",
+   "B-BAT-036",
+   "B-BAT-037",
+   "B-BAT-038",
+   "B-BAT-039",
+   "B-BAT-040",
+   "B-BAT-041",
+   "B-BAT-042",
+   "B-BAT-043",
+   "BT-000",
+   "BT-100",
+   "BT-110",
+   "BT-111",
+   "BT-114",
+   "BT-116",
+   "BT-120",
+   "BT-140",
+   "BT-200",
+   "BT-220",
+   "BT-230",
+   "BT-250",
+   "BT-260",
+   "BT-300",
+   "BT-320",
+   "BT-361",
+   "BT-400",
+   "BT-410",
+   "BT-420",
+   "BT-430",
+   "BT-440",
+   "BT-500",
+   "BT-530",
+   "BT-540",
+   "BT-600",
+   "BT-610",
+   "BT-620",
+   "BT-660",
+   "BT-700",
+   "BT-710",
+   "BT-720",
+   "BT-721",
+   "BT-722",
+   "BT-730",
+   "ENT-001",
+   "ENT-002",
+   "ENT-003",
+   "ENT-004",
+   "ENT-005",
+   "ENT-006",
+   "ENT-007",
+   "ENT-009",
+   "ENT-010",
+   "ENT-011",
+   "ENT-012",
+   "ENT-013",
+   "ENT-014",
+   "ENT-015",
+   "ENT-017",
+   "ENT-018",
+   "ENT-019",
+   "ENT-020",
+   "ENT-021",
+   "ENT-022",
+   "ENT-023",
+   "ENT-024",
+   "ENT-025",
+   "ENT-026",
+   "ENT-027",
+   "ENT-028",
+   "ENT-029",
+   "ENT-030",
+   "ENT-031",
+   "ENT-032",
+   "ENT-038",
+   "ENT-044",
+   "ENT-057",
+   "ENT-074",
+   "ENT-080",
+   "ENT-081",
+   "ENT-082",
+   "ENT-087",
+   "ENT-088",
+   "ENT-089",
+   "ENT-090",
+   "ENT-091",
+   "ENT-092",
+   "ENT-095",
+   "ENT-096",
+   "ENT-099",
+   "ENT-100",
+   "ENT-101",
+   "ENT-102",
+   "ENT-103",
+   "ENT-104",
+   "ENT-106",
+   "ENT-107",
+   "ENT-108",
+   "ENT-109",
+   "ENT-110",
+   "ENT-112",
+   "ENT-113",
+   "ENT-131",
+   "ENT-143",
+   "ENT-144",
+   "ENT-145",
+   "ENT-146",
+   "ENT-147",
+   "ENT-148",
+   "ENT-150",
+   "ENT-152",
+   "ENT-158",
+   "ENT-159",
+   "REQ-D01",
+   "REQ-D02",
+   "REQ-D03",
+   "REQ-D04",
+   "REQ-D05",
+   "REQ-D06",
+   "REQ-D07",
+   "REQ-D08",
+   "REQ-D09",
+   "REQ-D10",
+   "REQ-D11",
+   "REQ-D12",
+   "REQ-D13",
+   "REQ-D14",
+   "REQ-P01",
+   "REQ-P02",
+   "REQ-P03",
+   "REQ-P04",
+   "REQ-P05",
+   "REQ-P06",
+   "REQ-P07",
+   "REQ-P08",
+   "REQ-P09",
+   "REQ-P10",
+   "REQ-P11",
+   "REQ-P12",
+   "REQ-P13",
+   "REQ-P14",
+   "REQ-P15",
+   "REQ-P16"
+  ]
+ },
+ "bausteine": [
+  {
+   "datei": "praesentation/bausteine/C0.md",
+   "stem": "C0",
+   "titel": "Chemievergleich LFP gegen NMC",
+   "ids": [],
+   "quellen": [
+    "sim/chemie/vergleich_lfp_nmc/DEUTUNG.md",
+    "sim/chemie/vergleich_lfp_nmc/ergebnis.json",
+    "sim/chemie/vergleich_lfp_nmc/packmasse.png"
+   ]
+  },
+  {
+   "datei": "praesentation/bausteine/C0b.md",
+   "stem": "C0b",
+   "titel": "Variantenvergleich LFP-Blade gegen NMC-4680 (Messwerte)",
+   "ids": [],
+   "quellen": [
+    "sim/chemie/varianten_lfp_nmc/ergebnis.json",
+    "sim/chemie/varianten_lfp_nmc/packmasse.png"
+   ]
+  },
+  {
+   "datei": "praesentation/bausteine/C1.md",
+   "stem": "C1",
+   "titel": "Elektrochemie bestätigt die Wärmeannahme nur für NMC",
+   "ids": [],
+   "quellen": [
+    "sim/chemie/c1_zellmodell/ergebnis_zahlen.json",
+    "sim/chemie/c1_zellmodell/waerme_NMC.png"
+   ]
+  },
+  {
+   "datei": "praesentation/bausteine/C2.md",
+   "stem": "C2",
+   "titel": "Das Blade-Modell passt bei 25 °C, bei Kälte nicht; 4680 schafft 30 min nur mit Lithium-Plating",
+   "ids": [],
+   "quellen": [
+    "sim/chemie/c2_kalibrierung/ergebnis_blade.json",
+    "sim/chemie/c2_kalibrierung/kalibrierung_blade.png"
+   ]
+  },
+  {
+   "datei": "praesentation/bausteine/E1.md",
+   "stem": "E1",
+   "titel": "Wie dick muss die Stromschiene sein?",
+   "ids": [],
+   "quellen": [
+    "sim/elektrik/e1_querschnitte/ergebnis.json",
+    "sim/elektrik/e1_querschnitte/querschnitte.png"
+   ]
+  },
+  {
+   "datei": "praesentation/bausteine/E2.md",
+   "stem": "E2",
+   "titel": "Elektronik im Pack: Schaltbox als Turm hinten, beide Varianten verdrahtet",
+   "ids": [
+    "BT-720",
+    "ENT-146",
+    "ENT-147",
+    "ENT-150"
+   ],
+   "quellen": [
+    "cad/pack/entwurf/ergebnis_LFP_e2.json",
+    "cad/pack/entwurf/ergebnis_LFP_e2d.json",
+    "sim/elektrik/e2_elektronik/ergebnis.json",
+    "sim/elektrik/e2_elektronik/verlust_al.json",
+    "sim/elektrik/e2_elektronik/verlust_al_e2d.json"
+   ]
+  },
+  {
+   "datei": "praesentation/bausteine/G1.md",
+   "stem": "G1",
+   "titel": "Zellanordnung im Bauraum 1950 x 1430 x 130 mm",
+   "ids": [],
+   "quellen": [
+    "sim/geometrie/g1_anordnung/anordnung.png",
+    "sim/geometrie/g1_anordnung/ergebnis.json"
+   ]
+  },
+  {
+   "datei": "praesentation/bausteine/G2.md",
+   "stem": "G2",
+   "titel": "Beide Zellen als parametrisches CAD",
+   "ids": [
+    "ENT-014"
+   ],
+   "quellen": [
+    "cad/zelle/entwurf/ergebnis.json",
+    "cad/zelle/entwurf/zelle_LFP.png"
+   ]
+  },
+  {
+   "datei": "praesentation/bausteine/G2_detail.md",
+   "stem": "G2_detail",
+   "titel": "Innenaufbau beider Zellen im Schnitt",
+   "ids": [],
+   "quellen": [
+    "cad/zelle/entwurf/detail/LFP_schnitt.png",
+    "cad/zelle/entwurf/detail/ergebnis_detail.json"
+   ]
+  },
+  {
+   "datei": "praesentation/bausteine/G4.md",
+   "stem": "G4",
+   "titel": "Beide Packs als parametrisches CAD",
+   "ids": [
+    "ENT-096"
+   ],
+   "quellen": [
+    "cad/pack/entwurf/ergebnis_LFP.json",
+    "cad/pack/entwurf/pack_massen.png"
+   ]
+  },
+  {
+   "datei": "praesentation/bausteine/G5.md",
+   "stem": "G5",
+   "titel": "Das ganze Pack als parametrisches CAD, aus Stückliste und Akten montiert",
+   "ids": [],
+   "quellen": [
+    "cad/baukasten/ausgabe/ergebnis_LFP.json",
+    "cad/baukasten/ausgabe/ergebnis_NMC.json",
+    "cad/baukasten/bilder/g5_LFP_explosion.png",
+    "pm/kosten/ergebnis_LFP.json",
+    "pm/kosten/ergebnis_NMC.json"
+   ]
+  },
+  {
+   "datei": "praesentation/bausteine/G5_9.md",
+   "stem": "G5_9",
+   "titel": "Folienbaustein G5.9 – Kühlplatte mit zwei parallelen Mäandern im CAD (KI-generiert, Entwurf)",
+   "ids": [
+    "ENT-158",
+    "ENT-159"
+   ],
+   "quellen": [
+    "bericht/bilder/g5_LFP_ecke.png",
+    "cad/baukasten/ausgabe/ergebnis_LFP.json",
+    "cad/baukasten/ausgabe/ergebnis_NMC.json",
+    "cad/baukasten/bilder/kuehlplatte_maeander_schnitt.png",
+    "pm/kosten/ergebnis_LFP.json",
+    "pm/kosten/ergebnis_NMC.json",
+    "sim/kuehlung/k5_parallel/ergebnis_verteiler.json"
+   ]
+  },
+  {
+   "datei": "praesentation/bausteine/K0.md",
+   "stem": "K0",
+   "titel": "Zelltemperatur beim Schnellladen",
+   "ids": [
+    "REQ-P09"
+   ],
+   "quellen": [
+    "sim/kuehlung/k0_zelle/bilder/render_LFP_K1_L2_t1200s.png",
+    "sim/kuehlung/k0_zelle/ergebnis.json",
+    "sim/kuehlung/k0_zelle/verlauf_L2.png"
+   ]
+  },
+  {
+   "datei": "praesentation/bausteine/K1.md",
+   "stem": "K1",
+   "titel": "Schnellladen in den Griff bekommen",
+   "ids": [
+    "REQ-P09"
+   ],
+   "quellen": [
+    "sim/kuehlung/k1_schnellladen/bilder/render_NMC_P3_K3_ende.png",
+    "sim/kuehlung/k1_schnellladen/ergebnis.json",
+    "sim/kuehlung/k1_schnellladen/landkarte.png",
+    "sim/kuehlung/k1_schnellladen/verlauf_kuehlung_NMC.png"
+   ]
+  },
+  {
+   "datei": "praesentation/bausteine/K2.md",
+   "stem": "K2",
+   "titel": "Kühlplatte: Druck kein Problem, Wärmeübergang ist die Grenze",
+   "ids": [],
+   "quellen": [
+    "sim/kuehlung/k2_kuehlplatte/durchfluss_druck.png",
+    "sim/kuehlung/k2_kuehlplatte/ergebnis.json",
+    "sim/kuehlung/k2_kuehlplatte/ergebnis_nachtrag.json"
+   ]
+  },
+  {
+   "datei": "praesentation/bausteine/K2b.md",
+   "stem": "K2b",
+   "titel": "Dünne Blechplatte mit Mäander erreicht das Wärmeziel knapp",
+   "ids": [],
+   "quellen": [
+    "sim/kuehlung/k2_kuehlplatte/ergebnis_k2b.json",
+    "sim/kuehlung/k2_kuehlplatte/k2b_U_dp.png"
+   ]
+  },
+  {
+   "datei": "praesentation/bausteine/K3.md",
+   "stem": "K3",
+   "titel": "Folienbaustein K3/K4 Thermik Gesamtsystem (KI-generiert, Claude Sonnet, 2026-11-21, Entwurf)",
+   "ids": [],
+   "quellen": [
+    "sim/kuehlung/k3_gesamt/elmer/ergebnis.json",
+    "sim/kuehlung/k3_gesamt/ergebnis.json",
+    "sim/kuehlung/k3_gesamt/ergebnis_film.json",
+    "sim/kuehlung/k3_gesamt/k4_temperatur_LFP.png"
+   ]
+  },
+  {
+   "datei": "praesentation/bausteine/K5_parallel.md",
+   "stem": "K5_parallel",
+   "titel": "Folienbaustein K5 – gruppierte Parallelführung (KI-generiert, Entwurf)",
+   "ids": [],
+   "quellen": [
+    "sim/kuehlung/k3_gesamt/elmer_LFP_P0_V4/ergebnis.json",
+    "sim/kuehlung/k3_gesamt/elmer_LFP_P0_V4p/ergebnis.json",
+    "sim/kuehlung/k5_parallel/ergebnis_verteiler.json",
+    "sim/kuehlung/k5_parallel/verteilung.png"
+   ]
+  },
+  {
+   "datei": "praesentation/bausteine/KI_Integration.md",
+   "stem": "KI_Integration",
+   "titel": "Geometrische Integration durch KI: was ging, was nicht",
+   "ids": [
+    "B-BAT-033",
+    "B-BAT-035",
+    "B-BAT-037"
+   ],
+   "quellen": [
+    "bericht/bericht.tex"
+   ]
+  },
+  {
+   "datei": "praesentation/bausteine/KO1.md",
+   "stem": "KO1",
+   "titel": "Kostenbewertung LFP gegen NMC (Annahmen, untere Schranke)",
+   "ids": [
+    "REQ-P16"
+   ],
+   "quellen": [
+    "pm/kosten/ergebnis_LFP.json",
+    "pm/kosten/kosten_vergleich.png"
+   ]
+  },
+  {
+   "datei": "praesentation/bausteine/KO2.md",
+   "stem": "KO2",
+   "titel": "Kosten LFP gegen NMC nach Stückliste SL3.1 (Annahmen, untere Schranke)",
+   "ids": [
+    "REQ-P16"
+   ],
+   "quellen": [
+    "pm/kosten/ergebnis_LFP.json",
+    "pm/kosten/kosten_vergleich.png"
+   ]
+  },
+  {
+   "datei": "praesentation/bausteine/M0.md",
+   "stem": "M0",
+   "titel": "Gehäuse mit drei Querträgern",
+   "ids": [],
+   "quellen": [
+    "sim/mechanik/m0_gehaeuse/draufsicht_LFP.png",
+    "sim/mechanik/m0_gehaeuse/ergebnis.json"
+   ]
+  },
+  {
+   "datei": "praesentation/bausteine/SL2.md",
+   "stem": "SL2",
+   "titel": "Stückliste aus dem CAD: 39 Positionen je Variante, Masse stimmt auf 1,3 %",
+   "ids": [
+    "B-BAT-028"
+   ],
+   "quellen": [
+    "docs/bilder/stueckliste_massen_LFP.png",
+    "docs/bilder/stueckliste_massen_NMC.png",
+    "pm/bauteile/stueckliste_LFP.json"
+   ]
+  },
+  {
+   "datei": "praesentation/bausteine/V_Modell.md",
+   "stem": "V_Modell",
+   "titel": "Folienbaustein V_Modell – Nachweisstand (KI-generiert, Entwurf)",
+   "ids": [],
+   "quellen": [
+    "docs/06_verifikationsplan.md"
+   ]
+  },
+  {
+   "datei": "praesentation/bausteine/X1.md",
+   "stem": "X1",
+   "titel": "Der Rahmen ist steif, aber der freie Weg zur Zelle fehlt",
+   "ids": [],
+   "quellen": [
+    "sim/mechanik/x1_seitencrash/ergebnis.json",
+    "sim/mechanik/x1_seitencrash/kraft_weg.png"
+   ]
+  },
+  {
+   "datei": "praesentation/bausteine/X1b.md",
+   "stem": "X1b",
+   "titel": "X1b",
+   "ids": [],
+   "quellen": [
+    "sim/mechanik/x1b_knautschzone/ergebnis_oc.json",
+    "sim/mechanik/x1b_knautschzone/kraft_eindringung_oc.png"
+   ]
+  },
+  {
+   "datei": "praesentation/bausteine/X3.md",
+   "stem": "X3",
+   "titel": "Folienbaustein X3 – Crash des Batteriepacks (KI-generiert, Entwurf)",
+   "ids": [],
+   "quellen": [
+    "sim/mechanik/x3_crash_g5/ergebnis.json",
+    "sim/mechanik/x3_crash_g5/verformung_LFP_a.png"
+   ]
+  }
+ ],
+ "steckbriefe": [
+  {
+   "datei": "pm/steckbriefe/BT-610_LFP.md",
+   "stem": "BT-610_LFP",
+   "bt": "BT-610",
+   "titel": "Steckbrief BT-610 Kühlplatte (LFP)",
+   "ids": [
+    "ENT-089",
+    "ENT-090",
+    "ENT-104",
+    "ENT-105",
+    "ENT-106",
+    "ENT-152",
+    "ENT-153",
+    "ENT-154",
+    "ENT-155",
+    "ENT-156",
+    "ENT-158",
+    "ENT-159",
+    "REQ-P09",
+    "REQ-P12"
+   ]
+  }
+ ],
+ "recherche_alle": [
+  {
+   "id": "W01",
+   "status": "fertig",
+   "pruefung": "12 Belege bestaetigt, 2 Fehler",
+   "datei": "forschung/ergebnis/W01.md",
+   "thema": "Chemie LFP"
+  },
+  {
+   "id": "W02",
+   "status": "fertig",
+   "pruefung": "8 Belege bestaetigt, 5 Fehler",
+   "datei": "forschung/ergebnis/W02.md",
+   "thema": "Chemie allgemein, Vergleich"
+  },
+  {
+   "id": "W03",
+   "status": "fertig",
+   "pruefung": "24 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/W03.md",
+   "thema": "Beispiel BYD Blade"
+  },
+  {
+   "id": "W04",
+   "status": "fertig",
+   "pruefung": "5 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/W04.md",
+   "thema": "Sicherheit"
+  },
+  {
+   "id": "W05",
+   "status": "fertig",
+   "pruefung": "0 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/W05.md",
+   "thema": "Elektrik BMS"
+  },
+  {
+   "id": "W06",
+   "status": "fertig",
+   "pruefung": "11 Belege bestaetigt, 1 Fehler",
+   "datei": "forschung/ergebnis/W06.md",
+   "thema": "Pack, Kühlung, Kennwerte"
+  },
+  {
+   "id": "W07",
+   "status": "fertig",
+   "pruefung": "8 Belege bestaetigt, 2 Fehler",
+   "datei": "forschung/ergebnis/W07.md",
+   "thema": "Chemie Alternative"
+  },
+  {
+   "id": "W08",
+   "status": "fertig",
+   "pruefung": "12 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/W08.md",
+   "thema": "Zelltypen und Formate"
+  },
+  {
+   "id": "W09",
+   "status": "fertig",
+   "pruefung": "10 Belege bestaetigt, 3 Fehler",
+   "datei": "forschung/ergebnis/W09.md",
+   "thema": "Zellchemie Grundlagen, Aufbau der Zelle"
+  },
+  {
+   "id": "W10",
+   "status": "fertig",
+   "pruefung": "19 Belege bestaetigt, 4 Fehler",
+   "datei": "forschung/ergebnis/W10.md",
+   "thema": "Zellchemie NMC, LTO"
+  },
+  {
+   "id": "W11",
+   "status": "fertig",
+   "pruefung": "10 Belege bestaetigt, 2 Fehler",
+   "datei": "forschung/ergebnis/W11.md",
+   "thema": "Zellchemie Festkörper (Ausblick)"
+  },
+  {
+   "id": "W12",
+   "status": "fertig",
+   "pruefung": "12 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/W12.md",
+   "thema": "Spannungslage, Reihen/Parallelschaltung, Schnellladen"
+  },
+  {
+   "id": "W13",
+   "status": "fertig",
+   "pruefung": "10 Belege bestaetigt, 1 Fehler",
+   "datei": "forschung/ergebnis/W13.md",
+   "thema": "Kabel, Stromschienen, Schütze, Sicherungen"
+  },
+  {
+   "id": "W14",
+   "status": "fertig",
+   "pruefung": "8 Belege bestaetigt, 1 Fehler",
+   "datei": "forschung/ergebnis/W14.md",
+   "thema": "Steuerung: Ladezustand, Alterung, Ausgleich, Bus"
+  },
+  {
+   "id": "W15",
+   "status": "fertig",
+   "pruefung": "10 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/W15.md",
+   "thema": "Struktur: Pack als tragendes Bauteil"
+  },
+  {
+   "id": "W16",
+   "status": "fertig",
+   "pruefung": "10 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/W16.md",
+   "thema": "Kühlarten Luft, Wasser, Tauchkühlung"
+  },
+  {
+   "id": "W17",
+   "status": "fertig",
+   "pruefung": "14 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/W17.md",
+   "thema": "Seitencrash, Pfahlaufprall, Prüfverfahren"
+  },
+  {
+   "id": "W18",
+   "status": "fertig",
+   "pruefung": "17 Belege bestaetigt, 1 Fehler",
+   "datei": "forschung/ergebnis/W18.md",
+   "thema": "Thermische Kennwerte großer prismatischer LFP-Zelle (314 Ah) für Elmer (R4-Lücke)"
+  },
+  {
+   "id": "W19",
+   "status": "fertig",
+   "pruefung": "20 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/W19.md",
+   "thema": "Blade-Zelle: Kapazität, Masse, Wh/L, Volumennutzung Pack (Ersatz für gesperrte Zerlegungsstudie)"
+  },
+  {
+   "id": "W20",
+   "status": "fertig",
+   "pruefung": "17 Belege bestaetigt, 4 Fehler",
+   "datei": "forschung/ergebnis/W20.md",
+   "thema": "Zerlegung BYD Blade gegen Tesla 4680 (Cell Rep. Phys. Sci. 2025): Blade-Zelle Masse, Ah, Wh/L, Aufbau, Gehäuse, Elektroden"
+  },
+  {
+   "id": "W21",
+   "status": "fertig",
+   "pruefung": "12 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/W21.md",
+   "thema": "Aufbau Batteriegehäuse: Wanne, Deckel, Seitenrahmen, Querträger/Verstrebungen, Unterfahrschutz, Kühlplatte, Befestigung, Werkstoffe und Wandstärken, Crashlastpfade (BT-500…570)"
+  },
+  {
+   "id": "W22",
+   "status": "fertig",
+   "pruefung": "13 Belege bestaetigt, 1 Fehler",
+   "datei": "forschung/ergebnis/W22.md",
+   "thema": "Gehäuse-Verstrebungen mit Maßen: Querträger/Seitenrahmen Profilmaße und Wandstärken, Seitenpol-Lasten, Eindringtiefe (BT-530, BT-540, Ergänzung W21)"
+  },
+  {
+   "id": "W23",
+   "status": "fertig",
+   "pruefung": "12 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/W23.md",
+   "thema": "Schnellladen: Ladeverfahren, Lithium-Plating, Temperaturgrenzen (K1)"
+  },
+  {
+   "id": "W24",
+   "status": "fertig",
+   "pruefung": "24 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/W24.md",
+   "thema": "Fixierung und Kontaktierung 4680: Halter, Verguss/Kleber, Zellverbinder, Schweißverfahren, Pole oben (BT-250, BT-410)"
+  },
+  {
+   "id": "W25",
+   "status": "fertig",
+   "pruefung": "10 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/W25.md",
+   "thema": "Wie Hersteller Rundzellen kühlen und kontaktieren (Tesla 4680 Strukturpack: Seitenkühlung, Verbinder oben; Kühlung seitlich/Boden/Pol) – Kühlkonzept NMC"
+  },
+  {
+   "id": "W26",
+   "status": "fertig",
+   "pruefung": "14 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/W26.md",
+   "thema": "Kühlung und Kontaktierung von Rundzellen bei BMW Gen6, Lucid, Rivian, Tesla 2170 (Zellformat, Boden-/Seitenkühlung, Verbinder, Fixierung)"
+  },
+  {
+   "id": "W27",
+   "status": "fertig",
+   "pruefung": "7 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/W27.md",
+   "thema": "Elektronik: BMS-Architektur, Zellüberwachung, Ausgleich, Temperaturfühler, Strommessung, Isolationswächter, Schütze/Vorladung/Sicherung (BT-300…360, BT-710…713)"
+  },
+  {
+   "id": "W28",
+   "status": "fertig",
+   "pruefung": "12 Belege bestaetigt, 11 Fehler",
+   "datei": "forschung/ergebnis/W28.md",
+   "thema": "Parametersatz-Quellen C2: Tesla 4680 (JES-Teardown, Cathode Porosity), BYD-LFP-4680 (Liu 2025), LFP-Blade (WattCell-Schätzung), P2D-Parametrierung (Schmitt)"
+  },
+  {
+   "id": "W29",
+   "status": "fertig",
+   "pruefung": "8 Belege bestaetigt, 4 Fehler",
+   "datei": "forschung/ergebnis/W29.md",
+   "thema": "Kosten: Zell- und Packpreise LFP/NMC je kWh, Kostenanteile Pack (Gehäuse, Kühlung, BMS, Schaltbox) für die Kostenbewertung der Stückliste (REQ-P16)"
+  },
+  {
+   "id": "W30",
+   "status": "fertig",
+   "pruefung": "15 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/W30.md",
+   "thema": "Crash: Quetschkraft Pack (R100 Anhang, GB 38031), Pfahltest (R135: Durchmesser, Geschwindigkeit, Winkel) für X1 (REQ-P14)"
+  },
+  {
+   "id": "W31",
+   "status": "fertig",
+   "pruefung": "6 Belege bestaetigt, 3 Fehler",
+   "datei": "forschung/ergebnis/W31.md",
+   "thema": "Kosten: Bauteilpreise (Schütz, Pyrosicherung, BMS, Al-Profil, Kühlplatte) zur Verifizierung der Schätzungen ERW-KO1 (REQ-P16)"
+  },
+  {
+   "id": "W32",
+   "status": "fertig",
+   "pruefung": "7 Belege bestaetigt, 5 Fehler",
+   "datei": "forschung/ergebnis/W32.md",
+   "thema": "Werkstoff: Kennwerte Al-Strangpressprofil für X1 (Rp0,2, Rm, Bruchdehnung) zur Verifizierung ERW-X1 (REQ-P14)"
+  },
+  {
+   "id": "W33",
+   "status": "fertig",
+   "pruefung": "5 Belege bestaetigt, 3 Fehler",
+   "datei": "forschung/ergebnis/W33.md",
+   "thema": "E2: Maße Service-Trennung, Schütz, Kabelschuh für die Überarbeitungsschleife (REQ-P13)"
+  },
+  {
+   "id": "W34",
+   "status": "fertig",
+   "pruefung": "10 Belege bestaetigt, 2 Fehler",
+   "datei": "forschung/ergebnis/W34.md",
+   "thema": "G5: Bauformen und Maße der Kaufteile (Schütz liegend, Pyrosicherung, Shunt, HV-Stecker, Druckausgleich, Entgasungsventil) für die Geometrie Stufe F (REQ-P13, REQ-D12)"
+  },
+  {
+   "id": "W38",
+   "status": "fertig",
+   "pruefung": "3 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/W38.md",
+   "thema": "China GB/T 31467-2023 Prüfverfahren Elektrik (SAMR-Seite, nur Metadaten). GB 38031-2025 und GB/T 31467.3: keine erreichbare amtliche Volltext-URL gefunden (Opus klären) (REQ-P11, REQ-P14)"
+  },
+  {
+   "id": "W39",
+   "status": "fertig",
+   "pruefung": "7 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/W39.md",
+   "thema": "Automotive SPICE PAM 4.0 (VDA QMC; PDF ist Gelbband-Entwurf, laut Quelle nicht für Assessments) als Prozessrahmen für docs/17 V-Modell"
+  },
+  {
+   "id": "W35",
+   "status": "fertig",
+   "pruefung": "9 Belege bestaetigt, 1 Fehler",
+   "datei": "forschung/ergebnis/W35.md",
+   "thema": "UN R100 (Fassung 2021 und Änderung 2024 aus dem EU-Amtsblatt): REESS-Prüfungen und elektrische Sicherheit (REQ-P11, REQ-P14). GTR 20: unece.org 403, nicht erreichbar, nicht umgangen"
+  },
+  {
+   "id": "W36",
+   "status": "fertig",
+   "pruefung": "20 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/W36.md",
+   "thema": "UN R94 (Frontal), R95 (Seite, Fassung 2015) und R135 (Pfahl): elektrische Sicherheit nach dem Aufprall (REQ-P14)"
+  },
+  {
+   "id": "W37",
+   "status": "fertig",
+   "pruefung": "8 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/W37.md",
+   "thema": "EU 2023/1542 (Batterieverordnung), 2023/1230 Art. 1 (Maschinenverordnung, Ausnahmen), 2024/1689 (KI-Verordnung) (REQ-P11)"
+  },
+  {
+   "id": "W40",
+   "status": "fertig",
+   "pruefung": "14 Belege bestaetigt, 1 Fehler",
+   "datei": "forschung/ergebnis/W40.md",
+   "thema": "USA FMVSS 305 und 305a (eCFR; 305a Pflicht ab 1. 9. 2027) (REQ-P11, REQ-P14)"
+  },
+  {
+   "id": "W41",
+   "status": "fertig",
+   "pruefung": "6 Belege bestaetigt, 1 Fehler",
+   "datei": "forschung/ergebnis/W41.md",
+   "thema": "Offene Berichte (USABC Abuse Testing Manual 2022, Vehicle Battery Safety Roadmap Guidance 2012 NREL/Sandia/NHTSA, SNL Abuse Testing Manual 2017) zu Prüfverfahren; EU JRC und NHTSA-PDFs: nicht erreichbar (404/403) (REQ-P14)"
+  },
+  {
+   "id": "W42",
+   "status": "fertig",
+   "pruefung": "6 Belege bestaetigt, 1 Fehler",
+   "datei": "forschung/ergebnis/W42.md",
+   "thema": "US-DoD-Normen (Überblick über öffentliche Seiten; ASSIST-Dokumente MIL-PRF-32565, NAVSEA S9310 nicht automatisch erreichbar, nur Metadaten) (Vergleich)"
+  },
+  {
+   "id": "W35b",
+   "status": "fertig",
+   "pruefung": "6 Belege bestaetigt, 1 Fehler",
+   "datei": "forschung/ergebnis/W35b.md",
+   "thema": "UN R100 Annex 9D: Quetschung, Crush-Kraft und Haltezeit (REQ-P14); Teilthema zu W35"
+  },
+  {
+   "id": "W35c",
+   "status": "fertig",
+   "pruefung": "8 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/W35c.md",
+   "thema": "UN R100 Annex 9B: Schwingungsprüfung, Spektrum und Dauer (REQ-P14); Teilthema zu W35"
+  },
+  {
+   "id": "W35d",
+   "status": "fertig",
+   "pruefung": "13 Belege bestaetigt, 1 Fehler",
+   "datei": "forschung/ergebnis/W35d.md",
+   "thema": "UN R100 Annex 9 und Haupttext: thermische Ausbreitung, Warnzeit (REQ-P11); Teilthema zu W35"
+  },
+  {
+   "id": "W35e",
+   "status": "fertig",
+   "pruefung": "7 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/W35e.md",
+   "thema": "UN R100 Annex 9C/9E-9J: Stoß, Feuer, externer Kurzschluss, Überladung, Tiefentladung, Übertemperatur, Wasser (REQ-P11, REQ-P14); Teilthema zu W35"
+  },
+  {
+   "id": "W37b",
+   "status": "fertig",
+   "pruefung": "13 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/W37b.md",
+   "thema": "EU 2023/1542 Artikel zu Kennzeichnung, CO2-Fußabdruck, Batteriepass, Entnehmbarkeit (REQ-G02); Teilthema zu W37"
+  },
+  {
+   "id": "W37c",
+   "status": "fertig",
+   "pruefung": "1 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/W37c.md",
+   "thema": "EU 2023/1230 Anwendungsbereich und Ausnahmen für Fahrzeuge (Art. 1 Gegenstand, Art. 2 Geltungsbereich) (REQ-G01); Teilthema zu W37"
+  },
+  {
+   "id": "W40b",
+   "status": "fertig",
+   "pruefung": "13 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/W40b.md",
+   "thema": "FMVSS 305a: thermisches Ereignis, Warnung (S13), Wasch- und Wattest (S14) (REQ-P11, REQ-P13); Teilthema zu W40"
+  },
+  {
+   "id": "W43",
+   "status": "fertig",
+   "pruefung": "15 Belege bestaetigt, 2 Fehler",
+   "datei": "forschung/ergebnis/W43.md",
+   "thema": "Veröffentlichte Packdaten realer Traktionsbatterien nur Packebene (kWh, kg, Maße/Volumen, Chemie) für Vergleich QN2 (BAT-DOC-22, REQ-P02/P07); nur URLs mit HTTP 200"
+  },
+  {
+   "id": "W44",
+   "status": "fertig",
+   "pruefung": "3 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/W44.md",
+   "thema": "NASA-STD-7009 (Standard for Models and Simulations): frei verfügbar? Gliederung der Glaubwürdigkeitsbewertung (BAT-DOC-22)"
+  },
+  {
+   "id": "T01",
+   "status": "fertig",
+   "pruefung": "5 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/T01.md",
+   "thema": "Zellchemie: PyBaMM, Parameterschätzung, Parameterformat"
+  },
+  {
+   "id": "T02",
+   "status": "fertig",
+   "pruefung": "4 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/T02.md",
+   "thema": "Zelle bis Pack: liionpack, BattMo, cideMOD"
+  },
+  {
+   "id": "T03",
+   "status": "fertig",
+   "pruefung": "2 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/T03.md",
+   "thema": "Ersatzschaltbild, Impedanz"
+  },
+  {
+   "id": "T04",
+   "status": "fertig",
+   "pruefung": "3 Belege bestaetigt, 1 Fehler",
+   "datei": "forschung/ergebnis/T04.md",
+   "thema": "Elektroauslegung: Schaltung, Platine (BMS)"
+  },
+  {
+   "id": "T05",
+   "status": "fertig",
+   "pruefung": "6 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/T05.md",
+   "thema": "Systemsimulation Elektrik und Wärme"
+  },
+  {
+   "id": "T06",
+   "status": "fertig",
+   "pruefung": "4 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/T06.md",
+   "thema": "Offene Steuerung: BMS-Software, Ladekommunikation"
+  },
+  {
+   "id": "T07",
+   "status": "fertig",
+   "pruefung": "2 Belege bestaetigt, 1 Fehler",
+   "datei": "forschung/ergebnis/T07.md",
+   "thema": "Ersatzmodelle: wo sie Rechenzeit sparen"
+  },
+  {
+   "id": "T08",
+   "status": "fertig",
+   "pruefung": "9 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/T08.md",
+   "thema": "Crash- und Festigkeitslöser (OpenRadioss, CalculiX)"
+  },
+  {
+   "id": "T09",
+   "status": "fertig",
+   "pruefung": "1 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/T09.md",
+   "thema": "Kabelverlegung: Kabelbaum, FreeCAD Cables Workbench"
+  },
+  {
+   "id": "P01",
+   "status": "fertig",
+   "pruefung": "2 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/P01.md",
+   "thema": "Zellform Blade, Cell-to-Pack"
+  },
+  {
+   "id": "P02",
+   "status": "fertig",
+   "pruefung": "2 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/P02.md",
+   "thema": "Zusammenbau Pack ohne Module"
+  },
+  {
+   "id": "P03",
+   "status": "fertig",
+   "pruefung": "6 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/P03.md",
+   "thema": "Kühlung"
+  },
+  {
+   "id": "P04",
+   "status": "fertig",
+   "pruefung": "6 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/P04.md",
+   "thema": "Sicherheit Zellverbund"
+  },
+  {
+   "id": "P05",
+   "status": "fertig",
+   "pruefung": "6 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/P05.md",
+   "thema": "Sicherheit Entgasung"
+  },
+  {
+   "id": "P06",
+   "status": "fertig",
+   "pruefung": "6 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/P06.md",
+   "thema": "Elektrik Zellverbinder"
+  },
+  {
+   "id": "P07",
+   "status": "fertig",
+   "pruefung": "6 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/P07.md",
+   "thema": "Elektrik Messung, BMS"
+  },
+  {
+   "id": "P08",
+   "status": "fertig",
+   "pruefung": "6 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/P08.md",
+   "thema": "Chemie LFP"
+  },
+  {
+   "id": "P09",
+   "status": "fertig",
+   "pruefung": "6 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/P09.md",
+   "thema": "Chemie Alternative"
+  },
+  {
+   "id": "P10",
+   "status": "fertig",
+   "pruefung": "6 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/P10.md",
+   "thema": "Einbau Fahrzeug"
+  },
+  {
+   "id": "P11",
+   "status": "fertig",
+   "pruefung": "3 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/P11.md",
+   "thema": "Gehäuse Verstrebungen (BT-530/540)"
+  },
+  {
+   "id": "P12",
+   "status": "fertig",
+   "pruefung": "5 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/P12.md",
+   "thema": "Kühlung beidseitig (K1)"
+  },
+  {
+   "id": "P13",
+   "status": "fertig",
+   "pruefung": "6 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/P13.md",
+   "thema": "Schnellladen (K1)"
+  },
+  {
+   "id": "P14",
+   "status": "fertig",
+   "pruefung": "0 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/P14.md",
+   "thema": "Fixierung und Kontaktierung Rundzellen (BT-250, BT-410)"
+  }
+ ]
 }

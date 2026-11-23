@@ -1,0 +1,86 @@
+2026-11-23 14:17:25 W35 Start
+2026-11-23 14:17:30 W35 PI startet
+W35.md: Werkzeugaufrufe 0, Antwort 6813 Zeichen, Links nicht aus dem Paket 1 ALARM ['https://publications.euroma.eu/resource/celex/42021X2190']
+2026-11-23 14:20:05 W35 9 Belege bestaetigt, 1 Fehler
+2026-11-23 14:20:06 LAUF FERTIG (wissen)
+2026-11-23 14:20:06 W35 Ende: 9 Belege bestaetigt, 1 Fehler
+2026-11-23 14:20:06 W36 Start
+2026-11-23 14:26:14 W36 PI startet
+W36.md: Werkzeugaufrufe 0, Antwort 8509 Zeichen, Links nicht aus dem Paket 0
+2026-11-23 14:29:04 W36 20 Belege bestaetigt, 0 Fehler
+2026-11-23 14:29:05 LAUF FERTIG (wissen)
+2026-11-23 14:29:05 W36 Ende: 20 Belege bestaetigt, 0 Fehler
+2026-11-23 14:29:05 W37 Start
+2026-11-23 14:35:05 W37 PI startet
+W37.md: Werkzeugaufrufe 0, Antwort 7372 Zeichen, Links nicht aus dem Paket 0
+2026-11-23 14:37:29 W37 8 Belege bestaetigt, 0 Fehler
+2026-11-23 14:37:29 LAUF FERTIG (wissen)
+2026-11-23 14:37:29 W37 Ende: 8 Belege bestaetigt, 0 Fehler
+2026-11-23 14:37:29 W38 Start
+2026-11-23 14:43:36 W38 PI startet
+W38.md: Werkzeugaufrufe 0, Antwort 5311 Zeichen, Links nicht aus dem Paket 0
+2026-11-23 14:45:31 W38 3 Belege bestaetigt, 0 Fehler
+2026-11-23 14:45:31 LAUF FERTIG (wissen)
+2026-11-23 14:45:31 W38 Ende: 3 Belege bestaetigt, 0 Fehler
+2026-11-23 14:45:31 W39 Start
+2026-11-23 14:51:38 W39 PI startet
+W39.md: Werkzeugaufrufe 0, Antwort 5766 Zeichen, Links nicht aus dem Paket 0
+2026-11-23 14:53:41 W39 7 Belege bestaetigt, 0 Fehler
+2026-11-23 14:53:42 LAUF FERTIG (wissen)
+2026-11-23 14:53:42 W39 Ende: 7 Belege bestaetigt, 0 Fehler
+2026-11-23 14:53:42 W40 Start
+2026-11-23 14:59:49 W40 PI startet
+W40.md: Werkzeugaufrufe 0, Antwort 0 Zeichen, Links nicht aus dem Paket 0
+2026-11-23 15:01:55 LAUF FERTIG (wissen)
+2026-11-23 15:01:55 W40 Ende: 
+2026-11-23 15:01:55 W41 Start
+2026-11-23 15:08:23 W41 PI startet
+W41.md: Werkzeugaufrufe 0, Antwort 6438 Zeichen, Links nicht aus dem Paket 0
+2026-11-23 15:10:26 W41 0 Belege bestaetigt, 0 Fehler
+2026-11-23 15:10:27 LAUF FERTIG (wissen)
+2026-11-23 15:10:27 W41 Ende: 0 Belege bestaetigt, 0 Fehler
+2026-11-23 15:10:27 W42 Start
+2026-11-23 15:16:37 W42 PI startet
+W42.md: Werkzeugaufrufe 0, Antwort 5402 Zeichen, Links nicht aus dem Paket 1 ALARM ['https://en.wikipedia.org/wiki/Military_standard`']
+2026-11-23 15:18:13 W42 6 Belege bestaetigt, 1 Fehler
+2026-11-23 15:18:13 LAUF FERTIG (wissen)
+2026-11-23 15:18:13 W42 Ende: 6 Belege bestaetigt, 1 Fehler
+2026-11-23 15:18:13 ALLE FERTIG
+2026-11-23 15:23:59 W40 PI startet
+W40.md: Werkzeugaufrufe 0, Antwort 7968 Zeichen, Links nicht aus dem Paket 0
+2026-11-23 15:25:23 W40 14 Belege bestaetigt, 1 Fehler
+2026-11-23 15:25:24 LAUF FERTIG (wissen)
+2026-11-23 15:35:30 W41 PI startet
+W41.md: Werkzeugaufrufe 0, Antwort 6150 Zeichen, Links nicht aus dem Paket 0
+2026-11-23 15:37:39 W41 6 Belege bestaetigt, 1 Fehler
+2026-11-23 15:37:40 LAUF FERTIG (wissen)
+2026-11-23 15:37:40 W40/W41 Wiederholung ENDE
+2026-11-23 15:45:01 W35b PI startet
+W35b.md: Werkzeugaufrufe 0, Antwort 5598 Zeichen, Links nicht aus dem Paket 0
+2026-11-23 15:46:08 W35b 6 Belege bestaetigt, 1 Fehler
+2026-11-23 15:46:09 LAUF FERTIG (wissen)
+2026-11-23 15:54:13 W35c PI startet
+W35c.md: Werkzeugaufrufe 0, Antwort 7118 Zeichen, Links nicht aus dem Paket 0
+2026-11-23 15:55:48 W35c 8 Belege bestaetigt, 0 Fehler
+2026-11-23 15:55:49 LAUF FERTIG (wissen)
+2026-11-23 16:03:53 W35d PI startet
+W35d.md: Werkzeugaufrufe 0, Antwort 8629 Zeichen, Links nicht aus dem Paket 0
+2026-11-23 16:06:09 W35d 13 Belege bestaetigt, 1 Fehler
+2026-11-23 16:06:10 LAUF FERTIG (wissen)
+2026-11-23 16:12:15 W35e PI startet
+W35e.md: Werkzeugaufrufe 0, Antwort 5058 Zeichen, Links nicht aus dem Paket 0
+2026-11-23 16:13:12 W35e 7 Belege bestaetigt, 0 Fehler
+2026-11-23 16:13:13 LAUF FERTIG (wissen)
+2026-11-23 16:18:16 W37b PI startet
+W37b.md: Werkzeugaufrufe 0, Antwort 7168 Zeichen, Links nicht aus dem Paket 0
+2026-11-23 16:20:01 W37b 13 Belege bestaetigt, 0 Fehler
+2026-11-23 16:20:02 LAUF FERTIG (wissen)
+2026-11-23 16:26:04 W37c PI startet
+W37c.md: Werkzeugaufrufe 0, Antwort 4980 Zeichen, Links nicht aus dem Paket 0
+2026-11-23 16:27:01 W37c 1 Belege bestaetigt, 0 Fehler
+2026-11-23 16:27:02 LAUF FERTIG (wissen)
+2026-11-23 16:32:05 W40b PI startet
+W40b.md: Werkzeugaufrufe 0, Antwort 7841 Zeichen, Links nicht aus dem Paket 0
+2026-11-23 16:33:16 W40b 13 Belege bestaetigt, 0 Fehler
+2026-11-23 16:33:17 LAUF FERTIG (wissen)
+2026-11-23 16:33:17 Teilthemen ENDE

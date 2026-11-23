@@ -1,0 +1,10 @@
+Fertig. Es wurde nur `sim/mechanik/x3_crash_g5/PI_PRUEFUNG.md` angelegt (39 Zeilen).
+
+Auszug des Befunds:
+1. **Energiebilanz < 5 %:** erfüllt in allen Fall-a-Läufen (0,077–0,230 %), für Fall b nicht anwendbar (null, Nachtrag 2).
+2. **Pfahl 40–70 mm / Zelle 10–40 mm (a):** verfehlt, außer LFP_a2-Zelle 16,09 mm (erfüllt); LFP_a2-Pfahl 38,24 mm verfehlt auch das Ersatzband der Nachträge.
+3. **Fall b, 100 kN:** erfüllt – LFP_b innenwand 0,398 mm, Zelle 0,0 mm; NMC_b 0,074 mm.
+4. **Rechenzeit LFP(a) 1–4 h:** LFP_a 11 548,9 s ≈ 3,2 h → erfüllt.
+- Fehlerzeilen nur in `lauf/LFP_b_instabil_N4/` (RUN KILLED, .rst NOT FOUND, ERROR TERMINATION); alle gültigen Läufe melden `0 ERROR(S)`, kein FEHLER/Traceback sonst.
+
+Hinweis: Die erwartung_pruefung-Flags in `ergebnis.json` (z. B. `pfahl_eindringung_im_Erwartungsband: false` für LFP_a2) wurden 1:1 übernommen, nicht neu interpretiert.

@@ -1,0 +1,1 @@
+Deck /home/cae/hermes/batterie/sim/mechanik/x3_crash_g5/lauf/NMC_b Schalenknoten 17096 Schalen 18299 Bricks 27744 v0 2.582

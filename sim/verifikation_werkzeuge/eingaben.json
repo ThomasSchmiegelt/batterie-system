@@ -1,0 +1,159 @@
+{
+ "_hinweis": "KI-generiert (Claude Sonnet, 2026-11-23), Entwurf. Eingaben QN1 (Werkzeug-Testfälle V1-V5). Testwerkstoffe sind frei gewählte Annahmen (ERWARTUNG.md: gehen nicht in das Produkt ein, müssen nur in Rechnung und Formel gleich sein). Format siehe pm/masse_abgleich.py.",
+ "V1_dicke_L_m": {
+  "wert": 0.02,
+  "quelle": "annahme:V1_testplatte_dicke",
+  "verwendet_in": "v1_elmer.py L"
+ },
+ "V1_quelle_q_W_m3": {
+  "wert": 1000000.0,
+  "quelle": "annahme:V1_testplatte_quelle",
+  "verwendet_in": "v1_elmer.py q"
+ },
+ "V1_leitfaehigkeit_k_W_mK": {
+  "wert": 10.0,
+  "quelle": "annahme:V1_testwerkstoff_k",
+  "verwendet_in": "v1_elmer.py k"
+ },
+ "V1_wandtemperatur_C": {
+  "wert": 0.0,
+  "quelle": "annahme:V1_wandtemperatur",
+  "verwendet_in": "v1_elmer.py Tw"
+ },
+ "V1_netzstufen_elemente_ungerade": {
+  "wert": [
+   5,
+   11,
+   21
+  ],
+  "quelle": "text:ERWARTUNG.md Netzreihe 3 Stufen; ungerade Zahlen, damit kein Knoten in der Plattenmitte liegt (sonst ist der Knotenwert bei Q4/konstanter Quelle exakt)",
+  "verwendet_in": "v1_elmer.py"
+ },
+ "V1_netzstufen_elemente_gerade_zusatz": {
+  "wert": [
+   4,
+   10,
+   20
+  ],
+  "quelle": "text:Zusatz Sonnet, Beleg der Knotenexaktheit",
+  "verwendet_in": "v1_elmer.py"
+ },
+ "V2_viskositaet_lbm": {
+  "wert": 0.0106667,
+  "quelle": "ergebnis:sim/kuehlung/k3_gesamt/lauf_bahn_re100/fall.txt#6. Wert (nu, tau = 0,532 wie K3)",
+  "verwendet_in": "v2_fluidx3d.py NU"
+ },
+ "V2_u_max_ziel_lbm": {
+  "wert": 0.05,
+  "quelle": "annahme:V2_u_max_ziel (wie u0 in K3 Re=100)",
+  "verwendet_in": "v2_fluidx3d.py"
+ },
+ "V2_aufloesungen_h_zellen": {
+  "wert": [
+   4,
+   5,
+   8,
+   16,
+   32
+  ],
+  "quelle": "text:ERWARTUNG.md Wichtigste Erwartung (Auflösungsreihe)",
+  "verwendet_in": "v2_fluidx3d.py"
+ },
+ "V2_viskositaet_zusatz_lbm": {
+  "wert": 0.1,
+  "quelle": "annahme:V2_zusatzreihe_tau_0_8",
+  "verwendet_in": "v2_fluidx3d.py (tau = 0,8, Zusatzreihe)"
+ },
+ "V3_laenge_mm": {
+  "wert": 200.0,
+  "quelle": "annahme:V3_balken_laenge",
+  "verwendet_in": "v3_radioss.py"
+ },
+ "V3_querschnitt_mm": {
+  "wert": 10.0,
+  "quelle": "annahme:V3_balken_querschnitt (quadratisch)",
+  "verwendet_in": "v3_radioss.py"
+ },
+ "V3_E_GPa": {
+  "wert": 210.0,
+  "quelle": "annahme:V3_testwerkstoff_E",
+  "verwendet_in": "v3_radioss.py"
+ },
+ "V3_nu": {
+  "wert": 0.3,
+  "quelle": "annahme:V3_testwerkstoff_nu",
+  "verwendet_in": "v3_radioss.py"
+ },
+ "V3_rho_kg_mm3": {
+  "wert": 7.85e-06,
+  "quelle": "annahme:V3_testwerkstoff_rho",
+  "verwendet_in": "v3_radioss.py"
+ },
+ "V3_kraft_kN": {
+  "wert": 0.01,
+  "quelle": "annahme:V3_endkraft",
+  "verwendet_in": "v3_radioss.py"
+ },
+ "V3_rampe_ms": {
+  "wert": 60.0,
+  "quelle": "annahme:V3_rampendauer (cos-Rampe, viele Eigenperioden, keine Dämpfung)",
+  "verwendet_in": "v3_radioss.py"
+ },
+ "V4_parametersaetze": {
+  "wert": [
+   "LFP",
+   "NMC"
+  ],
+  "quelle": "ergebnis:sim/chemie/c1_zellmodell/eingaben.json (Prada2013 / Chen2020, Zellfläche und Zielkapazität des Projekts)",
+  "verwendet_in": "v4_pybamm.py"
+ },
+ "V4_C_rate": {
+  "wert": 0.05,
+  "quelle": "text:ERWARTUNG.md V4 (SPM gegen DFN bei C/20)",
+  "verwendet_in": "v4_pybamm.py"
+ },
+ "V5_kanal_breite_mm": {
+  "wert": 8,
+  "quelle": "parameter:kanal_breite_mm",
+  "bt": "BT-610",
+  "verwendet_in": "v5_verteiler.py"
+ },
+ "V5_kanal_hoehe_mm": {
+  "wert": 4,
+  "quelle": "parameter:kanal_hoehe_mm",
+  "bt": "BT-610",
+  "verwendet_in": "v5_verteiler.py"
+ },
+ "V5_durchfluss_faktoren": {
+  "wert": [
+   0.1,
+   0.5,
+   1.0
+  ],
+  "quelle": "annahme:V5_durchfluss_faktoren (laminar, Re < 2300; Faktor auf K2b-Durchfluss je Platte)",
+  "verwendet_in": "v5_verteiler.py"
+ },
+ "toleranz": {
+  "wert": {
+   "V1_T_pct": 1.0,
+   "V1_waermestrom_pct": 0.5,
+   "V2_ueber20_pct": 2.0,
+   "V2_massenerhalt_pct": 0.5,
+   "V3_delta_pct": 3.0,
+   "V3_energie_pct": 1.0,
+   "V4_ladung_pct": 2.0,
+   "V4_spm_dfn_mV": 10.0,
+   "V5_dp_pct": 1.0
+  },
+  "quelle": "text:sim/verifikation_werkzeuge/ERWARTUNG.md Tabelle und Plausibilitätskriterien. Die Ordnung ≈ 2 wird berichtet, nicht als bestanden/verfehlt bewertet (kein Band in der Erwartung).",
+  "verwendet_in": "auswerten.py"
+ },
+ "V3_elemente": {
+  "wert": {
+   "laengs": 40,
+   "quer": 4
+  },
+  "quelle": "annahme:V3_netz (Isolid 24)",
+  "verwendet_in": "v3_radioss.py"
+ }
+}

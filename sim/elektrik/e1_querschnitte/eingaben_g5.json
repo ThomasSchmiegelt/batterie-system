@@ -1,0 +1,186 @@
+{
+ "hinweis": "KI-generiert (Claude Sonnet, 2026-11-22), Entwurf. Eingaben fuer --g5: wie eingaben.json, nur HV-Laengen aus G5 (Nachtrag G5).",
+ "lade": {
+  "LFP": {
+   "C": 2.1,
+   "ah": {
+    "wert": 92.375,
+    "herkunft": "sim/geometrie/g1_anordnung/ergebnis.json ergebnis.LFP.A.ah"
+   },
+   "s": 250,
+   "p": 1,
+   "herkunft": "ERWARTUNG (REQ-P05, 20 min); s250 ENT-006"
+  },
+  "NMC": {
+   "C": 1.4,
+   "ah_gruppe": {
+    "wert": 92.5,
+    "herkunft": "ERWARTUNG (92,5 Ah Gruppe, 217s4p)"
+   },
+   "s": 217,
+   "p": 4,
+   "herkunft": "ERWARTUNG (REQ-P05, 30 min)"
+  }
+ },
+ "fahren": {
+  "spitze_kW": 150,
+  "spitze_s": 10,
+  "dauer_kW": 60,
+  "herkunft": "Annahme (ERWARTUNG, Kompaktwagen)"
+ },
+ "spannung_V": {
+  "nenn": 800,
+  "nenn_herkunft": "ENT-006",
+  "entladeschluss_LFP": 625,
+  "entladeschluss_NMC": 651,
+  "entlade_herkunft": "ERWARTUNG: 2,5 V x 250 bzw. 3,0 V x 217 (Annahme)"
+ },
+ "grenzen": {
+  "dT_max_K": 30,
+  "J_Al_A_mm2": [
+   2,
+   3
+  ],
+  "J_Cu_A_mm2": [
+   4,
+   5
+  ],
+  "dU_max_prozent": 0.5,
+  "herkunft": "Annahme (ERWARTUNG); Stromdichte Lehrbuch"
+ },
+ "baender_mm2": {
+  "LFP_Reihenverbinder": [
+   70,
+   100
+  ],
+  "NMC_Gruppenverbinder": [
+   50,
+   80
+  ],
+  "NMC_Zellabgriff": [
+   10,
+   20
+  ],
+  "HV_Cu": [
+   35,
+   50
+  ],
+  "herkunft": "ERWARTUNG Punkte 2-4"
+ },
+ "verlust_band_W": {
+  "erwartet_max": 100,
+  "verfehlt_ab": 300,
+  "herkunft": "ERWARTUNG Punkt 5"
+ },
+ "stoffe": {
+  "rho_Al_Ohm_m": 2.82e-08,
+  "rho_Cu_Ohm_m": 1.72e-08,
+  "dichte_Al": 2700,
+  "dichte_Cu": 8960,
+  "c_Al": 900,
+  "c_Cu": 385,
+  "herkunft": "Annahme Lehrbuch bei 20 C (Dichte Al = M0 Annahme 2700); Temperaturgang des Widerstands nicht modelliert"
+ },
+ "waermepfad": {
+  "pad_dicke_mm": {
+   "wert": 1.0,
+   "herkunft": "M0 eingaben.json hoehenstapel waermeleitschicht_je (Annahme)"
+  },
+  "pad_lambda_W_mK": {
+   "wert": 3.0,
+   "band": [
+    1.0,
+    5.0
+   ],
+   "herkunft": "ANNAHME SONNET, nicht in Akten (ENT-095: Leitfaehigkeit offen) -> Rueckfrage Opus; Band 1-5 durchgerechnet"
+  },
+  "modell": "stationaer, Verbinder liegt flach auf Pad ueber Breite x Laenge, Kuehlplatte = Senke; dT = I^2 rho t / (A w lambda); Waermekapazitaet und Zellwaerme nicht beruecksichtigt"
+ },
+ "geometrie_mm": {
+  "LFP_pitch": {
+   "wert": 15,
+   "herkunft": "M0: Dicke 14 + Abstand 1"
+  },
+  "NMC_pitch": {
+   "wert": 48,
+   "herkunft": "M0: Durchmesser 46 + Abstand 2"
+  },
+  "NMC_zellabgriff_laenge": {
+   "wert": 23,
+   "herkunft": "Annahme Sonnet: Durchmesser/2"
+  },
+  "NMC_gruppe_laenge": {
+   "wert": 192,
+   "herkunft": "Annahme Sonnet: Sammellaenge 4 x Pitch 48; Opus 2026-11-17: Strom waechst 0 -> I, Verlust I^2 R/3"
+  },
+  "NMC_gruppe_bruecke": {
+   "wert": 48,
+   "herkunft": "Opus 2026-11-17: 1 Zellteilung aus M0-Raster, voller Strom"
+  },
+  "LFP_laenge_gehaeuse": {
+   "wert": 2024,
+   "herkunft": "sim/mechanik/m0_gehaeuse/ergebnis.json LFP.laenge_gehaeuse_mm (in --g5 nicht benutzt)"
+  },
+  "NMC_laenge_gehaeuse": {
+   "wert": 1950,
+   "herkunft": "sim/mechanik/m0_gehaeuse/ergebnis.json NMC.laenge_gehaeuse_mm (in --g5 nicht benutzt)"
+  },
+  "HV_laenge_je_Pol": "G5: siehe hv_laengen_je_pol_mm (Mittelwert beider Pole, Stueck 2)",
+  "Zellverbinder_Laengen": "unveraendert (Annahme alt: Pitch bzw. 4 x Pitch); G5-CAD-Streifen 25 x 3 mm nicht als Strompfadlaenge ausgewertet"
+ },
+ "stueck": {
+  "LFP_reihenverbinder": 249,
+  "NMC_gruppenverbinder": 216,
+  "NMC_zellabgriff": 1736,
+  "HV": 2,
+  "herkunft": "249 ERWARTUNG Punkt 2; 216 = 217-1; 1736 = 868 x 2 Pole (Annahme Sonnet, ENT-093 einseitig oben); HV 2 = Stueckliste 400.3"
+ },
+ "normreihen": {
+  "breite_mm": [
+   10,
+   12,
+   15,
+   20,
+   25,
+   30,
+   40,
+   50
+  ],
+  "dicke_mm": [
+   1,
+   1.5,
+   2,
+   3,
+   4,
+   5
+  ],
+  "hv_mm2": [
+   10,
+   16,
+   25,
+   35,
+   50,
+   70,
+   95
+  ],
+  "herkunft": "Annahme Sonnet: handelsuebliche Stufen (keine Norm zitiert)"
+ },
+ "wahlregel": "Al-Flachschiene: kleinste Flaeche mit J <= obere Bandgrenze bei Dauerstrom und dT <= 30 K; bei gleicher Flaeche kleinste Breite (kompakt). HV Cu: kleinster Normquerschnitt mit J <= 5 A/mm2.",
+ "zielband_Verlust": "Erwartung < 100 W; Grenze 300 W",
+ "hv_laengen_je_pol_mm": {
+  "LFP": {
+   "werte": [
+    765.4,
+    792.0
+   ],
+   "herkunft": "G5-CAD: Summe 1557,4 mm = masse_cad_kg 0,6977 (cad/baukasten/ausgabe/ergebnis_LFP.json, pos 400.3) / (50 mm2 x 8960 kg/m3, pm/bauteile/parameter_LFP.json BT-430); Minus 792,0 mm = Volumen 121912,1 mm3 (HV_Minus in pack_LFP.FCStd) / (pi x 7 mm^2), Plus = Rest (Differenz, nicht direkt gemessen)"
+  },
+  "NMC": {
+   "werte": [
+    896.0,
+    462.5
+   ],
+   "herkunft": "G5-CAD: Volumen HV_Plus 101340,2 / HV_Minus 52304,6 mm3 (cad/baukasten/ausgabe/pack_NMC.FCStd) / (pi x 6 mm^2, A_e2_hv_aussendurchmesser_NMC 12 mm, cad/baukasten/annahmen.json); Kontrolle: Summe inkl. 2 Mittenleitungen a 6 mm = 1370,5 mm = masse_cad_kg 0,4298 (ergebnis_NMC.json, 400.3) / (35 mm2 x 8960); Mittenleitungen (2 x 6 mm) vernachlaessigt"
+  }
+ }
+}

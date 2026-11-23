@@ -1,0 +1,67 @@
+{
+ "_hinweis": "KI-generiert (Claude Sonnet, 2026-11-23), Entwurf, Nachtrag aus Skripten und eingaben*.json des Ordners (Prüfung Opus offen). Nur Verweise, die dort wörtlich stehen und eindeutig sind: A_-Namen, eindeutige Merkmalsnamen in Anführungszeichen, Ergebnisdateien anderer Rechenordner. wert = Stand bei Anlage (2026-11-23), nicht der Stand zur Rechenzeit. Die alte eingaben.json bleibt unverändert.",
+ "_variante": "LFP",
+ "A_boden_mm": {
+  "wert": 3,
+  "quelle": "annahme:A_boden_mm",
+  "verwendet_in": "eingaben.json"
+ },
+ "A_deckel_mm": {
+  "wert": 2,
+  "quelle": "annahme:A_deckel_mm",
+  "verwendet_in": "eingaben.json"
+ },
+ "A_g5_befestigung_huelse_mm": {
+  "wert": [
+   20,
+   10.5
+  ],
+  "quelle": "annahme:A_g5_befestigung_huelse_mm",
+  "verwendet_in": "eingaben.json"
+ },
+ "A_g5_befestigung_n_je_seite": {
+  "wert": 6,
+  "quelle": "annahme:A_g5_befestigung_n_je_seite",
+  "verwendet_in": "eingaben.json"
+ },
+ "A_g5_befestigung_rand_x_mm": {
+  "wert": 80,
+  "quelle": "annahme:A_g5_befestigung_rand_x_mm",
+  "verwendet_in": "eingaben.json"
+ },
+ "A_g5_rahmen_kammern_lage": {
+  "wert": "uebereinander",
+  "quelle": "annahme:A_g5_rahmen_kammern_lage",
+  "verwendet_in": "eingaben.json"
+ },
+ "A_quertraeger_breite_mm": {
+  "wert": 26,
+  "quelle": "annahme:A_quertraeger_breite_mm",
+  "verwendet_in": "eingaben.json"
+ },
+ "A_quertraeger_wand_mm": {
+  "wert": 2.5,
+  "quelle": "annahme:A_quertraeger_wand_mm",
+  "verwendet_in": "eingaben.json"
+ },
+ "A_rand_mm": {
+  "wert": 30,
+  "quelle": "annahme:A_rand_mm",
+  "verwendet_in": "eingaben.json"
+ },
+ "A_seitenrahmen_kammern": {
+  "wert": 3,
+  "quelle": "annahme:A_seitenrahmen_kammern",
+  "verwendet_in": "eingaben.json"
+ },
+ "A_seitenrahmen_wand_mm": {
+  "wert": 2.5,
+  "quelle": "annahme:A_seitenrahmen_wand_mm",
+  "verwendet_in": "eingaben.json"
+ },
+ "A_unterfahrschutz_mm": {
+  "wert": 3,
+  "quelle": "annahme:A_unterfahrschutz_mm",
+  "verwendet_in": "eingaben.json"
+ }
+}

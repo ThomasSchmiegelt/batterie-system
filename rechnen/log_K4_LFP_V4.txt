@@ -1,0 +1,4 @@
+{'n_knoten': 15785, 'n_hex': 13600, 'plan_mm': [1970.0, 1370.0], 'block_mm': [1875.0, 1362.0, 90.0], 'block_start_mm': [47.5, 4.0], 'lagen_z_mm': [1.0, 1.0, 15.0, 15.0, 15.0, 15.0, 15.0, 15.0, 1.0, 1.0], 'xs': 40, 'ys': 34}
+V4 Gruppe k2_d25_x3 k 2 Kanal: Re 1139.351851851852 u 0.5989583333333334 m/s, h_Kanal 531.8256843809888 W/m2K, h_eff 770.5079009963664 dT_Fluid 3.386793986184478 K
+fertig 1 Segmente
+{'datei': '/home/cae/hermes/batterie/sim/kuehlung/k3_gesamt/elmer_LFP_P0_V4/k4_0_t0001.vtu', 'T_max_C': 34.14107775425681, 'T_min_C': 24.54841018178341, 'x_Tmax_mm': 1873.157895, 'y_Tmax_mm': 642.1875, 'T_max_Zellblock_C': 34.14107775425681, 'dT_Zellblock_K': 7.5862582022100185}

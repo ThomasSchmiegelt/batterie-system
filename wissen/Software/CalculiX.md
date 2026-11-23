@@ -8,7 +8,7 @@ tags: ["software"]
 > KI-generiert, erzeugt aus pm/plan/wissensnetz.json – nicht von Hand bearbeiten
 
 - Status: im Projekt (SOFTWARE.md)
-- Übersicht: [[SOFTWARE]]
+- Übersicht: [[Dokument/SOFTWARE]]
 
 ## Vorgänge
-- [[wissen/Vorgang/X1|X1]] – Seitencrash Pfahl, quasistatisch: Eindringung in Gehäuse/Querträger (CalculiX, plastisch, Kontakt)
+- [[Vorgang/X1|X1]] – Seitencrash Pfahl, quasistatisch: Eindringung in Gehäuse/Querträger (CalculiX, plastisch, Kontakt)

@@ -1,0 +1,28 @@
+---
+typ: dokument
+datei: "praesentation/bausteine/X1.md"
+tags: ["dokument", "kopie"]
+---
+# X1
+
+> KI-generiert, erzeugt aus pm/plan/wissensnetz.json – nicht von Hand bearbeiten
+
+- Kopie von `praesentation/bausteine/X1.md` (Quelle im Repo, hier nur Lesekopie)
+
+## Inhalt
+
+> **KI-generiert** (Claude Sonnet, 2026-11-18), Entwurf. Folienbaustein Vorgang X1 (Seitenpfahl quasistatisch, CalculiX).
+
+# Der Rahmen ist steif, aber der freie Weg zur Zelle fehlt
+**Kernaussage: Ein Pfahl Ø254 mm (Annahme) braucht 29 bis 31 kN, bis die Rahmeninnenseite 1 mm nach innen wandert, und 61 bis 64 kN bei 4 mm; die aufgenommene Energie bleibt mit 18 bis 20 J (1 mm) bzw. rund 0,17 kJ (4 mm) weit unter der Erwartung von 1 bis 3 kJ, weil der CAD-Spalt zur Zelle nur 0 bis 4 mm beträgt.**
+
+**Bild:** sim/mechanik/x1_seitencrash/kraft_weg.png (Zielband 30-80 kN und Linie 100 kN Annahme beschriftet), verformung_LFP_LF1.png (PEEQ mit Grenze 10 %)
+
+**Zahlen** (Quelle sim/mechanik/x1_seitencrash/ergebnis.json):
+- Kraft bei 1 mm / 4 mm Innenverschiebung: LF1 LFP 28,9 / 61,2 kN, LF2 LFP 30,5 / 62,9 kN, LF1 NMC 29,0 / 62,2 kN, LF2 NMC 31,1 / 64,4 kN
+- Max. plastische Dehnung nach 5,5 mm Weg: 20,5 bis 21,1 % (Annahme Bruchdehnung 10 %): Rissgefahr am Rahmenunterrand
+- Netzstudie LFP LF1: Abweichung 0,6 % (1,4 mm) und 0,1 % (4,4 mm)
+- Annahmen: Pfahl Ø254 mm, Restkraft 100 kN (kein Beleg, W30 ohne Normwerte), Werkstoff EN AW-6082 T6, Randbedingungen (Rahmenenden und Gegenseite fest); Entwurf, nicht von Opus geprüft
+
+*KI-generiert, Entwurf.*
+

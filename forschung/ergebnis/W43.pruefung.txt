@@ -1,0 +1,5 @@
+Z17: FEHLT im Text der Quelle: "Curb weight 1,885–2,185 kg" (https://en.wikipedia.org/wiki/BYD_Seal)
+Z23: FEHLT im Text der Quelle: "57.5, 79 or 82 kWh lithium-ion" (https://en.wikipedia.org/wiki/Tesla_Model_3)
+Z40: WERT OHNE BELEG: 4. Gibt es Publikationen zu den Langzeit-Zyklierdaten (Zyklenzahl, Kapazitätsverlust) der LFP-Blade-
+
+15 Belege bestaetigt, 2 Fehler

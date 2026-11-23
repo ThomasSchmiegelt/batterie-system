@@ -13,7 +13,7 @@
   "cad/baukasten/PLAN.md"
  ],
  "summen": {
-  "masse_stueckliste_kg": 485.675,
+  "masse_stueckliste_kg": 486.362,
   "zellen": 868,
   "energie_kWh": 74.27,
   "hinweis": "Kompatibilität zu pm/kosten/kosten.py (liest summen.energie_kWh)"
@@ -24,28 +24,28 @@
    "schaltbox_inhalt_kg": 0.24,
    "stecker_sensor_kg": -0.015
   },
-  "positionen_gesamt": 55,
+  "positionen_gesamt": 56,
   "positionen_je_detailstufe": {
    "F": 28,
    "-": 4,
-   "K": 19,
+   "K": 20,
    "H": 4
   },
-  "anteil_H_prozent": 7.3,
+  "anteil_H_prozent": 7.1,
   "positionen_masse_offen": 8,
-  "masse_gesamt_kg": 485.675,
+  "masse_gesamt_kg": 486.362,
   "masse_je_baugruppe_kg": {
    "BT-100": 308.14,
    "BT-200": 27.038,
    "BT-300": 3.153,
    "BT-400": 12.597,
-   "BT-500": 80.105,
-   "BT-600": 50.361,
+   "BT-500": 80.075,
+   "BT-600": 51.078,
    "BT-700": 4.282
   },
   "masse_cad_e2d_kg": 483.153,
   "quelle_masse_cad": "cad/pack/entwurf/ergebnis_NMC_e2d.json masse_bekannt_kg",
-  "abweichung_gegen_cad_prozent": 0.52,
+  "abweichung_gegen_cad_prozent": 0.66,
   "hinweis_abweichung": "SL3 enthält Stückzahlkorrekturen (PLAN §4.3) und Massen der im CAD mit 0 gesetzten Teile (CAD-Volumen x Dichte); das CAD zieht in G5.2/G5.7 nach.",
   "zellen": 868,
   "energie_kWh": 74.27,
@@ -59,7 +59,7 @@
     470,
     486
    ],
-   "masse_im_band": true
+   "masse_im_band": false
   }
  },
  "dichten_kg_m3": {
@@ -955,8 +955,8 @@
    "bemerkung": "Menge 4 = 2 Längs- und 2 Querprofile (Opus 2026-11-19)",
    "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d.json gruppen.Seitenrahmen",
    "menge_NMC": 4,
-   "masse_ges_kg": 13.1114,
-   "masse_je_kg": 3.27785,
+   "masse_ges_kg": 13.0815,
+   "masse_je_kg": 3.270375,
    "masse_quelle": "G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json)",
    "geometrie": {
     "generator": "gehaeuse.seitenrahmen",
@@ -1274,8 +1274,8 @@
    "bemerkung": "",
    "quelle": "sim/kuehlung/k2_kuehlplatte/ergebnis_k2b.json fall NMC_P4, laengs, 8 Bahnen, Teilkanal 8 mm (masse_2_platten_kg); Wahl A_g5_maeander in annahmen_g5.json",
    "menge_NMC": 2,
-   "masse_ges_kg": 46.5514,
-   "masse_je_kg": 23.2757,
+   "masse_ges_kg": 46.3354,
+   "masse_je_kg": 23.1677,
    "masse_quelle": "G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json)",
    "geometrie": {
     "generator": "kuehlung.kuehlplatte",
@@ -1293,7 +1293,9 @@
     "ENT-153",
     "ENT-154",
     "ENT-155",
-    "ENT-156"
+    "ENT-156",
+    "ENT-158",
+    "ENT-159"
    ],
    "kosten_je_eur": null,
    "kosten_ges_eur": null,
@@ -1317,9 +1319,9 @@
    "werkstoff": "offen",
    "bemerkung": "",
    "quelle": "",
-   "menge_NMC": 2,
-   "masse_ges_kg": 0.4611,
-   "masse_je_kg": 0.23055,
+   "menge_NMC": 4,
+   "masse_ges_kg": 0.9428,
+   "masse_je_kg": 0.2357,
    "masse_quelle": "G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json)",
    "geometrie": {
     "generator": "kuehlung.verteiler",
@@ -1332,7 +1334,41 @@
    "kosten_ges_eur": null,
    "baugruppe": "BT-600",
    "bt_name": "Verteiler und Sammler",
-   "hinweis_opus": "Menge 2 (Opus-Vorgabe 2026-11-19).",
+   "hinweis_opus": "Menge 4 = je Mäander ein Eintritts- und ein Austrittsblock (ENT-158, G5.9; Sonnet, Opus prüft).",
+   "masse_alt_kg": "offen",
+   "hersteller_typ": null,
+   "datenblatt": [],
+   "preis": {
+    "wert": 12,
+    "einheit": "€/kg",
+    "status": "Schätzung (Annahme Opus, ERW-KO1)",
+    "herkunft": "ERW-KO1 Annahme (Schlüssel BT-620)"
+   }
+  },
+  {
+   "pos": "600.2b",
+   "bt": "BT-620",
+   "benennung": "Verteilerrohr und Sammelrohr (Al, Innen-Ø 25 mm)",
+   "art": "E",
+   "werkstoff": "Al",
+   "bemerkung": "",
+   "quelle": "",
+   "menge_NMC": 2,
+   "masse_ges_kg": 0.4931,
+   "masse_je_kg": 0.24655,
+   "masse_quelle": "G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json)",
+   "geometrie": {
+    "generator": "kuehlung.verteilerrohr",
+    "detailstufe": "K",
+    "lage": "hinter den Steigblöcken, Achse quer (ENT-158, ENT-159)",
+    "farbe": "al_blank"
+   },
+   "akten": [],
+   "kosten_je_eur": null,
+   "kosten_ges_eur": null,
+   "baugruppe": "BT-600",
+   "bt_name": "Verteiler und Sammler",
+   "hinweis_opus": "Neu G5.9 (Sonnet, Opus prüft): Rohr Ø25 innen, Wand 1,5 mm (Annahme), Masse nur Al ohne Kühlmittel.",
    "masse_alt_kg": "offen",
    "hersteller_typ": null,
    "datenblatt": [],
@@ -1352,8 +1388,8 @@
    "bemerkung": "",
    "quelle": "",
    "menge_NMC": 2,
-   "masse_ges_kg": 0.0199,
-   "masse_je_kg": 0.00995,
+   "masse_ges_kg": 0.0225,
+   "masse_je_kg": 0.01125,
    "masse_quelle": "G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json)",
    "geometrie": {
     "generator": "kuehlung.anschluss",
@@ -1611,8 +1647,8 @@
    "bemerkung": "",
    "quelle": "",
    "menge_NMC": 1,
-   "masse_ges_kg": 0.3944,
-   "masse_je_kg": 0.3944,
+   "masse_ges_kg": 0.3503,
+   "masse_je_kg": 0.3503,
    "masse_quelle": "G5-CAD (cad/baukasten/ausgabe/ergebnis_NMC.json)",
    "geometrie": {
     "generator": "kuehlung.schlauch",

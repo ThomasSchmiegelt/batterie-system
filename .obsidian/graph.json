@@ -57,6 +57,41 @@
       }
     },
     {
+      "query": "path:wissen/Dokument",
+      "color": {
+        "a": 1,
+        "rgb": 8359053
+      }
+    },
+    {
+      "query": "path:wissen/Bericht",
+      "color": {
+        "a": 1,
+        "rgb": 2899536
+      }
+    },
+    {
+      "query": "path:wissen/Baustein",
+      "color": {
+        "a": 1,
+        "rgb": 15277667
+      }
+    },
+    {
+      "query": "path:wissen/Steckbrief",
+      "color": {
+        "a": 1,
+        "rgb": 9323693
+      }
+    },
+    {
+      "query": "path:wissen/Nachweis",
+      "color": {
+        "a": 1,
+        "rgb": 1482885
+      }
+    },
+    {
       "query": "path:docs",
       "color": {
         "a": 1,

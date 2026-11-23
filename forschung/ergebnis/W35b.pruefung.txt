@@ -1,0 +1,3 @@
+Z14: FEHLT im Text der Quelle: "a hold time of at least 100 ms but not exceeding 10 s" (https://publications.europa.eu/resource/celex/42024X1955)
+
+6 Belege bestaetigt, 1 Fehler

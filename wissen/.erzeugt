@@ -1,1 +1,1 @@
-Von pm/plan/wissensnetz_obsidian.py erzeugt; Ordner wird beim Lauf geleert.
+Von pm/plan/wissensnetz_obsidian.py erzeugt; Ordner wird beim Lauf geleert (außer .obsidian und _bilder). Eigenständiger Obsidian-Tresor.

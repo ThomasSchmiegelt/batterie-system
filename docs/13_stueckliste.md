@@ -6,16 +6,16 @@
 
 | Größe | LFP | NMC |
 |---|---|---|
-| Positionen gesamt | 55 | 55 |
-| Stufe K | 17 | 19 |
+| Positionen gesamt | 56 | 56 |
+| Stufe K | 18 | 20 |
 | Stufe F | 28 | 28 |
 | Stufe H | 4 | 4 |
 | Stufe - | 6 | 4 |
-| Anteil H [%] | 7.3 | 7.3 |
+| Anteil H [%] | 7.1 | 7.1 |
 | Positionen Masse offen | 10 | 8 |
-| Masse gesamt [kg] | 626,049 | 485,675 |
+| Masse gesamt [kg] | 626,768 | 486,362 |
 | Masse CAD e2d [kg] | 620,566 | 483,153 |
-| Abweichung gegen CAD [%] | 0.88 | 0.52 |
+| Abweichung gegen CAD [%] | 1.0 | 0.66 |
 | Zellen | 250 | 868 |
 | Energie [kWh] | 73.92 | 74.27 |
 

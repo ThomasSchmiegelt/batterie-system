@@ -8,7 +8,7 @@ tags: ["software"]
 > KI-generiert, erzeugt aus pm/plan/wissensnetz.json – nicht von Hand bearbeiten
 
 - Status: im Projekt (SOFTWARE.md)
-- Übersicht: [[SOFTWARE]]
+- Übersicht: [[Dokument/SOFTWARE]]
 
 ## Vorgänge
-- [[wissen/Vorgang/W2|W2]] – Postprocessing: Schnittebenen aus Skizzenlinie + Blickrichtung, Feldwerte (Strömung, Spannung) je Schnitt
+- [[Vorgang/W2|W2]] – Postprocessing: Schnittebenen aus Skizzenlinie + Blickrichtung, Feldwerte (Strömung, Spannung) je Schnitt

@@ -1,6 +1,10 @@
 ---
 typ: anforderung
-tags: ["anforderung"]
+gruppe: "REQ-P"
+methode: "S"
+ebene: "System"
+bewertung: "offen"
+tags: ["anforderung", "bewertung/offen"]
 ---
 # REQ-P10
 
@@ -8,9 +12,26 @@ tags: ["anforderung"]
 
 Lebensdauer (Zyklen, Jahre, Restkapazität)
 
-Lastenheft: [[docs/01_lastenheft]]
+- Wert (Lastenheft): offen
+- Priorität: Soll
+- Vom Autor bestätigt: nein
+
+## Verifikation (V-Modell-Matrix)
+
+- Methode: S (A Analyse, S Simulation, I Inspektion, T Test, R Review)
+- Ebene: System
+- Kriterium: SOH >= 70 % [Annahme Opus]
+- Ist-Wert: kein Nachweis verknüpft
+- Bewertung: **offen**
+- Matrix: [[Dokument/06_verifikationsplan]] · Lastenheft: [[Dokument/01_lastenheft]] · Verfolgung: [[Dokument/03_anforderungsverfolgung]]
+
+## Nachweisdateien
+- kein Nachweis verknüpft
 
 ## Vorgänge
-- [[wissen/Vorgang/V1|V1]] – Lastenheft-Werte REQ-P01..P08 vorschlagen (Fahrzeug, kWh, Spannung, Leistung, Laden, Chemie, Bauraum, Temperatur)
-- [[wissen/Vorgang/V2|V2]] – Freigabe Lastenheft durch Autor
-- [[wissen/Vorgang/C5|C5]] – Alterung (Zyklen, Kalender) und Vergleich NMC / Natrium-Ionen
+- [[Vorgang/V1|V1]] – Lastenheft-Werte REQ-P01..P08 vorschlagen (Fahrzeug, kWh, Spannung, Leistung, Laden, Chemie, Bauraum, Temperatur)
+- [[Vorgang/V2|V2]] – Freigabe Lastenheft durch Autor
+- [[Vorgang/C5|C5]] – Alterung (Zyklen, Kalender) und Vergleich NMC / Natrium-Ionen
+
+## Bauteile
+- [[Bauteil/BT-100|BT-100]]

@@ -32,3 +32,7 @@ Vor der ersten Montage festgelegt. Abweichungen werden begründet, nicht weggere
 | Kühlkreis außen (Pumpe, Ventil, Chiller, Behälter, Schläuche, T) | ≈ 3,3 kg ohne Kühlmittel | Annahmen A_g5_*_masse_kg + EPDM |
 | Länge mit Kühlmodul | Pack 2050 + 245 mm (LFP) | Stutzen 40 + Abstand 60 + Geräte 120 + Bögen |
 | Masse LFP gesamt | ≈ 607 kg (633 − 28 − 1 + 3) | Kühlplatte zurück auf ≈ K2-Niveau, Kühlkreis neu |
+
+## Nachtrag G5.9 (Opus, 2026-11-23): Kühlplatte mit zwei parallelen Mäandern (ENT-158, ENT-159, freigegeben)
+Änderung: Jede Kühlplatte wird in zwei Hälften zu je 4 Bahnen geteilt. Das sind zwei kurze Mäander mit je einem Ein- und einem Austritt, getrennt durch einen durchgehenden Steg. Gespeist werden sie aus einem außen liegenden Verteilerrohr und einem Sammelrohr, je Ø 25 mm innen (ENT-159). Ein- und Austritte liegen auf gegenüberliegenden Seiten (Z-Anordnung, wie in der K5-Rechnung). Ober- und Unterplatte gegenläufig.
+Erwartung: Kanalzahl, -querschnitt und Plattendicke bleiben gleich (ENT-152 bis 156). Die Masse der Platte ändert sich um weniger als 2 %. Neu hinzu kommen 2 Rohre Ø 25 mit etwa 0,3–0,6 kg je Rohr samt Kühlmittel und 4 Stutzen je Platte. Die Montage bleibt kollisionsfrei (0 Kollisionen). Das Rohr liegt innerhalb der Breite von 1430 mm (fest, Fahrzeugbreite). Muss es außen an der Stirnseite liegen, wächst die Länge um höchstens 40 mm. Stückliste und Kosten ändern sich um weniger als 1 %.

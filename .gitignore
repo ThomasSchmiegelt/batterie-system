@@ -39,3 +39,6 @@ sim/**/lauf_*/
 sim/**/elmer_*/
 sim/**/_th/
 sim/**/_film/
+wissen/.obsidian/workspace*.json
+# Sicherungen alter Berichtsfassungen nur lokal (Opus 2026-11-23, Größe)
+bericht/bericht_*.pdf

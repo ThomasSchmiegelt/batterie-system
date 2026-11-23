@@ -213,7 +213,11 @@ def bauen(V, aus_cad=False):
             f"{CQ(g_)}; Dichte {w_} = " + ("Cu aus E2-Eingaben" if w_ == "Cu" else "farben.json"), mq="CAD")
     # ---------------------------------------------------------------- Kühlung
     add("600.1", "BT-610", "Kühlplatte", "E", "Al (Vollmaterial, Obergrenze, Füllgrad)", "kuehlung.kuehlplatte", "K", "über und unter dem Zellfeld, mit Kanälen (ENT-104/105)", "al_blank", G["Kuehlplatte"]["anzahl"], grp("Kuehlplatte"), cad_vd, CQ("Kuehlplatte"))
-    add("600.2", "BT-620", "Verteiler und Sammler", "E", "offen", "kuehlung.verteiler", "K", "an der Kühlplatte, Kanäle quer (ENT-106)", "al_blank", 2, hinweis="Menge 2 (Opus-Vorgabe 2026-11-19).")
+    add("600.2", "BT-620", "Verteiler und Sammler", "E", "offen", "kuehlung.verteiler", "K", "an der Kühlplatte, Kanäle quer (ENT-106)", "al_blank", 4 if P["BT-610"]["kanalfuehrung"]["wert"] == "gruppiert_k2" else 2,
+        hinweis="Menge 4 = je Mäander ein Eintritts- und ein Austrittsblock (ENT-158, G5.9; Sonnet, Opus prüft)." if P["BT-610"]["kanalfuehrung"]["wert"] == "gruppiert_k2" else "Menge 2 (Opus-Vorgabe 2026-11-19).")
+    if P["BT-610"]["kanalfuehrung"]["wert"] == "gruppiert_k2":
+        add("600.2b", "BT-620", "Verteilerrohr und Sammelrohr (Al, Innen-Ø 25 mm)", "E", "Al", "kuehlung.verteilerrohr", "K", "hinter den Steigblöcken, Achse quer (ENT-158, ENT-159)", "al_blank", 2,
+            hinweis="Neu G5.9 (Sonnet, Opus prüft): Rohr Ø25 innen, Wand 1,5 mm (Annahme), Masse nur Al ohne Kühlmittel.")
     add("600.3", "BT-630", "Kühlmittelanschlüsse Ein/Aus", "K", "offen", "kuehlung.anschluss", "K", "Kühlplattenende", "al_blank", 2, hinweis="Generator kuehlung.anschluss, Menge 2, Stufe K (Opus-Vorgabe 2026-11-19).")
     add("600.4", "BT-640", "Temperaturfühler Kühlmittel", "K", "offen", "kaufteile.temperaturfuehler_kuehlmittel", "H", "an den Anschlüssen (Ein/Aus)", "kunststoff_schwarz", 2, hinweis="Menge 2 (Opus 2026-11-19). Keine Formangabe: Stufe H bis W34.")
     add("600.5", "BT-650", "Kühlmittel Wasser-Glykol", "K", "Flüssigkeit", None, "-", "in den Kanälen", "-", None, hinweis="Flüssigkeit, keine Geometrie (PLAN §3: Detailstufe -).")

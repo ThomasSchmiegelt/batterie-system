@@ -26,3 +26,6 @@
 
 ## Nachtrag 2026-11-17: Lauf 3 mit Bauraum 1,95 × 1,43 × 0,13 m (ENT-030), vor der Rechnung
 - Volumen 362,5 L; nötig Fall A ≈ 204 Wh/L, LFP B ≈ 257 Wh/L. LFP A erfüllt (+4,6 %), LFP B nicht, NMC erfüllt. Massen unverändert.
+
+## Anforderung (Nachtrag)
+REQ-P02, REQ-P06 (Zuordnung Opus 2026-11-23)

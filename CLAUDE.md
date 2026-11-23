@@ -46,7 +46,7 @@ Regeln zur Verteilung:
 - **Anforderungen zuerst:** Jede Arbeit gehört zu einer Anforderung (`docs/01_lastenheft.md`, REQ-…) und erscheint in der Nachverfolgung (`docs/03_anforderungsverfolgung.md`, erzeugt von `pm/plan/wissensnetz.py`).
 - **Entscheidungen** mit Begründung und Alternativen in den Akten `pm/entscheidungen/ENT-*.md`. `docs/04_entscheidungen.md` erzeugt `pm.py register` daraus. **Risiken** in `docs/05_risiken_fmea.md`. **Änderungen** in `docs/09_aenderungen.md`.
 - **Dokumentkopf** in jedem Dokument: Nummer, Version, Status (Entwurf / geprüft (KI) / freigegeben (Mensch)), Ersteller (Modell), Prüfer.
-- **„Freigegeben“** setzt nur der Mensch.
+- **„Freigegeben“** setzt nur der Mensch. Ausnahme (Autor 2026-11-23: „wo du etwas emphelen kannst, kannst du es selber freigeben. Bei den rest frag mich.“): technische Akten und Annahmen mit klarer Empfehlung darf Opus als `entschieden (Opus, delegiert durch Autor 2026-11-23)` setzen; Anforderungswerte, offene Abwägungen, Dokumentfreigaben und alles nach außen bleiben beim Autor (Protokoll `pm/freigaberunde_*.md`).
 - **Fremde Inhalte und Lizenzen** in `docs/10_lizenzen_und_quellen.md`. Keine fremden Texte ins Repo.
 - **Im selben Schritt mitschreiben:** `BEFUNDE.md`, `ERINNERUNGEN.md`, Hermes-Skill `~/.hermes/skills/cae/batterie-system/SKILL.md` und das Buch-Ereignisprotokoll `~/hermes/buch/ereignissprotokoll_batterie/ereignisprotokoll.md` (BA-NN, nur im Buch, nicht im Repo). Weitere Nutzerregeln stehen im Gedächtnis der Fusion-Instanz, die das Projekt angelegt hat (`~/.claude/projects/-home-cae-hermes-fusion/memory/`).
 
@@ -63,6 +63,9 @@ python3 pm/startwerte.py "Kompaktwagen, 400 km Reichweite, in 20 min auf 80 %, M
 python3 pm/bauteile/stueckliste.py          # → docs/13_stueckliste.md (liest startwerte.json)
 python3 pm/plan/plan_batterie.py            # Netzplan, kritischer Pfad
 python3 pm/plan/wissensnetz.py && python3 pm/plan/wissensnetz_ansicht.py   # wissensnetz.json/.html, docs/03, wissen/ (Obsidian)
+# Obsidian-Tresor ist wissen/ (eigenständig, ca. 30 MB, enthält Kopien der verlinkten Dokumente und verkleinerte Bilder; nicht das Repo öffnen)
+python3 pm/graph/graph.py && python3 pm/graph/frage.py luecken      # Wissensgraph (pm/graph/SCHEMA.md) → graph.json/.graphml; Abfragen folgen|luecken|herkunft|norm
+python3 pm/pm.py folgen ENT-152 && python3 pm/graph/reqif.py          # Änderungsfolgen; Anforderungen als ReqIF 1.2 (pm/graph/anforderungen.reqif)
 bash forschung/lauf.sh wissen W05           # ein Recherchethema (patente|wissen|werkzeuge [Nr]); fertige werden übersprungen
 bash forschung/alles.sh                     # alle Themen, ca. 3 h GPU. Abbruch: touch forschung/STOP; Log forschung/verlauf.log
 ```

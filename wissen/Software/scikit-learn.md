@@ -8,8 +8,8 @@ tags: ["software"]
 > KI-generiert, erzeugt aus pm/plan/wissensnetz.json – nicht von Hand bearbeiten
 
 - Status: im Projekt (SOFTWARE.md)
-- Übersicht: [[SOFTWARE]]
+- Übersicht: [[Dokument/SOFTWARE]]
 
 ## Vorgänge
-- [[wissen/Vorgang/U3|U3]] – Ersatzmodell anpassen (Gauß-Prozess), Kreuzvalidierung gegen zurückgehaltene Läufe
-- [[wissen/Vorgang/U4|U4]] – Optimierung Kühlplatte/Ladeprofil mit Ersatzmodell, Bestwerte mit Elmer bestätigen
+- [[Vorgang/U3|U3]] – Ersatzmodell anpassen (Gauß-Prozess), Kreuzvalidierung gegen zurückgehaltene Läufe
+- [[Vorgang/U4|U4]] – Optimierung Kühlplatte/Ladeprofil mit Ersatzmodell, Bestwerte mit Elmer bestätigen
