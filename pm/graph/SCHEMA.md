@@ -1,6 +1,6 @@
 # Wissensgraph: Schema (Opus)
 
-KI-generiert (Claude Opus, 2026-11-23). Freigabe Autor: „ja, es geht in die optimierung“. Gehört zu BAT-DOC-17, Workflow Schleife 2.
+KI-generiert (Claude Opus, 2026-11-23). Freigabe Autor: „ja, es geht in die optimierung“. Gehört zu BAT-DOC-23, Workflow Schleife 2.
 Grundsatz: Kanten kommen nur aus **strukturierten Feldern**. Kanten aus bloßen Textvorkommen bekommen den Typ `erwaehnt` und gelten nie als Beleg.
 
 ## Knoten

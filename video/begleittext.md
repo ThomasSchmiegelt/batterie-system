@@ -1,4 +1,4 @@
-| Dok.-Nr. | BAT-DOC-13-T | Version | 0.1 | Status | Entwurf |
+| Dok.-Nr. | BAT-DOC-13-T | Version | 0.1 | Status | freigegeben (Autor 2026-11-23) |
 |---|---|---|---|---|---|
 | Titel | Abschlussvideo: Begleittext (DE) | Ersteller | Claude Sonnet (KI) | Prüfer | – |
 

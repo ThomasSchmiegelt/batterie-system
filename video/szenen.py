@@ -8,11 +8,12 @@ from mathutils import Vector
 D = "/home/cae/cae_projekte/batterie_video"; R = "/home/cae/hermes/batterie"; MM = 0.001; ST = 70.0
 IDX = json.load(open(f"{D}/netz_LFP/index.json")); WS = json.load(open(f"{R}/cad/baukasten/farben.json"))["werkstoffe"]
 ERG = json.load(open(f"{R}/cad/baukasten/ausgabe/ergebnis_LFP.json")); L, B = ERG["laenge_mm"], ERG["breite_mm"]
+VW = os.environ.get("VIDEO_VARIANTE") == "wissen"   # Variante „Batterie und Wissensgraph“ (BAT-DOC-13b): transparenter Grund, Gehäuse wird durchsichtig, dann alle Teile aus; ohne Schalter unverändert
 arg = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
 # Szenen: (Name, erstes Bild, letztes Bild, Bauteil-Präfixe, die in dieser Szene erscheinen)
 SZ = [("S1_Zelle", 0, 299, ("BT-100",)), ("S2_Stack", 300, 599, ("BT-2",)), ("S3_BMS", 600, 849, ("BT-3",)), ("S4_Kabel", 850, 1099, ("BT-4",)),
       ("S5_Struktur", 1100, 1449, ("BT-5",)), ("S6_Kuehlung", 1450, 1799, ("BT-6",)), ("S7_Zusatz", 1800, 2049, ("BT-7",)), ("S8_Gesamt", 2050, 2749, ())]
-NF = 2750; E0, E1, E2, E3 = 2330, 2450, 2560, 2680    # Explosion: Start, voll, Rückfahrt-Beginn, zusammen
+NF = 3150 if VW else 2750; N0 = 2750; E0, E1, E2, E3 = 2330, 2450, 2560, 2680    # Explosion: Start, voll, Rückfahrt-Beginn, zusammen
 EZ = {"BT-550": 0, "BT-510": 1, "BT-540": 2, "BT-530": 2, "BT-560": 2, "BT-610u": 3, "BT-230u": 3.7, "BT-100": 4.6, "BT-220": 4.6, "BT-250": 4.6, "BT-260": 4.6, "BT-3": 5.4, "BT-4": 5.4,
       "BT-450": 5.4, "BT-230o": 5.5, "BT-610o": 6.3, "BT-520": 7.3, "BT-580": 7.3, "BT-570": 7.3, "BT-590": 7.3, "BT-7": 8.4}   # Stufen wie render_g5.py (Explosionsbild G5.8)
 EX = {"BT-620": 300, "BT-630": 300, "BT-640": 300, "BT-65": 300, "BT-661": 520, "BT-662": 520, "BT-663": 520, "BT-664": 420, "BT-665": 520}
@@ -36,7 +37,8 @@ sc = bpy.context.scene; sc.render.engine = "BLENDER_EEVEE"; sc.render.resolution
 if os.environ.get("VIDEO_ENGINE") == "CYCLES": sc.render.engine = "CYCLES"; sc.cycles.device = "CPU"; sc.cycles.samples = int(os.environ.get("VIDEO_SAMPLES", "12")); sc.cycles.use_denoising = False; sc.cycles.threads = 6   # nur Test ohne GPU
 sc.frame_start, sc.frame_end = 0, NF - 1; sc.view_settings.view_transform = "Standard"
 sc.eevee.use_soft_shadows = True; sc.eevee.use_gtao = True; sc.eevee.gtao_distance = 0.15; sc.eevee.taa_render_samples = 16; sc.eevee.shadow_cube_size = "1024"; sc.eevee.shadow_cascade_size = "2048"
-sc.render.image_settings.file_format = "PNG"; sc.render.filepath = f"{D}/frames/"; sc.render.use_overwrite = False; sc.render.use_placeholder = True
+sc.render.image_settings.file_format = "PNG"; sc.render.filepath = f"{D}/wissen/teile/" if VW else f"{D}/frames/"; sc.render.use_overwrite = False; sc.render.use_placeholder = True
+if VW: sc.render.film_transparent = True; sc.render.image_settings.color_mode = "RGBA"
 wd = bpy.data.worlds.new("w"); sc.world = wd; wd.use_nodes = True; bg = wd.node_tree.nodes["Background"]; bg.inputs[0].default_value = (0.80, 0.84, 0.90, 1); bg.inputs[1].default_value = 0.45
 def key(ob, path, fr, val, idx=-1, const=False):
     setattr(ob, path, val) if idx < 0 else ob.__setattr__(path, val)
@@ -66,7 +68,9 @@ for e in IDX:
         ob = bpy.data.objects.new(f"{bt}_{ws}{tag}", me); sc.collection.objects.link(ob)
         mt = bpy.data.materials.new(ob.name); mt.use_nodes = True; b = mt.node_tree.nodes["Principled BSDF"]
         b.inputs["Base Color"].default_value = (*col, 1); b.inputs["Metallic"].default_value = 0.3 * w.get("metall", 0); b.inputs["Roughness"].default_value = w.get("rauheit", 0.5)
-        mt.diffuse_color = (*col, 1); ob.data.materials.append(mt); obs.append((ob, bt, tag))
+        mt.diffuse_color = (*col, 1)
+        if VW: mt.blend_method = "HASHED"; mt.shadow_method = "HASHED"
+        ob.data.materials.append(mt); obs.append((ob, bt, tag))
 print("Objekte", len(obs), flush=True)
 # Einblenden je Szene (Absenken von oben), Deckel BT-520 liegt in S5 auf und hebt in S6 ab; Explosion in S8
 DROP = 0.30; FD = 28
@@ -101,7 +105,7 @@ ZC = (0.05, 0.37, 0.06)
 P = [(0, ZC, -50, 25, 1.5), (100, ZC, -25, 25, 1.4), (200, C, -35, 30, 4.4), (299, C, -20, 30, 3.4), (599, C, 20, 32, 3.4), (610, (1.35, 0.72, 0.1), 20, 45, 3.6), (849, (1.3, 0.72, 0.1), 0, 55, 3.4),
      (860, (1.8, 0.7, 0.15), 0, 50, 1.1), (1099, (1.8, 0.7, 0.15), -30, 45, 1.3), (1110, C, -30, 30, 3.0), (1449, C, -100, 30, 3.6),
      (1460, (2.2, 0.715, 0.07), 40, 35, 1.7), (1799, (2.2, 0.715, 0.07), 90, 35, 1.9), (1810, (1.78, 0.72, 0.17), 90, 40, 1.1), (2049, (1.78, 0.72, 0.17), 20, 40, 1.2),
-     (2060, C, 20, 30, 3.2), (2329, C, 380, 30, 3.2), (E1, (1.15, 0.715, 0.40), 410, 22, 5.2), (E2, (1.15, 0.715, 0.40), 440, 22, 5.2), (E3, C, 470, 30, 3.2), (2749, C, 500, 32, 3.0)]
+     (2060, C, 20, 30, 3.2), (2329, C, 380, 30, 3.2), (E1, (1.15, 0.715, 0.40), 410, 22, 5.2), (E2, (1.15, 0.715, 0.40), 440, 22, 5.2), (E3, C, 470, 30, 3.2), (2749, C, 500, 32, 3.0)] + ([(N0 + 149, C, 515, 34, 3.6), (NF - 1, C, 530, 38, 4.6)] if VW else [])
 cam = bpy.data.objects.new("cam", bpy.data.cameras.new("cam")); sc.collection.objects.link(cam); sc.camera = cam; cam.data.lens = 35; cam.data.clip_end = 50; cam.data.clip_start = 0.05
 tg = bpy.data.objects.new("tg", None); sc.collection.objects.link(tg)
 tc = cam.constraints.new("TRACK_TO"); tc.target = tg; tc.track_axis = "TRACK_NEGATIVE_Z"; tc.up_axis = "UP_Y"
@@ -113,8 +117,22 @@ for fc in list(cam.animation_data.action.fcurves) + list(tg.animation_data.actio
     pass
 for az, en, rot in ((35, 1.8, 50), (-120, 0.6, 60)):
     l = bpy.data.objects.new("l", bpy.data.lights.new("l", "SUN")); l.data.energy = en; l.rotation_euler = (math.radians(rot), 0, math.radians(az)); sc.collection.objects.link(l)
-bpy.ops.mesh.primitive_plane_add(size=30, location=(1.03, 0.715, -0.004)); fl = bpy.context.object; fm = bpy.data.materials.new("boden"); fm.use_nodes = True
-fm.node_tree.nodes["Principled BSDF"].inputs["Base Color"].default_value = (0.55, 0.57, 0.6, 1); fm.node_tree.nodes["Principled BSDF"].inputs["Roughness"].default_value = 0.9; fl.data.materials.append(fm)
+if not VW: bpy.ops.mesh.primitive_plane_add(size=30, location=(1.03, 0.715, -0.004))
+if not VW:
+    fl = bpy.context.object; fm = bpy.data.materials.new("boden"); fm.use_nodes = True
+    fm.node_tree.nodes["Principled BSDF"].inputs["Base Color"].default_value = (0.55, 0.57, 0.6, 1); fm.node_tree.nodes["Principled BSDF"].inputs["Roughness"].default_value = 0.9; fl.data.materials.append(fm)
+if VW:   # Schluss: Gehäuse (BT-5xx) 6 s auf Alpha 0,15, dann 5 s alle Teile auf 0, danach 5 s nur Graph
+    A1, A2, A3 = N0 - 1, N0 + 149, N0 + 274
+    for ob, bt, tag in obs:
+        al = ob.data.materials[0].node_tree.nodes["Principled BSDF"].inputs["Alpha"]; g = bt.startswith("BT-5") or (bt in ("BT-610", "BT-230") and tag == "o")   # Gehäuse und obere Abdeckungen (Kühlplatte oben, Pad oben)
+        al.default_value = 1.0; al.keyframe_insert("default_value", frame=A1)
+        al.default_value = 0.15 if g else 1.0; al.keyframe_insert("default_value", frame=A2)
+        al.default_value = 0.0; al.keyframe_insert("default_value", frame=A3)
+        ob.hide_render = False; ob.keyframe_insert("hide_render", frame=A3); ob.hide_render = True; ob.keyframe_insert("hide_render", frame=A3 + 1)
+        const(ob, "hide_render")
+    def _samp(scene, *a): scene.eevee.taa_render_samples = 64 if scene.frame_current >= N0 else 16   # Alpha-Hashing braucht mehr Samples gegen Rauschen
+    bpy.app.handlers.frame_change_pre.append(_samp)
+
 a0, a1 = (int(arg[0]), int(arg[1])) if len(arg) >= 2 else (0, NF - 1)
 sc.frame_start, sc.frame_end = a0, a1
 if os.environ.get("VIDEO_TEST"): sc.render.filepath = f"{D}/test_{a0:04d}.png"; sc.frame_set(a0); bpy.ops.render.render(write_still=True, animation=False); sys.exit()

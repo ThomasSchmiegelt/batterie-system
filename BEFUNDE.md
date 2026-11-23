@@ -305,7 +305,7 @@ Die Kennzahlen von LFP_a sahen gut aus: Eindringung 13,9 mm, Zellreihe 8,1 mm, E
 - Lehre: Das kleine lokale Modell fand als unabhängiger Prüfer Fehler, die bei der Prüfung durch Opus durchgingen. Eine Gutachter-Rolle ohne Werkzeuge gehört vor jede Freigabe.
 
 ## B-BAT-045 Erste Prüfung mit den neuen Workflow-Werkzeugen (2026-11-23, Opus)
-Werkzeuge nach BAT-DOC-17 (Sonnet), Vorschläge für Methode, Ebene und Lastfall von Opus (pm/anforderungen.json, Autor offen).
+Werkzeuge nach BAT-DOC-23 (Sonnet), Vorschläge für Methode, Ebene und Lastfall von Opus (pm/anforderungen.json, Autor offen).
 - `verifikation.py`: von 31 REQ sind 2 verfehlt (P07 Länge 2373 gegen 1950 mm, P09 Spreizung LFP 9,6 K), 1 offen und 28 nicht definiert. 28 Anforderungen haben also kein prüfbares Kriterium. Das bestätigt Lehre L7.
 - Das Lastenheft nennt noch L = 1950 mm (ENT-013). Im Bericht steht 2030 mm (ENT-102), die Vorgabe des Autors erlaubt Längenwachstum. Der Widerspruch muss in der Freigaberunde geklärt werden.
 - Laut Lastenheft gilt „Spreizung **in der Zelle** ≤ 5 K“ (docs/01, Zeile 28). Die Rechnungen werten ΔT über den Zellblock aus. Das ist ein Hinweis zur offenen ΔT-Frage.

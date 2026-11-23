@@ -20,7 +20,7 @@ if "--en" in sys.argv:
     sys.exit(2)
 
 AUTOR = "Thomas Schmiegelt"
-FUSS = "KI-generiert – Entwurf, nicht freigegeben | " + AUTOR + " | "
+FUSS = "KI-generiert – freigegeben (Autor 2026-11-23) | " + AUTOR + " | "
 DUNKEL = RGBColor(0x1F, 0x2A, 0x37)
 AKZENT = RGBColor(0x1B, 0x6E, 0xA8)
 GRAU = RGBColor(0x60, 0x66, 0x70)
@@ -137,16 +137,16 @@ NR[0] += 1
 bg = s.shapes.add_shape(1, 0, 0, prs.slide_width, Inches(2.9)); bg.fill.solid(); bg.fill.fore_color.rgb = DUNKEL; bg.line.fill.background()
 tb(s, 0.6, 0.6, 12, 1.0, "Batteriesystem BT-000: LFP- und NMC-Variante", 36, True, RGBColor(255, 255, 255))
 tb(s, 0.6, 1.6, 12, 0.8, "Unternehmenspräsentation des Testprojekts „KI im Engineering“", 20, False, RGBColor(220, 228, 236))
-tb(s, 0.6, 3.1, 7.2, 1.0, [("KI-generiert", 20, True), ("Alle Folien, Zahlen und Texte wurden von KI-Agenten aus den Projektdateien erzeugt. Entwurf, nicht vom Menschen freigegeben.", 13, False)], fill=GELB, color=DUNKEL)
+tb(s, 0.6, 3.1, 7.2, 1.0, [("KI-generiert", 20, True), ("Alle Folien, Zahlen und Texte wurden von KI-Agenten aus den Projektdateien erzeugt. Vom Autor freigegeben am 2026-11-23.", 13, False)], fill=GELB, color=DUNKEL)
 tb(s, 0.6, 4.3, 7.2, 0.5, "Vorgaben Vorschlag KI (Vorgabe B0 vom Autor nicht festgelegt)", 14, True, ROT)
 tb(s, 0.6, 4.9, 7.2, 0.5, f"Autor: {AUTOR} | Stand: {datum}", 14)
-tabelle(s, 8.2, 3.1, 4.6, [["Dokumentkopf", ""], ["Dok.-Nr.", "BAT-DOC-14"], ["Version", "0.1"], ["Status", "Entwurf"],
+tabelle(s, 8.2, 3.1, 4.6, [["Dokumentkopf", ""], ["Dok.-Nr.", "BAT-DOC-14"], ["Version", "0.1"], ["Status", "freigegeben (Autor 2026-11-23)"],
                            ["Ersteller", "Claude Sonnet (KI), im Auftrag von Claude Opus"], ["Prüfer", "– (Opus, Mensch offen)"]],
         [1, 2], 12, rowh=0.42)
 tb(s, 0.5, 7.05, 10.5, 0.35, FUSS + "1", 10, False, GRAU)
 s.notes_slide.notes_text_frame.text = (
-    "Sprechertext: Dies ist der Entwurf der Unternehmenspräsentation. Sie wurde von KI-Agenten aus den Projektdateien erzeugt "
-    "und ist nicht freigegeben. Die Vorgaben zu Zielgruppe, Länge und Vorlage hat der Autor nicht festgelegt, es gelten die Vorschläge der KI "
+    "Sprechertext: Dies ist die vom Autor freigegebene Unternehmenspräsentation. Sie wurde von KI-Agenten aus den Projektdateien erzeugt "
+    "Die Vorgaben zu Zielgruppe, Länge und Vorlage hat der Autor nicht festgelegt, es gelten die Vorschläge der KI "
     "(praesentation/STORYBOARD.md, Abschnitt Vorgaben B0).\nQuellen: praesentation/STORYBOARD.md, praesentation/AUFTRAG_B5.md.")
 
 # ---------------- 2 Aufgabe ----------------

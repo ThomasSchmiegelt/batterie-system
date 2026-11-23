@@ -12,6 +12,7 @@ Regelt, wie Dokumente in diesem Projekt entstehen, geprüft und freigegeben werd
 |---|---|---|
 | Entwurf | erstellt, ungeprüft | Ersteller (Modell oder Mensch) |
 | geprüft (KI) | von einem zweiten Agenten an Rohdaten bzw. Quellen geprüft, Prüfung protokolliert | Opus |
+| abgeschlossen mit Mängeln | vom Menschen gelesen; Stand einer Schleife abgeschlossen, bekannte Mängel offen und benannt, Arbeit geht weiter (Autor 2026-11-23) | nur der Autor |
 | freigegeben | vom Menschen gelesen und angenommen | nur der Autor |
 
 ## Nummern
@@ -39,10 +40,17 @@ Dokumentkopf (Nummer, Version, Status, Ersteller, Prüfer), Hinweis „KI-generi
 | BAT-DOC-12 | 12_projektmanagement.md | Entscheidungsakten, Bauteilgespräch, Meilensteine |
 | BAT-DOC-13 | 13_stueckliste.md | Grobe Stückliste (Baugruppen, Hauptkomponenten), erzeugt von pm/bauteile/stueckliste.py aus Startsatz und Annahmen |
 | BAT-DOC-13 | ../video/STORYBOARD.md | Abschlussvideo |
+| BAT-DOC-13b | ../video/begleittext_wissen.md | Zweites Abschlussvideo „Batterie und Wissensgraph“ (Begleittext; Video abschluss_wissen.mp4, Auftrag video/AUFTRAG_VIDEO_WISSEN.md), freigegeben (Autor 2026-11-23: „das video ist gut“); Zeitraffer 20 s für LinkedIn: video/abschluss_wissen_linkedin.mp4 |
 | BAT-DOC-14 | ../praesentation/STORYBOARD.md | Unternehmenspräsentation: Folienplan, Bausteine je Vorgang |
 | BAT-DOC-15 | 15_foerdermoeglichkeiten.md | Recherche staatliche Förderung (KI/Open Source, Batterie, Wasserstoff), privat und KMU, Voraussetzungen |
 | BAT-DOC-16 | 16_ergebnisbilder.md | Ergebnisbilder mit Lesehilfe, erzeugt von pm/plan/bilder.py |
 | BAT-DOC-17 | ../bericht/bericht.tex (PDF: ../bericht/bericht.pdf) | Projektbericht Batteriesystem BT-000, Fassung 0.4 (DE, Stand 2026-11-18), Zwischenstand, Entwurf (KI-generiert) |
+| BAT-DOC-18 | 18_kosten.md | Herstellkosten |
+| BAT-DOC-19 | 19_freigaberunde.md | Freigaberunde (erzeugt von pm.py freigabe) |
+| BAT-DOC-20 | 20_regelwerke_vergleich.md | Regelwerke EU/UN, USA, DoD, China im Vergleich |
+| BAT-DOC-21 | 21_graph_luecken.md | Lücken aus dem Wissensgraphen (erzeugt) |
+| BAT-DOC-22 | 22_qualitaetsnachweis.md | Qualitätsnachweis, Glaubwürdigkeit der Kernergebnisse |
+| BAT-DOC-23 | 17_workflow_schleife.md | Workflow Schleife 2 (V-Modell, Tore T0–T6); Dateiname historisch, Nummer 17 ist der Bericht |
 
 ---
 *KI-generiert (Claude Opus, 2026-11-11). Status Entwurf. Freigabe nur durch den Autor.*

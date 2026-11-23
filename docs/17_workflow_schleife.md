@@ -1,4 +1,4 @@
-| Dok.-Nr. | BAT-DOC-17 | Version | 0.1 | Status | Entwurf |
+| Dok.-Nr. | BAT-DOC-23 | Version | 0.1 | Status | Entwurf |
 |---|---|---|---|---|---|
 | Titel | Workflow für die nächste Konstruktionsschleife (V-Modell) | Ersteller | Claude Opus (KI) | Prüfer | – (Mensch offen) |
 

@@ -3,12 +3,12 @@
 KI-generiert (Claude Opus).
 
 ## 2026-11-23 Abend: Optimierung abgeschlossen, Commit
-- Workflow Schleife 2 (BAT-DOC-17, Tore T0–T6), V-Modell-Matrix docs/06 ohne „nicht definiert“, Wissensgraph pm/graph (ReqIF), Tresor wissen/, Regelwerke docs/20, Qualitätsnachweis docs/22 (alle Q Stufe 0: V und U fehlen), Präsentation und Video erste Fassung.
+- Workflow Schleife 2 (BAT-DOC-23, Tore T0–T6), V-Modell-Matrix docs/06 ohne „nicht definiert“, Wissensgraph pm/graph (ReqIF), Tresor wissen/, Regelwerke docs/20, Qualitätsnachweis docs/22 (alle Q Stufe 0: V und U fehlen), Präsentation und Video erste Fassung.
 - Freigaberunde: REQ-Kriterien vom Autor (pm/freigaberunde_2026-11-23.md); Akten und Annahmen delegiert an Opus (CLAUDE.md Regel). Stellgrößen Schleife 2: 23 Annahmen.
 - Schleife 2 Start: ΔT zwischen Zellen neu auswerten, K5 mit Packlänge 2373 neu, LFP-Zellmodell (−47 % Kapazität), Leichtbau (528/370 kg), Pfahl (Zellen ≤ 0,5 mm), QN5/QN6.
 
 ## 2026-11-23 Nachmittag: Workflow Schleife 2
-- BAT-DOC-17 (Tore T0–T6, V-Modell), BAT-DOC-07 v0.2 (Normen, Einschätzung), Werkzeuge: pm/anforderungen.json, pm/plan/verifikation.py → docs/06, pm/tor.py, pm/steckbrief.py, pm/masse_abgleich.py, pm.py freigabe → docs/19, Tor in warteschlange.sh.
+- BAT-DOC-23 (Tore T0–T6, V-Modell), BAT-DOC-07 v0.2 (Normen, Einschätzung), Werkzeuge: pm/anforderungen.json, pm/plan/verifikation.py → docs/06, pm/tor.py, pm/steckbrief.py, pm/masse_abgleich.py, pm.py freigabe → docs/19, Tor in warteschlange.sh.
 - Befund B-BAT-045: 28 von 31 REQ nicht prüfbar; L 1950/2030/2373 klären; K5 mit alter Packlänge.
 - Offen: Autor-Freigaberunde docs/19; Normtexte R100/R135/2023/1542 als PDF vom Autor (Server sperren Abruf); China Zielmarkt?
 

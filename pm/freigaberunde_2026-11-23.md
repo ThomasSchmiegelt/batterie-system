@@ -43,3 +43,12 @@ Opus legt das eng aus: Es betrifft technische Akten und Annahmen mit klarer Empf
 | Annahmen A_* mit Rechnungsbezug (etwa 30, z. B. A_rand_mm, A_luft_mm, A_seitenrahmen_*, A_pad_mm, A_quertraeger_*) | bleiben Annahme, markiert als **Stellgröße Schleife 2** | Daran hängen die verfehlten REQ P14 (Pfahl) und P09 (ΔT). Sie werden in Schleife 2 verändert und gehören deshalb jetzt nicht festgeschrieben |
 | A_zellzahl_LFP/NMC, A_zellabstand_* und Merkmale BT-210.zellen_je_reihe, BT-250.zellabstand_mm | eigene Akten anlegen, Wert wie gebaut, entschieden (Opus, delegiert) | Die Zellzahl folgt aus 800 V (ENT-006) und der Zellspannung. Sie darf keine Annahme sein |
 Vor dem Übernehmen in parameter.json wird das CAD vorher und nachher gebaut und verglichen. Kollisionen, Masse und Maße müssen gleich bleiben. Weicht etwas ab, wird zurückgenommen und der Autor gefragt.
+
+## Runde 5: Dokumente (Autor, wörtlich)
+„freigeben passt mir für den Bericht nicht, das sher so etwas wie abgeschlossen mit Mängeln. Sonst hätten wir ja nichts mehr zu tun. Video und Präsi passen.“
+| Dokument | Status |
+|---|---|
+| Bericht 1.2 (BAT-DOC-17) | **abgeschlossen mit Mängeln** (neue Statusstufe in BAT-DOC-00, nur der Autor setzt sie) |
+| Unternehmenspräsentation (BAT-DOC-14) | freigegeben (Autor 2026-11-23) |
+| Abschlussvideo (BAT-DOC-13) | freigegeben (Autor 2026-11-23) |
+Nebenbefund Opus: Der Workflow hatte die Nummer BAT-DOC-17 doppelt vergeben (der Bericht trägt sie schon). Der Workflow heißt jetzt BAT-DOC-23, der Dateiname bleibt.

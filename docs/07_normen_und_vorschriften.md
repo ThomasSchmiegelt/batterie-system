@@ -24,7 +24,7 @@ Frage des Autors (2026-11-23): „Ist es auch sinnvoll maschinensicherheitsricht
 | Maschinenrichtlinie 2006/42/EG, ab 20.01.2027 Maschinenverordnung (EU) 2023/1230 | Sicherheit von Maschinen | **für das Pack im Pkw nein**: Straßenfahrzeuge mit Typgenehmigung sind ausgenommen (zu belegen, W37). **Ja** für Montageanlage, Prüfstände und Batterien in Maschinen (z. B. Flurförderzeuge) | frei (EUR-Lex) | W37 |
 | ISO 12100 | Risikobeurteilung für Maschinen | Methode übertragbar auf die FMEA (BAT-DOC-05) | kostenpflichtig | – |
 | VDA-Bände (VDA 6.3, Reifegradabsicherung, AIAG-VDA-FMEA, VDA 2) | Qualitätsprozesse der Lieferkette | ja, für den Prozess, nicht für Grenzwerte | **kostenpflichtig** (VDA QMC) | nur Titel und Gliederung |
-| Automotive SPICE (PAM) | Prozessreife Software und System, V-Modell | ja, für den Prozess (BAT-DOC-17) | nach Wissen von Opus kostenfrei bei VDA QMC (zu prüfen) | W39 |
+| Automotive SPICE (PAM) | Prozessreife Software und System, V-Modell | ja, für den Prozess (BAT-DOC-23) | nach Wissen von Opus kostenfrei bei VDA QMC (zu prüfen) | W39 |
 | EU-KI-Verordnung (EU) 2024/1689 | Pflichten beim KI-Einsatz | Prozess, vermutlich kein Hochrisiko-Fall | frei (EUR-Lex) | W37 |
 
 ## 2 Vorgehen (Vorschlag Opus)
