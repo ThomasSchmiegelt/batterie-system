@@ -1,0 +1,1 @@
+{"urteile":{"Nachweisaufwand":{"gewinner":"A","grund":"Konzept A mit 1oo1 und einer einzigen Schwelle hat weniger FMEDA-Elemente, keinen CAN-Derating-Pfad und keinen mehrstufigen Zustandsautomat, was den Software-ASIL-Nachweis und den Unabhängigkeitsnachweis gegenüber B (2oo3, CAN, 2 s-Warnlogik) deutlich verkleinert.","zahl":null}}}

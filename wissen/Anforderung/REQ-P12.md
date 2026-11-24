@@ -13,15 +13,15 @@ verifiziert_durch: ["pm/bauteile/stueckliste_LFP.json::positionen[bt=BT-650].wer
 
 Kühlmittel und Anschlüsse
 
-- Wert (Lastenheft): Vorschlag Wasser-Glykol
+- Wert (Lastenheft): Kühlmittel Wasser-Glykol, Δp je Platte ≤ 0,5 bar, Verteilung ±10 % (Autor, Freigaberunde 2026-11-23)
 - Priorität: Soll
-- Vom Autor bestätigt: nein
+- Vom Autor bestätigt: ja
 
 ## Verifikation (V-Modell-Matrix)
 
 - Methode: S (A Analyse, S Simulation, I Inspektion, T Test, R Review)
 - Ebene: Subsystem
-- Kriterium: Kuehlmittel vorhanden [Annahme Opus]<br>dp_Platte <= 0.5 bar [Annahme Opus]<br>Verteilung_abw <= 10 % [Autor]
+- Kriterium: Kuehlmittel vorhanden [Autor (Freigaberunde 2026-11-23)]<br>dp_Platte <= 0.5 bar [Autor (Freigaberunde 2026-11-23)]<br>Verteilung_abw <= 10 % [Autor (Freigaberunde 2026-11-23)]
 - Ist-Wert: [Kuehlmittel] LFP Kuehlmittel = vorhanden [pm/bauteile/stueckliste_LFP.json :: positionen[bt=BT-650].werkstoff]; [dp_Platte] dp_Platte = 0.1709 [sim/kuehlung/k5_parallel/ergebnis_verteiler.json :: gruppen.faelle.k2_d25_x3.dp_bar]; [Verteilung_abw] Verteilung_abw = 2.05 [sim/kuehlung/k5_parallel/ergebnis_verteiler.json :: gruppen.faelle.k2_d25_x3.max_abw_pct]
 - Bewertung: **rechnerisch erfüllt (nicht validiert) (Kriterium Annahme, Autor offen)**
 - Matrix: [[Dokument/06_verifikationsplan]] · Lastenheft: [[Dokument/01_lastenheft]] · Verfolgung: [[Dokument/03_anforderungsverfolgung]]

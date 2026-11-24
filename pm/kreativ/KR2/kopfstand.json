@@ -1,0 +1,120 @@
+{
+ "kopf": "KI-generiert (Claude Sonnet, 2026-11-24). PI-Vorschläge, Kandidaten für docs/05, ungeprüft.",
+ "konzepte": [
+  {
+   "konzept": "K1",
+   "risiken": [
+    {
+     "versagen": "Einzelereignis-Common-Cause: AFE und Sekundärschutz in der CMU teilen sich Gleite, Referenz oder Takt. Beide Kanäle erkennen die Überladung nicht mehr oder liefern identisch falsche Werte.",
+     "ursache": "Gemeinsamkeitsfaktor (z. B. Spannungsversorgung, Kristalloszillator) fällt aus; die geforderte Unabhängigkeit der beiden Messpfade (FSR-01, FSR-06) ist dadurch nicht gegeben.",
+     "folge": "SG-01 bzw. SG-03 (ASIL D / ASIL C, FTTI 1 s) wird nicht erfüllt: Trennung erfolgt nicht, Batterie entlädt sich weiter. Gleichzeitig kann ein Falschalarm beider Kanäle SG-05 verletzen.",
+     "schwere": "hoch"
+    },
+    {
+     "versagen": "Schütze BT-711 bleibt nach Öffnungsbefehl geschlossen (Kontaktverschweißen, Federbruch). Sowohl der Softwarepfad über das BMS als auch der unabhängige Hardwarepfad des Sekundärschutzes (FSR-06) stoßen auf dasselbe mechanische Bauteil.",
+     "ursache": "Thermische oder mechanische Degradation des Schützes; der Sekundärschutz kann ohne Software öffnen, aber er kann die Kontakte nicht physisch trennen.",
+     "folge": "Sicherer Zustand (Schütze offen, Laden beendet) nach SG-01/SG-03 ist nicht erreichbar. Bei parallel anliegender Last entsteht ein Dauerstrom; FTTI 1 s wird überschritten.",
+     "schwere": "hoch"
+    },
+    {
+     "versagen": "CAN-Bus-Ausfall oder BMS-Rechner-Crash während der gestuften Reaktion: Derating-Befehl (FSR-07) kommt nicht mehr an, die 2 s Vorwarnung an den Fahrer entfällt. Das System springt direkt auf Trennung.",
+     "ursache": "Kommunikationsstrecke CAN oder der Rechner (BT-310) ist während der Stufung drosseln → warnen → trennen ausgefallen; die Abhängigkeit von Software für die ersten beiden Stufen wird zum Engpass.",
+     "folge": "Unerwartete Trennung während der Fahrt ohne Vorwarnung verletzt SG-05 (ASIL B). Alternativ, wenn die Stufung blockiert bleibt, wird die FTTI 1 s von SG-01/SG-03 verletzt.",
+     "schwere": "mittel"
+    }
+   ]
+  },
+  {
+   "konzept": "K2",
+   "risiken": [
+    {
+     "versagen": "Falschauslösung des Schützes während der Fahrt durch ein einzelnes Messrauschen oder einen Defekt an einer AFE (1oo1), ohne jegliche Vorwarnung.",
+     "ursache": "K2 setzt auf einkanalige Messung und reinen Softwarepfad. SG-05 verlangt laut F3 erst Leistung verringern, 2 s warnen, dann trennen. K2 hat keine Warnung und keinen Derating-Schritt, sondern trennt sofort das gesamte Pack.",
+     "folge": "Unvorhersehbarer Kraftverlust auf der Straße; direkte Verletzung von SG-05 (ASIL B). Der Fahrer kann nicht ausweichen.",
+     "schwere": "hoch"
+    },
+    {
+     "versachen": "Totalausfall der Schutzwirkung bei Softwarefehler: kein hardwarebasierter Abschaltpfad existiert.",
+     "ursache": "K2 definiert als einzigen Reaktionsweg 'nur Software BMS'. FSR-06 (F4) verlangt einen unabhängigen Sekundärschutz, der den Schütze ohne Software öffnet. K2 ignoriert dies.",
+     "folge": "Bei einem BMS-Software-Fehlzustand wird weder bei Überladung (SG-01, FTTI 1 s, ASIL D) noch bei Übertemperatur (SG-03, FTTI 1 s, ASIL C) getrennt. Brandgefahr nicht abgedeckt.",
+     "schwere": "hoch"
+    },
+    {
+     "versagen": "Überreaktion: ein einziger Grenzwert überschreitet → sofort volles Pack-Trennen statt gestufter Leistungsbegrenzung.",
+     "ursache": "K2 sieht nur 'eine Schwelle → trennen' vor; es gibt keinen Zustandsübergang 'Leistung begrenzen → dann trennen' wie in F2 (SG-03) und F3 (SG-05) gefordert. FSR-07 (F4) verlangt Derating per CAN mit Warnzeit.",
+     "folge": "Selbst bei marginaler, kurzzeitiger Zellspannungsüberschreitung wird das gesamte Pack abgeschaltet, während SG-03 nur 'Leistung begrenzen, dann trennen' vorsieht. Erhöhte Wahrscheinlichkeit unerwarteter Trennung (SG-05) und unnötige Stillstandsereignisse.",
+     "schwere": "mittel"
+    }
+   ]
+  },
+  {
+   "konzept": "K3",
+   "risiken": [
+    {
+     "versagen": "2oo3-Mehrheit mit nur zwei unabhängigen Messpfaden",
+     "ursache": "K3 fordert 2oo3-Stimmberechtigung, aber F4 (FSR-01) definiert nur zwei unabhängige Wege: AFE und Sekundärschutz je CMU (F4). Der dritte Voter fehlt. Bei Ausfall eines Pfads fällt das System auf 1oo2 zurück.",
+     "folge": "Entweder triggert ein einzelner fehlerhafter Kanal ein unerwartetes Trennen (SG-05 verletzt, ASIL B), oder das System trennt bei echter Überladung/Übertemperatur nicht (SG-01/SG-03 verletzt, FTTI 1 s überschritten). Sicherheit und Verfügbarkeit brechen gleichzeitig weg.",
+     "schwere": "hoch"
+    },
+    {
+     "versagen": "Notlauf ≥ 10 s mit gedrosselter Leistung überschreitet FTTI",
+     "ursache": "K3 legt eine Vorwarnung von ≥ 10 s und einen Notlauf mit gedrosselter Leistung fest, bevor getrennt wird. F4 (FSR-07) definiert das Derating per CAN mit Warnzeit. F1 (SG-01) und F2 (SG-03) verlangen jedoch den sicheren Zustand innerhalb FTTI 1 s. Die 10 s sind das Zehnfache des zulässigen Fensters.",
+     "folge": "Bei echter Überladung oder Zelltemperatur über T_krit bleibt das System 10 s in einem degradierten Zustand. Der sichere Zustand (Schütze offen bzw. Leistung 0) wird nicht innerhalb FTTI 1 s erreicht. ASIL D / ASIL C Sicherheitsfall nicht erfüllt.",
+     "schwere": "hoch"
+    },
+    {
+     "versagen": "CAN-Ausfall macht die Stufung drosseln → warnen → trennen unmöglich",
+     "ursache": "K3 stuft die Reaktion ab: zuerst Leistung 0 per CAN, dann Schütze. F4 (FSR-07) verankert das Derating per CAN. F4 (FSR-06) liefert den unabhängigen Hardwarepfad: Sekundärschutz öffnet Schütze ohne Software. F3 (SG-05) verlangt: erst Leistung verringern und warnen, dann trennen (außer SG-01/04).",
+     "folge": "Fällt CAN bei einem SG-01/SG-03-Ereignis aus, kann die Stufung nicht ausgeführt werden. Der FSR-06-Hardwarepfad schaltet den Schütze sofort und ungestuft offen. Diese abrupte Trennung ohne Vorwarnung verletzt genau das SG-05-Ziel (unerwartetes Trennen verhindern, ASIL B). Das versprechen des gedrosselten Notlaufs entfällt vollständig.",
+     "schwere": "mittel"
+    }
+   ]
+  },
+  {
+   "konzept": "K4",
+   "risiken": [
+    {
+     "versagen": "Falsch-Auslösen der 1oo2-Logik durch einen einzelnen AFE-Kanal",
+     "ursache": "Die Plausibilisierung verlangt nur, dass einer von zwei Wegen (AFE oder Sekundärschutz) anschlägt. Ein Rausch- oder Störsignal in einer CMU genügt, um das Schütze-Befehlssignal zu erzeugen, obwohl kein echter Überlade- oder Temperaturfehler vorliegt (vgl. FS-01, FS-06).",
+     "folge": "Das Schütze öffnet ohne die 2 s Vorwarnung (FSR-07). Der Fahrer verliert während der Fahrt unvorhersehbar die Antriebsleistung. SG-05 wird verletzt; der sichere Zustand nach SG-05 wird nicht erreicht, weil die Warnstufe übersprungen wird.",
+     "schwere": "hoch"
+    },
+    {
+     "versagen": "Zeitkonflikt: 2 s Warnphase (FSR-07) überschreitet die FTTI 1 s von SG-01/SG-03",
+     "ursache": "Die Software-Stufe führt erst die 2 s Warnung und das CAN-Derating (FSR-07) aus, bevor sie trennt. Die FTTI für SG-01 und SG-03 beträgt 1 s. Wenn die BMS-Software (BT-310) die Zustandsbewertung verzögert oder die Priorität zwischen SG-05-Warnpfad und SG-01/03-Trennpfad falsch auflöst, aktiviert der unabhängige Hardwarepfad (FSR-06, BT-725/BT-715) nicht rechtzeitig.",
+     "folge": "Die Zellspannung bzw. die Zelltemperatur überschreitet die kritische Grenze um die Dauer der Warnphase. Die Zelle bleibt länger im gefährlichen Zustand als die FTTI 1 s zulässt. SG-01 (ASIL D) und SG-03 (ASIL C) werden nicht rechtzeitig erfüllt.",
+     "schwere": "hoch"
+    },
+    {
+     "versagen": "Ungranularer Paket-Schutz: ein lokaler Fehler bricht das gesamte Pack",
+     "ursache": "Das Konzept trennt sofort das gesamte Pack (Schütze BT-711, ganzes System). Ein einzelnes Modul erreicht T_krit (SG-03), der Sekundärschutz löst aus, und das gemeinsame Schütze öffnet alle Module gleichzeitig, auch die unbeeinträchtigten.",
+     "folge": "Der verliert in einer Fahrbetätigung die gesamte Antriebsleistung, obwohl nur ein Modul betroffen ist. SG-05 (unerwartetes Trennen) wird verletzt. Gleichzeitig gehen redundante Lade- und Entladepfade verloren, die den sicheren Zustand nach SG-05 (Leistung verringern, dann trennen) erst ermöglicht hätten.",
+     "schwere": "mittel"
+    }
+   ]
+  },
+  {
+   "konzept": "K5",
+   "risiken": [
+    {
+     "versagen": "BMS-Software aussetzt oder hängt; Reaktionsweg bleibt ohne Befehl",
+     "ursache": "K5 legt den Reaktionsweg ausschließlich auf BMS-Software (kein eigenständiger Hardwarepfad). Fällt der Prozessor oder die CAN-Kommunikation aus, wird weder Derating noch Schütze-Offen angesteuert. Der Sekundärschutz BT-325/BT-715 wird nur per CAN aktiviert und schlägt nicht eigenständig ein.",
+     "folge": "FTTI 1 s (SG-01, SG-03) wird überschritten. Überladung oder Übertemperatur bleibt ungestoppt. Zellendamage bzw. thermische Entartung drohen.",
+     "schwere": "hoch"
+    },
+    {
+     "versagen": "Stufenkette 'drosseln → warnen → trennen' benötigt ≥ 2 s Vorwarnung; FTTI-Pfad unterschreitet nicht 1 s",
+     "ursache": "K5 verlangt vor dem Trennen eine Vorwarnung von ≥ 2 s (FSR-07, F3). SG-01 und SG-03 fordern jedoch Trennen innerhalb 1 s (F1, F2). Die abgestufte CAN-Sequenz (Leistung 0, Warnung, dann Schütze) überschreitet das zeitliche Budget.",
+     "folge": "Das System trennt zu spät oder nicht. Bei SG-01 (ASIL D) oder SG-03 (ASIL C) bleibt der gefährliche Zustand aktiv, bis die Stufenkette durchgelaufen ist.",
+     "schwere": "hoch"
+    },
+    {
+     "versagen": "Fehlalarm durch 2oo3-Mehrheit; Schütze öffnet während der Fahrt",
+     "ursache": "Zwei von drei Messwegen (AFE, Sekundärschutz-CMU, BMS) liefern durch eine gemeinsame Störquelle (EMV, thermische Kopplung) einen falschen Grenzwertüberschreitungswert. Die 2oo3-Plausibilisierung triggert die Trennstufe, obwohl kein echter Fehler vorliegt.",
+     "folge": "Unerwartete Schützenöffnung im Fahrbetrieb. SG-05 (ASIL B) wird verletzt. Traktionslust geht verloren; bei höherer Fahrgeschwindigkeit entsteht ein Gefährdungsszenario.",
+     "schwere": "mittel"
+    }
+   ]
+  }
+ ]
+}

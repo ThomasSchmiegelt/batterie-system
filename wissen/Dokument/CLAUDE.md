@@ -56,6 +56,7 @@ Regeln zur Verteilung:
 - Ziel: Am Ende steht eine Unternehmenspräsentation (REQ-D14, `praesentation/STORYBOARD.md`). Wer einen Vorgang abschließt, der dort eine Folie speist, legt im selben Schritt den Folienbaustein `praesentation/bausteine/<Vorgang>.md` ab (Kernaussage 1 Satz, Bild mit Zielband, Zahlen mit Quellpfad). Gilt auch für Aufträge an Sonnet.
 
 ## Gewerblicher Maßstab (Testprojekt)
+- **Erst konservativ** (Autor 2026-11-24): bewährte Lösung mit Reserve auslegen. Optimierungen nicht umsetzen, sondern als OPT-NNN in `pm/optimierungen.md` mit Bewertung Kosten / Sicherheit / Effizienz eintragen. Gilt auch für Aufträge an Sonnet.
 - **Anforderungen zuerst:** Jede Arbeit gehört zu einer Anforderung (`docs/01_lastenheft.md`, REQ-…) und erscheint in der Nachverfolgung (`docs/03_anforderungsverfolgung.md`, erzeugt von `pm/plan/wissensnetz.py`).
 - **Entscheidungen** mit Begründung und Alternativen in den Akten `pm/entscheidungen/ENT-*.md`. `docs/04_entscheidungen.md` erzeugt `pm.py register` daraus. **Risiken** in `docs/05_risiken_fmea.md`. **Änderungen** in `docs/09_aenderungen.md`.
 - **Dokumentkopf** in jedem Dokument: Nummer, Version, Status (Entwurf / geprüft (KI) / freigegeben (Mensch)), Ersteller (Modell), Prüfer.

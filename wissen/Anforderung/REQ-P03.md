@@ -13,15 +13,15 @@ verifiziert_durch: ["sim/chemie/varianten_lfp_nmc/ergebnis.json::systemspannung_
 
 Systemspannung (Nenn, min, max)
 
-- Wert (Lastenheft): 800 V nominal (ENT-006, Autor 2026-11-16); min/max folgen aus Zellfenster
+- Wert (Lastenheft): U_nenn 720–880 V, U_min und U_max ausweisen (Autor, Freigaberunde 2026-11-23); 800 V nominal (ENT-006)
 - Priorität: Muss
-- Vom Autor bestätigt: nein
+- Vom Autor bestätigt: ja
 
 ## Verifikation (V-Modell-Matrix)
 
 - Methode: A (A Analyse, S Simulation, I Inspektion, T Test, R Review)
 - Ebene: System
-- Kriterium: U_nenn zwischen [720, 880] V [Annahme Opus]<br>U_min vorhanden [Annahme Opus]<br>U_max vorhanden [Annahme Opus]
+- Kriterium: U_nenn zwischen [720, 880] V [Autor (Freigaberunde 2026-11-23)]<br>U_min vorhanden [Autor (Freigaberunde 2026-11-23)]<br>U_max vorhanden [Autor (Freigaberunde 2026-11-23)]
 - Ist-Wert: [U_nenn] U_nenn = 800 [sim/chemie/varianten_lfp_nmc/ergebnis.json :: systemspannung_V]; [U_min] kein Nachweis verknüpft; [U_max] kein Nachweis verknüpft
 - Bewertung: **offen**
 - Matrix: [[Dokument/06_verifikationsplan]] · Lastenheft: [[Dokument/01_lastenheft]] · Verfolgung: [[Dokument/03_anforderungsverfolgung]]

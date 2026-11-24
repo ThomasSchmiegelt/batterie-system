@@ -1,0 +1,125 @@
+{
+ "kopf": "KI-generiert (Claude Sonnet, 2026-11-24). VORSCHLAG Sonnet, nur offensichtliche technische Ausschlüsse; Opus prüft.",
+ "ausschluesse": [
+  {
+   "a": "T1.3",
+   "b": "T2.1",
+   "grund": "aktiv transformergekoppelt: Wärme entsteht nicht im Balance-Widerstand",
+   "von": "Sonnet (Vorschlag, Opus prüft)"
+  },
+  {
+   "a": "T1.3",
+   "b": "T4.1",
+   "grund": "aktiv transformergekoppelt braucht keinen Widerstand mit MOSFET-Schalter",
+   "von": "Sonnet (Vorschlag, Opus prüft)"
+  },
+  {
+   "a": "T1.3",
+   "b": "T5.3",
+   "grund": "Flüssigkeitskreis für Widerstandswärme, bei aktivem Ausgleich ohne ohmschen Hauptverlust nicht nötig",
+   "von": "Sonnet (Vorschlag, Opus prüft)"
+  },
+  {
+   "a": "T1.1",
+   "b": "T2.2",
+   "grund": "passiv hat kein induktives Koppelelement",
+   "von": "Sonnet (Vorschlag, Opus prüft)"
+  },
+  {
+   "a": "T1.1",
+   "b": "T4.2",
+   "grund": "passiv schaltet keinen HF-Strom in Induktivkopplung",
+   "von": "Sonnet (Vorschlag, Opus prüft)"
+  },
+  {
+   "a": "T1.1",
+   "b": "T5.5",
+   "grund": "Passiver Ausgleich verbrennt Energie im Widerstand, Kopplung ohne ohmsche Verluste ist ausgeschlossen",
+   "von": "Sonnet (Vorschlag, Opus prüft)"
+  },
+  {
+   "a": "T1.2",
+   "b": "T2.2",
+   "grund": "gepulster Widerstandsausgleich hat kein Koppelelement",
+   "von": "Sonnet (Vorschlag, Opus prüft)"
+  },
+  {
+   "a": "T1.2",
+   "b": "T4.2",
+   "grund": "gepulster Widerstandsausgleich schaltet keine Induktivkopplung",
+   "von": "Sonnet (Vorschlag, Opus prüft)"
+  },
+  {
+   "a": "T1.2",
+   "b": "T5.5",
+   "grund": "gepulster Widerstandsausgleich hat ohmsche Verluste",
+   "von": "Sonnet (Vorschlag, Opus prüft)"
+  },
+  {
+   "a": "T1.2",
+   "b": "T6.1",
+   "grund": "gepulster Hochstrom und konstant 130 mA widersprechen sich",
+   "von": "Sonnet (Vorschlag, Opus prüft)"
+  },
+  {
+   "a": "T2.1",
+   "b": "T4.2",
+   "grund": "Widerstände als Wärmeort und HF-Schalter für Induktivkopplung passen nicht zusammen",
+   "von": "Sonnet (Vorschlag, Opus prüft)"
+  },
+  {
+   "a": "T2.1",
+   "b": "T5.5",
+   "grund": "Widerstände als Wärmeort, aber Kopplung ohne ohmsche Verluste: Widerspruch",
+   "von": "Sonnet (Vorschlag, Opus prüft)"
+  },
+  {
+   "a": "T2.2",
+   "b": "T4.1",
+   "grund": "induktives Koppelelement braucht keinen Widerstandsschalter",
+   "von": "Sonnet (Vorschlag, Opus prüft)"
+  },
+  {
+   "a": "T2.2",
+   "b": "T5.2",
+   "grund": "Pad-Wärmepfad gehört zur Widerstandswärme, dort wenig Wärme (Induktivkopplung)",
+   "von": "Sonnet (Vorschlag, Opus prüft)"
+  },
+  {
+   "a": "T3.1",
+   "b": "T5.4",
+   "grund": "kontinuierlich und gepulster Betrieb widersprechen sich",
+   "von": "Sonnet (Vorschlag, Opus prüft)"
+  },
+  {
+   "a": "T3.1",
+   "b": "T6.3",
+   "grund": "kontinuierlich und periodisches Aufwachen widersprechen sich",
+   "von": "Sonnet (Vorschlag, Opus prüft)"
+  },
+  {
+   "a": "T2.3",
+   "b": "T5.1",
+   "grund": "externer Flüssigkeitskreislauf und freie Konvektion schließen sich aus",
+   "von": "Sonnet (Vorschlag, Opus prüft)"
+  },
+  {
+   "a": "T2.3",
+   "b": "T5.2",
+   "grund": "externer Flüssigkeitskreislauf und Pad zur Kühlplatte sind doppelt",
+   "von": "Sonnet (Vorschlag, Opus prüft)"
+  },
+  {
+   "a": "T2.5",
+   "b": "T5.1",
+   "grund": "Kühlplatte mit Ultraschall und freie Konvektion schließen sich aus",
+   "von": "Sonnet (Vorschlag, Opus prüft)"
+  },
+  {
+   "a": "T2.5",
+   "b": "T5.3",
+   "grund": "Kühlplatte mit Ultraschall und geschlossener Flüssigkeitskreis schließen sich aus",
+   "von": "Sonnet (Vorschlag, Opus prüft)"
+  }
+ ]
+}

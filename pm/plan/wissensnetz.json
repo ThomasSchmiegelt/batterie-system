@@ -500,6 +500,10 @@
     {
      "id": "B-BAT-045",
      "titel": "B-BAT-045 Erste Prüfung mit den neuen Workflow-Werkzeugen (2026-11-23, Opus)"
+    },
+    {
+     "id": "B-BAT-049",
+     "titel": "B-BAT-049 Werkzeug-Testfälle QN1: Löser verifiziert, LFP-Zellmodell liefert nur die halbe Kapazität (2026-11-23, gefunden von Sonnet/Tor QN1, Deutung Opus)"
     }
    ],
    "entscheidungen": [],
@@ -807,7 +811,7 @@
     },
     {
      "id": "REQ-P09",
-     "text": "max. Zelltemperatur und Spreizung"
+     "text": "max. Zelltemperatur und Spreizung zwischen den Zellen"
     },
     {
      "id": "REQ-P10",
@@ -1505,7 +1509,7 @@
     },
     {
      "id": "REQ-P09",
-     "text": "max. Zelltemperatur und Spreizung"
+     "text": "max. Zelltemperatur und Spreizung zwischen den Zellen"
     },
     {
      "id": "REQ-P10",
@@ -3995,6 +3999,30 @@
      ],
      "status": "vorgeschlagen",
      "datei": "pm/entscheidungen/ENT-148.md"
+    },
+    {
+     "id": "ENT-160",
+     "titel": "Frage",
+     "bt": [
+      "BT-200"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-160.md"
+    },
+    {
+     "id": "ENT-161",
+     "titel": "Frage",
+     "bt": [
+      "BT-200"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-161.md"
     }
    ],
    "software": [],
@@ -4145,6 +4173,30 @@
      ],
      "status": "vorgeschlagen",
      "datei": "pm/entscheidungen/ENT-148.md"
+    },
+    {
+     "id": "ENT-160",
+     "titel": "Frage",
+     "bt": [
+      "BT-200"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-160.md"
+    },
+    {
+     "id": "ENT-161",
+     "titel": "Frage",
+     "bt": [
+      "BT-200"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-161.md"
     }
    ],
    "software": [
@@ -4324,6 +4376,30 @@
      ],
      "status": "vorgeschlagen",
      "datei": "pm/entscheidungen/ENT-148.md"
+    },
+    {
+     "id": "ENT-160",
+     "titel": "Frage",
+     "bt": [
+      "BT-200"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-160.md"
+    },
+    {
+     "id": "ENT-161",
+     "titel": "Frage",
+     "bt": [
+      "BT-200"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-161.md"
     }
    ],
    "software": [
@@ -4375,7 +4451,7 @@
    "req": [
     {
      "id": "REQ-P09",
-     "text": "max. Zelltemperatur und Spreizung"
+     "text": "max. Zelltemperatur und Spreizung zwischen den Zellen"
     },
     {
      "id": "REQ-P12",
@@ -4626,6 +4702,7 @@
     "L1",
     "E3",
     "E4",
+    "S1",
     "SL2"
    ],
    "ressourcen": [
@@ -4893,6 +4970,8 @@
     "C4"
    ],
    "nachfolger": [
+    "KR1",
+    "E3b",
     "SL2",
     "F1"
    ],
@@ -4905,17 +4984,37 @@
    "ef": 16.5,
    "puffer": 10.0,
    "kritisch": false,
-   "status": "offen",
+   "status": "fertig",
    "req": [
     {
      "id": "REQ-P15",
      "text": "Messung und BMS: Zellspannung, Temperatur, Isolationswächter"
+    },
+    {
+     "id": "REQ-P17",
+     "text": "EMV der Elektronik (BMS, CMU, Schützansteuerung)"
+    },
+    {
+     "id": "REQ-P19",
+     "text": "Isolationskoordination (Luft- und Kriechstrecken) auf Leiterplatten und in der Schaltbox"
+    },
+    {
+     "id": "REQ-P20",
+     "text": "Umweltfestigkeit und Bauteilqualifikation der Elektronik"
     }
    ],
    "bt": [
     {
      "id": "BT-300",
      "name": "Regelung (BMS)"
+    },
+    {
+     "id": "BT-320",
+     "name": "Zellüberwachung"
+    },
+    {
+     "id": "BT-321",
+     "name": "CMU-Leiterplatte"
     }
    ],
    "wissen": [
@@ -4944,11 +5043,13 @@
      "datei": "forschung/ergebnis/P07.md"
     }
    ],
-   "doc": [],
+   "doc": [
+    "sim/elektrik/e3_platine/ERWARTUNG.md"
+   ],
    "aus": [
     {
-     "glob": "sim/elektrik/bms*",
-     "vorhanden": false
+     "glob": "sim/elektrik/e3_platine/ERGEBNIS.md",
+     "vorhanden": true
     }
    ],
    "befunde": [
@@ -5000,6 +5101,184 @@
      "variante": [],
      "status": "vorgeschlagen",
      "datei": "pm/entscheidungen/ENT-110.md"
+    },
+    {
+     "id": "ENT-111",
+     "titel": "Frage",
+     "bt": [
+      "BT-320"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-111.md"
+    },
+    {
+     "id": "ENT-112",
+     "titel": "Frage",
+     "bt": [
+      "BT-320"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-112.md"
+    },
+    {
+     "id": "ENT-113",
+     "titel": "Frage",
+     "bt": [
+      "BT-320"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-113.md"
+    },
+    {
+     "id": "ENT-114",
+     "titel": "Frage",
+     "bt": [
+      "BT-320"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-114.md"
+    },
+    {
+     "id": "ENT-115",
+     "titel": "Frage",
+     "bt": [
+      "BT-320"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-115.md"
+    },
+    {
+     "id": "ENT-146",
+     "titel": "Frage",
+     "bt": [
+      "BT-320"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-146.md"
+    },
+    {
+     "id": "ENT-163",
+     "titel": "Frage",
+     "bt": [
+      "BT-321"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-163.md"
+    },
+    {
+     "id": "ENT-164",
+     "titel": "Frage",
+     "bt": [
+      "BT-321"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-164.md"
+    },
+    {
+     "id": "ENT-165",
+     "titel": "Frage",
+     "bt": [
+      "BT-321"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-165.md"
+    },
+    {
+     "id": "ENT-166",
+     "titel": "Frage",
+     "bt": [
+      "BT-321"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-166.md"
+    },
+    {
+     "id": "ENT-167",
+     "titel": "Frage",
+     "bt": [
+      "BT-321"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-167.md"
+    },
+    {
+     "id": "ENT-168",
+     "titel": "Frage",
+     "bt": [
+      "BT-321"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-168.md"
+    },
+    {
+     "id": "ENT-183",
+     "titel": "Frage",
+     "bt": [
+      "BT-321"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-183.md"
+    },
+    {
+     "id": "ENT-184",
+     "titel": "Frage",
+     "bt": [
+      "BT-321"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-184.md"
+    },
+    {
+     "id": "ENT-185",
+     "titel": "Frage",
+     "bt": [
+      "BT-321"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-185.md"
+    },
+    {
+     "id": "ENT-186",
+     "titel": "Frage",
+     "bt": [
+      "BT-321"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-186.md"
+    },
+    {
+     "id": "ENT-187",
+     "titel": "Frage",
+     "bt": [
+      "BT-321"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-187.md"
     }
    ],
    "software": [
@@ -5087,7 +5366,7 @@
    "ef": 16.5,
    "puffer": 11.0,
    "kritisch": false,
-   "status": "offen",
+   "status": "fertig",
    "req": [
     {
      "id": "REQ-P03",
@@ -5106,6 +5385,10 @@
     {
      "id": "BT-400",
      "name": "Verkabelung und Zellverbinder"
+    },
+    {
+     "id": "BT-712",
+     "name": "Vorladung"
     }
    ],
    "wissen": [
@@ -5125,8 +5408,8 @@
    "doc": [],
    "aus": [
     {
-     "glob": "sim/elektrik/schaltung*",
-     "vorhanden": false
+     "glob": "sim/elektrik/e3_platine/ergebnis_vorladung.json",
+     "vorhanden": true
     }
    ],
    "befunde": [
@@ -5170,12 +5453,52 @@
      "variante": [],
      "status": "vorgeschlagen",
      "datei": "pm/entscheidungen/ENT-110.md"
+    },
+    {
+     "id": "ENT-125",
+     "titel": "Frage",
+     "bt": [
+      "BT-712"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-125.md"
+    },
+    {
+     "id": "ENT-126",
+     "titel": "Frage",
+     "bt": [
+      "BT-712"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-126.md"
+    },
+    {
+     "id": "ENT-179",
+     "titel": "Frage",
+     "bt": [
+      "BT-712"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-179.md"
+    },
+    {
+     "id": "ENT-180",
+     "titel": "Frage",
+     "bt": [
+      "BT-712"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-180.md"
     }
    ],
    "software": [
     {
      "name": "ngspice",
-     "status": "nicht installiert / nicht geprüft"
+     "status": "im Projekt (SOFTWARE.md)"
     },
     {
      "name": "OpenModelica",
@@ -5191,6 +5514,440 @@
      "art": "K"
     }
    ]
+  },
+  {
+   "id": "S1",
+   "name": "Gefahrenanalyse HARA ISO 26262-3, Sicherheitsziele, FSR (BAT-DOC-24)",
+   "dauer": 1,
+   "vorgaenger": [
+    "E2"
+   ],
+   "nachfolger": [],
+   "ressourcen": [
+    "Opus",
+    "Mensch"
+   ],
+   "notiz": "Autor 2026-11-24",
+   "es": 14.5,
+   "ef": 15.5,
+   "puffer": 20.0,
+   "kritisch": false,
+   "status": "fertig",
+   "req": [
+    {
+     "id": "REQ-P18",
+     "text": "Funktionale Sicherheit nach ISO 26262"
+    },
+    {
+     "id": "REQ-P21",
+     "text": "Cybersicherheit BMS"
+    },
+    {
+     "id": "REQ-P11",
+     "text": "Sicherheit: keine Ausbreitung des thermischen Durchgehens bzw. Warnzeit nach Norm"
+    }
+   ],
+   "bt": [
+    {
+     "id": "BT-300",
+     "name": "Regelung (BMS)"
+    },
+    {
+     "id": "BT-700",
+     "name": "Zusatzkomponenten"
+    }
+   ],
+   "wissen": [
+    {
+     "id": "W35d",
+     "status": "fertig",
+     "pruefung": "13 Belege bestaetigt, 1 Fehler",
+     "datei": "forschung/ergebnis/W35d.md"
+    },
+    {
+     "id": "W47",
+     "status": "fertig",
+     "pruefung": "9 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/W47.md"
+    },
+    {
+     "id": "W48",
+     "status": "fertig",
+     "pruefung": "11 Belege bestaetigt, 0 Fehler",
+     "datei": "forschung/ergebnis/W48.md"
+    }
+   ],
+   "doc": [
+    "docs/24_gefahrenanalyse_hara.md"
+   ],
+   "aus": [
+    {
+     "glob": "docs/24_gefahrenanalyse_hara.md",
+     "vorhanden": true
+    }
+   ],
+   "befunde": [
+    {
+     "id": "B-BAT-052",
+     "titel": "B-BAT-052 Normtexte vom Autor ausgewertet: W47–W50, je 0 Zitatfehler (2026-11-24, PI, Prüfung Opus)"
+    }
+   ],
+   "entscheidungen": [
+    {
+     "id": "ENT-004",
+     "titel": "Frage",
+     "bt": [
+      "BT-000",
+      "BT-100",
+      "BT-200",
+      "BT-210",
+      "BT-300",
+      "BT-400",
+      "BT-500",
+      "BT-530",
+      "BT-600",
+      "BT-700",
+      "BT-710",
+      "BT-780"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-004.md"
+    },
+    {
+     "id": "ENT-110",
+     "titel": "Frage",
+     "bt": [
+      "BT-300"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-110.md"
+    }
+   ],
+   "software": [],
+   "teile": []
+  },
+  {
+   "id": "KR1",
+   "name": "Kreativmethode + Paarvergleich, Pilot Zellausgleich (pm/kreativ)",
+   "dauer": 1,
+   "vorgaenger": [
+    "E3"
+   ],
+   "nachfolger": [
+    "E3b"
+   ],
+   "ressourcen": [
+    "Opus",
+    "Sonnet",
+    "PI"
+   ],
+   "notiz": "Autor 2026-11-24",
+   "es": 16.5,
+   "ef": 17.5,
+   "puffer": 17.0,
+   "kritisch": false,
+   "status": "fertig",
+   "req": [
+    {
+     "id": "REQ-D15",
+     "text": "Lösungssuche nachvollziehbar: Alternativen einer Akte mit echter Abwägung stammen aus einer Kreativmethode (Morphologischer Kasten, TRIZ, Kopfstand) und sind per Paarvergleich bewertet"
+    }
+   ],
+   "bt": [
+    {
+     "id": "BT-321",
+     "name": "CMU-Leiterplatte"
+    }
+   ],
+   "wissen": [],
+   "doc": [
+    "pm/kreativ/METHODE.md",
+    "docs/25_loesungen_aus_kreativmethoden.md"
+   ],
+   "aus": [
+    {
+     "glob": "pm/kreativ/KR1/ERGEBNIS.md",
+     "vorhanden": true
+    }
+   ],
+   "befunde": [],
+   "entscheidungen": [
+    {
+     "id": "ENT-163",
+     "titel": "Frage",
+     "bt": [
+      "BT-321"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-163.md"
+    },
+    {
+     "id": "ENT-164",
+     "titel": "Frage",
+     "bt": [
+      "BT-321"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-164.md"
+    },
+    {
+     "id": "ENT-165",
+     "titel": "Frage",
+     "bt": [
+      "BT-321"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-165.md"
+    },
+    {
+     "id": "ENT-166",
+     "titel": "Frage",
+     "bt": [
+      "BT-321"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-166.md"
+    },
+    {
+     "id": "ENT-167",
+     "titel": "Frage",
+     "bt": [
+      "BT-321"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-167.md"
+    },
+    {
+     "id": "ENT-168",
+     "titel": "Frage",
+     "bt": [
+      "BT-321"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-168.md"
+    },
+    {
+     "id": "ENT-183",
+     "titel": "Frage",
+     "bt": [
+      "BT-321"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-183.md"
+    },
+    {
+     "id": "ENT-184",
+     "titel": "Frage",
+     "bt": [
+      "BT-321"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-184.md"
+    },
+    {
+     "id": "ENT-185",
+     "titel": "Frage",
+     "bt": [
+      "BT-321"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-185.md"
+    },
+    {
+     "id": "ENT-186",
+     "titel": "Frage",
+     "bt": [
+      "BT-321"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-186.md"
+    },
+    {
+     "id": "ENT-187",
+     "titel": "Frage",
+     "bt": [
+      "BT-321"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-187.md"
+    }
+   ],
+   "software": [],
+   "teile": []
+  },
+  {
+   "id": "E3b",
+   "name": "Wärme CMU-Platine mit Pad (Elmer)",
+   "dauer": 1,
+   "vorgaenger": [
+    "E3",
+    "KR1"
+   ],
+   "nachfolger": [],
+   "ressourcen": [
+    "Sonnet",
+    "Maschine"
+   ],
+   "notiz": "Autor 2026-11-24",
+   "es": 17.5,
+   "ef": 18.5,
+   "puffer": 17.0,
+   "kritisch": false,
+   "status": "fertig",
+   "req": [
+    {
+     "id": "REQ-P20",
+     "text": "Umweltfestigkeit und Bauteilqualifikation der Elektronik"
+    },
+    {
+     "id": "REQ-P15",
+     "text": "Messung und BMS: Zellspannung, Temperatur, Isolationswächter"
+    }
+   ],
+   "bt": [
+    {
+     "id": "BT-321",
+     "name": "CMU-Leiterplatte"
+    }
+   ],
+   "wissen": [],
+   "doc": [
+    "sim/elektrik/e3b_platine_waerme/ERWARTUNG.md"
+   ],
+   "aus": [
+    {
+     "glob": "sim/elektrik/e3b_platine_waerme/ERGEBNIS.md",
+     "vorhanden": true
+    }
+   ],
+   "befunde": [],
+   "entscheidungen": [
+    {
+     "id": "ENT-163",
+     "titel": "Frage",
+     "bt": [
+      "BT-321"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-163.md"
+    },
+    {
+     "id": "ENT-164",
+     "titel": "Frage",
+     "bt": [
+      "BT-321"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-164.md"
+    },
+    {
+     "id": "ENT-165",
+     "titel": "Frage",
+     "bt": [
+      "BT-321"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-165.md"
+    },
+    {
+     "id": "ENT-166",
+     "titel": "Frage",
+     "bt": [
+      "BT-321"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-166.md"
+    },
+    {
+     "id": "ENT-167",
+     "titel": "Frage",
+     "bt": [
+      "BT-321"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-167.md"
+    },
+    {
+     "id": "ENT-168",
+     "titel": "Frage",
+     "bt": [
+      "BT-321"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-168.md"
+    },
+    {
+     "id": "ENT-183",
+     "titel": "Frage",
+     "bt": [
+      "BT-321"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-183.md"
+    },
+    {
+     "id": "ENT-184",
+     "titel": "Frage",
+     "bt": [
+      "BT-321"
+     ],
+     "variante": [],
+     "status": "vorgeschlagen",
+     "datei": "pm/entscheidungen/ENT-184.md"
+    },
+    {
+     "id": "ENT-185",
+     "titel": "Frage",
+     "bt": [
+      "BT-321"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-185.md"
+    },
+    {
+     "id": "ENT-186",
+     "titel": "Frage",
+     "bt": [
+      "BT-321"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-186.md"
+    },
+    {
+     "id": "ENT-187",
+     "titel": "Frage",
+     "bt": [
+      "BT-321"
+     ],
+     "variante": [],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-187.md"
+    }
+   ],
+   "software": [],
+   "teile": []
   },
   {
    "id": "K1",
@@ -5221,7 +5978,7 @@
     },
     {
      "id": "REQ-P09",
-     "text": "max. Zelltemperatur und Spreizung"
+     "text": "max. Zelltemperatur und Spreizung zwischen den Zellen"
     }
    ],
    "bt": [
@@ -5320,7 +6077,7 @@
    "req": [
     {
      "id": "REQ-P09",
-     "text": "max. Zelltemperatur und Spreizung"
+     "text": "max. Zelltemperatur und Spreizung zwischen den Zellen"
     }
    ],
    "bt": [
@@ -5460,7 +6217,7 @@
    "req": [
     {
      "id": "REQ-P09",
-     "text": "max. Zelltemperatur und Spreizung"
+     "text": "max. Zelltemperatur und Spreizung zwischen den Zellen"
     }
    ],
    "bt": [
@@ -5586,7 +6343,7 @@
    "req": [
     {
      "id": "REQ-P09",
-     "text": "max. Zelltemperatur und Spreizung"
+     "text": "max. Zelltemperatur und Spreizung zwischen den Zellen"
     }
    ],
    "bt": [
@@ -5690,7 +6447,7 @@
    "req": [
     {
      "id": "REQ-P09",
-     "text": "max. Zelltemperatur und Spreizung"
+     "text": "max. Zelltemperatur und Spreizung zwischen den Zellen"
     },
     {
      "id": "REQ-D06",
@@ -5934,7 +6691,7 @@
    "req": [
     {
      "id": "REQ-P09",
-     "text": "max. Zelltemperatur und Spreizung"
+     "text": "max. Zelltemperatur und Spreizung zwischen den Zellen"
     }
    ],
    "bt": [
@@ -6127,6 +6884,30 @@
      ],
      "status": "vorgeschlagen",
      "datei": "pm/entscheidungen/ENT-148.md"
+    },
+    {
+     "id": "ENT-160",
+     "titel": "Frage",
+     "bt": [
+      "BT-200"
+     ],
+     "variante": [
+      "LFP"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-160.md"
+    },
+    {
+     "id": "ENT-161",
+     "titel": "Frage",
+     "bt": [
+      "BT-200"
+     ],
+     "variante": [
+      "NMC"
+     ],
+     "status": "?",
+     "datei": "pm/entscheidungen/ENT-161.md"
     }
    ],
    "software": [
@@ -7726,16 +8507,16 @@
    "id": "REQ-P03",
    "gruppe": "REQ-P",
    "text": "Systemspannung (Nenn, min, max)",
-   "wert": "800 V nominal (ENT-006, Autor 2026-11-16); min/max folgen aus Zellfenster",
+   "wert": "U_nenn 720–880 V, U_min und U_max ausweisen (Autor, Freigaberunde 2026-11-23); 800 V nominal (ENT-006)",
    "prioritaet": "Muss",
    "methode": "A",
    "ebene": "System",
    "bewertung": "offen",
    "stufe": "offen",
-   "kriterium": "U_nenn zwischen [720, 880] V [Annahme Opus]<br>U_min vorhanden [Annahme Opus]<br>U_max vorhanden [Annahme Opus]",
+   "kriterium": "U_nenn zwischen [720, 880] V [Autor (Freigaberunde 2026-11-23)]<br>U_min vorhanden [Autor (Freigaberunde 2026-11-23)]<br>U_max vorhanden [Autor (Freigaberunde 2026-11-23)]",
    "ist": "[U_nenn] U_nenn = 800 [sim/chemie/varianten_lfp_nmc/ergebnis.json :: systemspannung_V]; [U_min] kein Nachweis verknüpft; [U_max] kein Nachweis verknüpft",
    "luecken": [],
-   "bestaetigt_autor": false,
+   "bestaetigt_autor": true,
    "nachweis": [
     "sim/chemie/varianten_lfp_nmc/ergebnis.json"
    ],
@@ -7745,16 +8526,16 @@
    "id": "REQ-P04",
    "gruppe": "REQ-P",
    "text": "Dauer- und Spitzenleistung Entladen",
-   "wert": "offen (kW, s)",
+   "wert": "P_spitze nach Startwert (10 s), P_dauer ≥ 60 kW (Autor, Freigaberunde 2026-11-23)",
    "prioritaet": "Muss",
    "methode": "S",
    "ebene": "System",
    "bewertung": "offen",
    "stufe": "offen",
-   "kriterium": "P_spitze >= 150 kW [Startwert (Vorschlag)]<br>P_dauer >= 60 kW [Annahme Opus]",
+   "kriterium": "P_spitze >= 150 kW [Autor (Freigaberunde 2026-11-23)]<br>P_dauer >= 60 kW [Autor (Freigaberunde 2026-11-23)]",
    "ist": "[P_spitze] kein Nachweis verknüpft; [P_dauer] kein Nachweis verknüpft",
    "luecken": [],
-   "bestaetigt_autor": false,
+   "bestaetigt_autor": true,
    "nachweis": [],
    "skripte": []
   },
@@ -7801,16 +8582,16 @@
    "id": "REQ-P07",
    "gruppe": "REQ-P",
    "text": "Bauraum (L × B × H) und Masse",
-   "wert": "L = 1950 mm (ENT-013, Autor 2026-11-17); B = 1430 mm (ENT-030, Autor 2026-11-17); H 130 mm Annahme; Masse offen (30 % Gesamtmasse als Annahme)",
+   "wert": "L ≤ 2400 mm (Autor, Freigaberunde 2026-11-23); B = 1430 mm (ENT-030, Autor 2026-11-17); H ≤ 130 mm im Zellbereich, Dom Schaltbox ≤ 250 mm; Masse LFP ≤ 528 kg, NMC ≤ 370 kg (Startwerte als Ziel)",
    "prioritaet": "Muss",
    "methode": "I",
    "ebene": "System",
    "bewertung": "verfehlt (Kriterium Annahme, Autor offen)",
    "stufe": "verfehlt",
-   "kriterium": "B <= 1430 mm [Autor]<br>L <= 1950 mm [Autor]<br>H <= 130 mm [Annahme Opus]<br>Masse LFP <= 528 kg [Startwert (Vorschlag)]<br>Masse NMC <= 370 kg [Startwert (Vorschlag)]",
-   "ist": "[B] LFP B = 1430 [cad/baukasten/ausgabe/ergebnis_LFP.json :: breite_mm]; NMC B = 1430 [cad/baukasten/ausgabe/ergebnis_NMC.json :: breite_mm]; [L] LFP L = 2373 [cad/baukasten/ausgabe/ergebnis_LFP.json :: laenge_mm]; NMC L = 2273 [cad/baukasten/ausgabe/ergebnis_NMC.json :: laenge_mm]; [H] LFP H = 244.8 [cad/baukasten/ausgabe/ergebnis_LFP.json :: hoehe_max_mm]; NMC H = 227.8 [cad/baukasten/ausgabe/ergebnis_NMC.json :: hoehe_max_mm]; [Masse LFP] LFP Masse = 626.8 [pm/bauteile/stueckliste_LFP.json :: summen.masse_stueckliste_kg]; [Masse NMC] NMC Masse = 486.4 [pm/bauteile/stueckliste_NMC.json :: summen.masse_stueckliste_kg]",
+   "kriterium": "B <= 1430 mm [Autor (Freigaberunde 2026-11-23)]<br>L <= 2400 mm [Autor (Freigaberunde 2026-11-23)]<br>H <= 130 mm [Autor (Freigaberunde 2026-11-23)]<br>H_dom <= 250 mm [Autor (Freigaberunde 2026-11-23)]<br>Masse LFP <= 528 kg [Autor (Freigaberunde 2026-11-23)]<br>Masse NMC <= 370 kg [Autor (Freigaberunde 2026-11-23)]",
+   "ist": "[B] LFP B = 1430 [cad/baukasten/ausgabe/ergebnis_LFP.json :: breite_mm]; NMC B = 1430 [cad/baukasten/ausgabe/ergebnis_NMC.json :: breite_mm]; [L] LFP L = 2373 [cad/baukasten/ausgabe/ergebnis_LFP.json :: laenge_mm]; NMC L = 2273 [cad/baukasten/ausgabe/ergebnis_NMC.json :: laenge_mm]; [H] LFP H = 117 [cad/baukasten/ausgabe/ergebnis_LFP.json :: ctx.z_deckel_o]; NMC H = 111 [cad/baukasten/ausgabe/ergebnis_NMC.json :: ctx.z_deckel_o]; [H_dom] LFP H_dom = 244.8 [cad/baukasten/ausgabe/ergebnis_LFP.json :: hoehe_max_mm]; NMC H_dom = 227.8 [cad/baukasten/ausgabe/ergebnis_NMC.json :: hoehe_max_mm]; [Masse LFP] LFP Masse = 626.8 [pm/bauteile/stueckliste_LFP.json :: summen.masse_stueckliste_kg]; [Masse NMC] NMC Masse = 486.4 [pm/bauteile/stueckliste_NMC.json :: summen.masse_stueckliste_kg]",
    "luecken": [],
-   "bestaetigt_autor": false,
+   "bestaetigt_autor": true,
    "nachweis": [
     "cad/baukasten/ausgabe/ergebnis_LFP.json",
     "cad/baukasten/ausgabe/ergebnis_NMC.json",
@@ -7823,30 +8604,30 @@
    "id": "REQ-P08",
    "gruppe": "REQ-P",
    "text": "Umgebungstemperatur Betrieb und Laden",
-   "wert": "offen (°C)",
+   "wert": "Betrieb −20 … +45 °C, Laden 0 … +45 °C (Vorheizen unter 0 °C) (Autor, Freigaberunde 2026-11-23)",
    "prioritaet": "Muss",
    "methode": "S",
    "ebene": "System",
    "bewertung": "offen",
    "stufe": "offen",
-   "kriterium": "T_betrieb zwischen [-20, 45] °C [Annahme Opus]<br>T_laden zwischen [0, 45] °C [Annahme Opus]",
+   "kriterium": "T_betrieb zwischen [-20, 45] °C [Autor (Freigaberunde 2026-11-23)]<br>T_laden zwischen [0, 45] °C [Autor (Freigaberunde 2026-11-23)]",
    "ist": "[T_betrieb] kein Nachweis verknüpft; [T_laden] kein Nachweis verknüpft",
    "luecken": [],
-   "bestaetigt_autor": false,
+   "bestaetigt_autor": true,
    "nachweis": [],
    "skripte": []
   },
   {
    "id": "REQ-P09",
    "gruppe": "REQ-P",
-   "text": "max. Zelltemperatur und Spreizung",
-   "wert": "T_max ≤ 45 °C, Spreizung in der Zelle ≤ 5 K (Autor 2026-11-17)",
+   "text": "max. Zelltemperatur und Spreizung zwischen den Zellen",
+   "wert": "T_max ≤ 45 °C, Spreizung ΔT ≤ 5 K zwischen den Zellen (Autor, Freigaberunde 2026-11-23; Nachweis neu auswerten, Schleife 2)",
    "prioritaet": "Muss",
    "methode": "S",
    "ebene": "Subsystem",
-   "bewertung": "verfehlt",
+   "bewertung": "verfehlt (Kriterium Annahme, Autor offen)",
    "stufe": "verfehlt",
-   "kriterium": "T_max <= 45 °C [Autor]<br>Spreizung <= 5 K [Autor]",
+   "kriterium": "T_max <= 45 °C [Autor (Freigaberunde 2026-11-23)]<br>Spreizung <= 5 K [Autor (Freigaberunde 2026-11-23)]",
    "ist": "[T_max] LFP T_max = 35.57 [sim/kuehlung/k3_gesamt/elmer_LFP_P0_V4p/ergebnis.json :: T_max_Zellblock_C]; NMC T_max = 30.6 [sim/kuehlung/k3_gesamt/elmer_NMC_P4_V4p/ergebnis.json :: T_max_Zellblock_C]; [Spreizung] LFP Spreizung = 9.573 [sim/kuehlung/k3_gesamt/elmer_LFP_P0_V4p/ergebnis.json :: dT_Zellblock_K]; NMC Spreizung = 2.574 [sim/kuehlung/k3_gesamt/elmer_NMC_P4_V4p/ergebnis.json :: dT_Zellblock_K]",
    "luecken": [],
    "bestaetigt_autor": true,
@@ -7860,16 +8641,16 @@
    "id": "REQ-P10",
    "gruppe": "REQ-P",
    "text": "Lebensdauer (Zyklen, Jahre, Restkapazität)",
-   "wert": "offen",
+   "wert": "SOH ≥ 70 % nach 200.000 km (Autor, Freigaberunde 2026-11-23)",
    "prioritaet": "Soll",
    "methode": "S",
    "ebene": "System",
    "bewertung": "offen",
    "stufe": "offen",
-   "kriterium": "SOH >= 70 % [Annahme Opus]",
+   "kriterium": "SOH >= 70 % [Autor (Freigaberunde 2026-11-23)]",
    "ist": "kein Nachweis verknüpft",
    "luecken": [],
-   "bestaetigt_autor": false,
+   "bestaetigt_autor": true,
    "nachweis": [],
    "skripte": []
   },
@@ -7894,16 +8675,16 @@
    "id": "REQ-P12",
    "gruppe": "REQ-P",
    "text": "Kühlmittel und Anschlüsse",
-   "wert": "Vorschlag Wasser-Glykol",
+   "wert": "Kühlmittel Wasser-Glykol, Δp je Platte ≤ 0,5 bar, Verteilung ±10 % (Autor, Freigaberunde 2026-11-23)",
    "prioritaet": "Soll",
    "methode": "S",
    "ebene": "Subsystem",
    "bewertung": "rechnerisch erfüllt (nicht validiert) (Kriterium Annahme, Autor offen)",
    "stufe": "rechnerisch erfüllt (nicht validiert)",
-   "kriterium": "Kuehlmittel vorhanden [Annahme Opus]<br>dp_Platte <= 0.5 bar [Annahme Opus]<br>Verteilung_abw <= 10 % [Autor]",
+   "kriterium": "Kuehlmittel vorhanden [Autor (Freigaberunde 2026-11-23)]<br>dp_Platte <= 0.5 bar [Autor (Freigaberunde 2026-11-23)]<br>Verteilung_abw <= 10 % [Autor (Freigaberunde 2026-11-23)]",
    "ist": "[Kuehlmittel] LFP Kuehlmittel = vorhanden [pm/bauteile/stueckliste_LFP.json :: positionen[bt=BT-650].werkstoff]; [dp_Platte] dp_Platte = 0.1709 [sim/kuehlung/k5_parallel/ergebnis_verteiler.json :: gruppen.faelle.k2_d25_x3.dp_bar]; [Verteilung_abw] Verteilung_abw = 2.05 [sim/kuehlung/k5_parallel/ergebnis_verteiler.json :: gruppen.faelle.k2_d25_x3.max_abw_pct]",
    "luecken": [],
-   "bestaetigt_autor": false,
+   "bestaetigt_autor": true,
    "nachweis": [
     "pm/bauteile/stueckliste_LFP.json",
     "sim/kuehlung/k5_parallel/ergebnis_verteiler.json"
@@ -7914,16 +8695,16 @@
    "id": "REQ-P13",
    "gruppe": "REQ-P",
    "text": "Schutzart, Isolation, Berührschutz",
-   "wert": "nach Norm",
+   "wert": "IP67, R_iso ≥ 100 Ω/V (UN R100, DC-Bus, W35) (Autor, Freigaberunde 2026-11-23)",
    "prioritaet": "Muss",
    "methode": "T",
    "ebene": "System",
    "bewertung": "offen",
    "stufe": "offen",
-   "kriterium": "R_iso >= 100 Ω/V [Norm (W35 belegt: UN R100, DC-Bus 100 Ω/V; AC-Bus bzw. verbundene Busse 500 Ω/V)]<br>Schutzart == IP67 [Annahme Opus]",
+   "kriterium": "R_iso >= 100 Ω/V [Autor (Freigaberunde 2026-11-23)]<br>Schutzart == IP67 [Autor (Freigaberunde 2026-11-23)]",
    "ist": "[R_iso] kein Nachweis verknüpft; [Schutzart] kein Nachweis verknüpft",
    "luecken": [],
-   "bestaetigt_autor": false,
+   "bestaetigt_autor": true,
    "nachweis": [],
    "skripte": []
   },
@@ -7931,16 +8712,16 @@
    "id": "REQ-P14",
    "gruppe": "REQ-P",
    "text": "Mechanik: Stoß, Schwingung, Crash",
-   "wert": "nach Norm",
+   "wert": "Zellverschiebung ≤ 0,5 mm bei Pfahl 5 kJ und bei Quetschung nach R100 (100–105 kN) (Autor, Freigaberunde 2026-11-23)",
    "prioritaet": "Muss",
    "methode": "S",
    "ebene": "System",
    "bewertung": "verfehlt (Kriterium Annahme, Autor offen)",
    "stufe": "verfehlt",
-   "kriterium": "dy_a <= 0.5 mm [Annahme Opus]<br>dy_b <= 0.5 mm [Annahme Opus]",
+   "kriterium": "dy_a <= 0.5 mm [Autor (Freigaberunde 2026-11-23)]<br>dy_b <= 0.5 mm [Autor (Freigaberunde 2026-11-23)]",
    "ist": "[dy_a] LFP dy_a = 6.732 [sim/mechanik/x3_crash_g5/ergebnis.json :: LFP_a.zellblock_vorderseite_dy_max_mm]; NMC dy_a = 8.279 [sim/mechanik/x3_crash_g5/ergebnis.json :: NMC_a.zellblock_vorderseite_dy_max_mm]; [dy_b] LFP dy_b = 0.0188 [sim/mechanik/x3_crash_g5/ergebnis.json :: LFP_b.zellblock_vorderseite_dy_max_mm]; NMC dy_b = 2.591 [sim/mechanik/x3_crash_g5/ergebnis.json :: NMC_b.zellblock_vorderseite_dy_max_mm]",
    "luecken": [],
-   "bestaetigt_autor": false,
+   "bestaetigt_autor": true,
    "nachweis": [
     "sim/mechanik/x3_crash_g5/ergebnis.json"
    ],
@@ -7950,16 +8731,16 @@
    "id": "REQ-P15",
    "gruppe": "REQ-P",
    "text": "Messung und BMS: Zellspannung, Temperatur, Isolationswächter",
-   "wert": "Umfang offen",
+   "wert": "Messumfang: Zellspannung je Reihe, Temperaturfühler, Isolationswächter (Stücklistenposition) (Autor, Freigaberunde 2026-11-23)",
    "prioritaet": "Muss",
    "methode": "I",
    "ebene": "Subsystem",
    "bewertung": "nachgewiesen (Kriterium Annahme, Autor offen)",
    "stufe": "nachgewiesen",
-   "kriterium": "CMU vorhanden [Annahme Opus]<br>Temperaturfuehler vorhanden [Annahme Opus]<br>Isolationswaechter vorhanden [Annahme Opus]",
+   "kriterium": "CMU vorhanden [Autor (Freigaberunde 2026-11-23)]<br>Temperaturfuehler vorhanden [Autor (Freigaberunde 2026-11-23)]<br>Isolationswaechter vorhanden [Autor (Freigaberunde 2026-11-23)]",
    "ist": "[CMU] LFP CMU = vorhanden [pm/bauteile/stueckliste_LFP.json :: positionen[bt=BT-320].pos]; NMC CMU = vorhanden [pm/bauteile/stueckliste_NMC.json :: positionen[bt=BT-320].pos]; [Temperaturfuehler] LFP Temperaturfuehler = vorhanden [pm/bauteile/stueckliste_LFP.json :: positionen[bt=BT-330].pos]; NMC Temperaturfuehler = vorhanden [pm/bauteile/stueckliste_NMC.json :: positionen[bt=BT-330].pos]; [Isolationswaechter] LFP Isolationswaechter = vorhanden [pm/bauteile/stueckliste_LFP.json :: positionen[bt=BT-350].pos]; NMC Isolationswaechter = vorhanden [pm/bauteile/stueckliste_NMC.json :: positionen[bt=BT-350].pos]",
    "luecken": [],
-   "bestaetigt_autor": false,
+   "bestaetigt_autor": true,
    "nachweis": [
     "pm/bauteile/stueckliste_LFP.json",
     "pm/bauteile/stueckliste_NMC.json"
@@ -8272,17 +9053,131 @@
    "id": "REQ-G02",
    "gruppe": "REQ-G",
    "text": "Kennzeichnung, CO₂-Fußabdruck und Batteriepass nach VO (EU) 2023/1542",
-   "wert": "Pflichten der Batterieverordnung für Traktionsbatterien erfüllen (Artikel zu belegen, W37)",
-   "prioritaet": "",
+   "wert": "Batteriepass, Kennzeichnung und CO₂-Fußabdruck nach VO (EU) 2023/1542 (Autor, Freigaberunde 2026-11-23)",
+   "prioritaet": "Muss",
    "methode": "R",
    "ebene": "System",
    "bewertung": "offen",
    "stufe": "offen",
-   "kriterium": "Batteriepass_Datensatz vorhanden [Norm VO (EU) 2023/1542, belegt in W37b (forschung/ergebnis/W37b.md, Zitatprüfung 13/0): Batteriepass und QR-Code ab 18.02.2027; Wert des Kriteriums unverändert] (vorgeschlagen)",
+   "kriterium": "Batteriepass_Datensatz vorhanden [Autor (Freigaberunde 2026-11-23)] (festgelegt)",
+   "ist": "kein Nachweis verknüpft",
+   "luecken": [],
+   "bestaetigt_autor": true,
+   "nachweis": [],
+   "skripte": []
+  },
+  {
+   "id": "REQ-P17",
+   "gruppe": "REQ-P",
+   "text": "EMV der Elektronik (BMS, CMU, Schützansteuerung)",
+   "wert": "Störaussendung CISPR 25 Klasse 3 (Vorschlag); Störfestigkeit ISO 11452-2/-4; Transienten ISO 7637-2 am 12-V-Anschluss; ESD ISO 10605; Typgenehmigung UN R10 (Autor, Freigaberunde 2026-11-24)",
+   "prioritaet": "Muss",
+   "methode": "A",
+   "ebene": "Subsystem",
+   "bewertung": "offen",
+   "stufe": "offen",
+   "kriterium": "CISPR25_Klasse ≥ 3 [Autor (Freigaberunde 2026-11-24)]<br>ISO7637_2_Impulse bestanden 1, 2a, 3a, 3b [Opus (Vorschlag 2026-11-24, Freigabe Autor offen)]<br>ESD_Kontakt_kV ≥ 8 [Opus (Vorschlag 2026-11-24, Freigabe Autor offen)]",
+   "ist": "[CISPR25_Klasse] kein Nachweis verknüpft; [ISO7637_2_Impulse] kein Nachweis verknüpft; [ESD_Kontakt_kV] kein Nachweis verknüpft",
+   "luecken": [],
+   "bestaetigt_autor": false,
+   "nachweis": [
+    "sim/elektrik/e3_platine/ERGEBNIS.md"
+   ],
+   "skripte": []
+  },
+  {
+   "id": "REQ-P18",
+   "gruppe": "REQ-P",
+   "text": "Funktionale Sicherheit nach ISO 26262",
+   "wert": "ASIL je Sicherheitsziel nach HARA BAT-DOC-24 (Vorschlag: SG-01 ASIL D, SG-02/03/04/08 C, SG-05/06/07 B); SG-01 ASIL D und Umfang HARA+SG+FSR+FMEDA (Autor, Freigaberunde 2026-11-24); alle Einstufungen HE-01…12 und FTTI (Annahme) übernommen (Autor, Freigaberunde 2026-11-24 R2)",
+   "prioritaet": "Muss",
+   "methode": "R",
+   "ebene": "System",
+   "bewertung": "offen",
+   "stufe": "offen",
+   "kriterium": "HARA vorhanden [Opus (Vorschlag 2026-11-24, Freigabe Autor offen)]<br>FSR_umgesetzt vorhanden [Opus (Vorschlag 2026-11-24, Freigabe Autor offen)]",
+   "ist": "[HARA] kein Nachweis verknüpft; [FSR_umgesetzt] kein Nachweis verknüpft",
+   "luecken": [],
+   "bestaetigt_autor": false,
+   "nachweis": [
+    "docs/24_gefahrenanalyse_hara.md"
+   ],
+   "skripte": []
+  },
+  {
+   "id": "REQ-P19",
+   "gruppe": "REQ-P",
+   "text": "Isolationskoordination (Luft- und Kriechstrecken) auf Leiterplatten und in der Schaltbox",
+   "wert": "IEC 60664-1, Arbeitsspannung = U_max (REQ-P03), Verschmutzungsgrad 2, Überspannungskategorie II; verstärkte Isolierung HV ↔ NV; Werte je Bauteil ausweisen (Autor, Freigaberunde 2026-11-24); Auslegungshöhe 3000 m ü. NN (Luftstrecken mit Höhenkorrektur, Faktor 1,14–1,25 Annahme bis Normtext) (Autor 2026-11-24)",
+   "prioritaet": "Muss",
+   "methode": "A",
+   "ebene": "Bauteil",
+   "bewertung": "offen",
+   "stufe": "offen",
+   "kriterium": "Kriechstrecke_HV_NV_mm ≥ nach IEC 60664-1 (Vorschlag ≈ 10 mm verstärkt, Annahme) [Opus (Vorschlag 2026-11-24, Freigabe Autor offen)]<br>Auslegungshoehe_m = 3000 [Autor (2026-11-24)]<br>Kriechstrecke_ge_Luftstrecke wahr je Netzpaar [Opus (ERW-E3 N4)]",
+   "ist": "[Kriechstrecke_HV_NV_mm] kein Nachweis verknüpft; [Auslegungshoehe_m] kein Nachweis verknüpft; [Kriechstrecke_ge_Luftstrecke] kein Nachweis verknüpft",
+   "luecken": [],
+   "bestaetigt_autor": false,
+   "nachweis": [
+    "sim/elektrik/e3_platine/ERGEBNIS.md"
+   ],
+   "skripte": []
+  },
+  {
+   "id": "REQ-P20",
+   "gruppe": "REQ-P",
+   "text": "Umweltfestigkeit und Bauteilqualifikation der Elektronik",
+   "wert": "ISO 16750-1…5 (Klima, Schwingung, elektrisch); Bauteile AEC-Q100/Q101/Q200; Fertigung IPC-A-610 Klasse 3; Leiterbahnen IPC-2152 (Autor, Freigaberunde 2026-11-24)",
+   "prioritaet": "Muss",
+   "methode": "I",
+   "ebene": "Bauteil",
+   "bewertung": "offen",
+   "stufe": "offen",
+   "kriterium": "AEC_Q_Bauteile vorhanden [Opus (Vorschlag 2026-11-24, Freigabe Autor offen)]<br>IPC_Klasse = 3 [Opus (Vorschlag 2026-11-24, Freigabe Autor offen)]",
+   "ist": "[AEC_Q_Bauteile] kein Nachweis verknüpft; [IPC_Klasse] kein Nachweis verknüpft",
+   "luecken": [],
+   "bestaetigt_autor": false,
+   "nachweis": [
+    "sim/elektrik/e3_platine/ERGEBNIS.md"
+   ],
+   "skripte": []
+  },
+  {
+   "id": "REQ-P21",
+   "gruppe": "REQ-P",
+   "text": "Cybersicherheit BMS",
+   "wert": "ISO/SAE 21434, UN R155/R156 – Vorschlag: im Testprojekt nur benennen, nicht auslegen (Autor, Freigaberunde 2026-11-24)",
+   "prioritaet": "Kann",
+   "methode": "R",
+   "ebene": "System",
+   "bewertung": "offen",
+   "stufe": "offen",
+   "kriterium": "Umfang = benannt [Autor (Freigaberunde 2026-11-24)]",
    "ist": "kein Nachweis verknüpft",
    "luecken": [],
    "bestaetigt_autor": false,
-   "nachweis": [],
+   "nachweis": [
+    "docs/07_normen_und_vorschriften.md"
+   ],
+   "skripte": []
+  },
+  {
+   "id": "REQ-D15",
+   "gruppe": "REQ-D",
+   "text": "Lösungssuche nachvollziehbar: Alternativen einer Akte mit echter Abwägung stammen aus einer Kreativmethode (Morphologischer Kasten, TRIZ, Kopfstand) und sind per Paarvergleich bewertet",
+   "wert": "Gewichtung der Kriterien durch den Autor; Paarurteile mit Begründung und Konsistenzprüfung (Autor, Freigaberunde 2026-11-24)",
+   "prioritaet": "Soll",
+   "methode": "I",
+   "ebene": "System",
+   "bewertung": "offen",
+   "stufe": "offen",
+   "kriterium": "Konsistenz_zirkulaere_Triaden = 0 nach Bereinigung [Opus (Vorschlag 2026-11-24, Freigabe Autor offen)]",
+   "ist": "kein Nachweis verknüpft",
+   "luecken": [],
+   "bestaetigt_autor": false,
+   "nachweis": [
+    "pm/kreativ/METHODE.md"
+   ],
    "skripte": []
   }
  ],
@@ -8443,7 +9338,7 @@
   {
    "datei": "docs/17_workflow_schleife.md",
    "stem": "17_workflow_schleife",
-   "nr": "BAT-DOC-17",
+   "nr": "BAT-DOC-23",
    "titel": "Workflow für die nächste Konstruktionsschleife (V-Modell)",
    "version": "0.1",
    "status": "Entwurf",
@@ -8501,6 +9396,24 @@
    "titel": "Prozesskennzahlen (Zählung)",
    "version": "",
    "status": "",
+   "auftrag": false
+  },
+  {
+   "datei": "docs/24_gefahrenanalyse_hara.md",
+   "stem": "24_gefahrenanalyse_hara",
+   "nr": "BAT-DOC-24",
+   "titel": "Gefahrenanalyse und Risikobewertung (HARA) nach ISO 26262-3, Batteriesystem BT-000",
+   "version": "0.3",
+   "status": "Entwurf",
+   "auftrag": false
+  },
+  {
+   "datei": "docs/25_loesungen_aus_kreativmethoden.md",
+   "stem": "25_loesungen_aus_kreativmethoden",
+   "nr": "BAT-DOC-25",
+   "titel": "Lösungen aus Kreativ- und Lösungsfindung: wer hat was gefunden, was wurde verworfen",
+   "version": "0.1",
+   "status": "Entwurf",
    "auftrag": false
   },
   {
@@ -9004,6 +9917,41 @@
    ]
   },
   {
+   "datei": "praesentation/bausteine/E3.md",
+   "stem": "E3",
+   "titel": "Die CMU-Platine bis zu Widerstand und Schalter",
+   "ids": [
+    "BT-321",
+    "ENT-168"
+   ],
+   "quellen": [
+    "sim/elektrik/e3_platine/ergebnis_ausgleich.json",
+    "sim/elektrik/e3_platine/platine_NMC_explosion.png"
+   ]
+  },
+  {
+   "datei": "praesentation/bausteine/E3b.md",
+   "stem": "E3b",
+   "titel": "Das Wärmeleitpad hält die CMU-Platine kühl",
+   "ids": [],
+   "quellen": [
+    "sim/elektrik/e3b_platine_waerme/ERGEBNIS.md",
+    "sim/elektrik/e3b_platine_waerme/e3b_temperatur.png",
+    "sim/elektrik/e3b_platine_waerme/ergebnis.json"
+   ]
+  },
+  {
+   "datei": "praesentation/bausteine/E3d.md",
+   "stem": "E3d",
+   "titel": "Grobe FMEDA der CMU-Platine: Tiefentladeschutz knapp verfehlt",
+   "ids": [],
+   "quellen": [
+    "sim/elektrik/e3d_fmeda/ERGEBNIS.md",
+    "sim/elektrik/e3d_fmeda/e3d_fmeda.png",
+    "sim/elektrik/e3d_fmeda/ergebnis.json"
+   ]
+  },
+  {
    "datei": "praesentation/bausteine/G1.md",
    "stem": "G1",
    "titel": "Zellanordnung im Bauraum 1950 x 1430 x 130 mm",
@@ -9185,6 +10133,19 @@
    "quellen": [
     "pm/kosten/ergebnis_LFP.json",
     "pm/kosten/kosten_vergleich.png"
+   ]
+  },
+  {
+   "datei": "praesentation/bausteine/KR1.md",
+   "stem": "KR1",
+   "titel": "Alternativen systematisch suchen, Muss-Grenzen zuerst, dann paarweise bewerten",
+   "ids": [],
+   "quellen": [
+    "pm/kreativ/KR1/ausschluss_fest.json",
+    "pm/kreativ/KR1/gewichte.json",
+    "pm/kreativ/KR1/rang.json",
+    "pm/kreativ/KR1/rang.png",
+    "sim/elektrik/e3_platine/ergebnis_waerme.json"
    ]
   },
   {
@@ -9631,6 +10592,34 @@
    "pruefung": "3 Belege bestaetigt, 0 Fehler",
    "datei": "forschung/ergebnis/W44.md",
    "thema": "NASA-STD-7009 (Standard for Models and Simulations): frei verfügbar? Gliederung der Glaubwürdigkeitsbewertung (BAT-DOC-22)"
+  },
+  {
+   "id": "W47",
+   "status": "fertig",
+   "pruefung": "9 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/W47.md",
+   "thema": "UN R100 Rev. 3 Volltext (Autor-PDF 2026-11-24): Schutzfunktionen BMS, Warnzeit, Prüfgrößen; ersetzt Auszüge W35b–e (REQ-P11, P13, P14, P18)"
+  },
+  {
+   "id": "W48",
+   "status": "fertig",
+   "pruefung": "11 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/W48.md",
+   "thema": "UN R94/R95 Rev. 4: elektrische Sicherheit nach Front-/Seitencrash, Abschaltung, Fristen (SG-06, HE-08, REQ-P14)"
+  },
+  {
+   "id": "W49",
+   "status": "fertig",
+   "pruefung": "6 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/W49.md",
+   "thema": "EU 2023/1542 Batterieverordnung (DE, Autor-PDF): Pflichten Traktionsbatterie, BMS-Daten (SOH), Batteriepass (Zielmarkt Europa)"
+  },
+  {
+   "id": "W50",
+   "status": "fertig",
+   "pruefung": "11 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/W50.md",
+   "thema": "UN R135 Pfahl-Seitenaufprall (Grundtext 2015 + Rev.1 Amend. 1/2, Autor-PDF): Pfahl, Geschwindigkeit, Winkel, HV-Sicherheit nach dem Test (REQ-P14, SG-06)"
   },
   {
    "id": "T01",

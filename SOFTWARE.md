@@ -22,6 +22,10 @@ KI-generiert (Claude Opus). Jeder Eintrag wurde auf diesem Rechner aufgerufen.
 | Wissensgraph (Notizen aus dem Wissensnetz) | Obsidian (kostenlos auch gewerblich laut obsidian.md/license, Stand 20.02.2025; nicht quelloffen) | – | **nicht installiert**; Vault = Projektordner, Notizen unter `wissen/` | – |
 | Unternehmenspräsentation (.pptx, PDF) | python-pptx (MIT) + LibreOffice (System, Umwandlung in PDF) | – | python-pptx 1.0.2 installiert in .venv (2026-11-23, Vorgang B5); `soffice --headless --convert-to pdf` | LibreOffice vorhanden |
 | Dynamische Crash-Rechnung X2 (explizit) | OpenCourant latest-20261011 (AGPLv3, intern genutzt, nicht weitergegeben) | latest-20261011 | `source /home/cae/cae_projekte/werkzeuge/opencourant/umgebung.sh`, dann `starter_linux64_gf -i <_0000.rad> -np 1` und `engine_linux64_gf -i <_0001.rad>` (nur CPU, `OMP_NUM_THREADS`); Rauchtest TWISBEAM bestanden (Referenz ref.extract identisch) | nur Nutzerverzeichnis, ohne sudo |
+| Schaltungssimulation E3 | ngspice (BSD-3) | 42 (Ubuntu-noble-Paket, `dpkg -x` nach `~/.local/opt/ngspice`, ohne sudo) | `source umgebung.sh`, `ngspice -b` | Vorladung 912 V gerechnet ✓ (2026-11-24) |
+| Schaltplan als Code E3 | SKiDL (MIT) 3.0.0, spicelib 1.6.4 | in `.venv` | `import skidl` | installiert (2026-11-24), Nutzung offen |
+| Leiterplatte E3 | KiCad (Flatpak, GPL-3) | 10.0.8 (nicht 9) | `werkzeuge/kicad-cli.sh`, `werkzeuge/kicad-python.sh` (pcbnew) | Platine gebaut, DRC, Gerber, STEP, Render ✓ (2026-11-24) ; Freerouting siehe nächste Zeile |
+| Autorouter E3 | Freerouting CLI (GPL-3) | 2.5.0 (Native Image, von Opus installiert, `$FREEROUTING`) | `$FREEROUTING -de x.dsn -do x.ses -mp N` | **stürzt ab** (UnsupportedFeatureError ComponentOutline, GraalVM-Serialisierung), keine SES erzeugt (2026-11-24) |
 
 Nicht vorhanden und nicht nötig: OpenFOAM (FluidX3D und Elmer decken die Strömung ab), ngspice (die Elektrik wird in Python gerechnet, die Netzwerke sind klein).
 Mögliche spätere Ergänzung: Cantera (Gaszusammensetzung beim thermischen Durchgehen), nur wenn Schritt 1 das verlangt.

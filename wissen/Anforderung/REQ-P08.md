@@ -12,15 +12,15 @@ tags: ["anforderung", "bewertung/offen"]
 
 Umgebungstemperatur Betrieb und Laden
 
-- Wert (Lastenheft): offen (°C)
+- Wert (Lastenheft): Betrieb −20 … +45 °C, Laden 0 … +45 °C (Vorheizen unter 0 °C) (Autor, Freigaberunde 2026-11-23)
 - Priorität: Muss
-- Vom Autor bestätigt: nein
+- Vom Autor bestätigt: ja
 
 ## Verifikation (V-Modell-Matrix)
 
 - Methode: S (A Analyse, S Simulation, I Inspektion, T Test, R Review)
 - Ebene: System
-- Kriterium: T_betrieb zwischen [-20, 45] °C [Annahme Opus]<br>T_laden zwischen [0, 45] °C [Annahme Opus]
+- Kriterium: T_betrieb zwischen [-20, 45] °C [Autor (Freigaberunde 2026-11-23)]<br>T_laden zwischen [0, 45] °C [Autor (Freigaberunde 2026-11-23)]
 - Ist-Wert: [T_betrieb] kein Nachweis verknüpft; [T_laden] kein Nachweis verknüpft
 - Bewertung: **offen**
 - Matrix: [[Dokument/06_verifikationsplan]] · Lastenheft: [[Dokument/01_lastenheft]] · Verfolgung: [[Dokument/03_anforderungsverfolgung]]

@@ -30,6 +30,7 @@ Sicherheit: keine Ausbreitung des thermischen Durchgehens bzw. Warnzeit nach Nor
 
 ## Vorgänge
 - [[Vorgang/E2|E2]] – Schutzkonzept: Sicherung, Schütze, Vorladung, Isolationswächter
+- [[Vorgang/S1|S1]] – Gefahrenanalyse HARA ISO 26262-3, Sicherheitsziele, FSR (BAT-DOC-24)
 - [[Vorgang/X1|X1]] – Seitencrash Pfahl, quasistatisch: Eindringung in Gehäuse/Querträger (CalculiX, plastisch, Kontakt)
 - [[Vorgang/F1|F1]] – FMEA und Verifikationsplan nachziehen
 

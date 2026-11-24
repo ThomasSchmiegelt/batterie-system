@@ -1,0 +1,1 @@
+{"urteile":{"Fehlermöglichkeiten (FSR, HARA)":{"gewinner":"A","grund":"Konzept A beschränkt die Fehleroberfläche auf MOSFET-Klemmen und Widerstandsbruch je Kanal, während Konzept B zusätzliche Fehlermodi aus Pumpe, Kühlmittelleckage, PWM-Steuersatz und Temperatur-Dormanz-Logik (F9) einführt, die die FSR- und HARA-Analyse erheblich erweitern.","zahl":null}}}

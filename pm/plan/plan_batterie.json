@@ -1,8 +1,8 @@
 {
   "id": "batterie0001",
   "name": "Batteriesystem (KI-generiert)",
-  "created_at": 1794501458.0246508,
-  "updated_at": 1794501458.024651,
+  "created_at": 1795514339.3375432,
+  "updated_at": 1795514339.3375435,
   "tasks": [
     {
       "id": "S0",
@@ -110,7 +110,7 @@
           "rate": 0
         }
       ],
-      "notes": "Stufe 1 | Status: fertig | REQ: REQ-D08 | Wissen: P01, P02, P03, P04, P05, P06, P07, P08, P09, P10 | Befunde: B-BAT-003, B-BAT-004, B-BAT-023, B-BAT-022, B-BAT-020, B-BAT-019, B-BAT-017, B-BAT-013, B-BAT-007, B-BAT-044, B-BAT-045 | Software: PI, patent-recherche | Ergebnis: forschung/PATENTE.md ✓",
+      "notes": "Stufe 1 | Status: fertig | REQ: REQ-D08 | Wissen: P01, P02, P03, P04, P05, P06, P07, P08, P09, P10 | Befunde: B-BAT-003, B-BAT-004, B-BAT-023, B-BAT-022, B-BAT-020, B-BAT-019, B-BAT-017, B-BAT-013, B-BAT-007, B-BAT-044, B-BAT-045, B-BAT-049 | Software: PI, patent-recherche | Ergebnis: forschung/PATENTE.md ✓",
       "is_start": false,
       "is_end": false
     },
@@ -525,7 +525,7 @@
           "rate": 0
         }
       ],
-      "notes": "Stufe 4, bestimmt Zellzahl | Status: ohne Nachweis | REQ: REQ-P02, REQ-P03 | Bauteil: BT-200 | Wissen: W12 | Befunde: B-BAT-011, B-BAT-010, B-BAT-008 | ENT: ENT-004, ENT-012, ENT-145, ENT-148",
+      "notes": "Stufe 4, bestimmt Zellzahl | Status: ohne Nachweis | REQ: REQ-P02, REQ-P03 | Bauteil: BT-200 | Wissen: W12 | Befunde: B-BAT-011, B-BAT-010, B-BAT-008 | ENT: ENT-004, ENT-012, ENT-145, ENT-148, ENT-160, ENT-161",
       "is_start": false,
       "is_end": false
     },
@@ -558,7 +558,7 @@
           "rate": 0
         }
       ],
-      "notes": "Stufe 3 | Status: offen | REQ: REQ-P07, REQ-D11 | Bauteil: BT-200, BT-500 | Wissen: W15, P02 | Befunde: B-BAT-003, B-BAT-004, B-BAT-020, B-BAT-012 | ENT: ENT-004, ENT-012, ENT-145, ENT-148 | Stückliste: 200.1, 200.2, 200.3, 200.5, 500.1, 500.2, 500.3, 700.1 | Software: FreeCAD, gmsh | Doku: docs/13_stueckliste.md | Ergebnis: cad/pack/*.FCStd",
+      "notes": "Stufe 3 | Status: offen | REQ: REQ-P07, REQ-D11 | Bauteil: BT-200, BT-500 | Wissen: W15, P02 | Befunde: B-BAT-003, B-BAT-004, B-BAT-020, B-BAT-012 | ENT: ENT-004, ENT-012, ENT-145, ENT-148, ENT-160, ENT-161 | Stückliste: 200.1, 200.2, 200.3, 200.5, 500.1, 500.2, 500.3, 700.1 | Software: FreeCAD, gmsh | Doku: docs/13_stueckliste.md | Ergebnis: cad/pack/*.FCStd",
       "is_start": false,
       "is_end": false
     },
@@ -590,7 +590,7 @@
           "rate": 0
         }
       ],
-      "notes": "Stufe 3 | Status: offen | REQ: REQ-P13 | Bauteil: BT-200, BT-500 | ENT: ENT-004, ENT-012, ENT-145, ENT-148 | Stückliste: 500.7, 700.8 | Software: FreeCAD | Ergebnis: cad/pack/bauregeln*",
+      "notes": "Stufe 3 | Status: offen | REQ: REQ-P13 | Bauteil: BT-200, BT-500 | ENT: ENT-004, ENT-012, ENT-145, ENT-148, ENT-160, ENT-161 | Stückliste: 500.7, 700.8 | Software: FreeCAD | Ergebnis: cad/pack/bauregeln*",
       "is_start": false,
       "is_end": false
     },
@@ -672,6 +672,7 @@
         "L1",
         "E3",
         "E4",
+        "S1",
         "SL2"
       ],
       "resources": "Opus, Sonnet",
@@ -734,6 +735,8 @@
         "C4"
       ],
       "successors": [
+        "KR1",
+        "E3b",
         "SL2",
         "F1"
       ],
@@ -752,7 +755,7 @@
           "rate": 0
         }
       ],
-      "notes": "Stufe 4 | Status: offen | REQ: REQ-P15 | Bauteil: BT-300 | Wissen: W05, W14, T06, P07 | Befunde: B-BAT-002, B-BAT-004, B-BAT-013, B-BAT-045 | ENT: ENT-004, ENT-110 | Stückliste: 300.1, 300.2, 300.3, 300.4, 300.6, 600.4, 700.7, 700.10 | Software: foxBMS | Ergebnis: sim/elektrik/bms*",
+      "notes": "Stufe 4 | Status: fertig | REQ: REQ-P15, REQ-P17, REQ-P19, REQ-P20 | Bauteil: BT-300, BT-320, BT-321 | Wissen: W05, W14, T06, P07 | Befunde: B-BAT-002, B-BAT-004, B-BAT-013, B-BAT-045 | ENT: ENT-004, ENT-110, ENT-111, ENT-112, ENT-113, ENT-114, ENT-115, ENT-146, ENT-163, ENT-164, ENT-165, ENT-166, ENT-167, ENT-168, ENT-183, ENT-184, ENT-185, ENT-186, ENT-187 | Stückliste: 300.1, 300.2, 300.3, 300.4, 300.6, 600.4, 700.7, 700.10 | Software: foxBMS | Doku: sim/elektrik/e3_platine/ERWARTUNG.md | Ergebnis: sim/elektrik/e3_platine/ERGEBNIS.md ✓",
       "is_start": false,
       "is_end": false
     },
@@ -782,9 +785,99 @@
           "rate": 0
         }
       ],
-      "notes": "Stufe 4 | Status: offen | REQ: REQ-P03, REQ-P13 | Bauteil: BT-300, BT-400 | Wissen: T04, T05 | Befunde: B-BAT-002, B-BAT-004 | ENT: ENT-004, ENT-110 | Stückliste: 700.3 | Software: ngspice, OpenModelica | Ergebnis: sim/elektrik/schaltung*",
+      "notes": "Stufe 4 | Status: fertig | REQ: REQ-P03, REQ-P13 | Bauteil: BT-300, BT-400, BT-712 | Wissen: T04, T05 | Befunde: B-BAT-002, B-BAT-004 | ENT: ENT-004, ENT-110, ENT-125, ENT-126, ENT-179, ENT-180 | Stückliste: 700.3 | Software: ngspice, OpenModelica | Ergebnis: sim/elektrik/e3_platine/ergebnis_vorladung.json ✓",
       "is_start": false,
       "is_end": false
+    },
+    {
+      "id": "S1",
+      "name": "Gefahrenanalyse HARA ISO 26262-3, Sicherheitsziele, FSR (BAT-DOC-24)",
+      "duration": 1,
+      "predecessors": [
+        "E2"
+      ],
+      "successors": [],
+      "resources": "Opus, Mensch",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Opus",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "human",
+          "name": "Mensch",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Autor 2026-11-24 | Status: fertig | REQ: REQ-P18, REQ-P21, REQ-P11 | Bauteil: BT-300, BT-700 | Wissen: W35d, W47, W48 | Befunde: B-BAT-052 | ENT: ENT-004, ENT-110 | Doku: docs/24_gefahrenanalyse_hara.md | Ergebnis: docs/24_gefahrenanalyse_hara.md ✓",
+      "is_start": false,
+      "is_end": true
+    },
+    {
+      "id": "KR1",
+      "name": "Kreativmethode + Paarvergleich, Pilot Zellausgleich (pm/kreativ)",
+      "duration": 1,
+      "predecessors": [
+        "E3"
+      ],
+      "successors": [
+        "E3b"
+      ],
+      "resources": "Opus, Sonnet, PI",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Opus",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "software",
+          "name": "Sonnet",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "software",
+          "name": "PI",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Autor 2026-11-24 | Status: fertig | REQ: REQ-D15 | Bauteil: BT-321 | ENT: ENT-163, ENT-164, ENT-165, ENT-166, ENT-167, ENT-168, ENT-183, ENT-184, ENT-185, ENT-186, ENT-187 | Doku: pm/kreativ/METHODE.md, docs/25_loesungen_aus_kreativmethoden.md | Ergebnis: pm/kreativ/KR1/ERGEBNIS.md ✓",
+      "is_start": false,
+      "is_end": false
+    },
+    {
+      "id": "E3b",
+      "name": "Wärme CMU-Platine mit Pad (Elmer)",
+      "duration": 1,
+      "predecessors": [
+        "E3",
+        "KR1"
+      ],
+      "successors": [],
+      "resources": "Sonnet, Maschine",
+      "resource_list": [
+        {
+          "kind": "software",
+          "name": "Sonnet",
+          "qty": 1,
+          "rate": 0
+        },
+        {
+          "kind": "hardware",
+          "name": "Maschine",
+          "qty": 1,
+          "rate": 0
+        }
+      ],
+      "notes": "Autor 2026-11-24 | Status: fertig | REQ: REQ-P20, REQ-P15 | Bauteil: BT-321 | ENT: ENT-163, ENT-164, ENT-165, ENT-166, ENT-167, ENT-168, ENT-183, ENT-184, ENT-185, ENT-186, ENT-187 | Doku: sim/elektrik/e3b_platine_waerme/ERWARTUNG.md | Ergebnis: sim/elektrik/e3b_platine_waerme/ERGEBNIS.md ✓",
+      "is_start": false,
+      "is_end": true
     },
     {
       "id": "K1",
@@ -1050,7 +1143,7 @@
           "rate": 0
         }
       ],
-      "notes": "Stufe 6, optional | Status: fertig | REQ: REQ-P14 | Bauteil: BT-200, BT-500 | Befunde: B-BAT-019 | ENT: ENT-004, ENT-012, ENT-145, ENT-148 | Stückliste: 200.2, 200.4, 500.5, 500.6 | Software: ElmerFEM | Ergebnis: sim/mechanik/* ✓",
+      "notes": "Stufe 6, optional | Status: fertig | REQ: REQ-P14 | Bauteil: BT-200, BT-500 | Befunde: B-BAT-019 | ENT: ENT-004, ENT-012, ENT-145, ENT-148, ENT-160, ENT-161 | Stückliste: 200.2, 200.4, 500.5, 500.6 | Software: ElmerFEM | Ergebnis: sim/mechanik/* ✓",
       "is_start": false,
       "is_end": false
     },

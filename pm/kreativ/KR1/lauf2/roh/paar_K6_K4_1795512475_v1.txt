@@ -1,0 +1,39 @@
+{
+  "urteile": {
+    "Ausgleichszeit": {
+      "gewinner": "A",
+      "grund": "Aktiver Strom von 1 bis 2 A verkürzt die Ausgleichszeit gegenüber 130 mA passiv um ein Vielfaches.",
+      "zahl": { "wert": "14,2 h bei 130 mA", "quelle": "F1" }
+    },
+    "Wärme in der CMU": {
+      "gewinner": "A",
+      "grund": "Aktiv kapazitiv entstehen kaum Verluste in der CMU, während der passive Widerstand 9,83 W erzeugt und die Grenze von 10 W fast erreicht.",
+      "zahl": { "wert": "9,83 W bei Höchstspannung (Grenze 10 W)", "quelle": "F1" }
+    },
+    "Kosten": {
+      "gewinner": "B",
+      "grund": "Ein Widerstand und ein Wärmeleitpad sind deutluch günstiger als Schalter, Kondensatoren und Steuerlogik.",
+      "zahl": null
+    },
+    "Bauraum": {
+      "gewinner": "B",
+      "grund": "Der Passivequivalent passt auf 120 x 60 mm bei 0 DRC-Verstößen, während A zusätzlich Schalter, Kondensatoren und Ansteuerung benötigt.",
+      "zahl": { "wert": "120 x 60 mm, 0 Verstöße", "quelle": "F5" }
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+      "gewinner": "B",
+      "grund": "Weniger aktive Bauteile bedeuten weniger FSR-Punkte, auch wenn die thermische Grenze von 105 °C nachweislich überschritten wird.",
+      "zahl": { "wert": "111,9 °C bei 45 °C Umgebung, Grenze 105 °C", "quelle": "F3" }
+    },
+    "Wirkungsgrad": {
+      "gewinner": "A",
+      "grund": "Kapazitive Übertragung verliert nur FET-Widerstandsleistung, während der passive Weg die halbe Energie als 9,64 W Wärme vernichtet.",
+      "zahl": { "wert": "9,64 W je CMU", "quelle": "F2" }
+    },
+    "Reifegrad": {
+      "gewinner": "B",
+      "grund": "Simulations-, Wärme- und Platinenlayout sind bereits dokumentiert und durchlaufen, während A noch Entwurf und Validierung benötigt.",
+      "zahl": { "wert": "DRC 0 Verstöße, 120 x 60 mm", "quelle": "F5" }
+    }
+  }
+}

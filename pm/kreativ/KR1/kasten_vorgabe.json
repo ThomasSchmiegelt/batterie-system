@@ -1,0 +1,110 @@
+{
+ "kopf": "Vorgabe Opus (PRUEFUNG_OPUS.md, 2026-11-24), unverändert übernommen.",
+ "zeilen": [
+  {
+   "id": "T1",
+   "name": "Prinzip des Ausgleichs",
+   "optionen": [
+    {
+     "id": "T1.1",
+     "name": "Passiv, Widerstand",
+     "quelle": "Opus"
+    },
+    {
+     "id": "T1.2",
+     "name": "Aktiv induktiv (Zelle zu Modul, Übertrager)",
+     "quelle": "Opus"
+    },
+    {
+     "id": "T1.3",
+     "name": "Aktiv kapazitiv (umgeschalteter Kondensator)",
+     "quelle": "Opus"
+    }
+   ]
+  },
+  {
+   "id": "T2",
+   "name": "Ort der Verlustwärme",
+   "optionen": [
+    {
+     "id": "T2.1",
+     "name": "CMU-Platine",
+     "quelle": "Opus"
+    },
+    {
+     "id": "T2.2",
+     "name": "Widerstand auf Kühlplatte bzw. Zellverbinder (Leitung von CMU)",
+     "quelle": "Opus"
+    },
+    {
+     "id": "T2.3",
+     "name": "Kaum Verlust (aktiv)",
+     "quelle": "Opus"
+    }
+   ]
+  },
+  {
+   "id": "T3",
+   "name": "Zeitpunkt",
+   "optionen": [
+    {
+     "id": "T3.1",
+     "name": "Beim Laden und in Ruhe (Ist)",
+     "quelle": "Opus"
+    },
+    {
+     "id": "T3.2",
+     "name": "Nur in Ruhe (zyklisches Aufwachen)",
+     "quelle": "Opus"
+    },
+    {
+     "id": "T3.3",
+     "name": "Dauernd, auch beim Fahren",
+     "quelle": "Opus"
+    }
+   ]
+  },
+  {
+   "id": "T4",
+   "name": "Strom und Steuerung",
+   "optionen": [
+    {
+     "id": "T4.1",
+     "name": "130 mA konstant",
+     "quelle": "Opus"
+    },
+    {
+     "id": "T4.2",
+     "name": "260 mA, 50 % Takt, temperaturgeführt",
+     "quelle": "Opus"
+    },
+    {
+     "id": "T4.3",
+     "name": "1 bis 2 A (aktiv)",
+     "quelle": "Opus"
+    }
+   ]
+  },
+  {
+   "id": "T5",
+   "name": "Wärmeabfuhr",
+   "optionen": [
+    {
+     "id": "T5.1",
+     "name": "Konvektion und Strahlung",
+     "quelle": "Opus"
+    },
+    {
+     "id": "T5.2",
+     "name": "Wärmeleitpad CMU zur Kühlplatte",
+     "quelle": "Opus"
+    },
+    {
+     "id": "T5.3",
+     "name": "Kupferflächen, Platine größer",
+     "quelle": "Opus"
+    }
+   ]
+  }
+ ]
+}

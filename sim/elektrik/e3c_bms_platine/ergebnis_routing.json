@@ -1,0 +1,58 @@
+{
+ "laeufe": {
+  "lauf1": {
+   "beschreibung": "In1 und In2 als Fläche (GND, +3V3, HV_GND, HV_VDD) und als Signallage",
+   "start_unverbunden": 322,
+   "offen": 0,
+   "verletzungen": 0,
+   "router_s": 76.44,
+   "score": 1000.0
+  },
+  "lauf2": {
+   "beschreibung": "In1 und In2 nur Fläche (Typ power)",
+   "start_unverbunden": 322,
+   "offen": 76,
+   "verletzungen": 0,
+   "router_s": 50.73,
+   "score": 685.3
+  },
+  "lauf3": {
+   "beschreibung": "In1 nur Fläche (GND/HV_GND), In2 Signal ohne Fläche",
+   "start_unverbunden": 320,
+   "offen": 69,
+   "verletzungen": 0,
+   "router_s": 47.48,
+   "score": 712.5
+  },
+  "lauf4": {
+   "beschreibung": "In1 Signal und Fläche GND/HV_GND, In2 Signal (Entkopplung 3,2 mm)",
+   "start_unverbunden": 320,
+   "offen": 0,
+   "verletzungen": 0,
+   "router_s": 44.81,
+   "score": 1000.0
+  },
+  "lauf5": {
+   "beschreibung": "wie 4, Entkopplung 4,0 mm vom Pad (übernommen)",
+   "start_unverbunden": 320,
+   "offen": 0,
+   "verletzungen": 0,
+   "router_s": 47.99,
+   "score": 1000.0
+  },
+  "lauf6": {
+   "beschreibung": "wie 3, -mp 40",
+   "start_unverbunden": 320,
+   "offen": 70,
+   "verletzungen": 0,
+   "router_s": 90.76,
+   "score": 708.33
+  },
+  "endstand": {
+   "lauf": "lauf5 + B.Cu-Massefläche",
+   "drc_verstoesse": 0,
+   "drc_unverbunden": 0
+  }
+ },
+ "quelle": "/home/cae/cae_projekte/batterie/e3c/route/fr<N>.log, chk_drc2.json"
+}

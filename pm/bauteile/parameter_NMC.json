@@ -462,6 +462,43 @@
     "entscheidung": "ENT-138"
    }
   },
+  "BT-311": {
+   "laenge_mm": {
+    "wert": 160.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-188"
+   },
+   "breite_mm": {
+    "wert": 100.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-189"
+   },
+   "lagen": {
+    "wert": 4.0,
+    "einheit": "\"-\"",
+    "entscheidung": "ENT-190"
+   },
+   "kriechstrecke_hv_nv_mm": {
+    "wert": 10.0,
+    "einheit": "mm",
+    "entscheidung": "ENT-191"
+   },
+   "luftstrecke_hv_nv_mm": {
+    "wert": 8.0,
+    "einheit": "\"mm\"",
+    "entscheidung": "ENT-195"
+   },
+   "abstand_nv_mm": {
+    "wert": 0.15,
+    "einheit": "\"mm\"",
+    "entscheidung": "ENT-196"
+   },
+   "schuetzkanaele": {
+    "wert": 3.0,
+    "einheit": "\"-\"",
+    "entscheidung": "ENT-197"
+   }
+  },
   "BT-320": {
    "anzahl": {
     "wert": 13.0,
@@ -484,6 +521,116 @@
     "einheit": "mA",
     "entscheidung": "ENT-146",
     "variante": "NMC"
+   }
+  },
+  "BT-321": {
+   "laenge_mm": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "breite_mm": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "lagen": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "dicke_mm": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "kupfer_um": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "kriechstrecke_mm": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "kriechstrecke_daisy_mm": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "waermeabfuhr": {
+    "wert": "waermeleitpad_kuehlplatte",
+    "einheit": "\"-\"",
+    "entscheidung": "ENT-184"
+   },
+   "pad_dicke_mm": {
+    "wert": 1.0,
+    "einheit": "\"mm\"",
+    "entscheidung": "ENT-185"
+   },
+   "pad_lambda_W_mK": {
+    "wert": 3.0,
+    "einheit": "\"W/mK\"",
+    "entscheidung": "ENT-186"
+   },
+   "vias_je_widerstandspaar": {
+    "wert": 8.0,
+    "einheit": "\"-\"",
+    "entscheidung": "ENT-187"
+   }
+  },
+  "BT-322": {
+   "kanaele": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "asil": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "messfehler_mV": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-323": {
+   "widerstand_Ohm": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "verlust_W": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "schalter": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "bauform": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "filter_R_Ohm": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "filter_C_nF": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-324": {
+   "pruefspannung_V": {
+    "wert": null,
+    "entscheidung": null
+   }
+  },
+  "BT-325": {
+   "schwelle_V": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "verzoegerung_ms": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "bauform": {
+    "wert": null,
+    "entscheidung": null
    }
   },
   "BT-330": {
@@ -1009,6 +1156,14 @@
     "wert": 300.0,
     "einheit": "ms",
     "entscheidung": "ENT-126"
+   },
+   "schalter": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "pulsenergie_J": {
+    "wert": null,
+    "entscheidung": null
    }
   },
   "BT-713": {
@@ -1022,6 +1177,20 @@
     "einheit": "A",
     "entscheidung": "ENT-129",
     "variante": "NMC"
+   }
+  },
+  "BT-715": {
+   "haltestrom_A": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "loeschung": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "abschaltzeit_ms": {
+    "wert": null,
+    "entscheidung": null
    }
   },
   "BT-720": {
@@ -1053,6 +1222,11 @@
    "breite_mm": {
     "wert": null,
     "entscheidung": null
+   },
+   "lichte_hoehe_zugabe_mm": {
+    "wert": 3.0,
+    "einheit": "\"mm\"",
+    "entscheidung": "ENT-194"
    }
   },
   "BT-730": {

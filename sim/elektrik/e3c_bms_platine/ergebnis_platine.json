@@ -1,0 +1,179 @@
+{
+ "variante": "BMS BT-311",
+ "laenge_mm": 160.0,
+ "breite_mm": 100.0,
+ "lagen": 4,
+ "teile": 131,
+ "teile_nach_footprint": {
+  "R_0603_1608Metric": 34,
+  "C_0603_1608Metric": 39,
+  "D_SMB": 1,
+  "Crystal_SMD_3225-4Pin_3.2x2.5mm": 1,
+  "JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal": 1,
+  "SOIC-16_3.9x9.9mm_P1.27mm": 2,
+  "SOT-23": 4,
+  "C_0805_2012Metric": 4,
+  "JST_PH_S4B-PH-SM4-TB_1x04-1MP_P2.00mm_Horizontal": 3,
+  "LQFP-144_20x20mm_P0.5mm": 1,
+  "D_SOD-323": 6,
+  "L_CommonModeChoke_Coilcraft_1812CAN": 2,
+  "CP_Elec_6.3x7.7": 1,
+  "D_SMA": 6,
+  "C_1206_3216Metric": 2,
+  "PinHeader_2x05_P1.27mm_Vertical_SMD": 1,
+  "LED_0603_1608Metric": 3,
+  "JST_SH_SM03B-SRSS-TB_1x03-1MP_P1.00mm_Horizontal": 1,
+  "JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal": 2,
+  "SOIC-14_3.9x8.7mm_P1.27mm": 2,
+  "JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal": 3,
+  "LQFP-48_7x7mm_P0.5mm": 1,
+  "SOT-23-5": 3,
+  "ISO_Bruecke_8": 2,
+  "D_SOD-123": 1,
+  "Uebertrager_Bruecke_4": 2,
+  "L_1210_3225Metric": 1,
+  "SOIC-8_3.9x4.9mm_P1.27mm": 2
+ },
+ "bahnsegmente": 1167,
+ "vias": 242,
+ "drc_verstoesse": 0,
+ "drc_unverbunden": 0,
+ "passt": {
+  "bt310_mm": {
+   "laenge_mm": 200.0,
+   "breite_mm": 150.0,
+   "hoehe_mm": 20.0
+  },
+  "platine_h_mm": 9.29,
+  "laenge_ok": true,
+  "breite_ok": true,
+  "hoehe_ok": true,
+  "schaltbox_innen_mm": [
+   320.0,
+   300.0,
+   116.0
+  ],
+  "quelle": "parameter.json BT-310 (ENT-139/140/141); ergebnis_LFP_e2d_e3.json e2.schaltbox_*"
+ },
+ "sperrzone": {
+  "x_mm": [
+   100.0,
+   110.0
+  ],
+  "breite_mm": 10.0,
+  "laenge_mm": 100.0,
+  "objekte_in_sperrzone": 0,
+  "abstand_nv_hv_kupfer_mm": 10.4,
+  "nv_kupfer_max_x_mm": 99.8,
+  "hv_kupfer_min_x_mm": 110.2,
+  "bruecken": [
+   {
+    "ref": "U11",
+    "tag": "U_ISO_SHUNT",
+    "pad_abstand_mm": 10.4,
+    "nv_netze": [
+     "+3V3",
+     "GND",
+     "SH_CLK",
+     "SH_DAT"
+    ],
+    "hv_netze": [
+     "HV_CLK",
+     "HV_DAT",
+     "HV_GND",
+     "HV_VDD"
+    ]
+   },
+   {
+    "ref": "U12",
+    "tag": "U_ISO_SEK",
+    "pad_abstand_mm": 10.4,
+    "nv_netze": [
+     "+3V3",
+     "GND",
+     "SEK_OK",
+     "SEK_STATUS"
+    ],
+    "hv_netze": [
+     "HV_GND",
+     "HV_VDD",
+     "SEK_IN_HV"
+    ]
+   },
+   {
+    "ref": "T2",
+    "tag": "T_DAISY2",
+    "pad_abstand_mm": 10.4,
+    "nv_netze": [
+     "DM_RXA",
+     "DM_RXB"
+    ],
+    "hv_netze": [
+     "DC2_A",
+     "DC2_B"
+    ]
+   },
+   {
+    "ref": "T1",
+    "tag": "T_DAISY1",
+    "pad_abstand_mm": 10.4,
+    "nv_netze": [
+     "DM_TXA",
+     "DM_TXB"
+    ],
+    "hv_netze": [
+     "DC1_A",
+     "DC1_B"
+    ]
+   }
+  ],
+  "kriech_mm": 10.0,
+  "luft_mm": 8.0,
+  "kriech_ge_luft": true
+ },
+ "masse": {
+  "fr4_g": 43.5,
+  "kupfer_g": 18.72,
+  "bauteile_g": 4.33,
+  "gesamt_g": 66.54,
+  "bauteile_je_footprint_g": {
+   "R_0603_1608Metric": 0.17,
+   "C_0603_1608Metric": 0.195,
+   "D_SMB": 0.05,
+   "Crystal_SMD_3225-4Pin_3.2x2.5mm": 0.007,
+   "JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal": 0.062,
+   "SOIC-16_3.9x9.9mm_P1.27mm": 0.174,
+   "SOT-23": 0.04,
+   "C_0805_2012Metric": 0.016,
+   "LQFP-144_20x20mm_P0.5mm": 0.775,
+   "D_SOD-323": 0.017,
+   "CP_Elec_6.3x7.7": 0.336,
+   "D_SMA": 0.22,
+   "C_1206_3216Metric": 0.021,
+   "PinHeader_2x05_P1.27mm_Vertical_SMD": 0.028,
+   "LED_0603_1608Metric": 0.004,
+   "JST_SH_SM03B-SRSS-TB_1x03-1MP_P1.00mm_Horizontal": 0.053,
+   "JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal": 0.089,
+   "SOIC-14_3.9x8.7mm_P1.27mm": 0.152,
+   "LQFP-48_7x7mm_P0.5mm": 0.094,
+   "SOT-23-5": 0.027,
+   "ISO_Bruecke_8": 0.721,
+   "D_SOD-123": 0.007,
+   "Uebertrager_Bruecke_4": 0.961,
+   "L_1210_3225Metric": 0.027,
+   "SOIC-8_3.9x4.9mm_P1.27mm": 0.085
+  },
+  "nicht_angesetzt": [
+   "3x JST_PH_S4B-PH-SM4-TB_1x04-1MP_P2.00mm_Horizontal",
+   "2x L_CommonModeChoke_Coilcraft_1812CAN",
+   "3x JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal"
+  ],
+  "cu_flaeche_mm2": {
+   "F.Cu": 930.1,
+   "In1.Cu": 14119.6,
+   "In2.Cu": 253.0,
+   "B.Cu": 14537.3
+  },
+  "quelle": "bms_pruefung.py -> _pruefung_roh.json; bms_masse_modelle.py -> _modellvolumen.json; Dichten ERWARTUNG e3_platine Nachtrag 6"
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "hv_nv": {
+  "kriech_mm": 10.0,
+  "luft_mm": 8.0,
+  "ok": true
+ },
+ "innerhalb_hv": {
+  "abstand_mm": 0.2
+ },
+ "innerhalb_nv": {
+  "abstand_mm": 0.15
+ },
+ "leistungsnetze": [
+  "M_SPULE_N",
+  "M_SPULE_P",
+  "M_ZENER",
+  "P_SPULE_N",
+  "P_SPULE_P",
+  "P_ZENER",
+  "VBAT",
+  "VBAT_F",
+  "VBAT_IN",
+  "V_SPULE_N",
+  "V_SPULE_P",
+  "V_ZENER"
+ ],
+ "leistung_breite_mm_platzhalter": 0.4,
+ "hinweis": "Luftstrecke 8 mm und Abstand NV 0,15 mm aus ERWARTUNG ERW-E3c (Annahme Opus); für beide gibt es kein Merkmal an BT-311, deshalb keine Akte."
+}

@@ -12,6 +12,10 @@
 | ElmerFEM | GPL/LGPL (prüfen) | – |
 | FluidX3D | eigene Lizenz, nicht MIT | geänderte Quellen veröffentlichen, Referenzen zitieren |
 | gmsh | GPL (prüfen) | – |
+| ngspice 42 | BSD-3-Clause (laut Projekt, prüfen), Paket aus Ubuntu noble, nur intern | E3 |
+| SKiDL 3.0.0, spicelib 1.6.4 | MIT (laut Projekt, prüfen) | E3 |
+| KiCad 10.0.8 (Flatpak) | GPL-3, KiCad-Bibliotheken CC-BY-SA 4.0 mit Ausnahme (laut Projekt, prüfen); Footprints nur in der Platine verwendet, nicht ins Repo kopiert | E3 |
+| Freerouting 2.5.0 (CLI) | GPL-3 (laut Projekt, prüfen), intern genutzt, nicht weitergegeben | E3, Routing-Versuch |
 | networkx | BSD-3-Clause (laut Projekt, prüfen) | Wissensgraph pm/graph/graph.py |
 | lxml | BSD-3-Clause (laut Projekt, prüfen) | ReqIF-Prüfung pm/graph/reqif.py; das OMG-XSD wird nur zur Prüfung in ein Temp-Verzeichnis geladen, nicht abgelegt |
 | Blender | GPL | – |
@@ -54,6 +58,16 @@ Patentschriften, Seiten, PDFs: nur lokal (`quellen/`, `forschung/*_ablage/`), ni
 | Herstellerdatenblatt, https://www.dalroad.com/wp-content/uploads/2015/06/AMP_HVA_280.pdf (Abruf 2026-11-19) | Herstellerdatenblatt, nur intern, nicht im Repo | quellen/datenblaetter/BT-730_te_HVA280_katalog.pdf | G5.5b Maße Kaufteile |
 | Herstellerdatenblatt, https://uploadcdn.oneyac.com/attachments/files/brand_pdf/teconnectivity/ENG_SS_108-32020_C.pdf (Abruf 2026-11-19) | Herstellerdatenblatt, nur intern, nicht im Repo | quellen/datenblaetter/BT-730_te_HVA280_spec108-32020.pdf | G5.5b Maße Kaufteile |
 | Herstellerdatenblatt, https://cdn.promelec.ru/upload/grab/www.te.com/usa-en/product-1-2103124-1.datasheet.pdf (Abruf 2026-11-19) | Herstellerdatenblatt, nur intern, nicht im Repo | quellen/datenblaetter/BT-730_te_HVA280_header_1-2103124-1.pdf | G5.5b Maße Kaufteile |
+| TRIZ-Widerspruchsmatrix 39×39 (Zellinhalte), https://github.com/seogineer/triz-solver, Datei skills/triz-analysis/data/contradiction-matrix.json v0.4.0 (Abruf 2026-11-24) | MIT laut GitHub-API; die Matrix selbst ist eine Tatsachentabelle nach Altschuller, Rechtslage der Abschrift nicht geprüft | pm/kreativ/triz_daten.json (nur Prinzipnummern, eigene deutsche Kurznamen, keine fremden Erläuterungen) | KR1 Kreativwerkzeug |
+| TRIZ-Matrix Excel-Abschrift, https://github.com/arvindvenkatadri/triz_network, TRIZ_Matrix.xls (Abruf 2026-11-24) | ungeklärt, nur privat (keine Lizenzdatei) | nur zum Vergleich benutzt, nichts übernommen, Kopie nicht im Repo | KR1 Gegenprüfung der Matrix (Ergebnis in triz_daten.json, Feld gegenpruefung) |
 
 ---
 *KI-generiert (Claude Opus, 2026-11-11). Status Entwurf. Freigabe nur durch den Autor.*
+
+## Nachtrag 2026-11-24 (Opus): Normtexte vom Autor, Elektronik-Werkzeuge
+| Quelle | Lizenz / Nutzung | Ablage |
+|---|---|---|
+| UN R100 Rev. 3, R94 Rev. 4, R95 Rev. 4, R135 (Grundtext 2015, Rev. 1 Amend. 1 und 2) (UNECE, PDF vom Autor) | frei veröffentlicht von UNECE; nur Auswertung und kurze Zitate im Repo | `quellen/normen/` (gitignore) |
+| EU 2023/1542 (EUR-Lex, DE) | Weiterverwendung erlaubt (Beschluss 2011/833/EU) | `quellen/normen/` (gitignore) |
+| ISO 26262, CISPR 25, IEC 60664-1, ISO 16750 | kostenpflichtig, liegen nicht vor (Autor 2026-11-24); Werte daraus bleiben Annahmen | – |
+| COTRONIC, Fachartikel „Kriech- und Luftstrecken richtig auslegen“ (20.10.2025), vom Autor im Chat eingefügt | nur Methode genutzt, kein Text im Repo, kein Beleg | – |

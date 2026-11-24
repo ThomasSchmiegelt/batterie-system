@@ -1,0 +1,39 @@
+{
+  "urteile": {
+    "Ausgleichszeit": {
+      "gewinner": "B",
+      "grund": "Kurz-Parallelbetrieb im Hochstromfenster verkürzt die Ausgleichszeit gegenüber dem gepulsten Betrieb bei gleicher Mittelleistung.",
+      "zahl": { "wert": "14,2 h bei 130 mA", "quelle": "F1" }
+    },
+    "Wärme in der CMU": {
+      "gewinner": "A",
+      "grund": "Die Verlustwärme wird in den externen Flüssigkeitskühlkreis verlagert, nicht in die Platine.",
+      "zahl": { "wert": "9,83 W bei Höchstspannung, Grenze 10 W", "quelle": "F2" }
+    },
+    "Kosten": {
+      "gewinner": "A",
+      "grund": "Konzept B benötigt zusätzlich Leiterbahnen und Schalter je Zelle für die Induktivkopplung, was die Bauteilanzahl erhöht.",
+      "zahl": null
+    },
+    "Bauraum": {
+      "gewinner": "A",
+      "grund": "Der Flüssigkeitskühlkreis ist extern; Konzept B platziert Induktivkoppelelemente zwischen den Zellen in dem bereits mit 130 bis 170 Bauteilen belegten Baurahmen.",
+      "zahl": { "wert": "120 × 60 × 10 mm, 130 bis 170 Bauteile", "quelle": "F6" }
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+      "gewinner": "B",
+      "grund": "Konzept B hat keinen Fluidkreis (kein Leck- oder Pumpenausfall) und schaltet bei hoher Temperatur ab; Konzept A gewinnt ein zusätzliches Fehlermodul (Pumpe, Dichtungen).",
+      "zahl": null
+    },
+    "Wirkungsgrad": {
+      "gewinner": "A",
+      "grund": "Der 34-Ohm-Widerstandspfad ist charakterisiert; Konzept B führt Transformator- und HF-Schaltverluste ein, die nicht quantifiziert sind.",
+      "zahl": { "wert": "34 Ohm → 124 mA bei 4,2 V und 109 mA bei 3,7 V", "quelle": "F4" }
+    },
+    "Reifegrad": {
+      "gewinner": "A",
+      "grund": "PWM-Schalter und geschlossener Flüssigkeitskühlkreis sind in Batteriesystemen verbreitet; HF-Induktivkopplung im BMS-Kontext ist weniger erprobt.",
+      "zahl": null
+    }
+  }
+}

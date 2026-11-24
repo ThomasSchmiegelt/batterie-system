@@ -1,0 +1,9 @@
+{
+  "urteile": {
+    "Fehlermöglichkeiten (FSR, HARA)": {
+      "gewinner": "B",
+      "grund": "Im induktiven Konzept B begrenzt die Transformatorinduktivität setiap Fehlerfall (MOSFET-Stuck-ON, Kernsättigung, Wicklungskurzschluss) auf einen strombegrenzten Überlastfall, während im kapazitiven Konzept A ein gleichzeitiges Schließen beider MOSFETs oder ein Kondensator-Kurzschluss einen ungehinderten Gleichstrom-Kurzschluss zwischen zwei Zellen mit nur Zelleninnenwiderstand und Rds(on) als Begrenzung erzeugt und damit FSR-01 und FSR-02 unmittelbar auslösen kann.",
+      "zahl": null
+    }
+  }
+}

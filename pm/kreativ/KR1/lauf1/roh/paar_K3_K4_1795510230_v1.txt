@@ -1,0 +1,1 @@
+{"urteile":{"Bauraum":{"gewinner":"B","grund":"B erweitert nur die bekannte Platinenfläche in der XY-Ebene (120×60×10 mm gemäß F6), während A zusätzliche induktive Koppellelemente in die durch 217 Zellen festgelegte Z-Richtung einbauen muss, was den begrenzten Zellstapelraum weiter reduziert.","zahl":{"wert":"120×60×10 mm, 217 Zellen","quelle":"F6"}}}}

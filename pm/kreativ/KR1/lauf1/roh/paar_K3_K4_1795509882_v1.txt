@@ -1,0 +1,1 @@
+{"urteile":{"Bauraum":{"gewinner":"B","grund":"B bleibt in der XY-Ebene der Platine (planar, bekannte Baureumrichtung), während A induktive Koppellelemente in der stark durch Zellhöhe (21700) begrenzten Z-Richtung zwischen den Zellen unterbringen muss.","zahl":null}}}

@@ -1,0 +1,1 @@
+{"urteile":{"Fehlermöglichkeiten (FSR, HARA)":{"gewinner":"B","grund":"B nutzt einen rein passiven Strompfad ohne Taster, Temperaturfühler oder Regelkreis, wodurch die Anzahl aktiver Fehlerquellen geringer ist; die Wärmeproblematik von B lässt sich laut F4 durch einen Wärmepfad zur Kühlplatte beheben, ohne zusätzliche aktive Komponenten einzuführen.","zahl":null}}}

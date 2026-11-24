@@ -1,0 +1,1 @@
+{"urteile":{"Nachweisaufwand":{"gewinner":"B","grund":"Konzept B realisiert nur einen Reaktionspfad (Software BMS), womit weder ein Unabhängigkeitsnachweis zwischen zwei Pfaden noch eine gesonderte Hardware-FMEDA für den Sekundärschutz erforderlich sind.","zahl":null}}}

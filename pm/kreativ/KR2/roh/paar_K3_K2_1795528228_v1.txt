@@ -1,0 +1,1 @@
+{"urteile":{"Nachweisaufwand":{"gewinner":"B","grund":"Konzept B (1oo1, nur Software) erspart den Unabhängigkeitsnachweis zwischen Softwarepfad und Hardware-Sekundärschutz (FSR-06) sowie die Verifikation einer 2oo3-Voting-Logik, wodurch FMEDA-Umfang und Software-ASIL-Nachweis kleiner ausfallen als bei Konzept A.","zahl":null}}}

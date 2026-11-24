@@ -1,0 +1,132 @@
+Ref;Tag;Wert;Footprint;Bauteilklasse;Seite
+J1;J_VERSORGUNG;Stecker 12 V (VBAT, GND, KL15);Connector_JST:JST_PH_S4B-PH-SM4-TB_1x04-1MP_P2.00mm_Horizontal;Stecker_4;NV
+Q1;Q_VERPOL;PMOS Verpolschutz generisch;Package_TO_SOT_SMD:SOT-23;PMOS_Verpolschutz;NV
+R1;R_VERPOL;R Gate Verpolschutz (Wert offen);Resistor_SMD:R_0603_1608Metric;R;NV
+D1;D_VERPOL;Z-Diode Gate-Schutz generisch;Diode_SMD:D_SOD-123;Z_Diode_Gate;NV
+D2;D_TVS;TVS ISO 7637-2 generisch;Diode_SMD:D_SMB;TVS_ISO7637;NV
+L1;L_VERSORGUNG;Drossel Eingangsfilter (Wert offen);Inductor_SMD:L_1210_3225Metric;L_Drossel;NV
+C1;C_VBAT0;C Pufferung (Wert offen);Capacitor_SMD:C_1206_3216Metric;C_12;NV
+C2;C_VBAT1;C Pufferung (Wert offen);Capacitor_SMD:C_1206_3216Metric;C_12;NV
+C3;C_VBAT_ELKO;C Elko Pufferung (Wert offen);Capacitor_SMD:CP_Elec_6.3x7.7;C_Elko;NV
+C4;C_VBAT_HF;C Entkopplung (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
+U1;U_SBC;Systembasis-IC generisch mit Watchdog, ASIL D;Package_QFP:LQFP-48_7x7mm_P0.5mm;SBC_generisch_Watchdog;NV
+R2;R_KL15;R Weckeingang KL15 (Wert offen);Resistor_SMD:R_0603_1608Metric;R;NV
+C5;C_SBC_OUT0;C Ausgang SBC (Wert offen);Capacitor_SMD:C_0805_2012Metric;C_8;NV
+C6;C_SBC_OUT1;C Ausgang SBC (Wert offen);Capacitor_SMD:C_0805_2012Metric;C_8;NV
+C7;C_SBC_VS;C Entkopplung (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
+U2;U_MCU;Mikrocontroller generisch ASIL D Lockstep LQFP-144;Package_QFP:LQFP-144_20x20mm_P0.5mm;MCU_ASIL_D_Lockstep_generisch;NV
+C8;C_MCU1;C Entkopplung (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
+C9;C_MCU2;C Entkopplung (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
+C10;C_MCU3;C Entkopplung (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
+C11;C_MCU4;C Entkopplung (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
+C12;C_MCU5;C Entkopplung (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
+C13;C_MCU6;C Entkopplung (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
+C14;C_MCU7;C Entkopplung (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
+C15;C_MCU8;C Entkopplung (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
+C16;C_MCU9;C Entkopplung (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
+C17;C_MCU10;C Entkopplung (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
+C18;C_MCUA0;C Entkopplung analog (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
+C19;C_MCUA1;C Entkopplung analog (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
+C20;C_MCUA2;C Entkopplung analog (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
+C21;C_MCUB0;C Puffer Rechner (Wert offen);Capacitor_SMD:C_0805_2012Metric;C_8;NV
+C22;C_MCUB1;C Puffer Rechner (Wert offen);Capacitor_SMD:C_0805_2012Metric;C_8;NV
+C23;C_RESET;C Reset (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
+Y1;Y_MCU;Quarz Rechner (Wert offen);Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm;Quarz;NV
+C24;C_XTAL0;C Quarz (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
+C25;C_XTAL1;C Quarz (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
+J2;J_DEBUG;Debug-Stecker SWD;Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical_SMD;Debug_Stecker;NV
+D3;D_LED1;LED Status;LED_SMD:LED_0603_1608Metric;LED;NV
+R3;R_LED1;R LED (Wert offen);Resistor_SMD:R_0603_1608Metric;R;NV
+D4;D_LED2;LED Status;LED_SMD:LED_0603_1608Metric;LED;NV
+R4;R_LED2;R LED (Wert offen);Resistor_SMD:R_0603_1608Metric;R;NV
+D5;D_LED3;LED Status;LED_SMD:LED_0603_1608Metric;LED;NV
+R5;R_LED3;R LED (Wert offen);Resistor_SMD:R_0603_1608Metric;R;NV
+R6;R_NTC;NTC Platinentemperatur (extern bestückt, Wert offen);Resistor_SMD:R_0603_1608Metric;R;NV
+R7;R_NTC_PU;R Pull-up NTC (Wert offen);Resistor_SMD:R_0603_1608Metric;R;NV
+U3;U_CAN1;CAN-FD-Transceiver Fahrzeug;Package_SO:SOIC-8_3.9x4.9mm_P1.27mm;CAN_FD_Transceiver;NV
+R8;R_STB1;R Standby (Wert offen);Resistor_SMD:R_0603_1608Metric;R;NV
+L2;L_CAN1;Gleichtaktdrossel CAN;Inductor_SMD:L_CommonModeChoke_Coilcraft_1812CAN;CAN_Gleichtaktdrossel;NV
+R9;R_TERM1_0;R Terminierung geteilt (Wert offen);Resistor_SMD:R_0603_1608Metric;R;NV
+R10;R_TERM1_1;R Terminierung geteilt (Wert offen);Resistor_SMD:R_0603_1608Metric;R;NV
+C26;C_TERM1;C Terminierung (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
+D6;D_ESD1_0;ESD-Diode CAN;Diode_SMD:D_SOD-323;ESD_Diode;NV
+D7;D_ESD1_1;ESD-Diode CAN;Diode_SMD:D_SOD-323;ESD_Diode;NV
+C27;C_CAN1_0;C Entkopplung (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
+C28;C_CAN1_1;C Entkopplung (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
+J3;J_CAN1;Stecker CAN Fahrzeug (CANH, CANL, GND);Connector_JST:JST_PH_S4B-PH-SM4-TB_1x04-1MP_P2.00mm_Horizontal;Stecker_4;NV
+U4;U_CAN2;CAN-FD-Transceiver Laden;Package_SO:SOIC-8_3.9x4.9mm_P1.27mm;CAN_FD_Transceiver;NV
+R11;R_STB2;R Standby (Wert offen);Resistor_SMD:R_0603_1608Metric;R;NV
+L3;L_CAN2;Gleichtaktdrossel CAN;Inductor_SMD:L_CommonModeChoke_Coilcraft_1812CAN;CAN_Gleichtaktdrossel;NV
+R12;R_TERM2_0;R Terminierung geteilt (Wert offen);Resistor_SMD:R_0603_1608Metric;R;NV
+R13;R_TERM2_1;R Terminierung geteilt (Wert offen);Resistor_SMD:R_0603_1608Metric;R;NV
+C29;C_TERM2;C Terminierung (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
+D8;D_ESD2_0;ESD-Diode CAN;Diode_SMD:D_SOD-323;ESD_Diode;NV
+D9;D_ESD2_1;ESD-Diode CAN;Diode_SMD:D_SOD-323;ESD_Diode;NV
+C30;C_CAN2_0;C Entkopplung (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
+C31;C_CAN2_1;C Entkopplung (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
+J4;J_CAN2;Stecker CAN Laden (CANH, CANL, GND);Connector_JST:JST_PH_S4B-PH-SM4-TB_1x04-1MP_P2.00mm_Horizontal;Stecker_4;NV
+U5;U_AND1;UND-Gatter 4fach (Hardware-UND Sekundärpfad, FSR-06);Package_SO:SOIC-14_3.9x8.7mm_P1.27mm;UND_Gatter_4fach;NV
+U6;U_AND2;UND-Gatter 4fach (Hardware-UND Sekundärpfad, FSR-06);Package_SO:SOIC-14_3.9x8.7mm_P1.27mm;UND_Gatter_4fach;NV
+C32;C_AND1;C Entkopplung (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
+C33;C_AND2;C Entkopplung (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
+U7;U_HS_P;High-Side-Schalter generisch, Schütz P;Package_TO_SOT_SMD:SOT-23-5;HighSide_Schalter_generisch;NV
+R14;R_HS_PD_P;R Pull-down Eingang (Wert offen);Resistor_SMD:R_0603_1608Metric;R;NV
+Q2;Q_LS_P;NMOS Low-Side, Schütz P;Package_TO_SOT_SMD:SOT-23;NMOS_Low_Side;NV
+R15;R_LS_G_P;R Gate (Wert offen);Resistor_SMD:R_0603_1608Metric;R;NV
+R16;R_LS_PD_P;R Gate-Pull-down (Wert offen);Resistor_SMD:R_0603_1608Metric;R;NV
+R17;R_SENSE_P;R Messwiderstand Spulenstrom (Wert offen);Resistor_SMD:R_0603_1608Metric;R_Sense;NV
+R18;R_I_P;R Filter Strommessung (Wert offen);Resistor_SMD:R_0603_1608Metric;R;NV
+C34;C_I_P;C Filter Strommessung (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
+D10;D_FREI_P;Diode Freilauf in Reihe zur Z-Diode;Diode_SMD:D_SMA;Diode_Freilauf;NV
+D11;D_ZENER_P;Z-Diode Löschung generisch;Diode_SMD:D_SMA;Z_Diode_Loeschung;NV
+J5;J_SPULE_P;Stecker Spule Schütz P (BT-715);Connector_JST:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal;Stecker_2;NV
+U8;U_HS_M;High-Side-Schalter generisch, Schütz M;Package_TO_SOT_SMD:SOT-23-5;HighSide_Schalter_generisch;NV
+R19;R_HS_PD_M;R Pull-down Eingang (Wert offen);Resistor_SMD:R_0603_1608Metric;R;NV
+Q3;Q_LS_M;NMOS Low-Side, Schütz M;Package_TO_SOT_SMD:SOT-23;NMOS_Low_Side;NV
+R20;R_LS_G_M;R Gate (Wert offen);Resistor_SMD:R_0603_1608Metric;R;NV
+R21;R_LS_PD_M;R Gate-Pull-down (Wert offen);Resistor_SMD:R_0603_1608Metric;R;NV
+R22;R_SENSE_M;R Messwiderstand Spulenstrom (Wert offen);Resistor_SMD:R_0603_1608Metric;R_Sense;NV
+R23;R_I_M;R Filter Strommessung (Wert offen);Resistor_SMD:R_0603_1608Metric;R;NV
+C35;C_I_M;C Filter Strommessung (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
+D12;D_FREI_M;Diode Freilauf in Reihe zur Z-Diode;Diode_SMD:D_SMA;Diode_Freilauf;NV
+D13;D_ZENER_M;Z-Diode Löschung generisch;Diode_SMD:D_SMA;Z_Diode_Loeschung;NV
+J6;J_SPULE_M;Stecker Spule Schütz M (BT-715);Connector_JST:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal;Stecker_2;NV
+U9;U_HS_V;High-Side-Schalter generisch, Schütz V;Package_TO_SOT_SMD:SOT-23-5;HighSide_Schalter_generisch;NV
+R24;R_HS_PD_V;R Pull-down Eingang (Wert offen);Resistor_SMD:R_0603_1608Metric;R;NV
+Q4;Q_LS_V;NMOS Low-Side, Schütz V;Package_TO_SOT_SMD:SOT-23;NMOS_Low_Side;NV
+R25;R_LS_G_V;R Gate (Wert offen);Resistor_SMD:R_0603_1608Metric;R;NV
+R26;R_LS_PD_V;R Gate-Pull-down (Wert offen);Resistor_SMD:R_0603_1608Metric;R;NV
+R27;R_SENSE_V;R Messwiderstand Spulenstrom (Wert offen);Resistor_SMD:R_0603_1608Metric;R_Sense;NV
+R28;R_I_V;R Filter Strommessung (Wert offen);Resistor_SMD:R_0603_1608Metric;R;NV
+C36;C_I_V;C Filter Strommessung (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
+D14;D_FREI_V;Diode Freilauf in Reihe zur Z-Diode;Diode_SMD:D_SMA;Diode_Freilauf;NV
+D15;D_ZENER_V;Z-Diode Löschung generisch;Diode_SMD:D_SMA;Z_Diode_Loeschung;NV
+J7;J_SPULE_V;Stecker Spule Schütz V (BT-715);Connector_JST:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal;Stecker_2;NV
+J8;J_SHUNT;Stecker Shunt (BT-340, HV-Seite): Shunt+, Shunt-, HV_VDD, HV_GND;Connector_JST:JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal;Stecker_4_HV;HV
+R29;R_SHF0;R Eingangsfilter Shunt (Wert offen);Resistor_SMD:R_0603_1608Metric;R;HV
+R30;R_SHF1;R Eingangsfilter Shunt (Wert offen);Resistor_SMD:R_0603_1608Metric;R;HV
+C37;C_SHF_D;C Differenzfilter Shunt (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;HV
+C38;C_SHF0;C Filter nach HV_GND (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;HV
+C39;C_SHF1;C Filter nach HV_GND (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;HV
+U10;U_ADC;Shunt-ADC generisch (Sigma-Delta, HV-Seite);Package_SO:SOIC-16_3.9x9.9mm_P1.27mm;Shunt_ADC_generisch_HV;HV
+C40;C_ADC0;C Entkopplung HV (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;HV
+C41;C_ADC1;C Entkopplung HV (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;HV
+U11;U_ISO_SHUNT;Shunt-ADC-Isolator: digitaler Isolator, verstärkt (HV/NV);E3c:ISO_Bruecke_8;Digital_Isolator_verstaerkt;BR
+C42;C_ISO1_HV;C Entkopplung HV (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;HV
+C43;C_ISO1_NV;C Entkopplung NV (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
+J9;J_SEKUNDAER;Stecker Sekundärpfad der CMUs (ABSCHALT, HV_GND, HV_VDD);Connector_JST:JST_SH_SM03B-SRSS-TB_1x03-1MP_P1.00mm_Horizontal;Stecker_3_HV;HV
+U12;U_ISO_SEK;Isolator Sekundärpfad: digitaler Isolator, verstärkt (HV/NV);E3c:ISO_Bruecke_8;Digital_Isolator_verstaerkt;BR
+R31;R_SEK_HV;R Eingang Sekundärpfad HV (Wert offen);Resistor_SMD:R_0603_1608Metric;R;HV
+C44;C_ISO2_HV;C Entkopplung HV (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;HV
+C45;C_ISO2_NV;C Entkopplung NV (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
+R32;R_SEK_NV;R Pull-down SEK_OK (Wert offen);Resistor_SMD:R_0603_1608Metric;R;NV
+U13;U_DM;Daisy-Chain-Master generisch (BT-322-Gegenstück);Package_SO:SOIC-16_3.9x9.9mm_P1.27mm;Daisy_Master_generisch;NV
+C46;C_DM;C Entkopplung (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
+T1;T_DAISY1;Übertrager verstärkte Isolation zur ersten CMU (Senden);E3c:Uebertrager_Bruecke_4;Uebertrager_verstaerkt;BR
+J10;J_DAISY1;Daisy-Chain-Stecker Ausgang zur ersten CMU;Connector_JST:JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal;Daisy_Stecker;HV
+D16;D_TVS_DAISY1;TVS Daisy-Chain (analog E3 N2);Diode_SMD:D_SOD-323;TVS_Daisy;HV
+R33;R_DC1;R Abschluss Daisy-Chain (Wert offen);Resistor_SMD:R_0603_1608Metric;R;HV
+T2;T_DAISY2;Übertrager verstärkte Isolation zur ersten CMU (Empfang);E3c:Uebertrager_Bruecke_4;Uebertrager_verstaerkt;BR
+J11;J_DAISY2;Daisy-Chain-Stecker Eingang zur ersten CMU;Connector_JST:JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal;Daisy_Stecker;HV
+D17;D_TVS_DAISY2;TVS Daisy-Chain (analog E3 N2);Diode_SMD:D_SOD-323;TVS_Daisy;HV
+R34;R_DC2;R Abschluss Daisy-Chain (Wert offen);Resistor_SMD:R_0603_1608Metric;R;HV

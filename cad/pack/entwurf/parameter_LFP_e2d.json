@@ -1742,6 +1742,10 @@
    "wert": 12,
    "herkunft": "abgeleitet (Sonnet): Rand des Haupt-Deckels um die Serviceöffnung für Dichtung (3) und Senkschrauben; Öffnung im Deckel = 120 x 80 minus 2 x 12"
   },
+  "A_e3c_kontakt_schwelle_mm3": {
+   "wert": 0.01,
+   "herkunft": "ERW-E3c Teil A: Schwelle nur für verschraubte Paare (Liste im Skript)"
+  },
   "A_e2d_omega_h_mm": {
    "wert": 4,
    "herkunft": "ERW-E2 N3: Dehnbogen (Omega) h 4"

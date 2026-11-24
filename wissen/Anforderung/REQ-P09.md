@@ -3,7 +3,7 @@ typ: anforderung
 gruppe: "REQ-P"
 methode: "S"
 ebene: "Subsystem"
-bewertung: "verfehlt"
+bewertung: "verfehlt (Kriterium Annahme, Autor offen)"
 tags: ["anforderung", "bewertung/verfehlt"]
 verifiziert_durch: ["sim/kuehlung/k3_gesamt/elmer_LFP_P0_V4p/ergebnis.json::T_max_Zellblock_C", "sim/kuehlung/k3_gesamt/elmer_LFP_P0_V4p/ergebnis.json::dT_Zellblock_K", "sim/kuehlung/k3_gesamt/elmer_NMC_P4_V4p/ergebnis.json::T_max_Zellblock_C", "sim/kuehlung/k3_gesamt/elmer_NMC_P4_V4p/ergebnis.json::dT_Zellblock_K"]
 ---
@@ -11,9 +11,9 @@ verifiziert_durch: ["sim/kuehlung/k3_gesamt/elmer_LFP_P0_V4p/ergebnis.json::T_ma
 
 > KI-generiert, erzeugt aus pm/plan/wissensnetz.json – nicht von Hand bearbeiten
 
-max. Zelltemperatur und Spreizung
+max. Zelltemperatur und Spreizung zwischen den Zellen
 
-- Wert (Lastenheft): T_max ≤ 45 °C, Spreizung in der Zelle ≤ 5 K (Autor 2026-11-17)
+- Wert (Lastenheft): T_max ≤ 45 °C, Spreizung ΔT ≤ 5 K zwischen den Zellen (Autor, Freigaberunde 2026-11-23; Nachweis neu auswerten, Schleife 2)
 - Priorität: Muss
 - Vom Autor bestätigt: ja
 
@@ -21,9 +21,9 @@ max. Zelltemperatur und Spreizung
 
 - Methode: S (A Analyse, S Simulation, I Inspektion, T Test, R Review)
 - Ebene: Subsystem
-- Kriterium: T_max <= 45 °C [Autor]<br>Spreizung <= 5 K [Autor]
+- Kriterium: T_max <= 45 °C [Autor (Freigaberunde 2026-11-23)]<br>Spreizung <= 5 K [Autor (Freigaberunde 2026-11-23)]
 - Ist-Wert: [T_max] LFP T_max = 35.57 [sim/kuehlung/k3_gesamt/elmer_LFP_P0_V4p/ergebnis.json :: T_max_Zellblock_C]; NMC T_max = 30.6 [sim/kuehlung/k3_gesamt/elmer_NMC_P4_V4p/ergebnis.json :: T_max_Zellblock_C]; [Spreizung] LFP Spreizung = 9.573 [sim/kuehlung/k3_gesamt/elmer_LFP_P0_V4p/ergebnis.json :: dT_Zellblock_K]; NMC Spreizung = 2.574 [sim/kuehlung/k3_gesamt/elmer_NMC_P4_V4p/ergebnis.json :: dT_Zellblock_K]
-- Bewertung: **verfehlt**
+- Bewertung: **verfehlt (Kriterium Annahme, Autor offen)**
 - Matrix: [[Dokument/06_verifikationsplan]] · Lastenheft: [[Dokument/01_lastenheft]] · Verfolgung: [[Dokument/03_anforderungsverfolgung]]
 
 ## Nachweisdateien

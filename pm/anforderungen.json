@@ -1,5 +1,5 @@
 {
- "hinweis": "KI-generiert (Claude Sonnet, 2026-11-23), Entwurf. Quelle: docs/01_lastenheft.md (Text unverändert) und REQ-Überblick bericht/bericht.tex. Felder nur befüllt, wenn dort wörtlich vorhanden, sonst \"nicht definiert\". Keine neuen Zahlen. Freigabe nur Autor. | 2026-11-23 Sonnet nach pm/AUFTRAG_REQ_SCHAERFEN.md: Kriterien von Opus, je Kriterium herkunft_kriterium; Kriterien ohne Herkunft Autor sind Annahmen/Vorschläge (Freigaberunde).",
+ "hinweis": "KI-generiert (Claude Sonnet, 2026-11-23), Entwurf. Quelle: docs/01_lastenheft.md (Text unverändert) und REQ-Überblick bericht/bericht.tex. Felder nur befüllt, wenn dort wörtlich vorhanden, sonst \"nicht definiert\". Keine neuen Zahlen. Freigabe nur Autor. | 2026-11-23 Sonnet nach pm/AUFTRAG_REQ_SCHAERFEN.md: Kriterien von Opus, je Kriterium herkunft_kriterium; Kriterien ohne Herkunft Autor sind Annahmen/Vorschläge (Freigaberunde). | 2026-11-24 Opus: REQ-P17…P21, REQ-D15 als Vorschlag (Elektronik, HARA, Kreativmethode).",
  "felder": "messgroesse, ort, lastfall, methode (A/S/I/T/R), ebene (System/Subsystem/Bauteil), kriterium (dict oder Liste), nachweis [{datei, schluessel (punktgetrennt), groesse, variante}], bestaetigt_autor, herkunft",
  "anforderungen": [
   {
@@ -1322,6 +1322,210 @@
    "quelle_lastenheft": "Vorschlag Opus 2026-11-23",
    "v_modell_vorschlag": "Opus 2026-11-23, Autor offen | Freigaberunde 2026-11-23: bestätigt (Autor), pm/freigaberunde_2026-11-23.md",
    "prioritaet": "Muss"
+  },
+  {
+   "id": "REQ-P17",
+   "gruppe": "REQ-P",
+   "text": "EMV der Elektronik (BMS, CMU, Schützansteuerung)",
+   "wert": "Störaussendung CISPR 25 Klasse 3 (Vorschlag); Störfestigkeit ISO 11452-2/-4; Transienten ISO 7637-2 am 12-V-Anschluss; ESD ISO 10605; Typgenehmigung UN R10 (Autor, Freigaberunde 2026-11-24)",
+   "quelle_lastenheft": "Norm",
+   "prioritaet": "Muss",
+   "status_lastenheft": "festgelegt",
+   "messgroesse": "Störaussendung, Störfestigkeit",
+   "ort": "BMS, CMU, Schaltbox",
+   "lastfall": "–",
+   "methode": "A",
+   "ebene": "Subsystem",
+   "kriterium": [
+    {
+     "groesse": "CISPR25_Klasse",
+     "op": "≥",
+     "wert": "3",
+     "herkunft_kriterium": "Autor (Freigaberunde 2026-11-24)"
+    },
+    {
+     "groesse": "ISO7637_2_Impulse",
+     "op": "bestanden",
+     "wert": "1, 2a, 3a, 3b",
+     "herkunft_kriterium": "Opus (Vorschlag 2026-11-24, Freigabe Autor offen)"
+    },
+    {
+     "groesse": "ESD_Kontakt_kV",
+     "op": "≥",
+     "wert": "8",
+     "herkunft_kriterium": "Opus (Vorschlag 2026-11-24, Freigabe Autor offen)"
+    }
+   ],
+   "nachweis": [
+    {
+     "datei": "sim/elektrik/e3_platine/ERGEBNIS.md",
+     "status": "offen"
+    }
+   ]
+  },
+  {
+   "id": "REQ-P18",
+   "gruppe": "REQ-P",
+   "text": "Funktionale Sicherheit nach ISO 26262",
+   "wert": "ASIL je Sicherheitsziel nach HARA BAT-DOC-24 (Vorschlag: SG-01 ASIL D, SG-02/03/04/08 C, SG-05/06/07 B); SG-01 ASIL D und Umfang HARA+SG+FSR+FMEDA (Autor, Freigaberunde 2026-11-24); alle Einstufungen HE-01…12 und FTTI (Annahme) übernommen (Autor, Freigaberunde 2026-11-24 R2)",
+   "quelle_lastenheft": "Norm",
+   "prioritaet": "Muss",
+   "status_lastenheft": "festgelegt",
+   "messgroesse": "ASIL, Sicherheitsziele",
+   "ort": "Item BT-000",
+   "lastfall": "–",
+   "methode": "R",
+   "ebene": "System",
+   "kriterium": [
+    {
+     "groesse": "HARA",
+     "op": "vorhanden",
+     "wert": "BAT-DOC-24",
+     "herkunft_kriterium": "Opus (Vorschlag 2026-11-24, Freigabe Autor offen)"
+    },
+    {
+     "groesse": "FSR_umgesetzt",
+     "op": "vorhanden",
+     "wert": "FSR-01, 02, 06 auf CMU",
+     "herkunft_kriterium": "Opus (Vorschlag 2026-11-24, Freigabe Autor offen)"
+    }
+   ],
+   "nachweis": [
+    {
+     "datei": "docs/24_gefahrenanalyse_hara.md",
+     "status": "offen"
+    }
+   ]
+  },
+  {
+   "id": "REQ-P19",
+   "gruppe": "REQ-P",
+   "text": "Isolationskoordination (Luft- und Kriechstrecken) auf Leiterplatten und in der Schaltbox",
+   "wert": "IEC 60664-1, Arbeitsspannung = U_max (REQ-P03), Verschmutzungsgrad 2, Überspannungskategorie II; verstärkte Isolierung HV ↔ NV; Werte je Bauteil ausweisen (Autor, Freigaberunde 2026-11-24); Auslegungshöhe 3000 m ü. NN (Luftstrecken mit Höhenkorrektur, Faktor 1,14–1,25 Annahme bis Normtext) (Autor 2026-11-24)",
+   "quelle_lastenheft": "Norm",
+   "prioritaet": "Muss",
+   "status_lastenheft": "festgelegt",
+   "messgroesse": "Luftstrecke, Kriechstrecke",
+   "ort": "BT-311, BT-321, BT-710",
+   "lastfall": "–",
+   "methode": "A",
+   "ebene": "Bauteil",
+   "kriterium": [
+    {
+     "groesse": "Kriechstrecke_HV_NV_mm",
+     "op": "≥",
+     "wert": "nach IEC 60664-1 (Vorschlag ≈ 10 mm verstärkt, Annahme)",
+     "herkunft_kriterium": "Opus (Vorschlag 2026-11-24, Freigabe Autor offen)"
+    },
+    {
+     "groesse": "Auslegungshoehe_m",
+     "op": "=",
+     "wert": "3000",
+     "herkunft_kriterium": "Autor (2026-11-24)"
+    },
+    {
+     "groesse": "Kriechstrecke_ge_Luftstrecke",
+     "op": "wahr",
+     "wert": "je Netzpaar",
+     "herkunft_kriterium": "Opus (ERW-E3 N4)"
+    }
+   ],
+   "nachweis": [
+    {
+     "datei": "sim/elektrik/e3_platine/ERGEBNIS.md",
+     "status": "offen"
+    }
+   ]
+  },
+  {
+   "id": "REQ-P20",
+   "gruppe": "REQ-P",
+   "text": "Umweltfestigkeit und Bauteilqualifikation der Elektronik",
+   "wert": "ISO 16750-1…5 (Klima, Schwingung, elektrisch); Bauteile AEC-Q100/Q101/Q200; Fertigung IPC-A-610 Klasse 3; Leiterbahnen IPC-2152 (Autor, Freigaberunde 2026-11-24)",
+   "quelle_lastenheft": "Norm",
+   "prioritaet": "Muss",
+   "status_lastenheft": "festgelegt",
+   "messgroesse": "Qualifikation",
+   "ort": "BMS, CMU",
+   "lastfall": "–",
+   "methode": "I",
+   "ebene": "Bauteil",
+   "kriterium": [
+    {
+     "groesse": "AEC_Q_Bauteile",
+     "op": "vorhanden",
+     "wert": "alle aktiven/passiven Bauteile",
+     "herkunft_kriterium": "Opus (Vorschlag 2026-11-24, Freigabe Autor offen)"
+    },
+    {
+     "groesse": "IPC_Klasse",
+     "op": "=",
+     "wert": "3",
+     "herkunft_kriterium": "Opus (Vorschlag 2026-11-24, Freigabe Autor offen)"
+    }
+   ],
+   "nachweis": [
+    {
+     "datei": "sim/elektrik/e3_platine/ERGEBNIS.md",
+     "status": "offen"
+    }
+   ]
+  },
+  {
+   "id": "REQ-P21",
+   "gruppe": "REQ-P",
+   "text": "Cybersicherheit BMS",
+   "wert": "ISO/SAE 21434, UN R155/R156 – Vorschlag: im Testprojekt nur benennen, nicht auslegen (Autor, Freigaberunde 2026-11-24)",
+   "quelle_lastenheft": "Norm",
+   "prioritaet": "Kann",
+   "status_lastenheft": "festgelegt",
+   "messgroesse": "–",
+   "ort": "BT-310",
+   "lastfall": "–",
+   "methode": "R",
+   "ebene": "System",
+   "kriterium": [
+    {
+     "groesse": "Umfang",
+     "op": "=",
+     "wert": "benannt",
+     "herkunft_kriterium": "Autor (Freigaberunde 2026-11-24)"
+    }
+   ],
+   "nachweis": [
+    {
+     "datei": "docs/07_normen_und_vorschriften.md",
+     "status": "offen"
+    }
+   ]
+  },
+  {
+   "id": "REQ-D15",
+   "gruppe": "REQ-D",
+   "text": "Lösungssuche nachvollziehbar: Alternativen einer Akte mit echter Abwägung stammen aus einer Kreativmethode (Morphologischer Kasten, TRIZ, Kopfstand) und sind per Paarvergleich bewertet",
+   "wert": "Gewichtung der Kriterien durch den Autor; Paarurteile mit Begründung und Konsistenzprüfung (Autor, Freigaberunde 2026-11-24)",
+   "quelle_lastenheft": "Autor (2026-11-24)",
+   "prioritaet": "Soll",
+   "status_lastenheft": "festgelegt",
+   "messgroesse": "Methode je Akte",
+   "ort": "Akten ENT",
+   "lastfall": "–",
+   "methode": "I",
+   "ebene": "System",
+   "kriterium": [
+    {
+     "groesse": "Konsistenz_zirkulaere_Triaden",
+     "op": "=",
+     "wert": "0 nach Bereinigung",
+     "herkunft_kriterium": "Opus (Vorschlag 2026-11-24, Freigabe Autor offen)"
+    }
+   ],
+   "nachweis": [
+    {
+     "datei": "pm/kreativ/METHODE.md",
+     "status": "offen"
+    }
+   ]
   }
  ]
 }

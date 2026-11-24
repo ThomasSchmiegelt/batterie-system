@@ -1,0 +1,706 @@
+{
+ "gewichte": {
+  "Sicherheit": 8.0,
+  "Verfügbarkeit": 6.0,
+  "Kosten": 1.0,
+  "Nachweisaufwand": 2.0,
+  "Reifegrad": 3.0
+ },
+ "gewichte_quelle": "Autor",
+ "punkte_je_kriterium": {
+  "Sicherheit": {
+   "K1": 0.9375,
+   "K2": 0.0,
+   "K3": 0.5,
+   "K4": 0.8125,
+   "K5": 0.25
+  },
+  "Verfügbarkeit": {
+   "K1": 0.5,
+   "K2": 0.0,
+   "K3": 1.0,
+   "K4": 0.25,
+   "K5": 0.75
+  },
+  "Kosten": {
+   "K1": 0.375,
+   "K2": 1.0,
+   "K3": 0.0,
+   "K4": 0.5,
+   "K5": 0.625
+  },
+  "Nachweisaufwand": {
+   "K1": 0.375,
+   "K2": 0.625,
+   "K3": 0.25,
+   "K4": 0.75,
+   "K5": 0.5
+  },
+  "Reifegrad": {
+   "K1": 1.0,
+   "K2": 0.125,
+   "K3": 0.5625,
+   "K4": 0.6875,
+   "K5": 0.125
+  }
+ },
+ "gesamt": {
+  "K1": 0.73125,
+  "K2": 0.13125,
+  "K3": 0.609375,
+  "K4": 0.603125,
+  "K5": 0.425
+ },
+ "rang": [
+  "K1",
+  "K3",
+  "K4",
+  "K5",
+  "K2"
+ ],
+ "konsistenz": {
+  "Sicherheit": {
+   "zirkulaere_triaden": 0,
+   "triaden": [],
+   "widersprueche_reihenfolge": [],
+   "kendall_zeta": 1.0
+  },
+  "Verfügbarkeit": {
+   "zirkulaere_triaden": 0,
+   "triaden": [],
+   "widersprueche_reihenfolge": [],
+   "kendall_zeta": 1.0
+  },
+  "Kosten": {
+   "zirkulaere_triaden": 0,
+   "triaden": [],
+   "widersprueche_reihenfolge": [
+    [
+     "K1",
+     "K5"
+    ]
+   ],
+   "kendall_zeta": 1.0
+  },
+  "Nachweisaufwand": {
+   "zirkulaere_triaden": 1,
+   "triaden": [
+    [
+     "K2",
+     "K5",
+     "K4"
+    ]
+   ],
+   "widersprueche_reihenfolge": [
+    [
+     "K1",
+     "K5"
+    ],
+    [
+     "K2",
+     "K3"
+    ],
+    [
+     "K3",
+     "K5"
+    ]
+   ],
+   "kendall_zeta": 0.8
+  },
+  "Reifegrad": {
+   "zirkulaere_triaden": 0,
+   "triaden": [],
+   "widersprueche_reihenfolge": [],
+   "kendall_zeta": 1.0
+  }
+ },
+ "zirkel_gesamt": 1,
+ "widersprueche_gesamt": 4,
+ "paarkombinationen_je_kriterium": 50,
+ "position": {
+  "erster_gewinnt": 47,
+  "zweiter_gewinnt": 49,
+  "gleich": 4,
+  "urteile": 100
+ },
+ "vergleich_gleiche_gewichte": {
+  "gewichte": "gleich (6 je Kriterium)",
+  "gesamt": {
+   "K1": 0.6375,
+   "K2": 0.35,
+   "K3": 0.4625,
+   "K4": 0.6,
+   "K5": 0.45
+  },
+  "rang": [
+   "K1",
+   "K4",
+   "K3",
+   "K5",
+   "K2"
+  ]
+ },
+ "ausgeschieden_festforderung": [],
+ "zahlverstoesse": [
+  [
+   "K2|K5",
+   "Sicherheit",
+   "Zahl 2 steht nicht in F4"
+  ],
+  [
+   "K4|K3",
+   "Verfügbarkeit",
+   "Zahl 10 steht nicht in F3"
+  ],
+  [
+   "K3|K4",
+   "Kosten",
+   "Zahl 2 steht nicht in F4"
+  ],
+  [
+   "K3|K4",
+   "Reifegrad",
+   "Zahl 2 steht nicht in F4"
+  ]
+ ],
+ "nachfragen": [
+  {
+   "runde": 1,
+   "paar": [
+    "K1",
+    "K3"
+   ],
+   "kriterien": [
+    "Sicherheit"
+   ]
+  },
+  {
+   "runde": 1,
+   "paar": [
+    "K1",
+    "K5"
+   ],
+   "kriterien": [
+    "Kosten",
+    "Nachweisaufwand"
+   ]
+  },
+  {
+   "runde": 1,
+   "paar": [
+    "K2",
+    "K3"
+   ],
+   "kriterien": [
+    "Nachweisaufwand"
+   ]
+  },
+  {
+   "runde": 1,
+   "paar": [
+    "K2",
+    "K4"
+   ],
+   "kriterien": [
+    "Nachweisaufwand"
+   ]
+  },
+  {
+   "runde": 1,
+   "paar": [
+    "K3",
+    "K5"
+   ],
+   "kriterien": [
+    "Nachweisaufwand"
+   ]
+  },
+  {
+   "runde": 2,
+   "paar": [
+    "K1",
+    "K5"
+   ],
+   "kriterien": [
+    "Kosten",
+    "Nachweisaufwand"
+   ]
+  },
+  {
+   "runde": 2,
+   "paar": [
+    "K2",
+    "K3"
+   ],
+   "kriterien": [
+    "Nachweisaufwand"
+   ]
+  },
+  {
+   "runde": 2,
+   "paar": [
+    "K2",
+    "K4"
+   ],
+   "kriterien": [
+    "Nachweisaufwand"
+   ]
+  },
+  {
+   "runde": 2,
+   "paar": [
+    "K2",
+    "K5"
+   ],
+   "kriterien": [
+    "Nachweisaufwand"
+   ]
+  },
+  {
+   "runde": 2,
+   "paar": [
+    "K3",
+    "K5"
+   ],
+   "kriterien": [
+    "Nachweisaufwand"
+   ]
+  },
+  {
+   "runde": 2,
+   "paar": [
+    "K4",
+    "K5"
+   ],
+   "kriterien": [
+    "Nachweisaufwand"
+   ]
+  }
+ ],
+ "empfindlichkeit": {
+  "von": {
+   "K1": 0.7142857142857143,
+   "K2": 0.08552631578947369,
+   "K3": 0.5803571428571429,
+   "K4": 0.5863095238095238,
+   "K5": 0.40789473684210525
+  },
+  "bis": {
+   "K1": 0.75,
+   "K2": 0.17261904761904762,
+   "K3": 0.6414473684210527,
+   "K4": 0.6217105263157895,
+   "K5": 0.4407894736842105
+  },
+  "platz1_methode": [
+   "K1"
+  ],
+  "platz1_mit_zusatz": [
+   "K1",
+   "K3",
+   "K4"
+  ],
+  "varianten": [
+   {
+    "art": "Methode ±1",
+    "kriterium": "Sicherheit",
+    "delta": -1,
+    "gesamt": {
+     "K1": 0.7203947368421053,
+     "K2": 0.13815789473684212,
+     "K3": 0.6151315789473685,
+     "K4": 0.5921052631578947,
+     "K5": 0.4342105263157895
+    },
+    "platz1": "K1",
+    "rang": [
+     "K1",
+     "K3",
+     "K4",
+     "K5",
+     "K2"
+    ]
+   },
+   {
+    "art": "Methode ±1",
+    "kriterium": "Sicherheit",
+    "delta": 1,
+    "gesamt": {
+     "K1": 0.7410714285714286,
+     "K2": 0.125,
+     "K3": 0.6041666666666666,
+     "K4": 0.6130952380952381,
+     "K5": 0.4166666666666667
+    },
+    "platz1": "K1",
+    "rang": [
+     "K1",
+     "K4",
+     "K3",
+     "K5",
+     "K2"
+    ]
+   },
+   {
+    "art": "Methode ±1",
+    "kriterium": "Verfügbarkeit",
+    "delta": -1,
+    "gesamt": {
+     "K1": 0.743421052631579,
+     "K2": 0.13815789473684212,
+     "K3": 0.5888157894736842,
+     "K4": 0.6217105263157895,
+     "K5": 0.40789473684210525
+    },
+    "platz1": "K1",
+    "rang": [
+     "K1",
+     "K4",
+     "K3",
+     "K5",
+     "K2"
+    ]
+   },
+   {
+    "art": "Methode ±1",
+    "kriterium": "Verfügbarkeit",
+    "delta": 1,
+    "gesamt": {
+     "K1": 0.7202380952380952,
+     "K2": 0.125,
+     "K3": 0.6279761904761905,
+     "K4": 0.5863095238095238,
+     "K5": 0.44047619047619047
+    },
+    "platz1": "K1",
+    "rang": [
+     "K1",
+     "K3",
+     "K4",
+     "K5",
+     "K2"
+    ]
+   },
+   {
+    "art": "Methode ±1",
+    "kriterium": "Kosten",
+    "delta": -1,
+    "gesamt": {
+     "K1": 0.75,
+     "K2": 0.08552631578947369,
+     "K3": 0.6414473684210527,
+     "K4": 0.6085526315789473,
+     "K5": 0.4144736842105263
+    },
+    "platz1": "K1",
+    "rang": [
+     "K1",
+     "K3",
+     "K4",
+     "K5",
+     "K2"
+    ]
+   },
+   {
+    "art": "Methode ±1",
+    "kriterium": "Kosten",
+    "delta": 1,
+    "gesamt": {
+     "K1": 0.7142857142857143,
+     "K2": 0.17261904761904762,
+     "K3": 0.5803571428571429,
+     "K4": 0.5982142857142857,
+     "K5": 0.43452380952380953
+    },
+    "platz1": "K1",
+    "rang": [
+     "K1",
+     "K4",
+     "K3",
+     "K5",
+     "K2"
+    ]
+   },
+   {
+    "art": "Methode ±1",
+    "kriterium": "Nachweisaufwand",
+    "delta": -1,
+    "gesamt": {
+     "K1": 0.75,
+     "K2": 0.10526315789473684,
+     "K3": 0.6282894736842105,
+     "K4": 0.5953947368421053,
+     "K5": 0.42105263157894735
+    },
+    "platz1": "K1",
+    "rang": [
+     "K1",
+     "K3",
+     "K4",
+     "K5",
+     "K2"
+    ]
+   },
+   {
+    "art": "Methode ±1",
+    "kriterium": "Nachweisaufwand",
+    "delta": 1,
+    "gesamt": {
+     "K1": 0.7142857142857143,
+     "K2": 0.15476190476190477,
+     "K3": 0.5922619047619048,
+     "K4": 0.6101190476190477,
+     "K5": 0.42857142857142855
+    },
+    "platz1": "K1",
+    "rang": [
+     "K1",
+     "K4",
+     "K3",
+     "K5",
+     "K2"
+    ]
+   },
+   {
+    "art": "Methode ±1",
+    "kriterium": "Reifegrad",
+    "delta": -1,
+    "gesamt": {
+     "K1": 0.7171052631578947,
+     "K2": 0.13157894736842105,
+     "K3": 0.6118421052631579,
+     "K4": 0.5986842105263158,
+     "K5": 0.4407894736842105
+    },
+    "platz1": "K1",
+    "rang": [
+     "K1",
+     "K3",
+     "K4",
+     "K5",
+     "K2"
+    ]
+   },
+   {
+    "art": "Methode ±1",
+    "kriterium": "Reifegrad",
+    "delta": 1,
+    "gesamt": {
+     "K1": 0.7440476190476191,
+     "K2": 0.13095238095238096,
+     "K3": 0.6071428571428571,
+     "K4": 0.6071428571428571,
+     "K5": 0.4107142857142857
+    },
+    "platz1": "K1",
+    "rang": [
+     "K1",
+     "K3",
+     "K4",
+     "K5",
+     "K2"
+    ]
+   },
+   {
+    "art": "Zusatz Grenzwert",
+    "kriterium": "Sicherheit",
+    "delta": 0.0,
+    "gesamt": {
+     "K1": 0.59375,
+     "K2": 0.21875,
+     "K3": 0.6822916666666666,
+     "K4": 0.4635416666666667,
+     "K5": 0.5416666666666666
+    },
+    "platz1": "K3",
+    "rang": [
+     "K3",
+     "K1",
+     "K5",
+     "K4",
+     "K2"
+    ]
+   },
+   {
+    "art": "Zusatz Grenzwert",
+    "kriterium": "Sicherheit",
+    "delta": 12.0,
+    "gesamt": {
+     "K1": 0.765625,
+     "K2": 0.109375,
+     "K3": 0.5911458333333334,
+     "K4": 0.6380208333333334,
+     "K5": 0.3958333333333333
+    },
+    "platz1": "K1",
+    "rang": [
+     "K1",
+     "K4",
+     "K3",
+     "K5",
+     "K2"
+    ]
+   },
+   {
+    "art": "Zusatz Grenzwert",
+    "kriterium": "Verfügbarkeit",
+    "delta": 0.0,
+    "gesamt": {
+     "K1": 0.8303571428571429,
+     "K2": 0.1875,
+     "K3": 0.4419642857142857,
+     "K4": 0.7544642857142857,
+     "K5": 0.2857142857142857
+    },
+    "platz1": "K1",
+    "rang": [
+     "K1",
+     "K4",
+     "K3",
+     "K5",
+     "K2"
+    ]
+   },
+   {
+    "art": "Zusatz Grenzwert",
+    "kriterium": "Verfügbarkeit",
+    "delta": 12.0,
+    "gesamt": {
+     "K1": 0.6778846153846154,
+     "K2": 0.10096153846153846,
+     "K3": 0.6995192307692307,
+     "K4": 0.5216346153846154,
+     "K5": 0.5
+    },
+    "platz1": "K3",
+    "rang": [
+     "K3",
+     "K1",
+     "K4",
+     "K5",
+     "K2"
+    ]
+   },
+   {
+    "art": "Zusatz Grenzwert",
+    "kriterium": "Kosten",
+    "delta": 0.0,
+    "gesamt": {
+     "K1": 0.75,
+     "K2": 0.08552631578947369,
+     "K3": 0.6414473684210527,
+     "K4": 0.6085526315789473,
+     "K5": 0.4144736842105263
+    },
+    "platz1": "K1",
+    "rang": [
+     "K1",
+     "K3",
+     "K4",
+     "K5",
+     "K2"
+    ]
+   },
+   {
+    "art": "Zusatz Grenzwert",
+    "kriterium": "Kosten",
+    "delta": 12.0,
+    "gesamt": {
+     "K1": 0.6048387096774194,
+     "K2": 0.43951612903225806,
+     "K3": 0.39314516129032256,
+     "K4": 0.5665322580645161,
+     "K5": 0.4959677419354839
+    },
+    "platz1": "K1",
+    "rang": [
+     "K1",
+     "K4",
+     "K5",
+     "K2",
+     "K3"
+    ]
+   },
+   {
+    "art": "Zusatz Grenzwert",
+    "kriterium": "Nachweisaufwand",
+    "delta": 0.0,
+    "gesamt": {
+     "K1": 0.7708333333333334,
+     "K2": 0.0763888888888889,
+     "K3": 0.6493055555555556,
+     "K4": 0.5868055555555556,
+     "K5": 0.4166666666666667
+    },
+    "platz1": "K1",
+    "rang": [
+     "K1",
+     "K3",
+     "K4",
+     "K5",
+     "K2"
+    ]
+   },
+   {
+    "art": "Zusatz Grenzwert",
+    "kriterium": "Nachweisaufwand",
+    "delta": 12.0,
+    "gesamt": {
+     "K1": 0.6125,
+     "K2": 0.29583333333333334,
+     "K3": 0.4895833333333333,
+     "K4": 0.6520833333333333,
+     "K5": 0.45
+    },
+    "platz1": "K4",
+    "rang": [
+     "K4",
+     "K1",
+     "K3",
+     "K5",
+     "K2"
+    ]
+   },
+   {
+    "art": "Zusatz Grenzwert",
+    "kriterium": "Reifegrad",
+    "delta": 0.0,
+    "gesamt": {
+     "K1": 0.6838235294117647,
+     "K2": 0.1323529411764706,
+     "K3": 0.6176470588235294,
+     "K4": 0.5882352941176471,
+     "K5": 0.47794117647058826
+    },
+    "platz1": "K1",
+    "rang": [
+     "K1",
+     "K3",
+     "K4",
+     "K5",
+     "K2"
+    ]
+   },
+   {
+    "art": "Zusatz Grenzwert",
+    "kriterium": "Reifegrad",
+    "delta": 12.0,
+    "gesamt": {
+     "K1": 0.8146551724137931,
+     "K2": 0.12931034482758622,
+     "K3": 0.5948275862068966,
+     "K4": 0.6293103448275862,
+     "K5": 0.33189655172413796
+    },
+    "platz1": "K1",
+    "rang": [
+     "K1",
+     "K4",
+     "K3",
+     "K5",
+     "K2"
+    ]
+   }
+  ]
+ }
+}

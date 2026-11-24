@@ -1,0 +1,1 @@
+{"urteile":{"Nachweisaufwand":{"gewinner":"B","grund":"Konzept B entfällt der Unabhängigkeitsnachweis zwischen Software und dem unabhängigen Hardwarepfad (FSR-06) und die FMEDA-Nachweispflicht für die CMU-Platine als sicherer Reaktionsweg; die 2oo3-Plausibilisierung bleibt rein softwareseitig.","zahl":{"wert":"SPFM 0,9992 / LFM 0,9814","quelle":"F5"}}}}

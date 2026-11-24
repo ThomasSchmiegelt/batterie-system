@@ -1,0 +1,1586 @@
+{
+ "kopf": "KI-generiert (PI, qwen-gross, ohne Werkzeuge). Urteil je geordnetem Paar (erstes = A), Einschätzung, keine Rechnung. Zahlen aus problem.json fakten.",
+ "urteile": {
+  "K1|K2": {
+   "stand": "2026-11-24T09:25:26",
+   "runde": 0,
+   "kriterien": {
+    "Ausgleichszeit": {
+     "gewinner": "gleich",
+     "grund": "Konzept B ist explizit auf gleiche mittlere Leistung ausgelegt, daher gleiche Übertragungszeit von 14,2 h wie Konzept A.",
+     "zahl": {
+      "wert": "14,2 h",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Wärme in der CMU": {
+     "gewinner": "B",
+     "grund": "Konzept A dissipiert 9,83 W auf der 120 × 60 mm Platine mit nur freier Konvektion (60–100 K Überhitzung, Grenzverstoß); Konzept B führt die Verlustwärme in einen externen Flüssigkeitskühlkreis und entlastet die CMU.",
+     "zahl": {
+      "wert": "9,83 W",
+      "quelle": "F2"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Kosten": {
+     "gewinner": "A",
+     "grund": "Konzept A benötigt nur MOSFET und 34-Ω-Widerstand je Kanal; Konzept B erfordert PWM-Treiber, Pumpe, Kühlkreis und zusätzliche Kabel, was die Stückliste und die Montage kosten deutlich erhöhen.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Bauraum": {
+     "gewinner": "A",
+     "grund": "Konzept A passt auf die bestehende 120 × 60 × 10 mm CMU-Platine (80 g); Konzept B benötigt einen externen Flüssigkeitskühlkreis mit Pumpe und Anschlussstücken, der zusätzlichen Bauraum im Packs Gehäuse belegt.",
+     "zahl": {
+      "wert": "120 x 60 x 10 mm, 80 g",
+      "quelle": "F6"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+     "gewinner": "B",
+     "grund": "Konzept A weist eine prognostizierte thermische Havarie auf der CMU-Platine auf (60–100 K Übertemperatur, >105 °C, F5) bei nur 0,17 W Restmargin (9,83 W vs. 10 W, F2) und 234 unabhängigen Kanal-Fehlern ohne aktive Absicherung, während Konzept B die Betriebszeit auf das Dormanz-Fenster begrenzt (F9), eine temperaturabhängige Abschaltung als inhärente Fehlersicherung besitzt und die Verlustwärme auf einen abgegrenzten Kühlkreislauf verlagert, was die FSR-Größe pro Kanal und die HARA-Exposition deutlich reduziert.",
+     "zahl": {
+      "wert": "60 bis 100 K Übertemperatur, >105 °C bei 45 °C Umgebung",
+      "quelle": "F5"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 60 bis 100 K Übertemperatur, >105 °C bei 45 °C Umgebung nicht in F5",
+     "vorher": "A",
+     "runde": 2
+    },
+    "Wirkungsgrad": {
+     "gewinner": "gleich",
+     "grund": "Beide Konzepte dissipieren dieselbe Ausgleichsenergie dQ·ΔV als Wärme; die 'gleiche mittlere Leistung' in Konzept B führt zu identischem energetischen Wirkungsgrad des Balancierprozesses.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Reifegrad": {
+     "gewinner": "A",
+     "grund": "Passiver Widerstandsausgleich ist in BMS seit Jahren serienreif und gut verstanden; der gepulste Ansatz mit externem Flüssigkeitskreis und temperaturabhängiger Stromsteuerung ist neu und noch nicht in vergleichbarer Serie erprobt.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K1|K3": {
+   "stand": "2026-11-24T09:25:46",
+   "runde": 0,
+   "kriterien": {
+    "Ausgleichszeit": {
+     "gewinner": "B",
+     "grund": "Konzept B gleicht kurz und gepulst aus, während A 14,2 h pro Zyklus benötigt.",
+     "zahl": {
+      "wert": "14,2 h bei 130 mA und dQ 1,848 Ah",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Wärme in der CMU": {
+     "gewinner": "B",
+     "grund": "A erzeugt 9,83 W direkt auf der 120×60-mm-Platine, nahe der 10-W-Grenze; B verlagert die Verlustwärme in das Koppellelement und taktet die Leistung.",
+     "zahl": {
+      "wert": "9,83 W, Grenze 10 W",
+      "quelle": "F2"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Kosten": {
+     "gewinner": "A",
+     "grund": "A benötigt nur MOSFET und 34-Ohm-Widerstand je Kanal; B erfordert HF-Schalter und induktive Koppellelemente, was Material und Fertigung teurer macht.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Bauraum": {
+     "gewinner": "A",
+     "grund": "A nutzt die bestehende 120×60-mm-Platine mit 130 bis 170 Bauteilen; B braucht zusätzliche Leiterbahnen, Schalter und Kühlkontakt je Zelle und vergrößert das Layout.",
+     "zahl": {
+      "wert": "120×60×10 mm, 80 g, 130 bis 170 Bauteile",
+      "quelle": "F6"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 120×60×10 mm, 80 g, 130 bis 170 Bauteile nicht in F6"
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+     "gewinner": "A",
+     "grund": "A hat nur offene/geschaltete Widerstände als Fehlerquelle; B bringt HF-Schalter, Induktivitäten und galvanische Kopplung mit zusätzlichen Ausfallmodi und EMV-Risiken.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Wirkungsgrad": {
+     "gewinner": "B",
+     "grund": "A dissipiert die Ausgleichsenergie vollständig als Wärme (9,83 W); B verschiebt Energie aktiv zwischen Zellen und verliert nur Umschalt- und Kernverluste.",
+     "zahl": {
+      "wert": "9,83 W Verlustleistung alle 18 Kanäle",
+      "quelle": "F2"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 9,83 W Verlustleistung alle 18 Kanäle nicht in F2"
+    },
+    "Reifegrad": {
+     "gewinner": "A",
+     "grund": "Passiver Widerstandsausgleich mit MOSFET und Festwiderstand ist ein reifem, breit einsetztes Bauteilkonzept; aktiv-induktiver HF-Ausgleich ist komplexer und seltener in Serien-BMS implementiert.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K1|K4": {
+   "stand": "2026-11-24T09:26:25",
+   "runde": 0,
+   "kriterien": {
+    "Ausgleichszeit": {
+     "gewinner": "B",
+     "grund": "Konzept B führt einen einmaligen, dQ-vorab-berechneten Durchlauf über 18 Kanäle durch, während Konzept A mit 130 mA konstant 14,2 h benötigt.",
+     "zahl": {
+      "wert": "14,2 h",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Wärme in der CMU": {
+     "gewinner": "B",
+     "grund": "Konzept A erzeugt bei Höchstspannung 9,83 W auf 120×60 mm bei freier Konvektion (60–100 K Übertemperatur), Konzept B verteilt die Wärme auf doppelte Fläche und leitet sie über ein Wärmeleitpad ab.",
+     "zahl": {
+      "wert": "9,83 W",
+      "quelle": "F2"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Kosten": {
+     "gewinner": "A",
+     "grund": "Konzept A benötigt nur MOSFET und 34-Ω-Widerstand pro Kanal, Konzept B erfordert zellenweise Schalter, Leiterbahnen, Wärmeleitpad und doppelte Platinenfläche.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Bauraum": {
+     "gewinner": "A",
+     "grund": "Konzept A bleibt auf einer 120×60×10-mm-Platine mit 80 g, Konzept B verdoppelt die Platinenfläche und braucht zusätzlich Platz für Kühlpad und Kühlplattenanschluss.",
+     "zahl": {
+      "wert": "120 x 60 x 10 mm, 80 g",
+      "quelle": "F6"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+     "gewinner": "B",
+     "grund": "Konzept A erzeugt 14,2 h lang 9,83 W auf einer 120×60-mm-Platine mit freier Konvektion, was laut F5 eine Übertemperatur von 60–100 K und damit ein hohes HARA-Risiko (Grenze 105 °C überschritten) birgt; Konzept B begrenzt den Ausgleich auf die Dormanzaufwachphase, nutzt ein Wärmeleitpad und schaltet bei hoher Temperatur ab, sodass die schwerste Fehlfall-Kategorie (thermische Überlast) konstruktiv vermieden wird, auch wenn die Steuerungskomplexität die Anzahl einzelner FSR-Punkte leicht erhöht.",
+     "zahl": {
+      "wert": "60–100 K Übertemperatur, >105 °C bei 45 °C Umgebung",
+      "quelle": "F5"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 60–100 K Übertemperatur, >105 °C bei 45 °C Umgebung nicht in F5",
+     "vorher": "A",
+     "runde": 1
+    },
+    "Wirkungsgrad": {
+     "gewinner": "B",
+     "grund": "Konzept B stoppt nach dem einmaligen dQ-Durchlauf und vermeidet Überbalancierung; Konzept A dissipiert kontinuierlich Energie in den 34-Ω-Widerstand, bis die Spannungsschwelle erreicht ist.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Reifegrad": {
+     "gewinner": "A",
+     "grund": "Passiver Widerstandsausgleich mit MOSFET ist ein etablierter, gut validierter Baustein; Konzept B kombiniert Dormanz-Management, Temperaturgepumpte Taktung und Wärmeleitpad in einer noch nicht referenzierten Systemarchitektur.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K1|K5": {
+   "stand": "2026-11-24T09:26:55",
+   "runde": 0,
+   "kriterien": {
+    "Ausgleichszeit": {
+     "gewinner": "B",
+     "grund": "Konzept A braucht laut F1 14,2 h; Konzept B gleicht vor dem Betrieb vor, was den Betriebsausgleich verkürzt.",
+     "zahl": {
+      "wert": "14,2 h",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Wärme in der CMU": {
+     "gewinner": "B",
+     "grund": "Konzept A erzeugt 9,83 W in der CMU (F2) und führt laut F5 zu 60–100 K Übertemperatur; Konzept B verlegt die Verlustwärme auf eine aktive Kühlplatte.",
+     "zahl": {
+      "wert": "9,83 W",
+      "quelle": "F2"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Kosten": {
+     "gewinner": "A",
+     "grund": "Konzept A benötigt nur MOSFET und 34-Ohm-Widerstand je Kanal (F4); Konzept B erfordert Ultraschallantrieb, Transformatorkopplung und Sequenzschalter.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Bauraum": {
+     "gewinner": "A",
+     "grund": "Konzept A passt auf die gegebene 120×60×10-mm-Platine (F6); Konzept B benötigt zusätzlich Kühlplatte, Ultraschallantrieb und Transformator.",
+     "zahl": {
+      "wert": "120 x 60 x 10 mm",
+      "quelle": "F6"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+     "gewinner": "A",
+     "grund": "Konzept A hat wenige, gut bekannte Ausfallarten (Widerstand offen, MOSFET stuck); Konzept B bringt Ultraschallmechanik, Sequenzsteuerung und Transformatorkopplung als zusätzliche Fehlerquellen.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Wirkungsgrad": {
+     "gewinner": "B",
+     "grund": "Konzept A dissipiert 9,83 W als ungenutzte Joule'sche Wärme (F2); Konzept B nutzt Transformatorkopplung ohne ohmsche Verluste.",
+     "zahl": {
+      "wert": "9,83 W",
+      "quelle": "F2"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Reifegrad": {
+     "gewinner": "A",
+     "grund": "Passiver Widerstandsausgleich ist seit Jahren Serienstandard im BMS; Komponente 34-Ohm/130-mA ist in F4 bereits spezifiziert; Konzept B (Ultraschall-Konvektion, Takt-Parallelvorabgleich) ist neu und nicht validiert.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K2|K1": {
+   "stand": "2026-11-24T09:27:30",
+   "runde": 0,
+   "kriterien": {
+    "Ausgleichszeit": {
+     "gewinner": "A",
+     "grund": "Gepulster Hochstrom in einem Dormanz-Fenster kann die Ausgleichszeit gegenüber dem konstanten 14,2-h-Zyklus verkürzen.",
+     "zahl": {
+      "wert": "14,2 h",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Wärme in der CMU": {
+     "gewinner": "A",
+     "grund": "Die Verlustwärme wird in einen externen Flüssigkeitskühlkreislauf verlagert, statt auf der CMU-Platine 9,83 W zu erzeugen.",
+     "zahl": {
+      "wert": "9,83 W",
+      "quelle": "F2"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Kosten": {
+     "gewinner": "B",
+     "grund": "Passiver Widerstandsausgleich mit MOSFET und ohmschem Widerstand ist in BOM und Fertigung deutlich günstiger als PWM-Treiber plus geschlossener Kühlkreislauf.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Bauraum": {
+     "gewinner": "B",
+     "grund": "Alles bleibt auf der 120×60×10-mm-Platine; ein externer Kühlkreislauf mit Pumpe und Leitungen vergrößert den System-Footprint.",
+     "zahl": {
+      "wert": "120 x 60 x 10 mm",
+      "quelle": "F6"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+     "gewinner": "A",
+     "grund": "Konzept B erzeugt auf der 120×60-mm-Platine bei freier Konvektion 60 bis 100 K Übertemperatur und überschreitet damit bei 45 °C Umgebung die 105-°C-Grenze, was einen thermischen FSR darstellt; Konzept A verlagert die Verlustwärme in einen externen Flüssigkeitskühlkreis und verfügt über ein Dormanz-Management mit Temperaturabschaltung als eingebaute Sicherheitsfunktion.",
+     "zahl": {
+      "wert": "60–100 K Übertemperatur, >105 °C bei 45 °C Umgebung",
+      "quelle": "F5"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 60–100 K Übertemperatur, >105 °C bei 45 °C Umgebung nicht in F5",
+     "vorher": "A",
+     "runde": 2
+    },
+    "Wirkungsgrad": {
+     "gewinner": "A",
+     "grund": "Aktives Balancing verschiebt Energie von starken zu schwachen Zellen statt sie als Verlustwärme in Widerständen abzugeben.",
+     "zahl": {
+      "wert": "Energieverschiebung statt Verlust",
+      "quelle": "F10"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl Energieverschiebung statt Verlust nicht in F10"
+    },
+    "Reifegrad": {
+     "gewinner": "B",
+     "grund": "Passiver Widerstandsausgleich ist in BMS-Praxis seit Langem Standard; gepulste aktive Balancierung mit Flüssigkeitskühlkreislauf und Dormanz-Management ist dagegen experimentell.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K2|K3": {
+   "stand": "2026-11-24T09:28:20",
+   "runde": 0,
+   "kriterien": {
+    "Ausgleichszeit": {
+     "gewinner": "B",
+     "grund": "Kurz-Parallelbetrieb im Hochstromfenster verkürzt die Ausgleichszeit gegenüber dem gepulsten Betrieb bei gleicher Mittelleistung.",
+     "zahl": {
+      "wert": "14,2 h bei 130 mA",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Wärme in der CMU": {
+     "gewinner": "B",
+     "grund": "Konzept B verlagert die Hauptverluste an das induktive Koppellelement zwischen den Zellen, sodass die 9,83 W I²R-Verlust in den 34-Ohm-Pfaden der CMU-Platine entfallen.",
+     "zahl": {
+      "wert": "9,83 W, Grenze 10 W",
+      "quelle": "F2"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "vorher": "A",
+     "runde": 1
+    },
+    "Kosten": {
+     "gewinner": "A",
+     "grund": "Konzept A nutzt einfache PWM-Schalter und den bereits vorhandenen 34-Ohm-Widerstand pro Kanal, während Konzept B zusätzlich HF-Schalter und induktive Koppellelemente je Zelle erfordert.",
+     "zahl": {
+      "wert": "Leiterbahnen und Schalter je Zelle",
+      "quelle": "F10"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "vorher": "A",
+     "runde": 1
+    },
+    "Bauraum": {
+     "gewinner": "A",
+     "grund": "Der Flüssigkeitskühlkreis ist extern; Konzept B platziert Induktivkoppelelemente zwischen den Zellen in dem bereits mit 130 bis 170 Bauteilen belegten Baurahmen.",
+     "zahl": {
+      "wert": "120 × 60 × 10 mm, 130 bis 170 Bauteile",
+      "quelle": "F6"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 120 × 60 × 10 mm, 130 bis 170 Bauteile nicht in F6"
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+     "gewinner": "B",
+     "grund": "Konzept B hat keinen Fluidkreis (kein Leck- oder Pumpenausfall) und schaltet bei hoher Temperatur ab; Konzept A gewinnt ein zusätzliches Fehlermodul (Pumpe, Dichtungen).",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Wirkungsgrad": {
+     "gewinner": "B",
+     "grund": "Konzept B überträgt Energie aktiv von starken zu schwachen Zellen über Induktivkopplung, während Konzept A die gesamte Ausgleichsleistung als I²R-Wärme in dem 34-Ohm-Widerstand verliert.",
+     "zahl": {
+      "wert": "34 Ohm, 124 mA bei 4,2 V",
+      "quelle": "F4"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 34 Ohm, 124 mA bei 4,2 V nicht in F4",
+     "vorher": "A",
+     "runde": 1
+    },
+    "Reifegrad": {
+     "gewinner": "A",
+     "grund": "PWM-Schalter und geschlossener Flüssigkeitskühlkreis sind in Batteriesystemen verbreitet; HF-Induktivkopplung im BMS-Kontext ist weniger erprobt.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K2|K4": {
+   "stand": "2026-11-24T09:29:29",
+   "runde": 0,
+   "kriterien": {
+    "Ausgleichszeit": {
+     "gewinner": "gleich",
+     "grund": "Beide Konzepte bewegen die gleiche dQ=1,848 Ah mit vergleichbarem Mittelstrom, daher bleibt die grundlegende Ausgleichszeit bei rund 14,2 h identisch.",
+     "zahl": {
+      "wert": "14,2 h",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Wärme in der CMU": {
+     "gewinner": "A",
+     "grund": "A führt die Verlustwärme (9,83 W) über einen geschlossenen Flüssigkeitskreislauf außerhalb der CMU ab und vermeidet die in F5 genannte 60–100 K-Übertemperatur auf der 120×60-mm-Platine.",
+     "zahl": {
+      "wert": "9,83 W",
+      "quelle": "F2"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Kosten": {
+     "gewinner": "B",
+     "grund": "B benötigt nur ein Wärmeleitpad und einen Zellenwechsel, während A einen kompletten externen Kühlkreislauf mit Pumpe und Leitungen erfordert, was die BOM und Montage deutlich verteuern.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Bauraum": {
+     "gewinner": "A",
+     "grund": "A behält die CMU-Platine bei 120 x 60 x 10 mm und verlegt den Kühlkreislauf extern, während B die Platinenfläche lokal auf das Doppelte vergrößert.",
+     "zahl": {
+      "wert": "Platine 120 x 60 x 10 mm",
+      "quelle": "F6"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "vorher": "A",
+     "runde": 2
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+     "gewinner": "B",
+     "grund": "B eliminiert das Leckrisiko einer hydraulischen Anlage und die Komplexität eines PWM-Treibers; ein delaminierendes Wärmeleitpad ist ein geringklassiges Risiko gegenüber einem Kühlmitteleintritt auf die Leiterbahn.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Wirkungsgrad": {
+     "gewinner": "gleich",
+     "grund": "Beide Konzepte nutzen ähnliche Stürme (124/109 mA bei 34 Ω) und dissipieren die Ausgleichsenergie; der Pulsbetrieb von A erzeugt keinen messbar höheren Wirkungsgradvorteil gegenüber dem Durchlauf von B.",
+     "zahl": {
+      "wert": "34 Ohm",
+      "quelle": "F4"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Reifegrad": {
+     "gewinner": "gleich",
+     "grund": "PWM-Schalter, Temperatursteuerung und Dormanz-Aufwachlogik (Patent 6) sind ebenso etabliert wie Wärmeleitpads und Zellenwechsel; beide Konzepte setzen nur baureife Komponenten ein.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K2|K5": {
+   "stand": "2026-11-24T09:30:27",
+   "runde": 0,
+   "kriterien": {
+    "Ausgleichszeit": {
+     "gewinner": "B",
+     "grund": "Parallele Auslösung aller 18 Kanäle kurzfristig beendet den Ausgleich schneller als der gepulste Betrieb mit gleicher mittlerer Leistung.",
+     "zahl": {
+      "wert": "14,2 h bei 130 mA",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Wärme in der CMU": {
+     "gewinner": "A",
+     "grund": "Konzept A nutzt Taktung (PWM) und führt die Verlustwärme über einen geschlossenen Flüssigkeitskühlkreis extern ab; Konzept B bleibt im konvektiven Regime, das laut F5 bei 9,8 W auf der 120×60-mm-Platte 60–100 K Übertemperatur erzeugt und die 105-°C-Grenze überschreitet.",
+     "zahl": {
+      "wert": "60 bis 100 K Übertemperatur bei 9,8 W, 120×60 mm, freie Konvektion",
+      "quelle": "F5"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 60 bis 100 K Übertemperatur bei 9,8 W, 120×60 mm, freie Konvektion nicht in F5",
+     "vorher": "A",
+     "runde": 2
+    },
+    "Kosten": {
+     "gewinner": "gleich",
+     "grund": "Beide Konzepte benötigen zusätzliche Hardware (Flüssigkeitskreis vs. Ultraschall-Treiber + Transformatoren), ohne dass eine FAKTEN-Zahl einen Kostenunterschied belegt.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Bauraum": {
+     "gewinner": "A",
+     "grund": "Die externe Flüssigkeitskühlung bleibt außerhalb der 120×60×10 mm-Platine; B trägt Kühlplatte und Ultraschall-Treiber zusätzlich auf der CMU.",
+     "zahl": {
+      "wert": "120 × 60 × 10 mm, 80 g, 130–170 Bauteile",
+      "quelle": "F6"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 120 × 60 × 10 mm, 80 g, 130–170 Bauteile nicht in F6"
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+     "gewinner": "B",
+     "grund": "Ein Ausfall des Ultraschall-Treibers ist nicht sicherheitskritisch, während eine Flüssigkeitskühlung ein Leckagelerisiko direkt an der Elektronik darstellt.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Wirkungsgrad": {
+     "gewinner": "gleich",
+     "grund": "Sowohl PWM-Umschaltung als auch Transformatorkopplung sind aktive Balancierverfahren mit typisch <5 % Verlust; keine FAKTEN-Ziffer unterscheidet die beiden.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Reifegrad": {
+     "gewinner": "A",
+     "grund": "PWM, Flüssigkeitskühlung und Dormanz-Management sind als Patent und Stand der Technik nachgewiesen, während Ultraschall-Konvektion auf PCB noch als Vermutung gilt.",
+     "zahl": {
+      "wert": "Patent 6 – BMS wacht periodisch auf, gleicht aus, schaltet bei hoher Temperatur ab",
+      "quelle": "F9"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl Patent 6 – BMS wacht periodisch auf, gleicht aus, schaltet bei hoher Temperatur ab nicht in F9"
+    }
+   }
+  },
+  "K3|K1": {
+   "stand": "2026-11-24T09:30:52",
+   "runde": 0,
+   "kriterien": {
+    "Ausgleichszeit": {
+     "gewinner": "A",
+     "grund": "Konzept A nutzt gepulstes Hochstromfenster und Batch-Ausgleich statt 130 mA Dauerstrom, wodurch der Zyklus deutlich kürzer ist als die 14,2 h von Konzept B.",
+     "zahl": {
+      "wert": "14,2 h bei 130 mA",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Wärme in der CMU": {
+     "gewinner": "A",
+     "grund": "Konzept A verlagert die Verlustwärme in das induktive Koppellelement zwischen den Zellen und reduziert die Mittelleistung durch Pulsbetrieb; Konzept B erzeugt 9,83 W direkt auf der CMU-Platine und verfehlt damit thermisch die Grenze.",
+     "zahl": {
+      "wert": "9,83 W, Grenze 10 W",
+      "quelle": "F2"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Kosten": {
+     "gewinner": "B",
+     "grund": "Konzept B benötigt nur MOSFET plus 34-Ohm-Widerstand je Kanal, während Konzept A HF-Schalter, Transformatoren und Induktivitäten je Zelle erfordert.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Bauraum": {
+     "gewinner": "B",
+     "grund": "Konzept B bleibt auf der bestehenden 120 × 60 mm Platte; Konzept A braucht zusätzlich Induktivkoppellelemente und HF-Schalter je Zelle, was Platz und Layoutkomplexität erhöht.",
+     "zahl": {
+      "wert": "120 × 60 × 10 mm",
+      "quelle": "F6"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 120 × 60 × 10 mm nicht in F6"
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+     "gewinner": "B",
+     "grund": "Konzept B besteht aus einfachen, bekannten Bauteilen (MOSFET, Widerstand); Konzept A führt HF-Schalter und Transformatorkopplung hinzu, deren Ausfallmodi (Kurzschluss, Entmagnetisierung) zusätzlich bewertet werden müssten.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Wirkungsgrad": {
+     "gewinner": "A",
+     "grund": "Konzept A verschiebt Energie von starken zu schwachen Zellen, während Konzept B die Ausgleichsenergie vollständig als Wärme (9,83 W) dissipiert.",
+     "zahl": {
+      "wert": "9,83 W",
+      "quelle": "F2"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Reifegrad": {
+     "gewinner": "B",
+     "grund": "Konzept B ist bereits simuliert und charakterisiert (14,2 h, 9,83 W, 8,63 W); Konzept A mit HF-Schaltern und Transformergekopplung liegt noch auf Patentstadium ohne belastbare Kennzahlen.",
+     "zahl": {
+      "wert": "14,2 h",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K3|K2": {
+   "stand": "2026-11-24T09:31:50",
+   "runde": 0,
+   "kriterien": {
+    "Ausgleichszeit": {
+     "gewinner": "A",
+     "grund": "Konzept A nutzt ein kurzes Hochstromfenster, während B nur einmalig im Dormanzfenster ausgleicht; F4 zeigt, dass strombasiertes Balancing (34 Ohm, 124/109 mA) die E2-Ausgleichszeit um 10 bis 15 % verlängert.",
+     "zahl": {
+      "wert": "14,2 h; +10 bis 15 %",
+      "quelle": "F1,F4"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Quelle F1,F4 nicht in den Fakten"
+    },
+    "Wärme in der CMU": {
+     "gewinner": "A",
+     "grund": "A verlagert die Verlustleistung in Induktivkoppellelemente zwischen den Zellen und reduziert die Mittelleistung durch Pulsbetrieb, sodass auf der 120×60-mm-CMU-Platine keine 9,8 W an fallen, die bei freier Konvektion 60–100 K Übertemperatur erzeugen.",
+     "zahl": {
+      "wert": "9,83 W bei Umax; 60–100 K Übertemperatur auf 120×60 mm",
+      "quelle": "F5"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 9,83 W bei Umax; 60–100 K Übertemperatur auf 120×60 mm nicht in F5",
+     "vorher": "A",
+     "runde": 1
+    },
+    "Kosten": {
+     "gewinner": "gleich",
+     "grund": "A benötigt je Zelle ein Induktivkoppellelement plus HF-Schalter (217×), B einen gemeinsamen Flüssigkeitskühlkreis plus 234 PWM-Schalter; beide Varianten erhöhen die BOM und Montagekomplexität in vergleichbarem Umfang über die 130–170 Bauteile je CMU hinaus.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "vorher": "A",
+     "runde": 1
+    },
+    "Bauraum": {
+     "gewinner": "B",
+     "grund": "B hält die 120×60×10-mm-Platine unverändert und legt den Kühlkreis extern; A platziert ein Induktivkoppellelement zwischen den Zellen und verändert so das Zellenpack-Layout samt Leiterbahnen je Zelle.",
+     "zahl": {
+      "wert": "120 × 60 × 10 mm",
+      "quelle": "F6,F10"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Quelle F6,F10 nicht in den Fakten"
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+     "gewinner": "A",
+     "grund": "B bringt mechanische Ausfälle (Pumpenausfall, Kühlmedium-Leck, Einfrieren) hinzu; F8 warnt, dass Stromanpassung beim Laden für Lithium-Chemien unzulässig ist, was den PWM-Strompfad von B betrifft.",
+     "zahl": {
+      "wert": "Stromanpassung beim Laden nicht für Li-Chemien gültig",
+      "quelle": "F8"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl Stromanpassung beim Laden nicht für Li-Chemien gültig nicht in F8"
+    },
+    "Wirkungsgrad": {
+     "gewinner": "A",
+     "grund": "Induktivgekoppeltes Balancing überträgt Energie über das magnetische Feld und vermeidet den I²R-Dissipationsverlust im 34-Ohm-Innenwiderstand der Zelle, den B mit 124 mA (≈0,52 W je Zelle) bei jeder Pulspolarität vollständig in Wärme umwandelt.",
+     "zahl": {
+      "wert": "34 Ω, 124 mA bei 4,2 V",
+      "quelle": "F4"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 34 Ω, 124 mA bei 4,2 V nicht in F4",
+     "vorher": "A",
+     "runde": 1
+    },
+    "Reifegrad": {
+     "gewinner": "B",
+     "grund": "PWM-Schaltung und geschlossener Flüssigkeitskühlkreis sind im BMS-Umfeld etabliert; HF-Induktivkopplung mit HF-Schaltern je Zelle ist im Automotive-BMS noch nicht in Serienreife gebracht.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K3|K4": {
+   "stand": "2026-11-24T09:32:53",
+   "runde": 0,
+   "kriterien": {
+    "Ausgleichszeit": {
+     "gewinner": "A",
+     "grund": "Der Hochstromfenster-Ansatz reduziert t = Q/I direkt, während B nur einen Einmal-Durchlauf bei nicht erhöhtem Strom bietet.",
+     "zahl": {
+      "wert": "14,2 h bei 130 mA (R1) bzw. 130 mA / dQ 1,848 Ah",
+      "quelle": "F1"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 14,2 h bei 130 mA (R1) bzw, 130 mA / dQ 1,848 Ah nicht in F1"
+    },
+    "Wärme in der CMU": {
+     "gewinner": "A",
+     "grund": "Gepulster Betrieb mit reduzierter Mittelleistung senkt die in der CMU entstehende Leistung unter den Messwert von 9,83 W; B verschiebt die Wärme nur nach außen.",
+     "zahl": {
+      "wert": "9,83 W bei Umax (Grenze 10 W)",
+      "quelle": "F2"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 9,83 W bei Umax (Grenze 10 W) nicht in F2"
+    },
+    "Kosten": {
+     "gewinner": "B",
+     "grund": "Einfache Zellen-Schalter mit Leiterbahn und ein Wärmeleitpad sind günstiger als HF-Schalter plus induktive Koppellelemente je Zelle.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Bauraum": {
+     "gewinner": "B",
+     "grund": "B erweitert nur die bekannte Platinenfläche in der XY-Ebene (120×60×10 mm gemäß F6), während A zusätzliche induktive Koppellelemente in die durch 217 Zellen festgelegte Z-Richtung einbauen muss, was den begrenzten Zellstapelraum weiter reduziert.",
+     "zahl": {
+      "wert": "120×60×10 mm, 217 Zellen",
+      "quelle": "F6"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 120×60×10 mm, 217 Zellen nicht in F6",
+     "vorher": "B",
+     "runde": 2
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+     "gewinner": "B",
+     "grund": "Weniger aktive Komponenten (einfacher Schalter statt HF-Schalter + Transformation) bedeutet weniger Ausfallereignisse und einfachere HARA.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Wirkungsgrad": {
+     "gewinner": "A",
+     "grund": "Transformergekoppelte Energieübertragung von starker zu schwacher Zelle vermeidet Energieableitung als Wärme; B leitet dQ über Widerstand ab.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Reifegrad": {
+     "gewinner": "B",
+     "grund": "Periodisches Aufwachen, Ausgleich und Thermal-Cutoff entsprechen dem patentierten BMS-Modul; A benötigt HF-Schalttechnik, die noch nicht serienreif ist.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K3|K5": {
+   "stand": "2026-11-24T09:34:02",
+   "runde": 0,
+   "kriterien": {
+    "Ausgleichszeit": {
+     "gewinner": "A",
+     "grund": "Konzept A hebt durch das explizite Hochstromfenster den Ausgleichsstrom über die 130-mA-Basis und verkürzt so die in F1 angegebene Zeit von 14,2 h; B parallelisiert lediglich und ändert den Kanalstrom nicht.",
+     "zahl": {
+      "wert": "14,2 h bei 130 mA",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "vorher": "A",
+     "runde": 2
+    },
+    "Wärme in der CMU": {
+     "gewinner": "A",
+     "grund": "A reduziert die Mittelverlustleistung durch gepulsten Betrieb, was der in F5 ausdrücklich benannten Abhilfe 'Taktung' entspricht, während B die 9,83 W auf der Platine behält und nur einen Zusatzkühler montiert.",
+     "zahl": {
+      "wert": "9,83 W, Grenze 10 W",
+      "quelle": "F2"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "vorher": "A",
+     "runde": 2
+    },
+    "Kosten": {
+     "gewinner": "gleich",
+     "grund": "A fügt HF-Schalter und induktive Koppellelemente als elektronische Bauteile hinzu; B benötigt zusätzlich einen mechanischen Ultraschall-Konvektor, was bei 130 bis 170 Bauteilen auf 120 × 60 mm Fertigungsaufwand und Störungsquellen erhöht – beide Konzepte tragen vergleichbaren Zusatzaufwand.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "vorher": "A",
+     "runde": 2
+    },
+    "Bauraum": {
+     "gewinner": "A",
+     "grund": "Das induktive Koppellelement sitzt zwischen den Zellen außerhalb der 120 x 60 x 10 mm-Platine; B integriert den Ultraschall-Konvektor in der ohnehin mit 130 bis 170 Bauteilen bestückten CMU.",
+     "zahl": {
+      "wert": "Platine 120 x 60 x 10 mm, 80 g, 130 bis 170 Bauteile",
+      "quelle": "F6"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl Platine 120 x 60 x 10 mm, 80 g, 130 bis 170 Bauteile nicht in F6"
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+     "gewinner": "A",
+     "grund": "A enthält ausschließlich elektronische Bauteile (HF-Schalter, Induktivitäten); B führt eine mechanische Ultraschall-Antriebsfunktion hinzu, die Verschleiß, Kavitation und Ausfall ohne redundantes Backup darstellt.",
+     "zahl": {
+      "wert": "Kapazitätsstreuung über 5 % begrenzt die nutzbare Kapazität auf die schwächste Zelle",
+      "quelle": "F7"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Wirkungsgrad": {
+     "gewinner": "A",
+     "grund": "A überträgt die Ausgleichsenergie induktiv und umgeht damit den 34-Ohm-ohmschen Pfad, der laut F4 eine 10 bis 15 % längere Ausgleichszeit erzeugt; B führt I²R-Verluste je Kanal und widerspricht so seiner eigenen Behauptung ohmscher Verlustfreiheit.",
+     "zahl": {
+      "wert": "34 Ohm, 10 bis 15 % längere Ausgleichszeit",
+      "quelle": "F4"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 34 Ohm, 10 bis 15 % längere Ausgleichszeit nicht in F4",
+     "vorher": "A",
+     "runde": 2
+    },
+    "Reifegrad": {
+     "gewinner": "A",
+     "grund": "Transformergekoppelter aktiver Ausgleich und gepulster Betrieb sind in BMS-Anwendungen bereits etabliert; der Ultraschall-Konvektionsantrieb auf einer 80 g leichten Platine ist ein neuartiges, noch nicht validiertes Bauprinzip.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K4|K1": {
+   "stand": "2026-11-24T09:34:34",
+   "runde": 0,
+   "kriterien": {
+    "Ausgleichszeit": {
+     "gewinner": "A",
+     "grund": "Konzept A führt den Ausgleich als kurzen Einmal-Durchlauf in der Dormanzaufwachphase durch, während Konzept B den 14,2-h-Zyklus bei 130 mA kontinuierlich abarbeitet.",
+     "zahl": {
+      "wert": "14,2 h",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Wärme in der CMU": {
+     "gewinner": "A",
+     "grund": "Konzept A leitet die Verlustwärme über ein Wärmeleitpad zur Kühlplatte ab, während Konzept B auf freie Konvektion setzt, die mit 9,83 W auf 120 × 60 mm mit 60–100 K Übertemperatur als verfehlt eingestuft wird.",
+     "zahl": {
+      "wert": "9,83 W",
+      "quelle": "F5"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 9,83 W nicht in F5"
+    },
+    "Kosten": {
+     "gewinner": "B",
+     "grund": "Konzept B benötigt lediglich einen MOSFET und einen 34-Ω-Widerstand je Zelle, während Konzept A zellenweise Schalter, Leiterbahnen, doppelte Platinenfläche und ein Wärmeleitpad verlangt.",
+     "zahl": {
+      "wert": "34 Ω",
+      "quelle": "F4"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 34 Ω nicht in F4"
+    },
+    "Bauraum": {
+     "gewinner": "B",
+     "grund": "Konzept B bleibt auf der bestehenden CMU-Platine (120 × 60 × 10 mm), während Konzept A eine doppelte Platinenfläche als kombinierte CMU beansprucht.",
+     "zahl": {
+      "wert": "120 × 60 × 10 mm",
+      "quelle": "F6"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 120 × 60 × 10 mm nicht in F6"
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+     "gewinner": "A",
+     "grund": "Konzept B erzeugt kontinuierlich 9,83 W auf der Platine und nach F5 eine Überhitzung über 105 °C, was ein systemisches thermisches Risiko darstellt, während Konzept A nur im kühlen Zustand ausgleichst und über das Dormanz-Management (F9) einen Temperaturabschaltmechanismus besitzt.",
+     "zahl": {
+      "wert": "9,83 W; 60–100 K Übertemperatur, >105 °C",
+      "quelle": "F5"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 9,83 W; 60–100 K Übertemperatur, >105 °C nicht in F5",
+     "vorher": "A",
+     "runde": 1
+    },
+    "Wirkungsgrad": {
+     "gewinner": "A",
+     "grund": "Konzept A verschiebt Energie aktiv von starken zu schwachen Zellen, während Konzept B die überschüssige Energie vollständig als 9,83 W Wärme dissipiert.",
+     "zahl": {
+      "wert": "9,83 W",
+      "quelle": "F2"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Reifegrad": {
+     "gewinner": "B",
+     "grund": "Der passive Widerstandsausgleich mit MOSFET und ohmschem Widerstand ist eine seit Jahren erprobte, einfache Schaltung, während Konzept A auf neuere Patentkonzepte (Dormanz-Management, aktives Balancing) mit komplexerer Steuerung setzt.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K4|K2": {
+   "stand": "2026-11-24T09:35:32",
+   "runde": 0,
+   "kriterien": {
+    "Ausgleichszeit": {
+     "gewinner": "A",
+     "grund": "Konzept A nutzt 130 mA als Gleichstrom, während Konzept B nur 124 mA (bei 4,2 V) erreicht, wodurch A die gleiche dQ in kürzerer Zeit überträgt.",
+     "zahl": {
+      "wert": "14,2 h bei 130 mA",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Wärme in der CMU": {
+     "gewinner": "B",
+     "grund": "Konzept B entfernt die Verlustwärme über einen geschlossenen Flüssigkeitskühlkreis vollständig von der Platine, während Konzept A auf freier Konvektion und einem Wärmeleitpad bleibt, das bei 9,8 W eine Übertemperatur von 60 bis 100 K ergibt.",
+     "zahl": {
+      "wert": "9,8 W → 60 bis 100 K Übertemperatur",
+      "quelle": "F5"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 9,8 W → 60 bis 100 K Übertemperatur nicht in F5"
+    },
+    "Kosten": {
+     "gewinner": "A",
+     "grund": "Konzept A benötigt nur eine vergrößerte Platine und ein Wärmeleitpad, während Konzept B zusätzlich eine Pumpe, Schläuche und ein Kühlmittelsystem extern aufbauen muss.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Bauraum": {
+     "gewinner": "A",
+     "grund": "Konzept A verdoppelt lediglich die Platinenfläche (Basis 120 × 60 × 10 mm) und ergänzt ein Wärmeleitpad, bleibt aber ein eigenständiges Modul; Konzept B benötigt zusätzlich Pumpe, Reservoir, Leitungsbündel und Wärmeübertrager als eigenständigen Fahrzeugkreislauf mit Routing und Wartungszugang.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "vorher": "A",
+     "runde": 2
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+     "gewinner": "gleich",
+     "grund": "Konzept A birgt viele Schalter und Thermopad-Alterierung als Fehlerquellen, Konzept B eine mechanische Pumpenausfall- und Leckagegefahr; die HARA-Komplexität ist bei beiden Konzepten vergleichbar hoch.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Wirkungsgrad": {
+     "gewinner": "gleich",
+     "grund": "Beide Konzepte dissipieren im Mittel die gleiche Leistung (Konzept B explizit 'gleiche mittlere Leistung'), sodass der energetische Wirkungsgrad des Ausgleichs identisch ist.",
+     "zahl": {
+      "wert": "9,83 W bei Höchstspannung",
+      "quelle": "F2"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 9,83 W bei Höchstspannung nicht in F2"
+    },
+    "Reifegrad": {
+     "gewinner": "A",
+     "grund": "Konzept A setzt ausschließlich Bauteile aus der bestehenden BMS-Architektur (Schalter, Platine, Wärmeleitpad) ein, während Konzept B einen zusätzlichen Flüssigkeitskühlkreislauf mit PWM-Steuerung einführt, der noch nicht serienreif ist.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K4|K3": {
+   "stand": "2026-11-24T09:36:19",
+   "runde": 0,
+   "kriterien": {
+    "Ausgleichszeit": {
+     "gewinner": "B",
+     "grund": "Die transformergekoppelte Aktivanpassung umgeht den Shunt-Widerstand, der den Strom auf etwa 124 mA bei 4,2 V begrenzt, und ermöglicht kurzfristige Hochstromfenster ohne die Shunt-Limitierung.",
+     "zahl": {
+      "wert": "124 mA bei 4,2 V durch 34 Ohm Shunt",
+      "quelle": "F4"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 124 mA bei 4,2 V durch 34 Ohm Shunt nicht in F4"
+    },
+    "Wärme in der CMU": {
+     "gewinner": "B",
+     "grund": "Die Verlustwärme entfällt bei B ins induktive Koppellelement zwischen Zellen und nicht in die CMU-Platine, während 9,8 W auf 120 × 60 mm bereits 60 bis 100 K Übertemperatur ergeben und die 10-W-Grenze fast ausschöpfen.",
+     "zahl": {
+      "wert": "9,83 W bei höchster Spannung, Grenze 10 W",
+      "quelle": "F2"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 9,83 W bei höchster Spannung, Grenze 10 W nicht in F2"
+    },
+    "Kosten": {
+     "gewinner": "A",
+     "grund": "A benötigt lediglich Zellenweiche-Schalter, eine Leiterbahn und ein Wärmeleitpad, während B pro Kanal HF-Schalter und ein transformergekoppeltes Induktivitätspaar verlangt und damit die Anzahl der 130 bis 170 Bauteile deutlich erhöht.",
+     "zahl": {
+      "wert": "130 bis 170 Bauteile auf 120 × 60 mm",
+      "quelle": "F6"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 130 bis 170 Bauteile auf 120 × 60 mm nicht in F6"
+    },
+    "Bauraum": {
+     "gewinner": "B",
+     "grund": "Konzept A legt die Verlustwärme auf doppelter Platinenfläche ab und verdoppelt damit die Belegfläche der 120 × 60 mm-Platine, während B die Koppellelemente zwischen den Zellen verteilt und die CMU in ihrer vorhandenen Bauform belässt.",
+     "zahl": {
+      "wert": "120 × 60 × 10 mm",
+      "quelle": "F6"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 120 × 60 × 10 mm nicht in F6",
+     "vorher": "B",
+     "runde": 2
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+     "gewinner": "A",
+     "grund": "A hat pro Kanal nur einen einfachen Schalter und eine Leiterbahn als Fehlerbetrachtung, während B HF-Schalter, Koppelinduktivitäten und gepulste Strompfade als zusätzliche FSR-Reihen in die HARA aufnimmt.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Wirkungsgrad": {
+     "gewinner": "B",
+     "grund": "B verschiebt die Ausgleichsladung aktiv von starken zu schwachen Zellen über das Koppelglied, während A sie als Joule'sche Wärme in der Schalter-Leiterbahn-Kombination verliert.",
+     "zahl": {
+      "wert": "Aktives Balancing verschiebt Energie, kein Verlust in Shunt",
+      "quelle": "F10"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl Aktives Balancing verschiebt Energie, kein Verlust in Shunt nicht in F10"
+    },
+    "Reifegrad": {
+     "gewinner": "A",
+     "grund": "A baut auf dem bereits simulierten E2-Ausgleich (14,2 h, 130 mA) und bekannten Schalter-Prinzipien auf, während B transformergekoppelte HF-Schalter und Induktivkopplung pro Zelle als neuere, noch nicht validierte Baugruppe einführt.",
+     "zahl": {
+      "wert": "14,2 h bei 130 mA und dQ 1,848 Ah",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K4|K5": {
+   "stand": "2026-11-24T09:37:09",
+   "runde": 0,
+   "kriterien": {
+    "Ausgleichszeit": {
+     "gewinner": "B",
+     "grund": "Parallele Auslösung aller 18 Kanäle verkürzt den Durchlauf gegenüber der sequenziellen Einmal-Durchlauf-Strategie von A.",
+     "zahl": {
+      "wert": "14,2 h bei 130 mA und dQ 1,848 Ah",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Wärme in der CMU": {
+     "gewinner": "A",
+     "grund": "A halbiert die Wärmebelastung durch doppelte Platinenfläche, nutzt das in F5 empfohlene Wärmeleitpad und schaltet nur bei kühlem Zustand zu; B konzentriert 18 Kanäle gleichzeitig auf einer Fläche.",
+     "zahl": {
+      "wert": "9,83 W bei Höchstspannung, Grenze 10 W",
+      "quelle": "F2"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 9,83 W bei Höchstspannung, Grenze 10 W nicht in F2"
+    },
+    "Kosten": {
+     "gewinner": "gleich",
+     "grund": "A verdoppelt die Platinenfläche und braucht Wärmeleitpads; B benötigt Ultraschall-Antrieb und Transformatorkopplung – beide Konzepte addieren Bauteile ohne klare Kostenüberlegenheit eines der beiden.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Bauraum": {
+     "gewinner": "B",
+     "grund": "Konzept A verdoppelt die 120 × 60 mm-Platinenfläche und benötigt zellenweise Schalter samt Leiterbahnen, während Konzept B die Grundfläche beibehält und nur Ultraschallantrieb und Transformatorkopplung als kompakte Zusatzbauteile ergänzt.",
+     "zahl": {
+      "wert": "120 x 60 x 10 mm, 80 g, ca. 130–170 Bauteile",
+      "quelle": "F6"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 120 x 60 x 10 mm, 80 g, ca, 130–170 Bauteile nicht in F6",
+     "vorher": "B",
+     "runde": 2
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+     "gewinner": "A",
+     "grund": "Die Temperaturbegrenzung nach F5 entkoppelt den Ausgleich vom Überhitzungspfad; der sequenzielle Einzelkanalbetrieb von A vermeidet den Simultanfehler aller 18 Kanäle bei B.",
+     "zahl": {
+      "wert": "60–100 K Übertemperatur, über 105 °C bei 45 °C Umgebung",
+      "quelle": "F5"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 60–100 K Übertemperatur, über 105 °C bei 45 °C Umgebung nicht in F5"
+    },
+    "Wirkungsgrad": {
+     "gewinner": "B",
+     "grund": "Konzept B überträgt die Ausgleichsenergie per Transformatorkopplung ohne ohmsche Verluste, während Konzept A das dQ über Reihenwiderstände verheizt, was in der CMU bereits 9,83 W Wärmeleistung erzeugt und auf der Platine 60–100 K Übertemperatur verursacht.",
+     "zahl": {
+      "wert": "9,83 W",
+      "quelle": "F2"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "vorher": "B",
+     "runde": 2
+    },
+    "Reifegrad": {
+     "gewinner": "A",
+     "grund": "Dormanz-Management mit periodischem Ausgleich ist patentiert (F9) und das Wärmeleitpad ist Standardmaßnahme (F5); Ultraschall-Konvektion und DC-Transformatorkopplung für Zellbalancierung sind dagegen nicht etabliert.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K5|K1": {
+   "stand": "2026-11-24T09:37:38",
+   "runde": 0,
+   "kriterien": {
+    "Ausgleichszeit": {
+     "gewinner": "A",
+     "grund": "Konzept A gleicht parallel und kurzfristig vor, während Konzept B mit 130 mA 14,2 h braucht.",
+     "zahl": {
+      "wert": "14,2 h bei 130 mA",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Wärme in der CMU": {
+     "gewinner": "A",
+     "grund": "Bei A liegt die Verlustwärme auf einer externen Kühlplatte, bei B bleiben 9,83 W auf der 120×60-mm-Platine und übertreffen bei 45 °C Umgebung die 105-°C-Grenze.",
+     "zahl": {
+      "wert": "9,83 W (Grenze 10 W)",
+      "quelle": "F2"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 9,83 W (Grenze 10 W) nicht in F2"
+    },
+    "Kosten": {
+     "gewinner": "B",
+     "grund": "Konzept B nutzt nur MOSFET und 34-Ω-Widerstand je Kanal; Konzept A erfordert Transformatorkopplung, Ultraschallantrieb und Sequenzschalter.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Bauraum": {
+     "gewinner": "B",
+     "grund": "B ist auf der bestehenden 120×60×10-mm-Platine integriert; A benötigt zusätzlich Kühlplatte, Ultraschallaktor und Transformator außerhalb der CMU.",
+     "zahl": {
+      "wert": "120 x 60 x 10 mm",
+      "quelle": "F6"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+     "gewinner": "B",
+     "grund": "B hat nur MOSFET und Widerstand je Kanal als ausfallende Elemente; A bringt Ultraschall, Transformator und Sequenzschalter als zusätzliche Fehlstellen.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Wirkungsgrad": {
+     "gewinner": "A",
+     "grund": "A überträgt Energie induktiv ohne ohmsche Verluste, B dissipiert die gesamte Ausgleichsladung (1,848 Ah) als Wärme im Widerstand.",
+     "zahl": {
+      "wert": "dQ 1,848 Ah bei 130 mA",
+      "quelle": "F1"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl dQ 1,848 Ah bei 130 mA nicht in F1"
+    },
+    "Reifegrad": {
+     "gewinner": "B",
+     "grund": "Passiver Balancing-Modus mit MOSFET und Festwiderstand ist in BMS-Praxis seit Jahren etabliert; Ultraschall-Konvektion und Transformatorkopplung sind neu und ungereift.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K5|K2": {
+   "stand": "2026-11-24T09:38:18",
+   "runde": 0,
+   "kriterien": {
+    "Ausgleichszeit": {
+     "gewinner": "A",
+     "grund": "Transformator-Kopplung ohne ohmsche Verluste reduziert die in der Zelle verbleibende Restladung, sodass der Parallelvorabgleich kürze abgeschlossen ist als der gepulste Basalausgleich.",
+     "zahl": {
+      "wert": "14,2 h",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Wärme in der CMU": {
+     "gewinner": "A",
+     "grund": "Konzept A vermeidet I²R-Verluste in der CMU durch Transformatorkopplung, während Konzept B die ohmsche Verlustwärme weiterhin in den PWM-Schaltstufen erzeugt und lediglich extern abführt; die aktuelle Verlustleistung von 9,83 W nahe der 10-W-Grenze würde bei A an der Quelle eliminiert, nicht erst abgeführt.",
+     "zahl": {
+      "wert": "9,83 W",
+      "quelle": "F2"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "vorher": "A",
+     "runde": 2
+    },
+    "Kosten": {
+     "gewinner": "gleich",
+     "grund": "A erfordert Ultraschalltreiber plus Transformator; B erfordert Pumpe, Kühlkreis und PWM-Treiber. Beide erhöhen die BOM gegenüber dem rein ohmschen Ansatz ohne klare Unterscheidung.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Bauraum": {
+     "gewinner": "B",
+     "grund": "Der geschlossene Flüssigkeitskühlkreis sitzt extern, sodass die 120 × 60 × 10 mm Platine nur PWM-Schalter und Taktung aufnehmen muss; A muss Transformator und Ultraschallantrieb zusätzlich an der CMU montieren.",
+     "zahl": {
+      "wert": "120 x 60 x 10 mm",
+      "quelle": "F6"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+     "gewinner": "A",
+     "grund": "Ultraschallantrieb ohne flüssiges Kühlmittel vermeidet Leckage auf die Platine; B birgt ein kritischeres Schadensszenario durch Kühlmittelaustritt auf 130–170 Bauteile.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Wirkungsgrad": {
+     "gewinner": "A",
+     "grund": "Energieübertragung ohne ohmschen Pfad minimiert Verlustleistung in der CMU, während B durch PWM-Schaltverluste und Pulsstrom höhere Wärmeverluste je Zyklus erzeugt.",
+     "zahl": {
+      "wert": "9,83 W",
+      "quelle": "F2"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Reifegrad": {
+     "gewinner": "B",
+     "grund": "Flüssigkeitskühlkreis, PWM-Balancierung und temperaturabhängige Stromsteuerung sind Industriestandards; der Dormanz-Aufwachbetrieb (F9) ist bereits spezifiziert. Ultraschall-Konvektion an einer CMU ist neu.",
+     "zahl": {
+      "wert": "Dormanz-Management",
+      "quelle": "F9"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K5|K3": {
+   "stand": "2026-11-24T09:39:00",
+   "runde": 0,
+   "kriterien": {
+    "Ausgleichszeit": {
+     "gewinner": "A",
+     "grund": "Konzept A treibt alle 18 Kanäle durchgehend parallel an, während B nur in gepulsten Batches mit totem Zeitanteil arbeitet; bei gleichem dQ von 1,848 Ah wird die Basiszeit von 14,2 h bei A schneller unterschritten.",
+     "zahl": {
+      "wert": "14,2 h",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "vorher": "A",
+     "runde": 2
+    },
+    "Wärme in der CMU": {
+     "gewinner": "A",
+     "grund": "A verlagert die Verlustwärme auf eine externe, aktiv gekühlte Platte und eliminiert so den ohmschen Anteil in der CMU; B erzeugt Heat im Induktivkopppler zwischen Zellen, wo 9,83 W bei bestehender Platte bereits 60 bis 100 K Übertemperatur bewirken.",
+     "zahl": {
+      "wert": "9,83 W",
+      "quelle": "F2"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "vorher": "A",
+     "runde": 2
+    },
+    "Kosten": {
+     "gewinner": "A",
+     "grund": "A benötigt einen gemeinsamen Ultraschall-Antrieb und Standard-Sequenzschalter; B verlangt HF-Schalter und separate Induktivkopplungen für 217 Zellen, was die Bauteilzahl von den vorhandenen 130 bis 170 deutlich übersteigt.",
+     "zahl": {
+      "wert": "217 Zellen, 130 bis 170 Bauteile",
+      "quelle": "F6"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 217 Zellen, 130 bis 170 Bauteile nicht in F6",
+     "vorher": "A",
+     "runde": 2
+    },
+    "Bauraum": {
+     "gewinner": "B",
+     "grund": "Konzept B integriert die induktive Kopplung in Bestehende Platinebenen, während A einen zusätzlichen mechanischen Ultraschall-Konvektionsantrieb außerhalb der 120×60×10-mm-Platine benötigt.",
+     "zahl": {
+      "wert": "120",
+      "quelle": "F6"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+     "gewinner": "B",
+     "grund": "Konzept B enthält keine mechanisch verschleißenden Teile wie den Ultraschall-Antrieb in A und nutzt statt paralleler Gesamtauslösung eine gepulste, thermisch begrenzte Regelung mit Thermal-Cutoff.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Wirkungsgrad": {
+     "gewinner": "A",
+     "grund": "A koppelt über einen gemeinsamen Transformator und vermeidet je-Zelle-Verlustpfade; B akzeptiert zusätzlich Kern- und Schaltverluste im gepulsten HF-Betrieb, da jede der 217 Zellen eigenen Schalter und Koppellelement benötigt.",
+     "zahl": {
+      "wert": "Schalter und Koppelelement je Zelle",
+      "quelle": "F10"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl Schalter und Koppelelement je Zelle nicht in F10",
+     "vorher": "A",
+     "runde": 2
+    },
+    "Reifegrad": {
+     "gewinner": "B",
+     "grund": "Transformergekoppelter aktiver Balancierung und HF-gepulster Betrieb sind in BMS-Entwicklungen etabliert, während Ultraschall-Konvektionsantrieb in einer CMU noch keiner Validierung in Batterie-Systemen unterliegt.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K5|K4": {
+   "stand": "2026-11-24T09:39:54",
+   "runde": 0,
+   "kriterien": {
+    "Ausgleichszeit": {
+     "gewinner": "A",
+     "grund": "Parallele Auslösung aller 18 Kanäle verkürzt die Gesamtausbauzeit gegenüber einem sequenziellen Einmal-Durchlauf.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Wärme in der CMU": {
+     "gewinner": "B",
+     "grund": "Sequenzieller Betrieb, Temperaturgate und doppelte Platinenfläche halten die Momentanwärmelast unter der engen Grenze von 9,83 W bei 10 W Limit.",
+     "zahl": {
+      "wert": "9,83 W (Grenze 10 W)",
+      "quelle": "F2"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 9,83 W (Grenze 10 W) nicht in F2"
+    },
+    "Kosten": {
+     "gewinner": "B",
+     "grund": "Zellenweiser Schalter und Wärmeleitpad sind Standardkomponenten; Ultraschallantrieb und Transformatorkopplung erhöhen Stückzahlen und Fertigungsaufwand.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Bauraum": {
+     "gewinner": "B",
+     "grund": "Die Platine misst 120 x 60 x 10 mm bei 130 bis 170 Bauteilen; ein Ultraschall-Treiber plus Transformator in 10 mm Höhe ist kaum realisierbar, während ein dünnes Wärmeleitpad und die doppelte Flächenfläche (ohne Höhenwachstum) in das Bestandsmaß passen.",
+     "zahl": {
+      "wert": "120 x 60 x 10 mm, 130 bis 170 Bauteile",
+      "quelle": "F6"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 120 x 60 x 10 mm, 130 bis 170 Bauteile nicht in F6",
+     "vorher": "B",
+     "runde": 2
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+     "gewinner": "B",
+     "grund": "Temperaturgetaster Betrieb und passives Wärmeleitpad vermeiden den thermischen Abschaltfall; Ultraschalltreiber und Sequenzschalter schaffen zusätzliche mechanische und elektronische Fehlerpfade.",
+     "zahl": {
+      "wert": "etwa 60–100 K Übertemperatur, > 105 °C bei 45 °C Umgeb.",
+      "quelle": "F5"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl etwa 60–100 K Übertemperatur, > 105 °C bei 45 °C Umgeb, nicht in F5"
+    },
+    "Wirkungsgrad": {
+     "gewinner": "B",
+     "grund": "Bei 9,83 W je CMU an der 10-W-Grenze bleibt kein Budget für Transformatorkern- und Ultraschall-Treiberverluste; das aktive Wärmeleitpad und der Einmal-Durchlauf in der Dormanzphase erzeugen keine zusätzlichen elektrischen Verluste, sodass der volle Grenzwert in den Ausgleich fließt.",
+     "zahl": {
+      "wert": "9,83 W bei Grenze 10 W",
+      "quelle": "F2"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 9,83 W bei Grenze 10 W nicht in F2",
+     "vorher": "B",
+     "runde": 2
+    },
+    "Reifegrad": {
+     "gewinner": "B",
+     "grund": "Dormanz-Aufwachphase mit periodischem Ausgleich und Temperaturschutz ist bereits als Patent-Konzept dokumentiert; Zellen-Schalter und Wärmeleitpads sind im BMS-Layout Standard.",
+     "zahl": {
+      "wert": "Patent 6, Dormanz-Management",
+      "quelle": "F9"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl Patent 6, Dormanz-Management nicht in F9"
+    }
+   }
+  }
+ },
+ "nachfragen": [
+  {
+   "runde": 1,
+   "paar": [
+    "K1",
+    "K2"
+   ],
+   "kriterien": [
+    "Fehlermöglichkeiten (FSR, HARA)"
+   ]
+  },
+  {
+   "runde": 1,
+   "paar": [
+    "K1",
+    "K4"
+   ],
+   "kriterien": [
+    "Fehlermöglichkeiten (FSR, HARA)"
+   ]
+  },
+  {
+   "runde": 1,
+   "paar": [
+    "K2",
+    "K3"
+   ],
+   "kriterien": [
+    "Wärme in der CMU",
+    "Kosten",
+    "Wirkungsgrad"
+   ]
+  },
+  {
+   "runde": 1,
+   "paar": [
+    "K2",
+    "K4"
+   ],
+   "kriterien": [
+    "Bauraum"
+   ]
+  },
+  {
+   "runde": 1,
+   "paar": [
+    "K2",
+    "K5"
+   ],
+   "kriterien": [
+    "Wärme in der CMU"
+   ]
+  },
+  {
+   "runde": 1,
+   "paar": [
+    "K3",
+    "K4"
+   ],
+   "kriterien": [
+    "Bauraum"
+   ]
+  },
+  {
+   "runde": 1,
+   "paar": [
+    "K3",
+    "K5"
+   ],
+   "kriterien": [
+    "Ausgleichszeit",
+    "Wärme in der CMU",
+    "Kosten",
+    "Wirkungsgrad"
+   ]
+  },
+  {
+   "runde": 1,
+   "paar": [
+    "K4",
+    "K5"
+   ],
+   "kriterien": [
+    "Bauraum",
+    "Wirkungsgrad"
+   ]
+  },
+  {
+   "runde": 2,
+   "paar": [
+    "K1",
+    "K2"
+   ],
+   "kriterien": [
+    "Fehlermöglichkeiten (FSR, HARA)"
+   ]
+  },
+  {
+   "runde": 2,
+   "paar": [
+    "K2",
+    "K4"
+   ],
+   "kriterien": [
+    "Bauraum"
+   ]
+  },
+  {
+   "runde": 2,
+   "paar": [
+    "K2",
+    "K5"
+   ],
+   "kriterien": [
+    "Wärme in der CMU"
+   ]
+  },
+  {
+   "runde": 2,
+   "paar": [
+    "K3",
+    "K4"
+   ],
+   "kriterien": [
+    "Bauraum"
+   ]
+  },
+  {
+   "runde": 2,
+   "paar": [
+    "K3",
+    "K5"
+   ],
+   "kriterien": [
+    "Ausgleichszeit",
+    "Wärme in der CMU",
+    "Kosten",
+    "Wirkungsgrad"
+   ]
+  },
+  {
+   "runde": 2,
+   "paar": [
+    "K4",
+    "K5"
+   ],
+   "kriterien": [
+    "Bauraum",
+    "Wirkungsgrad"
+   ]
+  }
+ ]
+}

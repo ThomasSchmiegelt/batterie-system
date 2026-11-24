@@ -1,0 +1,1 @@
+{"urteile":{"Bauraum":{"gewinner":"A","grund":"Konzept A verdoppelt lediglich die Platinenfläche (Basis 120 × 60 × 10 mm) und ergänzt ein Wärmeleitpad, bleibt aber ein eigenständiges Modul; Konzept B benötigt zusätzlich Pumpe, Reservoir, Leitungsbündel und Wärmeübertrager als eigenständigen Fahrzeugkreislauf mit Routing und Wartungszugang.","zahl":null}}}

@@ -1,0 +1,1 @@
+{"urteile":{"Reifegrad":{"gewinner":"B","grund":"Konzept B baut auf der bestehenden 120 × 60-mm-Platine auf und ergänzt mechanisch (Wärmeleitpad, Widerstandsumplatzierung), während Konzept A ein größeres Layout mit zusätzlichem Kupfer und den bereits bestehenden 212 ungerouteten Verbindungen neu entwerfen muss.","zahl":{"wert":"212 Verbindungen nicht geroutet","quelle":"F5"}}}}

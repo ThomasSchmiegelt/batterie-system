@@ -1,0 +1,4 @@
+SES True
+SES True
+LFP 0 0 {}
+NMC 15 1 {'track_width': 2, 'via_dangling': 13}

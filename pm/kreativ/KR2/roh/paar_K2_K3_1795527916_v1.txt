@@ -1,0 +1,1 @@
+{"urteile":{"Nachweisaufwand":{"gewinner":"B","grund":"2oo3 mit FSR-06 erlaubt ASIL-Zerlegung, sodass die einzelnen Software-Kanäle kein volles ASIL D erfüllen müssen, und die CMU-Hardware-FMEDA erfüllt SPFM und LFM bereits; A konzentriert das gesamte ASIL D auf einen einzigen Softwarekanal.","zahl":{"wert":"SPFM 0,9992; LFM 0,9814","quelle":"F5"}}}}

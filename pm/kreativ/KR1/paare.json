@@ -1,0 +1,898 @@
+{
+ "kopf": "KI-generiert (PI, qwen-gross, ohne Werkzeuge). Urteil je geordnetem Paar (erstes = A), Einschätzung, keine Rechnung. Zahlen aus problem.json fakten.",
+ "urteile": {
+  "K2|K4": {
+   "stand": "2026-11-24T10:44:05",
+   "runde": 0,
+   "uebernommen": "lauf2/paare.json",
+   "kriterien": {
+    "Ausgleichszeit": {
+     "gewinner": "gleich",
+     "grund": "Beide Konzepte liefern im Mittel 130 mA, daher ist die Ausgleichszeit von ca. 14,2 h identisch.",
+     "zahl": {
+      "wert": "14,2 h bei 130 mA",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Wärme in der CMU": {
+     "gewinner": "B",
+     "grund": "B verlagert die Widerstandsverlustwärme auf die Kühlplatte; in der CMU bleibt nur der FET-Verlust von 0,008 W.",
+     "zahl": {
+      "wert": "0,008 W FET",
+      "quelle": "F2"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Kosten": {
+     "gewinner": "A",
+     "grund": "A benötigt nur einen Widerstand und eine Konstantstromquelle; B erfordert Schalter, Temperatursensor und Taktlogik.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Bauraum": {
+     "gewinner": "B",
+     "grund": "B entfernt den Leistungswiderstand von der ohnehin eng beplanten 120 × 60 mm-Platine mit 212 nicht gerouteten Verbindungen.",
+     "zahl": {
+      "wert": "120 x 60 mm, 212 nicht geroutet",
+      "quelle": "F5"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Wirkungsgrad": {
+     "gewinner": "gleich",
+     "grund": "Beide verbrennen die Ausgleichsladung im Widerstand; der FET-Verlust von 0,008 W bei B ist vernachlässigbar.",
+     "zahl": {
+      "wert": "0,008 W",
+      "quelle": "F2"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+     "gewinner": "A",
+     "grund": "Konzept A fügt nur ein Wärmeleitpad als neue Fehlerquelle hinzu, während Konzept B zusätzlich Schaltungselement (Takt-FET), Temperatursensor, längere Leiterbahnen zur Kühlplatte und einen mechanisch am Gehäuse befestigten Widerstand einführt; je jedes Element eine eigene FSR- und HARA-Position.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Reifegrad": {
+     "gewinner": "A",
+     "grund": "Passiver Widerstand direkt auf der BMS-Platine bei konstantem Strom (130 mA) ist das in Pkw-BMS am weitesten verbreitete Ausgleichsprinzip, wohingegen der Widerstand auf der Kühlplatte mit Taktung und Temperaturführung in Serienentwürfen kaum begegnet.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K2|K5": {
+   "stand": "2026-11-24T10:44:18",
+   "runde": 0,
+   "uebernommen": "lauf2/paare.json",
+   "kriterien": {
+    "Ausgleichszeit": {
+     "gewinner": "B",
+     "grund": "Aktiver induktiver Ausgleich bei 1 bis 2 A ist deutlich schneller als der passive Widerstandsausgleich mit nur 130 mA; die passive Zeit von 14,2 h bei 130 mA zeigt die Untergrenze von Konzept A.",
+     "zahl": {
+      "wert": "14,2 h bei 130 mA",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Wärme in der CMU": {
+     "gewinner": "B",
+     "grund": "Konzept B erzeugt kaum Verlustwärme in der CMU, während Konzept A bei 9,83 W die Temperaturgrenze von 105 °C bei 45 °C Umgebung überschreitet (111,9 °C platine) und einen Wärmeabfuhrpfad nötig macht.",
+     "zahl": {
+      "wert": "111,9 °C bei 45 °C Umgebung, Grenze 105 °C",
+      "quelle": "F3"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Kosten": {
+     "gewinner": "A",
+     "grund": "Passive Widerstands- und FET-Schaltschaltung benötigt weniger und günstigere Bauteile als aktive Transformatoren, Induktivitäten und Steuerlogik für 1 bis 2 A.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Bauraum": {
+     "gewinner": "A",
+     "grund": "Widerstand und FET passen auf die vorhandene CMU-Platine ohne zusätzlichen Volumen; Induktivitäten oder Übertrager für Konzept B都需要 zusätzlichen Raum auf der bereits eng dimensionierten 120 x 60 mm Platine mit 106 bis 108 Teilen.",
+     "zahl": {
+      "wert": "120 x 60 mm, 106 bis 108 Teile, 4 Lagen",
+      "quelle": "F5"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Wirkungsgrad": {
+     "gewinner": "B",
+     "grund": "Der aktive induktive Pfad überträgt Energie zwischen Zell und Modul, während Konzept A den gesamten Ausgleichstrom als Verlustwärme in der CMU verbrennt; bei 9,83 W je CMU geht die gesamte Ausgleichsenergie verloren.",
+     "zahl": {
+      "wert": "9,83 W Verlustwärme je CMU",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+     "gewinner": "A",
+     "grund": "Konzept A fügt nur ein mechanisches Element (Wärmeleitpad) hinzu, während Konzept B Transformator, aktive Schalter und Steuerlogik einführt und damit deutlich mehr neue Fehlerarten (Wicklungskurzschluss, Schalterausfall, Softwarefehler) erzeugt.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Reifegrad": {
+     "gewinner": "A",
+     "grund": "Passiver RC-Ausgleich mit Wärmeleitpad zur Kühlplatte ist in Serien-BMS von Pkw weit verbreitet, während induktiver Zelle-zu-Modul-Ausgleich mit Übertrager in der Pkw-Serie kaum üblich ist.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K2|K6": {
+   "stand": "2026-11-24T10:44:37",
+   "runde": 0,
+   "uebernommen": "lauf2/paare.json",
+   "kriterien": {
+    "Ausgleichszeit": {
+     "gewinner": "B",
+     "grund": "Aktiver Ausgleich mit 1 bis 2 A überträgt die Ladung deutlich schneller als der passive Weg mit 130 mA, der 14,2 h benötigt.",
+     "zahl": {
+      "wert": "14,2 h",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Wärme in der CMU": {
+     "gewinner": "B",
+     "grund": "Das passive Konzept erzeugt 9,83 W Verlustwärme in der CMU und überschreitet die Platingrenze von 105 °C; das aktive Konzept hat kaum Verlust.",
+     "zahl": {
+      "wert": "9,83 W",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Kosten": {
+     "gewinner": "A",
+     "grund": "Der passive Widerstandsansatz ist einfacher und benötigt keine umschaltbare Kapazitor- und Treiberkette.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Bauraum": {
+     "gewinner": "A",
+     "grund": "Das passive Layout passt in 120 × 60 mm mit 106 bis 108 Bauteilen; aktive Schalter und Entkopplungskondensatoren erhöhen die Bauteilzahl.",
+     "zahl": {
+      "wert": "120 x 60 mm, 106 bis 108 Teile",
+      "quelle": "F5"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Wirkungsgrad": {
+     "gewinner": "B",
+     "grund": "Beim passiven Ausgleich geht die gesamte Ausgleichsenergie als Wärme im Widerstand verloren; das aktive Konzept transferiert die Ladung mit geringem Verlust.",
+     "zahl": {
+      "wert": "9,83 W Verlust",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+     "gewinner": "gleich",
+     "grund": "A führt ein Wärmeleitpad als neue mechanische Fehlerquelle ein, B hingegen mehrere Schalter und eine aktive Steuerlogik; beide Konzepte bringen jeweils eine vergleichbare Anzahl neuer Fehlerarten in den Bereichen Bauteile, Mechanik bzw. Software.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Reifegrad": {
+     "gewinner": "A",
+     "grund": "Passiver Widerstands-Ausgleich ist in nahezu jedem Serien-BMS von Pkw der Standard, wohingegen aktiver kapazitiver Ausgleich nur in Nischenanwendungen verbreitet ist und in der Pkw-Serienfertigung seltener zu finden ist.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K4|K2": {
+   "stand": "2026-11-24T10:45:08",
+   "runde": 0,
+   "uebernommen": "lauf2/paare.json",
+   "kriterien": {
+    "Ausgleichszeit": {
+     "gewinner": "gleich",
+     "grund": "Konzept A liefert bei 260 mA und 50 % Takt im Mittel 130 mA, womit der Netto-Ladestrom und damit die Ausgleichszeit faktisch identisch mit Konzept B sind.",
+     "zahl": {
+      "wert": "14,2 h bei 130 mA",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Wärme in der CMU": {
+     "gewinner": "A",
+     "grund": "Konzept A legt den Widerstand auf Kühlplatte oder Zellverbinder, sodass die 9,64 W Verlustleistung nicht mehr auf der CMU-Platine anfallen, die sonst 111,9 °C erreicht und die Grenze von 105 °C überschreitet.",
+     "zahl": {
+      "wert": "111,9 °C bei Grenze 105 °C",
+      "quelle": "F3"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Kosten": {
+     "gewinner": "B",
+     "grund": "Konzept B benötigt keinen Taktungs- und Temperaturregler für 260 mA / 50 % Puls, was die Elektronikkomplexität und damit die Teilekosten reduziert.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Bauraum": {
+     "gewinner": "A",
+     "grund": "Da der Ausgleichswiderstand auf der Kühlplatte bzw. am Zellverbinder sitzt, bleibt auf der 120×60-mm-Platine Platz für die 212 derzeit nicht gerouteten Verbindungen sowie für fehlende Entkopplung und ESD-Bauteile.",
+     "zahl": {
+      "wert": "212 Verbindungen nicht geroutet",
+      "quelle": "F5"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Wirkungsgrad": {
+     "gewinner": "gleich",
+     "grund": "Beide Konzepte sind passiv-widerstandsbasiert und übertragen denselben Netto-Strom (130 mA im Mittel), sodass der spezifische Wirkungsgrad (geglichenes Q / verlorene Energie) identisch ist.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+     "gewinner": "B",
+     "grund": "Konzept B bleibt beim Ist-Strom von 130 mA konstant und fügt nur ein Wärmeleitpad hinzu; Konzept A erweitert das System um einen verlagerten Widerstand, ein 50-%-Taktsignal, einen Temperatursensor und höhere Spulen- und Leiterbahnenbelastung, wodurch neue Fehlerarten in Mechanik, Software und Schaltung entstehen.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Reifegrad": {
+     "gewinner": "B",
+     "grund": "Passiver Widerstandsausgleich bei konstantem Niedrigstrom ist in Pkw-Serien-BMS weit verbreitet und ausgereift, während taktgeschaltete, temperaturgeführte und extern verlegte Widerstandsanordnungen keine Standardlösung im Fahrzeugumfeld darstellen.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K4|K5": {
+   "stand": "2026-11-24T10:45:26",
+   "runde": 0,
+   "uebernommen": "lauf2/paare.json",
+   "kriterien": {
+    "Ausgleichszeit": {
+     "gewinner": "B",
+     "grund": "Aktiv induktiv mit 1–2 A überträgt die Ladung deutlich schneller als passiv mit ca. 130 mA, bei dem die Ausgleichezeit im Bereich von 14 Stunden liegt.",
+     "zahl": {
+      "wert": "14,2 h bei 130 mA",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Wärme in der CMU": {
+     "gewinner": "B",
+     "grund": "Der aktive induktive Weg erzeugt kaum Verlustwärme in der CMU, während der passive Widerstand 9,64 W pro CMU abgibt und die 105-°C-Grenze überschreitet.",
+     "zahl": {
+      "wert": "9,64 W je CMU",
+      "quelle": "F2"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Kosten": {
+     "gewinner": "A",
+     "grund": "Passiver Widerstand mit FET und Wärmeleitpad ist in Stückzahlen günstiger als ein induktiver Übertrager mit Steuerkreis und Treiberschaltung.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Bauraum": {
+     "gewinner": "A",
+     "grund": "Der Widerstand wird auf die Kühlplatte verlegt und benötigt nur ein Wärmeleitpad; ein induktiver Übertrager mit Wicklung und Spule erhöht die bereits bei 120 × 60 mm belegte Fläche.",
+     "zahl": {
+      "wert": "120 × 60 mm, 106–108 Teile",
+      "quelle": "F5"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Wirkungsgrad": {
+     "gewinner": "B",
+     "grund": "Der aktive induktive Ausgleich überträgt Energie zwischen den Zellen, während der passive Widerstand den Ausgleichsstrom vollständig in Wärme umwandelt.",
+     "zahl": {
+      "wert": "0,264 W je Widerstand",
+      "quelle": "F2"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+     "gewinner": "A",
+     "grund": "Konzept A führt nur einen neuen mechanischen Fehler (Pad-Lösen) und einen Widerstand ein, während Konzept B mehrere aktive Halbleiter, einen Übertrager und eine dauerhafte Regelsoftware als zusätzliche Fehlerquellen gegenüber FSR-01, FSR-02 und FSR-06 bringt.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Reifegrad": {
+     "gewinner": "A",
+     "grund": "Passiver Widerstandsausgleich mit 260 mA und Taktung ist in Serien-BMS von Pkw verbreitet, wohingegen ein aktiv induktiver Zell-zu-Modul-Ausgleich mit Übertrager in der Pkw-Serie kein etabliertes Prinzip ist.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K4|K6": {
+   "stand": "2026-11-24T10:45:49",
+   "runde": 0,
+   "uebernommen": "lauf2/paare.json",
+   "kriterien": {
+    "Ausgleichszeit": {
+     "gewinner": "B",
+     "grund": "Aktiv mit 1–2 A statt 130 mA sinkt die Ausgleichszeit um den Faktor 8–15; der passive Fall benötigt 14,2 h.",
+     "zahl": {
+      "wert": "14,2 h bei 130 mA",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Wärme in der CMU": {
+     "gewinner": "B",
+     "grund": "Im aktiven Konzept entsteht kaum Verlustwärme; der passive Widerstand erzeugt 9,64 W und hebt die Platinentemperatur auf 111,9 °C über die Grenze von 105 °C.",
+     "zahl": {
+      "wert": "9,64 W; 111,9 °C",
+      "quelle": "F3"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Kosten": {
+     "gewinner": "A",
+     "grund": "Passive Widerstände und ein Wärmeleitpad sind günstiger als aktive Schalter, Kondensatoren und Regellogik; konkrete Kostenzahlen liegen nicht vor.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Bauraum": {
+     "gewinner": "A",
+     "grund": "Die Platine 120 × 60 mm mit 106–108 Teilen passt bereits; Konzept B benötigt zusätzlich Kondensatoren und Schaltstufen, die den vorhandenen Platz überschreiten können.",
+     "zahl": {
+      "wert": "120 × 60 mm, 106–108 Teile",
+      "quelle": "F5"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Wirkungsgrad": {
+     "gewinner": "B",
+     "grund": "Aktives Kapazitätskoppeln überträgt Ladung mit geringem Verlust; der passive Widerstand verbrät 0,264 W pro Widerstand dauerhaft.",
+     "zahl": {
+      "wert": "0,264 W je Widerstand",
+      "quelle": "F2"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+     "gewinner": "A",
+     "grund": "Konzept A behält das passive Widerstandsprinzip und fügt im Wesentlichen ein mechanisches Wärmeleitpad und Taktung hinzu; Konzept B führt eine aktive Umschaltschaltung mit mehreren Leistungsstufen bei 1 bis 2 A, einen Kondensator und eine Steuerlogik ein, was deutlich mehr neue Bauteil- und Schaltfehlerarten erzeugt.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Reifegrad": {
+     "gewinner": "A",
+     "grund": "Passiver Widerstandsausgleich ist das in Pkw-Serien-BMS weitverbreitete Standardprinzip; der umgeschaltete Kondensator nach Konzept B kommt in Volumen-Pkw vereinzelt vor, ist aber kein verbreitetes Serienprinzip.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K5|K2": {
+   "stand": "2026-11-24T10:46:06",
+   "runde": 0,
+   "uebernommen": "lauf2/paare.json",
+   "kriterien": {
+    "Ausgleichszeit": {
+     "gewinner": "A",
+     "grund": "Konzept A mit 1 bis 2 A aktiv überträgt die Ausgleichsladung deutlich schneller als Konzepts B 130 mA, bei dem 14,5 h bei Höchstspannung gemessen wurden.",
+     "zahl": {
+      "wert": "14,5 h",
+      "quelle": "F2"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Wärme in der CMU": {
+     "gewinner": "A",
+     "grund": "Konzept A erzeugt kaum Verlustwärme in der CMU, während Konzepts B 9,83 W bei Höchstspannung abführt und damit die 10-W-Grenze nahezu ausschöpft.",
+     "zahl": {
+      "wert": "9,83 W",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Kosten": {
+     "gewinner": "B",
+     "grund": "Konzept B nutzt einen passiven Widerstand ohne Transformatoren oder Aktivelemente, was den Bauteileinkauf und die Fertigung günstiger macht als die induktive Schaltung von A.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Bauraum": {
+     "gewinner": "B",
+     "grund": "Konzept B hat die Platine 120 × 60 mm bereits validiert, während A zusätzlich einen Übertrager und aktive Komponenten einplanen muss und damit mehr Volumen benötigt.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Wirkungsgrad": {
+     "gewinner": "A",
+     "grund": "Konzept A überträgt die Ausgleichsladung über einen Transformator mit geringen Verlusten, während Konzepts B die gesamte Ausgleichsenergie von 9,83 W als Wärme im Widerstand verliert.",
+     "zahl": {
+      "wert": "9,83 W",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+     "gewinner": "B",
+     "grund": "Konzept B führt nur die mechanische Gefahr eines loslösenden Wärmeleitpads hinzu, während Konzept A Transformator-Isolationsfehler, aktive Schalter, Steuerungssoftware und höhere Ströme (1–2 A statt 130 mA) als neue Fehlerarten einbringt.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Reifegrad": {
+     "gewinner": "B",
+     "grund": "Passiver Widerstands-Ausgleich ist das in nahezu allen Pkw-Serien-BMS eingesetzte Standardprinzip, während induktiver aktiver Ausgleich (Übertrager) in der Pkw-Serienproduktion kaum verbreitet ist.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K5|K4": {
+   "stand": "2026-11-24T10:46:25",
+   "runde": 0,
+   "uebernommen": "lauf2/paare.json",
+   "kriterien": {
+    "Ausgleichszeit": {
+     "gewinner": "A",
+     "grund": "Concept A balanciert mit 1 bis 2 A aktiv, Concept B nur mit 260 mA bei 50 % Taktung (effektiv 130 mA), daher ist A deutlich schneller.",
+     "zahl": {
+      "wert": "14,2 h bei 130 mA",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Wärme in der CMU": {
+     "gewinner": "A",
+     "grund": "Bei aktiv induktivem Ausgleich entstehen kaum Verluste, während der passive Pfad 9,83 W an der CMU abgibt und die Grenze von 10 W nahezu erreicht.",
+     "zahl": {
+      "wert": "9,83 W bei Höchstspannung, Grenze 10 W",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Kosten": {
+     "gewinner": "B",
+     "grund": "Der passive Widerstandsansatz benötigt nur FET, Widerstand und Wärmeleitpad, während das aktive Konzept mehrere Übertrager und eine aufwendigere Steuerelektronik erfordert.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Bauraum": {
+     "gewinner": "B",
+     "grund": "Die Platine 2 mit 120 x 60 mm und 4 Lagen passt mit 106 bis 108 Teilen, während das active Konzept zusätzliche Übertrager und Wicklungen im Bauraum benötigt.",
+     "zahl": {
+      "wert": "120 x 60 mm, 106 bis 108 Teile",
+      "quelle": "F5"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Wirkungsgrad": {
+     "gewinner": "A",
+     "grund": "Das aktive induktive Konzept wandelt Energie zwischen Zellen um und streut kaum Verlust, der passive Widerstand dissipiert dagegen 9,83 W irreversibel als Wärme.",
+     "zahl": {
+      "wert": "9,83 W Verlust je CMU",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+     "gewinner": "B",
+     "grund": "Konzept A führt Transformator, aktive Driver und Schalter (Strom 1–2 A) als neue Bauteile hinzu und damit mehrere zusätzliche FSR-01-Fehlerarten; Konzept B fügt lediglich ein Wärmeleitpad hinzu, ein einzelner FSR-06-Punkt (Pad löst sich).",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Reifegrad": {
+     "gewinner": "B",
+     "grund": "Passiver Widerstandsausgleich mit Wärmeabfuhr über Kühlplatte ist das in Pkw-Serien-BMS standardmäßige Prinzip; aktiv-induktiver Ausgleich per Übertrager ist in Pkw-Serien nicht verbreitet.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K5|K6": {
+   "stand": "2026-11-24T10:46:40",
+   "runde": 0,
+   "uebernommen": "lauf2/paare.json",
+   "kriterien": {
+    "Ausgleichszeit": {
+     "gewinner": "gleich",
+     "grund": "Beide Konzepte spezifizieren 1 bis 2 A aktiven Ausgleich; die passive Referenz liegt bei 130 mA mit 14,2 h (F1), sodass beide Konzepte in derselben Größenordnung landen.",
+     "zahl": {
+      "wert": "130 mA / 14,2 h",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Wärme in der CMU": {
+     "gewinner": "gleich",
+     "grund": "Beide Konzepte deklarieren kaum Verlust; die passive Verlustleistung von 9,83 W (F1) und die Plattentemperatur über 105 °C (F3) sind das gemeinsame Problem, das beide gleich lösen.",
+     "zahl": {
+      "wert": "9,83 W",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Kosten": {
+     "gewinner": "gleich",
+     "grund": "Die FAKTEN liefern keine unterschiedlichen Stückzahlen oder Bauteilkosten für transformatorgestützten versus kondensatorbasierten Ausgleich; die passive Platine hat 106 bis 108 Teile (F5), eine aktive Variante würde bei beiden Konzepten Komponenten hinzufügen.",
+     "zahl": {
+      "wert": "106 bis 108 Teile",
+      "quelle": "F5"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Bauraum": {
+     "gewinner": "gleich",
+     "grund": "Bei 912 V (F6) benötigen beide Konzepte Hochspannungskomponenten; die FAKTEN geben keine unterschiedlichen Abmessungen für einen Übertrager gegenüber einem Kondensator an, die Platine ist 120 × 60 mm (F3/F5).",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Wirkungsgrad": {
+     "gewinner": "gleich",
+     "grund": "Beide Konzepte führen kaum Verlust an; die passive Verlustleistung von 0,264 W pro Widerstand (F2) und 9,64 W insgesamt (F2) wird bei beiden aktiven Ansätzen gleich gering gehalten, eine differenzierende Wirkungsgradzahl fehlt.",
+     "zahl": {
+      "wert": "0,264 W",
+      "quelle": "F2"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+     "gewinner": "B",
+     "grund": "Konzept A (induktiv) führt einen Übertrager mit Wicklung, Kerndurchmesser, Isolation und Magnetkern ein, wodurch sich mehrere eigenständige neue Fehlermechanismen (Wicklungskurzschluss, Kernbruch, Isolationsversagen) ergeben, während Konzept B (kapazitiv) lediglich einen umgeschalteten Kondensator und FETs benötigt und damit eine geringere Zahl an ausfallenden Bauteilen und einfacher nachvollziehbare Fehlerpfade aufweist.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "vorher": "B",
+     "runde": 2
+    },
+    "Reifegrad": {
+     "gewinner": "B",
+     "grund": "Umggeschaltete Kondensatoren als aktive Zellausgleichs-Stufe sind der Standard in Pkw-BMS (z. B. bei Infineon, TI), während Übertrager-basierter aktiver Ausgleich in Pkw-Serienbauteilen selten ist.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K6|K2": {
+   "stand": "2026-11-24T10:46:57",
+   "runde": 0,
+   "uebernommen": "lauf2/paare.json",
+   "kriterien": {
+    "Ausgleichszeit": {
+     "gewinner": "A",
+     "grund": "Aktiv kapazitiv mit 1 bis 2 A ist deutlich schneller als passiv mit 130 mA; die Referenzzeit für B liegt bei 14,2 h.",
+     "zahl": {
+      "wert": "14,2 h bei 130 mA",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Wärme in der CMU": {
+     "gewinner": "A",
+     "grund": "Aktiver Ausgleich erzeugt kaum Verlustwärme, während der passive Weg 9,83 W in der CMU freisetzt.",
+     "zahl": {
+      "wert": "9,83 W",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Kosten": {
+     "gewinner": "B",
+     "grund": "Passiv braucht nur einen Widerstand und einen FET; aktiv erfordert Spule, Kondensator und Schaltkreise.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Bauraum": {
+     "gewinner": "B",
+     "grund": "Die passive Platine passt nachweislich in 120 x 60 mm; der aktive Pfad benötigt Zusatzelemente.",
+     "zahl": {
+      "wert": "120 x 60 mm",
+      "quelle": "F5"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Wirkungsgrad": {
+     "gewinner": "A",
+     "grund": "Kapazitive Energielumverteilung verbraucht keinen Strom, der passiv als 9,83 W abwärme verloren geht.",
+     "zahl": {
+      "wert": "9,83 W",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+     "gewinner": "B",
+     "grund": "Konzept B nutzt nur einen Widerstand plus FET, während Konzept A mehrere Schalter, einen Kondensator und eine Steuerlogik einbringt, die jeweils neue Fehlerarten (z. B. FET kurz → Zellenkurzschluss, Schalter klemmt, Softwarefehler) gegenüber FSR-01 und FSR-06 erzeugen.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Reifegrad": {
+     "gewinner": "B",
+     "grund": "Passiver Widerstandsausgleich ist in nahezu jedem Serien-Pkw-BMS der Standard, während aktiver kapazitiver Ausgleich nur in少数 Nischen-Toplevel-Designs vorkommt und deutlich seltener in Pkw-Serien verbaut ist.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K6|K4": {
+   "stand": "2026-11-24T10:47:18",
+   "runde": 0,
+   "uebernommen": "lauf2/paare.json",
+   "kriterien": {
+    "Ausgleichszeit": {
+     "gewinner": "A",
+     "grund": "Aktiver Strom von 1 bis 2 A verkürzt die Ausgleichszeit gegenüber 130 mA passiv um ein Vielfaches.",
+     "zahl": {
+      "wert": "14,2 h bei 130 mA",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Wärme in der CMU": {
+     "gewinner": "A",
+     "grund": "Aktiv kapazitiv entstehen kaum Verluste in der CMU, während der passive Widerstand 9,83 W erzeugt und die Grenze von 10 W fast erreicht.",
+     "zahl": {
+      "wert": "9,83 W bei Höchstspannung (Grenze 10 W)",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Kosten": {
+     "gewinner": "B",
+     "grund": "Ein Widerstand und ein Wärmeleitpad sind deutluch günstiger als Schalter, Kondensatoren und Steuerlogik.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Bauraum": {
+     "gewinner": "B",
+     "grund": "Der Passivequivalent passt auf 120 x 60 mm bei 0 DRC-Verstößen, während A zusätzlich Schalter, Kondensatoren und Ansteuerung benötigt.",
+     "zahl": {
+      "wert": "120 x 60 mm, 0 Verstöße",
+      "quelle": "F5"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Wirkungsgrad": {
+     "gewinner": "A",
+     "grund": "Kapazitive Übertragung verliert nur FET-Widerstandsleistung, während der passive Weg die halbe Energie als 9,64 W Wärme vernichtet.",
+     "zahl": {
+      "wert": "9,64 W je CMU",
+      "quelle": "F2"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+     "gewinner": "B",
+     "grund": "Konzept B fügt nur ein passivem Widerstand und ein thermisches Pad hinzu, während Konzept A aktiv schaltende MOSFETs, Kondensatoren und Steuersoftware mit höheren Strömen (1–2 A) einbringt, was mehr neue elektronische Fehlerarten (FET-Gate-Ausfall, Kapazitätsdrift, Software) gegenüber FSR-01/FSR-02 erzeugt.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Reifegrad": {
+     "gewinner": "B",
+     "grund": "Passiver Widerstandsausgleich ist das Serien-Standardprinzip nahezu aller Pkw-BMS; der aktive kapazitive Ausgleich (geschalteter Kondensator) ist dagegen in der Pkw-Serie noch selten verbreitet.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K6|K5": {
+   "stand": "2026-11-24T10:47:43",
+   "runde": 0,
+   "uebernommen": "lauf2/paare.json",
+   "kriterien": {
+    "Ausgleichszeit": {
+     "gewinner": "gleich",
+     "grund": "Beide Konzepte arbeiten aktiv mit 1 bis 2 A und reduzieren die Ausgleichszeit gegenüber den 14,2 h bei 130 mA drastisch; der übertragbare Ladungsbetrag von 1,848 Ah ist identisch.",
+     "zahl": {
+      "wert": "14,2 h; dQ 1,848 Ah",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Wärme in der CMU": {
+     "gewinner": "A",
+     "grund": "Kapazitiver Ausgleich erzeugt Verluste nur in den MOSFETs und der Kondensator-ESR; der induktive Weg fügt Transformator- Kupfer- und Kernverluste hinzu, was die thermische Grenznähe von 9,83 W an der 10-W-Grenze stärker belastet.",
+     "zahl": {
+      "wert": "9,83 W (Grenze 10 W)",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Kosten": {
+     "gewinner": "A",
+     "grund": "Der umgeschaltete Kondensator und zwei MOSFET pro Zelle sind günstiger und haben weniger Bauteile als ein Transformator mit Wicklung, Kern und zusätzlichen Treibstrecke.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Bauraum": {
+     "gewinner": "A",
+     "grund": "Ein SMD-Kondensator und MOSFET nehmen weniger Fläche ein als ein Ferrit-Kern mit Wicklung und Schirmung; bei der vorhandenen Platine von 120 × 60 mm und 106 bis 108 Teilen bleibt A schlanker.",
+     "zahl": {
+      "wert": "120 × 60 mm; 106 bis 108 Teile",
+      "quelle": "F5"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Wirkungsgrad": {
+     "gewinner": "A",
+     "grund": "Die Energie wird über einen Kondensator direkt zwischen Zellen übertragen; der induktive Weg verliert zusätzlich in Kupfer und Kern des Übertragers, was den Wirkungsgrad senkt.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "uebernommen": true
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+     "gewinner": "B",
+     "grund": "Im induktiven Konzept B begrenzt die Transformatorinduktivität setiap Fehlerfall (MOSFET-Stuck-ON, Kernsättigung, Wicklungskurzschluss) auf einen strombegrenzten Überlastfall, während im kapazitiven Konzept A ein gleichzeitiges Schließen beider MOSFETs oder ein Kondensator-Kurzschluss einen ungehinderten Gleichstrom-Kurzschluss zwischen zwei Zellen mit nur Zelleninnenwiderstand und Rds(on) als Begrenzung erzeugt und damit FSR-01 und FSR-02 unmittelbar auslösen kann.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "vorher": "B",
+     "runde": 2
+    },
+    "Reifegrad": {
+     "gewinner": "gleich",
+     "grund": "Beide Prinzipien (umschaltbarer Kondensator, Übertrager) sind in der BMS-Literatur bekannt, in Pkw-Serien-BMS bei 1 bis 2 A pro Zelle jedoch noch Nischenverfahren; dominierend ist im Pkw weiter der passive Widerstandsausgleich.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  }
+ },
+ "nachfragen": [
+  {
+   "runde": 1,
+   "paar": [
+    "K5",
+    "K6"
+   ],
+   "kriterien": [
+    "Fehlermöglichkeiten (FSR, HARA)"
+   ]
+  },
+  {
+   "runde": 2,
+   "paar": [
+    "K5",
+    "K6"
+   ],
+   "kriterien": [
+    "Fehlermöglichkeiten (FSR, HARA)"
+   ]
+  }
+ ]
+}

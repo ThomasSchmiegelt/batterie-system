@@ -21,6 +21,9 @@ Frage des Autors (2026-11-23): „Ist es auch sinnvoll maschinensicherheitsricht
 | GB/T 31467, 31484, 31486 | Pack-Prüfverfahren, Lebensdauer, elektrische Leistung (China, empfohlen) | als Prüfverfahren | teils lesbar | W38 |
 | ISO 6469-1/-3, ISO 12405-4, IEC 62660-1/-2/-3 | elektrische Sicherheit, Prüfverfahren für Pack und Zelle | ja, Stand der Technik | **kostenpflichtig** | nur Titel und Umfang |
 | ISO 26262, ISO/SAE 21434, UN R155/R156 | funktionale Sicherheit und Cybersicherheit des BMS | ja, sobald BMS ausgelegt wird (REQ-P15) | ISO kostenpflichtig, UN frei | später |
+| CISPR 25, ISO 11452-2/-4, ISO 7637-2/-3, ISO 10605, UN R10 | EMV der Elektronik (REQ-P17) | ja, E3 | ISO/IEC kostenpflichtig; Pegel aus Gedächtnis sind Annahmen |
+| IEC 60664-1 | Luft- und Kriechstrecken (REQ-P19) | ja, E3 Platinen | kostenpflichtig |
+| ISO 16750-1…5, AEC-Q100/Q101/Q200, IPC-A-610, IPC-2152 | Umwelt, Bauteilqualifikation, Fertigung (REQ-P20) | ja, E3 | AEC-Q frei verfügbar |
 | Maschinenrichtlinie 2006/42/EG, ab 20.01.2027 Maschinenverordnung (EU) 2023/1230 | Sicherheit von Maschinen | **für das Pack im Pkw nein**: Straßenfahrzeuge mit Typgenehmigung sind ausgenommen (zu belegen, W37). **Ja** für Montageanlage, Prüfstände und Batterien in Maschinen (z. B. Flurförderzeuge) | frei (EUR-Lex) | W37 |
 | ISO 12100 | Risikobeurteilung für Maschinen | Methode übertragbar auf die FMEA (BAT-DOC-05) | kostenpflichtig | – |
 | VDA-Bände (VDA 6.3, Reifegradabsicherung, AIAG-VDA-FMEA, VDA 2) | Qualitätsprozesse der Lieferkette | ja, für den Prozess, nicht für Grenzwerte | **kostenpflichtig** (VDA QMC) | nur Titel und Gliederung |

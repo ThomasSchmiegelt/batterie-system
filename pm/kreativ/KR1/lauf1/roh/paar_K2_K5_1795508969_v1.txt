@@ -1,0 +1,39 @@
+{
+  "urteile": {
+    "Ausgleichszeit": {
+      "gewinner": "B",
+      "grund": "Parallele Auslösung aller 18 Kanäle kurzfristig beendet den Ausgleich schneller als der gepulste Betrieb mit gleicher mittlerer Leistung.",
+      "zahl": {"wert": "14,2 h bei 130 mA", "quelle": "F1"}
+    },
+    "Wärme in der CMU": {
+      "gewinner": "A",
+      "grund": "Der geschlossene Flüssigkeitskühlkreis führt die Verlustwärme extern ab, sodass die CMU-Platte nicht mehr die 60–100 K Übertemperatur nach F5 aufweist.",
+      "zahl": {"wert": "9,8 W → 60–100 K Übertemperatur auf 120×60 mm", "quelle": "F5"}
+    },
+    "Kosten": {
+      "gewinner": "gleich",
+      "grund": "Beide Konzepte benötigen zusätzliche Hardware (Flüssigkeitskreis vs. Ultraschall-Treiber + Transformatoren), ohne dass eine FAKTEN-Zahl einen Kostenunterschied belegt.",
+      "zahl": null
+    },
+    "Bauraum": {
+      "gewinner": "A",
+      "grund": "Die externe Flüssigkeitskühlung bleibt außerhalb der 120×60×10 mm-Platine; B trägt Kühlplatte und Ultraschall-Treiber zusätzlich auf der CMU.",
+      "zahl": {"wert": "120 × 60 × 10 mm, 80 g, 130–170 Bauteile", "quelle": "F6"}
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+      "gewinner": "B",
+      "grund": "Ein Ausfall des Ultraschall-Treibers ist nicht sicherheitskritisch, während eine Flüssigkeitskühlung ein Leckagelerisiko direkt an der Elektronik darstellt.",
+      "zahl": null
+    },
+    "Wirkungsgrad": {
+      "gewinner": "gleich",
+      "grund": "Sowohl PWM-Umschaltung als auch Transformatorkopplung sind aktive Balancierverfahren mit typisch <5 % Verlust; keine FAKTEN-Ziffer unterscheidet die beiden.",
+      "zahl": null
+    },
+    "Reifegrad": {
+      "gewinner": "A",
+      "grund": "PWM, Flüssigkeitskühlung und Dormanz-Management sind als Patent und Stand der Technik nachgewiesen, während Ultraschall-Konvektion auf PCB noch als Vermutung gilt.",
+      "zahl": {"wert": "Patent 6 – BMS wacht periodisch auf, gleicht aus, schaltet bei hoher Temperatur ab", "quelle": "F9"}
+    }
+  }
+}

@@ -1,0 +1,1 @@
+{"optionen":[{"name":"Passiver Widerstandsausgleich auf CMU","quelle":"Fakt F4"},{"name":"Gepulster Hochstrom, gleiche mittlere Leistung","quelle":"TRIZ-35"},{"name":"Transformergekoppelter aktiver Zellenausgleich","quelle":"TRIZ-28"},{"name":"Vorgleich in Dormanzaufwachphase","quelle":"TRIZ-10"},{"name":"Paralleler Gleichstromausgleich aller Kanäle","quelle":"TRIZ-21"}]}

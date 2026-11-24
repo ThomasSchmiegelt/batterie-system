@@ -40,6 +40,8 @@ E = {
  "A_e2d_bruecke_mm": a([25, 3, 80], N3), "A_e2d_bruecke_schrauben": a([2, 8], N3 + ": 2 x M8 mit Scheibe"), "A_e2d_hvil_mm": a([15, 10, 8], N3),
  "A_e2d_servicedeckel_mm": a([120, 80, 2], N3), "A_e2d_servicedeckel_schrauben": a([6, 5], N3 + ": 6 x M5 (Senkkopf bündig, Kopfhöhe = Deckeldicke)"), "A_e2d_servicedeckel_dichtung_mm": a([3, 3], N3),
  "A_e2d_servicedeckel_rand_mm": a(12, ab("Rand des Haupt-Deckels um die Serviceöffnung für Dichtung (3) und Senkschrauben; Öffnung im Deckel = 120 x 80 minus 2 x 12")),
+ # ---- E3c Teil A (Opus, ERW-E3c): lichte Höhe innen im Servicedeckel = Schraubenstapel M8 + Zugabe; Wert jetzt aus parameter.json (BT-722 lichte_hoehe_zugabe_mm, ENT-194)
+ "A_e3c_kontakt_schwelle_mm3": a(0.01, "ERW-E3c Teil A: Schwelle nur für verschraubte Paare (Liste im Skript)"),
  # ---- Verbinder
  "A_e2d_omega_h_mm": a(4, N3 + ": Dehnbogen (Omega) h 4"), "A_e2d_schweiss_mm": a([10, 1, 0.2, 2], N3 + ": 2 Linien 10 x 1, Vertiefung 0,2 je Pol"), "A_e2d_schweiss_abstand_mm": a(5, ab("Abstand der zwei Linien 5 mm (Mitte zu Mitte)")),
  "A_e2d_beruehrschutz_dicke_mm": a(1, N3),

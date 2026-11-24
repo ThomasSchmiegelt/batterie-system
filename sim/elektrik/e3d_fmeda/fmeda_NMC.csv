@@ -1,0 +1,633 @@
+Ref;Klasse;Rolle;FIT;Ausfallart;Anteil;lambda_FIT;SG;Einstufung;DC;lambda_SR;lambda_RF;lambda_MPF_latent;Begruendung
+J1;Stecker;Zellabgriff-Stecker J1;2;offen;0.7;1.4;SG-01;RF;0.99;1.4;0.014;0;"gemeinsame Ursache: AFE und Sekundaerschutz liegen am selben Stecker, kein unabhaengiger Weg; AFE-Diagnose deckt, Restfehler (konservativ)"
+J1;Stecker;Zellabgriff-Stecker J1;2;offen;0.7;1.4;SG-02;RF;0.99;1.4;0.014;0;"Leitungsbruch bzw. Messfehler; Restfehler (1-DC)"
+J1;Stecker;Zellabgriff-Stecker J1;2;Kurzschluss benachbarter Pins;0.3;0.6;SG-01;RF;0.99;0.6;0.006;0;"gemeinsame Ursache: AFE und Sekundaerschutz liegen am selben Stecker, kein unabhaengiger Weg; AFE-Diagnose deckt, Restfehler (konservativ)"
+J1;Stecker;Zellabgriff-Stecker J1;2;Kurzschluss benachbarter Pins;0.3;0.6;SG-02;RF;0.99;0.6;0.006;0;"Leitungsbruch bzw. Messfehler; Restfehler (1-DC)"
+U1;AFE-IC;AFE;20;Messfehler;0.5;10;SG-01;MPF;0.99;10;0;0.1;AFE-Selbsttest 99 %, Rest deckt unabhaengiger Sekundaerschutz (ERW), latent
+U1;AFE-IC;AFE;20;Messfehler;0.5;10;SG-02;RF;0.99;10;0.1;0;kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)
+U1;AFE-IC;AFE;20;Ausfall Kommunikation;0.3;6;SG-01;sicher;;0;0;0;Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet)
+U1;AFE-IC;AFE;20;Ausfall Kommunikation;0.3;6;SG-02;sicher;;0;0;0;Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet)
+U1;AFE-IC;AFE;20;Ausgleich haengt an;0.2;4;SG-01;sicher;;0;0;0;Ausgleich entlaedt, senkt die Zellspannung
+U1;AFE-IC;AFE;20;Ausgleich haengt an;0.2;4;SG-02;RF;0.9;4;0.4;0;"Ausgleich haengt an (ungefaehr eine Zelle dauernd entladen, ganzes IC-Anteil angesetzt); Ueberwachung 90 %, Restfehler"
+R1;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-01;MPF;0.99;0.18;0;0.0018;"Leitungsbruch; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R1;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-02;RF;0.99;0.18;0.0018;0;"Leitungsbruch; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R1;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-01;MPF;0.99;0.03;0;0.0003;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R1;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.99;0.03;0.0003;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R1;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-01;MPF;0.99;0.09;0;0.0009;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R1;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-02;RF;0.99;0.09;0.0009;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R2;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-01;MPF;0.99;0.18;0;0.0018;"Leitungsbruch; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R2;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-02;RF;0.99;0.18;0.0018;0;"Leitungsbruch; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R2;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-01;MPF;0.99;0.03;0;0.0003;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R2;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.99;0.03;0.0003;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R2;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-01;MPF;0.99;0.09;0;0.0009;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R2;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-02;RF;0.99;0.09;0.0009;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R3;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-01;MPF;0.99;0.18;0;0.0018;"Leitungsbruch; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R3;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-02;RF;0.99;0.18;0.0018;0;"Leitungsbruch; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R3;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-01;MPF;0.99;0.03;0;0.0003;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R3;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.99;0.03;0.0003;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R3;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-01;MPF;0.99;0.09;0;0.0009;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R3;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-02;RF;0.99;0.09;0.0009;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R4;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-01;MPF;0.99;0.18;0;0.0018;"Leitungsbruch; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R4;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-02;RF;0.99;0.18;0.0018;0;"Leitungsbruch; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R4;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-01;MPF;0.99;0.03;0;0.0003;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R4;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.99;0.03;0.0003;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R4;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-01;MPF;0.99;0.09;0;0.0009;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R4;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-02;RF;0.99;0.09;0.0009;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R5;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-01;MPF;0.99;0.18;0;0.0018;"Leitungsbruch; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R5;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-02;RF;0.99;0.18;0.0018;0;"Leitungsbruch; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R5;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-01;MPF;0.99;0.03;0;0.0003;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R5;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.99;0.03;0.0003;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R5;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-01;MPF;0.99;0.09;0;0.0009;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R5;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-02;RF;0.99;0.09;0.0009;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R6;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-01;MPF;0.99;0.18;0;0.0018;"Leitungsbruch; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R6;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-02;RF;0.99;0.18;0.0018;0;"Leitungsbruch; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R6;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-01;MPF;0.99;0.03;0;0.0003;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R6;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.99;0.03;0.0003;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R6;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-01;MPF;0.99;0.09;0;0.0009;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R6;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-02;RF;0.99;0.09;0.0009;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R7;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-01;MPF;0.99;0.18;0;0.0018;"Leitungsbruch; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R7;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-02;RF;0.99;0.18;0.0018;0;"Leitungsbruch; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R7;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-01;MPF;0.99;0.03;0;0.0003;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R7;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.99;0.03;0.0003;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R7;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-01;MPF;0.99;0.09;0;0.0009;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R7;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-02;RF;0.99;0.09;0.0009;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R8;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-01;MPF;0.99;0.18;0;0.0018;"Leitungsbruch; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R8;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-02;RF;0.99;0.18;0.0018;0;"Leitungsbruch; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R8;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-01;MPF;0.99;0.03;0;0.0003;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R8;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.99;0.03;0.0003;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R8;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-01;MPF;0.99;0.09;0;0.0009;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R8;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-02;RF;0.99;0.09;0.0009;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R9;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-01;MPF;0.99;0.18;0;0.0018;"Leitungsbruch; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R9;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-02;RF;0.99;0.18;0.0018;0;"Leitungsbruch; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R9;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-01;MPF;0.99;0.03;0;0.0003;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R9;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.99;0.03;0.0003;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R9;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-01;MPF;0.99;0.09;0;0.0009;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R9;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-02;RF;0.99;0.09;0.0009;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R10;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-01;MPF;0.99;0.18;0;0.0018;"Leitungsbruch; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R10;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-02;RF;0.99;0.18;0.0018;0;"Leitungsbruch; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R10;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-01;MPF;0.99;0.03;0;0.0003;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R10;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.99;0.03;0.0003;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R10;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-01;MPF;0.99;0.09;0;0.0009;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R10;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-02;RF;0.99;0.09;0.0009;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R11;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-01;MPF;0.99;0.18;0;0.0018;"Leitungsbruch; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R11;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-02;RF;0.99;0.18;0.0018;0;"Leitungsbruch; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R11;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-01;MPF;0.99;0.03;0;0.0003;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R11;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.99;0.03;0.0003;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R11;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-01;MPF;0.99;0.09;0;0.0009;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R11;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-02;RF;0.99;0.09;0.0009;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R12;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-01;MPF;0.99;0.18;0;0.0018;"Leitungsbruch; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R12;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-02;RF;0.99;0.18;0.0018;0;"Leitungsbruch; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R12;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-01;MPF;0.99;0.03;0;0.0003;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R12;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.99;0.03;0.0003;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R12;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-01;MPF;0.99;0.09;0;0.0009;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R12;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-02;RF;0.99;0.09;0.0009;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R13;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-01;MPF;0.99;0.18;0;0.0018;"Leitungsbruch; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R13;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-02;RF;0.99;0.18;0.0018;0;"Leitungsbruch; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R13;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-01;MPF;0.99;0.03;0;0.0003;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R13;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.99;0.03;0.0003;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R13;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-01;MPF;0.99;0.09;0;0.0009;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R13;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-02;RF;0.99;0.09;0.0009;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R14;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-01;MPF;0.99;0.18;0;0.0018;"Leitungsbruch; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R14;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-02;RF;0.99;0.18;0.0018;0;"Leitungsbruch; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R14;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-01;MPF;0.99;0.03;0;0.0003;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R14;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.99;0.03;0.0003;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R14;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-01;MPF;0.99;0.09;0;0.0009;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R14;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-02;RF;0.99;0.09;0.0009;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R15;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-01;MPF;0.99;0.18;0;0.0018;"Leitungsbruch; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R15;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-02;RF;0.99;0.18;0.0018;0;"Leitungsbruch; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R15;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-01;MPF;0.99;0.03;0;0.0003;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R15;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.99;0.03;0.0003;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R15;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-01;MPF;0.99;0.09;0;0.0009;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R15;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-02;RF;0.99;0.09;0.0009;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R16;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-01;MPF;0.99;0.18;0;0.0018;"Leitungsbruch; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R16;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-02;RF;0.99;0.18;0.0018;0;"Leitungsbruch; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R16;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-01;MPF;0.99;0.03;0;0.0003;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R16;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.99;0.03;0.0003;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R16;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-01;MPF;0.99;0.09;0;0.0009;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R16;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-02;RF;0.99;0.09;0.0009;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R17;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-01;MPF;0.99;0.18;0;0.0018;"Leitungsbruch; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R17;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-02;RF;0.99;0.18;0.0018;0;"Leitungsbruch; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R17;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-01;MPF;0.99;0.03;0;0.0003;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R17;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.99;0.03;0.0003;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R17;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-01;MPF;0.99;0.09;0;0.0009;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R17;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-02;RF;0.99;0.09;0.0009;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R18;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-01;MPF;0.99;0.18;0;0.0018;"Leitungsbruch; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R18;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-02;RF;0.99;0.18;0.0018;0;"Leitungsbruch; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R18;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-01;MPF;0.99;0.03;0;0.0003;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R18;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.99;0.03;0.0003;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R18;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-01;MPF;0.99;0.09;0;0.0009;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R18;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-02;RF;0.99;0.09;0.0009;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R19;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-01;MPF;0.99;0.18;0;0.0018;"Leitungsbruch; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R19;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;offen;0.6;0.18;SG-02;RF;0.99;0.18;0.0018;0;"Leitungsbruch; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R19;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-01;MPF;0.99;0.03;0;0.0003;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R19;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.99;0.03;0.0003;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+R19;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-01;MPF;0.99;0.09;0;0.0009;"Messfehler am Zellabgriff; AFE-Diagnose deckt, Rest faengt der unabhaengige Sekundaerschutz (FSR-01), latent"
+R19;Widerstand Chip;Filterwiderstand Zellabgriff;0.3;Drift;0.3;0.09;SG-02;RF;0.99;0.09;0.0009;0;"Messfehler am Zellabgriff; kein zweiter Weg fuer Tiefentladung, Restfehler (1-DC)"
+C1;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-01;MPF;0.99;0.2;0;0.002;"Zellabgriff kurzgeschlossen = Messfehler; AFE-Plausibilisierung, Rest Sekundaerschutz, latent"
+C1;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-02;RF;0.99;0.2;0.002;0;"Messfehler; Restfehler (1-DC)"
+C1;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C1;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C1;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C1;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+R20;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R20;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R20;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R20;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R20;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R20;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R21;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R21;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R21;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R21;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R21;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R21;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+Q1;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-01;sicher;;0;0;0;Entladen senkt die Zellspannung
+Q1;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-02;MPF;0.9;0.4;0;0.04;Massnahme M1: zweiter Schalter in Reihe, Einzelfehler entlaedt nicht mehr, latent
+Q1;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-01;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q1;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-02;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q1;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-01;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+Q1;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-02;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+C2;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-01;MPF;0.99;0.2;0;0.002;"Zellabgriff kurzgeschlossen = Messfehler; AFE-Plausibilisierung, Rest Sekundaerschutz, latent"
+C2;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-02;RF;0.99;0.2;0.002;0;"Messfehler; Restfehler (1-DC)"
+C2;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C2;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C2;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C2;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+R22;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R22;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R22;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R22;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R22;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R22;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R23;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R23;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R23;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R23;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R23;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R23;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+Q2;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-01;sicher;;0;0;0;Entladen senkt die Zellspannung
+Q2;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-02;MPF;0.9;0.4;0;0.04;Massnahme M1: zweiter Schalter in Reihe, Einzelfehler entlaedt nicht mehr, latent
+Q2;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-01;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q2;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-02;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q2;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-01;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+Q2;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-02;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+C3;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-01;MPF;0.99;0.2;0;0.002;"Zellabgriff kurzgeschlossen = Messfehler; AFE-Plausibilisierung, Rest Sekundaerschutz, latent"
+C3;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-02;RF;0.99;0.2;0.002;0;"Messfehler; Restfehler (1-DC)"
+C3;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C3;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C3;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C3;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+R24;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R24;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R24;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R24;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R24;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R24;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R25;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R25;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R25;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R25;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R25;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R25;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+Q3;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-01;sicher;;0;0;0;Entladen senkt die Zellspannung
+Q3;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-02;MPF;0.9;0.4;0;0.04;Massnahme M1: zweiter Schalter in Reihe, Einzelfehler entlaedt nicht mehr, latent
+Q3;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-01;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q3;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-02;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q3;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-01;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+Q3;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-02;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+C4;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-01;MPF;0.99;0.2;0;0.002;"Zellabgriff kurzgeschlossen = Messfehler; AFE-Plausibilisierung, Rest Sekundaerschutz, latent"
+C4;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-02;RF;0.99;0.2;0.002;0;"Messfehler; Restfehler (1-DC)"
+C4;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C4;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C4;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C4;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+R26;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R26;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R26;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R26;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R26;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R26;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R27;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R27;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R27;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R27;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R27;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R27;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+Q4;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-01;sicher;;0;0;0;Entladen senkt die Zellspannung
+Q4;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-02;MPF;0.9;0.4;0;0.04;Massnahme M1: zweiter Schalter in Reihe, Einzelfehler entlaedt nicht mehr, latent
+Q4;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-01;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q4;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-02;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q4;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-01;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+Q4;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-02;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+C5;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-01;MPF;0.99;0.2;0;0.002;"Zellabgriff kurzgeschlossen = Messfehler; AFE-Plausibilisierung, Rest Sekundaerschutz, latent"
+C5;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-02;RF;0.99;0.2;0.002;0;"Messfehler; Restfehler (1-DC)"
+C5;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C5;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C5;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C5;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+R28;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R28;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R28;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R28;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R28;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R28;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R29;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R29;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R29;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R29;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R29;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R29;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+Q5;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-01;sicher;;0;0;0;Entladen senkt die Zellspannung
+Q5;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-02;MPF;0.9;0.4;0;0.04;Massnahme M1: zweiter Schalter in Reihe, Einzelfehler entlaedt nicht mehr, latent
+Q5;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-01;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q5;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-02;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q5;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-01;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+Q5;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-02;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+C6;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-01;MPF;0.99;0.2;0;0.002;"Zellabgriff kurzgeschlossen = Messfehler; AFE-Plausibilisierung, Rest Sekundaerschutz, latent"
+C6;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-02;RF;0.99;0.2;0.002;0;"Messfehler; Restfehler (1-DC)"
+C6;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C6;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C6;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C6;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+R30;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R30;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R30;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R30;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R30;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R30;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R31;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R31;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R31;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R31;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R31;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R31;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+Q6;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-01;sicher;;0;0;0;Entladen senkt die Zellspannung
+Q6;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-02;MPF;0.9;0.4;0;0.04;Massnahme M1: zweiter Schalter in Reihe, Einzelfehler entlaedt nicht mehr, latent
+Q6;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-01;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q6;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-02;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q6;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-01;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+Q6;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-02;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+C7;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-01;MPF;0.99;0.2;0;0.002;"Zellabgriff kurzgeschlossen = Messfehler; AFE-Plausibilisierung, Rest Sekundaerschutz, latent"
+C7;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-02;RF;0.99;0.2;0.002;0;"Messfehler; Restfehler (1-DC)"
+C7;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C7;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C7;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C7;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+R32;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R32;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R32;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R32;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R32;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R32;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R33;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R33;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R33;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R33;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R33;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R33;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+Q7;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-01;sicher;;0;0;0;Entladen senkt die Zellspannung
+Q7;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-02;MPF;0.9;0.4;0;0.04;Massnahme M1: zweiter Schalter in Reihe, Einzelfehler entlaedt nicht mehr, latent
+Q7;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-01;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q7;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-02;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q7;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-01;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+Q7;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-02;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+C8;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-01;MPF;0.99;0.2;0;0.002;"Zellabgriff kurzgeschlossen = Messfehler; AFE-Plausibilisierung, Rest Sekundaerschutz, latent"
+C8;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-02;RF;0.99;0.2;0.002;0;"Messfehler; Restfehler (1-DC)"
+C8;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C8;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C8;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C8;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+R34;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R34;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R34;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R34;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R34;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R34;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R35;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R35;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R35;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R35;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R35;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R35;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+Q8;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-01;sicher;;0;0;0;Entladen senkt die Zellspannung
+Q8;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-02;MPF;0.9;0.4;0;0.04;Massnahme M1: zweiter Schalter in Reihe, Einzelfehler entlaedt nicht mehr, latent
+Q8;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-01;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q8;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-02;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q8;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-01;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+Q8;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-02;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+C9;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-01;MPF;0.99;0.2;0;0.002;"Zellabgriff kurzgeschlossen = Messfehler; AFE-Plausibilisierung, Rest Sekundaerschutz, latent"
+C9;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-02;RF;0.99;0.2;0.002;0;"Messfehler; Restfehler (1-DC)"
+C9;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C9;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C9;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C9;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+R36;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R36;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R36;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R36;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R36;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R36;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R37;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R37;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R37;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R37;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R37;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R37;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+Q9;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-01;sicher;;0;0;0;Entladen senkt die Zellspannung
+Q9;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-02;MPF;0.9;0.4;0;0.04;Massnahme M1: zweiter Schalter in Reihe, Einzelfehler entlaedt nicht mehr, latent
+Q9;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-01;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q9;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-02;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q9;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-01;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+Q9;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-02;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+C10;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-01;MPF;0.99;0.2;0;0.002;"Zellabgriff kurzgeschlossen = Messfehler; AFE-Plausibilisierung, Rest Sekundaerschutz, latent"
+C10;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-02;RF;0.99;0.2;0.002;0;"Messfehler; Restfehler (1-DC)"
+C10;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C10;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C10;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C10;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+R38;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R38;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R38;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R38;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R38;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R38;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R39;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R39;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R39;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R39;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R39;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R39;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+Q10;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-01;sicher;;0;0;0;Entladen senkt die Zellspannung
+Q10;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-02;MPF;0.9;0.4;0;0.04;Massnahme M1: zweiter Schalter in Reihe, Einzelfehler entlaedt nicht mehr, latent
+Q10;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-01;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q10;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-02;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q10;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-01;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+Q10;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-02;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+C11;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-01;MPF;0.99;0.2;0;0.002;"Zellabgriff kurzgeschlossen = Messfehler; AFE-Plausibilisierung, Rest Sekundaerschutz, latent"
+C11;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-02;RF;0.99;0.2;0.002;0;"Messfehler; Restfehler (1-DC)"
+C11;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C11;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C11;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C11;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+R40;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R40;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R40;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R40;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R40;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R40;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R41;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R41;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R41;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R41;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R41;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R41;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+Q11;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-01;sicher;;0;0;0;Entladen senkt die Zellspannung
+Q11;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-02;MPF;0.9;0.4;0;0.04;Massnahme M1: zweiter Schalter in Reihe, Einzelfehler entlaedt nicht mehr, latent
+Q11;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-01;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q11;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-02;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q11;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-01;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+Q11;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-02;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+C12;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-01;MPF;0.99;0.2;0;0.002;"Zellabgriff kurzgeschlossen = Messfehler; AFE-Plausibilisierung, Rest Sekundaerschutz, latent"
+C12;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-02;RF;0.99;0.2;0.002;0;"Messfehler; Restfehler (1-DC)"
+C12;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C12;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C12;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C12;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+R42;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R42;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R42;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R42;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R42;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R42;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R43;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R43;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R43;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R43;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R43;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R43;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+Q12;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-01;sicher;;0;0;0;Entladen senkt die Zellspannung
+Q12;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-02;MPF;0.9;0.4;0;0.04;Massnahme M1: zweiter Schalter in Reihe, Einzelfehler entlaedt nicht mehr, latent
+Q12;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-01;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q12;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-02;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q12;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-01;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+Q12;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-02;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+C13;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-01;MPF;0.99;0.2;0;0.002;"Zellabgriff kurzgeschlossen = Messfehler; AFE-Plausibilisierung, Rest Sekundaerschutz, latent"
+C13;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-02;RF;0.99;0.2;0.002;0;"Messfehler; Restfehler (1-DC)"
+C13;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C13;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C13;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C13;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+R44;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R44;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R44;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R44;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R44;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R44;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R45;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R45;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R45;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R45;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R45;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R45;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+Q13;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-01;sicher;;0;0;0;Entladen senkt die Zellspannung
+Q13;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-02;MPF;0.9;0.4;0;0.04;Massnahme M1: zweiter Schalter in Reihe, Einzelfehler entlaedt nicht mehr, latent
+Q13;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-01;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q13;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-02;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q13;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-01;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+Q13;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-02;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+C14;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-01;MPF;0.99;0.2;0;0.002;"Zellabgriff kurzgeschlossen = Messfehler; AFE-Plausibilisierung, Rest Sekundaerschutz, latent"
+C14;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-02;RF;0.99;0.2;0.002;0;"Messfehler; Restfehler (1-DC)"
+C14;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C14;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C14;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C14;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+R46;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R46;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R46;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R46;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R46;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R46;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R47;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R47;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R47;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R47;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R47;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R47;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+Q14;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-01;sicher;;0;0;0;Entladen senkt die Zellspannung
+Q14;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-02;MPF;0.9;0.4;0;0.04;Massnahme M1: zweiter Schalter in Reihe, Einzelfehler entlaedt nicht mehr, latent
+Q14;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-01;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q14;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-02;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q14;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-01;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+Q14;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-02;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+C15;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-01;MPF;0.99;0.2;0;0.002;"Zellabgriff kurzgeschlossen = Messfehler; AFE-Plausibilisierung, Rest Sekundaerschutz, latent"
+C15;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-02;RF;0.99;0.2;0.002;0;"Messfehler; Restfehler (1-DC)"
+C15;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C15;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C15;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C15;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+R48;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R48;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R48;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R48;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R48;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R48;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R49;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R49;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R49;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R49;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R49;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R49;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+Q15;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-01;sicher;;0;0;0;Entladen senkt die Zellspannung
+Q15;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-02;MPF;0.9;0.4;0;0.04;Massnahme M1: zweiter Schalter in Reihe, Einzelfehler entlaedt nicht mehr, latent
+Q15;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-01;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q15;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-02;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q15;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-01;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+Q15;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-02;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+C16;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-01;MPF;0.99;0.2;0;0.002;"Zellabgriff kurzgeschlossen = Messfehler; AFE-Plausibilisierung, Rest Sekundaerschutz, latent"
+C16;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-02;RF;0.99;0.2;0.002;0;"Messfehler; Restfehler (1-DC)"
+C16;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C16;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C16;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C16;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+R50;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R50;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R50;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R50;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R50;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R50;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R51;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R51;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R51;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R51;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R51;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R51;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+Q16;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-01;sicher;;0;0;0;Entladen senkt die Zellspannung
+Q16;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-02;MPF;0.9;0.4;0;0.04;Massnahme M1: zweiter Schalter in Reihe, Einzelfehler entlaedt nicht mehr, latent
+Q16;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-01;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q16;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-02;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q16;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-01;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+Q16;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-02;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+C17;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-01;MPF;0.99;0.2;0;0.002;"Zellabgriff kurzgeschlossen = Messfehler; AFE-Plausibilisierung, Rest Sekundaerschutz, latent"
+C17;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-02;RF;0.99;0.2;0.002;0;"Messfehler; Restfehler (1-DC)"
+C17;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C17;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C17;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C17;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+R52;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R52;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R52;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R52;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R52;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R52;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R53;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R53;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R53;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R53;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R53;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R53;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+Q17;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-01;sicher;;0;0;0;Entladen senkt die Zellspannung
+Q17;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-02;MPF;0.9;0.4;0;0.04;Massnahme M1: zweiter Schalter in Reihe, Einzelfehler entlaedt nicht mehr, latent
+Q17;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-01;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q17;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-02;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q17;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-01;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+Q17;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-02;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+C18;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-01;MPF;0.99;0.2;0;0.002;"Zellabgriff kurzgeschlossen = Messfehler; AFE-Plausibilisierung, Rest Sekundaerschutz, latent"
+C18;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Kurzschluss;0.4;0.2;SG-02;RF;0.99;0.2;0.002;0;"Messfehler; Restfehler (1-DC)"
+C18;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C18;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;offen;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C18;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-01;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+C18;Kondensator MLCC;Filterkondensator Zellabgriff;0.5;Drift;0.3;0.15;SG-02;sicher;;0;0;0;aendert nur die Filterwirkung (EMV), keine statische Messabweichung
+R54;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R54;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R54;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R54;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R54;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R54;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R55;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R55;Widerstand Chip;Ausgleichswiderstand;0.3;offen;0.6;0.18;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+R55;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-01;sicher;;0;0;0;Ausgleich entlaedt die Zelle, senkt die Spannung
+R55;Widerstand Chip;Ausgleichswiderstand;0.3;Kurzschluss;0.1;0.03;SG-02;RF;0.9;0.03;0.003;0;"doppelter Ausgleichsstrom bei aktivem Ausgleich; Ueberwachung ueber Zellspannung 90 %, Restfehler (konservative Einstufung)"
+R55;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-01;sicher;;0;0;0;Ausgleich schwaecher oder aus, Zellspannungsmessung begrenzt Laden
+R55;Widerstand Chip;Ausgleichswiderstand;0.3;Drift;0.3;0.09;SG-02;sicher;;0;0;0;kein zusaetzlicher Ausgleichsstrom
+Q18;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-01;sicher;;0;0;0;Entladen senkt die Zellspannung
+Q18;MOSFET klein;Ausgleichs-FET;1;Kurzschluss D-S;0.4;0.4;SG-02;MPF;0.9;0.4;0;0.04;Massnahme M1: zweiter Schalter in Reihe, Einzelfehler entlaedt nicht mehr, latent
+Q18;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-01;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q18;MOSFET klein;Ausgleichs-FET;1;offen;0.4;0.4;SG-02;sicher;;0;0;0;"Ausgleich faellt aus oder Parameterdrift; Zellspannungsmessung begrenzt Laden"
+Q18;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-01;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+Q18;MOSFET klein;Ausgleichs-FET;1;Drift;0.2;0.2;SG-02;sicher;;0;0;0;Drift (Rdson, Leckstrom) ohne Dauerentladung angenommen
+J2;NTC-Eingang;NTC-Stecker;1;offen;0.5;0.5;SG-01;sicher;;0;0;0;keine Wirkung auf die Zellspannungsgrenze (betrifft SG-03)
+J2;NTC-Eingang;NTC-Stecker;1;offen;0.5;0.5;SG-02;sicher;;0;0;0;keine Wirkung auf die Zellspannungsgrenze (betrifft SG-03)
+J2;NTC-Eingang;NTC-Stecker;1;Kurzschluss;0.5;0.5;SG-01;sicher;;0;0;0;keine Wirkung auf die Zellspannungsgrenze (betrifft SG-03)
+J2;NTC-Eingang;NTC-Stecker;1;Kurzschluss;0.5;0.5;SG-02;sicher;;0;0;0;keine Wirkung auf die Zellspannungsgrenze (betrifft SG-03)
+J3;NTC-Eingang;NTC-Stecker;1;offen;0.5;0.5;SG-01;sicher;;0;0;0;keine Wirkung auf die Zellspannungsgrenze (betrifft SG-03)
+J3;NTC-Eingang;NTC-Stecker;1;offen;0.5;0.5;SG-02;sicher;;0;0;0;keine Wirkung auf die Zellspannungsgrenze (betrifft SG-03)
+J3;NTC-Eingang;NTC-Stecker;1;Kurzschluss;0.5;0.5;SG-01;sicher;;0;0;0;keine Wirkung auf die Zellspannungsgrenze (betrifft SG-03)
+J3;NTC-Eingang;NTC-Stecker;1;Kurzschluss;0.5;0.5;SG-02;sicher;;0;0;0;keine Wirkung auf die Zellspannungsgrenze (betrifft SG-03)
+J4;NTC-Eingang;NTC-Stecker;1;offen;0.5;0.5;SG-01;sicher;;0;0;0;keine Wirkung auf die Zellspannungsgrenze (betrifft SG-03)
+J4;NTC-Eingang;NTC-Stecker;1;offen;0.5;0.5;SG-02;sicher;;0;0;0;keine Wirkung auf die Zellspannungsgrenze (betrifft SG-03)
+J4;NTC-Eingang;NTC-Stecker;1;Kurzschluss;0.5;0.5;SG-01;sicher;;0;0;0;keine Wirkung auf die Zellspannungsgrenze (betrifft SG-03)
+J4;NTC-Eingang;NTC-Stecker;1;Kurzschluss;0.5;0.5;SG-02;sicher;;0;0;0;keine Wirkung auf die Zellspannungsgrenze (betrifft SG-03)
+J5;NTC-Eingang;NTC-Stecker;1;offen;0.5;0.5;SG-01;sicher;;0;0;0;keine Wirkung auf die Zellspannungsgrenze (betrifft SG-03)
+J5;NTC-Eingang;NTC-Stecker;1;offen;0.5;0.5;SG-02;sicher;;0;0;0;keine Wirkung auf die Zellspannungsgrenze (betrifft SG-03)
+J5;NTC-Eingang;NTC-Stecker;1;Kurzschluss;0.5;0.5;SG-01;sicher;;0;0;0;keine Wirkung auf die Zellspannungsgrenze (betrifft SG-03)
+J5;NTC-Eingang;NTC-Stecker;1;Kurzschluss;0.5;0.5;SG-02;sicher;;0;0;0;keine Wirkung auf die Zellspannungsgrenze (betrifft SG-03)
+T1;Uebertrager;Uebertrager Daisy-Chain;2;offen;0.7;1.4;SG-01;sicher;;0;0;0;Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet) (Isolation SG-07 nicht Umfang)
+T1;Uebertrager;Uebertrager Daisy-Chain;2;offen;0.7;1.4;SG-02;sicher;;0;0;0;Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet) (Isolation SG-07 nicht Umfang)
+T1;Uebertrager;Uebertrager Daisy-Chain;2;Kurzschluss Wicklung;0.3;0.6;SG-01;sicher;;0;0;0;Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet) (Isolation SG-07 nicht Umfang)
+T1;Uebertrager;Uebertrager Daisy-Chain;2;Kurzschluss Wicklung;0.3;0.6;SG-02;sicher;;0;0;0;Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet) (Isolation SG-07 nicht Umfang)
+J6;Stecker;Daisy-Chain-Stecker;2;offen;0.7;1.4;SG-01;sicher;;0;0;0;Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet) (Isolation SG-07 nicht Umfang)
+J6;Stecker;Daisy-Chain-Stecker;2;offen;0.7;1.4;SG-02;sicher;;0;0;0;Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet) (Isolation SG-07 nicht Umfang)
+J6;Stecker;Daisy-Chain-Stecker;2;Kurzschluss benachbarter Pins;0.3;0.6;SG-01;sicher;;0;0;0;Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet) (Isolation SG-07 nicht Umfang)
+J6;Stecker;Daisy-Chain-Stecker;2;Kurzschluss benachbarter Pins;0.3;0.6;SG-02;sicher;;0;0;0;Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet) (Isolation SG-07 nicht Umfang)
+D1;TVS-Diode;TVS Daisy-Chain;1;Kurzschluss;0.6;0.6;SG-01;sicher;;0;0;0;Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet) (Isolation SG-07 nicht Umfang)
+D1;TVS-Diode;TVS Daisy-Chain;1;Kurzschluss;0.6;0.6;SG-02;sicher;;0;0;0;Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet) (Isolation SG-07 nicht Umfang)
+D1;TVS-Diode;TVS Daisy-Chain;1;offen;0.4;0.4;SG-01;sicher;;0;0;0;Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet) (Isolation SG-07 nicht Umfang)
+D1;TVS-Diode;TVS Daisy-Chain;1;offen;0.4;0.4;SG-02;sicher;;0;0;0;Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet) (Isolation SG-07 nicht Umfang)
+T2;Uebertrager;Uebertrager Daisy-Chain;2;offen;0.7;1.4;SG-01;sicher;;0;0;0;Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet) (Isolation SG-07 nicht Umfang)
+T2;Uebertrager;Uebertrager Daisy-Chain;2;offen;0.7;1.4;SG-02;sicher;;0;0;0;Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet) (Isolation SG-07 nicht Umfang)
+T2;Uebertrager;Uebertrager Daisy-Chain;2;Kurzschluss Wicklung;0.3;0.6;SG-01;sicher;;0;0;0;Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet) (Isolation SG-07 nicht Umfang)
+T2;Uebertrager;Uebertrager Daisy-Chain;2;Kurzschluss Wicklung;0.3;0.6;SG-02;sicher;;0;0;0;Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet) (Isolation SG-07 nicht Umfang)
+J7;Stecker;Daisy-Chain-Stecker;2;offen;0.7;1.4;SG-01;sicher;;0;0;0;Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet) (Isolation SG-07 nicht Umfang)
+J7;Stecker;Daisy-Chain-Stecker;2;offen;0.7;1.4;SG-02;sicher;;0;0;0;Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet) (Isolation SG-07 nicht Umfang)
+J7;Stecker;Daisy-Chain-Stecker;2;Kurzschluss benachbarter Pins;0.3;0.6;SG-01;sicher;;0;0;0;Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet) (Isolation SG-07 nicht Umfang)
+J7;Stecker;Daisy-Chain-Stecker;2;Kurzschluss benachbarter Pins;0.3;0.6;SG-02;sicher;;0;0;0;Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet) (Isolation SG-07 nicht Umfang)
+D2;TVS-Diode;TVS Daisy-Chain;1;Kurzschluss;0.6;0.6;SG-01;sicher;;0;0;0;Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet) (Isolation SG-07 nicht Umfang)
+D2;TVS-Diode;TVS Daisy-Chain;1;Kurzschluss;0.6;0.6;SG-02;sicher;;0;0;0;Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet) (Isolation SG-07 nicht Umfang)
+D2;TVS-Diode;TVS Daisy-Chain;1;offen;0.4;0.4;SG-01;sicher;;0;0;0;Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet) (Isolation SG-07 nicht Umfang)
+D2;TVS-Diode;TVS Daisy-Chain;1;offen;0.4;0.4;SG-02;sicher;;0;0;0;Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet) (Isolation SG-07 nicht Umfang)
+U2;Sekundaerschutz-IC;Sekundaerschutz;5;loest nicht aus;0.5;2.5;SG-01;MPF;0.9;2.5;0;0.25;"latenter Fehler, der Hauptweg (AFE) ist unabhaengig; Starttest 90 %, Rest latent"
+U2;Sekundaerschutz-IC;Sekundaerschutz;5;loest nicht aus;0.5;2.5;SG-02;sicher;;0;0;0;Sekundaerschutz prueft nur Ueberspannung, fuer SG-02 ohne Funktion
+U2;Sekundaerschutz-IC;Sekundaerschutz;5;loest falsch aus;0.5;2.5;SG-01;sicher;;0;0;0;loest falsch aus = sicherer Zustand (Verfuegbarkeit, nicht SG-01)
+U2;Sekundaerschutz-IC;Sekundaerschutz;5;loest falsch aus;0.5;2.5;SG-02;sicher;;0;0;0;Sekundaerschutz ohne Funktion fuer SG-02
+U3;Sekundaerschutz-IC;Sekundaerschutz;5;loest nicht aus;0.5;2.5;SG-01;MPF;0.9;2.5;0;0.25;"latenter Fehler, der Hauptweg (AFE) ist unabhaengig; Starttest 90 %, Rest latent"
+U3;Sekundaerschutz-IC;Sekundaerschutz;5;loest nicht aus;0.5;2.5;SG-02;sicher;;0;0;0;Sekundaerschutz prueft nur Ueberspannung, fuer SG-02 ohne Funktion
+U3;Sekundaerschutz-IC;Sekundaerschutz;5;loest falsch aus;0.5;2.5;SG-01;sicher;;0;0;0;loest falsch aus = sicherer Zustand (Verfuegbarkeit, nicht SG-01)
+U3;Sekundaerschutz-IC;Sekundaerschutz;5;loest falsch aus;0.5;2.5;SG-02;sicher;;0;0;0;Sekundaerschutz ohne Funktion fuer SG-02
+U4;Sekundaerschutz-IC;Sekundaerschutz;5;loest nicht aus;0.5;2.5;SG-01;MPF;0.9;2.5;0;0.25;"latenter Fehler, der Hauptweg (AFE) ist unabhaengig; Starttest 90 %, Rest latent"
+U4;Sekundaerschutz-IC;Sekundaerschutz;5;loest nicht aus;0.5;2.5;SG-02;sicher;;0;0;0;Sekundaerschutz prueft nur Ueberspannung, fuer SG-02 ohne Funktion
+U4;Sekundaerschutz-IC;Sekundaerschutz;5;loest falsch aus;0.5;2.5;SG-01;sicher;;0;0;0;loest falsch aus = sicherer Zustand (Verfuegbarkeit, nicht SG-01)
+U4;Sekundaerschutz-IC;Sekundaerschutz;5;loest falsch aus;0.5;2.5;SG-02;sicher;;0;0;0;Sekundaerschutz ohne Funktion fuer SG-02
+C19;Kondensator MLCC;Entkopplung AFE-VCC;0.5;Kurzschluss;0.4;0.2;SG-01;sicher;;0;0;0;VCC-Ausfall = AFE-Ausfall, Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet)
+C19;Kondensator MLCC;Entkopplung AFE-VCC;0.5;Kurzschluss;0.4;0.2;SG-02;sicher;;0;0;0;VCC-Ausfall = AFE-Ausfall, Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet)
+C19;Kondensator MLCC;Entkopplung AFE-VCC;0.5;offen;0.3;0.15;SG-01;sicher;;0;0;0;VCC-Ausfall = AFE-Ausfall, Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet)
+C19;Kondensator MLCC;Entkopplung AFE-VCC;0.5;offen;0.3;0.15;SG-02;sicher;;0;0;0;VCC-Ausfall = AFE-Ausfall, Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet)
+C19;Kondensator MLCC;Entkopplung AFE-VCC;0.5;Drift;0.3;0.15;SG-01;sicher;;0;0;0;VCC-Ausfall = AFE-Ausfall, Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet)
+C19;Kondensator MLCC;Entkopplung AFE-VCC;0.5;Drift;0.3;0.15;SG-02;sicher;;0;0;0;VCC-Ausfall = AFE-Ausfall, Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet)
+C20;Kondensator MLCC;Entkopplung AFE-VCC;0.5;Kurzschluss;0.4;0.2;SG-01;sicher;;0;0;0;VCC-Ausfall = AFE-Ausfall, Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet)
+C20;Kondensator MLCC;Entkopplung AFE-VCC;0.5;Kurzschluss;0.4;0.2;SG-02;sicher;;0;0;0;VCC-Ausfall = AFE-Ausfall, Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet)
+C20;Kondensator MLCC;Entkopplung AFE-VCC;0.5;offen;0.3;0.15;SG-01;sicher;;0;0;0;VCC-Ausfall = AFE-Ausfall, Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet)
+C20;Kondensator MLCC;Entkopplung AFE-VCC;0.5;offen;0.3;0.15;SG-02;sicher;;0;0;0;VCC-Ausfall = AFE-Ausfall, Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet)
+C20;Kondensator MLCC;Entkopplung AFE-VCC;0.5;Drift;0.3;0.15;SG-01;sicher;;0;0;0;VCC-Ausfall = AFE-Ausfall, Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet)
+C20;Kondensator MLCC;Entkopplung AFE-VCC;0.5;Drift;0.3;0.15;SG-02;sicher;;0;0;0;VCC-Ausfall = AFE-Ausfall, Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet)
+C21;Kondensator MLCC;Entkopplung AFE-VCC;0.5;Kurzschluss;0.4;0.2;SG-01;sicher;;0;0;0;VCC-Ausfall = AFE-Ausfall, Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet)
+C21;Kondensator MLCC;Entkopplung AFE-VCC;0.5;Kurzschluss;0.4;0.2;SG-02;sicher;;0;0;0;VCC-Ausfall = AFE-Ausfall, Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet)
+C21;Kondensator MLCC;Entkopplung AFE-VCC;0.5;offen;0.3;0.15;SG-01;sicher;;0;0;0;VCC-Ausfall = AFE-Ausfall, Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet)
+C21;Kondensator MLCC;Entkopplung AFE-VCC;0.5;offen;0.3;0.15;SG-02;sicher;;0;0;0;VCC-Ausfall = AFE-Ausfall, Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet)
+C21;Kondensator MLCC;Entkopplung AFE-VCC;0.5;Drift;0.3;0.15;SG-01;sicher;;0;0;0;VCC-Ausfall = AFE-Ausfall, Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet)
+C21;Kondensator MLCC;Entkopplung AFE-VCC;0.5;Drift;0.3;0.15;SG-02;sicher;;0;0;0;VCC-Ausfall = AFE-Ausfall, Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet)
+C22;Kondensator MLCC;Entkopplung AFE-VCC;0.5;Kurzschluss;0.4;0.2;SG-01;sicher;;0;0;0;VCC-Ausfall = AFE-Ausfall, Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet)
+C22;Kondensator MLCC;Entkopplung AFE-VCC;0.5;Kurzschluss;0.4;0.2;SG-02;sicher;;0;0;0;VCC-Ausfall = AFE-Ausfall, Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet)
+C22;Kondensator MLCC;Entkopplung AFE-VCC;0.5;offen;0.3;0.15;SG-01;sicher;;0;0;0;VCC-Ausfall = AFE-Ausfall, Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet)
+C22;Kondensator MLCC;Entkopplung AFE-VCC;0.5;offen;0.3;0.15;SG-02;sicher;;0;0;0;VCC-Ausfall = AFE-Ausfall, Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet)
+C22;Kondensator MLCC;Entkopplung AFE-VCC;0.5;Drift;0.3;0.15;SG-01;sicher;;0;0;0;VCC-Ausfall = AFE-Ausfall, Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet)
+C22;Kondensator MLCC;Entkopplung AFE-VCC;0.5;Drift;0.3;0.15;SG-02;sicher;;0;0;0;VCC-Ausfall = AFE-Ausfall, Kommunikationsverlust, BMS-Timeout fuehrt in den sicheren Zustand (Laden beendet)

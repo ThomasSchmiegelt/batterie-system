@@ -1,0 +1,17 @@
+{
+ "erc_verstoesse": 0,
+ "netze_schaltplan": 98,
+ "netze_quelle": 98,
+ "netze_layout": 98,
+ "schaltplan_vs_quelle": {
+  "nur_in_a": 0,
+  "nur_in_b": 0
+ },
+ "schaltplan_vs_layout": {
+  "nur_in_a": 0,
+  "nur_in_b": 0
+ },
+ "teile_schaltplan": 131,
+ "teile_quelle": 131,
+ "quelle": "/home/cae/cae_projekte/batterie/e3c/schaltplan/netz_sch.xml, erc.json, pcb_netze.json, bms_teile.json"
+}

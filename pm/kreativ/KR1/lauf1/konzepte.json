@@ -1,0 +1,109 @@
+{
+ "kopf": "KI-generiert (Claude Sonnet, 2026-11-24). Auswahl: eine Richtung je Ausprägung der Zeile T1, jeweils die zulässige Kombination mit größtem kleinsten Hamming-Abstand zu den schon gewählten (Start: erste zulässige Kombination).",
+ "kombinationen_gesamt": 15625,
+ "kombinationen_zulaessig": 7032,
+ "ausschluesse": 20,
+ "min_hamming": 6,
+ "konzepte": [
+  {
+   "id": "K1",
+   "richtung": "Passiver Widerstandsausgleich auf CMU",
+   "wahl": [
+    "T1.1",
+    "T2.1",
+    "T3.1",
+    "T4.1",
+    "T5.1",
+    "T6.1"
+   ],
+   "namen": [
+    "Passiver Widerstandsausgleich auf CMU",
+    "Balance-Widerstände auf der CMU-Platine",
+    "Kontinuierlich passiv, 14,2 h Zyklus",
+    "MOSFET plus 34-Ohm-Widerstand",
+    "Freie Konvektion auf CMU-Platine",
+    "Spannungsschwelle pro Zelle, 130 mA konstant"
+   ]
+  },
+  {
+   "id": "K2",
+   "richtung": "Gepulster Hochstrom, gleiche mittlere Leistung",
+   "wahl": [
+    "T1.2",
+    "T2.3",
+    "T3.2",
+    "T4.3",
+    "T5.3",
+    "T6.2"
+   ],
+   "namen": [
+    "Gepulster Hochstrom, gleiche mittlere Leistung",
+    "Externer Flüssigkeitskühlkreislauf",
+    "Einmalig im Dormanz-Aufwachfenster",
+    "PWM-Schalter mit Pulsmodulation",
+    "Geschlossener Flüssigkeitskühlkreis",
+    "Temperaturabhängige Stromsteuerung 124/109 mA"
+   ]
+  },
+  {
+   "id": "K3",
+   "richtung": "Transformergekoppelter aktiver Zellenausgleich",
+   "wahl": [
+    "T1.3",
+    "T2.2",
+    "T3.3",
+    "T4.2",
+    "T5.4",
+    "T6.3"
+   ],
+   "namen": [
+    "Transformergekoppelter aktiver Zellenausgleich",
+    "Induktives Koppellelement zwischen Zellen",
+    "Kurz parallel im Hochstromfenster",
+    "HF-Schalter in Induktivkopplung",
+    "Gepulster Betrieb, reduzierte Mittelleistung",
+    "Periodisches Aufwachen, Batch-Ausgleich, Thermal-Cutoff"
+   ]
+  },
+  {
+   "id": "K4",
+   "richtung": "Vorgleich in Dormanzaufwachphase",
+   "wahl": [
+    "T1.4",
+    "T2.4",
+    "T3.4",
+    "T4.4",
+    "T5.2",
+    "T6.4"
+   ],
+   "namen": [
+    "Vorgleich in Dormanzaufwachphase",
+    "Doppelte Platinenfläche, kombinierte CMU",
+    "Temperaturgepumpt, nur bei kühlem Zustand",
+    "Zellenweiser Schalter mit Leiterbahn",
+    "Wärmeleitpad zur Kühlplatte",
+    "Vorab-Berechnung dQ, Einmal-Durchlauf 18 Kanäle"
+   ]
+  },
+  {
+   "id": "K5",
+   "richtung": "Paralleler Gleichstromausgleich aller Kanäle",
+   "wahl": [
+    "T1.5",
+    "T2.5",
+    "T3.5",
+    "T4.5",
+    "T5.5",
+    "T6.5"
+   ],
+   "namen": [
+    "Paralleler Gleichstromausgleich aller Kanäle",
+    "Kühlplatte mit Ultraschall-Konvektionsantrieb",
+    "Vorgleich vor Betrieb, Rest laufend",
+    "Sequenzschalter für Parallelvorabgleich",
+    "Transformatorkopplung ohne ohmsche Verluste",
+    "Parallele Auslösung aller 18 Kanäle kurzfristig"
+   ]
+  }
+ ]
+}

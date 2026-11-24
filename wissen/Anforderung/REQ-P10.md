@@ -12,15 +12,15 @@ tags: ["anforderung", "bewertung/offen"]
 
 Lebensdauer (Zyklen, Jahre, Restkapazität)
 
-- Wert (Lastenheft): offen
+- Wert (Lastenheft): SOH ≥ 70 % nach 200.000 km (Autor, Freigaberunde 2026-11-23)
 - Priorität: Soll
-- Vom Autor bestätigt: nein
+- Vom Autor bestätigt: ja
 
 ## Verifikation (V-Modell-Matrix)
 
 - Methode: S (A Analyse, S Simulation, I Inspektion, T Test, R Review)
 - Ebene: System
-- Kriterium: SOH >= 70 % [Annahme Opus]
+- Kriterium: SOH >= 70 % [Autor (Freigaberunde 2026-11-23)]
 - Ist-Wert: kein Nachweis verknüpft
 - Bewertung: **offen**
 - Matrix: [[Dokument/06_verifikationsplan]] · Lastenheft: [[Dokument/01_lastenheft]] · Verfolgung: [[Dokument/03_anforderungsverfolgung]]

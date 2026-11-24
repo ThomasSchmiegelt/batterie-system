@@ -11,4 +11,4 @@ tags: ["nachweis"]
 - Datei: `sim/kuehlung/k3_gesamt/elmer_LFP_P0_V4p/ergebnis.json` (vorhanden)
 
 ## Anforderungen, die diese Datei belegt
-- [[Anforderung/REQ-P09|REQ-P09]] – Bewertung: verfehlt
+- [[Anforderung/REQ-P09|REQ-P09]] – Bewertung: verfehlt (Kriterium Annahme, Autor offen)

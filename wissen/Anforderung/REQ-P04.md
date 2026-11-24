@@ -12,15 +12,15 @@ tags: ["anforderung", "bewertung/offen"]
 
 Dauer- und Spitzenleistung Entladen
 
-- Wert (Lastenheft): offen (kW, s)
+- Wert (Lastenheft): P_spitze nach Startwert (10 s), P_dauer ≥ 60 kW (Autor, Freigaberunde 2026-11-23)
 - Priorität: Muss
-- Vom Autor bestätigt: nein
+- Vom Autor bestätigt: ja
 
 ## Verifikation (V-Modell-Matrix)
 
 - Methode: S (A Analyse, S Simulation, I Inspektion, T Test, R Review)
 - Ebene: System
-- Kriterium: P_spitze >= 150 kW [Startwert (Vorschlag)]<br>P_dauer >= 60 kW [Annahme Opus]
+- Kriterium: P_spitze >= 150 kW [Autor (Freigaberunde 2026-11-23)]<br>P_dauer >= 60 kW [Autor (Freigaberunde 2026-11-23)]
 - Ist-Wert: [P_spitze] kein Nachweis verknüpft; [P_dauer] kein Nachweis verknüpft
 - Bewertung: **offen**
 - Matrix: [[Dokument/06_verifikationsplan]] · Lastenheft: [[Dokument/01_lastenheft]] · Verfolgung: [[Dokument/03_anforderungsverfolgung]]

@@ -1,0 +1,143 @@
+{
+ "kopf": "KI-generiert (Claude Sonnet, 2026-11-24). PI-Vorschläge, Kandidaten für docs/05, ungeprüft.",
+ "konzepte": [
+  {
+   "konzept": "K1",
+   "risiken": [
+    {
+     "versagen": "Platinentemperatur überschreitet Materialgrenze von 105 °C",
+     "ursache": "9,64 W Verlustwärme konzentriert auf 120 × 60 mm Platine; Abfuhr nur über Konvektion (h = 10 W/m²K) und Strahlung; Übertemperatur 66,9 K bei 45 °C Umgebung ergibt 111,9 °C",
+     "folge": "CMU-Bauteile degradieren, FET-Leistungseinbruch, Ausgleichsfunktion fällt aus; Wärmepfad zur Kühlplatte oder Taktung wird nötig",
+     "schwere": "hoch"
+    },
+    {
+     "versagen": "Ausgleichsströme fließen in unvollständigen Teilpfaden nicht stabil",
+     "ursache": "212 Verbindungen sind nicht geroutet; Entkopplung, ESD-Schutz und Abschlüsse fehlen; FET-Schaltverlust 0,008 W bleibt unkontrolliert",
+     "folge": "Zellausgleich versagt selektiv; Strom 127,4 mA (4,2 V) bzw. 112,3 mA (3,7 V) erreicht einzelne Zellen nicht; ungleichmäßige Lagerung und Spannungsdifferenzen wachsen",
+     "schwere": "mittel"
+    },
+    {
+     "versagen": "Ausgleichszeit reicht für reale Ladezyklen nicht aus",
+     "ursache": "Reistand 32,45 Ohm begrenzt den Strom; Ausgleichszeit 14,5 h bei Höchstspannung, 16,5 h bei Nennspannung (13,5 % länger als Referenz E2)",
+     "folge": "In typischen Fahrzeugzyklen (kurze Ruhephasen) werden die Zellen nicht ausgeglichen; Kapazitätsverlust beschleunigt sich; Batteriepack altert ungleichmäßig",
+     "schwere": "mittel"
+    }
+   ]
+  },
+  {
+   "konzept": "K2",
+   "risiken": [
+    {
+     "versagen": "Wärmeleitpad verliert durch mechanische Ermüdung oder Kontamination den sicheren Wärmepfad zwischen CMU-Platine und Kühlplatte.",
+     "ursache": "Unzureichende Anpressung oder Altern bei der 120 x 60 mm großen Platine (F5) reduziert den effektiven Wärmeübergang von 10 auf 5 W/m²K (F3).",
+     "folge": "Platinentemperatur steigt auf 178,8 °C bei 45 °C Umgebung; Grenze 105 °C wird überschritten (F3); Zerstörung der 106 bis 108 Bauteile (F5), Ausfall der Zellüberwachung.",
+     "schwere": "hoch"
+    },
+    {
+     "versagen": "Thermische Abregelung zwingt zu längeren Ausgleichszeiten und verfehlt das Ziel der Kürzung.",
+     "ursache": "Verlustleistung 9,83 W bei Höchstspannung liegt knapp unter der Grenze 10 W (F1); eine Kürzung der Ausgleichszeit von 14,2 h (F1) erfordert mehr als 130 mA (F1).",
+     "folge": "Strom wird auf unter 112,3 mA gedrosselt (F2); Ausgleichszeit steigt über 16,5 h (F2); Anforderung REQ-P15 nicht erfüllt.",
+     "schwere": "hoch"
+    },
+    {
+     "versagen": "Kühlplatte wird thermischer Sattel, weil Strahlung und freie Konvektion nicht ausreichen.",
+     "ursache": "Strahlung von etwa 6 W/m²K ist im Modell nicht enthalten (F4); bei 9,64 W Verlustleistung (F2) und h = 5 W/m²K (F3) erreicht die Überhitzung 133,8 K (F3).",
+     "folge": "Realistische Platinentemperatur 90 bis 110 °C (F4); Grenze 105 °C erreicht (F4); dauerhafter Funktionsverlust des CMU-Ausgleichs und der Zellüberwachung (F5).",
+     "schwere": "hoch"
+    }
+   ]
+  },
+  {
+   "konzept": "K3",
+   "risiken": [
+    {
+     "versagen": "Temperaturgeführte Steuerung verliert ihre Referenz; Taktung bleibt bei 50 % und 260 mA Spitzstrom konstant",
+     "ursache": "ESD-Schutz oder Entkopplung fehlt auf der Platine (F5); ein Störimpuls oder Sensor-Drift lässt den temperaturgeführten Regelkreis kollabieren",
+     "folge": "Verlustleistung überschreitet die 10-W-Grenze (F1: 9,83 W bereits bei 130 mA kontinuierlich); auf der 120×60-mm-Platine steigt die Temperatur auf 111,9 bis 178,8 °C (F3) und die 105-°C-Grenze wird überschritten",
+     "schwere": "hoch"
+    },
+    {
+     "versagen": "Das Ruhefenster wird durch systemeigene Aktivität aufgebraucht; der Ausgleich wird nie abgeschlossen",
+     "ursache": "Die CMU muss 218 Spannungsabgriffe (F1) sowie Vorladepulse (F6: t95 300 ms, 450 J) abarbeiten; bei zyklischem Aufwachen steht das 50-%-Taktfenster nicht durchgehend zur Verfügung",
+     "folge": "Die Ausgleichszeit von 14,2 h (F1) bzw. 16,5 h (F2) verlängert sich weiter; Zellspannungsspreizung wächst, Kapazitätsverlust beschleunigt",
+     "schwere": "mittel"
+    },
+    {
+     "versagen": "Passiver 32,45-Ohm-Ausgleichswiderstand reißt durch thermische Ermüdung",
+     "ursache": "Bei 9,64 W auf der Platine (F2/F3) wiederholt sich der Temperaturgang auf 111,9 bis 178,8 °C (F3); thermische Zyklen erzeugen Risse in Leiterbahnen oder Lötstellen am Widerstand",
+     "folge": "Ausgleichsschleife unterbrochen; keine Zellangleichung mehr; im Extremfall Brückenschluss am Widerstand mit kurzzeitiger Energieabgabe (Vergleich F6: 416 J im Widerstand)",
+     "schwere": "hoch"
+    }
+   ]
+  },
+  {
+   "konzept": "K4",
+   "risiken": [
+    {
+     "versagen": "Wärmeleitpad zwischen CMU und Kühlplatte degradiert (Verdichtung, Delamination) und der Wärmewiderstand steigt stark an.",
+     "ursache": "Das Pad ist der einzige definierte Wärmepfad (Konzept K4). F3 zeigt: bereits bei h = 5 W/m²K ergibt sich 133,8 K Übertemperatur (178,8 °C bei 45 °C Umgebung). F4 bestätigt: ohne funktionierenden Wärmepfad zur Kühlplatte wird die Grenze 105 °C erreicht. Alterung und zyklische Thermobestankung (218 Spannungsabgriffe je Zelle, F1) beschleunigen den Padversagen.",
+     "folge": "Die CMU-Platine überschreitet die Grenze 105 °C (F3, F4). Zell- und Bauteilschäden, Sicherheitsrisiko für das Batteriesystem.",
+     "schwere": "hoch"
+    },
+    {
+     "versagen": "Temperaturfühler oder Steuerlogik für die 50-%-Taktung versagen; der 260-mA-Strom fließt dauerhaft mit 100 % Takt.",
+     "ursache": "F1 belegt: bei 130 mA liegt die Verlustleistung bereits bei 9,83 W je CMU und die Grenze 10 W ist nahezu erreicht. Die Taktung ist der einzigen Schutzmechanismus, die diese Leistung halbiert. Ein Falschzustand (Steuerausfall, Sensorfehler) entfernt diese Begrenzung und verdoppelt die Momentanleistung gegenüber dem 50-%-Soll.",
+     "folge": "Die Verlustwärme in derCMU/Platine steigt deutlich über 10 W (F1). F3 zeigt die Folge: 111,9 bis 178,8 °C Platinentemperatur, Grenze 105 °C überschritten. Im Extremfall Zellendegradation oder Thermische Auslösung.",
+     "schwere": "hoch"
+    },
+    {
+     "versagen": "Der auf der Kühlplatte montierte Ausgleichswiderstand bricht (Riss, Lötstelle) und die Stromstrecke zur Zelle öffnet sich.",
+     "ursache": "F3 belegt thermische Belastung der Platte bis 178,8 °C; F2 zeigt den systemkritischen Widerstandswert von 32,45 Ω, an den Strom (127,4 mA) und Ausgleichszeit (14,5 h) gekoppelt sind. Wiederholte Temperaturzyklen und mechanische Beanspruchung an der Kühlplatte können den Widerstand oder seine Lötstellen zerstören.",
+     "folge": "Aktiver Zellausgleich bleibt aus; der dQ-Ausgleich (1,848 Ah je Zelle, F1) wird nicht mehr geführt. Zellenspannungen driften über mehrere Ladezyklen auseinander, Kapazität und Lebensdauer des Packs sinken.",
+     "schwere": "mittel"
+    }
+   ]
+  },
+  {
+   "konzept": "K5",
+   "risiken": [
+    {
+     "versagen": "Thermisches Versagen der CMU bei Dauerbetrieb",
+     "ursache": "Kontinuierlicher Takt- und Kernverlust im Übertrager bei 1 bis 2 A im beengten Bauraum (120 x 60 mm, F5) bei 45 °C Umgebung (F3); auch geringe Zusatzverluste überlagern die bereits grenzwertigen 9,83 W je CMU (F1) und 9,64 W (F2), sodass die 105-°C-Grenze (F3, F4) überschritten wird.",
+     "folge": "NMC-Zelle degradiert; thermische Entartung; mögliche Kettenschaltung zu Nachbarmodulen.",
+     "schwere": "hoch"
+    },
+    {
+     "versagen": "Funktionsstörung durch elektromagnetische Störaussendung beim Fahren",
+     "ursache": "Stetiges Schalten der MOSFETs im aktiv-induktiven Pfad erzeugt breitbandiges Rauschen; die Platine mangelt bereits an Entkopplung, ESD-Schutz und Abschlüssen, 212 Verbindungen sind nicht geroutet (F5).",
+     "folge": "Spannungssensoren liefern Fehlwerte, BMS-Kommunikation stürzt ab; Zellen werden fälschlich als ausgeglichen gemeldet, schwächste Zelle überlädt.",
+     "schwere": "hoch"
+    },
+    {
+     "versagen": "Kernsättigung des Übertragers bei Lastsprüngen",
+     "ursache": "Spannungs- und Stromspitzen während Regenerationsbetrieb oder Vorladepuls (Spitzenstrom 9,12 A, Energie 416 J, F6) treiben den Übertragerkern in die Sättigung; die galvanische Trennung zwischen Zelle und Modul bricht zusammen.",
+     "folge": "Ungesteuerter Kurzschlussstrom zwischen Zelle und Modul; Zellausgleich unterbleibt, stärkste Zelle wird überladen; Schmelzen von Leiterbahnen auf der 4-lagigen Platine (F5).",
+     "schwere": "hoch"
+    }
+   ]
+  },
+  {
+   "konzept": "K6",
+   "risiken": [
+    {
+     "versagen": "Thermische Überschreitung bei Dauerbetrieb",
+     "ursache": "Aktiver Ausgleich läuft dauernd, auch beim Fahren, mit 1 bis 2 A. Die Schalt-Verluste addieren sich über die Ausgleichszeit (14,2 h bzw. 14,5 h laut F1/F2). Die Platine 120 x 60 mm (F5/F3) erreicht bereits bei 9,64 W und h = 10 W/m²K eine Platinentemperatur von 111,9 °C (F3). Ohne Strahlungsbezug (etwa 6 W/m²K, F4) liegt die realistische Temperatur bei 90 bis 110 °C und die Grenze von 105 °C wird erreicht (F3, F4).",
+     "folge": "CMU überschreitet die Wärmegrenze von 105 °C. Zerstörung von FETs und Kondensatoren; Zellüberwachung BT-320 fällt aus; Zellen bleiben unausgeglichen.",
+     "schwere": "hoch"
+    },
+    {
+     "versagen": "Schaltstörung durch unvollständiges PCB-Design",
+     "ursache": "F5 weist 212 nicht geroutete Verbindungen und fehlende Entkopplung, ESD-Schutz und Abschlüsse aus. Der aktiv-kapazitive Ansatz erfordert exakt getaktete MOSFET-Schaltvorgänge mit 1 bis 2 A. Ohne Entkopplung entstehen Spannungsspitzen an den Schaltern; ohne ESD-Schutz greifen Störgrößen von der Zellbus-Leitung ein.",
+     "folge": "Fehlsteuerung oder Abschaltung der Schalter während des Ausgleichs. Zellen-spannungen divergieren; der Ausgleich bleibt bei 14,2 h (F1) unvollständig stehen; BMS meldet Zellausgleich-Fehler.",
+     "schwere": "hoch"
+    },
+    {
+     "versagen": "Überschreitung der Pulsertragbarkeit der Schalt-FETs",
+     "ursache": "Beim Umschalten des Kondensators zwischen Zellen mit Spannungsunterschied fließt ein impulsartiger Strom. F6 belegt einen Spitzenstrom von 9,12 A und 416 J im Widerstand bei der Vorladung (Pulsanforderung 450 J). Die FETs in F2 dissipieren im Dauerzustand nur 0,008 W, sind aber für solche Impulse nicht spezifiziert. Bei 1 bis 2 A Nennstrom im aktiv-kapazitiven Takt (K6) addieren sich die Impulse über die Dauer (16,5 h bei Nennspannung, F2).",
+     "folge": "Thermische oder elektrostatische Zerstörung der FETs. CMU BT-320 wird stillgelegt; Zellüberwachung entfällt; Sicherheitsrisiko durch unüberwachte NMC-Zellen.",
+     "schwere": "mittel"
+    }
+   ]
+  }
+ ]
+}

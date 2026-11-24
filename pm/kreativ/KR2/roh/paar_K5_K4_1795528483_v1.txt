@@ -1,0 +1,1 @@
+{"urteile":{"Nachweisaufwand":{"gewinner":"A","grund":"A konzentriert den gesamten Sicherheitsnachweis (Software ASIL D/C, 2oo3-Voting) in einem einzigen Domain, während B zusätzlich den Unabhängigkeitsnachweis zwischen Software- und Hardwarepfad (FSR-06) sowie die FMEDA-Überdeckung für den Sekundärschutz als zweiten Kanal erbringen muss.","zahl":null}}}

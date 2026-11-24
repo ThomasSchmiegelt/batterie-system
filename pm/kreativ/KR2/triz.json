@@ -1,0 +1,59 @@
+{
+ "kopf": "KI-generiert (Claude Sonnet, 2026-11-24). Matrix: pm/kreativ/triz_daten.json; Ideen: PI (nicht geprüft).",
+ "zellen": [
+  {
+   "verbessern": 27,
+   "verbessern_name": "Zuverlässigkeit",
+   "verschlechtern": 35,
+   "verschlechtern_name": "Anpassungsfähigkeit",
+   "prinzipien": [
+    13,
+    35,
+    8,
+    24
+   ]
+  }
+ ],
+ "rang_prinzipien": [
+  {
+   "nr": 13,
+   "name": "Umkehren",
+   "treffer": 1,
+   "ideen": [
+    "Der Sekundärschutz öffnet den Schütze hardwareseitig ohne BMS-Software (FSR-06), sodass die Trennentscheidung nicht mehr durch den BMS-Rechner, sondern durch einen unabhängigen Hardwarepfad getroffen wird.",
+    "Anstelle sofortiger Trennung wird zuerst die Leistung über CAN begrenzt (FSR-07) und erst dann getrennt; die Reihenfolge von Aktion und Ursache ist umgekehrt.",
+    "Zwei unabhängige Messpfade (AFE und Sekundärschutz, FSR-01) inieren die Einzelabhängigkeit: ein einzelner Fehler am BMS kann die Trennung weder verhindern noch fälschlich auslösen."
+   ]
+  },
+  {
+   "nr": 35,
+   "name": "Parameter ändern",
+   "treffer": 1,
+   "ideen": [
+    "Der Schwellwert wird durch eine stufenweise Drosselkurve ergänzt, bei der die Leistungsgrenze bereits vor Erreichen von T_krit sinkt, sodass die Trennung am FTTI-Grenzwert von 1 s (SG-03) kein sprungartiger Parameterwechsel ist.",
+    "Der Zeitparameter wird verändert: die 2 s Vorwarnzeit (SG-05) wird als eigenständige Phase zwischen Drosselung und Trennung eingefügt, statt beide in einem Takt ablaufen zu lassen.",
+    "Der Messparameter wird von einer einzelnen Zellspannung auf die Übereinstimmung zweier unabhängiger Pfade (AFE und Sekundärschutz, FSR-01) geändert; die Plausibilisierung ersetzt die Einzelbewertung."
+   ]
+  },
+  {
+   "nr": 8,
+   "name": "Gegengewicht",
+   "treffer": 1,
+   "ideen": [
+    "BMS-Steuergerät (BT-310) und Sekundärschutz (BT-725/BT-715) wirken als Gegengewicht: Der eine kann ein falsches Signal des anderen durch den unabhängigen Pfad (FSR-06) überstimmen.",
+    "Die 2 s CAN-Warnung (SG-05, FSR-07) kompensiert den plötzlichen Verlust der Leistung, indem der Fahrer Zeit bekommt, bevor der Schütze (BT-711) geöffnet wird.",
+    "Die FMEDA-Werte der CMU (SPFM 0,9992, LFM 0,9814) stellen sicher, dass die Detektionsfähigkeit dem Trennbedarf bei ASIL D und ASIL C (SG-01, SG-03) gewachsen ist."
+   ]
+  },
+  {
+   "nr": 24,
+   "name": "Vermittler",
+   "treffer": 1,
+   "ideen": [
+    "Die CAN-Botschaft mit 2 s Vorwarnzeit (FSR-07, SG-05) wirkt als Vermittler zwischen Erkennung und Schützeöffnung (BT-711) und verhindert das unerwartete Trennen.",
+    "Der hardwareseitige Abschaltpfad des Sekundärschutzes (FSR-06) vermittelt zwischen Überladungszustand und sicherem Zustand, ohne die BMS-Software einzubeziehen.",
+    "Die 1 s FTTI-Fenster (SG-01, SG-03) dienen als zeitlicher Vermittler: Innerhalb dieses Fensters findet erst die Drosselung (FSR-07) statt, dann die endgültige Trennung."
+   ]
+  }
+ ]
+}

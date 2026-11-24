@@ -1,11 +1,11 @@
 ---
 typ: dokument
-nr: "BAT-DOC-17"
+nr: "BAT-DOC-23"
 version: "0.1"
 status: "Entwurf"
 tags: ["dokument"]
 ---
-# BAT-DOC-17 – Workflow für die nächste Konstruktionsschleife (V-Modell)
+# BAT-DOC-23 – Workflow für die nächste Konstruktionsschleife (V-Modell)
 
 > KI-generiert, erzeugt aus pm/plan/wissensnetz.json – nicht von Hand bearbeiten
 
@@ -25,7 +25,7 @@ tags: ["dokument"]
 
 ## Inhalt (Kopie aus `docs/17_workflow_schleife.md`)
 
-| Dok.-Nr. | BAT-DOC-17 | Version | 0.1 | Status | Entwurf |
+| Dok.-Nr. | BAT-DOC-23 | Version | 0.1 | Status | Entwurf |
 |---|---|---|---|---|---|
 | Titel | Workflow für die nächste Konstruktionsschleife (V-Modell) | Ersteller | Claude Opus (KI) | Prüfer | – (Mensch offen) |
 

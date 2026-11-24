@@ -1,0 +1,1 @@
+{"optionen":[{"name":"Freie Konvektion auf CMU-Platine","quelle":"Fakt F5"},{"name":"Wärmeleitpad zur Kühlplatte","quelle":"Fakt F5"},{"name":"Geschlossener Flüssigkeitskühlkreis","quelle":"TRIZ-29"},{"name":"Gepulster Betrieb, reduzierte Mittelleistung","quelle":"TRIZ-21"},{"name":"Transformatorkopplung ohne ohmsche Verluste","quelle":"TRIZ-28"}]}

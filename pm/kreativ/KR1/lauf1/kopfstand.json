@@ -1,0 +1,121 @@
+{
+ "kopf": "KI-generiert (Claude Sonnet, 2026-11-24). PI-Vorschläge, Kandidaten für docs/05, ungeprüft.",
+ "konzepte": [
+  {
+   "konzept": "K1",
+   "risiken": [
+    {
+     "versagen": "Thermisches Versagen der CMU-Platine",
+     "ursache": "Bei 9,83 W Verlustwärme (F2) auf einer Platine von 120 x 60 mm (F6) mit freier Konvektion entsteht eine Übertemperatur von 60 bis 100 K (F5). Der 14,2-h-Zyklus (F1) hält diese Belastung kontinuierlich aufrecht.",
+     "folge": "Die Platine überschreitet 105 °C bei 45 °C Umgebung (F5). Die BMS-Dormanz (F9) schaltet den Ausgleich ab. Die 13 CMU-Einheiten (F6) leiden an Materialdegradation; Bauteile aus dem Bereich 130 bis 170 Bauteile (F6) altern beschleunigt.",
+     "schwere": "hoch"
+    },
+    {
+     "versagen": "Unzulässige Stromerhöhung zur Zeitverkürzung durchbricht Wärmebudget",
+     "ursache": "Die Ausgleichszeit soll unter 14,2 h (F1) sinken. Höherer Strom als 130 mA (F1) über 34 Ohm (F4) erhöht die Verlustleistung quadratisch. Bereits 9,83 W (F2) liegen an der Grenze von 10 W (F2). Die Stromschwankung von 124 mA auf 4,2 V auf 109 mA auf 3,7 V (F4) zeigt: am Zyklusende sinkt der Strom, die Zeit verlängert sich um 10 bis 15 % (F4).",
+     "folge": "Jede Zeitverkürzung treibt die CMU-Wärme über 10 W (F2). Die Thermabschaltung (F9) bricht den Ausgleich ab, die Zellen bleiben unausgeglichen, und der dQ-Zyklus von 1,848 Ah (F1) wird nicht vollständig abgearbeitet.",
+     "schweite": "hoch",
+     "schwere": "hoch"
+    },
+    {
+     "versagen": "Kumulative Zelldegradation durch rein passiven Bleed-Abgleich",
+     "ursache": "Der passive Widerstandsausgleich entlädt nur stärkere Zellen, ohne schwächere aufzuladen. Bei 217 Zellen in Serie (F6) über 13 CMU (F6) begrenzt die schwächste Zelle die nutzbare Kapazität (F7). Die BMS-Dormanz (F9) unterbricht den 14,2-h-Zyklus (F1) periodisch, sodass der Ausgleich nie vollständig läuft.",
+     "folge": "Die Kapazitätsstreuung wächst über 5 % (F7). Die nutzbare Kapazität des 217er-Packs (F6) sinkt bis auf die schwächste Zelle. Jede Zelle durchläuft mehr Partialladetiefen, was die Lebensdauer der gesamten Kette verkürzt.",
+     "schwere": "mittel"
+    }
+   ]
+  },
+  {
+   "konzept": "K2",
+   "risiken": [
+    {
+     "versagen": "Kühlkreisausfall: Pumpe stoppt, Fluid eindickt oder Leitung klemmt; die 9,83 W je CMU bei Höchstspannung können nicht abgeführt werden.",
+     "ursache": "Das Konzept verschiebt die Verlustwärme extern, aber die CMU-Platine (120 x 60 mm, 80 g) produziert lokal bei freier Konvektion bereits 60 bis 100 K Übertemperatur. PWM-Pulse verengen den Wärmeabfluss in kurze Stöße; die temperaturabhängige Stromsteuerung (124 / 109 mA) reagiert zu träge auf einen plötzlichen Kühlkreisentzug.",
+     "folge": "CMU-Die überschreitet 105 °C bei 45 °C Umgebung; Bauteile (130 bis 170 Stück) degradieren, Kontaktwiderstände steigen, in der Folge steigt die Wärme weiter über die 10-W-Grenze hinaus. Unkontrollierte Erwärmung aller 13 CMU mit 217 Zellen in Serie.",
+     "schwere": "hoch"
+    },
+    {
+     "versagem": "PWM-Schalteralterung an einem der 18 Kanäle pro CMU (234 Kanäle insgesamt): Kontaktwiderstand wächst, Pulsform entartet, Stromspitze überschreitet 124 mA bei 4,2 V.",
+     "ursache": "Aktives Balancing benötigt Leiterbahnen und Schalter je Zelle samt Kühlkontakt im Layout. Bei gealtertem Schalter wird der Nennwiderstand von 34 Ohm verletzt; die Pulsmodulation erzeugt lokale Hotspots, die nicht mehr im Mittelwert 9,83 W unter der 10-W-Grenze liegen.",
+     "folge": "Lokal überhitzte Zelle, Kapazitätsstreuung wächst über 5 %; die nutzbare Kapazität der 217er-Serie sinkt auf die schwächste Zelle. Im Extremfall Zellendurchbruch mit Brand- und Explosionsrisiko im geschlossenen Kühlkreis.",
+     "schwere": "hoch"
+    },
+    {
+     "versagen": "Dormanz-Aufwachfenster zu kurz: Der Ausgleich bricht ab, bevor dQ 1,848 Ah ausgeglichen ist; die 14,2 h Ausgleichszeit bei 130 mA passen nicht ins einzeitige Fenster.",
+     "ursache": "Das Konzept schreibt einen einmaligen Ausgleich im Aufwachfenster vor. Durch PWM-Taktung sinkt der Mittelflussstrom unter den Nennwert; die E2-Ausgleichszeit verlängert sich weiter um 10 bis 15 %. Die BMS-Dormanz schaltet bei hoher Temperatur ab und beendet den Vorgang vorzeitig.",
+     "folge": "Zellenspannungsdifferenzen bleiben bestehen; Kapazitätsstreuung über 5 % limitiert die Serie dauerhaft. In jedem Zyklus wird der Ausgleich unvollständig, die Streuung wächst kumulativ, bis einzelne Zellen tiefentladen oder überladen werden.",
+     "schwere": "mittel"
+    }
+   ]
+  },
+  {
+   "konzept": "K3",
+   "risiken": [
+    {
+     "versagen": "Thermaler Kippfall des induktiven Koppellelements",
+     "ursache": "Gepulster Betrieb senkt die Mittelleistung, hebt aber die Spitzenleistung über den Grenzwert von 10 W an (F2: 9,83 W bei Höchstspannung bereits erreicht). Das Koppellelement ist thermisch dichter als die bisher verteilte Ableitung; 9,8 W auf der 120 x 60 mm Platine ergeben 60 bis 100 K Übertemperatur (F5).",
+     "folge": "Thermal-Cutoff (F9) unterbricht den Ausgleich. Zellen bleiben unausgeglichen; nächste Batch erst im nächsten Aufwachzyklus. Bei Wiederholung verschlechtert sich die Kapazitätsstreuung über 5 % und begrenzt die nutzbare Kapazität auf die schwächste Zelle (F7).",
+     "schwere": "hoch"
+    },
+    {
+     "versagen": "Ausfall des HF-Schalters in der Induktivkopplung",
+     "ursache": "Impulsbetrieb mit hoher Stromdichte in einer kompakten Spule erzwingt hohe Schaltspannung und Stromspitzen je Zelle. Aktives Balancing benötigt Schalter je Zelle samt Kühlkontakt (F10). Ein geschwächter Schalter (Thermomigration, Kontaktkorrosion) fällt durch oder kurz.",
+     "folge": "Eine Zellpaarung verliert den Energieaustauschweg. Stromanpassung gilt nicht für Lithium-Chemien (F8), also kein Fallback. Die betroffene Zelle driftet vom SOC der 217er Serie (F6) ab; Gesamtkapazität sinkt auf den Wert der schwächsten Zelle (F7).",
+     "schwere": "mittel"
+    },
+    {
+     "versagen": "Zeitliche Unverträglichkeit: verkürzte Ausgleichszeit verletzt Thermobudget",
+     "ursache": "REQ-P15 verlangt kürzere Ausgleichszeit. Die aktuelle Dauer beträgt 14,2 h bei 130 mA (F1). Komprimiert man diese Dosis in ein kürzeres Hochstromfenster, steigt die Spitzenleistung über 10 W (F2). F5 zeigt: 9,8 W reichen für 60 bis 100 K Übertemperatur bei 45 °C Umgebung; höhere Werte überschreiten 105 °C.",
+     "folge": "Das BMS-Zusatzmodul schaltet bei hoher Temperatur ab (F9, Dormanz-Management). Der Ausgleich bricht ab, die effektive Dauer verlängert sich. Paradox: die Maßnahme zur Zeitverkürzung erzeugt längere Zyklen. thermische Degradation der 130 bis 170 Bauteile auf der Platine (F6) beschleunigt.",
+     "schwere": "hoch"
+    }
+   ]
+  },
+  {
+   "konzept": "K4",
+   "risiken": [
+    {
+     "versagen": "Temperatur-Deadlock der Taktungslogik",
+     "ursache": "9,83 W Verlustleistung (F2) auf der 120 x 60 mm Platine (F6) erzeugen 60 bis 100 K Übertemperatur (F5). Die temperaturgepumpte Taktung erkennt die Überhitzung und bricht den Vorgang ab (F9).",
+     "folge": "Der 14,2-h-Ausgleichszyklus (F1) wird nicht abgeschlossen. Die 217 Seriendzellemente (F6) bleiben unausgeglichen, die Packkapazität sinkt.",
+     "schwere": "hoch"
+    },
+    {
+     "versagen": "Fehlende Wiederholung durch falsche dQ-Vorberechnung",
+     "ursache": "Die Vorab-Berechnung von dQ setzt homogene Zellen voraus. Eine Kapazitätsstreuung über 5 % (F7) verschiebt den tatsächlichen dQ. Der Einmal-Durchlauf über 18 Kanäle (F6) bietet keine zweite Chance.",
+     "folge": "Die schwächste Zelle (F7) begrenzt die nutzbare Packkapazität. Jede Folgezyklus bleibt unvollständig, da keine Rückkopplung nach dem Durchlauf existiert.",
+     "schwere": "mittel"
+    },
+    {
+     "versagen": "Wärmeleitpad-Ausfall unter mechanischer Belastung",
+     "ursache": "Die 80 g schwere Platine (F6) mit 130 bis 170 Bauteilen (F6) unterliegt Vibration und Temperaturzyklen im 120 x 60 x 10 mm Gehäuse (F6). Der Pad-Kontakt zur Kühlplatte verschlechtert sich. 9,83 W (F2) bleiben lokal konzentriert; das Dormanz-BMS schaltet bei hoher Temperatur ab (F9).",
+     "folge": "Wiederholte Abbrüche des Ausgleichs im Takt. Kumulative Unausgewogenheit wächst über Zyklen. Aktives Balancing (F10) oder Stromanpassung (F8) stehen für NMC nicht als Alternative zur Verfügung.",
+     "schwere": "hoch"
+    }
+   ]
+  },
+  {
+   "konzept": "K5",
+   "risiken": [
+    {
+     "versagen": "Thermischer Peak beim parallelen Kurzzeitausgleich aller 18 Kanäle",
+     "ursache": "Konzept K5 löst alle 18 Kanäle gleichzeitig kurzfristig aus. Bei Höchstspannung erreicht die CMU bereits 9,83 W an der Grenze von 10 W. Auf der Platine 120 x 60 mm erzeugt 9,8 W bei freier Konvektion 60 bis 100 K Übertemperatur und übersteigt 105 °C bei 45 °C Umgebung.",
+     "folge": "CMU überschreitet 105 °C, Dormanz-Management schaltet ab, Ausgleich bricht ab. Zellen bleiben unausgeglichen, Kapazität begrenzt auf schwächste Zelle bei Streuung über 5 %.",
+     "schwere": "hoch"
+    },
+    {
+     "versagen": "Ohmsche Verluste in der Zellinnenwiderstand, nicht in der Transformatorkopplung",
+     "ursache": "Konzept K5 unterstellt 'keine ohmschen Verluste' in der Transformatorkopplung. Die Zellinnenwiderstand von 34 Ohm begrenzt den Strom auf 124 mA bei 4,2 V und 109 mA bei 3,7 V. Die Nomenklauszeit 14,2 h bei 130 mA und 1,848 Ah dQ wird nicht erreicht. Die E2-Ausgleichszeit ist im Mittel 10 bis 15 % länger.",
+     "folge": "Ausgleichsdauer verlängert sich, Vorgleich vor Betrieb passt nicht ins Zeitfenster. Laufender Restausgleich muss länger laufen, Wärmeakkumulation auf der Platine wächst.",
+     "schwere": "mittel"
+    },
+    {
+     "versagen": "Ultrakonvektionsantrieb als einzelne Wärmesignatur bei Dauerbetrieb",
+     "ursache": "Konzept K5 legt die Verlustwärme auf Kühlplatte mit Ultraschall-Konvektionsantrieb. Bei 13 CMU je 18 Kanälern auf der Platine 120 x 60 x 10 mm (80 g) summiert sich die Wärme aus F2 (9,83 W) und F3 (8,63 W). Der Ultraschallantrieb ist ein einzelner Antrieb pro Platte; ein Ausfall oder Alterung reduziert die Konvektion unter den frei-Konvektions-Wert und die 60 bis 100 K Übertemperatur werden 'wahrscheinlich verfehlt'.",
+     "folge": "Wärmesumme übertrifft die Abfuhr, CMU überschreitet 105 °C. Periodisches Aufwachen und Ausgleich nach P13-Dormanz-Management wird abgebrochen. 217 Zellen in Serie bleiben unausgebalanciert.",
+     "schwere": "hoch"
+    }
+   ]
+  }
+ ]
+}

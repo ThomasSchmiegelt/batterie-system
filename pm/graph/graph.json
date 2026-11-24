@@ -202,11 +202,59 @@
   },
   {
    "typ": "Bauteil",
+   "name": "BMS-Leiterplatte",
+   "art": "E",
+   "anforderungen": "[\"REQ-P15\", \"REQ-P17\", \"REQ-P18\", \"REQ-P19\"]",
+   "pfad": "pm/bauteile/struktur.json",
+   "id": "BT-311"
+  },
+  {
+   "typ": "Bauteil",
    "name": "Zellüberwachung",
    "art": "K",
    "anforderungen": "[\"REQ-P15\"]",
    "pfad": "pm/bauteile/struktur.json",
    "id": "BT-320"
+  },
+  {
+   "typ": "Bauteil",
+   "name": "CMU-Leiterplatte",
+   "art": "E",
+   "anforderungen": "[\"REQ-P15\", \"REQ-P17\", \"REQ-P19\", \"REQ-P20\"]",
+   "pfad": "pm/bauteile/struktur.json",
+   "id": "BT-321"
+  },
+  {
+   "typ": "Bauteil",
+   "name": "Mess-IC (AFE)",
+   "art": "K",
+   "anforderungen": "[\"REQ-P15\", \"REQ-P18\"]",
+   "pfad": "pm/bauteile/struktur.json",
+   "id": "BT-322"
+  },
+  {
+   "typ": "Bauteil",
+   "name": "Ausgleichskreis",
+   "art": "E",
+   "anforderungen": "[\"REQ-P15\"]",
+   "pfad": "pm/bauteile/struktur.json",
+   "id": "BT-323"
+  },
+  {
+   "typ": "Bauteil",
+   "name": "Daisy-Chain-Übertrager",
+   "art": "K",
+   "anforderungen": "[\"REQ-P17\", \"REQ-P19\"]",
+   "pfad": "pm/bauteile/struktur.json",
+   "id": "BT-324"
+  },
+  {
+   "typ": "Bauteil",
+   "name": "Sekundärschutz Überspannung",
+   "art": "K",
+   "anforderungen": "[\"REQ-P18\"]",
+   "pfad": "pm/bauteile/struktur.json",
+   "id": "BT-325"
   },
   {
    "typ": "Bauteil",
@@ -507,6 +555,14 @@
    "anforderungen": "[\"REQ-P11\", \"REQ-P13\"]",
    "pfad": "pm/bauteile/struktur.json",
    "id": "BT-713"
+  },
+  {
+   "typ": "Bauteil",
+   "name": "Schützansteuerung",
+   "art": "E",
+   "anforderungen": "[\"REQ-P13\", \"REQ-P18\"]",
+   "pfad": "pm/bauteile/struktur.json",
+   "id": "BT-715"
   },
   {
    "typ": "Bauteil",
@@ -1014,6 +1070,22 @@
   },
   {
    "typ": "Merkmal",
+   "id": "BT-311.laenge_mm"
+  },
+  {
+   "typ": "Merkmal",
+   "id": "BT-311.breite_mm"
+  },
+  {
+   "typ": "Merkmal",
+   "id": "BT-311.lagen"
+  },
+  {
+   "typ": "Merkmal",
+   "id": "BT-311.kriechstrecke_hv_nv_mm"
+  },
+  {
+   "typ": "Merkmal",
    "wert_LFP": 14.0,
    "wert_NMC": 13.0,
    "id": "BT-320.anzahl"
@@ -1039,6 +1111,114 @@
    "wert_LFP": 150.0,
    "wert_NMC": 130.0,
    "id": "BT-320.ausgleichsstrom_mA"
+  },
+  {
+   "typ": "Merkmal",
+   "id": "BT-321.laenge_mm"
+  },
+  {
+   "typ": "Merkmal",
+   "id": "BT-321.breite_mm"
+  },
+  {
+   "typ": "Merkmal",
+   "id": "BT-321.lagen"
+  },
+  {
+   "typ": "Merkmal",
+   "id": "BT-321.dicke_mm"
+  },
+  {
+   "typ": "Merkmal",
+   "id": "BT-321.kupfer_um"
+  },
+  {
+   "typ": "Merkmal",
+   "id": "BT-321.kriechstrecke_mm"
+  },
+  {
+   "typ": "Merkmal",
+   "id": "BT-321.kriechstrecke_daisy_mm"
+  },
+  {
+   "typ": "Merkmal",
+   "wert": "waermeleitpad_kuehlplatte",
+   "wert_LFP": "waermeleitpad_kuehlplatte",
+   "wert_NMC": "waermeleitpad_kuehlplatte",
+   "entscheidung": "ENT-184",
+   "id": "BT-321.waermeabfuhr"
+  },
+  {
+   "typ": "Merkmal",
+   "wert": 1.0,
+   "wert_LFP": 1.0,
+   "wert_NMC": 1.0,
+   "entscheidung": "ENT-185",
+   "id": "BT-321.pad_dicke_mm"
+  },
+  {
+   "typ": "Merkmal",
+   "wert": 3.0,
+   "wert_LFP": 3.0,
+   "wert_NMC": 3.0,
+   "entscheidung": "ENT-186",
+   "id": "BT-321.pad_lambda_W_mK"
+  },
+  {
+   "typ": "Merkmal",
+   "wert": 8.0,
+   "wert_LFP": 8.0,
+   "wert_NMC": 8.0,
+   "entscheidung": "ENT-187",
+   "id": "BT-321.vias_je_widerstandspaar"
+  },
+  {
+   "typ": "Merkmal",
+   "id": "BT-322.kanaele"
+  },
+  {
+   "typ": "Merkmal",
+   "id": "BT-322.asil"
+  },
+  {
+   "typ": "Merkmal",
+   "id": "BT-322.messfehler_mV"
+  },
+  {
+   "typ": "Merkmal",
+   "id": "BT-323.widerstand_Ohm"
+  },
+  {
+   "typ": "Merkmal",
+   "id": "BT-323.verlust_W"
+  },
+  {
+   "typ": "Merkmal",
+   "id": "BT-323.schalter"
+  },
+  {
+   "typ": "Merkmal",
+   "id": "BT-323.bauform"
+  },
+  {
+   "typ": "Merkmal",
+   "id": "BT-323.filter_R_Ohm"
+  },
+  {
+   "typ": "Merkmal",
+   "id": "BT-323.filter_C_nF"
+  },
+  {
+   "typ": "Merkmal",
+   "id": "BT-324.pruefspannung_V"
+  },
+  {
+   "typ": "Merkmal",
+   "id": "BT-325.schwelle_V"
+  },
+  {
+   "typ": "Merkmal",
+   "id": "BT-325.verzoegerung_ms"
   },
   {
    "typ": "Merkmal",
@@ -1555,6 +1735,14 @@
   },
   {
    "typ": "Merkmal",
+   "id": "BT-712.schalter"
+  },
+  {
+   "typ": "Merkmal",
+   "id": "BT-712.pulsenergie_J"
+  },
+  {
+   "typ": "Merkmal",
    "wert": "Pyro_plus_Schmelzsicherung",
    "wert_LFP": "Pyro_plus_Schmelzsicherung",
    "wert_NMC": "Pyro_plus_Schmelzsicherung",
@@ -1566,6 +1754,18 @@
    "wert_LFP": 350.0,
    "wert_NMC": 315.0,
    "id": "BT-713.nennstrom_A"
+  },
+  {
+   "typ": "Merkmal",
+   "id": "BT-715.haltestrom_A"
+  },
+  {
+   "typ": "Merkmal",
+   "id": "BT-715.loeschung"
+  },
+  {
+   "typ": "Merkmal",
+   "id": "BT-715.abschaltzeit_ms"
   },
   {
    "typ": "Merkmal",
@@ -2274,6 +2474,88 @@
    "ebene": "System",
    "pfad": "pm/anforderungen.json",
    "id": "REQ-G02"
+  },
+  {
+   "typ": "Anforderung",
+   "name": "EMV der Elektronik (BMS, CMU, Schützansteuerung)",
+   "status": "offen",
+   "methode": "A",
+   "ebene": "Subsystem",
+   "pfad": "pm/anforderungen.json",
+   "id": "REQ-P17"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/ERGEBNIS.md",
+   "pfad": "sim/elektrik/e3_platine/ERGEBNIS.md",
+   "id": "sim/elektrik/e3_platine/ERGEBNIS.md"
+  },
+  {
+   "typ": "Anforderung",
+   "name": "Funktionale Sicherheit nach ISO 26262",
+   "status": "offen",
+   "methode": "R",
+   "ebene": "System",
+   "pfad": "pm/anforderungen.json",
+   "id": "REQ-P18"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "docs/24_gefahrenanalyse_hara.md",
+   "pfad": "docs/24_gefahrenanalyse_hara.md",
+   "name": "24_gefahrenanalyse_hara",
+   "art": "docs",
+   "id": "docs/24_gefahrenanalyse_hara.md"
+  },
+  {
+   "typ": "Anforderung",
+   "name": "Isolationskoordination (Luft- und Kriechstrecken) auf Leiterplatten und in der Schaltbox",
+   "status": "offen",
+   "methode": "A",
+   "ebene": "Bauteil",
+   "pfad": "pm/anforderungen.json",
+   "id": "REQ-P19"
+  },
+  {
+   "typ": "Anforderung",
+   "name": "Umweltfestigkeit und Bauteilqualifikation der Elektronik",
+   "status": "offen",
+   "methode": "I",
+   "ebene": "Bauteil",
+   "pfad": "pm/anforderungen.json",
+   "id": "REQ-P20"
+  },
+  {
+   "typ": "Anforderung",
+   "name": "Cybersicherheit BMS",
+   "status": "offen",
+   "methode": "R",
+   "ebene": "System",
+   "pfad": "pm/anforderungen.json",
+   "id": "REQ-P21"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "docs/07_normen_und_vorschriften.md",
+   "pfad": "docs/07_normen_und_vorschriften.md",
+   "name": "07_normen_und_vorschriften",
+   "art": "docs",
+   "id": "docs/07_normen_und_vorschriften.md"
+  },
+  {
+   "typ": "Anforderung",
+   "name": "Lösungssuche nachvollziehbar: Alternativen einer Akte mit echter Abwägung stammen aus einer Kreativmethode (Morphologischer Kasten, TRIZ, Kopfstand) und sind per Paarvergleich bewertet",
+   "status": "offen",
+   "methode": "I",
+   "ebene": "System",
+   "pfad": "pm/anforderungen.json",
+   "id": "REQ-D15"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "pm/kreativ/METHODE.md",
+   "pfad": "pm/kreativ/METHODE.md",
+   "id": "pm/kreativ/METHODE.md"
   },
   {
    "typ": "Annahme",
@@ -5109,6 +5391,267 @@
    "id": "ENT-162"
   },
   {
+   "typ": "Entscheidung",
+   "name": "CMU-Platine Lagen 4",
+   "status": "vorgeschlagen",
+   "datum": "2026-11-24",
+   "variante": "alle",
+   "pfad": "pm/entscheidungen/ENT-163.md",
+   "id": "ENT-163"
+  },
+  {
+   "typ": "Entscheidung",
+   "name": "CMU-Platine Dicke 1,6 mm",
+   "status": "vorgeschlagen",
+   "datum": "2026-11-24",
+   "variante": "alle",
+   "pfad": "pm/entscheidungen/ENT-164.md",
+   "id": "ENT-164"
+  },
+  {
+   "typ": "Entscheidung",
+   "name": "CMU-Platine Kupfer außen 70 µm",
+   "status": "vorgeschlagen",
+   "datum": "2026-11-24",
+   "variante": "alle",
+   "pfad": "pm/entscheidungen/ENT-165.md",
+   "id": "ENT-165"
+  },
+  {
+   "typ": "Entscheidung",
+   "name": "CMU-Platine Länge 120 mm",
+   "status": "vorgeschlagen",
+   "datum": "2026-11-24",
+   "variante": "alle",
+   "pfad": "pm/entscheidungen/ENT-166.md",
+   "id": "ENT-166"
+  },
+  {
+   "typ": "Entscheidung",
+   "name": "CMU-Platine Breite 60 mm",
+   "status": "vorgeschlagen",
+   "datum": "2026-11-24",
+   "variante": "alle",
+   "pfad": "pm/entscheidungen/ENT-167.md",
+   "id": "ENT-167"
+  },
+  {
+   "typ": "Entscheidung",
+   "name": "CMU-Platine Abstand innerhalb einer CMU 0,2 mm (Leiterplattenwerkstoff, PD2, ≤ 100 V)",
+   "status": "vorgeschlagen",
+   "datum": "2026-11-24",
+   "variante": "alle",
+   "pfad": "pm/entscheidungen/ENT-168.md",
+   "id": "ENT-168"
+  },
+  {
+   "typ": "Entscheidung",
+   "name": "Mess-IC 18 Kanäle",
+   "status": "vorgeschlagen",
+   "datum": "2026-11-24",
+   "variante": "alle",
+   "pfad": "pm/entscheidungen/ENT-169.md",
+   "id": "ENT-169"
+  },
+  {
+   "typ": "Entscheidung",
+   "name": "Mess-IC ASIL D",
+   "status": "vorgeschlagen",
+   "datum": "2026-11-24",
+   "variante": "alle",
+   "pfad": "pm/entscheidungen/ENT-170.md",
+   "id": "ENT-170"
+  },
+  {
+   "typ": "Entscheidung",
+   "name": "Ausgleichswiderstand LFP 23,5 Ohm (2 x 47 Ohm parallel)",
+   "status": "vorgeschlagen",
+   "datum": "2026-11-24",
+   "variante": "[\"LFP\"]",
+   "pfad": "pm/entscheidungen/ENT-171.md",
+   "id": "ENT-171"
+  },
+  {
+   "typ": "Entscheidung",
+   "name": "Ausgleichswiderstand NMC 32,45 Ohm (2 x 64,9 Ohm parallel, E96)",
+   "status": "vorgeschlagen",
+   "datum": "2026-11-24",
+   "variante": "[\"NMC\"]",
+   "pfad": "pm/entscheidungen/ENT-172.md",
+   "id": "ENT-172"
+  },
+  {
+   "typ": "Entscheidung",
+   "name": "Ausgleichsschalter N-MOSFET Logikpegel",
+   "status": "vorgeschlagen",
+   "datum": "2026-11-24",
+   "variante": "alle",
+   "pfad": "pm/entscheidungen/ENT-173.md",
+   "id": "ENT-173"
+  },
+  {
+   "typ": "Entscheidung",
+   "name": "Daisy-Chain Prüfspannung 1,5 kV",
+   "status": "vorgeschlagen",
+   "datum": "2026-11-24",
+   "variante": "alle",
+   "pfad": "pm/entscheidungen/ENT-174.md",
+   "id": "ENT-174"
+  },
+  {
+   "typ": "Entscheidung",
+   "name": "Sekundärschutz Schwelle LFP 3,75 V",
+   "status": "vorgeschlagen",
+   "datum": "2026-11-24",
+   "variante": "[\"LFP\"]",
+   "pfad": "pm/entscheidungen/ENT-175.md",
+   "id": "ENT-175"
+  },
+  {
+   "typ": "Entscheidung",
+   "name": "Sekundärschutz Schwelle NMC 4,25 V",
+   "status": "vorgeschlagen",
+   "datum": "2026-11-24",
+   "variante": "[\"NMC\"]",
+   "pfad": "pm/entscheidungen/ENT-176.md",
+   "id": "ENT-176"
+  },
+  {
+   "typ": "Entscheidung",
+   "name": "Sekundärschutz Verzögerung 1000 ms",
+   "status": "vorgeschlagen",
+   "datum": "2026-11-24",
+   "variante": "alle",
+   "pfad": "pm/entscheidungen/ENT-177.md",
+   "id": "ENT-177"
+  },
+  {
+   "typ": "Entscheidung",
+   "name": "BMS-Platine Kriechstrecke HV/NV 10 mm",
+   "status": "vorgeschlagen",
+   "datum": "2026-11-24",
+   "variante": "alle",
+   "pfad": "pm/entscheidungen/ENT-178.md",
+   "id": "ENT-178"
+  },
+  {
+   "typ": "Entscheidung",
+   "name": "Vorladung Pulsenergie 450 J",
+   "status": "vorgeschlagen",
+   "datum": "2026-11-24",
+   "variante": "alle",
+   "pfad": "pm/entscheidungen/ENT-179.md",
+   "id": "ENT-179"
+  },
+  {
+   "typ": "Entscheidung",
+   "name": "Vorladung Schalter Vorladeschütz",
+   "status": "vorgeschlagen",
+   "datum": "2026-11-24",
+   "variante": "alle",
+   "pfad": "pm/entscheidungen/ENT-180.md",
+   "id": "ENT-180"
+  },
+  {
+   "typ": "Entscheidung",
+   "name": "Messfilter Widerstand 100 Ohm",
+   "status": "vorgeschlagen",
+   "datum": "2026-11-24",
+   "variante": "alle",
+   "pfad": "pm/entscheidungen/ENT-181.md",
+   "id": "ENT-181"
+  },
+  {
+   "typ": "Entscheidung",
+   "name": "Messfilter Kondensator 100 nF",
+   "status": "vorgeschlagen",
+   "datum": "2026-11-24",
+   "variante": "alle",
+   "pfad": "pm/entscheidungen/ENT-182.md",
+   "id": "ENT-182"
+  },
+  {
+   "typ": "Entscheidung",
+   "name": "CMU-Platine Kriechstrecke Daisy-Chain-Ausgang 2,5 mm",
+   "status": "vorgeschlagen",
+   "datum": "2026-11-24",
+   "variante": "alle",
+   "pfad": "pm/entscheidungen/ENT-183.md",
+   "id": "ENT-183"
+  },
+  {
+   "typ": "Entscheidung",
+   "name": "CMU-Platine Wärmeabfuhr: Wärmeleitpad zur Kühlplatte (KR1 K2)",
+   "status": "entschieden (Mensch)",
+   "datum": "2026-11-24",
+   "variante": "alle",
+   "pfad": "pm/entscheidungen/ENT-184.md",
+   "id": "ENT-184"
+  },
+  {
+   "typ": "Entscheidung",
+   "name": "Wärmeleitpad CMU 1,0 mm",
+   "status": "entschieden (Opus, delegiert durch Autor 2026-11-24)",
+   "datum": "2026-11-24",
+   "variante": "alle",
+   "pfad": "pm/entscheidungen/ENT-185.md",
+   "id": "ENT-185"
+  },
+  {
+   "typ": "Entscheidung",
+   "name": "Wärmeleitpad CMU λ 3 W/mK",
+   "status": "entschieden (Opus, delegiert durch Autor 2026-11-24)",
+   "datum": "2026-11-24",
+   "variante": "alle",
+   "pfad": "pm/entscheidungen/ENT-186.md",
+   "id": "ENT-186"
+  },
+  {
+   "typ": "Entscheidung",
+   "name": "Thermische Vias 8 je Widerstandspaar",
+   "status": "entschieden (Opus, delegiert durch Autor 2026-11-24)",
+   "datum": "2026-11-24",
+   "variante": "alle",
+   "pfad": "pm/entscheidungen/ENT-187.md",
+   "id": "ENT-187"
+  },
+  {
+   "typ": "Entscheidung",
+   "name": "BMS-Platine BT-311 Länge 160 mm",
+   "status": "vorgeschlagen",
+   "datum": "2026-11-24",
+   "variante": "alle",
+   "pfad": "pm/entscheidungen/ENT-188.md",
+   "id": "ENT-188"
+  },
+  {
+   "typ": "Entscheidung",
+   "name": "BMS-Platine BT-311 Breite 100 mm",
+   "status": "vorgeschlagen",
+   "datum": "2026-11-24",
+   "variante": "alle",
+   "pfad": "pm/entscheidungen/ENT-189.md",
+   "id": "ENT-189"
+  },
+  {
+   "typ": "Entscheidung",
+   "name": "BMS-Platine BT-311 vier Lagen",
+   "status": "vorgeschlagen",
+   "datum": "2026-11-24",
+   "variante": "alle",
+   "pfad": "pm/entscheidungen/ENT-190.md",
+   "id": "ENT-190"
+  },
+  {
+   "typ": "Entscheidung",
+   "name": "BMS-Platine Kriechstrecke HV/NV 10 mm (Luftstrecke 8 mm, Höhe 3000 m)",
+   "status": "vorgeschlagen",
+   "datum": "2026-11-24",
+   "variante": "alle",
+   "pfad": "pm/entscheidungen/ENT-191.md",
+   "id": "ENT-191"
+  },
+  {
    "typ": "Befund",
    "name": "(2026-11-12) PI-Recherche W01 (LFP): Stufe B funktioniert, Zitatprüfung 12/14",
    "datum": "2026-11-12",
@@ -5450,6 +5993,48 @@
    "datum": "2026-11-23",
    "pfad": "BEFUNDE.md",
    "id": "B-BAT-049"
+  },
+  {
+   "typ": "Befund",
+   "name": "Elektronik nur als Block, EMV und funktionale Sicherheit fehlten im Lastenheft (2026-11-24, gefunden von Opus auf Frage des Autors)",
+   "datum": "2026-11-24",
+   "pfad": "BEFUNDE.md",
+   "id": "B-BAT-050"
+  },
+  {
+   "typ": "Befund",
+   "name": "E3 CMU-Platine: Wärme der Ausgleichswiderstände zu hoch, Layout ungeroutet (2026-11-24, Sonnet, Deutung Opus)",
+   "datum": "2026-11-24",
+   "pfad": "BEFUNDE.md",
+   "id": "B-BAT-051"
+  },
+  {
+   "typ": "Befund",
+   "name": "Normtexte vom Autor ausgewertet: W47–W50, je 0 Zitatfehler (2026-11-24, PI, Prüfung Opus)",
+   "datum": "2026-11-24",
+   "pfad": "BEFUNDE.md",
+   "id": "B-BAT-052"
+  },
+  {
+   "typ": "Befund",
+   "name": "KR1 Kreativwerkzeug: drei Methodenfehler Opus im Pilot gefunden und behoben, Entscheidung ENT-184 (2026-11-24)",
+   "datum": "2026-11-24",
+   "pfad": "BEFUNDE.md",
+   "id": "B-BAT-053"
+  },
+  {
+   "typ": "Befund",
+   "name": "E3b: Wärmeleitpad und Vias lösen die Platinenwärme (2026-11-24, Sonnet/Elmer, Deutung Opus)",
+   "datum": "2026-11-24",
+   "pfad": "BEFUNDE.md",
+   "id": "B-BAT-054"
+  },
+  {
+   "typ": "Befund",
+   "name": "FMEDA E3d: Sekundärschutz misst die Summe statt jeder Zelle, SG-02 verfehlt ASIL C (2026-11-24, gefunden von Sonnet in E3d, Deutung Opus)",
+   "datum": "2026-11-24",
+   "pfad": "BEFUNDE.md",
+   "id": "B-BAT-055"
   },
   {
    "typ": "Quelle",
@@ -5854,6 +6439,30 @@
    "id": "W44"
   },
   {
+   "typ": "Quelle",
+   "status": "9 Belege bestaetigt, 0 Fehler",
+   "pfad": "forschung/ergebnis/W47.md",
+   "id": "W47"
+  },
+  {
+   "typ": "Quelle",
+   "status": "11 Belege bestaetigt, 0 Fehler",
+   "pfad": "forschung/ergebnis/W48.md",
+   "id": "W48"
+  },
+  {
+   "typ": "Quelle",
+   "status": "6 Belege bestaetigt, 0 Fehler",
+   "pfad": "forschung/ergebnis/W49.md",
+   "id": "W49"
+  },
+  {
+   "typ": "Quelle",
+   "status": "11 Belege bestaetigt, 0 Fehler",
+   "pfad": "forschung/ergebnis/W50.md",
+   "id": "W50"
+  },
+  {
    "typ": "Norm",
    "name": "Sicherheit des elektrischen Antriebs, Batterie (REESS): Schwingung, Stoß, Quetschung, Feuer, Kurzschluss, Über- und Tiefentladung, Übertemperatur, Ausbreitung",
    "anwendbar": "ja, Kern der Typgenehmigung",
@@ -5952,7 +6561,7 @@
   {
    "typ": "Norm",
    "name": "Prozessreife Software und System, V-Modell",
-   "anwendbar": "ja, für den Prozess (BAT-DOC-17)",
+   "anwendbar": "ja, für den Prozess (BAT-DOC-23)",
    "recherche": "[\"W39\"]",
    "pfad": "docs/07_normen_und_vorschriften.md",
    "id": "Automotive SPICE (PAM)"
@@ -7622,6 +8231,208 @@
    "datei": "sim/elektrik/e2_elektronik/schaltbild_NMC.png",
    "pfad": "sim/elektrik/e2_elektronik/schaltbild_NMC.png",
    "id": "sim/elektrik/e2_elektronik/schaltbild_NMC.png"
+  },
+  {
+   "typ": "Rechnung",
+   "name": "e3_platine",
+   "pfad": "sim/elektrik/e3_platine",
+   "eingaben_praefix": 0,
+   "id": "sim/elektrik/e3_platine"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/ergebnis_ausgleich.json",
+   "pfad": "sim/elektrik/e3_platine/ergebnis_ausgleich.json",
+   "id": "sim/elektrik/e3_platine/ergebnis_ausgleich.json"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/ergebnis_kriechstrecke.json",
+   "pfad": "sim/elektrik/e3_platine/ergebnis_kriechstrecke.json",
+   "id": "sim/elektrik/e3_platine/ergebnis_kriechstrecke.json"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/ergebnis_platine.json",
+   "pfad": "sim/elektrik/e3_platine/ergebnis_platine.json",
+   "id": "sim/elektrik/e3_platine/ergebnis_platine.json"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/ergebnis_routing.json",
+   "pfad": "sim/elektrik/e3_platine/ergebnis_routing.json",
+   "id": "sim/elektrik/e3_platine/ergebnis_routing.json"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/ergebnis_vorladung.json",
+   "pfad": "sim/elektrik/e3_platine/ergebnis_vorladung.json",
+   "id": "sim/elektrik/e3_platine/ergebnis_vorladung.json"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/ergebnis_waerme.json",
+   "pfad": "sim/elektrik/e3_platine/ergebnis_waerme.json",
+   "id": "sim/elektrik/e3_platine/ergebnis_waerme.json"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/platine_LFP.png",
+   "pfad": "sim/elektrik/e3_platine/platine_LFP.png",
+   "id": "sim/elektrik/e3_platine/platine_LFP.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/platine_LFP_3d_bottom.png",
+   "pfad": "sim/elektrik/e3_platine/platine_LFP_3d_bottom.png",
+   "id": "sim/elektrik/e3_platine/platine_LFP_3d_bottom.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/platine_LFP_3d_iso.png",
+   "pfad": "sim/elektrik/e3_platine/platine_LFP_3d_iso.png",
+   "id": "sim/elektrik/e3_platine/platine_LFP_3d_iso.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/platine_LFP_3d_nah.png",
+   "pfad": "sim/elektrik/e3_platine/platine_LFP_3d_nah.png",
+   "id": "sim/elektrik/e3_platine/platine_LFP_3d_nah.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/platine_LFP_3d_top.png",
+   "pfad": "sim/elektrik/e3_platine/platine_LFP_3d_top.png",
+   "id": "sim/elektrik/e3_platine/platine_LFP_3d_top.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/platine_LFP_einbau.png",
+   "pfad": "sim/elektrik/e3_platine/platine_LFP_einbau.png",
+   "id": "sim/elektrik/e3_platine/platine_LFP_einbau.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/platine_LFP_explosion.png",
+   "pfad": "sim/elektrik/e3_platine/platine_LFP_explosion.png",
+   "id": "sim/elektrik/e3_platine/platine_LFP_explosion.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/platine_NMC.png",
+   "pfad": "sim/elektrik/e3_platine/platine_NMC.png",
+   "id": "sim/elektrik/e3_platine/platine_NMC.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/platine_NMC_3d_bottom.png",
+   "pfad": "sim/elektrik/e3_platine/platine_NMC_3d_bottom.png",
+   "id": "sim/elektrik/e3_platine/platine_NMC_3d_bottom.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/platine_NMC_3d_iso.png",
+   "pfad": "sim/elektrik/e3_platine/platine_NMC_3d_iso.png",
+   "id": "sim/elektrik/e3_platine/platine_NMC_3d_iso.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/platine_NMC_3d_nah.png",
+   "pfad": "sim/elektrik/e3_platine/platine_NMC_3d_nah.png",
+   "id": "sim/elektrik/e3_platine/platine_NMC_3d_nah.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/platine_NMC_3d_top.png",
+   "pfad": "sim/elektrik/e3_platine/platine_NMC_3d_top.png",
+   "id": "sim/elektrik/e3_platine/platine_NMC_3d_top.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/platine_NMC_einbau.png",
+   "pfad": "sim/elektrik/e3_platine/platine_NMC_einbau.png",
+   "id": "sim/elektrik/e3_platine/platine_NMC_einbau.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/platine_NMC_explosion.png",
+   "pfad": "sim/elektrik/e3_platine/platine_NMC_explosion.png",
+   "id": "sim/elektrik/e3_platine/platine_NMC_explosion.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/schaltbild_cmu.png",
+   "pfad": "sim/elektrik/e3_platine/schaltbild_cmu.png",
+   "id": "sim/elektrik/e3_platine/schaltbild_cmu.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/spice_ausgleich_vorladung.png",
+   "pfad": "sim/elektrik/e3_platine/spice_ausgleich_vorladung.png",
+   "id": "sim/elektrik/e3_platine/spice_ausgleich_vorladung.png"
+  },
+  {
+   "typ": "Rechnung",
+   "name": "e3b_platine_waerme",
+   "pfad": "sim/elektrik/e3b_platine_waerme",
+   "eingaben_praefix": 0,
+   "id": "sim/elektrik/e3b_platine_waerme"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3b_platine_waerme/ergebnis.json",
+   "pfad": "sim/elektrik/e3b_platine_waerme/ergebnis.json",
+   "id": "sim/elektrik/e3b_platine_waerme/ergebnis.json"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3b_platine_waerme/ERGEBNIS.md",
+   "pfad": "sim/elektrik/e3b_platine_waerme/ERGEBNIS.md",
+   "id": "sim/elektrik/e3b_platine_waerme/ERGEBNIS.md"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3b_platine_waerme/e3b_temperatur.png",
+   "pfad": "sim/elektrik/e3b_platine_waerme/e3b_temperatur.png",
+   "id": "sim/elektrik/e3b_platine_waerme/e3b_temperatur.png"
+  },
+  {
+   "typ": "Rechnung",
+   "name": "e3c_bms_platine",
+   "pfad": "sim/elektrik/e3c_bms_platine",
+   "eingaben_praefix": 0,
+   "id": "sim/elektrik/e3c_bms_platine"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3c_bms_platine/ergebnis_kriechstrecke.json",
+   "pfad": "sim/elektrik/e3c_bms_platine/ergebnis_kriechstrecke.json",
+   "id": "sim/elektrik/e3c_bms_platine/ergebnis_kriechstrecke.json"
+  },
+  {
+   "typ": "Rechnung",
+   "name": "e3d_fmeda",
+   "pfad": "sim/elektrik/e3d_fmeda",
+   "eingaben_praefix": 0,
+   "id": "sim/elektrik/e3d_fmeda"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3d_fmeda/ergebnis.json",
+   "pfad": "sim/elektrik/e3d_fmeda/ergebnis.json",
+   "id": "sim/elektrik/e3d_fmeda/ergebnis.json"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3d_fmeda/ERGEBNIS.md",
+   "pfad": "sim/elektrik/e3d_fmeda/ERGEBNIS.md",
+   "id": "sim/elektrik/e3d_fmeda/ERGEBNIS.md"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3d_fmeda/e3d_fmeda.png",
+   "pfad": "sim/elektrik/e3d_fmeda/e3d_fmeda.png",
+   "id": "sim/elektrik/e3d_fmeda/e3d_fmeda.png"
   },
   {
    "typ": "Rechnung",
@@ -18378,13 +19189,6 @@
   },
   {
    "typ": "Dokument",
-   "name": "07_normen_und_vorschriften",
-   "pfad": "docs/07_normen_und_vorschriften.md",
-   "art": "docs",
-   "id": "docs/07_normen_und_vorschriften.md"
-  },
-  {
-   "typ": "Dokument",
    "name": "09_aenderungen",
    "pfad": "docs/09_aenderungen.md",
    "art": "docs",
@@ -18480,6 +19284,13 @@
    "pfad": "docs/22a_prozesskennzahlen.md",
    "art": "docs",
    "id": "docs/22a_prozesskennzahlen.md"
+  },
+  {
+   "typ": "Dokument",
+   "name": "25_loesungen_aus_kreativmethoden",
+   "pfad": "docs/25_loesungen_aus_kreativmethoden.md",
+   "art": "docs",
+   "id": "docs/25_loesungen_aus_kreativmethoden.md"
   },
   {
    "typ": "Dokument",
@@ -18616,6 +19427,27 @@
   },
   {
    "typ": "Dokument",
+   "name": "E3",
+   "pfad": "praesentation/bausteine/E3.md",
+   "art": "bausteine",
+   "id": "praesentation/bausteine/E3.md"
+  },
+  {
+   "typ": "Dokument",
+   "name": "E3b",
+   "pfad": "praesentation/bausteine/E3b.md",
+   "art": "bausteine",
+   "id": "praesentation/bausteine/E3b.md"
+  },
+  {
+   "typ": "Dokument",
+   "name": "E3d",
+   "pfad": "praesentation/bausteine/E3d.md",
+   "art": "bausteine",
+   "id": "praesentation/bausteine/E3d.md"
+  },
+  {
+   "typ": "Dokument",
    "name": "G1",
    "pfad": "praesentation/bausteine/G1.md",
    "art": "bausteine",
@@ -18718,6 +19550,13 @@
    "pfad": "praesentation/bausteine/KO2.md",
    "art": "bausteine",
    "id": "praesentation/bausteine/KO2.md"
+  },
+  {
+   "typ": "Dokument",
+   "name": "KR1",
+   "pfad": "praesentation/bausteine/KR1.md",
+   "art": "bausteine",
+   "id": "praesentation/bausteine/KR1.md"
   },
   {
    "typ": "Dokument",
@@ -19501,6 +20340,41 @@
   {
    "typ": "teil_von",
    "quelle": "struktur.json eltern",
+   "source": "BT-311",
+   "target": "BT-310",
+   "key": "teil_von"
+  },
+  {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-311",
+   "target": "BT-311.laenge_mm",
+   "key": "hat_merkmal"
+  },
+  {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-311",
+   "target": "BT-311.breite_mm",
+   "key": "hat_merkmal"
+  },
+  {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-311",
+   "target": "BT-311.lagen",
+   "key": "hat_merkmal"
+  },
+  {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-311",
+   "target": "BT-311.kriechstrecke_hv_nv_mm",
+   "key": "hat_merkmal"
+  },
+  {
+   "typ": "teil_von",
+   "quelle": "struktur.json eltern",
    "source": "BT-320",
    "target": "BT-300",
    "key": "teil_von"
@@ -19531,6 +20405,202 @@
    "quelle": "struktur.json merkmale",
    "source": "BT-320",
    "target": "BT-320.ausgleichsstrom_mA",
+   "key": "hat_merkmal"
+  },
+  {
+   "typ": "teil_von",
+   "quelle": "struktur.json eltern",
+   "source": "BT-321",
+   "target": "BT-320",
+   "key": "teil_von"
+  },
+  {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-321",
+   "target": "BT-321.laenge_mm",
+   "key": "hat_merkmal"
+  },
+  {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-321",
+   "target": "BT-321.breite_mm",
+   "key": "hat_merkmal"
+  },
+  {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-321",
+   "target": "BT-321.lagen",
+   "key": "hat_merkmal"
+  },
+  {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-321",
+   "target": "BT-321.dicke_mm",
+   "key": "hat_merkmal"
+  },
+  {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-321",
+   "target": "BT-321.kupfer_um",
+   "key": "hat_merkmal"
+  },
+  {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-321",
+   "target": "BT-321.kriechstrecke_mm",
+   "key": "hat_merkmal"
+  },
+  {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-321",
+   "target": "BT-321.kriechstrecke_daisy_mm",
+   "key": "hat_merkmal"
+  },
+  {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-321",
+   "target": "BT-321.waermeabfuhr",
+   "key": "hat_merkmal"
+  },
+  {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-321",
+   "target": "BT-321.pad_dicke_mm",
+   "key": "hat_merkmal"
+  },
+  {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-321",
+   "target": "BT-321.pad_lambda_W_mK",
+   "key": "hat_merkmal"
+  },
+  {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-321",
+   "target": "BT-321.vias_je_widerstandspaar",
+   "key": "hat_merkmal"
+  },
+  {
+   "typ": "teil_von",
+   "quelle": "struktur.json eltern",
+   "source": "BT-322",
+   "target": "BT-321",
+   "key": "teil_von"
+  },
+  {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-322",
+   "target": "BT-322.kanaele",
+   "key": "hat_merkmal"
+  },
+  {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-322",
+   "target": "BT-322.asil",
+   "key": "hat_merkmal"
+  },
+  {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-322",
+   "target": "BT-322.messfehler_mV",
+   "key": "hat_merkmal"
+  },
+  {
+   "typ": "teil_von",
+   "quelle": "struktur.json eltern",
+   "source": "BT-323",
+   "target": "BT-321",
+   "key": "teil_von"
+  },
+  {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-323",
+   "target": "BT-323.widerstand_Ohm",
+   "key": "hat_merkmal"
+  },
+  {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-323",
+   "target": "BT-323.verlust_W",
+   "key": "hat_merkmal"
+  },
+  {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-323",
+   "target": "BT-323.schalter",
+   "key": "hat_merkmal"
+  },
+  {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-323",
+   "target": "BT-323.bauform",
+   "key": "hat_merkmal"
+  },
+  {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-323",
+   "target": "BT-323.filter_R_Ohm",
+   "key": "hat_merkmal"
+  },
+  {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-323",
+   "target": "BT-323.filter_C_nF",
+   "key": "hat_merkmal"
+  },
+  {
+   "typ": "teil_von",
+   "quelle": "struktur.json eltern",
+   "source": "BT-324",
+   "target": "BT-321",
+   "key": "teil_von"
+  },
+  {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-324",
+   "target": "BT-324.pruefspannung_V",
+   "key": "hat_merkmal"
+  },
+  {
+   "typ": "teil_von",
+   "quelle": "struktur.json eltern",
+   "source": "BT-325",
+   "target": "BT-321",
+   "key": "teil_von"
+  },
+  {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-325",
+   "target": "BT-325.schwelle_V",
+   "key": "hat_merkmal"
+  },
+  {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-325",
+   "target": "BT-325.verzoegerung_ms",
    "key": "hat_merkmal"
   },
   {
@@ -20493,6 +21563,20 @@
    "key": "hat_merkmal"
   },
   {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-712",
+   "target": "BT-712.schalter",
+   "key": "hat_merkmal"
+  },
+  {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-712",
+   "target": "BT-712.pulsenergie_J",
+   "key": "hat_merkmal"
+  },
+  {
    "typ": "teil_von",
    "quelle": "struktur.json eltern",
    "source": "BT-713",
@@ -20511,6 +21595,34 @@
    "quelle": "struktur.json merkmale",
    "source": "BT-713",
    "target": "BT-713.nennstrom_A",
+   "key": "hat_merkmal"
+  },
+  {
+   "typ": "teil_von",
+   "quelle": "struktur.json eltern",
+   "source": "BT-715",
+   "target": "BT-710",
+   "key": "teil_von"
+  },
+  {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-715",
+   "target": "BT-715.haltestrom_A",
+   "key": "hat_merkmal"
+  },
+  {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-715",
+   "target": "BT-715.loeschung",
+   "key": "hat_merkmal"
+  },
+  {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-715",
+   "target": "BT-715.abschaltzeit_ms",
    "key": "hat_merkmal"
   },
   {
@@ -21818,6 +22930,62 @@
   {
    "typ": "eingang_cad",
    "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-311.laenge_mm",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-311.laenge_mm",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-311.breite_mm",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-311.breite_mm",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-311.lagen",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-311.lagen",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-311.kriechstrecke_hv_nv_mm",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-311.kriechstrecke_hv_nv_mm",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
    "source": "BT-320.anzahl",
    "target": "cad:LFP",
    "key": "eingang_cad"
@@ -21868,6 +23036,328 @@
    "typ": "eingang_cad",
    "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
    "source": "BT-320.ausgleichsstrom_mA",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-321.laenge_mm",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-321.laenge_mm",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-321.breite_mm",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-321.breite_mm",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-321.lagen",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-321.lagen",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-321.dicke_mm",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-321.dicke_mm",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-321.kupfer_um",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-321.kupfer_um",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-321.kriechstrecke_mm",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-321.kriechstrecke_mm",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-321.kriechstrecke_daisy_mm",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-321.kriechstrecke_daisy_mm",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-321.waermeabfuhr",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-321.waermeabfuhr",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-321.pad_dicke_mm",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-321.pad_dicke_mm",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-321.pad_lambda_W_mK",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-321.pad_lambda_W_mK",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-321.vias_je_widerstandspaar",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-321.vias_je_widerstandspaar",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-322.kanaele",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-322.kanaele",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-322.asil",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-322.asil",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-322.messfehler_mV",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-322.messfehler_mV",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-323.widerstand_Ohm",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-323.widerstand_Ohm",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-323.verlust_W",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-323.verlust_W",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-323.schalter",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-323.schalter",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-323.bauform",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-323.bauform",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-323.filter_R_Ohm",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-323.filter_R_Ohm",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-323.filter_C_nF",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-323.filter_C_nF",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-324.pruefspannung_V",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-324.pruefspannung_V",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-325.schwelle_V",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-325.schwelle_V",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-325.verzoegerung_ms",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-325.verzoegerung_ms",
    "target": "cad:NMC",
    "key": "eingang_cad"
   },
@@ -23274,6 +24764,34 @@
   {
    "typ": "eingang_cad",
    "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-712.schalter",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-712.schalter",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-712.pulsenergie_J",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-712.pulsenergie_J",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
    "source": "BT-713.art",
    "target": "cad:LFP",
    "key": "eingang_cad"
@@ -23296,6 +24814,48 @@
    "typ": "eingang_cad",
    "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
    "source": "BT-713.nennstrom_A",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-715.haltestrom_A",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-715.haltestrom_A",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-715.loeschung",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-715.loeschung",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-715.abschaltzeit_ms",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-715.abschaltzeit_ms",
    "target": "cad:NMC",
    "key": "eingang_cad"
   },
@@ -24158,6 +25718,20 @@
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "docs/03_anforderungsverfolgung.md",
+   "target": "B-BAT-049",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/03_anforderungsverfolgung.md",
+   "target": "B-BAT-052",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/03_anforderungsverfolgung.md",
    "target": "REQ-D01",
    "key": "erwaehnt"
   },
@@ -24250,6 +25824,13 @@
    "quelle": "Textvorkommen",
    "source": "docs/03_anforderungsverfolgung.md",
    "target": "REQ-D14",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/03_anforderungsverfolgung.md",
+   "target": "REQ-D15",
    "key": "erwaehnt"
   },
   {
@@ -24380,9 +25961,72 @@
   },
   {
    "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/03_anforderungsverfolgung.md",
+   "target": "REQ-P17",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/03_anforderungsverfolgung.md",
+   "target": "REQ-P18",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/03_anforderungsverfolgung.md",
+   "target": "REQ-P19",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/03_anforderungsverfolgung.md",
+   "target": "REQ-P20",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/03_anforderungsverfolgung.md",
+   "target": "REQ-P21",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
    "quelle": "Textvorkommen Pfad",
    "source": "docs/03_anforderungsverfolgung.md",
    "target": "SOFTWARE.md",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/03_anforderungsverfolgung.md",
+   "target": "sim/elektrik/e3_platine/ERGEBNIS.md",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/03_anforderungsverfolgung.md",
+   "target": "docs/24_gefahrenanalyse_hara.md",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/03_anforderungsverfolgung.md",
+   "target": "sim/elektrik/e3_platine/ergebnis_vorladung.json",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/03_anforderungsverfolgung.md",
+   "target": "sim/elektrik/e3b_platine_waerme/ERGEBNIS.md",
    "key": "erwaehnt"
   },
   {
@@ -24693,6 +26337,27 @@
    "quelle": "Textvorkommen",
    "source": "docs/08_ki_einsatz_protokoll.md",
    "target": "ENT-160",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/08_ki_einsatz_protokoll.md",
+   "target": "ENT-163",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/08_ki_einsatz_protokoll.md",
+   "target": "ENT-168",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/08_ki_einsatz_protokoll.md",
+   "target": "ENT-187",
    "key": "erwaehnt"
   },
   {
@@ -25105,6 +26770,13 @@
    "typ": "erwaehnt",
    "quelle": "Textvorkommen Pfad",
    "source": "docs/08_ki_einsatz_protokoll.md",
+   "target": "sim/elektrik/e3_platine/ERGEBNIS.md",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/08_ki_einsatz_protokoll.md",
    "target": "sim/chemie/c1_zellmodell/ERGEBNIS.md",
    "key": "erwaehnt"
   },
@@ -25141,6 +26813,20 @@
    "quelle": "Textvorkommen Pfad",
    "source": "docs/08_ki_einsatz_protokoll.md",
    "target": "sim/elektrik/e2_elektronik/ERGEBNIS.md",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/08_ki_einsatz_protokoll.md",
+   "target": "sim/elektrik/e3b_platine_waerme/ERGEBNIS.md",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/08_ki_einsatz_protokoll.md",
+   "target": "sim/elektrik/e3d_fmeda/ERGEBNIS.md",
    "key": "erwaehnt"
   },
   {
@@ -25248,6 +26934,13 @@
    "quelle": "Textvorkommen",
    "source": "docs/00_dokumentenlenkung.md",
    "target": "BT-000",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/00_dokumentenlenkung.md",
+   "target": "pm/kreativ/METHODE.md",
    "key": "erwaehnt"
   },
   {
@@ -25421,6 +27114,258 @@
    "groesse": "Anwendbarkeit_belegt",
    "source": "REQ-G01",
    "target": "forschung/ergebnis/W37c.nachtrag.md",
+   "key": "verifiziert_durch"
+  },
+  {
+   "typ": "verifiziert_durch",
+   "quelle": "anforderungen.json nachweis",
+   "source": "REQ-P17",
+   "target": "sim/elektrik/e3_platine/ERGEBNIS.md",
+   "key": "verifiziert_durch"
+  },
+  {
+   "typ": "verifiziert_durch",
+   "quelle": "anforderungen.json nachweis",
+   "source": "REQ-P18",
+   "target": "docs/24_gefahrenanalyse_hara.md",
+   "key": "verifiziert_durch"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/24_gefahrenanalyse_hara.md",
+   "target": "B-BAT-055",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/24_gefahrenanalyse_hara.md",
+   "target": "BT-000",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/24_gefahrenanalyse_hara.md",
+   "target": "BT-300",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/24_gefahrenanalyse_hara.md",
+   "target": "BT-310",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/24_gefahrenanalyse_hara.md",
+   "target": "BT-322",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/24_gefahrenanalyse_hara.md",
+   "target": "BT-325",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/24_gefahrenanalyse_hara.md",
+   "target": "BT-330",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/24_gefahrenanalyse_hara.md",
+   "target": "BT-340",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/24_gefahrenanalyse_hara.md",
+   "target": "BT-350",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/24_gefahrenanalyse_hara.md",
+   "target": "BT-360",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/24_gefahrenanalyse_hara.md",
+   "target": "BT-710",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/24_gefahrenanalyse_hara.md",
+   "target": "BT-711",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/24_gefahrenanalyse_hara.md",
+   "target": "BT-713",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/24_gefahrenanalyse_hara.md",
+   "target": "BT-715",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/24_gefahrenanalyse_hara.md",
+   "target": "BT-720",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/24_gefahrenanalyse_hara.md",
+   "target": "BT-770",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/24_gefahrenanalyse_hara.md",
+   "target": "REQ-P01",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/24_gefahrenanalyse_hara.md",
+   "target": "REQ-P03",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/24_gefahrenanalyse_hara.md",
+   "target": "REQ-P11",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/24_gefahrenanalyse_hara.md",
+   "target": "REQ-P13",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/24_gefahrenanalyse_hara.md",
+   "target": "W48",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "verifiziert_durch",
+   "quelle": "anforderungen.json nachweis",
+   "source": "REQ-P19",
+   "target": "sim/elektrik/e3_platine/ERGEBNIS.md",
+   "key": "verifiziert_durch"
+  },
+  {
+   "typ": "verifiziert_durch",
+   "quelle": "anforderungen.json nachweis",
+   "source": "REQ-P20",
+   "target": "sim/elektrik/e3_platine/ERGEBNIS.md",
+   "key": "verifiziert_durch"
+  },
+  {
+   "typ": "verifiziert_durch",
+   "quelle": "anforderungen.json nachweis",
+   "source": "REQ-P21",
+   "target": "docs/07_normen_und_vorschriften.md",
+   "key": "verifiziert_durch"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/07_normen_und_vorschriften.md",
+   "target": "REQ-P15",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/07_normen_und_vorschriften.md",
+   "target": "REQ-P17",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/07_normen_und_vorschriften.md",
+   "target": "REQ-P19",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/07_normen_und_vorschriften.md",
+   "target": "REQ-P20",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/07_normen_und_vorschriften.md",
+   "target": "W35",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/07_normen_und_vorschriften.md",
+   "target": "W36",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/07_normen_und_vorschriften.md",
+   "target": "W37",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/07_normen_und_vorschriften.md",
+   "target": "W38",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/07_normen_und_vorschriften.md",
+   "target": "W39",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "verifiziert_durch",
+   "quelle": "anforderungen.json nachweis",
+   "source": "REQ-D15",
+   "target": "pm/kreativ/METHODE.md",
    "key": "verifiziert_durch"
   },
   {
@@ -32552,6 +34497,1029 @@
    "key": "erwaehnt"
   },
   {
+   "typ": "legt_fest",
+   "quelle": "ENT bauteile+merkmal",
+   "wert": "4",
+   "source": "ENT-163",
+   "target": "BT-321.lagen",
+   "key": "legt_fest"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-163",
+   "target": "REQ-P15",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-163",
+   "target": "REQ-P17",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-163",
+   "target": "B-BAT-050",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-163",
+   "target": "BT-321",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "legt_fest",
+   "quelle": "ENT bauteile+merkmal",
+   "wert": "1.6",
+   "source": "ENT-164",
+   "target": "BT-321.dicke_mm",
+   "key": "legt_fest"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-164",
+   "target": "REQ-P15",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-164",
+   "target": "B-BAT-050",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-164",
+   "target": "BT-321",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "legt_fest",
+   "quelle": "ENT bauteile+merkmal",
+   "wert": "70",
+   "source": "ENT-165",
+   "target": "BT-321.kupfer_um",
+   "key": "legt_fest"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-165",
+   "target": "REQ-P15",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-165",
+   "target": "B-BAT-050",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-165",
+   "target": "BT-321",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "legt_fest",
+   "quelle": "ENT bauteile+merkmal",
+   "wert": "120",
+   "source": "ENT-166",
+   "target": "BT-321.laenge_mm",
+   "key": "legt_fest"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-166",
+   "target": "REQ-P15",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-166",
+   "target": "B-BAT-050",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-166",
+   "target": "BT-321",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "legt_fest",
+   "quelle": "ENT bauteile+merkmal",
+   "wert": "60",
+   "source": "ENT-167",
+   "target": "BT-321.breite_mm",
+   "key": "legt_fest"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-167",
+   "target": "REQ-P15",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-167",
+   "target": "B-BAT-050",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-167",
+   "target": "BT-321",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "legt_fest",
+   "quelle": "ENT bauteile+merkmal",
+   "wert": "0.2",
+   "source": "ENT-168",
+   "target": "BT-321.kriechstrecke_mm",
+   "key": "legt_fest"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-168",
+   "target": "REQ-P17",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-168",
+   "target": "REQ-P19",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-168",
+   "target": "B-BAT-050",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-168",
+   "target": "BT-321",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-168",
+   "target": "ENT-183",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "legt_fest",
+   "quelle": "ENT bauteile+merkmal",
+   "wert": "18",
+   "source": "ENT-169",
+   "target": "BT-322.kanaele",
+   "key": "legt_fest"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-169",
+   "target": "REQ-P15",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-169",
+   "target": "REQ-P18",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-169",
+   "target": "B-BAT-050",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-169",
+   "target": "BT-322",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "legt_fest",
+   "quelle": "ENT bauteile+merkmal",
+   "wert": "\"D\"",
+   "source": "ENT-170",
+   "target": "BT-322.asil",
+   "key": "legt_fest"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-170",
+   "target": "REQ-P18",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-170",
+   "target": "B-BAT-050",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-170",
+   "target": "BT-322",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "legt_fest",
+   "quelle": "ENT bauteile+merkmal",
+   "wert": "23.5",
+   "source": "ENT-171",
+   "target": "BT-323.widerstand_Ohm",
+   "key": "legt_fest"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-171",
+   "target": "REQ-P15",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-171",
+   "target": "B-BAT-050",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "gilt_fuer",
+   "quelle": "ENT variante",
+   "source": "ENT-171",
+   "target": "LFP",
+   "key": "gilt_fuer"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-171",
+   "target": "BT-323",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "legt_fest",
+   "quelle": "ENT bauteile+merkmal",
+   "wert": "32.45",
+   "source": "ENT-172",
+   "target": "BT-323.widerstand_Ohm",
+   "key": "legt_fest"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-172",
+   "target": "REQ-P15",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-172",
+   "target": "B-BAT-050",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "gilt_fuer",
+   "quelle": "ENT variante",
+   "source": "ENT-172",
+   "target": "NMC",
+   "key": "gilt_fuer"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-172",
+   "target": "BT-323",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-172",
+   "target": "ENT-146",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "legt_fest",
+   "quelle": "ENT bauteile+merkmal",
+   "wert": "\"N-MOSFET Logikpegel, R_DS,on <= 0,5 Ohm, AEC-Q101\"",
+   "source": "ENT-173",
+   "target": "BT-323.schalter",
+   "key": "legt_fest"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-173",
+   "target": "REQ-P15",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-173",
+   "target": "B-BAT-050",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-173",
+   "target": "BT-323",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "legt_fest",
+   "quelle": "ENT bauteile+merkmal",
+   "wert": "1500",
+   "source": "ENT-174",
+   "target": "BT-324.pruefspannung_V",
+   "key": "legt_fest"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-174",
+   "target": "REQ-P17",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-174",
+   "target": "REQ-P19",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-174",
+   "target": "B-BAT-050",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-174",
+   "target": "BT-324",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "legt_fest",
+   "quelle": "ENT bauteile+merkmal",
+   "wert": "3.75",
+   "source": "ENT-175",
+   "target": "BT-325.schwelle_V",
+   "key": "legt_fest"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-175",
+   "target": "REQ-P18",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-175",
+   "target": "B-BAT-050",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "gilt_fuer",
+   "quelle": "ENT variante",
+   "source": "ENT-175",
+   "target": "LFP",
+   "key": "gilt_fuer"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-175",
+   "target": "BT-325",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "legt_fest",
+   "quelle": "ENT bauteile+merkmal",
+   "wert": "4.25",
+   "source": "ENT-176",
+   "target": "BT-325.schwelle_V",
+   "key": "legt_fest"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-176",
+   "target": "REQ-P18",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-176",
+   "target": "B-BAT-050",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "gilt_fuer",
+   "quelle": "ENT variante",
+   "source": "ENT-176",
+   "target": "NMC",
+   "key": "gilt_fuer"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-176",
+   "target": "BT-325",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "legt_fest",
+   "quelle": "ENT bauteile+merkmal",
+   "wert": "1000",
+   "source": "ENT-177",
+   "target": "BT-325.verzoegerung_ms",
+   "key": "legt_fest"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-177",
+   "target": "REQ-P18",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-177",
+   "target": "B-BAT-050",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-177",
+   "target": "BT-325",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "legt_fest",
+   "quelle": "ENT bauteile+merkmal",
+   "wert": "10",
+   "source": "ENT-178",
+   "target": "BT-311.kriechstrecke_hv_nv_mm",
+   "key": "legt_fest"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-178",
+   "target": "REQ-P17",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-178",
+   "target": "REQ-P19",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-178",
+   "target": "B-BAT-050",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-178",
+   "target": "BT-311",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "legt_fest",
+   "quelle": "ENT bauteile+merkmal",
+   "wert": "450",
+   "source": "ENT-179",
+   "target": "BT-712.pulsenergie_J",
+   "key": "legt_fest"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-179",
+   "target": "REQ-P13",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-179",
+   "target": "B-BAT-050",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-179",
+   "target": "BT-712",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "legt_fest",
+   "quelle": "ENT bauteile+merkmal",
+   "wert": "\"Vorladeschütz + Widerstand\"",
+   "source": "ENT-180",
+   "target": "BT-712.schalter",
+   "key": "legt_fest"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-180",
+   "target": "REQ-P13",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-180",
+   "target": "B-BAT-050",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-180",
+   "target": "BT-712",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "legt_fest",
+   "quelle": "ENT bauteile+merkmal",
+   "wert": "100",
+   "source": "ENT-181",
+   "target": "BT-323.filter_R_Ohm",
+   "key": "legt_fest"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-181",
+   "target": "REQ-P17",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-181",
+   "target": "B-BAT-050",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-181",
+   "target": "BT-323",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "legt_fest",
+   "quelle": "ENT bauteile+merkmal",
+   "wert": "100",
+   "source": "ENT-182",
+   "target": "BT-323.filter_C_nF",
+   "key": "legt_fest"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-182",
+   "target": "REQ-P17",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-182",
+   "target": "B-BAT-050",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-182",
+   "target": "BT-323",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "legt_fest",
+   "quelle": "ENT bauteile+merkmal",
+   "wert": "2.5",
+   "source": "ENT-183",
+   "target": "BT-321.kriechstrecke_daisy_mm",
+   "key": "legt_fest"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-183",
+   "target": "REQ-P17",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-183",
+   "target": "REQ-P19",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-183",
+   "target": "B-BAT-050",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-183",
+   "target": "BT-321",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "legt_fest",
+   "quelle": "ENT bauteile+merkmal",
+   "wert": "waermeleitpad_kuehlplatte",
+   "source": "ENT-184",
+   "target": "BT-321.waermeabfuhr",
+   "key": "legt_fest"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-184",
+   "target": "REQ-P15",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-184",
+   "target": "REQ-P20",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-184",
+   "target": "REQ-D15",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-184",
+   "target": "B-BAT-051",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-184",
+   "target": "B-BAT-051",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-184",
+   "target": "sim/elektrik/e3_platine/ergebnis_waerme.json",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "legt_fest",
+   "quelle": "ENT bauteile+merkmal",
+   "wert": "1.0",
+   "source": "ENT-185",
+   "target": "BT-321.pad_dicke_mm",
+   "key": "legt_fest"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-185",
+   "target": "REQ-P20",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-185",
+   "target": "REQ-P15",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-185",
+   "target": "sim/elektrik/e3b_platine_waerme/ergebnis.json",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-185",
+   "target": "ENT-184",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-185",
+   "target": "ENT-184",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "legt_fest",
+   "quelle": "ENT bauteile+merkmal",
+   "wert": "3",
+   "source": "ENT-186",
+   "target": "BT-321.pad_lambda_W_mK",
+   "key": "legt_fest"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-186",
+   "target": "REQ-P20",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-186",
+   "target": "REQ-P15",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-186",
+   "target": "sim/elektrik/e3b_platine_waerme/ergebnis.json",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-186",
+   "target": "ENT-184",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-186",
+   "target": "ENT-184",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "legt_fest",
+   "quelle": "ENT bauteile+merkmal",
+   "wert": "8",
+   "source": "ENT-187",
+   "target": "BT-321.vias_je_widerstandspaar",
+   "key": "legt_fest"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-187",
+   "target": "REQ-P20",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-187",
+   "target": "REQ-P15",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-187",
+   "target": "sim/elektrik/e3b_platine_waerme/ergebnis.json",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-187",
+   "target": "ENT-184",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-187",
+   "target": "ENT-184",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "legt_fest",
+   "quelle": "ENT bauteile+merkmal",
+   "wert": "160",
+   "source": "ENT-188",
+   "target": "BT-311.laenge_mm",
+   "key": "legt_fest"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-188",
+   "target": "REQ-P15",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-188",
+   "target": "REQ-P19",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-188",
+   "target": "BT-310",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-188",
+   "target": "BT-311",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-188",
+   "target": "ENT-139",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "legt_fest",
+   "quelle": "ENT bauteile+merkmal",
+   "wert": "100",
+   "source": "ENT-189",
+   "target": "BT-311.breite_mm",
+   "key": "legt_fest"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-189",
+   "target": "REQ-P15",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-189",
+   "target": "REQ-P19",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-189",
+   "target": "BT-311",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "legt_fest",
+   "quelle": "ENT bauteile+merkmal",
+   "wert": "4",
+   "source": "ENT-190",
+   "target": "BT-311.lagen",
+   "key": "legt_fest"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-190",
+   "target": "REQ-P15",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-190",
+   "target": "REQ-P19",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-190",
+   "target": "BT-311",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "legt_fest",
+   "quelle": "ENT bauteile+merkmal",
+   "wert": "10",
+   "source": "ENT-191",
+   "target": "BT-311.kriechstrecke_hv_nv_mm",
+   "key": "legt_fest"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-191",
+   "target": "REQ-P17",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-191",
+   "target": "REQ-P17",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-191",
+   "target": "REQ-P18",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-191",
+   "target": "REQ-P18",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-191",
+   "target": "REQ-P19",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-191",
+   "target": "BT-311",
+   "key": "erwaehnt"
+  },
+  {
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "B-BAT-001",
@@ -33809,6 +36777,118 @@
    "quelle": "Textvorkommen",
    "source": "B-BAT-049",
    "target": "REQ-P05",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "B-BAT-050",
+   "target": "BT-300",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "B-BAT-050",
+   "target": "BT-311",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "B-BAT-050",
+   "target": "BT-321",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "B-BAT-050",
+   "target": "BT-715",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "B-BAT-050",
+   "target": "REQ-D15",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "B-BAT-050",
+   "target": "REQ-P17",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "B-BAT-051",
+   "target": "ENT-172",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "B-BAT-052",
+   "target": "REQ-P13",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "B-BAT-052",
+   "target": "REQ-P14",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "B-BAT-052",
+   "target": "W47",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "B-BAT-052",
+   "target": "W48",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "B-BAT-052",
+   "target": "W49",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "B-BAT-052",
+   "target": "W50",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "B-BAT-053",
+   "target": "ENT-184",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "B-BAT-054",
+   "target": "B-BAT-051",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "B-BAT-054",
+   "target": "ENT-185",
    "key": "erwaehnt"
   },
   {
@@ -35509,28 +38589,28 @@
    "typ": "gehoert_zu",
    "quelle": "ERWARTUNG ## Anforderung",
    "source": "sim/elektrik/e2_elektronik",
-   "target": "REQ-P11",
+   "target": "REQ-P13",
    "key": "gehoert_zu"
   },
   {
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "sim/elektrik/e2_elektronik",
-   "target": "REQ-P11",
+   "target": "REQ-P13",
    "key": "erwaehnt"
   },
   {
    "typ": "gehoert_zu",
    "quelle": "ERWARTUNG ## Anforderung",
    "source": "sim/elektrik/e2_elektronik",
-   "target": "REQ-P13",
+   "target": "REQ-P11",
    "key": "gehoert_zu"
   },
   {
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "sim/elektrik/e2_elektronik",
-   "target": "REQ-P13",
+   "target": "REQ-P11",
    "key": "erwaehnt"
   },
   {
@@ -36110,6 +39190,608 @@
   {
    "typ": "gehoert_zu",
    "quelle": "ERWARTUNG ## Anforderung",
+   "source": "sim/elektrik/e3_platine",
+   "target": "REQ-P19",
+   "key": "gehoert_zu"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3_platine",
+   "target": "REQ-P19",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "gehoert_zu",
+   "quelle": "ERWARTUNG ## Anforderung",
+   "source": "sim/elektrik/e3_platine",
+   "target": "REQ-P15",
+   "key": "gehoert_zu"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3_platine",
+   "target": "REQ-P15",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "gehoert_zu",
+   "quelle": "ERWARTUNG ## Anforderung",
+   "source": "sim/elektrik/e3_platine",
+   "target": "REQ-P20",
+   "key": "gehoert_zu"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3_platine",
+   "target": "REQ-P20",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "gehoert_zu",
+   "quelle": "ERWARTUNG ## Anforderung",
+   "source": "sim/elektrik/e3_platine",
+   "target": "REQ-P17",
+   "key": "gehoert_zu"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3_platine",
+   "target": "REQ-P17",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "gehoert_zu",
+   "quelle": "ERWARTUNG ## Anforderung",
+   "source": "sim/elektrik/e3_platine",
+   "target": "REQ-P18",
+   "key": "gehoert_zu"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3_platine",
+   "target": "REQ-P18",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/ergebnis_ausgleich.json",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/ergebnis_kriechstrecke.json",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/ergebnis_platine.json",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/ergebnis_routing.json",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/ergebnis_vorladung.json",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/ergebnis_waerme.json",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/ERGEBNIS.md",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/platine_LFP.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/platine_LFP_3d_bottom.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/platine_LFP_3d_iso.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/platine_LFP_3d_nah.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/platine_LFP_3d_top.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/platine_LFP_einbau.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/platine_LFP_explosion.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/platine_NMC.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/platine_NMC_3d_bottom.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/platine_NMC_3d_iso.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/platine_NMC_3d_nah.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/platine_NMC_3d_top.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/platine_NMC_einbau.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/platine_NMC_explosion.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/schaltbild_cmu.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/spice_ausgleich_vorladung.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3_platine",
+   "target": "B-BAT-051",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3_platine",
+   "target": "B-BAT-055",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3_platine",
+   "target": "BT-311",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3_platine",
+   "target": "BT-321",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3_platine",
+   "target": "BT-322",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3_platine",
+   "target": "BT-323",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3_platine",
+   "target": "BT-324",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3_platine",
+   "target": "BT-325",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3_platine",
+   "target": "BT-712",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3_platine",
+   "target": "ENT-115",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3_platine",
+   "target": "ENT-146",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3_platine",
+   "target": "ENT-168",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3_platine",
+   "target": "ENT-172",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3_platine",
+   "target": "ENT-187",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3_platine",
+   "target": "ENT-163",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3_platine",
+   "target": "ENT-183",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3_platine",
+   "target": "ENT-185",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "gehoert_zu",
+   "quelle": "ERWARTUNG ## Anforderung",
+   "source": "sim/elektrik/e3b_platine_waerme",
+   "target": "REQ-P09",
+   "key": "gehoert_zu"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3b_platine_waerme",
+   "target": "REQ-P09",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "gehoert_zu",
+   "quelle": "ERWARTUNG ## Anforderung",
+   "source": "sim/elektrik/e3b_platine_waerme",
+   "target": "REQ-P15",
+   "key": "gehoert_zu"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3b_platine_waerme",
+   "target": "REQ-P15",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "gehoert_zu",
+   "quelle": "ERWARTUNG ## Anforderung",
+   "source": "sim/elektrik/e3b_platine_waerme",
+   "target": "REQ-P20",
+   "key": "gehoert_zu"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3b_platine_waerme",
+   "target": "REQ-P20",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3b_platine_waerme",
+   "target": "sim/elektrik/e3b_platine_waerme/ergebnis.json",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3b_platine_waerme",
+   "target": "sim/elektrik/e3b_platine_waerme/ERGEBNIS.md",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3b_platine_waerme",
+   "target": "sim/elektrik/e3b_platine_waerme/e3b_temperatur.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3b_platine_waerme",
+   "target": "B-BAT-051",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3b_platine_waerme",
+   "target": "ENT-184",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3b_platine_waerme",
+   "target": "ENT-185",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "gehoert_zu",
+   "quelle": "ERWARTUNG ## Anforderung",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "REQ-P19",
+   "key": "gehoert_zu"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "REQ-P19",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "gehoert_zu",
+   "quelle": "ERWARTUNG ## Anforderung",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "REQ-P15",
+   "key": "gehoert_zu"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "REQ-P15",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "gehoert_zu",
+   "quelle": "ERWARTUNG ## Anforderung",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "REQ-P20",
+   "key": "gehoert_zu"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "REQ-P20",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "gehoert_zu",
+   "quelle": "ERWARTUNG ## Anforderung",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "REQ-P13",
+   "key": "gehoert_zu"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "REQ-P13",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "gehoert_zu",
+   "quelle": "ERWARTUNG ## Anforderung",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "REQ-P17",
+   "key": "gehoert_zu"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "REQ-P17",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "gehoert_zu",
+   "quelle": "ERWARTUNG ## Anforderung",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "REQ-P18",
+   "key": "gehoert_zu"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "REQ-P18",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "sim/elektrik/e3c_bms_platine/ergebnis_kriechstrecke.json",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "BT-311",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "BT-340",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "BT-715",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "BT-722",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "ENT-144",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "ENT-168",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "gehoert_zu",
+   "quelle": "ERWARTUNG ## Anforderung",
+   "source": "sim/elektrik/e3d_fmeda",
+   "target": "REQ-P18",
+   "key": "gehoert_zu"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3d_fmeda",
+   "target": "REQ-P18",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3d_fmeda",
+   "target": "sim/elektrik/e3d_fmeda/ergebnis.json",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3d_fmeda",
+   "target": "sim/elektrik/e3d_fmeda/ERGEBNIS.md",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3d_fmeda",
+   "target": "sim/elektrik/e3d_fmeda/e3d_fmeda.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "gehoert_zu",
+   "quelle": "ERWARTUNG ## Anforderung",
    "source": "sim/geometrie/g1_anordnung",
    "target": "REQ-D11",
    "key": "gehoert_zu"
@@ -36216,28 +39898,28 @@
    "typ": "gehoert_zu",
    "quelle": "ERWARTUNG ## Anforderung",
    "source": "sim/kuehlung/k0_zelle",
-   "target": "REQ-P12",
+   "target": "REQ-P09",
    "key": "gehoert_zu"
   },
   {
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "sim/kuehlung/k0_zelle",
-   "target": "REQ-P12",
+   "target": "REQ-P09",
    "key": "erwaehnt"
   },
   {
    "typ": "gehoert_zu",
    "quelle": "ERWARTUNG ## Anforderung",
    "source": "sim/kuehlung/k0_zelle",
-   "target": "REQ-P09",
+   "target": "REQ-P12",
    "key": "gehoert_zu"
   },
   {
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "sim/kuehlung/k0_zelle",
-   "target": "REQ-P09",
+   "target": "REQ-P12",
    "key": "erwaehnt"
   },
   {
@@ -45876,28 +49558,28 @@
    "typ": "gehoert_zu",
    "quelle": "ERWARTUNG ## Anforderung",
    "source": "sim/kuehlung/k5_parallel",
-   "target": "REQ-D06",
+   "target": "REQ-P09",
    "key": "gehoert_zu"
   },
   {
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "sim/kuehlung/k5_parallel",
-   "target": "REQ-D06",
+   "target": "REQ-P09",
    "key": "erwaehnt"
   },
   {
    "typ": "gehoert_zu",
    "quelle": "ERWARTUNG ## Anforderung",
    "source": "sim/kuehlung/k5_parallel",
-   "target": "REQ-P09",
+   "target": "REQ-D06",
    "key": "gehoert_zu"
   },
   {
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "sim/kuehlung/k5_parallel",
-   "target": "REQ-P09",
+   "target": "REQ-D06",
    "key": "erwaehnt"
   },
   {
@@ -46030,28 +49712,28 @@
    "typ": "gehoert_zu",
    "quelle": "ERWARTUNG ## Anforderung",
    "source": "sim/mechanik/m0_gehaeuse",
-   "target": "REQ-P07",
+   "target": "REQ-P14",
    "key": "gehoert_zu"
   },
   {
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "sim/mechanik/m0_gehaeuse",
-   "target": "REQ-P07",
+   "target": "REQ-P14",
    "key": "erwaehnt"
   },
   {
    "typ": "gehoert_zu",
    "quelle": "ERWARTUNG ## Anforderung",
    "source": "sim/mechanik/m0_gehaeuse",
-   "target": "REQ-P14",
+   "target": "REQ-P07",
    "key": "gehoert_zu"
   },
   {
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "sim/mechanik/m0_gehaeuse",
-   "target": "REQ-P14",
+   "target": "REQ-P07",
    "key": "erwaehnt"
   },
   {
@@ -49208,28 +52890,28 @@
    "typ": "gehoert_zu",
    "quelle": "ERWARTUNG ## Anforderung",
    "source": "sim/vergleich_produkte",
-   "target": "REQ-P07",
+   "target": "REQ-P02",
    "key": "gehoert_zu"
   },
   {
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "sim/vergleich_produkte",
-   "target": "REQ-P07",
+   "target": "REQ-P02",
    "key": "erwaehnt"
   },
   {
    "typ": "gehoert_zu",
    "quelle": "ERWARTUNG ## Anforderung",
    "source": "sim/vergleich_produkte",
-   "target": "REQ-P02",
+   "target": "REQ-P07",
    "key": "gehoert_zu"
   },
   {
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "sim/vergleich_produkte",
-   "target": "REQ-P02",
+   "target": "REQ-P07",
    "key": "erwaehnt"
   },
   {
@@ -49866,6 +53548,13 @@
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "docs/01_lastenheft.md",
+   "target": "REQ-D15",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/01_lastenheft.md",
    "target": "REQ-P01",
    "key": "erwaehnt"
   },
@@ -49976,6 +53665,41 @@
   },
   {
    "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/01_lastenheft.md",
+   "target": "REQ-P17",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/01_lastenheft.md",
+   "target": "REQ-P18",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/01_lastenheft.md",
+   "target": "REQ-P19",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/01_lastenheft.md",
+   "target": "REQ-P20",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/01_lastenheft.md",
+   "target": "REQ-P21",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
    "quelle": "Textvorkommen Pfad",
    "source": "docs/01_lastenheft.md",
    "target": ".gitignore",
@@ -49993,6 +53717,13 @@
    "quelle": "Textvorkommen Pfad",
    "source": "docs/01_lastenheft.md",
    "target": "pm/gespraech.sh",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/01_lastenheft.md",
+   "target": "pm/kreativ/METHODE.md",
    "key": "erwaehnt"
   },
   {
@@ -50140,6 +53871,20 @@
    "quelle": "Textvorkommen",
    "source": "docs/04_entscheidungen.md",
    "target": "B-BAT-043",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "B-BAT-050",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "B-BAT-051",
    "key": "erwaehnt"
   },
   {
@@ -50307,7 +54052,49 @@
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "docs/04_entscheidungen.md",
+   "target": "BT-311",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
    "target": "BT-320",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "BT-321",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "BT-322",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "BT-323",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "BT-324",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "BT-325",
    "key": "erwaehnt"
   },
   {
@@ -51616,6 +55403,209 @@
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "docs/04_entscheidungen.md",
+   "target": "ENT-163",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "ENT-164",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "ENT-165",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "ENT-166",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "ENT-167",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "ENT-168",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "ENT-169",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "ENT-170",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "ENT-171",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "ENT-172",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "ENT-173",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "ENT-174",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "ENT-175",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "ENT-176",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "ENT-177",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "ENT-178",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "ENT-179",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "ENT-180",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "ENT-181",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "ENT-182",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "ENT-183",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "ENT-184",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "ENT-185",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "ENT-186",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "ENT-187",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "ENT-188",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "ENT-189",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "ENT-190",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "ENT-191",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
    "target": "REQ-D01",
    "key": "erwaehnt"
   },
@@ -51659,6 +55649,13 @@
    "quelle": "Textvorkommen",
    "source": "docs/04_entscheidungen.md",
    "target": "REQ-D13",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "REQ-D15",
    "key": "erwaehnt"
   },
   {
@@ -51756,6 +55753,34 @@
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "docs/04_entscheidungen.md",
+   "target": "REQ-P17",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "REQ-P18",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "REQ-P19",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "REQ-P20",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
    "target": "W20",
    "key": "erwaehnt"
   },
@@ -51785,6 +55810,20 @@
    "quelle": "Textvorkommen Pfad",
    "source": "docs/04_entscheidungen.md",
    "target": "sim/elektrik/e1_querschnitte/ergebnis.json",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/04_entscheidungen.md",
+   "target": "sim/elektrik/e3_platine/ergebnis_waerme.json",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/04_entscheidungen.md",
+   "target": "sim/elektrik/e3b_platine_waerme/ergebnis.json",
    "key": "erwaehnt"
   },
   {
@@ -52252,48 +56291,6 @@
   {
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
-   "source": "docs/07_normen_und_vorschriften.md",
-   "target": "REQ-P15",
-   "key": "erwaehnt"
-  },
-  {
-   "typ": "erwaehnt",
-   "quelle": "Textvorkommen",
-   "source": "docs/07_normen_und_vorschriften.md",
-   "target": "W35",
-   "key": "erwaehnt"
-  },
-  {
-   "typ": "erwaehnt",
-   "quelle": "Textvorkommen",
-   "source": "docs/07_normen_und_vorschriften.md",
-   "target": "W36",
-   "key": "erwaehnt"
-  },
-  {
-   "typ": "erwaehnt",
-   "quelle": "Textvorkommen",
-   "source": "docs/07_normen_und_vorschriften.md",
-   "target": "W37",
-   "key": "erwaehnt"
-  },
-  {
-   "typ": "erwaehnt",
-   "quelle": "Textvorkommen",
-   "source": "docs/07_normen_und_vorschriften.md",
-   "target": "W38",
-   "key": "erwaehnt"
-  },
-  {
-   "typ": "erwaehnt",
-   "quelle": "Textvorkommen",
-   "source": "docs/07_normen_und_vorschriften.md",
-   "target": "W39",
-   "key": "erwaehnt"
-  },
-  {
-   "typ": "erwaehnt",
-   "quelle": "Textvorkommen",
    "source": "docs/09_aenderungen.md",
    "target": "B-BAT-004",
    "key": "erwaehnt"
@@ -52324,6 +56321,13 @@
    "quelle": "Textvorkommen",
    "source": "docs/09_aenderungen.md",
    "target": "BT-250",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/09_aenderungen.md",
+   "target": "BT-311",
    "key": "erwaehnt"
   },
   {
@@ -52491,7 +56495,35 @@
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "docs/09_aenderungen.md",
+   "target": "ENT-168",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/09_aenderungen.md",
+   "target": "ENT-172",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/09_aenderungen.md",
+   "target": "ENT-184",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/09_aenderungen.md",
    "target": "REQ-D14",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/09_aenderungen.md",
+   "target": "REQ-D15",
    "key": "erwaehnt"
   },
   {
@@ -52547,7 +56579,28 @@
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "docs/09_aenderungen.md",
+   "target": "REQ-P17",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/09_aenderungen.md",
+   "target": "REQ-P19",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/09_aenderungen.md",
    "target": "W20",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/09_aenderungen.md",
+   "target": "W48",
    "key": "erwaehnt"
   },
   {
@@ -54451,6 +58504,20 @@
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "docs/16_ergebnisbilder.md",
+   "target": "ENT-185",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "ENT-187",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/16_ergebnisbilder.md",
    "target": "REQ-P09",
    "key": "erwaehnt"
   },
@@ -54802,6 +58869,153 @@
    "quelle": "Textvorkommen Pfad",
    "source": "docs/16_ergebnisbilder.md",
    "target": "sim/elektrik/e2_elektronik/schaltbild_NMC.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3_platine/ergebnis_platine.json",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3_platine/platine_LFP.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3_platine/platine_LFP_3d_bottom.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3_platine/platine_LFP_3d_iso.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3_platine/platine_LFP_3d_nah.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3_platine/platine_LFP_3d_top.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3_platine/platine_LFP_einbau.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3_platine/platine_LFP_explosion.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3_platine/platine_NMC.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3_platine/platine_NMC_3d_bottom.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3_platine/platine_NMC_3d_iso.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3_platine/platine_NMC_3d_nah.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3_platine/platine_NMC_3d_top.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3_platine/platine_NMC_einbau.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3_platine/platine_NMC_explosion.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3_platine/schaltbild_cmu.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3_platine/spice_ausgleich_vorladung.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3b_platine_waerme/ergebnis.json",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3b_platine_waerme/e3b_temperatur.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3d_fmeda/ergebnis.json",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3d_fmeda/e3d_fmeda.png",
    "key": "erwaehnt"
   },
   {
@@ -55838,6 +60052,76 @@
    "quelle": "Textvorkommen Pfad",
    "source": "docs/16_ergebnisbilder.md",
    "target": "sim/mechanik/x3_crash_g5/verformung_NMC_b.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/vergleich_produkte/ergebnis.json",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/vergleich_produkte/w43_vergleich.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/verifikation_werkzeuge/ergebnis.json",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/verifikation_werkzeuge/qn1_sammelbild.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/verifikation_werkzeuge/v1_konvergenz.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/verifikation_werkzeuge/v2_aufloesung.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/verifikation_werkzeuge/v3_kragbalken.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/verifikation_werkzeuge/v4_kurven.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/verifikation_werkzeuge/v4_pybamm.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/verifikation_werkzeuge/v5_verteiler.png",
    "key": "erwaehnt"
   },
   {
@@ -57252,6 +61536,90 @@
    "quelle": "Textvorkommen Pfad",
    "source": "docs/22a_prozesskennzahlen.md",
    "target": "docs/08_ki_einsatz_protokoll.md",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/25_loesungen_aus_kreativmethoden.md",
+   "target": "B-BAT-051",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/25_loesungen_aus_kreativmethoden.md",
+   "target": "B-BAT-053",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/25_loesungen_aus_kreativmethoden.md",
+   "target": "B-BAT-055",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/25_loesungen_aus_kreativmethoden.md",
+   "target": "BT-311",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/25_loesungen_aus_kreativmethoden.md",
+   "target": "BT-324",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/25_loesungen_aus_kreativmethoden.md",
+   "target": "ENT-168",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/25_loesungen_aus_kreativmethoden.md",
+   "target": "ENT-171",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/25_loesungen_aus_kreativmethoden.md",
+   "target": "ENT-172",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/25_loesungen_aus_kreativmethoden.md",
+   "target": "ENT-184",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/25_loesungen_aus_kreativmethoden.md",
+   "target": "ENT-185",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/25_loesungen_aus_kreativmethoden.md",
+   "target": "ENT-187",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/25_loesungen_aus_kreativmethoden.md",
+   "target": "REQ-D15",
    "key": "erwaehnt"
   },
   {
@@ -60128,6 +64496,34 @@
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "ERINNERUNGEN.md",
+   "target": "B-BAT-050",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ERINNERUNGEN.md",
+   "target": "B-BAT-052",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ERINNERUNGEN.md",
+   "target": "B-BAT-053",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ERINNERUNGEN.md",
+   "target": "B-BAT-054",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ERINNERUNGEN.md",
    "target": "BT-000",
    "key": "erwaehnt"
   },
@@ -60150,6 +64546,13 @@
    "quelle": "Textvorkommen",
    "source": "ERINNERUNGEN.md",
    "target": "BT-250",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ERINNERUNGEN.md",
+   "target": "BT-311",
    "key": "erwaehnt"
   },
   {
@@ -60429,6 +64832,27 @@
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "ERINNERUNGEN.md",
+   "target": "ENT-172",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ERINNERUNGEN.md",
+   "target": "ENT-184",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ERINNERUNGEN.md",
+   "target": "ENT-185",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ERINNERUNGEN.md",
    "target": "P01",
    "key": "erwaehnt"
   },
@@ -60485,6 +64909,13 @@
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "ERINNERUNGEN.md",
+   "target": "REQ-D15",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ERINNERUNGEN.md",
    "target": "REQ-P01",
    "key": "erwaehnt"
   },
@@ -60507,6 +64938,13 @@
    "quelle": "Textvorkommen",
    "source": "ERINNERUNGEN.md",
    "target": "REQ-P16",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ERINNERUNGEN.md",
+   "target": "REQ-P17",
    "key": "erwaehnt"
   },
   {
@@ -60679,6 +65117,20 @@
   },
   {
    "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ERINNERUNGEN.md",
+   "target": "W47",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ERINNERUNGEN.md",
+   "target": "W50",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
    "quelle": "Textvorkommen Pfad",
    "source": "ERINNERUNGEN.md",
    "target": ".gitignore",
@@ -60801,6 +65253,76 @@
    "quelle": "Textvorkommen Pfad",
    "source": "praesentation/bausteine/E2.md",
    "target": "sim/elektrik/e2_elektronik/ergebnis.json",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "praesentation/bausteine/E3.md",
+   "target": "BT-321",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "praesentation/bausteine/E3.md",
+   "target": "ENT-168",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "praesentation/bausteine/E3.md",
+   "target": "sim/elektrik/e3_platine/ergebnis_ausgleich.json",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "praesentation/bausteine/E3.md",
+   "target": "sim/elektrik/e3_platine/platine_NMC_explosion.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "praesentation/bausteine/E3b.md",
+   "target": "sim/elektrik/e3b_platine_waerme/ergebnis.json",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "praesentation/bausteine/E3b.md",
+   "target": "sim/elektrik/e3b_platine_waerme/ERGEBNIS.md",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "praesentation/bausteine/E3b.md",
+   "target": "sim/elektrik/e3b_platine_waerme/e3b_temperatur.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "praesentation/bausteine/E3d.md",
+   "target": "sim/elektrik/e3d_fmeda/ergebnis.json",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "praesentation/bausteine/E3d.md",
+   "target": "sim/elektrik/e3d_fmeda/ERGEBNIS.md",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "praesentation/bausteine/E3d.md",
+   "target": "sim/elektrik/e3d_fmeda/e3d_fmeda.png",
    "key": "erwaehnt"
   },
   {
@@ -61044,6 +65566,13 @@
   {
    "typ": "erwaehnt",
    "quelle": "Textvorkommen Pfad",
+   "source": "praesentation/bausteine/KR1.md",
+   "target": "sim/elektrik/e3_platine/ergebnis_waerme.json",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
    "source": "praesentation/bausteine/M0.md",
    "target": "sim/mechanik/m0_gehaeuse/ergebnis.json",
    "key": "erwaehnt"
@@ -61266,6 +65795,66 @@
    "kante": "kriterium_aus"
   },
   {
+   "von": "REQ-P17",
+   "nach": "Herkunft unbekannt: Autor (Freigaberunde 2026-11-24)",
+   "kante": "kriterium_aus"
+  },
+  {
+   "von": "REQ-P17",
+   "nach": "Herkunft unbekannt: Opus (Vorschlag 2026-11-24, Freigabe Autor offen)",
+   "kante": "kriterium_aus"
+  },
+  {
+   "von": "REQ-P17",
+   "nach": "Herkunft unbekannt: Opus (Vorschlag 2026-11-24, Freigabe Autor offen)",
+   "kante": "kriterium_aus"
+  },
+  {
+   "von": "REQ-P18",
+   "nach": "Herkunft unbekannt: Opus (Vorschlag 2026-11-24, Freigabe Autor offen)",
+   "kante": "kriterium_aus"
+  },
+  {
+   "von": "REQ-P18",
+   "nach": "Herkunft unbekannt: Opus (Vorschlag 2026-11-24, Freigabe Autor offen)",
+   "kante": "kriterium_aus"
+  },
+  {
+   "von": "REQ-P19",
+   "nach": "Herkunft unbekannt: Opus (Vorschlag 2026-11-24, Freigabe Autor offen)",
+   "kante": "kriterium_aus"
+  },
+  {
+   "von": "REQ-P19",
+   "nach": "Herkunft unbekannt: Autor (2026-11-24)",
+   "kante": "kriterium_aus"
+  },
+  {
+   "von": "REQ-P19",
+   "nach": "Herkunft unbekannt: Opus (ERW-E3 N4)",
+   "kante": "kriterium_aus"
+  },
+  {
+   "von": "REQ-P20",
+   "nach": "Herkunft unbekannt: Opus (Vorschlag 2026-11-24, Freigabe Autor offen)",
+   "kante": "kriterium_aus"
+  },
+  {
+   "von": "REQ-P20",
+   "nach": "Herkunft unbekannt: Opus (Vorschlag 2026-11-24, Freigabe Autor offen)",
+   "kante": "kriterium_aus"
+  },
+  {
+   "von": "REQ-P21",
+   "nach": "Herkunft unbekannt: Autor (Freigaberunde 2026-11-24)",
+   "kante": "kriterium_aus"
+  },
+  {
+   "von": "REQ-D15",
+   "nach": "Herkunft unbekannt: Opus (Vorschlag 2026-11-24, Freigabe Autor offen)",
+   "kante": "kriterium_aus"
+  },
+  {
    "von": "ENT-160",
    "nach": "cad/baukasten/ausgabe/ergebnis_LFP.json (Annahme A_zellzahl_LFP in cad/baukasten/annahmen.json)",
    "kante": "belegt_durch"
@@ -61278,6 +65867,156 @@
   {
    "von": "ENT-162",
    "nach": "cad/baukasten/ausgabe/ergebnis_NMC.json (Annahme A_zellabstand_NMC_mm in cad/baukasten/annahmen.json)",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-163",
+   "nach": "sim/elektrik/e3_platine/ERWARTUNG.md",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-164",
+   "nach": "sim/elektrik/e3_platine/ERWARTUNG.md",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-165",
+   "nach": "sim/elektrik/e3_platine/ERWARTUNG.md",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-166",
+   "nach": "sim/elektrik/e3_platine/ERWARTUNG.md",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-167",
+   "nach": "sim/elektrik/e3_platine/ERWARTUNG.md",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-168",
+   "nach": "sim/elektrik/e3_platine/ERWARTUNG.md",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-169",
+   "nach": "sim/elektrik/e3_platine/ERWARTUNG.md",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-170",
+   "nach": "sim/elektrik/e3_platine/ERWARTUNG.md",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-171",
+   "nach": "sim/elektrik/e3_platine/ERWARTUNG.md",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-172",
+   "nach": "sim/elektrik/e3_platine/ERWARTUNG.md",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-173",
+   "nach": "sim/elektrik/e3_platine/ERWARTUNG.md",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-174",
+   "nach": "sim/elektrik/e3_platine/ERWARTUNG.md",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-175",
+   "nach": "sim/elektrik/e3_platine/ERWARTUNG.md",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-176",
+   "nach": "sim/elektrik/e3_platine/ERWARTUNG.md",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-177",
+   "nach": "sim/elektrik/e3_platine/ERWARTUNG.md",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-178",
+   "nach": "sim/elektrik/e3_platine/ERWARTUNG.md",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-179",
+   "nach": "sim/elektrik/e3_platine/ERWARTUNG.md",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-180",
+   "nach": "sim/elektrik/e3_platine/ERWARTUNG.md",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-181",
+   "nach": "sim/elektrik/e3_platine/ERWARTUNG.md",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-182",
+   "nach": "sim/elektrik/e3_platine/ERWARTUNG.md",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-183",
+   "nach": "sim/elektrik/e3_platine/ERWARTUNG.md",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-184",
+   "nach": "pm/kreativ/KR1/ERGEBNIS.md",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-184",
+   "nach": "pm/kreativ/KR1/rang.json",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-185",
+   "nach": "sim/elektrik/e3b_platine_waerme/ERWARTUNG.md",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-186",
+   "nach": "sim/elektrik/e3b_platine_waerme/ERWARTUNG.md",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-187",
+   "nach": "sim/elektrik/e3b_platine_waerme/ERWARTUNG.md",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-188",
+   "nach": "sim/elektrik/e3c_bms_platine/ERWARTUNG.md",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-189",
+   "nach": "sim/elektrik/e3c_bms_platine/ERWARTUNG.md",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-190",
+   "nach": "sim/elektrik/e3c_bms_platine/ERWARTUNG.md",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-191",
+   "nach": "sim/elektrik/e3c_bms_platine/ERWARTUNG.md",
    "kante": "belegt_durch"
   },
   {

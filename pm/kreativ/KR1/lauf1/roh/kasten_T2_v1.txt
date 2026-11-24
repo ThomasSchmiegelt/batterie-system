@@ -1,0 +1,1 @@
+{"optionen":[{"name":"Balance-Widerstände auf der CMU-Platine","quelle":"Fakt F2"},{"name":"Induktives Koppellelement zwischen Zellen","quelle":"TRIZ-28"},{"name":"Externer Flüssigkeitskühlkreislauf","quelle":"TRIZ-29"},{"name":"Doppelte Platinenfläche, kombinierte CMU","quelle":"TRIZ-5"},{"name":"Kühlplatte mit Ultraschall-Konvektionsantrieb","quelle":"TRIZ-18"}]}

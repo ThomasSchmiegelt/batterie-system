@@ -1,0 +1,39 @@
+{
+  "urteile": {
+    "Ausgleichszeit": {
+      "gewinner": "gleich",
+      "grund": "Beide Konzepte nutzen 260 mA bei 50 % Takt, also 130 mA Durchschnitt; die Ausgleichszeit bleibt bei denselben Zellparameter unverändert.",
+      "zahl": {"wert": "14,2 h bei 130 mA", "quelle": "F1"}
+    },
+    "Wärme in der CMU": {
+      "gewinner": "B",
+      "grund": "Konzept B lagert die Verlustwärme über ein Wärmeleitpad auf die Kühlplatte aus, sodass die CMU-Platine nicht die volle Leistung auffängt.",
+      "zahl": {"wert": "9,83 W bei Höchstspannung, Grenze 10 W", "quelle": "F1"}
+    },
+    "Kosten": {
+      "gewinner": "gleich",
+      "grund": "Beide Konzepte erfordern zusätzliche Bauteile (A: größere Kupferfläche, B: Wärmeleitpad und Leitung zum Zellverbinder); ohne Kostendaten ist kein Vorteil belegbar.",
+      "zahl": null
+    },
+    "Bauraum": {
+      "gewinner": "B",
+      "grund": "Konzept A verlangt eine vergrößerte Platine über die vorhandene 120 × 60 mm hinaus, während Konzept B innerhalb der bestehenden Abmaße bleibt.",
+      "zahl": {"wert": "120 x 60 mm", "quelle": "F5"}
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+      "gewinner": "B",
+      "grund": "Konzept A überschreitet nachweislich die Temperaturgrenze von 105 °C (111,9 °C), was einen dokumentierten HARA-Befund darstellt; Konzept B bleibt im zulässigen Bereich.",
+      "zahl": {"wert": "111,9 °C bei 45 °C Umgebung, Grenze 105 °C", "quelle": "F3"}
+    },
+    "Wirkungsgrad": {
+      "gewinner": "gleich",
+      "grund": "Beide Konzepte nutzen denselben passiven Widerstandsprinzip mit identischem Mittelstrom; der elektrische Wirkungsgrad des Ausgleichs ist unbeeinflusst vom Wärmeabfuhrweg.",
+      "zahl": null
+    },
+    "Reifegrad": {
+      "gewinner": "B",
+      "grund": "Konzept B nutzt die bereits gelegte 120 × 60 mm-Platine und ergänzt nur ein Pad und eine Leitung; Konzept A erfordert ein neues, größeres Layout mit offenen Routing- und DRC-Fragen.",
+      "zahl": {"wert": "212 Verbindungen nicht geroutet", "quelle": "F5"}
+    }
+  }
+}

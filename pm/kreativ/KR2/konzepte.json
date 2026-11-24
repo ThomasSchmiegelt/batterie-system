@@ -1,0 +1,119 @@
+{
+ "kopf": "KI-generiert (Datei). Konzepte von Opus vorgegeben (konzepte_vorgabe.json); Skript prüft nur Ausschlüsse und Hamming >= 2.",
+ "ausschluesse": 0,
+ "min_hamming": 2,
+ "hamming_paare": {
+  "K1-K2": 5,
+  "K1-K3": 2,
+  "K1-K4": 2,
+  "K1-K5": 2,
+  "K2-K3": 5,
+  "K2-K4": 4,
+  "K2-K5": 4,
+  "K3-K4": 4,
+  "K3-K5": 2,
+  "K4-K5": 4
+ },
+ "konzepte": [
+  {
+   "id": "K1",
+   "richtung": "Ist (HARA-FSR): gestuft, 1oo2, Hardwarepfad",
+   "leitidee": "Ist (HARA-FSR): gestuft, 1oo2, Hardwarepfad",
+   "wahl": [
+    "T1.3",
+    "T2.2",
+    "T3.2",
+    "T4.2",
+    "T5.2"
+   ],
+   "namen": [
+    "drosseln → warnen → trennen",
+    "zweikanalig, einer genügt (1oo2)",
+    "Software + unabhängiger Hardwarepfad (Sekundärschutz, FSR-06)",
+    "abgestuft: Laden sperren bzw. Leistung 0 per CAN, dann Schütze",
+    "≥ 2 s (FSR-07)"
+   ]
+  },
+  {
+   "id": "K2",
+   "richtung": "einfach hart: sofort trennen",
+   "leitidee": "einfach hart: sofort trennen",
+   "wahl": [
+    "T1.1",
+    "T2.1",
+    "T3.1",
+    "T4.1",
+    "T5.1"
+   ],
+   "namen": [
+    "eine Schwelle → trennen",
+    "einkanalig (1oo1)",
+    "nur Software BMS",
+    "sofort ganzes Pack",
+    "keine"
+   ]
+  },
+  {
+   "id": "K3",
+   "richtung": "verfügbarkeitsorientiert: Mehrheit, Notlauf",
+   "leitidee": "verfügbarkeitsorientiert: Mehrheit, Notlauf",
+   "wahl": [
+    "T1.3",
+    "T2.3",
+    "T3.2",
+    "T4.2",
+    "T5.3"
+   ],
+   "namen": [
+    "drosseln → warnen → trennen",
+    "Mehrheit (2oo3)",
+    "Software + unabhängiger Hardwarepfad (Sekundärschutz, FSR-06)",
+    "abgestuft: Laden sperren bzw. Leistung 0 per CAN, dann Schütze",
+    "≥ 10 s Notlauf mit gedrosselter Leistung"
+   ]
+  },
+  {
+   "id": "K4",
+   "richtung": "sicherheitsmaximal: 1oo2, Hardwarepfad, ganzes Pack",
+   "leitidee": "sicherheitsmaximal: 1oo2, Hardwarepfad, ganzes Pack",
+   "wahl": [
+    "T1.2",
+    "T2.2",
+    "T3.2",
+    "T4.1",
+    "T5.2"
+   ],
+   "namen": [
+    "Warnung → trennen",
+    "zweikanalig, einer genügt (1oo2)",
+    "Software + unabhängiger Hardwarepfad (Sekundärschutz, FSR-06)",
+    "sofort ganzes Pack",
+    "≥ 2 s (FSR-07)"
+   ]
+  },
+  {
+   "id": "K5",
+   "richtung": "Mehrheit ohne Hardwarepfad",
+   "leitidee": "Mehrheit ohne Hardwarepfad",
+   "wahl": [
+    "T1.3",
+    "T2.3",
+    "T3.1",
+    "T4.2",
+    "T5.2"
+   ],
+   "namen": [
+    "drosseln → warnen → trennen",
+    "Mehrheit (2oo3)",
+    "nur Software BMS",
+    "abgestuft: Laden sperren bzw. Leistung 0 per CAN, dann Schütze",
+    "≥ 2 s (FSR-07)"
+   ]
+  }
+ ],
+ "pruefung": {
+  "ausschluss_verletzt": [],
+  "hamming_unter_2": [],
+  "anzahl_5_bis_8": true
+ }
+}

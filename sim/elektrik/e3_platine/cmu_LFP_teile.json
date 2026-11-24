@@ -1,0 +1,1933 @@
+{
+ "variante": "LFP",
+ "herkunft": {
+  "BT-323.widerstand_Ohm": "23.5 (ENT-171)",
+  "BT-322.kanaele": "18.0 (ENT-169)",
+  "BT-323.filter_R_Ohm": "100.0 (ENT-181)",
+  "BT-323.filter_C_nF": "100.0 (ENT-182)",
+  "A_VCC_PINS": "4 (A_*, ERW-E3 N2)",
+  "A_C_ENTK_NF": "100.0 (A_*, ERW-E3 N2)",
+  "A_TVS_JE_STECKER": "1 (A_*, ERW-E3 N2)",
+  "R_Einzel_Ohm": "47 (Titel ENT-171/172, 2 parallel = 23.5)",
+  "BT-321.kriechstrecke_mm": "0.2 (ENT-168)",
+  "BT-321.kriechstrecke_daisy_mm": "2.5 (ENT-183)",
+  "BT-325.schwelle_V": "3.75 (ENT-175)",
+  "BT-325.verzoegerung_ms": "1000.0 (ENT-177)",
+  "BT-324.pruefspannung_V": "1500.0 (ENT-174)",
+  "BT-325.bauform": "3 x generischer 6-Zellen-Überspannungsschutz, TSSOP-16, je 7 Messeingänge, Ausgänge wired-OR auf ABSCHALT (ENT-193)"
+ },
+ "teile": [
+  {
+   "ref": "J1",
+   "name": "FPC_24",
+   "value": "FPC 24-polig (Zellabgriffe)",
+   "footprint": "Connector_FFC-FPC:Hirose_FH12-24S-0.5SH_1x24-1MP_P0.50mm_Horizontal",
+   "pins": {
+    "1": "T0",
+    "2": "T1",
+    "3": "T2",
+    "4": "T3",
+    "5": "T4",
+    "6": "T5",
+    "7": "T6",
+    "8": "T7",
+    "9": "T8",
+    "10": "T9",
+    "11": "T10",
+    "12": "T11",
+    "13": "T12",
+    "14": "T13",
+    "15": "T14",
+    "16": "T15",
+    "17": "T16",
+    "18": "T17",
+    "19": "T18",
+    "20": "ABSCHALT",
+    "21": "GND",
+    "22": null,
+    "23": null,
+    "24": null
+   },
+   "pinnamen": {
+    "1": "T0",
+    "2": "T1",
+    "3": "T2",
+    "4": "T3",
+    "5": "T4",
+    "6": "T5",
+    "7": "T6",
+    "8": "T7",
+    "9": "T8",
+    "10": "T9",
+    "11": "T10",
+    "12": "T11",
+    "13": "T12",
+    "14": "T13",
+    "15": "T14",
+    "16": "T15",
+    "17": "T16",
+    "18": "T17",
+    "19": "T18",
+    "20": "ABSCHALT",
+    "21": "GND",
+    "22": "NC1",
+    "23": "NC2",
+    "24": "NC3"
+   }
+  },
+  {
+   "ref": "U1",
+   "name": "AFE_generisch_18K",
+   "value": "AFE generisch 18 Kanaele, ASIL-D-faehig (BT-322)",
+   "footprint": "Package_QFP:LQFP-80_12x12mm_P0.5mm",
+   "pins": {
+    "1": "S0",
+    "2": "S1",
+    "3": "S2",
+    "4": "S3",
+    "5": "S4",
+    "6": "S5",
+    "7": "S6",
+    "8": "S7",
+    "9": "S8",
+    "10": "S9",
+    "11": "S10",
+    "12": "S11",
+    "13": "S12",
+    "14": "S13",
+    "15": "S14",
+    "16": "S15",
+    "17": "S16",
+    "18": "S17",
+    "19": "S18",
+    "20": "G1",
+    "21": "G2",
+    "22": "G3",
+    "23": "G4",
+    "24": "G5",
+    "25": "G6",
+    "26": "G7",
+    "27": "G8",
+    "28": "G9",
+    "29": "G10",
+    "30": "G11",
+    "31": "G12",
+    "32": "G13",
+    "33": "G14",
+    "34": "G15",
+    "35": "G16",
+    "36": "G17",
+    "37": "G18",
+    "38": "H1",
+    "39": "H2",
+    "40": "H3",
+    "41": "H4",
+    "42": "H5",
+    "43": "H6",
+    "44": "H7",
+    "45": "H8",
+    "46": "H9",
+    "47": "H10",
+    "48": "H11",
+    "49": "H12",
+    "50": "H13",
+    "51": "H14",
+    "52": "H15",
+    "53": "H16",
+    "54": "H17",
+    "55": "H18",
+    "56": "VCC",
+    "57": "VCC",
+    "58": "VCC",
+    "59": "VCC",
+    "60": "GND",
+    "61": "N$1",
+    "62": "N$2",
+    "63": "N$3",
+    "64": "N$4",
+    "65": "N$5",
+    "66": "N$6",
+    "67": "N$9",
+    "68": "N$10",
+    "69": "ABSCHALT"
+   },
+   "pinnamen": {
+    "1": "S0",
+    "2": "S1",
+    "3": "S2",
+    "4": "S3",
+    "5": "S4",
+    "6": "S5",
+    "7": "S6",
+    "8": "S7",
+    "9": "S8",
+    "10": "S9",
+    "11": "S10",
+    "12": "S11",
+    "13": "S12",
+    "14": "S13",
+    "15": "S14",
+    "16": "S15",
+    "17": "S16",
+    "18": "S17",
+    "19": "S18",
+    "20": "G1",
+    "21": "G2",
+    "22": "G3",
+    "23": "G4",
+    "24": "G5",
+    "25": "G6",
+    "26": "G7",
+    "27": "G8",
+    "28": "G9",
+    "29": "G10",
+    "30": "G11",
+    "31": "G12",
+    "32": "G13",
+    "33": "G14",
+    "34": "G15",
+    "35": "G16",
+    "36": "G17",
+    "37": "G18",
+    "38": "H1",
+    "39": "H2",
+    "40": "H3",
+    "41": "H4",
+    "42": "H5",
+    "43": "H6",
+    "44": "H7",
+    "45": "H8",
+    "46": "H9",
+    "47": "H10",
+    "48": "H11",
+    "49": "H12",
+    "50": "H13",
+    "51": "H14",
+    "52": "H15",
+    "53": "H16",
+    "54": "H17",
+    "55": "H18",
+    "56": "VCC1",
+    "57": "VCC2",
+    "58": "VCC3",
+    "59": "VCC4",
+    "60": "GND",
+    "61": "NTC1",
+    "62": "NTC2",
+    "63": "NTC3",
+    "64": "NTC4",
+    "65": "TXA",
+    "66": "TXB",
+    "67": "RXA",
+    "68": "RXB",
+    "69": "ABSCHALT_IN"
+   }
+  },
+  {
+   "ref": "R1",
+   "name": "R",
+   "value": "100",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "pins": {
+    "1": "T0",
+    "2": "S0"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R2",
+   "name": "R",
+   "value": "100",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "pins": {
+    "1": "T1",
+    "2": "S1"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R3",
+   "name": "R",
+   "value": "100",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "pins": {
+    "1": "T2",
+    "2": "S2"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R4",
+   "name": "R",
+   "value": "100",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "pins": {
+    "1": "T3",
+    "2": "S3"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R5",
+   "name": "R",
+   "value": "100",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "pins": {
+    "1": "T4",
+    "2": "S4"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R6",
+   "name": "R",
+   "value": "100",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "pins": {
+    "1": "T5",
+    "2": "S5"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R7",
+   "name": "R",
+   "value": "100",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "pins": {
+    "1": "T6",
+    "2": "S6"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R8",
+   "name": "R",
+   "value": "100",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "pins": {
+    "1": "T7",
+    "2": "S7"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R9",
+   "name": "R",
+   "value": "100",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "pins": {
+    "1": "T8",
+    "2": "S8"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R10",
+   "name": "R",
+   "value": "100",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "pins": {
+    "1": "T9",
+    "2": "S9"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R11",
+   "name": "R",
+   "value": "100",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "pins": {
+    "1": "T10",
+    "2": "S10"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R12",
+   "name": "R",
+   "value": "100",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "pins": {
+    "1": "T11",
+    "2": "S11"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R13",
+   "name": "R",
+   "value": "100",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "pins": {
+    "1": "T12",
+    "2": "S12"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R14",
+   "name": "R",
+   "value": "100",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "pins": {
+    "1": "T13",
+    "2": "S13"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R15",
+   "name": "R",
+   "value": "100",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "pins": {
+    "1": "T14",
+    "2": "S14"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R16",
+   "name": "R",
+   "value": "100",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "pins": {
+    "1": "T15",
+    "2": "S15"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R17",
+   "name": "R",
+   "value": "100",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "pins": {
+    "1": "T16",
+    "2": "S16"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R18",
+   "name": "R",
+   "value": "100",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "pins": {
+    "1": "T17",
+    "2": "S17"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R19",
+   "name": "R",
+   "value": "100",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "pins": {
+    "1": "T18",
+    "2": "S18"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C1",
+   "name": "C",
+   "value": "100n",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "pins": {
+    "1": "S1",
+    "2": "S0"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R20",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T1",
+    "2": "D1"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R21",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T1",
+    "2": "D1"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "Q1",
+   "name": "Doppel_NMOS_generisch",
+   "value": "Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101",
+   "footprint": "Package_TO_SOT_SMD:SOT-363_SC-70-6",
+   "pins": {
+    "1": "M1",
+    "2": "G1",
+    "3": "M1",
+    "4": "T0",
+    "5": "H1",
+    "6": "D1"
+   },
+   "pinnamen": {
+    "1": "S1",
+    "2": "G1",
+    "3": "D2",
+    "4": "S2",
+    "5": "G2",
+    "6": "D1"
+   }
+  },
+  {
+   "ref": "C2",
+   "name": "C",
+   "value": "100n",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "pins": {
+    "1": "S2",
+    "2": "S1"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R22",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T2",
+    "2": "D2"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R23",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T2",
+    "2": "D2"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "Q2",
+   "name": "Doppel_NMOS_generisch",
+   "value": "Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101",
+   "footprint": "Package_TO_SOT_SMD:SOT-363_SC-70-6",
+   "pins": {
+    "1": "M2",
+    "2": "G2",
+    "3": "M2",
+    "4": "T1",
+    "5": "H2",
+    "6": "D2"
+   },
+   "pinnamen": {
+    "1": "S1",
+    "2": "G1",
+    "3": "D2",
+    "4": "S2",
+    "5": "G2",
+    "6": "D1"
+   }
+  },
+  {
+   "ref": "C3",
+   "name": "C",
+   "value": "100n",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "pins": {
+    "1": "S3",
+    "2": "S2"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R24",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T3",
+    "2": "D3"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R25",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T3",
+    "2": "D3"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "Q3",
+   "name": "Doppel_NMOS_generisch",
+   "value": "Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101",
+   "footprint": "Package_TO_SOT_SMD:SOT-363_SC-70-6",
+   "pins": {
+    "1": "M3",
+    "2": "G3",
+    "3": "M3",
+    "4": "T2",
+    "5": "H3",
+    "6": "D3"
+   },
+   "pinnamen": {
+    "1": "S1",
+    "2": "G1",
+    "3": "D2",
+    "4": "S2",
+    "5": "G2",
+    "6": "D1"
+   }
+  },
+  {
+   "ref": "C4",
+   "name": "C",
+   "value": "100n",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "pins": {
+    "1": "S4",
+    "2": "S3"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R26",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T4",
+    "2": "D4"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R27",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T4",
+    "2": "D4"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "Q4",
+   "name": "Doppel_NMOS_generisch",
+   "value": "Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101",
+   "footprint": "Package_TO_SOT_SMD:SOT-363_SC-70-6",
+   "pins": {
+    "1": "M4",
+    "2": "G4",
+    "3": "M4",
+    "4": "T3",
+    "5": "H4",
+    "6": "D4"
+   },
+   "pinnamen": {
+    "1": "S1",
+    "2": "G1",
+    "3": "D2",
+    "4": "S2",
+    "5": "G2",
+    "6": "D1"
+   }
+  },
+  {
+   "ref": "C5",
+   "name": "C",
+   "value": "100n",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "pins": {
+    "1": "S5",
+    "2": "S4"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R28",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T5",
+    "2": "D5"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R29",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T5",
+    "2": "D5"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "Q5",
+   "name": "Doppel_NMOS_generisch",
+   "value": "Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101",
+   "footprint": "Package_TO_SOT_SMD:SOT-363_SC-70-6",
+   "pins": {
+    "1": "M5",
+    "2": "G5",
+    "3": "M5",
+    "4": "T4",
+    "5": "H5",
+    "6": "D5"
+   },
+   "pinnamen": {
+    "1": "S1",
+    "2": "G1",
+    "3": "D2",
+    "4": "S2",
+    "5": "G2",
+    "6": "D1"
+   }
+  },
+  {
+   "ref": "C6",
+   "name": "C",
+   "value": "100n",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "pins": {
+    "1": "S6",
+    "2": "S5"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R30",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T6",
+    "2": "D6"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R31",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T6",
+    "2": "D6"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "Q6",
+   "name": "Doppel_NMOS_generisch",
+   "value": "Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101",
+   "footprint": "Package_TO_SOT_SMD:SOT-363_SC-70-6",
+   "pins": {
+    "1": "M6",
+    "2": "G6",
+    "3": "M6",
+    "4": "T5",
+    "5": "H6",
+    "6": "D6"
+   },
+   "pinnamen": {
+    "1": "S1",
+    "2": "G1",
+    "3": "D2",
+    "4": "S2",
+    "5": "G2",
+    "6": "D1"
+   }
+  },
+  {
+   "ref": "C7",
+   "name": "C",
+   "value": "100n",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "pins": {
+    "1": "S7",
+    "2": "S6"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R32",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T7",
+    "2": "D7"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R33",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T7",
+    "2": "D7"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "Q7",
+   "name": "Doppel_NMOS_generisch",
+   "value": "Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101",
+   "footprint": "Package_TO_SOT_SMD:SOT-363_SC-70-6",
+   "pins": {
+    "1": "M7",
+    "2": "G7",
+    "3": "M7",
+    "4": "T6",
+    "5": "H7",
+    "6": "D7"
+   },
+   "pinnamen": {
+    "1": "S1",
+    "2": "G1",
+    "3": "D2",
+    "4": "S2",
+    "5": "G2",
+    "6": "D1"
+   }
+  },
+  {
+   "ref": "C8",
+   "name": "C",
+   "value": "100n",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "pins": {
+    "1": "S8",
+    "2": "S7"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R34",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T8",
+    "2": "D8"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R35",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T8",
+    "2": "D8"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "Q8",
+   "name": "Doppel_NMOS_generisch",
+   "value": "Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101",
+   "footprint": "Package_TO_SOT_SMD:SOT-363_SC-70-6",
+   "pins": {
+    "1": "M8",
+    "2": "G8",
+    "3": "M8",
+    "4": "T7",
+    "5": "H8",
+    "6": "D8"
+   },
+   "pinnamen": {
+    "1": "S1",
+    "2": "G1",
+    "3": "D2",
+    "4": "S2",
+    "5": "G2",
+    "6": "D1"
+   }
+  },
+  {
+   "ref": "C9",
+   "name": "C",
+   "value": "100n",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "pins": {
+    "1": "S9",
+    "2": "S8"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R36",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T9",
+    "2": "D9"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R37",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T9",
+    "2": "D9"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "Q9",
+   "name": "Doppel_NMOS_generisch",
+   "value": "Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101",
+   "footprint": "Package_TO_SOT_SMD:SOT-363_SC-70-6",
+   "pins": {
+    "1": "M9",
+    "2": "G9",
+    "3": "M9",
+    "4": "T8",
+    "5": "H9",
+    "6": "D9"
+   },
+   "pinnamen": {
+    "1": "S1",
+    "2": "G1",
+    "3": "D2",
+    "4": "S2",
+    "5": "G2",
+    "6": "D1"
+   }
+  },
+  {
+   "ref": "C10",
+   "name": "C",
+   "value": "100n",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "pins": {
+    "1": "S10",
+    "2": "S9"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R38",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T10",
+    "2": "D10"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R39",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T10",
+    "2": "D10"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "Q10",
+   "name": "Doppel_NMOS_generisch",
+   "value": "Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101",
+   "footprint": "Package_TO_SOT_SMD:SOT-363_SC-70-6",
+   "pins": {
+    "1": "M10",
+    "2": "G10",
+    "3": "M10",
+    "4": "T9",
+    "5": "H10",
+    "6": "D10"
+   },
+   "pinnamen": {
+    "1": "S1",
+    "2": "G1",
+    "3": "D2",
+    "4": "S2",
+    "5": "G2",
+    "6": "D1"
+   }
+  },
+  {
+   "ref": "C11",
+   "name": "C",
+   "value": "100n",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "pins": {
+    "1": "S11",
+    "2": "S10"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R40",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T11",
+    "2": "D11"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R41",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T11",
+    "2": "D11"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "Q11",
+   "name": "Doppel_NMOS_generisch",
+   "value": "Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101",
+   "footprint": "Package_TO_SOT_SMD:SOT-363_SC-70-6",
+   "pins": {
+    "1": "M11",
+    "2": "G11",
+    "3": "M11",
+    "4": "T10",
+    "5": "H11",
+    "6": "D11"
+   },
+   "pinnamen": {
+    "1": "S1",
+    "2": "G1",
+    "3": "D2",
+    "4": "S2",
+    "5": "G2",
+    "6": "D1"
+   }
+  },
+  {
+   "ref": "C12",
+   "name": "C",
+   "value": "100n",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "pins": {
+    "1": "S12",
+    "2": "S11"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R42",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T12",
+    "2": "D12"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R43",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T12",
+    "2": "D12"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "Q12",
+   "name": "Doppel_NMOS_generisch",
+   "value": "Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101",
+   "footprint": "Package_TO_SOT_SMD:SOT-363_SC-70-6",
+   "pins": {
+    "1": "M12",
+    "2": "G12",
+    "3": "M12",
+    "4": "T11",
+    "5": "H12",
+    "6": "D12"
+   },
+   "pinnamen": {
+    "1": "S1",
+    "2": "G1",
+    "3": "D2",
+    "4": "S2",
+    "5": "G2",
+    "6": "D1"
+   }
+  },
+  {
+   "ref": "C13",
+   "name": "C",
+   "value": "100n",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "pins": {
+    "1": "S13",
+    "2": "S12"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R44",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T13",
+    "2": "D13"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R45",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T13",
+    "2": "D13"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "Q13",
+   "name": "Doppel_NMOS_generisch",
+   "value": "Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101",
+   "footprint": "Package_TO_SOT_SMD:SOT-363_SC-70-6",
+   "pins": {
+    "1": "M13",
+    "2": "G13",
+    "3": "M13",
+    "4": "T12",
+    "5": "H13",
+    "6": "D13"
+   },
+   "pinnamen": {
+    "1": "S1",
+    "2": "G1",
+    "3": "D2",
+    "4": "S2",
+    "5": "G2",
+    "6": "D1"
+   }
+  },
+  {
+   "ref": "C14",
+   "name": "C",
+   "value": "100n",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "pins": {
+    "1": "S14",
+    "2": "S13"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R46",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T14",
+    "2": "D14"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R47",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T14",
+    "2": "D14"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "Q14",
+   "name": "Doppel_NMOS_generisch",
+   "value": "Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101",
+   "footprint": "Package_TO_SOT_SMD:SOT-363_SC-70-6",
+   "pins": {
+    "1": "M14",
+    "2": "G14",
+    "3": "M14",
+    "4": "T13",
+    "5": "H14",
+    "6": "D14"
+   },
+   "pinnamen": {
+    "1": "S1",
+    "2": "G1",
+    "3": "D2",
+    "4": "S2",
+    "5": "G2",
+    "6": "D1"
+   }
+  },
+  {
+   "ref": "C15",
+   "name": "C",
+   "value": "100n",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "pins": {
+    "1": "S15",
+    "2": "S14"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R48",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T15",
+    "2": "D15"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R49",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T15",
+    "2": "D15"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "Q15",
+   "name": "Doppel_NMOS_generisch",
+   "value": "Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101",
+   "footprint": "Package_TO_SOT_SMD:SOT-363_SC-70-6",
+   "pins": {
+    "1": "M15",
+    "2": "G15",
+    "3": "M15",
+    "4": "T14",
+    "5": "H15",
+    "6": "D15"
+   },
+   "pinnamen": {
+    "1": "S1",
+    "2": "G1",
+    "3": "D2",
+    "4": "S2",
+    "5": "G2",
+    "6": "D1"
+   }
+  },
+  {
+   "ref": "C16",
+   "name": "C",
+   "value": "100n",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "pins": {
+    "1": "S16",
+    "2": "S15"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R50",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T16",
+    "2": "D16"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R51",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T16",
+    "2": "D16"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "Q16",
+   "name": "Doppel_NMOS_generisch",
+   "value": "Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101",
+   "footprint": "Package_TO_SOT_SMD:SOT-363_SC-70-6",
+   "pins": {
+    "1": "M16",
+    "2": "G16",
+    "3": "M16",
+    "4": "T15",
+    "5": "H16",
+    "6": "D16"
+   },
+   "pinnamen": {
+    "1": "S1",
+    "2": "G1",
+    "3": "D2",
+    "4": "S2",
+    "5": "G2",
+    "6": "D1"
+   }
+  },
+  {
+   "ref": "C17",
+   "name": "C",
+   "value": "100n",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "pins": {
+    "1": "S17",
+    "2": "S16"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R52",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T17",
+    "2": "D17"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R53",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T17",
+    "2": "D17"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "Q17",
+   "name": "Doppel_NMOS_generisch",
+   "value": "Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101",
+   "footprint": "Package_TO_SOT_SMD:SOT-363_SC-70-6",
+   "pins": {
+    "1": "M17",
+    "2": "G17",
+    "3": "M17",
+    "4": "T16",
+    "5": "H17",
+    "6": "D17"
+   },
+   "pinnamen": {
+    "1": "S1",
+    "2": "G1",
+    "3": "D2",
+    "4": "S2",
+    "5": "G2",
+    "6": "D1"
+   }
+  },
+  {
+   "ref": "C18",
+   "name": "C",
+   "value": "100n",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "pins": {
+    "1": "S18",
+    "2": "S17"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R54",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T18",
+    "2": "D18"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R55",
+   "name": "R",
+   "value": "47",
+   "footprint": "Resistor_SMD:R_2512_6332Metric",
+   "pins": {
+    "1": "T18",
+    "2": "D18"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "Q18",
+   "name": "Doppel_NMOS_generisch",
+   "value": "Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101",
+   "footprint": "Package_TO_SOT_SMD:SOT-363_SC-70-6",
+   "pins": {
+    "1": "M18",
+    "2": "G18",
+    "3": "M18",
+    "4": "T17",
+    "5": "H18",
+    "6": "D18"
+   },
+   "pinnamen": {
+    "1": "S1",
+    "2": "G1",
+    "3": "D2",
+    "4": "S2",
+    "5": "G2",
+    "6": "D1"
+   }
+  },
+  {
+   "ref": "J2",
+   "name": "NTC_Eingang",
+   "value": "NTC 1 (extern)",
+   "footprint": "Connector_JST:JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal",
+   "pins": {
+    "1": "N$1",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "J3",
+   "name": "NTC_Eingang",
+   "value": "NTC 2 (extern)",
+   "footprint": "Connector_JST:JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal",
+   "pins": {
+    "1": "N$2",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "J4",
+   "name": "NTC_Eingang",
+   "value": "NTC 3 (extern)",
+   "footprint": "Connector_JST:JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal",
+   "pins": {
+    "1": "N$3",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "J5",
+   "name": "NTC_Eingang",
+   "value": "NTC 4 (extern)",
+   "footprint": "Connector_JST:JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal",
+   "pins": {
+    "1": "N$4",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "T1",
+   "name": "Uebertrager_generisch",
+   "value": "Uebertrager generisch 1,5 kV Basisisolierung",
+   "footprint": "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm",
+   "pins": {
+    "1": "N$5",
+    "2": "N$6",
+    "3": "N$7",
+    "4": "N$8"
+   },
+   "pinnamen": {
+    "1": "P1",
+    "2": "P2",
+    "3": "S1",
+    "4": "S2"
+   }
+  },
+  {
+   "ref": "J6",
+   "name": "Daisy_Stecker",
+   "value": "Daisy-Chain oben",
+   "footprint": "Connector_JST:JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal",
+   "pins": {
+    "1": "N$7",
+    "2": "N$8"
+   },
+   "pinnamen": {
+    "1": "A",
+    "2": "B"
+   }
+  },
+  {
+   "ref": "D1",
+   "name": "TVS_generisch",
+   "value": "TVS generisch (Annahme ERW-E3 N2) Eingang",
+   "footprint": "Diode_SMD:D_SOD-323",
+   "pins": {
+    "1": "N$7",
+    "2": "N$8"
+   },
+   "pinnamen": {
+    "1": "A",
+    "2": "K"
+   }
+  },
+  {
+   "ref": "T2",
+   "name": "Uebertrager_generisch",
+   "value": "Uebertrager generisch 1,5 kV Basisisolierung",
+   "footprint": "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm",
+   "pins": {
+    "1": "N$9",
+    "2": "N$10",
+    "3": "N$11",
+    "4": "N$12"
+   },
+   "pinnamen": {
+    "1": "P1",
+    "2": "P2",
+    "3": "S1",
+    "4": "S2"
+   }
+  },
+  {
+   "ref": "J7",
+   "name": "Daisy_Stecker",
+   "value": "Daisy-Chain unten",
+   "footprint": "Connector_JST:JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal",
+   "pins": {
+    "1": "N$11",
+    "2": "N$12"
+   },
+   "pinnamen": {
+    "1": "A",
+    "2": "B"
+   }
+  },
+  {
+   "ref": "D2",
+   "name": "TVS_generisch",
+   "value": "TVS generisch (Annahme ERW-E3 N2) Ausgang",
+   "footprint": "Diode_SMD:D_SOD-323",
+   "pins": {
+    "1": "N$11",
+    "2": "N$12"
+   },
+   "pinnamen": {
+    "1": "A",
+    "2": "K"
+   }
+  },
+  {
+   "ref": "U2",
+   "name": "OVP6_generisch",
+   "value": "6-Zellen-Ueberspannungsschutz generisch, Schwelle je Zelle 3.75 V, 1000 ms",
+   "footprint": "Package_SO:TSSOP-16_4.4x5mm_P0.65mm",
+   "pins": {
+    "1": "T0",
+    "2": "T1",
+    "3": "T2",
+    "4": "T3",
+    "5": "T4",
+    "6": "T5",
+    "7": "T6",
+    "8": "ABSCHALT",
+    "9": "GND"
+   },
+   "pinnamen": {
+    "1": "IN0",
+    "2": "IN1",
+    "3": "IN2",
+    "4": "IN3",
+    "5": "IN4",
+    "6": "IN5",
+    "7": "IN6",
+    "8": "ABSCHALT",
+    "9": "GND"
+   }
+  },
+  {
+   "ref": "U3",
+   "name": "OVP6_generisch",
+   "value": "6-Zellen-Ueberspannungsschutz generisch, Schwelle je Zelle 3.75 V, 1000 ms",
+   "footprint": "Package_SO:TSSOP-16_4.4x5mm_P0.65mm",
+   "pins": {
+    "1": "T6",
+    "2": "T7",
+    "3": "T8",
+    "4": "T9",
+    "5": "T10",
+    "6": "T11",
+    "7": "T12",
+    "8": "ABSCHALT",
+    "9": "GND"
+   },
+   "pinnamen": {
+    "1": "IN0",
+    "2": "IN1",
+    "3": "IN2",
+    "4": "IN3",
+    "5": "IN4",
+    "6": "IN5",
+    "7": "IN6",
+    "8": "ABSCHALT",
+    "9": "GND"
+   }
+  },
+  {
+   "ref": "U4",
+   "name": "OVP6_generisch",
+   "value": "6-Zellen-Ueberspannungsschutz generisch, Schwelle je Zelle 3.75 V, 1000 ms",
+   "footprint": "Package_SO:TSSOP-16_4.4x5mm_P0.65mm",
+   "pins": {
+    "1": "T12",
+    "2": "T13",
+    "3": "T14",
+    "4": "T15",
+    "5": "T16",
+    "6": "T17",
+    "7": "T18",
+    "8": "ABSCHALT",
+    "9": "GND"
+   },
+   "pinnamen": {
+    "1": "IN0",
+    "2": "IN1",
+    "3": "IN2",
+    "4": "IN3",
+    "5": "IN4",
+    "6": "IN5",
+    "7": "IN6",
+    "8": "ABSCHALT",
+    "9": "GND"
+   }
+  },
+  {
+   "ref": "C19",
+   "name": "C",
+   "value": "100n (Entkopplung je Versorgungspin, ERW-E3 N2)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "pins": {
+    "1": "VCC",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C20",
+   "name": "C",
+   "value": "100n (Entkopplung je Versorgungspin, ERW-E3 N2)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "pins": {
+    "1": "VCC",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C21",
+   "name": "C",
+   "value": "100n (Entkopplung je Versorgungspin, ERW-E3 N2)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "pins": {
+    "1": "VCC",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C22",
+   "name": "C",
+   "value": "100n (Entkopplung je Versorgungspin, ERW-E3 N2)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "pins": {
+    "1": "VCC",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  }
+ ]
+}

@@ -1,0 +1,1115 @@
+{
+ "kopf": "KI-generiert (PI, qwen-gross, ohne Werkzeuge). Urteil je geordnetem Paar (erstes = A), Einschätzung, keine Rechnung. Zahlen aus problem.json fakten.",
+ "urteile": {
+  "K1|K2": {
+   "stand": "2026-11-24T14:29:35",
+   "runde": 0,
+   "kriterien": {
+    "Sicherheit": {
+     "gewinner": "A",
+     "grund": "Konzept A erfüllt ASIL D durch 1oo2-Messung und einen softwareunabhängigen Hardware-Abschaltpfad (FSR-06), während B einkanalige Software allein auf ASIL D setzen muss.",
+     "zahl": {
+      "wert": "SPFM 0,9992 ≥ Ziel 0,99 (SG-01)",
+      "quelle": "F5"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Verfügbarkeit": {
+     "gewinner": "A",
+     "grund": "Konzept A trennt gestuft mit min. 2 s Vorwarnung und Derating (FSR-07), wodurch Fehltrennungen während der Fahrt vermieden werden; B trennt sofort ohne Warnung.",
+     "zahl": {
+      "wert": "2 s Vorwarnung",
+      "quelle": "F3"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Kosten": {
+     "gewinner": "B",
+     "grund": "Konzept B benötigt nur einen Messkanal und rein softwaregesteuerte Trennung, ohne aufwendige Zweikanal-Hardware und Sekundärschutz-Bauteile.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Nachweisaufwand": {
+     "gewinner": "B",
+     "grund": "Konzept B entfällt der Unabhängigkeitsnachweis zweier Pfade und die 1oo2-FMEDA-Abdeckung, sodass weniger FMEDA- und Software-ASIL-Nachweise anfallen.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Reifegrad": {
+     "gewinner": "A",
+     "grund": "Zweikanalige AFE-Plus-Sekundärschutz-Architektur mit hardwareseitiger Schütztrennung ist der etablierte Serienstandard in E-Auto-BMS; rein softwaregesteuerte 1oo1-Trennung für ASIL D ist in Serie unüblich.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K1|K3": {
+   "stand": "2026-11-24T14:30:09",
+   "runde": 0,
+   "kriterien": {
+    "Sicherheit": {
+     "gewinner": "A",
+     "grund": "1oo2 löst auf einem einzigen gültigen Fehlerpfad aus und erfüllt damit den FTTI von 1 s für ASIL D (SG-01) ohne zusätzliche Mehrheitsbildung; 2oo3 würde die Auslösung durch Konsensverpflichtung verzögern und riskiert, die 1-s-Grenze zu überschreiten.",
+     "zahl": {
+      "wert": "FTTI 1 s",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "vorher": "A",
+     "runde": 1
+    },
+    "Verfügbarkeit": {
+     "gewinner": "B",
+     "grund": "B bietet 10 s Notlauf mit gedrosselter Leistung, was die 2-s-Vorwarnung von SG-05 deutlich übertrefft und eine unerwartete Fahrtunterbrechung unwahrscheinlicher macht.",
+     "zahl": {
+      "wert": "2 s Vorwarnung",
+      "quelle": "F3"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Kosten": {
+     "gewinner": "A",
+     "grund": "1oo2 benötigt zwei Kanäle, 2oo3 drei; weniger Kanäle bedeuten weniger AFE-Stufen, weniger Leitungen und geringere Bauteilkosten.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Nachweisaufwand": {
+     "gewinner": "A",
+     "grund": "Zwei Kanäle mit 1oo2-Logik lassen sich im FMEDA und im Unabhängigkeitsnachweis (FSR-01/FSR-06) einfacher abdecken als drei Kanäle mit Mehrheitslogik sowie zusätzlicher Notlauf- und Derating-Software.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Reifegrad": {
+     "gewinner": "A",
+     "grund": "1oo2 mit zwei unabhängigen Messpfaden ist in handelsüblichen Serien-BMS der Standard; dreikanalige 2oo3-Mehrheitslogik ist im Automobil-BMS-Markt kaum verbreitet.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K1|K4": {
+   "stand": "2026-11-24T14:30:58",
+   "runde": 0,
+   "kriterien": {
+    "Sicherheit": {
+     "gewinner": "gleich",
+     "grund": "Beide Konzepte garantieren das Trennen über den unabhängigen Hardwarepfad (FSR-06, FSR-01), sodass die Stufung in A die Endfunktion nicht verzögert; ASIL D (SG-01) wird in beiden Fällen durch den hardwarebasierten Abschaltpfad erfüllt.",
+     "zahl": {
+      "wert": "FSR-06: Sekundärschutz öffnet Schütze ohne Software",
+      "quelle": "F4"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Verfügbarkeit": {
+     "gewinner": "A",
+     "grund": "Konzept A (drosseln → warnen → trennen) entspricht exakt der in SG-05 geforderten Abfolge 'erst Leistung verringern und warnen, dann trennen' und reduziert Fehlauslösungen des Schützes während der Fahrt; Konzept B geht ohne Drosselstufe direkt auf Pack-Trennung zu.",
+     "zahl": {
+      "wert": "2 s Vorwarnung, erst Leistung verringern und warnen, dann trennen",
+      "quelle": "F3"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Kosten": {
+     "gewinner": "B",
+     "grund": "Hardware (1oo2-AFE, Sekundärschutz BT-325/BT-715, Schütze BT-711) ist identisch; Konzept B spartCAN-Koordination und eine zusätzliche Software-Zustandsstufe (Leistung-0 per CAN) gegenüber Konzept A.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Nachweisaufwand": {
+     "gewinner": "B",
+     "grund": "Weniger Zustände und Übergänge zu verifizieren (2 Stufen statt 3); FMEDA-Umfang (CMU-Platine NMC, F5) und Unabhängigkeitsnachweis (FSR-06) sind für beide Konzepte gleich.",
+     "zahl": {
+      "wert": "FMEDA nur CMU-Platine NMC, SPFM 0,9992 (Ziel 0,99), LFM 0,9814 (Ziel 0,9)",
+      "quelle": "F5"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Reifegrad": {
+     "gewinner": "A",
+     "grund": "Gestufte Reaktion (Derating → Warnung → Trennung) ist das Standardprinzip in serienmäßigen Pkw-BMS (BMW, Tesla, VW) für Überladung und Thermomanagement; unmittelbare Paket-Trennung ohne Drosselstufe kommt in Serien-BMS seltener vor.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K1|K5": {
+   "stand": "2026-11-24T14:31:29",
+   "runde": 0,
+   "kriterien": {
+    "Sicherheit": {
+     "gewinner": "A",
+     "grund": "Konzept A erfüllt FSR-06 (unabhängiger Hardwarepfad) und FSR-01 (zwei unabhängige Messwege) für ASIL D bei SG-01, Konzept B stützt sich allein auf Software ohne Hardware-Backstop.",
+     "zahl": {
+      "wert": "SPFM 0,9992 (Ziel 0,99)",
+      "quelle": "F5"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Verfügbarkeit": {
+     "gewinner": "B",
+     "grund": "Die 2oo3-Mehrheit erfordert zwei von drei stimmberechtigten Kanälen, bevor getrennt wird, was Fehlauslösungen seltener macht als 1oo2; die gestuften Stufen (drosseln, warnen, trennen) und die 2-s-Vorwarnung (FSR-07) sind in beiden Konzepten gleich.",
+     "zahl": {
+      "wert": "2 s Vorwarnung",
+      "quelle": "F3"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Kosten": {
+     "gewinner": "A",
+     "grund": "Konzept A benötigt zwei AFE-Kanäle plus ein kompaktes Sekundärschutz-Bauelement, während Konzept B drei AFE-Kanäle für die 2oo3-Mehrheit braucht; der zusätzliche AFE-Kanal ist teurer als das kleine Sekundärschutz-IC.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "vorher": "A",
+     "runde": 2
+    },
+    "Nachweisaufwand": {
+     "gewinner": "A",
+     "grund": "Die FMEDA umfasst bei Konzept A nur die CMU-Platine (SPFM 0,9992 bei Ziel 0,99), weil der unabhängige Hardwarepfad BMS-Rechner und Software aus der FMEDA herausnimmt; Konzept B müsste den vollen ASIL-D-Nachweis in einer Software-Domäne für die dreikanalige Mehrheitslogik leisten.",
+     "zahl": {
+      "wert": "SPFM 0,9992, Ziel 0,99",
+      "quelle": "F5"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "vorher": "A",
+     "runde": 2
+    },
+    "Reifegrad": {
+     "gewinner": "A",
+     "grund": "Die Kombination aus zweikanaliger Messung und unabhängigem Hardware-Abschaltpfad ist der etablierte Standard in Serien-BMS (CATL, LG, Samsung), wohingegen reine 2oo3-Softwarearchitekturen ohne Hardware-Backstop in der Serie verbreitet sind.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K2|K1": {
+   "stand": "2026-11-24T14:32:03",
+   "runde": 0,
+   "kriterien": {
+    "Sicherheit": {
+     "gewinner": "B",
+     "grund": "Zweikanaligkeit (1oo2) plus unabhängiger Hardwarepfad (FSR-06) erfüllen ASIL D (SG-01) und ASIL C (SG-03) robuster als ein einzelner Softwarekanal (1oo1).",
+     "zahl": {
+      "wert": "SPFM 0,9992 (Ziel 0,99) für SG-01, CMU NMC",
+      "quelle": "F5"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Verfügbarkeit": {
+     "gewinner": "B",
+     "grund": "Gestufte Reaktion mit Vorwarnung von mindestens 2 s und Leistungsbegrenzung vor dem Trennen entspricht SG-05 (ASIL B) und vermeidet unerwartetes Öffnen während der Fahrt; Konzept A trennt sofort ganz ohne Vorwarnung.",
+     "zahl": {
+      "wert": "2 s Vorwarnung bei SG-05",
+      "quelle": "F3"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Kosten": {
+     "gewinner": "A",
+     "grund": "Einkanalig, nur BMS-Software, kein Sekundärschutz-Hardwarepfad und kein CAN-Warnkanal – weniger Bauteile und Kanäle als das zweikanalige System mit Sekundärschutz.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Nachweisaufwand": {
+     "gewinner": "A",
+     "grund": "Ein Softwarekanal (1oo1) ohne Unabhängigkeitsnachweis und ohne zusätzliche FMEDA-Bausteine reduziert den FMEDA-, ASIL- und Unabhängigkeitsnachweis gegenüber dem zweikanaligen Aufbau mit Hardware-Bypass.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Reifegrad": {
+     "gewinner": "B",
+     "grund": "Gestuftes Trennen, zweikanalige Messung (FSR-01), unabhängiger Hardware-Abschaltpfad (FSR-06) und CAN-Derating mit Warnzeit (FSR-07) sind Standardprinzipien in aktuellen Serien-BMS; ein sofortiger 1oo1-Softwareabgang ist in der Serienpraxis selten.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K2|K3": {
+   "stand": "2026-11-24T14:32:49",
+   "runde": 0,
+   "kriterien": {
+    "Sicherheit": {
+     "gewinner": "B",
+     "grund": "Konzept B erfüllt ASIL D durch unabhängigen Hardwarepfad (FSR-06) und 2oo3-Mehrheit, während A nur einen einkanaligen Softwarepfad (1oo1) bietet.",
+     "zahl": {
+      "wert": "unabhängiger Abschaltpfad ohne Software",
+      "quelle": "F4"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Verfügbarkeit": {
+     "gewinner": "B",
+     "grund": "Konzept B drosselt und warnt vor dem Trennen (≥ 10 s Notlauf), was SG-05 entspricht; A trennt sofort ohne Vorwarnung und riskiert Fehlauslösung während der Fahrt.",
+     "zahl": {
+      "wert": "2 s Vorwarnung",
+      "quelle": "F3"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Kosten": {
+     "gewinner": "A",
+     "grund": "Konzept A benötigt nur BMS-Software und einen 1oo1-Kanal, während B zusätzlich Sekundärschutz-Hardware, 2oo3-Sensorik und CAN-Kommunikation erfordert.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Nachweisaufwand": {
+     "gewinner": "B",
+     "grund": "Konzept B nutzt 2oo3-Redundanz und den unabhängigen Hardwarepfad (FSR-06), wodurch die einzelnen Software-Kanäle nicht das volle ASIL D allein tragen müssen, während die CMU-Hardware-FMEDA (F5) SPFM und LFM bereits erfüllt und den Software-Nachweis weiter entlastet; Konzept A konzentriert das gesamte ASIL D auf einen einzigen Softwarekanal ohne architektonische Entlastung.",
+     "zahl": {
+      "wert": "SPFM 0,9992 > Ziel 0,99; LFM 0,9814 > Ziel 0,9",
+      "quelle": "F5"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "vorher": "B",
+     "runde": 2
+    },
+    "Reifegrad": {
+     "gewinner": "B",
+     "grund": "Der abgestufte Ablauf mit unabhängiger Sekundärschutz-Hardware und CAN-Derating ist das in Serien-BMS verbreitete Prinzip; ein reiner 1oo1-Softwarepfad für ASIL D ist in der Serienpraxis unüblich.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K2|K4": {
+   "stand": "2026-11-24T14:33:29",
+   "runde": 0,
+   "kriterien": {
+    "Sicherheit": {
+     "gewinner": "B",
+     "grund": "Das 1oo2-Konzept mit unabhängiger Hardware-Abschaltpfad (FSR-06) erfüllt die ASIL-D-Anforderung von SG-01 robuster als ein einziger Software-Kanal.",
+     "zahl": {
+      "wert": "0,9992",
+      "quelle": "F5"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Verfügbarkeit": {
+     "gewinner": "B",
+     "grund": "Konzept B beachtet die 2-s-Vorwarnung und das erst-Leisten-dann-Trennen von SG-05, Konzept A trennt sofort ohne Warnung und verletzt damit die Verfügbarkeit.",
+     "zahl": {
+      "wert": "2 s",
+      "quelle": "F3"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Kosten": {
+     "gewinner": "A",
+     "grund": "Ein einziger Messkanal und lediglich BMS-Software entfallen auf den Sekundärschutz-Kanal und die zugehörigen Platinen.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Nachweisaufwand": {
+     "gewinner": "B",
+     "grund": "Konzept A muss die volle ASIL-D-Sicherheitsfunktion allein in Software nachweisen, während Konzept B die ASIL über Software und Sekundärschutz-Hardware zerlegt (FSR-06), was den Software-Nachweis auf ein niedrigeres ASIL-Niveau senkt; der erforderliche Unabhängigkeitsnachweis für 1oo2 ist ein begrenzter, methodikgesteuerter Aufwand.",
+     "zahl": {
+      "wert": "ASIL D",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "vorher": "B",
+     "runde": 2
+    },
+    "Reifegrad": {
+     "gewinner": "B",
+     "grund": "Zweikanalige Messung, unabhängiger Hardware-Abschaltpfad und Vorwarnung vor Trennen sind der verbreitete Serienstandard in Fahrzeug-BMS.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K2|K5": {
+   "stand": "2026-11-24T14:34:22",
+   "runde": 0,
+   "kriterien": {
+    "Sicherheit": {
+     "gewinner": "B",
+     "grund": "2oo3-Mehrheit und abgestuftes Vorgehen entsprechen FSR-01 (zwei unabhängige Messwege) und FSR-06 (unabhängiger Hardwarepfad); 1oo1 allein reicht für ASIL D nicht.",
+     "zahl": {
+      "wert": "2 unabhängige Messwege",
+      "quelle": "F4"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 2 steht nicht in F4"
+    },
+    "Verfügbarkeit": {
+     "gewinner": "B",
+     "grund": "Konzept B drosselt und warnt ≥ 2 s vor dem Trennen, wodurch unerwartetes Soforttrennen (SG-05) vermieden wird; Konzept A trennt sofort und ganz ohne Vorwarnung.",
+     "zahl": {
+      "wert": "2 s",
+      "quelle": "F3"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Kosten": {
+     "gewinner": "A",
+     "grund": "Einkanalig (1oo1) mit einer Schwelle benötigt weniger Sensorik und weniger CAN-Kommunikation als 2oo3 mit drei Kanälen und Derating-Protokoll.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Nachweisaufwand": {
+     "gewinner": "A",
+     "grund": "Konzept A mit 1oo1 und einer einzigen Schwelle hat weniger FMEDA-Elemente, keinen CAN-Derating-Pfad und keinen mehrstufigen Zustandsautomat, was den Software-ASIL-Nachweis und den Unabhängigkeitsnachweis gegenüber B (2oo3, CAN, 2 s-Warnlogik) deutlich verkleinert.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "vorher": "A",
+     "runde": 2
+    },
+    "Reifegrad": {
+     "gewinner": "gleich",
+     "grund": "Beide Prinzipien – hartes Trennen als Endstufe und abgestufter Notlauf – sind in Serien-HV-BMS verbreitet; keines ist neu.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K3|K1": {
+   "stand": "2026-11-24T14:35:11",
+   "runde": 0,
+   "kriterien": {
+    "Sicherheit": {
+     "gewinner": "B",
+     "grund": "1oo2 (B) ist für die Fehlerdetektion konservativer, da ein einzelner Kanal genügt, und entspricht damit der FSR-01-Architektur (zwei unabhängige Wege) für ASIL D, während 2oo3 (A) zwei Stimmungen verlangt und eine Echtstörung bei gleichzeitigem Fehler zweier Kanäle verpassen könnte.",
+     "zahl": {
+      "wert": "0,9992",
+      "quelle": "F5"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "vorher": "A",
+     "runde": 1
+    },
+    "Verfügbarkeit": {
+     "gewinner": "A",
+     "grund": "Die 10-s-Notlauf-Vorwarnung und die 2oo3-Mehrheit unterdrücken Fehlauslösungen, während B bei einem Kanal-Fehlalarm sofort trennt; F3 fordert mindestens 2 s Vorwarnung, die A deutlich übersteigt.",
+     "zahl": {
+      "wert": "2 s Vorwarnung",
+      "quelle": "F3"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Kosten": {
+     "gewinner": "B",
+     "grund": "FSR-01 definiert genau zwei unabhängige Messwege; B nutzt diese direkt, A benötigt einen dritten AFE-Kanal und zugehörige Platinen- und Kabelführung.",
+     "zahl": {
+      "wert": "zwei unabhängigen Wegen",
+      "quelle": "F4"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Nachweisaufwand": {
+     "gewinner": "B",
+     "grund": "B entspricht exakt FSR-01 (Zwei-Kanal) und FSR-06 (Hardware-Abschaltung); A müsste zusätzlich die 2oo3-Abstimmlogik und den dritten Kanal im FMEDA und im Unabhängigkeitsnachweis belegen.",
+     "zahl": {
+      "wert": "zwei unabhängigen Wegen",
+      "quelle": "F4"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Reifegrad": {
+     "gewinner": "B",
+     "grund": "Zwei-Kanal-Prinzip mit softwareunabhängiger Hardware-Abschaltung (FSR-06) ist der verbreitete Serien-BMS-Aufbau; 2oo3-Mehrheit ist in Serien-BMS unüblich.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K3|K2": {
+   "stand": "2026-11-24T14:35:32",
+   "runde": 0,
+   "kriterien": {
+    "Sicherheit": {
+     "gewinner": "A",
+     "grund": "Zwei unabhängige Kanäle (AFE plus Sekundärschutz) und ein hardwaregestützter Abschaltpfad ohne Software decken ASIL-D-Fehlereffekte besser ab als ein einziger Softwarekanal.",
+     "zahl": {
+      "wert": "FSR-01: Zellspannung auf zwei unabhängigen Wegen messen; FSR-06: unabhängiger Abschaltpfad ohne Software",
+      "quelle": "F4"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Verfügbarkeit": {
+     "gewinner": "A",
+     "grund": "Gestufte Reaktion (Derating, Warnung, dann Trennung) mit 2 s Vorwarnung und 2oo3-Mehrheit reduziert Fehlauslösungen während der Fahrt gegenüber einer sofortigen Volltrennung.",
+     "zahl": {
+      "wert": "2 s Vorwarnung, erst Leistung verringern und warnen, dann trennen",
+      "quelle": "F3"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Kosten": {
+     "gewinner": "B",
+     "grund": "Ein einzelner Kanal, nur BMS-Software und eine Schwelle vermeiden redundante AFEs, Sekundärschutz-Schaltungen und CAN-Derating-Einrichtungen.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Nachweisaufwand": {
+     "gewinner": "B",
+     "grund": "Konzept B (1oo1, nur Software) erspart den Unabhängigkeitsnachweis zwischen Softwarepfad und Hardware-Sekundärschutz (FSR-06) sowie die Verifikation einer 2oo3-Voting-Logik, wodurch FMEDA-Umfang und Software-ASIL-Nachweis kleiner ausfallen als bei Konzept A.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "vorher": "B",
+     "runde": 2
+    },
+    "Reifegrad": {
+     "gewinner": "A",
+     "grund": "Gestufte Abschaltung mit redundanter Spannungsüberwachung und Hardware-Sekundärschutz ist das in Serien-BMS verbreitete Prinzip, während ein einzelner Softwarekanal ohne Vorwarnung atypisch ist.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K3|K4": {
+   "stand": "2026-11-24T14:36:24",
+   "runde": 0,
+   "kriterien": {
+    "Sicherheit": {
+     "gewinner": "B",
+     "grund": "1oo2 löst bei detektierendem Einzelkanal sofort ab; 2oo3 verlangt zwei von drei Übereinstimmungen und ist daher weniger konservativ für die Beherrschung von Überladung (ASIL D).",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Verfügbarkeit": {
+     "gewinner": "A",
+     "grund": "2oo3-Mehrheit vermeidet Fehlauslösung bei Einzelkanalfehler, und das abgestufte Vorgehen mit 10 s Notlauf überschreitet die 2 s Mindestdauer aus SG-05.",
+     "zahl": {
+      "wert": "2",
+      "quelle": "F3"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Kosten": {
+     "gewinner": "B",
+     "grund": "1oo2 benötigt zwei Kanäle und deckt die in FSR-01 geforderte Zwei-Pfade-Architektur (AFE + Sekundärschutz) ohne zusätzliche CMU ab.",
+     "zahl": {
+      "wert": "2",
+      "quelle": "F4"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 2 steht nicht in F4"
+    },
+    "Nachweisaufwand": {
+     "gewinner": "B",
+     "grund": "Einfache OR-Logik und zwei statt drei Kanäle reduzieren die FMEDA-Abdeckung, den Software-ASIL-Nachweis und den Unabhängigkeitsnachweis gegenüber einer 2oo3-Mehrheit.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Reifegrad": {
+     "gewinner": "B",
+     "grund": "Zwei unabhängige Detektionspfade nach FSR-01 (AFE und Sekundärschutz je CMU) sind der in Serien-BMS etablierte Ansatz; 2oo3-Mehrheit ist im Automobil-BMS selten.",
+     "zahl": {
+      "wert": "2",
+      "quelle": "F4"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 2 steht nicht in F4"
+    }
+   }
+  },
+  "K3|K5": {
+   "stand": "2026-11-24T14:37:06",
+   "runde": 0,
+   "kriterien": {
+    "Sicherheit": {
+     "gewinner": "A",
+     "grund": "Konzept A erfüllt FSR-06 (unabhängiger Abschaltpfad via Sekundärschutz) und bietet damit für ASIL D (SG-01) und ASIL C (SG-03) einen softwareunabhängigen zweiten Trennweg; Konzept B setzt auf reine Software ohne Hardware-Backup.",
+     "zahl": {
+      "wert": "FSR-06: unabhängiger Abschaltpfad, Sekundärschutz öffnet Schütze ohne Software",
+      "quelle": "F4"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Verfügbarkeit": {
+     "gewinner": "A",
+     "grund": "Konzept A gewährt ≥ 10 s Vorwarnung mit gedrosselter Leistung, was den Fahrer mehr Zeit für ein sicheres Manöver gibt als die 2 s Mindestwarnzeit von Konzept B.",
+     "zahl": {
+      "wert": "2 s Vorwarnung",
+      "quelle": "F3"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Kosten": {
+     "gewinner": "B",
+     "grund": "Konzept B benötigt keinen separaten Sekundärschutz-Hardwarepfad und weniger Bauteile/Kanäle, da die Trennung ausschließlich über die BMS-Software erfolgt.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Nachweisaufwand": {
+     "gewinner": "B",
+     "grund": "Konzept B benötigt nur einen Reaktionspfad (Software BMS), sodass weder ein Unabhängigkeitsnachweis zwischen zwei Pfaden (FSR-06) noch eine gesonderte Hardware-FMEDA für den Sekundärschutz-Abschaltpfad anfallen.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "vorher": "B",
+     "runde": 2
+    },
+    "Reifegrad": {
+     "gewinner": "A",
+     "grund": "Die Kombination aus 2oo3-Mehrheit und unabhängiger Hardware-Abschaltung ist der etablierte Serienstandard in OEM-BMS; reine Software ohne Hardwarepfad ist für ASIL D seltener verbreitet.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K4|K1": {
+   "stand": "2026-11-24T14:37:39",
+   "runde": 0,
+   "kriterien": {
+    "Sicherheit": {
+     "gewinner": "B",
+     "grund": "Konzept B implementiert die HARA-Sicherheitszustände exakt: bei SG-03 'Leistung begrenzen, dann trennen', bei SG-05 'erst Leistung verringern und warnen, dann trennen' (außer SG-01/04).",
+     "zahl": {
+      "wert": "Leistung begrenzen, dann trennen (SG-03); erst Leistung verringern und warnen, dann trennen (SG-05)",
+      "quelle": "F2, F3"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Verfügbarkeit": {
+     "gewinner": "B",
+     "grund": "Die abgestufte Reaktion (drosseln → warnen → trennen) mit ≥ 2 s Vorwarnung reduziert das Risiko einer unerwarteten Volltrennung während der Fahrt (SG-05).",
+     "zahl": {
+      "wert": "2 s Vorwarnung",
+      "quelle": "F3"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Kosten": {
+     "gewinner": "A",
+     "grund": "Konzept A benötigt weniger Softwarezustände und verzichtet auf den separaten CAN-Derating-Pfad, was die Implementierung auf gleicher Hardware (1oo2, Sekundärschutz) leicht vereinfacht.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Nachweisaufwand": {
+     "gewinner": "A",
+     "grund": "Mit nur zwei Zuständen (Warnung, Trennen) statt drei (Drosseln, Warnen, Trennen) plus CAN-Derating ist der Software- und Unabhängigkeitsnachweis kleiner.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Reifegrad": {
+     "gewinner": "B",
+     "grund": "Konzept B ist als 'Ist (HARA-FSR)' benannt und entspricht dem in Serien-BMS üblichen abgestuften Verfahren (Derating vor Schütze), damit weit verbreitet nachgewiesen.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K4|K2": {
+   "stand": "2026-11-24T14:38:20",
+   "runde": 0,
+   "kriterien": {
+    "Sicherheit": {
+     "gewinner": "A",
+     "grund": "1oo2-Detektion plus unabhängiger Hardwarepfad (FSR-06) erfüllen ASIL D für SG-01 robuster als ein einzelner Softwarekanal.",
+     "zahl": {
+      "wert": "ASIL D",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Verfügbarkeit": {
+     "gewinner": "A",
+     "grund": "Die Stufen Warnung und Leistungsbegrenzung mit 2 s Vorwarnung entsprechen SG-05 und verhindern unerwartetes Trennen, während B sofort trennt.",
+     "zahl": {
+      "wert": "2 s",
+      "quelle": "F3"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Kosten": {
+     "gewinner": "B",
+     "grund": "Einkanalige 1oo1-Struktur ohne zusätzliche Sekundärschutz-Bauteile reduziert Kanal- und Bauteilanzahl gegenüber 1oo2 mit Hardwarepfad.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Nachweisaufwand": {
+     "gewinner": "A",
+     "grund": "Konzept A nutzt den Sekundärschutz als unabhängigen Hardwarepfad (FSR-06), dessen CMU-FMEDA bereits SPFM 0,9992 und LFM 0,9814 nachweist (F5), sodass die Software nur noch ASIL-B-Warnung tragen muss; Konzept B müsste die gesamte ASIL-D-Trennung in BMS-Software abbilden, die laut F5 im bestehenden FMEDA-Umfang explizit nicht enthalten ist und vollständig neu nachgewiesen werden müsste.",
+     "zahl": {
+      "wert": "SPFM 0,9992 ≥ Ziel 0,99; LFM 0,9814 ≥ Ziel 0,9",
+      "quelle": "F5"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "vorher": "A",
+     "runde": 2
+    },
+    "Reifegrad": {
+     "gewinner": "A",
+     "grund": "Die Kombination aus BMS, Sekundärschutz und Schütze ist in Serien-EV-BMS etabliert, während reine 1oo1-Softwareabschaltung bei ASIL D selten vorkommt.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K4|K3": {
+   "stand": "2026-11-24T14:39:00",
+   "runde": 0,
+   "kriterien": {
+    "Sicherheit": {
+     "gewinner": "A",
+     "grund": "Das 1oo2-Prinzip erzeugt bei einem einzigen erkannten Fehler sofort den Trennimpuls, was die FTTI von 1 s für ASIL D direkt und ohne Mehrheitsteam erfüllt.",
+     "zahl": {
+      "wert": "FTTI 1 s",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Verfügbarkeit": {
+     "gewinner": "B",
+     "grund": "2oo3-Mehrheit plus abgestuftes Drosseln mit ≥ 10 s Notlauf senken die Fehlauslösewahrscheinlichkeit deutlich gegenüber dem 1oo2-Soforttrennen.",
+     "zahl": {
+      "wert": "2 s Vorwarnung (Minimum, B übererfüllt mit 10 s)",
+      "quelle": "F3"
+     },
+     "zahl_ok": false,
+     "zahl_hinweis": "Zahl 10 steht nicht in F3"
+    },
+    "Kosten": {
+     "gewinner": "A",
+     "grund": "1oo2 benötigt zwei Kanäle, 2oo3 drei; weniger AFE-Kanäle, Verkabelung und Sekundärschutz-Bausteile senken die Kosten.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Nachweisaufwand": {
+     "gewinner": "A",
+     "grund": "Zwei Kanäle plus simpler 1oo2-Auswertung bedeuten weniger FMEDA-Komponenten und keinen Nachweis der Stufenlogik bzw. des 10-s-Notlaufs, wie bei B.",
+     "zahl": {
+      "wert": "SPFM 0,9992 (Ziel 0,99) für CMU NMC SG-01",
+      "quelle": "F5"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Reifegrad": {
+     "gewinner": "gleich",
+     "grund": "Sowohl 1oo2-Sicherheitskanäle als auch das Prinzip \"drosseln – warnen – trennen\" sind in Serien-BMS weit verbreitet und etabliert.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K4|K5": {
+   "stand": "2026-11-24T14:39:39",
+   "runde": 0,
+   "kriterien": {
+    "Sicherheit": {
+     "gewinner": "A",
+     "grund": "Unabhängiger Hardwarepfad (FSR-06) öffnet den Schütze ohne Software und sichert ASIL D der SG-01 ab, unabhängig vom BMS-Rechner.",
+     "zahl": {
+      "wert": "SPFM 0,9992 / LFM 0,9814 (CMU, SG-01)",
+      "quelle": "F5"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Verfügbarkeit": {
+     "gewinner": "B",
+     "grund": "Die 2oo3-Mehrheit stößt Fehlauslösungen ab, weil erst zwei von drei Kanälen übereinstimmen müssen, während bei 1oo2 ein einzelner Fehler bereits trennt.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Kosten": {
+     "gewinner": "B",
+     "grund": "Es entfällt der getrennte Sekundärschutz-Hardwarepfad (BT-325/BT-715) samt dazugehöriger Kanäle und Verdrahtung.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Nachweisaufwand": {
+     "gewinner": "B",
+     "grund": "Konzept B entfällt der Unabhängigkeitsnachweis zwischen Software und dem unabhängigen Hardwarepfad (FSR-06) und die FMEDA-Nachweispflicht für die CMU-Platine als sicherer Reaktionsweg; die 2oo3-Plausibilisierung bleibt rein softwareseitig.",
+     "zahl": {
+      "wert": "SPFM 0,9992 / LFM 0,9814",
+      "quelle": "F5"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "vorher": "B",
+     "runde": 2
+    },
+    "Reifegrad": {
+     "gewinner": "A",
+     "grund": "Ein dedizierter Hardware-Sekundärschutz, der den Schütze ohne Software öffnet, ist in Serien-BMS der verbreitete Ansatz für ASIL-D-Funktionen.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K5|K1": {
+   "stand": "2026-11-24T14:40:34",
+   "runde": 0,
+   "kriterien": {
+    "Sicherheit": {
+     "gewinner": "B",
+     "grund": "Konzept B bietet über FSR-06 einen unabhängigen Hardwarepfad, der ohne Software den Schütze öffnet; die rein softwarebasierte Variante A fehlt dieser Redundanz bei ASIL D (SG-01).",
+     "zahl": {
+      "wert": "SPFM 0,9992 / LFM 0,9814 (Ziele 0,99 / 0,9)",
+      "quelle": "F5"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Verfügbarkeit": {
+     "gewinner": "A",
+     "grund": "Die 2oo3-Mehrheit in Konzept A erfordert zwei von drei Kanälen, was Fehlauslösungen seltener macht als das 1oo2-Prinzip von B, bei dem einer genügt.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Kosten": {
+     "gewinner": "A",
+     "grund": "Konzept A verlangt drei AFE-Kanäle (2oo3) in einer Platine, während Konzept B zusätzlich die komplette Sekundärschutz-Baugruppe (BT-325/BT-715) und den unabhängigen Schützetreiber (BT-711) als separate Hardware einbauen muss.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "vorher": "A",
+     "runde": 2
+    },
+    "Nachweisaufwand": {
+     "gewinner": "A",
+     "grund": "Konzept A verbleibt in einem einzelnen Softwaredomain (BMS, 2oo3-Voting), während Konzept B gemäß FSR-06 (F4) zusätzlich den Unabhängigkeitsnachweis zwischen Software und dem Hardwarepfad des Sekundärschutzes sowie einen separaten Hardware-Sicherheitsfall erbringen muss.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "vorher": "A",
+     "runde": 2
+    },
+    "Reifegrad": {
+     "gewinner": "B",
+     "grund": "Konzept B entspricht laut K1-Definition direkt dem Ist-Zustand der HARA-FSR-Anforderungen und dem in Serien-BMS üblichen Prinzip gestufter Reaktion mit Hardware-Fallback; Konzept A (2oo3, rein Software) ist weniger verbreitet.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K5|K2": {
+   "stand": "2026-11-24T14:41:16",
+   "runde": 0,
+   "kriterien": {
+    "Sicherheit": {
+     "gewinner": "A",
+     "grund": "Konzept A erfüllt durch 2oo3-Mehrheit und abgestufte Reaktion die ASIL-D-Anforderung an SG-01, während B mit 1oo1 und Soforttrennen keine Redundanz bietet.",
+     "zahl": {
+      "wert": "SPFM 0,9992 ≥ Ziel 0,99",
+      "quelle": "F5"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Verfügbarkeit": {
+     "gewinner": "A",
+     "grund": "Konzept A trennt erst nach 2 s Vorwarnung und Leistungsreduktion, was SG-05 (kein unerwartetes Trennen) direkt erfüllt; B trennt sofort ohne Warnung.",
+     "zahl": {
+      "wert": "2 s Vorwarnung",
+      "quelle": "F3"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Kosten": {
+     "gewinner": "B",
+     "grund": "Konzept B benötigt nur einen Messkanal und eine Schwelle, während A drei Kanäle (2oo3) und CAN-Derating-Signalisierung erfordert.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Nachweisaufwand": {
+     "gewinner": "B",
+     "grund": "Konzept B (1oo1, eine Schwelle, sofort trennen) verlangt keinen Unabhängigkeitsnachweis zwischen Kanälen und keine ASIL-Zerlegung; Konzept A (2oo3, abgestuft) muss laut FSR-01/FSR-06 zudem die Unabhängigkeit mehrerer Mess- und Abschaltwege nachweisen und eine komplexere ASIL-D-Software plausibilisieren.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "vorher": "B",
+     "runde": 2
+    },
+    "Reifegrad": {
+     "gewinner": "gleich",
+     "grund": "Beide Prinzipien – Schwellwerttrennen und abgestufte Reaktion mit Mehrheitsbewertung – sind in Serien-BMS etabliert und weit verbreitet.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K5|K3": {
+   "stand": "2026-11-24T14:42:10",
+   "runde": 0,
+   "kriterien": {
+    "Sicherheit": {
+     "gewinner": "B",
+     "grund": "Konzept B besitzt einen unabhängigen Hardwarepfad (Sekundärschutz, FSR-06), der den Schütze ohne Software öffnet und so die ASIL-D-Erfüllung für SG-01 (FTTI 1 s) redundant abdeckt, während Konzept A auf einen einzigen Softwarekanal angewiesen ist.",
+     "zahl": {
+      "wert": "1 s",
+      "quelle": "F1"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Verfügbarkeit": {
+     "gewinner": "B",
+     "grund": "Konzept B ermöglicht einen 10-s-Notlauf mit gedrosselter Leistung, bevor getrennt wird, und reduziert damit unerwartete Trennungen während der Fahrt (SG-05) gegenüber den 2 s von Konzept A.",
+     "zahl": {
+      "wert": "2 s",
+      "quelle": "F3"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Kosten": {
+     "gewinner": "A",
+     "grund": "Konzept A benötigt keinen zusätzlichen unabhängigen Hardwarekanal im Sekundärschutz und fewer Kanäle, was Bauteile und Verdrahtung reduziert.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Nachweisaufwand": {
+     "gewinner": "B",
+     "grund": "Konzept B nutzt den in FSR-06 definierten unabhängigen Hardware-Abschaltpfad (Sekundärschutz öffnet den Schütze ohne Software) zur ASIL-Zerlegung, wodurch der Software-Nachweis für FMEDA, ASIL und Unabhängigkeitsnachweis pro Kanal kleiner ausfällt als der komplette ASIL-D-Softwarenachweis, den Konzept A allein tragen muss.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "vorher": "B",
+     "runde": 2
+    },
+    "Reifegrad": {
+     "gewinner": "B",
+     "grund": "Ein unabhängiger Hardwareabschaltpfad parallel zum BMS-Softwarepfad ist in Serien-BMS (z. B. CMU-Plus-Architekturen) Standard, während ein rein softwarebasierter Trennpfad für ASIL-D-Fehlerfälle in der Serie kaum verbreitet ist.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  },
+  "K5|K4": {
+   "stand": "2026-11-24T14:42:46",
+   "runde": 0,
+   "kriterien": {
+    "Sicherheit": {
+     "gewinner": "B",
+     "grund": "B verfügt über einen unabhängigen Hardware-Abschaltpfad (FSR-06, Sekundärschutz), der den Schütze ohne Software öffnet und damit die ASIL-D-Anforderung von SG-01 auch bei Software-Ausfall erfüllt.",
+     "zahl": {
+      "wert": "FSR-06: Sekundärschutz öffnet Schütze ohne Software",
+      "quelle": "F4"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Verfügbarkeit": {
+     "gewinner": "A",
+     "grund": "A nutzt 2oo3-Mehrheit und abgestufte Stufen (drosseln → warnen → trennen), sodass ein Einzelfehler kein volles Trennen auslöst und die 2-s-Vorwarnung (SG-05) eingehalten wird.",
+     "zahl": {
+      "wert": "2 s Vorwarnung, erst Leistung verringern und warnen, dann trennen (außer SG-01/04)",
+      "quelle": "F3"
+     },
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Kosten": {
+     "gewinner": "A",
+     "grund": "A benötigt ausschließlich Software-BMS auf der vorhandenen CMU; B zusätzlich einen physischen Sekundärschutz (BT-715) und eine unabhängige Schützensteuerung ohne Software.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    },
+    "Nachweisaufwand": {
+     "gewinner": "A",
+     "grund": "A konzentriert den gesamten Sicherheitsnachweis (Software ASIL D/C, 2oo3-Voting) in einem einzigen Domain, während B zusätzlich den Unabhängigkeitsnachweis zwischen Software- und Hardwarepfad (FSR-06) sowie die FMEDA-Überdeckung für den Sekundärschutz als zweiten Kanal erbringen muss.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": "",
+     "vorher": "A",
+     "runde": 2
+    },
+    "Reifegrad": {
+     "gewinner": "B",
+     "grund": "In Serien-BMS ist ein hardwareseitiger, softwareunabhängiger Sicherheitspfad für Überladung und Übertemperatur der verbreitete und erprobte Ansatz; eine rein softwarebasierte ASIL-D-Trennung ist dagegen少见.",
+     "zahl": null,
+     "zahl_ok": true,
+     "zahl_hinweis": ""
+    }
+   }
+  }
+ },
+ "nachfragen": [
+  {
+   "runde": 1,
+   "paar": [
+    "K1",
+    "K3"
+   ],
+   "kriterien": [
+    "Sicherheit"
+   ]
+  },
+  {
+   "runde": 1,
+   "paar": [
+    "K1",
+    "K5"
+   ],
+   "kriterien": [
+    "Kosten",
+    "Nachweisaufwand"
+   ]
+  },
+  {
+   "runde": 1,
+   "paar": [
+    "K2",
+    "K3"
+   ],
+   "kriterien": [
+    "Nachweisaufwand"
+   ]
+  },
+  {
+   "runde": 1,
+   "paar": [
+    "K2",
+    "K4"
+   ],
+   "kriterien": [
+    "Nachweisaufwand"
+   ]
+  },
+  {
+   "runde": 1,
+   "paar": [
+    "K3",
+    "K5"
+   ],
+   "kriterien": [
+    "Nachweisaufwand"
+   ]
+  },
+  {
+   "runde": 2,
+   "paar": [
+    "K1",
+    "K5"
+   ],
+   "kriterien": [
+    "Kosten",
+    "Nachweisaufwand"
+   ]
+  },
+  {
+   "runde": 2,
+   "paar": [
+    "K2",
+    "K3"
+   ],
+   "kriterien": [
+    "Nachweisaufwand"
+   ]
+  },
+  {
+   "runde": 2,
+   "paar": [
+    "K2",
+    "K4"
+   ],
+   "kriterien": [
+    "Nachweisaufwand"
+   ]
+  },
+  {
+   "runde": 2,
+   "paar": [
+    "K2",
+    "K5"
+   ],
+   "kriterien": [
+    "Nachweisaufwand"
+   ]
+  },
+  {
+   "runde": 2,
+   "paar": [
+    "K3",
+    "K5"
+   ],
+   "kriterien": [
+    "Nachweisaufwand"
+   ]
+  },
+  {
+   "runde": 2,
+   "paar": [
+    "K4",
+    "K5"
+   ],
+   "kriterien": [
+    "Nachweisaufwand"
+   ]
+  }
+ ]
+}

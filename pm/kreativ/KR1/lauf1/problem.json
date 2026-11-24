@@ -1,0 +1,21 @@
+{
+ "titel": "Zellausgleich NMC",
+ "bezug": {"BT":"BT-320 (CMU, Zellüberwachung)","merkmal":"ausgleichsstrom_mA","REQ":"REQ-P15","akte":"ENT-146"},
+ "widerspruch": "Die Ausgleichszeit soll kürzer werden, ohne dass die Wärme in der CMU steigt.",
+ "verbessern": [25, 39],
+ "verschlechtern": [17, 22],
+ "teilfunktionen": ["Prinzip des Ausgleichs","Ort der Verlustwärme","Zeitpunkt des Ausgleichs","Schalter","Wärmeabfuhr","Steuerung (Ziel-SOC, Spannungsschwelle)"],
+ "kriterien": ["Ausgleichszeit","Wärme in der CMU","Kosten","Bauraum","Fehlermöglichkeiten (FSR, HARA)","Wirkungsgrad","Reifegrad"],
+ "fakten": {
+  "F1": {"quelle":"sim/elektrik/e2_elektronik/ergebnis.json, NMC.ausgleich_h","text":"Ausgleichszeit NMC aus E2: 14,2 h bei 130 mA und dQ 1,848 Ah","zahlen":["14,2","130","1,848"]},
+  "F2": {"quelle":"sim/elektrik/e2_elektronik/ergebnis.json, NMC.cmu_W_alle_kanaele_umax","text":"Wärme je CMU (alle 18 Kanäle) bei Höchstspannung: 9,83 W, Grenze 10 W","zahlen":["9,83","10","18"]},
+  "F3": {"quelle":"sim/elektrik/e2_elektronik/ergebnis.json, NMC.cmu_W_alle_kanaele_nenn","text":"Wärme je CMU bei Nennspannung: 8,63 W","zahlen":["8,63"]},
+  "F4": {"quelle":"sim/elektrik/e3_platine/ERWARTUNG.md Erwartung 1 (Vermutung Opus, nicht gerechnet)","text":"NMC: 34 Ohm gibt 124 mA bei 4,2 V und 109 mA bei 3,7 V; die E2-Ausgleichszeit ist im Mittel etwa 10 bis 15 % länger","zahlen":["34","124","109","10","15","4,2","3,7"]},
+  "F5": {"quelle":"sim/elektrik/e3_platine/ERWARTUNG.md Erwartung 3 (Vermutung Opus, nicht gerechnet)","text":"9,8 W auf der Platine 120 x 60 mm ergeben bei freier Konvektion etwa 60 bis 100 K Übertemperatur, über 105 °C bei 45 °C Umgebung, also wahrscheinlich verfehlt; Abhilfe Wärmeleitpad zur Kühlplatte oder Taktung","zahlen":["9,8","120","60","100","105","45"]},
+  "F6": {"quelle":"sim/elektrik/e3_platine/ERWARTUNG.md Erwartung 5 und Eingaben","text":"Eine CMU hat 18 Kanäle, 13 CMU für NMC (217 Zellen in Serie), Platine 120 x 60 x 10 mm, 80 g, etwa 130 bis 170 Bauteile","zahlen":["18","13","217","120","60","80","130","170"]},
+  "F7": {"quelle":"forschung/ergebnis/W14.md Zeile 25","text":"Bei Reihenschaltung ist aktive oder passive Balancierung nötig; schon Kapazitätsstreuung über 5 % begrenzt die nutzbare Kapazität auf die schwächste Zelle","zahlen":["5"]},
+  "F8": {"quelle":"forschung/ergebnis/W27.md Zeile 24","text":"Die Balancing-Methode Stromanpassung beim Laden gilt nicht für Lithium-Chemien","zahlen":[]},
+  "F9": {"quelle":"forschung/ergebnis/P13.md Zeile 10 (Patent 6)","text":"BMS-Zusatzmodul wacht periodisch auf, gleicht aus und schaltet bei hoher Temperatur ab (Dormanz-Management)","zahlen":[]},
+  "F10": {"quelle":"forschung/ergebnis/W12.md Zeile 30","text":"Aktives Balancing verschiebt Energie von starken zu schwachen Zellen; es braucht Leiterbahnen und Schalter je Zelle, im Layout samt Kühlkontakt zu berücksichtigen","zahlen":[]}
+ }
+}

@@ -1,0 +1,1 @@
+{"urteile":{"Nachweisaufwand":{"gewinner":"B","grund":"Konzept A muss die gesamte Sicherheitsfunktion als ASIL-D-Software nachweisen, während Konzept B per ASIL-Zerlegung (FSR-06) Software auf ASIL C und Hardware auf ASIL B abbilden kann, was den Software-ASIL-Nachweis reduziert, und der Unabhängigkeitsnachweis ist methodikbasiert abgedeckt.","zahl":null}}}

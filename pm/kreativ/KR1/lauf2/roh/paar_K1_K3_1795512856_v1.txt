@@ -1,0 +1,1 @@
+{"urteile":{"Fehlermöglichkeiten (FSR, HARA)":{"gewinner":"B","grund":"A läuft dauerhaft mit 130 mA und erreicht 111,9 °C, was die Grenze von 105 °C überschreitet (F3), ohne thermische Schutzlogik; B besitzt eine temperaturgeführte Abschaltung, die diesen Auslegungsfehler aktiv unterbindet.","zahl":{"wert":"111,9 °C (Grenze 105 °C)","quelle":"F3"}}}}

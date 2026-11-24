@@ -1,0 +1,39 @@
+{
+ "volumen_mm3": {
+  "SOT-23": 4.403,
+  "R_0603_1608Metric": 0.537,
+  "D_SOD-123": 4.914,
+  "D_SMB": 35.826,
+  "L_1210_3225Metric": 19.051,
+  "C_1206_3216Metric": 7.589,
+  "CP_Elec_6.3x7.7": 239.894,
+  "C_0603_1608Metric": 0.93,
+  "LQFP-48_7x7mm_P0.5mm": 67.364,
+  "C_0805_2012Metric": 2.89,
+  "LQFP-144_20x20mm_P0.5mm": 553.746,
+  "Crystal_SMD_3225-4Pin_3.2x2.5mm": 4.859,
+  "PinHeader_2x05_P1.27mm_Vertical_SMD": 19.804,
+  "LED_0603_1608Metric": 1.067,
+  "SOIC-8_3.9x4.9mm_P1.27mm": 30.187,
+  "D_SOD-323": 1.992,
+  "SOIC-14_3.9x8.7mm_P1.27mm": 54.398,
+  "SOT-23-5": 6.48,
+  "D_SMA": 26.19,
+  "JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal": 44.038,
+  "SOIC-16_3.9x9.9mm_P1.27mm": 62.058,
+  "ISO_Bruecke_8": 257.4,
+  "JST_SH_SM03B-SRSS-TB_1x03-1MP_P1.00mm_Horizontal": 37.838,
+  "Uebertrager_Bruecke_4": 343.2,
+  "JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal": 31.639
+ },
+ "ohne_modell": [
+  "JST_PH_S4B-PH-SM4-TB_1x04-1MP_P2.00mm_Horizontal",
+  "L_CommonModeChoke_Coilcraft_1812CAN",
+  "JST_PH_S4B-PH-SM4-TB_1x04-1MP_P2.00mm_Horizontal",
+  "L_CommonModeChoke_Coilcraft_1812CAN",
+  "JST_PH_S4B-PH-SM4-TB_1x04-1MP_P2.00mm_Horizontal",
+  "JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal",
+  "JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal",
+  "JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal"
+ ]
+}

@@ -1,0 +1,41 @@
+{
+ "kopf": "KI-generiert (Claude Sonnet, 2026-11-24). Ausschlüsse nur noch zur Prüfung der Opus-Konzepte (Vorschlag Sonnet, Opus prüft).",
+ "ausschluesse": [
+  {
+   "a": "T1.1",
+   "b": "T2.3",
+   "grund": "passiv verbrennt Energie im Widerstand, kaum Verlust ist ausgeschlossen",
+   "von": "Sonnet (Vorschlag)"
+  },
+  {
+   "a": "T1.1",
+   "b": "T4.3",
+   "grund": "Widerstandsausgleich mit 1 bis 2 A ist nicht beabsichtigt (aktive Stufe)",
+   "von": "Sonnet (Vorschlag)"
+  },
+  {
+   "a": "T1.2",
+   "b": "T2.1",
+   "grund": "aktiv: Wärme entsteht nicht auf der Platine im Widerstand",
+   "von": "Sonnet (Vorschlag)"
+  },
+  {
+   "a": "T1.2",
+   "b": "T2.2",
+   "grund": "aktiv: kein Widerstand auf Kühlplatte",
+   "von": "Sonnet (Vorschlag)"
+  },
+  {
+   "a": "T1.3",
+   "b": "T2.1",
+   "grund": "aktiv: Wärme entsteht nicht auf der Platine im Widerstand",
+   "von": "Sonnet (Vorschlag)"
+  },
+  {
+   "a": "T1.3",
+   "b": "T2.2",
+   "grund": "aktiv: kein Widerstand auf Kühlplatte",
+   "von": "Sonnet (Vorschlag)"
+  }
+ ]
+}

@@ -1,0 +1,1 @@
+{"urteile":{"Nachweisaufwand":{"gewinner":"B","grund":"Konzept B benötigt nur einen Reaktionspfad (Software BMS), sodass weder ein Unabhängigkeitsnachweis zwischen zwei Pfaden (FSR-06) noch eine gesonderte Hardware-FMEDA für den Sekundärschutz-Abschaltpfad anfallen.","zahl":null}}}

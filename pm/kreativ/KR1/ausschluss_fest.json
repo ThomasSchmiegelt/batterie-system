@@ -1,0 +1,14 @@
+{
+ "kopf": "Festforderung nach METHODE.md Stufe 5b, von Opus vorgegeben (PRUEFUNG_OPUS.md Vorgabe Lauf 3), von Sonnet eingetragen.",
+ "festforderung": "Platinentemperatur <= 105 °C bei 45 °C Umgebung (B-BAT-051)",
+ "ausgeschieden": [
+  {
+   "konzept": "K1",
+   "grund": "Ist-Entwurf verfehlt die Festforderung: Platine 111,9 °C bei h = 10 W/m2K (sim/elektrik/e3_platine/ergebnis_waerme.json, NMC, T_h10_C), Grenze 105 °C; B-BAT-051"
+  },
+  {
+   "konzept": "K3",
+   "grund": "Bei 260 mA und 50 % Takt verdoppelt sich die mittlere Verlustleistung (Opus, PRUEFUNG_OPUS.md Prüfung Lauf 2, Punkt 1); Spitze etwa 39 W je CMU (Opus-Rechnung); die Festforderung wird verfehlt"
+  }
+ ]
+}

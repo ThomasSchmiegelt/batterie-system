@@ -2,7 +2,7 @@
 |---|---|---|---|---|---|
 | Titel | Ergebnisbilder mit Lesehilfe | Ersteller | Claude Sonnet (KI), Auftrag Opus | Prüfer | – (Opus offen) |
 
-> **KI-generiert.** Entwurf, nicht vom Menschen freigegeben. **Erzeugt von `pm/plan/bilder.py`, nicht von Hand bearbeiten.** Stand: 2026-11-23.
+> **KI-generiert.** Entwurf, nicht vom Menschen freigegeben. **Erzeugt von `pm/plan/bilder.py`, nicht von Hand bearbeiten.** Stand: 2026-11-24.
 
 Alle Bilder unter `sim/` und `cad/` mit Lesehilfe für Nicht-Fachleute, Quelle und Vorgang. Zielbänder und Grenzen sind in den Bildern beschriftet; Annahmen sind als solche benannt.
 
@@ -983,6 +983,438 @@ Alle Bilder unter `sim/` und `cad/` mit Lesehilfe für Nicht-Fachleute, Quelle u
 
 - Quelle: `sim/elektrik/e2_elektronik/ergebnis.json`
 - Vorgang: unbekannt
+
+
+## sim/elektrik/e3_platine
+
+### platine_LFP.png
+
+![platine_LFP.png](../sim/elektrik/e3_platine/platine_LFP.png)
+
+**Lesehilfe:** Die Überwachungsplatine der Variante LFP von oben (Bestückung) und von unten (Kupferflächen und Durchkontaktierungen), in den roten Rahmen = Zielband 120 x 60 mm gezeichnet. Alles liegt innerhalb. Die Platine ist vollständig verdrahtet und geprüft (DRC 0 Verstöße, 0 offene Verbindungen). Unten sind die Kupferflächen unter den Ausgleichswiderständen zu sehen (Wärmeableitung, 144 von 144 Thermovias).
+
+- Quelle: `sim/elektrik/e3_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3_platine/lesehilfe.md`
+- Vorgang: E3
+
+### platine_LFP_3d_bottom.png
+
+![platine_LFP_3d_bottom.png](../sim/elektrik/e3_platine/platine_LFP_3d_bottom.png)
+
+**Lesehilfe:** Unterseite der Platine LFP (KiCad 3D). Unterseite ohne Bauteile; zu sehen sind die Kupferflächen unter den Widerstandspaaren, Bahnen und Via-Punkte. Es gibt kein Zielband, weil es ein Geometriebild ist; der Umriss 120 x 60 mm steht in der Kopfzeile.
+
+- Quelle: `sim/elektrik/e3_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3_platine/lesehilfe.md`
+- Vorgang: E3
+
+### platine_LFP_3d_iso.png
+
+![platine_LFP_3d_iso.png](../sim/elektrik/e3_platine/platine_LFP_3d_iso.png)
+
+**Lesehilfe:** Schrägansicht der Platine LFP (KiCad 3D). Die Platine von schräg oben mit Bauteilen, hellen Leiterbahnen und gelben Via-Ringen. Es gibt kein Zielband, weil es ein Geometriebild ist; der Umriss 120 x 60 mm steht in der Kopfzeile.
+
+- Quelle: `sim/elektrik/e3_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3_platine/lesehilfe.md`
+- Vorgang: E3
+
+### platine_LFP_3d_nah.png
+
+![platine_LFP_3d_nah.png](../sim/elektrik/e3_platine/platine_LFP_3d_nah.png)
+
+**Lesehilfe:** Nahaufnahme Ausgleichskanal der Platine LFP (KiCad 3D). Ein Ausgleichskanal: zwei große Widerstände (verheizen Ladung), ein kleiner Schalter (FET) und Filterteile; die Vias liegen unter den Widerständen und sind verdeckt. Es gibt kein Zielband, weil es ein Geometriebild ist; der Umriss 120 x 60 mm steht in der Kopfzeile.
+
+- Quelle: `sim/elektrik/e3_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3_platine/lesehilfe.md`
+- Vorgang: E3
+
+### platine_LFP_3d_top.png
+
+![platine_LFP_3d_top.png](../sim/elektrik/e3_platine/platine_LFP_3d_top.png)
+
+**Lesehilfe:** Oberseite der Platine LFP (KiCad 3D). Draufsicht auf die Bestückung; die Leiterbahnen schimmern durch die grüne Lötstoppmaske. Es gibt kein Zielband, weil es ein Geometriebild ist; der Umriss 120 x 60 mm steht in der Kopfzeile.
+
+- Quelle: `sim/elektrik/e3_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3_platine/lesehilfe.md`
+- Vorgang: E3
+
+### platine_LFP_einbau.png
+
+![platine_LFP_einbau.png](../sim/elektrik/e3_platine/platine_LFP_einbau.png)
+
+**Lesehilfe:** Das Pack LFP mit den CMU-Platinen am Einbauort in den Endzonen (Blender). Zellen und Deckel sind ausgeblendet, alles außer den Platinen ist grau und durchsichtig; oben die Übersicht, unten eine Nahansicht der Endzone. Platinenmasse 27,2 g, mit Wärmeleitpad 48,9 g. Kein Zielband (Geometriebild).
+
+- Quelle: `sim/elektrik/e3_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3_platine/lesehilfe.md`
+- Vorgang: E3
+
+### platine_LFP_explosion.png
+
+![platine_LFP_explosion.png](../sim/elektrik/e3_platine/platine_LFP_explosion.png)
+
+**Lesehilfe:** Die Lagen der Platine LFP wie ein Lagenkuchen nach oben auseinandergezogen (Blender): Bauteile, F.Cu, Substrat, In1, In2, B.Cu, darunter das Wärmeleitpad (ENT-185, 1,0 mm) und der Al-Rahmen mit dem Ausschnitt. Kupfer ist kupferfarben; die orangen Stäbe sind die Thermovias unter den Ausgleichswiderständen (ENT-187): 144 von 144. Abstand der Lagen und Kupferdicke sind nur zur Darstellung überhöht. Kein Zielband (Geometriebild).
+
+- Quelle: `sim/elektrik/e3_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3_platine/lesehilfe.md`
+- Vorgang: E3
+
+### platine_NMC.png
+
+![platine_NMC.png](../sim/elektrik/e3_platine/platine_NMC.png)
+
+**Lesehilfe:** Die Überwachungsplatine der Variante NMC von oben (Bestückung) und von unten (Kupferflächen und Durchkontaktierungen), in den roten Rahmen = Zielband 120 x 60 mm gezeichnet. Alles liegt innerhalb. Die Platine ist vollständig verdrahtet und geprüft (DRC 0 Verstöße, 0 offene Verbindungen). Unten sind die Kupferflächen unter den Ausgleichswiderständen zu sehen (Wärmeableitung, 144 von 144 Thermovias).
+
+- Quelle: `sim/elektrik/e3_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3_platine/lesehilfe.md`
+- Vorgang: E3
+
+### platine_NMC_3d_bottom.png
+
+![platine_NMC_3d_bottom.png](../sim/elektrik/e3_platine/platine_NMC_3d_bottom.png)
+
+**Lesehilfe:** Unterseite der Platine NMC (KiCad 3D). Unterseite ohne Bauteile; zu sehen sind die Kupferflächen unter den Widerstandspaaren, Bahnen und Via-Punkte. Es gibt kein Zielband, weil es ein Geometriebild ist; der Umriss 120 x 60 mm steht in der Kopfzeile.
+
+- Quelle: `sim/elektrik/e3_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3_platine/lesehilfe.md`
+- Vorgang: E3
+
+### platine_NMC_3d_iso.png
+
+![platine_NMC_3d_iso.png](../sim/elektrik/e3_platine/platine_NMC_3d_iso.png)
+
+**Lesehilfe:** Schrägansicht der Platine NMC (KiCad 3D). Die Platine von schräg oben mit Bauteilen, hellen Leiterbahnen und gelben Via-Ringen. Es gibt kein Zielband, weil es ein Geometriebild ist; der Umriss 120 x 60 mm steht in der Kopfzeile.
+
+- Quelle: `sim/elektrik/e3_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3_platine/lesehilfe.md`
+- Vorgang: E3
+
+### platine_NMC_3d_nah.png
+
+![platine_NMC_3d_nah.png](../sim/elektrik/e3_platine/platine_NMC_3d_nah.png)
+
+**Lesehilfe:** Nahaufnahme Ausgleichskanal der Platine NMC (KiCad 3D). Ein Ausgleichskanal: zwei große Widerstände (verheizen Ladung), ein kleiner Schalter (FET) und Filterteile; die Vias liegen unter den Widerständen und sind verdeckt. Es gibt kein Zielband, weil es ein Geometriebild ist; der Umriss 120 x 60 mm steht in der Kopfzeile.
+
+- Quelle: `sim/elektrik/e3_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3_platine/lesehilfe.md`
+- Vorgang: E3
+
+### platine_NMC_3d_top.png
+
+![platine_NMC_3d_top.png](../sim/elektrik/e3_platine/platine_NMC_3d_top.png)
+
+**Lesehilfe:** Oberseite der Platine NMC (KiCad 3D). Draufsicht auf die Bestückung; die Leiterbahnen schimmern durch die grüne Lötstoppmaske. Es gibt kein Zielband, weil es ein Geometriebild ist; der Umriss 120 x 60 mm steht in der Kopfzeile.
+
+- Quelle: `sim/elektrik/e3_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3_platine/lesehilfe.md`
+- Vorgang: E3
+
+### platine_NMC_einbau.png
+
+![platine_NMC_einbau.png](../sim/elektrik/e3_platine/platine_NMC_einbau.png)
+
+**Lesehilfe:** Das Pack NMC mit den CMU-Platinen am Einbauort in den Endzonen (Blender). Zellen und Deckel sind ausgeblendet, alles außer den Platinen ist grau und durchsichtig; oben die Übersicht, unten eine Nahansicht der Endzone. Platinenmasse 27,2 g, mit Wärmeleitpad 48,9 g. Kein Zielband (Geometriebild).
+
+- Quelle: `sim/elektrik/e3_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3_platine/lesehilfe.md`
+- Vorgang: E3
+
+### platine_NMC_explosion.png
+
+![platine_NMC_explosion.png](../sim/elektrik/e3_platine/platine_NMC_explosion.png)
+
+**Lesehilfe:** Die Lagen der Platine NMC wie ein Lagenkuchen nach oben auseinandergezogen (Blender): Bauteile, F.Cu, Substrat, In1, In2, B.Cu, darunter das Wärmeleitpad (ENT-185, 1,0 mm) und der Al-Rahmen mit dem Ausschnitt. Kupfer ist kupferfarben; die orangen Stäbe sind die Thermovias unter den Ausgleichswiderständen (ENT-187): 144 von 144. Abstand der Lagen und Kupferdicke sind nur zur Darstellung überhöht. Kein Zielband (Geometriebild).
+
+- Quelle: `sim/elektrik/e3_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3_platine/lesehilfe.md`
+- Vorgang: E3
+
+### schaltbild_cmu.png
+
+![schaltbild_cmu.png](../sim/elektrik/e3_platine/schaltbild_cmu.png)
+
+**Lesehilfe:** Blockbild der Schaltung der CMU: Zellabgriffe, Filter, Mess-Chip, Ausgleich, Übertrager, Sekundärschutz. Es gibt kein Zielband, weil es ein Schaltbild ist; das vollständige Schaltbild ist die Netzliste `cmu_<V>.net`.
+
+- Quelle: `sim/elektrik/e3_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3_platine/lesehilfe.md`
+- Vorgang: E3
+
+
+## sim/elektrik/e3_platine/schaltplan
+
+### schaltplan_LFP_afe.png
+
+![schaltplan_LFP_afe.png](../sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_afe.png)
+
+**Lesehilfe:** Lesehilfe fehlt
+
+- Quelle: `ergebnis.json fehlt`
+- Vorgang: unbekannt
+
+### schaltplan_LFP_daisy.png
+
+![schaltplan_LFP_daisy.png](../sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_daisy.png)
+
+**Lesehilfe:** Lesehilfe fehlt
+
+- Quelle: `ergebnis.json fehlt`
+- Vorgang: unbekannt
+
+### schaltplan_LFP_deckblatt.png
+
+![schaltplan_LFP_deckblatt.png](../sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_deckblatt.png)
+
+**Lesehilfe:** Lesehilfe fehlt
+
+- Quelle: `ergebnis.json fehlt`
+- Vorgang: unbekannt
+
+### schaltplan_LFP_kanaele.png
+
+![schaltplan_LFP_kanaele.png](../sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_kanaele.png)
+
+**Lesehilfe:** Lesehilfe fehlt
+
+- Quelle: `ergebnis.json fehlt`
+- Vorgang: unbekannt
+
+### schaltplan_LFP_kanal.png
+
+![schaltplan_LFP_kanal.png](../sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_kanal.png)
+
+**Lesehilfe:** Lesehilfe fehlt
+
+- Quelle: `ergebnis.json fehlt`
+- Vorgang: unbekannt
+
+### schaltplan_LFP_ntc_stecker.png
+
+![schaltplan_LFP_ntc_stecker.png](../sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_ntc_stecker.png)
+
+**Lesehilfe:** Lesehilfe fehlt
+
+- Quelle: `ergebnis.json fehlt`
+- Vorgang: unbekannt
+
+### schaltplan_LFP_sekundaerschutz.png
+
+![schaltplan_LFP_sekundaerschutz.png](../sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_sekundaerschutz.png)
+
+**Lesehilfe:** Lesehilfe fehlt
+
+- Quelle: `ergebnis.json fehlt`
+- Vorgang: unbekannt
+
+### schaltplan_NMC_afe.png
+
+![schaltplan_NMC_afe.png](../sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_afe.png)
+
+**Lesehilfe:** Lesehilfe fehlt
+
+- Quelle: `ergebnis.json fehlt`
+- Vorgang: unbekannt
+
+### schaltplan_NMC_daisy.png
+
+![schaltplan_NMC_daisy.png](../sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_daisy.png)
+
+**Lesehilfe:** Lesehilfe fehlt
+
+- Quelle: `ergebnis.json fehlt`
+- Vorgang: unbekannt
+
+### schaltplan_NMC_deckblatt.png
+
+![schaltplan_NMC_deckblatt.png](../sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_deckblatt.png)
+
+**Lesehilfe:** Lesehilfe fehlt
+
+- Quelle: `ergebnis.json fehlt`
+- Vorgang: unbekannt
+
+### schaltplan_NMC_kanaele.png
+
+![schaltplan_NMC_kanaele.png](../sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_kanaele.png)
+
+**Lesehilfe:** Lesehilfe fehlt
+
+- Quelle: `ergebnis.json fehlt`
+- Vorgang: unbekannt
+
+### schaltplan_NMC_kanal.png
+
+![schaltplan_NMC_kanal.png](../sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_kanal.png)
+
+**Lesehilfe:** Lesehilfe fehlt
+
+- Quelle: `ergebnis.json fehlt`
+- Vorgang: unbekannt
+
+### schaltplan_NMC_ntc_stecker.png
+
+![schaltplan_NMC_ntc_stecker.png](../sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_ntc_stecker.png)
+
+**Lesehilfe:** Lesehilfe fehlt
+
+- Quelle: `ergebnis.json fehlt`
+- Vorgang: unbekannt
+
+### schaltplan_NMC_sekundaerschutz.png
+
+![schaltplan_NMC_sekundaerschutz.png](../sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_sekundaerschutz.png)
+
+**Lesehilfe:** Lesehilfe fehlt
+
+- Quelle: `ergebnis.json fehlt`
+- Vorgang: unbekannt
+
+
+## sim/elektrik/e3_platine
+
+### spice_ausgleich_vorladung.png
+
+![spice_ausgleich_vorladung.png](../sim/elektrik/e3_platine/spice_ausgleich_vorladung.png)
+
+**Lesehilfe:** Links der Ausgleichsstrom über der Zellspannung (sinkt mit der Spannung, Widerstand fest), rechts die Vorladung des Hochvoltkreises über den Widerstand. Die Zahlen stehen in `ergebnis_ausgleich.json` und `ergebnis_vorladung.json`; Zielbänder aus der Erwartung sind im Bild eingezeichnet, soweit es eines gibt.
+
+- Quelle: `sim/elektrik/e3_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3_platine/lesehilfe.md`
+- Vorgang: E3
+
+
+## sim/elektrik/e3b_platine_waerme
+
+### e3b_temperatur.png
+
+![e3b_temperatur.png](../sim/elektrik/e3b_platine_waerme/e3b_temperatur.png)
+
+**Lesehilfe:** Das Bild zeigt die Überwachungsplatine (120 x 60 mm) von oben, eingefärbt nach Temperatur im Dauerbetrieb des Ausgleichs (rund 10 W Wärme aus den 36 Ausgleichswiderständen und 18 Schaltern). Obere Reihe: Variante LFP, untere Reihe: NMC. Spalte (a): Wärmeleitpad zur gekühlten Wand mit Wärmeleitlöchern (Vias) durch die Platine, Spalte (b): Pad ohne Vias, Spalte (c): ohne Pad, die Platine gibt die Wärme nur an die Luft ab (Prüffall). Kalte Farben (dunkelblau) liegen nahe der Wandtemperatur von 45 °C, warme Farben (orange, rot) sind heiß. Die schwarze Linie in der Farbskala und die gestrichelte Linie in den Bildern markieren die Grenze von 105 °C (Annahme, wie in E3). Das Zielband ist alles darunter. Nur der Prüffall (c) überschreitet die Grenze; mit Pad (a, b) bleibt die Platine weit darunter. Der weiße Punkt ist die heißeste Stelle. Die Temperaturen sind Rechnung mit Annahmen (Kupferlagen, Vias, Pad), keine Messung.
+
+- Quelle: `sim/elektrik/e3b_platine_waerme/ergebnis.json`; Lesehilfe: `sim/elektrik/e3b_platine_waerme/lesehilfe.md`
+- Vorgang: E3b
+
+
+## sim/elektrik/e3c_bms_platine
+
+### platine_bms.png
+
+![platine_bms.png](../sim/elektrik/e3c_bms_platine/platine_bms.png)
+
+**Lesehilfe:** Die Steuerplatine des Batteriemanagements (BMS) von oben und von unten, in den roten Rahmen = Zielband Umriss 160 x 100 mm gezeichnet. Alles liegt innerhalb. Die rot gestrichelte Fläche ist die Sperrzone zwischen der Niedervoltseite (links: Rechner, CAN, Schützansteuerung) und der Hochvoltseite (rechts: Shunt-Messung, Verbindung zu den Zellüberwachungen). In dieser 10 mm breiten Zone gibt es kein Kupfer; nur vier Bauteile (zwei Übertrager, zwei digitale Isolatoren) reichen darüber hinweg. Die Unterseite ist so gespiegelt, dass links und rechts wie oben liegen. Die Platine ist vollständig verdrahtet und geprüft (DRC 0 Verstöße, 0 offene Verbindungen).
+
+- Quelle: `sim/elektrik/e3c_bms_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3c_bms_platine/lesehilfe.md`
+- Vorgang: E3c
+
+### platine_bms_3d_bottom.png
+
+![platine_bms_3d_bottom.png](../sim/elektrik/e3c_bms_platine/platine_bms_3d_bottom.png)
+
+**Lesehilfe:** Unterseite der BMS-Platine (KiCad 3D). Sie trägt keine Bauteile, nur Leiterbahnen, Durchkontaktierungen und die große Massefläche. Die Ansicht ist von unten, deshalb liegt die Sperrzone spiegelverkehrt. Es gibt kein Zielband, weil es ein Geometriebild ist.
+
+- Quelle: `sim/elektrik/e3c_bms_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3c_bms_platine/lesehilfe.md`
+- Vorgang: E3c
+
+### platine_bms_3d_iso.png
+
+![platine_bms_3d_iso.png](../sim/elektrik/e3c_bms_platine/platine_bms_3d_iso.png)
+
+**Lesehilfe:** Schrägansicht der BMS-Platine (KiCad 3D). Links der große Rechner-Chip, unten die drei Schützkanäle mit ihren Steckern, rechts hinter der Sperrzone die Hochvoltseite mit den Anschlüssen. Es gibt kein Zielband, weil es ein Geometriebild ist; der Umriss 160 x 100 mm steht in der Kopfzeile. Die Stecker JST PH und die Gleichtaktdrosseln haben in der Bibliothek kein 3D-Modell und erscheinen nur als Anschlussflächen.
+
+- Quelle: `sim/elektrik/e3c_bms_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3c_bms_platine/lesehilfe.md`
+- Vorgang: E3c
+
+### platine_bms_3d_nah.png
+
+![platine_bms_3d_nah.png](../sim/elektrik/e3c_bms_platine/platine_bms_3d_nah.png)
+
+**Lesehilfe:** Nahaufnahme an der Sperrzone: Die hellen Blöcke sind Übertrager und digitaler Isolator mit verstärkter Isolation. Sie sind die einzigen Bauteile, die den kupferfreien Streifen überbrücken. Es gibt kein Zielband, weil es ein Geometriebild ist.
+
+- Quelle: `sim/elektrik/e3c_bms_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3c_bms_platine/lesehilfe.md`
+- Vorgang: E3c
+
+### platine_bms_3d_top.png
+
+![platine_bms_3d_top.png](../sim/elektrik/e3c_bms_platine/platine_bms_3d_top.png)
+
+**Lesehilfe:** Draufsicht auf die Bestückung der BMS-Platine (KiCad 3D). Die Leiterbahnen schimmern durch die grüne Lötstoppmaske. Rechts der Mitte der kupferfreie Streifen (Sperrzone) mit den vier hellen Brückenbauteilen. Es gibt kein Zielband, weil es ein Geometriebild ist; der Umriss steht in der Kopfzeile.
+
+- Quelle: `sim/elektrik/e3c_bms_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3c_bms_platine/lesehilfe.md`
+- Vorgang: E3c
+
+### platine_bms_einbau.png
+
+![platine_bms_einbau.png](../sim/elektrik/e3c_bms_platine/platine_bms_einbau.png)
+
+**Lesehilfe:** Blick von schräg oben in die geöffnete Schaltbox des LFP-Packs. Die Wanne ist durchsichtig, der Inhalt (Schütze, Shunt, Sicherungen) grau, die grüne BMS-Platine liegt in der Ecke des BMS-Platzes. Der rote Rahmen ist das Zielband: der Platz des BMS (BT-310, 200 x 150 mm). Die Platine (160 x 100 mm) ist kleiner und passt. Die rote durchsichtige Platte ist die Sperrzone. Die Lage der Platine im Platz ist nicht festgelegt, die Ecke ist eine Darstellung.
+
+- Quelle: `sim/elektrik/e3c_bms_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3c_bms_platine/lesehilfe.md`
+- Vorgang: E3c
+
+### platine_bms_explosion.png
+
+![platine_bms_explosion.png](../sim/elektrik/e3c_bms_platine/platine_bms_explosion.png)
+
+**Lesehilfe:** Die Lagen der BMS-Platine wie ein Lagenkuchen nach oben auseinandergezogen (Blender): Bauteile, F.Cu, Substrat, In1, In2, B.Cu. Die rot durchsichtige Platte ist die Sperrzone: Auf keiner Lage gibt es dort Kupfer. Die Masseflächen auf In1 und B.Cu sind links (Niedervolt) und rechts (Hochvolt) getrennt. Kupferdicke überhöht dargestellt (0,35 mm statt 0,07 mm), Lagenabstand nur Darstellung. Es gibt kein Zielband, weil es ein Geometriebild ist; die Sperrzone mit Soll 10 mm steht in der Beschriftung.
+
+- Quelle: `sim/elektrik/e3c_bms_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3c_bms_platine/lesehilfe.md`
+- Vorgang: E3c
+
+### schaltplan_bms_blatt-1.png
+
+![schaltplan_bms_blatt-1.png](../sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-1.png)
+
+**Lesehilfe:** Schaltplanblatt 1, Deckblatt (KiCad-Schaltplan, echter hierarchischer Plan aus derselben Quelle wie das Layout). Die sechs Blätter als Kästen mit Blattpins; die grünen Drähte sind die Verbindungen zwischen den Blöcken. Rot gestrichelt umrandet sind die beiden Blätter, die die Trennung zwischen Hoch- und Niedervolt enthalten. Jedes Teil zeigt Referenz, Wert (offen = nicht festgelegt), Tag und Aktenverweis; Grüne Linien sind Drähte; Netznamen stehen nur für Versorgung/GND und für Verbindungen zu anderen Blättern (Blattpins auf dem Deckblatt). Es gibt kein Zielband, weil es ein Schaltplan ist; Prüfung: ERC 0, Netzliste gleich der des Layouts (ergebnis_schaltplan.json).
+
+- Quelle: `sim/elektrik/e3c_bms_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3c_bms_platine/lesehilfe.md`
+- Vorgang: E3c
+
+### schaltplan_bms_blatt-2.png
+
+![schaltplan_bms_blatt-2.png](../sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-2.png)
+
+**Lesehilfe:** Schaltplanblatt 2, Versorgung 12 V (KiCad-Schaltplan, echter hierarchischer Plan aus derselben Quelle wie das Layout). Verpolschutz, Überspannungsschutz, Filter und der Systembasis-Baustein mit Überwachung (Watchdog), der die 3,3-V-Versorgung erzeugt. Jedes Teil zeigt Referenz, Wert (offen = nicht festgelegt), Tag und Aktenverweis; Grüne Linien sind Drähte; Netznamen stehen nur für Versorgung/GND und für Verbindungen zu anderen Blättern (Blattpins auf dem Deckblatt). Es gibt kein Zielband, weil es ein Schaltplan ist; Prüfung: ERC 0, Netzliste gleich der des Layouts (ergebnis_schaltplan.json).
+
+- Quelle: `sim/elektrik/e3c_bms_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3c_bms_platine/lesehilfe.md`
+- Vorgang: E3c
+
+### schaltplan_bms_blatt-3.png
+
+![schaltplan_bms_blatt-3.png](../sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-3.png)
+
+**Lesehilfe:** Schaltplanblatt 3, Rechner (KiCad-Schaltplan, echter hierarchischer Plan aus derselben Quelle wie das Layout). Der Sicherheitsrechner mit seinen Anschlüssen, Takt, Reset, Debug-Stecker, Leuchtdioden und Temperaturfühler. Die Kondensatoren darunter sind Entkopplung. Jedes Teil zeigt Referenz, Wert (offen = nicht festgelegt), Tag und Aktenverweis; Grüne Linien sind Drähte; Netznamen stehen nur für Versorgung/GND und für Verbindungen zu anderen Blättern (Blattpins auf dem Deckblatt). Es gibt kein Zielband, weil es ein Schaltplan ist; Prüfung: ERC 0, Netzliste gleich der des Layouts (ergebnis_schaltplan.json).
+
+- Quelle: `sim/elektrik/e3c_bms_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3c_bms_platine/lesehilfe.md`
+- Vorgang: E3c
+
+### schaltplan_bms_blatt-4.png
+
+![schaltplan_bms_blatt-4.png](../sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-4.png)
+
+**Lesehilfe:** Schaltplanblatt 4, CAN (KiCad-Schaltplan, echter hierarchischer Plan aus derselben Quelle wie das Layout). Zwei CAN-FD-Schnittstellen mit Treiber, Gleichtaktdrossel, Schutzdioden und Abschluss. Jedes Teil zeigt Referenz, Wert (offen = nicht festgelegt), Tag und Aktenverweis; Grüne Linien sind Drähte; Netznamen stehen nur für Versorgung/GND und für Verbindungen zu anderen Blättern (Blattpins auf dem Deckblatt). Es gibt kein Zielband, weil es ein Schaltplan ist; Prüfung: ERC 0, Netzliste gleich der des Layouts (ergebnis_schaltplan.json).
+
+- Quelle: `sim/elektrik/e3c_bms_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3c_bms_platine/lesehilfe.md`
+- Vorgang: E3c
+
+### schaltplan_bms_blatt-5.png
+
+![schaltplan_bms_blatt-5.png](../sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-5.png)
+
+**Lesehilfe:** Schaltplanblatt 5, Schützansteuerung (KiCad-Schaltplan, echter hierarchischer Plan aus derselben Quelle wie das Layout). Drei Schützkanäle mit High-Side- und Low-Side-Schalter, Freilauf- und Löschdiode, Strommessung sowie das Hardware-UND des Sekundärpfads. Jedes Teil zeigt Referenz, Wert (offen = nicht festgelegt), Tag und Aktenverweis; Grüne Linien sind Drähte; Netznamen stehen nur für Versorgung/GND und für Verbindungen zu anderen Blättern (Blattpins auf dem Deckblatt). Es gibt kein Zielband, weil es ein Schaltplan ist; Prüfung: ERC 0, Netzliste gleich der des Layouts (ergebnis_schaltplan.json).
+
+- Quelle: `sim/elektrik/e3c_bms_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3c_bms_platine/lesehilfe.md`
+- Vorgang: E3c
+
+### schaltplan_bms_blatt-6.png
+
+![schaltplan_bms_blatt-6.png](../sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-6.png)
+
+**Lesehilfe:** Schaltplanblatt 6, Daisy-Master mit Isolation (KiCad-Schaltplan, echter hierarchischer Plan aus derselben Quelle wie das Layout). Der Daisy-Master (links, Niedervolt), die zwei Übertrager und der Isolator des Sekundärpfads in der mittleren roten Trennzone, rechts die Hochvoltseite mit Steckern. Die Trennzone trägt den Vermerk verstärkte Isolation 10/8 mm. Jedes Teil zeigt Referenz, Wert (offen = nicht festgelegt), Tag und Aktenverweis; Grüne Linien sind Drähte; Netznamen stehen nur für Versorgung/GND und für Verbindungen zu anderen Blättern (Blattpins auf dem Deckblatt). Es gibt kein Zielband, weil es ein Schaltplan ist; Prüfung: ERC 0, Netzliste gleich der des Layouts (ergebnis_schaltplan.json).
+
+- Quelle: `sim/elektrik/e3c_bms_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3c_bms_platine/lesehilfe.md`
+- Vorgang: E3c
+
+### schaltplan_bms_blatt-7.png
+
+![schaltplan_bms_blatt-7.png](../sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-7.png)
+
+**Lesehilfe:** Schaltplanblatt 7, Strommessung HV-Seite (KiCad-Schaltplan, echter hierarchischer Plan aus derselben Quelle wie das Layout). Der Shunt-Messbaustein mit Stecker und Filter auf der Hochvoltseite (rechts), der digitale Isolator in der Trennzone (Mitte) und die Niedervoltseite (links). Jedes Teil zeigt Referenz, Wert (offen = nicht festgelegt), Tag und Aktenverweis; Grüne Linien sind Drähte; Netznamen stehen nur für Versorgung/GND und für Verbindungen zu anderen Blättern (Blattpins auf dem Deckblatt). Es gibt kein Zielband, weil es ein Schaltplan ist; Prüfung: ERC 0, Netzliste gleich der des Layouts (ergebnis_schaltplan.json).
+
+- Quelle: `sim/elektrik/e3c_bms_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3c_bms_platine/lesehilfe.md`
+- Vorgang: E3c
+
+
+## sim/elektrik/e3d_fmeda
+
+### e3d_fmeda.png
+
+![e3d_fmeda.png](../sim/elektrik/e3d_fmeda/e3d_fmeda.png)
+
+**Lesehilfe:** Gefragt wird, wie sicher die Überwachungsplatine (CMU) gegen einzelne Bauteilfehler ist. Links stehen zwei Kennzahlen aus der Norm ISO 26262: SPFM sagt, welcher Anteil der gefährlichen Einzelfehler erkannt oder abgefangen wird, LFM sagt dasselbe für versteckte Fehler, die erst zusammen mit einem zweiten Fehler gefährlich werden. Höher ist besser. Die grünen Striche mit grünem Feld darüber sind die Ziele: SG-01 (Zelle nicht überladen, ASIL D) 99 % und 90 %, SG-02 (tiefentladene Zelle nicht laden, ASIL C) 97 % und 80 %. Liegt ein Balken unter dem Strich, ist das Ziel verfehlt (hier SG-02, SPFM). Die Achse beginnt bei 80 %, damit man die Unterschiede sieht. LFP und NMC sind gleich, weil beide Platinen dieselben Bauteilarten mit denselben Annahmen haben. Rechts stehen die fünf größten Beiträge zu den nicht abgefangenen Fehlern in FIT (1 FIT = ein Ausfall in einer Milliarde Betriebsstunden). Alle Ausfallraten und Erkennungsraten sind Annahmen von Opus aus dem Gedächtnis, nicht aus einem Katalog.
+
+- Quelle: `sim/elektrik/e3d_fmeda/ergebnis.json`; Lesehilfe: `sim/elektrik/e3d_fmeda/lesehilfe.md`
+- Vorgang: E3d
 
 
 ## sim/geometrie/g1_anordnung
@@ -2296,6 +2728,84 @@ Alle Bilder unter `sim/` und `cad/` mit Lesehilfe für Nicht-Fachleute, Quelle u
 - Vorgang: unbekannt
 
 
+## sim/vergleich_produkte
+
+### w43_vergleich.png
+
+![w43_vergleich.png](../sim/vergleich_produkte/w43_vergleich.png)
+
+**Lesehilfe:** Lesehilfe fehlt
+
+- Quelle: `sim/vergleich_produkte/ergebnis.json`
+- Vorgang: unbekannt
+
+
+## sim/verifikation_werkzeuge
+
+### qn1_sammelbild.png
+
+![qn1_sammelbild.png](../sim/verifikation_werkzeuge/qn1_sammelbild.png)
+
+**Lesehilfe:** Lesehilfe fehlt
+
+- Quelle: `sim/verifikation_werkzeuge/ergebnis.json`
+- Vorgang: unbekannt
+
+### v1_konvergenz.png
+
+![v1_konvergenz.png](../sim/verifikation_werkzeuge/v1_konvergenz.png)
+
+**Lesehilfe:** Lesehilfe fehlt
+
+- Quelle: `sim/verifikation_werkzeuge/ergebnis.json`
+- Vorgang: unbekannt
+
+### v2_aufloesung.png
+
+![v2_aufloesung.png](../sim/verifikation_werkzeuge/v2_aufloesung.png)
+
+**Lesehilfe:** Lesehilfe fehlt
+
+- Quelle: `sim/verifikation_werkzeuge/ergebnis.json`
+- Vorgang: unbekannt
+
+### v3_kragbalken.png
+
+![v3_kragbalken.png](../sim/verifikation_werkzeuge/v3_kragbalken.png)
+
+**Lesehilfe:** Lesehilfe fehlt
+
+- Quelle: `sim/verifikation_werkzeuge/ergebnis.json`
+- Vorgang: unbekannt
+
+### v4_kurven.png
+
+![v4_kurven.png](../sim/verifikation_werkzeuge/v4_kurven.png)
+
+**Lesehilfe:** Lesehilfe fehlt
+
+- Quelle: `sim/verifikation_werkzeuge/ergebnis.json`
+- Vorgang: unbekannt
+
+### v4_pybamm.png
+
+![v4_pybamm.png](../sim/verifikation_werkzeuge/v4_pybamm.png)
+
+**Lesehilfe:** Lesehilfe fehlt
+
+- Quelle: `sim/verifikation_werkzeuge/ergebnis.json`
+- Vorgang: unbekannt
+
+### v5_verteiler.png
+
+![v5_verteiler.png](../sim/verifikation_werkzeuge/v5_verteiler.png)
+
+**Lesehilfe:** Lesehilfe fehlt
+
+- Quelle: `sim/verifikation_werkzeuge/ergebnis.json`
+- Vorgang: unbekannt
+
+
 ## Videos (MP4)
 
 - [cycles_LFP_K1_L2.mp4](../sim/kuehlung/k0_zelle/bilder/cycles_LFP_K1_L2.mp4) (Vorgang K0): siehe Lesehilfe der Standbilder (gleiche Darstellung, Bildfolge aus der Rechnung)
@@ -2399,6 +2909,34 @@ Alle Bilder unter `sim/` und `cad/` mit Lesehilfe für Nicht-Fachleute, Quelle u
 - sim/elektrik/e2_elektronik/kabelplan_NMC.png
 - sim/elektrik/e2_elektronik/schaltbild_LFP.png
 - sim/elektrik/e2_elektronik/schaltbild_NMC.png
+- sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_afe.png
+- sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_afe.png (Quelle ergebnis.json fehlt)
+- sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_daisy.png
+- sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_daisy.png (Quelle ergebnis.json fehlt)
+- sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_deckblatt.png
+- sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_deckblatt.png (Quelle ergebnis.json fehlt)
+- sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_kanaele.png
+- sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_kanaele.png (Quelle ergebnis.json fehlt)
+- sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_kanal.png
+- sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_kanal.png (Quelle ergebnis.json fehlt)
+- sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_ntc_stecker.png
+- sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_ntc_stecker.png (Quelle ergebnis.json fehlt)
+- sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_sekundaerschutz.png
+- sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_sekundaerschutz.png (Quelle ergebnis.json fehlt)
+- sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_afe.png
+- sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_afe.png (Quelle ergebnis.json fehlt)
+- sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_daisy.png
+- sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_daisy.png (Quelle ergebnis.json fehlt)
+- sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_deckblatt.png
+- sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_deckblatt.png (Quelle ergebnis.json fehlt)
+- sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_kanaele.png
+- sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_kanaele.png (Quelle ergebnis.json fehlt)
+- sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_kanal.png
+- sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_kanal.png (Quelle ergebnis.json fehlt)
+- sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_ntc_stecker.png
+- sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_ntc_stecker.png (Quelle ergebnis.json fehlt)
+- sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_sekundaerschutz.png
+- sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_sekundaerschutz.png (Quelle ergebnis.json fehlt)
 - sim/kuehlung/k2_kuehlplatte/platte_NMC.png
 - sim/kuehlung/k3_gesamt/film/f000.png
 - sim/kuehlung/k3_gesamt/film/f001.png
@@ -2500,6 +3038,14 @@ Alle Bilder unter `sim/` und `cad/` mit Lesehilfe für Nicht-Fachleute, Quelle u
 - sim/mechanik/x3_crash_g5/verformung_LFP_b_t.png
 - sim/mechanik/x3_crash_g5/verformung_NMC_a.png
 - sim/mechanik/x3_crash_g5/verformung_NMC_b.png
+- sim/vergleich_produkte/w43_vergleich.png
+- sim/verifikation_werkzeuge/qn1_sammelbild.png
+- sim/verifikation_werkzeuge/v1_konvergenz.png
+- sim/verifikation_werkzeuge/v2_aufloesung.png
+- sim/verifikation_werkzeuge/v3_kragbalken.png
+- sim/verifikation_werkzeuge/v4_kurven.png
+- sim/verifikation_werkzeuge/v4_pybamm.png
+- sim/verifikation_werkzeuge/v5_verteiler.png
 
 ---
 *KI-generiert (Claude Sonnet), Entwurf, nicht vom Menschen freigegeben. Erzeugt von pm/plan/bilder.py.*

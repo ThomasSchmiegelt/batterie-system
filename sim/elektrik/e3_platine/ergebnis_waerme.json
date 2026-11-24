@@ -1,0 +1,26 @@
+{
+ "LFP": {
+  "P_W": 9.9895610898,
+  "flaeche_m2": 0.0072,
+  "flussdichte_W_m2": 1387.43904025,
+  "dT_h5_K": 138.743904025,
+  "dT_h10_K": 69.3719520125,
+  "T_h5_C": 183.743904025,
+  "T_h10_C": 114.3719520125,
+  "grenze_C": 105,
+  "ueberschritten_h10": true,
+  "ueberschritten_h5": true
+ },
+ "NMC": {
+  "P_W": 9.6350607864,
+  "flaeche_m2": 0.0072,
+  "flussdichte_W_m2": 1338.2028870000001,
+  "dT_h5_K": 133.82028870000002,
+  "dT_h10_K": 66.91014435000001,
+  "T_h5_C": 178.82028870000002,
+  "T_h10_C": 111.91014435000001,
+  "grenze_C": 105,
+  "ueberschritten_h10": true,
+  "ueberschritten_h5": true
+ }
+}

@@ -1,0 +1,191 @@
+{
+ "kopf": "KI-generiert (Claude Sonnet, 2026-11-24). PI-Vorschlag, auf 5 Ausprägungen je Zeile gekappt (Reihenfolge PI). Opus prüft und kürzt.",
+ "zeilen": [
+  {
+   "id": "T1",
+   "name": "Prinzip des Ausgleichs",
+   "optionen": [
+    {
+     "id": "T1.1",
+     "name": "Passiver Widerstandsausgleich auf CMU",
+     "quelle": "Fakt F4"
+    },
+    {
+     "id": "T1.2",
+     "name": "Gepulster Hochstrom, gleiche mittlere Leistung",
+     "quelle": "TRIZ-35"
+    },
+    {
+     "id": "T1.3",
+     "name": "Transformergekoppelter aktiver Zellenausgleich",
+     "quelle": "TRIZ-28"
+    },
+    {
+     "id": "T1.4",
+     "name": "Vorgleich in Dormanzaufwachphase",
+     "quelle": "TRIZ-10"
+    },
+    {
+     "id": "T1.5",
+     "name": "Paralleler Gleichstromausgleich aller Kanäle",
+     "quelle": "TRIZ-21"
+    }
+   ]
+  },
+  {
+   "id": "T2",
+   "name": "Ort der Verlustwärme",
+   "optionen": [
+    {
+     "id": "T2.1",
+     "name": "Balance-Widerstände auf der CMU-Platine",
+     "quelle": "Fakt F2"
+    },
+    {
+     "id": "T2.2",
+     "name": "Induktives Koppellelement zwischen Zellen",
+     "quelle": "TRIZ-28"
+    },
+    {
+     "id": "T2.3",
+     "name": "Externer Flüssigkeitskühlkreislauf",
+     "quelle": "TRIZ-29"
+    },
+    {
+     "id": "T2.4",
+     "name": "Doppelte Platinenfläche, kombinierte CMU",
+     "quelle": "TRIZ-5"
+    },
+    {
+     "id": "T2.5",
+     "name": "Kühlplatte mit Ultraschall-Konvektionsantrieb",
+     "quelle": "TRIZ-18"
+    }
+   ]
+  },
+  {
+   "id": "T3",
+   "name": "Zeitpunkt des Ausgleichs",
+   "optionen": [
+    {
+     "id": "T3.1",
+     "name": "Kontinuierlich passiv, 14,2 h Zyklus",
+     "quelle": "Fakt F1"
+    },
+    {
+     "id": "T3.2",
+     "name": "Einmalig im Dormanz-Aufwachfenster",
+     "quelle": "TRIZ-10"
+    },
+    {
+     "id": "T3.3",
+     "name": "Kurz parallel im Hochstromfenster",
+     "quelle": "TRIZ-21"
+    },
+    {
+     "id": "T3.4",
+     "name": "Temperaturgepumpt, nur bei kühlem Zustand",
+     "quelle": "TRIZ-35"
+    },
+    {
+     "id": "T3.5",
+     "name": "Vorgleich vor Betrieb, Rest laufend",
+     "quelle": "TRIZ-10"
+    }
+   ]
+  },
+  {
+   "id": "T4",
+   "name": "Schalter",
+   "optionen": [
+    {
+     "id": "T4.1",
+     "name": "MOSFET plus 34-Ohm-Widerstand",
+     "quelle": "Fakt F4"
+    },
+    {
+     "id": "T4.2",
+     "name": "HF-Schalter in Induktivkopplung",
+     "quelle": "TRIZ-28"
+    },
+    {
+     "id": "T4.3",
+     "name": "PWM-Schalter mit Pulsmodulation",
+     "quelle": "TRIZ-35"
+    },
+    {
+     "id": "T4.4",
+     "name": "Zellenweiser Schalter mit Leiterbahn",
+     "quelle": "Fakt F10"
+    },
+    {
+     "id": "T4.5",
+     "name": "Sequenzschalter für Parallelvorabgleich",
+     "quelle": "TRIZ-10"
+    }
+   ]
+  },
+  {
+   "id": "T5",
+   "name": "Wärmeabfuhr",
+   "optionen": [
+    {
+     "id": "T5.1",
+     "name": "Freie Konvektion auf CMU-Platine",
+     "quelle": "Fakt F5"
+    },
+    {
+     "id": "T5.2",
+     "name": "Wärmeleitpad zur Kühlplatte",
+     "quelle": "Fakt F5"
+    },
+    {
+     "id": "T5.3",
+     "name": "Geschlossener Flüssigkeitskühlkreis",
+     "quelle": "TRIZ-29"
+    },
+    {
+     "id": "T5.4",
+     "name": "Gepulster Betrieb, reduzierte Mittelleistung",
+     "quelle": "TRIZ-21"
+    },
+    {
+     "id": "T5.5",
+     "name": "Transformatorkopplung ohne ohmsche Verluste",
+     "quelle": "TRIZ-28"
+    }
+   ]
+  },
+  {
+   "id": "T6",
+   "name": "Steuerung (Ziel-SOC, Spannungsschwelle)",
+   "optionen": [
+    {
+     "id": "T6.1",
+     "name": "Spannungsschwelle pro Zelle, 130 mA konstant",
+     "quelle": "Fakt F1"
+    },
+    {
+     "id": "T6.2",
+     "name": "Temperaturabhängige Stromsteuerung 124/109 mA",
+     "quelle": "TRIZ-35"
+    },
+    {
+     "id": "T6.3",
+     "name": "Periodisches Aufwachen, Batch-Ausgleich, Thermal-Cutoff",
+     "quelle": "Fakt F9"
+    },
+    {
+     "id": "T6.4",
+     "name": "Vorab-Berechnung dQ, Einmal-Durchlauf 18 Kanäle",
+     "quelle": "TRIZ-10"
+    },
+    {
+     "id": "T6.5",
+     "name": "Parallele Auslösung aller 18 Kanäle kurzfristig",
+     "quelle": "TRIZ-21"
+    }
+   ]
+  }
+ ]
+}

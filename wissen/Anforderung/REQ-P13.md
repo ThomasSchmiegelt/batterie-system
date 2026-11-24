@@ -12,15 +12,15 @@ tags: ["anforderung", "bewertung/offen"]
 
 Schutzart, Isolation, Berührschutz
 
-- Wert (Lastenheft): nach Norm
+- Wert (Lastenheft): IP67, R_iso ≥ 100 Ω/V (UN R100, DC-Bus, W35) (Autor, Freigaberunde 2026-11-23)
 - Priorität: Muss
-- Vom Autor bestätigt: nein
+- Vom Autor bestätigt: ja
 
 ## Verifikation (V-Modell-Matrix)
 
 - Methode: T (A Analyse, S Simulation, I Inspektion, T Test, R Review)
 - Ebene: System
-- Kriterium: R_iso >= 100 Ω/V [Norm (W35 belegt: UN R100, DC-Bus 100 Ω/V; AC-Bus bzw. verbundene Busse 500 Ω/V)]<br>Schutzart == IP67 [Annahme Opus]
+- Kriterium: R_iso >= 100 Ω/V [Autor (Freigaberunde 2026-11-23)]<br>Schutzart == IP67 [Autor (Freigaberunde 2026-11-23)]
 - Ist-Wert: [R_iso] kein Nachweis verknüpft; [Schutzart] kein Nachweis verknüpft
 - Bewertung: **offen**
 - Matrix: [[Dokument/06_verifikationsplan]] · Lastenheft: [[Dokument/01_lastenheft]] · Verfolgung: [[Dokument/03_anforderungsverfolgung]]
@@ -51,6 +51,7 @@ Schutzart, Isolation, Berührschutz
 - [[Bauteil/BT-711|BT-711]]
 - [[Bauteil/BT-712|BT-712]]
 - [[Bauteil/BT-713|BT-713]]
+- [[Bauteil/BT-715|BT-715]]
 - [[Bauteil/BT-720|BT-720]]
 - [[Bauteil/BT-721|BT-721]]
 - [[Bauteil/BT-722|BT-722]]

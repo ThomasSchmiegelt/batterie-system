@@ -1,0 +1,61 @@
+{
+ "titel": "Zellausgleich NMC",
+ "bezug": {
+  "BT": "BT-320 (CMU, Zellüberwachung)",
+  "merkmal": "ausgleichsstrom_mA",
+  "REQ": "REQ-P15",
+  "akte": "ENT-146"
+ },
+ "widerspruch": "Die Ausgleichszeit soll kürzer werden, ohne dass die Wärme in der CMU steigt.",
+ "verbessern": [
+  25,
+  39
+ ],
+ "verschlechtern": [
+  17,
+  22
+ ],
+ "teilfunktionen": [
+  "Prinzip des Ausgleichs",
+  "Ort der Verlustwärme",
+  "Zeitpunkt des Ausgleichs",
+  "Schalter",
+  "Wärmeabfuhr",
+  "Steuerung (Ziel-SOC, Spannungsschwelle)"
+ ],
+ "kriterien": [
+  "Ausgleichszeit",
+  "Wärme in der CMU",
+  "Kosten",
+  "Bauraum",
+  "Fehlermöglichkeiten (FSR, HARA)",
+  "Wirkungsgrad",
+  "Reifegrad"
+ ],
+ "fakten": {
+  "F1": {
+   "quelle": "sim/elektrik/e2_elektronik/ergebnis.json, NMC",
+   "text": "E2 NMC: Ausgleichszeit 14,2 h bei 130 mA und dQ 1,848 Ah; Wärme je CMU 9,83 W bei Höchstspannung (Grenze 10 W), 8,63 W bei Nennspannung; 218 Spannungsabgriffe"
+  },
+  "F2": {
+   "quelle": "sim/elektrik/e3_platine/ergebnis_ausgleich.json, NMC (SPICE, 32,45 Ohm)",
+   "text": "E3 NMC mit 32,45 Ohm: Strom 127,4 mA bei 4,2 V und 112,3 mA bei 3,7 V; Ausgleichszeit 14,5 h bei Höchstspannung, 15,4 h im Mittel (6,3 % länger als E2), 16,5 h bei Nennspannung (13,5 % länger); Wärme je CMU 9,64 W bei Höchstspannung; je Widerstand 0,264 W; FET 0,008 W"
+  },
+  "F3": {
+   "quelle": "sim/elektrik/e3_platine/ergebnis_waerme.json, NMC",
+   "text": "E3 NMC Platine 120 x 60 mm, 9,64 W: Übertemperatur 66,9 K bei h = 10 W/m2K und 133,8 K bei h = 5; Platinentemperatur 111,9 °C bzw. 178,8 °C bei 45 °C Umgebung; Grenze 105 °C überschritten"
+  },
+  "F4": {
+   "quelle": "BEFUNDE.md B-BAT-051 (Deutung Opus)",
+   "text": "B-BAT-051: Wärmegrenze verfehlt; die Strahlung ist nicht berücksichtigt (etwa 6 W/m2K), realistisch etwa 90 bis 110 °C, damit wird die Grenze 105 °C erreicht; Folge: Wärmepfad zur Kühlplatte oder Taktung nötig"
+  },
+  "F5": {
+   "quelle": "BEFUNDE.md B-BAT-051, sim/elektrik/e3_platine/ergebnis_platine.json",
+   "text": "E3 Layout: 106 bis 108 Teile, 4 Lagen, DRC 0 Verstöße, Platine 120 x 60 mm passt; es fehlen Entkopplung, ESD und Abschlüsse, 212 Verbindungen sind nicht geroutet"
+  },
+  "F6": {
+   "quelle": "sim/elektrik/e3_platine/ergebnis_vorladung.json",
+   "text": "E3 Vorladung bei 912 V: Spitzenstrom 9,12 A, Energie im Widerstand 416 J, t95 300 ms, Puls 450 J gefordert und eingehalten"
+  }
+ }
+}

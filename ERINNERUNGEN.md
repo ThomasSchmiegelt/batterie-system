@@ -2,6 +2,20 @@
 
 KI-generiert (Claude Opus).
 
+## 2026-11-24 Abend: offene Punkte (Autor: „mach die offenen punkte“), noch nicht begonnen, Nutzungslimit
+1. LFP-Kollisionen (3): 2 × M8-Kopf der Trennbrücke im Servicedeckel (je 212 mm³) → Deckel-Innenhöhe ≥ Kopfhöhe + 3 mm (konservativ); Schmelz_Lasche_A/Schiene_5 0,0017 mm³ = Berührung (verschraubt), als Kontakt zulassen.
+2. BMS-Platine BT-311 (ERWARTUNG schreiben, Ordner sim/elektrik/e3c_bms_platine): MCU generisch ASIL D, 2 × CAN-FD, Schützansteuerung mit Zener-Löschung (Sparschaltung = OPT-006), isoSPI-Master mit verstärkter Isolation, Shunt-ADC auf der HV-Seite mit isolierter Strecke, 12 V mit ISO-7637-Schutz. Trennung HV/NV: Kriechstrecke 10 mm, Luftstrecke 8 mm (inkl. Höhe 1,25). Erwartung ≈ 150–220 Teile, ≈ 160 × 100 mm, passt in die Schaltbox (ENT-144), DRC 0.
+3. FMEDA grob CMU (aus cmu_<V>_bom.csv): FIT- und Ausfallarten-Annahmen von Opus (R 0,3, C 0,5, FET 1, TVS 1, AFE 20, Übertrager 2, Stecker 2 FIT), SPFM/LFM gegen ASIL D (≥ 99 % / ≥ 90 %). Erwartung: FET-Kurzschluss → Dauerentladung → SG-02 (Tiefentladung) ist der dominierende Einzelfehler, ohne Diagnose des Ausgleichsstroms.
+4. KR2 (SG-05 „nicht trennen“ gegen SG-01/03/04 „trennen“): Kasten mit Erkennungsstufen, Plausibilisierung (1oo2/2oo3), Reaktionsweg (Software/Hardware), Vorwarnzeit, Teiltrennung. Kriterien Sicherheit, Verfügbarkeit, Kosten, Nachweisaufwand, Reifegrad → 10 Paare vom Autor abfragen. Konservativ: Sicherheit gewinnt, Derating vor dem Trennen.
+Commit des Tagesstands: Autor noch nicht gefragt beantwortet (nichts committet).
+
+## 2026-11-24: Elektronik bis zur Platine, HARA, Kreativwerkzeug
+- Autor: Elektronik bis MOSFET/Widerstand/Platine; Frage nach EMV; Kreativtechniken mit Paarbewertung; „Bei Gefahrenanalyse … mußt du mir helfen“.
+- Opus: REQ-P17…P21, REQ-D15 (Vorschlag); HARA-Entwurf docs/24 (12 HE, SG-01…08, FSR-01…10, Fragen F-S1…S6 an Autor); BT-311, 321…325, 715; B-BAT-050.
+- Laufend (Sonnet): E3 `sim/elektrik/e3_platine/` (KiCad flatpak --user, ngspice per dpkg -x, SKiDL; ERWARTUNG: Platinenwärme vermutlich zu hoch, Vorladung 416 J bei 912 V). KR1 `pm/kreativ/` (TRIZ + Kasten + Kopfstand + Paarvergleich mit Konsistenz, Pilot Ausgleich NMC; Gewichte vom Autor, Formular).
+- Autor 2026-11-24 Freigaberunde (pm/freigaberunde_2026-11-24.md): F-S1…S6, alle HE, REQ-P17…P21, D15 festgelegt. ENT-172 NMC → 32,45 Ω (E3 SPICE). Zielmarkt nur Europa (Autor). Offen: Gewichte KR1, Normtext-PDFs nach quellen/normen/ Danach E3b Thermik Platine (Elmer), KR2 (SG-05 gegen SG-01).
+- Nachmittag: ENT-184 (K2 Pad, Autor); E3b fertig (Pad+Vias ≤ 53 °C konservativ, ENT-185…187, B-BAT-054); E3 fertig: geroutet, DRC 0, 144 Thermovias, Masse 48,9 g je CMU, Explosions- und Einbaubilder. Regel „erst konservativ“ + pm/optimierungen.md. Normen W47–W50 geprüft (B-BAT-052). KR1-Fehler B-BAT-053.
+
 ## 2026-11-23 Abend: Optimierung abgeschlossen, Commit
 - Workflow Schleife 2 (BAT-DOC-23, Tore T0–T6), V-Modell-Matrix docs/06 ohne „nicht definiert“, Wissensgraph pm/graph (ReqIF), Tresor wissen/, Regelwerke docs/20, Qualitätsnachweis docs/22 (alle Q Stufe 0: V und U fehlen), Präsentation und Video erste Fassung.
 - Freigaberunde: REQ-Kriterien vom Autor (pm/freigaberunde_2026-11-23.md); Akten und Annahmen delegiert an Opus (CLAUDE.md Regel). Stellgrößen Schleife 2: 23 Annahmen.
@@ -219,3 +233,4 @@ KI-generiert (Claude Opus).
 - 23.11. 10:15 Opus: Alle Crashfälle X3 fertig (NMC_a, NMC_b, PI, Bilder). Wächter verschärft (Nachtrag 6), GPU-Prüfung vor GPU-Schritten (gpu_warten.sh). Obsidian vollständig (158 ENT, 42 Befunde, 0 tote Links). Exposé Konstruktionspraxis in ~/hermes/buch/artikel/konstruktionspraxis/ (Bild 3 offen, Freigabe Autor). Läuft: K5 Parallelführung (ENT-158) – Sonnet, ERWARTUNG sim/kuehlung/k5_parallel. Danach: Crash-Ergebnisse in den Bericht, Abschlussbericht 1.0.
 - 23.11. Nachmittag Opus: ENT-158/159 freigegeben (Autor), G5.9 im CAD (0 Kollisionen, +38 mm, +0,16 % Kosten), V4p wie gebaut LFP 9,6 K. Abschlussbericht 1.0 (104 S., geprüft KI) mit Verbesserungsanalyse und Lehren Konstruktionsschleife. Offen: Freigabe Bericht, Frage ΔT-Definition, Gegenlauf im CAD, NMC-Querschnitt, 43 offene ENT, Bilder NMC_a/b drucktauglich, bilder.py 2023 Fehler. Nichts committet.
 - 23.11. Opus: Bericht 1.2 (115 S.) nach PI-Gutachten; Sicherungen bericht_1.0.tex/pdf, bericht_0.6.tex. Offen für Autor: Freigabe Bericht, ΔT-Definition, Packhöhe 130 mm (Annahme ohne Akte, 134 mm), 43 ENT. Nichts committet.
+- 24.11. Sonnet: E3c fertig (sim/elektrik/e3c_bms_platine/ERGEBNIS.md): LFP 0 Kollisionen, BMS-Platine BT-311 DRC 0, Schaltplan ERC 0; offen: Merkmal BT-722 lichte Höhe, BT-311 Merkmale, Passivwerte, HV-Hilfsversorgung (Prüfung Opus).

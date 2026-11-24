@@ -1,0 +1,942 @@
+{
+ "gewichte": {
+  "Ausgleichszeit": 6.0,
+  "Wärme in der CMU": 6.0,
+  "Kosten": 6.0,
+  "Bauraum": 6.0,
+  "Fehlermöglichkeiten (FSR, HARA)": 6.0,
+  "Wirkungsgrad": 6.0,
+  "Reifegrad": 6.0
+ },
+ "gewichte_quelle": "vorläufig gleich (6 je Kriterium = Paarvergleichssumme bei Gleichstand, Autor hat noch nicht geantwortet)",
+ "punkte_je_kriterium": {
+  "Ausgleichszeit": {
+   "K1": 0.0625,
+   "K2": 0.25,
+   "K3": 0.875,
+   "K4": 0.4375,
+   "K5": 0.875
+  },
+  "Wärme in der CMU": {
+   "K1": 0.0,
+   "K2": 0.625,
+   "K3": 0.875,
+   "K4": 0.5,
+   "K5": 0.5
+  },
+  "Kosten": {
+   "K1": 1.0,
+   "K2": 0.3125,
+   "K3": 0.125,
+   "K4": 0.6875,
+   "K5": 0.375
+  },
+  "Bauraum": {
+   "K1": 1.0,
+   "K2": 0.625,
+   "K3": 0.375,
+   "K4": 0.375,
+   "K5": 0.125
+  },
+  "Fehlermöglichkeiten (FSR, HARA)": {
+   "K1": 0.5,
+   "K2": 0.3125,
+   "K3": 0.5,
+   "K4": 0.9375,
+   "K5": 0.25
+  },
+  "Wirkungsgrad": {
+   "K1": 0.0625,
+   "K2": 0.375,
+   "K3": 0.875,
+   "K4": 0.5,
+   "K5": 0.6875
+  },
+  "Reifegrad": {
+   "K1": 1.0,
+   "K2": 0.5625,
+   "K3": 0.25,
+   "K4": 0.6875,
+   "K5": 0.0
+  }
+ },
+ "gesamt": {
+  "K1": 0.5178571428571429,
+  "K2": 0.4375,
+  "K3": 0.5535714285714286,
+  "K4": 0.5892857142857143,
+  "K5": 0.4017857142857143
+ },
+ "rang": [
+  "K4",
+  "K3",
+  "K1",
+  "K2",
+  "K5"
+ ],
+ "konsistenz": {
+  "Ausgleichszeit": {
+   "zirkulaere_triaden": 0,
+   "triaden": [],
+   "widersprueche_reihenfolge": [
+    [
+     "K3",
+     "K5"
+    ]
+   ],
+   "kendall_zeta": 1.0
+  },
+  "Wärme in der CMU": {
+   "zirkulaere_triaden": 0,
+   "triaden": [],
+   "widersprueche_reihenfolge": [
+    [
+     "K2",
+     "K5"
+    ],
+    [
+     "K3",
+     "K5"
+    ]
+   ],
+   "kendall_zeta": 1.0
+  },
+  "Kosten": {
+   "zirkulaere_triaden": 0,
+   "triaden": [],
+   "widersprueche_reihenfolge": [],
+   "kendall_zeta": 1.0
+  },
+  "Bauraum": {
+   "zirkulaere_triaden": 0,
+   "triaden": [],
+   "widersprueche_reihenfolge": [
+    [
+     "K2",
+     "K4"
+    ],
+    [
+     "K3",
+     "K4"
+    ],
+    [
+     "K4",
+     "K5"
+    ]
+   ],
+   "kendall_zeta": 1.0
+  },
+  "Fehlermöglichkeiten (FSR, HARA)": {
+   "zirkulaere_triaden": 2,
+   "triaden": [
+    [
+     "K1",
+     "K3",
+     "K2"
+    ],
+    [
+     "K1",
+     "K5",
+     "K2"
+    ]
+   ],
+   "widersprueche_reihenfolge": [],
+   "kendall_zeta": 0.6
+  },
+  "Wirkungsgrad": {
+   "zirkulaere_triaden": 0,
+   "triaden": [],
+   "widersprueche_reihenfolge": [
+    [
+     "K3",
+     "K5"
+    ],
+    [
+     "K4",
+     "K5"
+    ]
+   ],
+   "kendall_zeta": 1.0
+  },
+  "Reifegrad": {
+   "zirkulaere_triaden": 0,
+   "triaden": [],
+   "widersprueche_reihenfolge": [],
+   "kendall_zeta": 1.0
+  }
+ },
+ "zirkel_gesamt": 2,
+ "widersprueche_gesamt": 8,
+ "paarkombinationen_je_kriterium": 70,
+ "position": {
+  "erster_gewinnt": 68,
+  "zweiter_gewinnt": 59,
+  "gleich": 13,
+  "urteile": 140
+ },
+ "zahlverstoesse": [
+  [
+   "K3|K2",
+   "Wärme in der CMU",
+   "Zahl 9,83 steht nicht in F5"
+  ],
+  [
+   "K4|K1",
+   "Wärme in der CMU",
+   "Zahl 9,83 steht nicht in F5"
+  ],
+  [
+   "K4|K1",
+   "Fehlermöglichkeiten (FSR, HARA)",
+   "Zahl 9,83 steht nicht in F5"
+  ],
+  [
+   "K2|K5",
+   "Reifegrad",
+   "Zahl 6 steht nicht in F9"
+  ],
+  [
+   "K5|K4",
+   "Reifegrad",
+   "Zahl 6 steht nicht in F9"
+  ]
+ ],
+ "nachfragen": [
+  {
+   "runde": 1,
+   "paar": [
+    "K1",
+    "K2"
+   ],
+   "kriterien": [
+    "Fehlermöglichkeiten (FSR, HARA)"
+   ]
+  },
+  {
+   "runde": 1,
+   "paar": [
+    "K1",
+    "K4"
+   ],
+   "kriterien": [
+    "Fehlermöglichkeiten (FSR, HARA)"
+   ]
+  },
+  {
+   "runde": 1,
+   "paar": [
+    "K2",
+    "K3"
+   ],
+   "kriterien": [
+    "Wärme in der CMU",
+    "Kosten",
+    "Wirkungsgrad"
+   ]
+  },
+  {
+   "runde": 1,
+   "paar": [
+    "K2",
+    "K4"
+   ],
+   "kriterien": [
+    "Bauraum"
+   ]
+  },
+  {
+   "runde": 1,
+   "paar": [
+    "K2",
+    "K5"
+   ],
+   "kriterien": [
+    "Wärme in der CMU"
+   ]
+  },
+  {
+   "runde": 1,
+   "paar": [
+    "K3",
+    "K4"
+   ],
+   "kriterien": [
+    "Bauraum"
+   ]
+  },
+  {
+   "runde": 1,
+   "paar": [
+    "K3",
+    "K5"
+   ],
+   "kriterien": [
+    "Ausgleichszeit",
+    "Wärme in der CMU",
+    "Kosten",
+    "Wirkungsgrad"
+   ]
+  },
+  {
+   "runde": 1,
+   "paar": [
+    "K4",
+    "K5"
+   ],
+   "kriterien": [
+    "Bauraum",
+    "Wirkungsgrad"
+   ]
+  },
+  {
+   "runde": 2,
+   "paar": [
+    "K1",
+    "K2"
+   ],
+   "kriterien": [
+    "Fehlermöglichkeiten (FSR, HARA)"
+   ]
+  },
+  {
+   "runde": 2,
+   "paar": [
+    "K2",
+    "K4"
+   ],
+   "kriterien": [
+    "Bauraum"
+   ]
+  },
+  {
+   "runde": 2,
+   "paar": [
+    "K2",
+    "K5"
+   ],
+   "kriterien": [
+    "Wärme in der CMU"
+   ]
+  },
+  {
+   "runde": 2,
+   "paar": [
+    "K3",
+    "K4"
+   ],
+   "kriterien": [
+    "Bauraum"
+   ]
+  },
+  {
+   "runde": 2,
+   "paar": [
+    "K3",
+    "K5"
+   ],
+   "kriterien": [
+    "Ausgleichszeit",
+    "Wärme in der CMU",
+    "Kosten",
+    "Wirkungsgrad"
+   ]
+  },
+  {
+   "runde": 2,
+   "paar": [
+    "K4",
+    "K5"
+   ],
+   "kriterien": [
+    "Bauraum",
+    "Wirkungsgrad"
+   ]
+  }
+ ],
+ "empfindlichkeit": {
+  "von": {
+   "K1": 0.5058139534883721,
+   "K2": 0.4329268292682927,
+   "K3": 0.5436046511627907,
+   "K4": 0.5807926829268293,
+   "K5": 0.3902439024390244
+  },
+  "bis": {
+   "K1": 0.5304878048780488,
+   "K2": 0.4420731707317073,
+   "K3": 0.5640243902439024,
+   "K4": 0.5973837209302325,
+   "K5": 0.4127906976744186
+  },
+  "platz1_methode": [
+   "K4"
+  ],
+  "platz1_mit_zusatz": [
+   "K1",
+   "K3",
+   "K4"
+  ],
+  "varianten": [
+   {
+    "art": "Methode ±1",
+    "kriterium": "Ausgleichszeit",
+    "delta": -1,
+    "gesamt": {
+     "K1": 0.5289634146341463,
+     "K2": 0.4420731707317073,
+     "K3": 0.5457317073170732,
+     "K4": 0.5929878048780488,
+     "K5": 0.3902439024390244
+    },
+    "platz1": "K4",
+    "rang": [
+     "K4",
+     "K3",
+     "K1",
+     "K2",
+     "K5"
+    ]
+   },
+   {
+    "art": "Methode ±1",
+    "kriterium": "Ausgleichszeit",
+    "delta": 1,
+    "gesamt": {
+     "K1": 0.5072674418604651,
+     "K2": 0.4331395348837209,
+     "K3": 0.561046511627907,
+     "K4": 0.5857558139534884,
+     "K5": 0.4127906976744186
+    },
+    "platz1": "K4",
+    "rang": [
+     "K4",
+     "K3",
+     "K1",
+     "K2",
+     "K5"
+    ]
+   },
+   {
+    "art": "Methode ±1",
+    "kriterium": "Wärme in der CMU",
+    "delta": -1,
+    "gesamt": {
+     "K1": 0.5304878048780488,
+     "K2": 0.4329268292682927,
+     "K3": 0.5457317073170732,
+     "K4": 0.5914634146341463,
+     "K5": 0.39939024390243905
+    },
+    "platz1": "K4",
+    "rang": [
+     "K4",
+     "K3",
+     "K1",
+     "K2",
+     "K5"
+    ]
+   },
+   {
+    "art": "Methode ±1",
+    "kriterium": "Wärme in der CMU",
+    "delta": 1,
+    "gesamt": {
+     "K1": 0.5058139534883721,
+     "K2": 0.4418604651162791,
+     "K3": 0.561046511627907,
+     "K4": 0.5872093023255814,
+     "K5": 0.40406976744186046
+    },
+    "platz1": "K4",
+    "rang": [
+     "K4",
+     "K3",
+     "K1",
+     "K2",
+     "K5"
+    ]
+   },
+   {
+    "art": "Methode ±1",
+    "kriterium": "Kosten",
+    "delta": -1,
+    "gesamt": {
+     "K1": 0.5060975609756098,
+     "K2": 0.4405487804878049,
+     "K3": 0.5640243902439024,
+     "K4": 0.586890243902439,
+     "K5": 0.4024390243902439
+    },
+    "platz1": "K4",
+    "rang": [
+     "K4",
+     "K3",
+     "K1",
+     "K2",
+     "K5"
+    ]
+   },
+   {
+    "art": "Methode ±1",
+    "kriterium": "Kosten",
+    "delta": 1,
+    "gesamt": {
+     "K1": 0.5290697674418605,
+     "K2": 0.43459302325581395,
+     "K3": 0.5436046511627907,
+     "K4": 0.5915697674418605,
+     "K5": 0.4011627906976744
+    },
+    "platz1": "K4",
+    "rang": [
+     "K4",
+     "K3",
+     "K1",
+     "K2",
+     "K5"
+    ]
+   },
+   {
+    "art": "Methode ±1",
+    "kriterium": "Bauraum",
+    "delta": -1,
+    "gesamt": {
+     "K1": 0.5060975609756098,
+     "K2": 0.4329268292682927,
+     "K3": 0.5579268292682927,
+     "K4": 0.5945121951219512,
+     "K5": 0.40853658536585363
+    },
+    "platz1": "K4",
+    "rang": [
+     "K4",
+     "K3",
+     "K1",
+     "K2",
+     "K5"
+    ]
+   },
+   {
+    "art": "Methode ±1",
+    "kriterium": "Bauraum",
+    "delta": 1,
+    "gesamt": {
+     "K1": 0.5290697674418605,
+     "K2": 0.4418604651162791,
+     "K3": 0.5494186046511628,
+     "K4": 0.5843023255813954,
+     "K5": 0.3953488372093023
+    },
+    "platz1": "K4",
+    "rang": [
+     "K4",
+     "K3",
+     "K1",
+     "K2",
+     "K5"
+    ]
+   },
+   {
+    "art": "Methode ±1",
+    "kriterium": "Fehlermöglichkeiten (FSR, HARA)",
+    "delta": -1,
+    "gesamt": {
+     "K1": 0.5182926829268293,
+     "K2": 0.4405487804878049,
+     "K3": 0.5548780487804879,
+     "K4": 0.5807926829268293,
+     "K5": 0.4054878048780488
+    },
+    "platz1": "K4",
+    "rang": [
+     "K4",
+     "K3",
+     "K1",
+     "K2",
+     "K5"
+    ]
+   },
+   {
+    "art": "Methode ±1",
+    "kriterium": "Fehlermöglichkeiten (FSR, HARA)",
+    "delta": 1,
+    "gesamt": {
+     "K1": 0.5174418604651163,
+     "K2": 0.43459302325581395,
+     "K3": 0.5523255813953488,
+     "K4": 0.5973837209302325,
+     "K5": 0.39825581395348836
+    },
+    "platz1": "K4",
+    "rang": [
+     "K4",
+     "K3",
+     "K1",
+     "K2",
+     "K5"
+    ]
+   },
+   {
+    "art": "Methode ±1",
+    "kriterium": "Wirkungsgrad",
+    "delta": -1,
+    "gesamt": {
+     "K1": 0.5289634146341463,
+     "K2": 0.43902439024390244,
+     "K3": 0.5457317073170732,
+     "K4": 0.5914634146341463,
+     "K5": 0.3948170731707317
+    },
+    "platz1": "K4",
+    "rang": [
+     "K4",
+     "K3",
+     "K1",
+     "K2",
+     "K5"
+    ]
+   },
+   {
+    "art": "Methode ±1",
+    "kriterium": "Wirkungsgrad",
+    "delta": 1,
+    "gesamt": {
+     "K1": 0.5072674418604651,
+     "K2": 0.436046511627907,
+     "K3": 0.561046511627907,
+     "K4": 0.5872093023255814,
+     "K5": 0.40843023255813954
+    },
+    "platz1": "K4",
+    "rang": [
+     "K4",
+     "K3",
+     "K1",
+     "K2",
+     "K5"
+    ]
+   },
+   {
+    "art": "Methode ±1",
+    "kriterium": "Reifegrad",
+    "delta": -1,
+    "gesamt": {
+     "K1": 0.5060975609756098,
+     "K2": 0.4344512195121951,
+     "K3": 0.5609756097560976,
+     "K4": 0.586890243902439,
+     "K5": 0.4115853658536585
+    },
+    "platz1": "K4",
+    "rang": [
+     "K4",
+     "K3",
+     "K1",
+     "K2",
+     "K5"
+    ]
+   },
+   {
+    "art": "Methode ±1",
+    "kriterium": "Reifegrad",
+    "delta": 1,
+    "gesamt": {
+     "K1": 0.5290697674418605,
+     "K2": 0.44040697674418605,
+     "K3": 0.5465116279069767,
+     "K4": 0.5915697674418605,
+     "K5": 0.39244186046511625
+    },
+    "platz1": "K4",
+    "rang": [
+     "K4",
+     "K3",
+     "K1",
+     "K2",
+     "K5"
+    ]
+   },
+   {
+    "art": "Zusatz Grenzwert",
+    "kriterium": "Ausgleichszeit",
+    "delta": 0.0,
+    "gesamt": {
+     "K1": 0.59375,
+     "K2": 0.46875,
+     "K3": 0.5,
+     "K4": 0.6145833333333334,
+     "K5": 0.3229166666666667
+    },
+    "platz1": "K4",
+    "rang": [
+     "K4",
+     "K1",
+     "K3",
+     "K2",
+     "K5"
+    ]
+   },
+   {
+    "art": "Zusatz Grenzwert",
+    "kriterium": "Ausgleichszeit",
+    "delta": 12.0,
+    "gesamt": {
+     "K1": 0.4609375,
+     "K2": 0.4140625,
+     "K3": 0.59375,
+     "K4": 0.5703125,
+     "K5": 0.4609375
+    },
+    "platz1": "K3",
+    "rang": [
+     "K3",
+     "K4",
+     "K1",
+     "K5",
+     "K2"
+    ]
+   },
+   {
+    "art": "Zusatz Grenzwert",
+    "kriterium": "Wärme in der CMU",
+    "delta": 0.0,
+    "gesamt": {
+     "K1": 0.6041666666666666,
+     "K2": 0.40625,
+     "K3": 0.5,
+     "K4": 0.6041666666666666,
+     "K5": 0.3854166666666667
+    },
+    "platz1": "K1",
+    "rang": [
+     "K1",
+     "K4",
+     "K3",
+     "K2",
+     "K5"
+    ]
+   },
+   {
+    "art": "Zusatz Grenzwert",
+    "kriterium": "Wärme in der CMU",
+    "delta": 12.0,
+    "gesamt": {
+     "K1": 0.453125,
+     "K2": 0.4609375,
+     "K3": 0.59375,
+     "K4": 0.578125,
+     "K5": 0.4140625
+    },
+    "platz1": "K3",
+    "rang": [
+     "K3",
+     "K4",
+     "K2",
+     "K1",
+     "K5"
+    ]
+   },
+   {
+    "art": "Zusatz Grenzwert",
+    "kriterium": "Kosten",
+    "delta": 0.0,
+    "gesamt": {
+     "K1": 0.4375,
+     "K2": 0.4583333333333333,
+     "K3": 0.625,
+     "K4": 0.5729166666666666,
+     "K5": 0.40625
+    },
+    "platz1": "K3",
+    "rang": [
+     "K3",
+     "K4",
+     "K2",
+     "K1",
+     "K5"
+    ]
+   },
+   {
+    "art": "Zusatz Grenzwert",
+    "kriterium": "Kosten",
+    "delta": 12.0,
+    "gesamt": {
+     "K1": 0.578125,
+     "K2": 0.421875,
+     "K3": 0.5,
+     "K4": 0.6015625,
+     "K5": 0.3984375
+    },
+    "platz1": "K4",
+    "rang": [
+     "K4",
+     "K1",
+     "K3",
+     "K2",
+     "K5"
+    ]
+   },
+   {
+    "art": "Zusatz Grenzwert",
+    "kriterium": "Bauraum",
+    "delta": 0.0,
+    "gesamt": {
+     "K1": 0.4375,
+     "K2": 0.40625,
+     "K3": 0.5833333333333334,
+     "K4": 0.625,
+     "K5": 0.4479166666666667
+    },
+    "platz1": "K4",
+    "rang": [
+     "K4",
+     "K3",
+     "K5",
+     "K1",
+     "K2"
+    ]
+   },
+   {
+    "art": "Zusatz Grenzwert",
+    "kriterium": "Bauraum",
+    "delta": 12.0,
+    "gesamt": {
+     "K1": 0.578125,
+     "K2": 0.4609375,
+     "K3": 0.53125,
+     "K4": 0.5625,
+     "K5": 0.3671875
+    },
+    "platz1": "K1",
+    "rang": [
+     "K1",
+     "K4",
+     "K3",
+     "K2",
+     "K5"
+    ]
+   },
+   {
+    "art": "Zusatz Grenzwert",
+    "kriterium": "Fehlermöglichkeiten (FSR, HARA)",
+    "delta": 0.0,
+    "gesamt": {
+     "K1": 0.5208333333333334,
+     "K2": 0.4583333333333333,
+     "K3": 0.5625,
+     "K4": 0.53125,
+     "K5": 0.4270833333333333
+    },
+    "platz1": "K3",
+    "rang": [
+     "K3",
+     "K4",
+     "K1",
+     "K2",
+     "K5"
+    ]
+   },
+   {
+    "art": "Zusatz Grenzwert",
+    "kriterium": "Fehlermöglichkeiten (FSR, HARA)",
+    "delta": 12.0,
+    "gesamt": {
+     "K1": 0.515625,
+     "K2": 0.421875,
+     "K3": 0.546875,
+     "K4": 0.6328125,
+     "K5": 0.3828125
+    },
+    "platz1": "K4",
+    "rang": [
+     "K4",
+     "K3",
+     "K1",
+     "K2",
+     "K5"
+    ]
+   },
+   {
+    "art": "Zusatz Grenzwert",
+    "kriterium": "Wirkungsgrad",
+    "delta": 0.0,
+    "gesamt": {
+     "K1": 0.59375,
+     "K2": 0.4479166666666667,
+     "K3": 0.5,
+     "K4": 0.6041666666666666,
+     "K5": 0.3541666666666667
+    },
+    "platz1": "K4",
+    "rang": [
+     "K4",
+     "K1",
+     "K3",
+     "K2",
+     "K5"
+    ]
+   },
+   {
+    "art": "Zusatz Grenzwert",
+    "kriterium": "Wirkungsgrad",
+    "delta": 12.0,
+    "gesamt": {
+     "K1": 0.4609375,
+     "K2": 0.4296875,
+     "K3": 0.59375,
+     "K4": 0.578125,
+     "K5": 0.4375
+    },
+    "platz1": "K3",
+    "rang": [
+     "K3",
+     "K4",
+     "K1",
+     "K5",
+     "K2"
+    ]
+   },
+   {
+    "art": "Zusatz Grenzwert",
+    "kriterium": "Reifegrad",
+    "delta": 0.0,
+    "gesamt": {
+     "K1": 0.4375,
+     "K2": 0.4166666666666667,
+     "K3": 0.6041666666666666,
+     "K4": 0.5729166666666666,
+     "K5": 0.46875
+    },
+    "platz1": "K3",
+    "rang": [
+     "K3",
+     "K4",
+     "K5",
+     "K1",
+     "K2"
+    ]
+   },
+   {
+    "art": "Zusatz Grenzwert",
+    "kriterium": "Reifegrad",
+    "delta": 12.0,
+    "gesamt": {
+     "K1": 0.578125,
+     "K2": 0.453125,
+     "K3": 0.515625,
+     "K4": 0.6015625,
+     "K5": 0.3515625
+    },
+    "platz1": "K4",
+    "rang": [
+     "K4",
+     "K1",
+     "K3",
+     "K2",
+     "K5"
+    ]
+   }
+  ]
+ }
+}

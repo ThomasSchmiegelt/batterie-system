@@ -336,3 +336,46 @@ Werkzeuge nach BAT-DOC-23 (Sonnet), Vorschläge für Methode, Ebene und Lastfall
 - **Verfehlt: PyBaMM LFP.** Die entnommene Ladung beträgt 48,6 Ah statt 92,4 Ah (−47 %). Das deckt sich mit C1. Deutung Opus: Der LFP-Parametersatz bildet die Projektzelle nicht ab, vermutlich wegen Stöchiometriefenster bzw. Elektrodenfläche. Das ist kein Fehler des Löseres. Folge: Alle LFP-Ergebnisse aus PyBaMM (Ladezeit, Wärmequelle) haben Glaubwürdigkeit W = 0. REQ-P05 LFP bleibt zu Recht blockiert. Die Wärmequellen der LFP-Thermik (K1/K4) müssen in Schleife 2 auf ihre Herkunft geprüft werden.
 - **QN8 (Δp K3 +232 %):** FluidX3D unterschätzt die Rohrströmung bei grober Auflösung, bei 4–5 Zellen um −4 bis −6 %. Es überschätzt sie nicht. Deutung Opus: Die +232 % kommen nicht vom Löser, sondern aus dem Vergleich. Vermutlich fehlen in der 1D-Korrelation (K2) die Umlenk- sowie Ein- und Auslaufverluste der Mäander, oder K3 wertet den Druck an anderer Stelle aus. Prüfung in Schleife 2: K3-Geometrie ohne Umlenkungen gegen K2.
 - V1 mit ungerader Elementzahl ausgewertet: gültig. Bei gerader Zahl liegt ein Knoten im Maximum und das Ergebnis wäre trivial exakt.
+
+## B-BAT-050 Elektronik nur als Block, EMV und funktionale Sicherheit fehlten im Lastenheft (2026-11-24, gefunden von Opus auf Frage des Autors)
+- Stand: BT-300/700 als Kaufteile ohne Innenleben. Kein REQ zu EMV, ISO 26262 und Kriechstrecken (nur docs/07 Zeile „sobald BMS ausgelegt wird“).
+- Maßnahme: REQ-P17…P21 und REQ-D15 als Vorschlag. HARA-Entwurf BAT-DOC-24 (SG-01 Überladung ASIL D vorgeschlagen). BT-311, BT-321…325, BT-715 neu. Aufträge E3 (CMU-Platine KiCad, SPICE) und KR1 (Kreativmethode + Paarvergleich).
+- Erwartung, die verfehlt werden kann: Die Wärme der Ausgleichswiderstände auf der CMU-Platine liegt ohne Wärmepfad vermutlich über 105 °C (ERW-E3 Punkt 3). Vorladung bei 912 V statt 800 V: 416 J statt 320 J.
+- Offen beim Autor: Fragen F-S1…F-S6 (BAT-DOC-24), Pegel REQ-P17, Gewichte KR1.
+
+## B-BAT-051 E3 CMU-Platine: Wärme der Ausgleichswiderstände zu hoch, Layout ungeroutet (2026-11-24, Sonnet, Deutung Opus)
+- SPICE an den Rohdaten geprüft (`sim/elektrik/e3_platine/ergebnis_*.json`): Ausgleich LFP 152 mA / NMC 127,4 mA bei U_max. Bei U_nenn dauert der Ausgleich +14 % länger als in E2 gerechnet. Vorladung 912 V: 9,12 A, 416 J, 300 ms. ENT-172 von 34 auf 32,45 Ω korrigiert; der Fehler lag in der Opus-Tabelle ERW-E3.
+- **Wärme verfehlt (erwartet):** 9,6–10 W auf 120 × 60 mm ergeben ΔT 67 K (h = 10 W/m²K) bis 139 K (h = 5), also 112–184 °C bei 45 °C Umgebung. Deutung Opus: Die Strahlung ist nicht berücksichtigt (h_Strahlung ≈ 6 W/m²K), realistisch ≈ 90–110 °C, damit Grenze 105 °C erreicht. Folge: Wärmepfad zur Kühlplatte oder Taktung nötig → E3b (Elmer) und KR1-Ergebnis.
+- Layout: 106 Teile (Erwartung 130–170; es fehlen Entkopplung, ESD und Abschlüsse, sie sind als Platzhalter offen). DRC 0 Verstöße, 212 Verbindungen nicht geroutet (Freerouting-Download vom Rechtesystem blockiert, Autor gefragt). Kollisionsfrei im Pack (NMC 0; LFP 3 Kollisionen schon vor E3).
+- Opus-Entscheidungen: Ausnahme Pad-Abstand innerhalb eines Bauteils (0,15 mm) ist zulässig, die Kriechstrecke im Gehäuse verantwortet der Bauteilhersteller. Platinenmasse als Annahme aus FR4 1,85 g/cm³ und Cu-Anteil, offen bis E3b.
+
+## B-BAT-052 Normtexte vom Autor ausgewertet: W47–W50, je 0 Zitatfehler (2026-11-24, PI, Prüfung Opus)
+- R100 Rev. 3 (W47): 100 Ω/V DC bzw. 500 Ω/V AC bestätigt REQ-P13. Ladegerät begrenzt den Fehlerfall Überladen auf 30 min (Schnittstelle zu SG-01).
+- R94/R95 (W48): Nach dem Crash ≤ 60 V DC innerhalb von 60 s oder < 0,2 J auf dem HV-Bus. **Damit ist die HARA-Annahme „5 s“ für SG-06 widerlegt und ersetzt.**
+- R135 (W50): Pfahl 254 ± 6 mm, 75 ± 3°, 32 ± 1 km/h (26 km/h nur bei Fahrzeugbreite ≤ 1,50 m). Prüfen in Schleife 2: Passt der Lastfall Pfahl 5 kJ (X3, REQ-P14) zur kinetischen Energie bei 32 km/h (≈ 59 kJ bei 1500 kg), und welcher Anteil davon erreicht das Pack?
+- 2023/1542 (W49): nur Schwellen und Fristen (CO₂-Fußabdruck ab 18.02.2028). Die BMS-Pflichten (SOH) sind nicht erfasst, die Suchbegriffe waren zu eng.
+
+## B-BAT-053 KR1 Kreativwerkzeug: drei Methodenfehler Opus im Pilot gefunden und behoben, Entscheidung ENT-184 (2026-11-24)
+- Lauf 1: Die Konzeptauswahl über den größten Hamming-Abstand erzeugte widersprüchliche Konzepte → Konzepte mit Leitidee von Opus.
+- Lauf 2: Reifegrad nicht definiert (PI las den Projektstand), Temperatur doppelt gezählt (3 Zirkel), Festforderung fehlte (K1 bewertet, obwohl es 105 °C verfehlt). Die Erwartung Opus zu K3 war physikalisch falsch: Takt verdoppelt die mittlere Wärme.
+- Lauf 3: 0 Zirkel, ζ 1,0, keine Positionsneigung. K6 0,563 / K2 0,544 (Gewichte Autor), innerhalb der Empfindlichkeit. Autor wählt K2 (Wärmeleitpad) → ENT-184. Unbelegt: Serienreife des aktiven Ausgleichs (PI widersprüchlich).
+- Lehre für die Methode (METHODE.md): Festforderungen zuerst, Kriterien schriftlich definieren, Konzepte nach Leitidee.
+
+## B-BAT-054 E3b: Wärmeleitpad und Vias lösen die Platinenwärme (2026-11-24, Sonnet/Elmer, Deutung Opus)
+- T_max LFP/NMC: Pad + Vias 49,1/48,9 °C (konservativ, Cu ohne Querleitung: 52,6/52,4), Pad ohne Vias 57,1/56,7 (konservativ 93,9/92,5), ohne Pad 120,3/118,0 °C. Energiebilanz geschlossen, Netzunterschied ≤ 0,55 K. 94–98 % der Wärme gehen in die Wand.
+- Erwartungsbänder 1/2 von Opus waren zu vorsichtig. Maßgebend ist der konservative Fall. ENT-185…187 entschieden (Opus delegiert). B-BAT-051 damit erledigt, sobald die Vias im Layout sitzen.
+- Offen: thermische Anbindung Rahmen → Kühlplatte nicht modelliert (Wand 45 °C konservativ); Zellerwärmung in der Endzone; Bauraum Pad + CMU.
+
+## B-BAT-055 FMEDA E3d: Sekundärschutz misst die Summe statt jeder Zelle, SG-02 verfehlt ASIL C (2026-11-24, gefunden von Sonnet in E3d, Deutung Opus)
+- SG-01: SPFM 99,92 %, LFM 98,14 % (ASIL D erreicht). **Gilt erst nach der Korrektur:** Der Sekundärschutz in `cmu_skidl.py` misst T18–T0, also die Summe. Eine Überladung einer einzelnen Zelle wird so nicht unabhängig erkannt (FSR-01 verletzt, Unschärfe in ERW-E3 von Opus). → 3 × 6-Zellen-Überspannungsschutz, neu FSR-12.
+- SG-02: SPFM 95,71 % < 97 %. Beiträge: FET-Kurzschluss 0,72 FIT, AFE „Ausgleich hängt an“ 0,40 FIT. → Maßnahme M1, zwei Schalter in Reihe: 97,85 %. Wird umgesetzt (ERW-E3 N7).
+- Einstufungen von Sonnet bestätigt: Stecker J1 als gemeinsame Ursache, Kurzschluss des Ausgleichswiderstands, Kommunikationsausfall „sicher“ nur mit Zeitüberwachung → neu FSR-11. PMHF nur der Restfehleranteil (grob).
+- B-BAT-E3c: BT-722 hat kein Merkmal für lichte Höhe, BT-311 nur 4 Merkmale (Luftstrecke, Abstände, Schützkanäle ohne Akte); Passivwerte, HV-Hilfsversorgung und Schützstrom offen (E3c ERGEBNIS.md, Abschnitt Grenzen).
+
+## B-BAT-056 KR2: Konzept K4 verletzt die Festforderung, von PI gefunden (2026-11-24)
+- KR2 Rang mit den Gewichten des Autors: K1 0,731 (stabil Platz 1), K3 0,609, K4 0,603, K5 0,425, K2 0,131. **K1 bestätigt das FSR-Konzept** in docs/24.
+- K4 (Warnung 2 s ohne Drosseln) verletzt die FTTI von 1 s. Opus hat das beim Bau des Kastens übersehen, PI hat es im Kopfstand benannt, Sonnet hielt es für einen Lesefehler. Folge: Konzepte künftig per Skript gegen die Festforderung prüfen. 1 Zirkel (Nachweisaufwand) ohne Einfluss.
+
+## B-BAT-057 pack_e2d.py war kurz leer (Skriptfehler Sonnet E3c), rekonstruiert (2026-11-24)
+- Sonnet hat die Datei aus git HEAD und den 5 protokollierten Änderungen (E3, E3c) wiederhergestellt. Prüfung Opus: Diff gelesen, beide Schalter (PACK_E3, PACK_E3C) vollständig. Ergebnisse plausibel: E3 NMC unverändert 482,75 kg und 0 Kollisionen, E3c LFP 619,85 kg / NMC 482,41 kg mit 0 Kollisionen. Die Massedifferenz entsteht, weil die BMS-Platine 66,5 g statt des Platzhalterquaders wiegt.
+- Lehre: Vor jeder Skriptänderung an geteilten CAD-Dateien eine Sicherung anlegen bzw. einen Commit machen. Der Tagesstand war uncommittet, deshalb das Risiko.

@@ -9,7 +9,10 @@ from FreeCAD import Vector as V
 
 VAR = os.environ["PACK_VARIANTE"]
 E2 = True   # pack_e2d.py baut immer die E2-Teile (Detailierung), Ausgabe mit Suffix _e2d; pack.py und die _e2-Dateien bleiben unberührt
-VO = VAR + "_e2d"
+E3C = os.environ.get("PACK_E3C") == "1"   # E3c (Sonnet 2026-11-24): zusätzlich BMS-Platine BT-311 aus dem KiCad-STEP (sim/elektrik/e3c_bms_platine), Ausgabe Suffix _e3c
+E3 = os.environ.get("PACK_E3") == "1" or E3C   # E3 (Sonnet 2026-11-24): CMU-Quader durch das KiCad-STEP der Platine ersetzen (sim/elektrik/e3_platine), Ausgabe mit Suffix _e3
+VO = VAR + "_e2d" + ("_e3c" if E3C else "_e3" if E3 else "")
+PARM = json.load(open(f"{os.environ.get('BATTERIE', '/home/cae/hermes/batterie')}/pm/bauteile/parameter.json"))["parameter"]   # Maße aus Akten (E3c: BT-722 lichte_hoehe_zugabe_mm = ENT-194)
 ROOT = os.environ.get("BATTERIE", "/home/cae/hermes/batterie")
 OUT = f"{ROOT}/cad/pack/entwurf"
 PJ = json.load(open(os.environ.get("PACK_PARAMETER", f"{OUT}/parameter_{VAR}_e2d.json")))
@@ -224,7 +227,22 @@ if E2:
     cmu_x = {"vorn": (xv_in, xv_in + cmuD), "hinten": (xh_in - cmuD, xh_in)}
     for j in range(ncmu):
         x0, x1 = cmu_x[seite[j]]
-        add(f"CMU_{j:02d}", "E2_CMU", box(x0, ypos[j] - cmuL / 2, zc - cmuB / 2, x1, ypos[j] + cmuL / 2, zc + cmuB / 2), mass=A["A_e2_cmu_masse_kg"], mat="E2 Teil (Masse ERW-E2 N1)")
+        cbox = box(x0, ypos[j] - cmuL / 2, zc - cmuB / 2, x1, ypos[j] + cmuL / 2, zc + cmuB / 2)
+        add(f"CMU_{j:02d}", "E2_CMU", cbox, mass=A["A_e2_cmu_masse_kg"], mat="E2 Teil (Masse ERW-E2 N1)")
+        if E3:   # Platine aus KiCad-STEP: Platinen-x (Länge) -> Pack-y, Platinen-y (Breite) -> Pack-z, Platinen-z (Bauteile oben) -> Pack-x (vorn +x, hinten -x); Rückseite an der Wand
+            if "E3SHAPE" not in globals():
+                E3SHAPE = Part.read(f"/home/cae/cae_projekte/batterie/e3/cmu_{VAR}.step"); bb3 = E3SHAPE.BoundBox
+                E3SHAPE.translate(V(-bb3.XMin, -bb3.YMin, -bb3.ZMin)); E3DIM = (bb3.XLength, bb3.YLength, bb3.ZLength)
+            m3 = FreeCAD.Matrix()
+            if seite[j] == "vorn": m3.A11, m3.A12, m3.A13, m3.A21, m3.A22, m3.A23, m3.A31, m3.A32, m3.A33 = 0, 0, 1, 1, 0, 0, 0, 1, 0; ox = x0
+            else: m3.A11, m3.A12, m3.A13, m3.A21, m3.A22, m3.A23, m3.A31, m3.A32, m3.A33 = 0, 0, -1, 1, 0, 0, 0, -1, 0; ox = x1
+            sh3 = E3SHAPE.copy().transformShape(m3)
+            bt3 = sh3.BoundBox; sh3.translate(V(ox - (bt3.XMin if seite[j] == "vorn" else bt3.XMax), ypos[j] - cmuL / 2 - bt3.YMin, zc + cmuB / 2 - bt3.ZMax if False else zc - cmuB / 2 - bt3.ZMin))
+            teile[-1]["shape"] = sh3; teile[-1]["cutshape"] = cbox
+            _m3 = json.load(open("/home/cae/hermes/batterie/sim/elektrik/e3_platine/ergebnis_platine.json"))[VAR]["masse"]   # Masse aus E3 (Nachtrag 6): Platine + Wärmeleitpad ENT-185 (Pad nicht als Körper modelliert)
+            teile[-1]["mass"] = _m3["gesamt_mit_pad_g"] / 1000
+            teile[-1]["mat"] = "E3 Platine STEP; Masse %.2f g = Platine %.2f g + Wärmeleitpad %.2f g (ergebnis_platine.json, ERW-E3 Nachtrag 6)" % (_m3["gesamt_mit_pad_g"], _m3["platine_ohne_pad_g"], _m3["pad_g"])
+            e2res_e3 = globals().setdefault("E3INFO", dict(platine_mm=[round(d, 2) for d in E3DIM], hoehe_bauteile_ueber_leiter_mm=None))
         geo["cmu"].append(dict(i=j, seite=seite[j], x=(x0 + x1) / 2, y=ypos[j], taps=len(grp_t[j])))
     # ====================== E2D (Fortsetzung 5): Schaltbox innen, Kabel, Stecker, Trennbrücke. Maße: A_e2d_* (ERW-E2 N3 oder "abgeleitet"), Akten, A_e2_* ======================
     import e2d_geo as G
@@ -326,10 +344,15 @@ if E2:
     # BMS: Platine auf 4 Abstandsbolzen
     x0, y0 = pos["BMS_Platine"]; bl_, bb_ = bms[0], bms[1]; ab_n, ab_g, ab_h = AD3("bms_abstandsbolzen"); abo = AD("bms_abstandsbolzen_aussen_mm"); abz = AD("bms_abstandsbolzen_einzug_mm"); pdk = AD("bms_platine_dicke_mm")
     addi("BMS_Platine", box(x0, y0, z0 + ab_h, x0 + bl_, y0 + bb_, z0 + ab_h + pdk), A["A_e2_bms_masse_kg"], "E2 Teil (Masse ERW-E2 N1)")
+    if E3C:   # E3c: Platine aus KiCad-STEP statt Quader (Länge -> x, Breite -> y, Bauteile oben +z); Ecke der Platine = Ecke des BMS-Platzes
+        _bs = Part.read("/home/cae/cae_projekte/batterie/e3c/bms.step"); _bb = _bs.BoundBox; _bs.translate(V(x0 - _bb.XMin, y0 - _bb.YMin, z0 + ab_h - _bb.ZMin))
+        teile[-1]["shape"] = _bs; teile[-1]["cutshape"] = box(x0, y0, z0 + ab_h, x0 + bl_, y0 + bb_, z0 + ab_h + pdk)
+        _mb = json.load(open("/home/cae/hermes/batterie/sim/elektrik/e3c_bms_platine/ergebnis_platine.json"))["masse"]
+        teile[-1]["mass"] = _mb["gesamt_g"] / 1000; teile[-1]["mat"] = "E3c BMS-Platine STEP; Masse %.1f g (ergebnis_platine.json, ERW-E3c)" % _mb["gesamt_g"]
     for k_, (xx_, yy_) in enumerate(((x0 + abz, y0 + abz), (x0 + bl_ - abz, y0 + abz), (x0 + abz, y0 + bb_ - abz), (x0 + bl_ - abz, y0 + bb_ - abz))):
         addi(f"BMS_Abstandsbolzen_{k_}", cyl(xx_, yy_, z0, z0 + ab_h, abo / 2), 0.0, "Stahl (Masse offen, 0 gesetzt)")
     bsl, bsb, bsh = AD3("bms_stecker_mm")
-    for k_, (nm_, yy_) in enumerate((("BMS_Stecker_26pol", 20), ("BMS_Daisy_Stecker_1", 70), ("BMS_Daisy_Stecker_2", 110))):
+    for k_, (nm_, yy_) in enumerate(() if E3C else (("BMS_Stecker_26pol", 20), ("BMS_Daisy_Stecker_1", 70), ("BMS_Daisy_Stecker_2", 110))):
         addi(nm_, box(x0 + bl_ - 10 - bsl, y0 + yy_, z0 + ab_h + pdk, x0 + bl_ - 10, y0 + yy_ + bsb, z0 + ab_h + pdk + bsh), 0.0, "E2 Teil (Masse offen, 0 gesetzt)")
     # Shunt: Messplatine 80x40x1,6 unten, darauf Cu-Ende, Manganin-Steg 3, Cu-Ende
     x0, y0 = pos["Shunt"]; sl_, sb_, sh_ = dev["Shunt"]; stg = AD("shunt_steg_mm"); spl = AD3("shunt_platine_mm"); cuL = (sl_ - stg) / 2
@@ -519,17 +542,20 @@ if E2:
         ring = box(ox0 + 9, py - oy_ / 2 + 9, z_top, ox0 + ox_ - 9, py + oy_ / 2 - 9, z_top + dgh).cut(box(ox0 + 12, py - oy_ / 2 + 12, z_top - 1, ox0 + ox_ - 12, py + oy_ / 2 - 12, z_top + dgh + 1))
         add("Servicedeckel_Dichtung", "E2_Dichtung", ring, mass=0.0, mat="Dichtung (Masse offen, 0 gesetzt)")
         n_sd, d_sd = AD3("servicedeckel_schrauben"); sps = [(ox0 + 4.5, py + dy_) for dy_ in (-45, 0, 45)] + [(ox0 + ox_ - 4.5, py + dy_) for dy_ in (-45, 0, 45)]
-        cov = box(ox0, py - oy_ / 2, zc0, ox0 + ox_, py + oy_ / 2, zc0 + sdh).cut(Part.makeCompound([cyl(x_, y_, zc0 - 1, zc0 + sdh + 1, m5k[0] / 2) for x_, y_ in sps]))
+        # E3c Teil A: lichte Höhe innen >= Schraubenstapel M8 + Zugabe (ERW-E3c); Deckel wird um den fehlenden Betrag dicker, Tasche innerhalb der Dichtung (12 mm vom Rand)
+        lichte_ = max(stack_h + PARM["BT-722"]["lichte_hoehe_zugabe_mm"]["wert"], zc0 - (zb0 + bt_)); dz_ = (zb0 + bt_ + lichte_) - zc0   # Zuwachs gegenüber dem flachen Deckel
+        assert dz_ >= 0; zt_ = zc0 + dz_ + sdh   # Oberkante Deckel
+        cov = box(ox0, py - oy_ / 2, zc0, ox0 + ox_, py + oy_ / 2, zt_).cut(box(ox0 + 12, py - oy_ / 2 + 12, zc0 - 1, ox0 + ox_ - 12, py + oy_ / 2 - 12, zc0 + dz_)).cut(Part.makeCompound([cyl(x_, y_, zc0 - 1, zt_ + 1, m5k[0] / 2) for x_, y_ in sps]))
         add("Servicedeckel", "E2_Servicedeckel", cov, mat="Al")
         cutter.append((Part.makeCompound([cyl(x_, y_, z_dk - 1, z_top + 1, d_sd / 2) for x_, y_ in sps]), ("Deckel",)))
         for k_, (x_, y_) in enumerate(sps):
-            add(f"Servicedeckel_Senkschraube_{k_}_Kopf", "E2_Schraube", cyl(x_, y_, zc0, zc0 + sdh, m5k[0] / 2), mass=0.0, mat="Stahl (Masse offen, 0 gesetzt)")
-            add(f"Servicedeckel_Senkschraube_{k_}_Schaft", "E2_Schraube", cyl(x_, y_, z_dk, zc0, d_sd / 2), mass=0.0, mat="Stahl (Masse offen, 0 gesetzt)")
+            add(f"Servicedeckel_Senkschraube_{k_}_Kopf", "E2_Schraube", cyl(x_, y_, zt_ - sdh, zt_, m5k[0] / 2), mass=0.0, mat="Stahl (Masse offen, 0 gesetzt)")
+            add(f"Servicedeckel_Senkschraube_{k_}_Schaft", "E2_Schraube", cyl(x_, y_, z_dk, zt_ - sdh, d_sd / 2), mass=0.0, mat="Stahl (Masse offen, 0 gesetzt)")
         kf_ = (Lg - 2 * rand) * (B - 2 * rand); nut_ = gz_ * ((ymax_ - 1) - (ymin_ + 1)); ov_ = gz_ * oy_
         nut_info = dict(kuehlflaeche_oben_mm2=kf_, nut_flaeche_gesamt_mm2=nut_, nut_flaeche_ohne_oeffnung_mm2=nut_ - ov_, nut_tiefe_in_kuehlplatte_mm=gt_ - A["A_pad_mm"], nut_anteil_prozent=100 * (nut_ - ov_) / kf_,
                         oeffnung_flaeche_mm2=ox_ * oy_, nut_plus_oeffnung_anteil_prozent=100 * (nut_ - ov_ + ox_ * oy_) / kf_, oeffnung_anteil_prozent=100 * ox_ * oy_ / kf_)
         quer_L = (yA - ymin_ - 1) + (ymax_ - 1 - yB)
-        lfp_stecker = dict(bauform="trennbruecke_servicedeckel (ENT-150), E2D: Deckel auf Dichtung", x=px, y=py, oberkante_mm=zc0 + sdh, ueber_deckel_mm=zc0 + sdh - z_top, serviceoeffnung_mm=[oy_, ox_], oeffnung_x0_mm=ox0, bruecke_mm=[bw_, bt_, (yB - yA) + 2 * bov_],
+        lfp_stecker = dict(bauform="trennbruecke_servicedeckel (ENT-150), E2D: Deckel auf Dichtung", x=px, y=py, oberkante_mm=zt_, ueber_deckel_mm=zt_ - z_top, servicedeckel_lichte_hoehe_mm=lichte_, servicedeckel_hoehenzuwachs_mm=dz_, serviceoeffnung_mm=[oy_, ox_], oeffnung_x0_mm=ox0, bruecke_mm=[bw_, bt_, (yB - yA) + 2 * bov_],
                            luecke_mm=bg_, querverbinder_laenge_mm=quer_L, laschen=la_info, nut=nut_info, schraubenstapel_mm=stack_h, schraubenstapel_oberkante_mm=zb0 + bt_ + stack_h, freie_hoehe_unter_deckel_mm=zc0 - (zb0 + bt_),
                            deckel_oeffnung_rand_mm=rim, servicedeckel_unterkante_mm=zc0)
 
@@ -648,7 +674,7 @@ if E2:
     # ---- Durchführungen und Aussparungen (Verguss/Träger/Pad/Kühlplatte/Deckel werden um E2-Teile herum gelassen; Volumen wird gemeldet)
     for q_ in vert_cut: cutter.append((q_, ("Pad_oben", "Kuehlplatte_oben", "Deckel")))
     for p in list(teile):
-        if p["grp"] in ("E2_CMU", "E2_Daisy"): cutter.append((p["shape"], ("Zelltraeger_f", "Verguss_f")))
+        if p["grp"] in ("E2_CMU", "E2_Daisy"): cutter.append((p.get("cutshape", p["shape"]), ("Zelltraeger_f", "Verguss_f")))
         if p["grp"] == "E2_Lasche": cutter.append((p["shape"], ("FPC_Tab_", "NTC_")))
         if p["name"].endswith("_Zelle_Palme") or p["name"].startswith("HV_Mitte"): cutter.append((p["shape"], ("Beruehrschutz",)))
         if p["name"].startswith("Gruppenverbinder_g") and VAR == "NMC": cutter.append((p["shape"], ("FPC_0", "FPC_1", "FPC_2")))
@@ -709,7 +735,8 @@ for p in teile:
 
 # ---- Kollisionsprüfung: Paare mit überlappender Bounding Box (> 1e-3 mm), dann Schnittvolumen
 bb = np.array([[p["shape"].BoundBox.XMin, p["shape"].BoundBox.YMin, p["shape"].BoundBox.ZMin, p["shape"].BoundBox.XMax, p["shape"].BoundBox.YMax, p["shape"].BoundBox.ZMax] for p in teile])
-tol = 1e-3; N = len(teile); paare = 0; koll = []; tmax = 0.0
+tol = 1e-3; N = len(teile); paare = 0; koll = []; kontakte = []; tmax = 0.0
+KONTAKT_VERSCHRAUBT = [{"Schmelz_Lasche_A", "Schiene_5_Pyro_Schmelz"}]   # E3c Teil A (ERW-E3c): verschraubte Paare, Schwelle A_e3c_kontakt_schwelle_mm3
 for i in range(N):
     ov = (bb[i, 3] - tol > bb[i + 1:, 0]) & (bb[i, 0] + tol < bb[i + 1:, 3]) & (bb[i, 4] - tol > bb[i + 1:, 1]) & (bb[i, 1] + tol < bb[i + 1:, 4]) & (bb[i, 5] - tol > bb[i + 1:, 2]) & (bb[i, 2] + tol < bb[i + 1:, 5])
     for j in np.nonzero(ov)[0] + i + 1:
@@ -717,7 +744,9 @@ for i in range(N):
         if a["grp"] == b["grp"] == "Zellen" and False: continue
         paare += 1
         vol = a["shape"].common(b["shape"]).Volume
-        if vol > 1e-6: koll.append(dict(a=a["name"], b=b["name"], volumen_mm3=vol))
+        if vol > 1e-6:
+            if {a["name"], b["name"]} in KONTAKT_VERSCHRAUBT and vol <= A["A_e3c_kontakt_schwelle_mm3"]: kontakte.append(dict(a=a["name"], b=b["name"], volumen_mm3=vol))   # E3c: verschraubte Berührung, kein Verstoß
+            else: koll.append(dict(a=a["name"], b=b["name"], volumen_mm3=vol))
 bbA = FreeCAD.BoundBox(); [bbA.add(p["shape"].BoundBox) for p in teile]
 doc = FreeCAD.newDocument(f"pack_{VO}")
 gruppen = {}
@@ -770,6 +799,10 @@ if E2:   # Netze für die E2D-Bilder (große Dateien nach cae_projekte)
     netz(lambda p: p["name"] not in ("Deckel", "Pad_oben", "Kuehlplatte_oben") and p["grp"] not in ("E2_Schaltbox", "E2_Schaltbox_Deckel"), f"{NZ}/netz_{VO}_ohnedeckel.json")
     netz(lambda p: p["grp"] not in ("Zellen", "E2_Schaltbox_Deckel"), f"{NZ}/netz_{VO}_boxoffen.json")
     if VAR == "LFP": netz(lambda p: p["grp"] != "Zellen" and not p["name"].startswith("Servicedeckel"), f"{NZ}/netz_{VO}_bruecke_offen.json")
+    # E3c (Sonnet 2026-11-24): offene Schaltbox mit Inhalt ohne BMS-Platzhalter, Lage des BMS-Platzes für das Einbaubild der BMS-Platine BT-311
+    netz(lambda p: p["grp"] in ("E2_Schaltbox", "E2_Schaltbox_Inhalt") and not p["name"].startswith(("BMS_Platine", "BMS_Stecker", "BMS_Daisy_Stecker")), f"{NZ}/netz_{VO}_bmsbox.json")
+    _bb = [p for p in teile if p["name"] == "BMS_Platine"][0]["shape"].BoundBox
+    e2res["bms_platine_bbox_mm"] = [_bb.XMin, _bb.YMin, _bb.ZMin, _bb.XMax, _bb.YMax, _bb.ZMax]
 if E2:
     e2res["masse_elektronik_gesamt_kg"] = sum(g_["masse_kg"] for k_, g_ in gm.items() if k_.startswith("E2") and k_ != "E2_FPC") + e2res["fpc_masse_kg"]   # Box, Inhalt, Stecker, CMU, alle FPC (auch ohne Platz), HV-Leiter (nur Cu)
     e2res["masse_hv_leiter_cu_kg"] = gm.get("E2_HV_Leitung", {}).get("masse_kg", 0.0) + cu_kg(2 * gap)
@@ -779,7 +812,8 @@ res = dict(schnittebene_quer_x_mm=(xq if not E2 else None), schnittebene_halb_x_
   variante=VAR, laenge_mm=bbA.XLength, breite_mm=bbA.YLength, hoehe_mm=bbA.ZLength, hoehe_stapel_mm=H, hoehe_max_mm=A["A_hoehe_max_mm"],
   gehaeuse_L_mm=Lg, zellen=len(cells), quertraeger_x_mm=pos_q, zellmasse_je_kg=mcell,
   gruppen=gm, masse_bekannt_kg=tot, schwerpunkt_mm=cg, mitte_mm=[Lg / 2, B / 2], schwerpunkt_abw_mm=[cg[0] - Lg / 2, cg[1] - B / 2],
-  teile=len(teile), kollisionspaare_geprueft=paare, kollisionen=koll, anzahl_kollisionen=len(koll), rechenzeit_s=time.time() - t0,
+  teile=len(teile), kollisionspaare_geprueft=paare, kollisionen=koll, anzahl_kollisionen=len(koll), kontakte_zugelassen=kontakte, rechenzeit_s=time.time() - t0,
+  e3=(dict(E3INFO, anzahl_cmu=ncmu, step=f"/home/cae/cae_projekte/batterie/e3/cmu_{VAR}.step", cmu_masse_gesamt_kg=sum(t_["mass"] or 0 for t_ in teile if t_["name"].startswith("CMU_")), cmu_masse_je_g=(teile[[t_["name"] for t_ in teile].index("CMU_00")]["mass"] or 0) * 1000, cmu_masse_alt_e2_kg=A["A_e2_cmu_masse_kg"] * ncmu) if E3 else None),
   e2=e2res, annahmen={k: PJ["A"][k] for k in PJ["A"]})
 json.dump(res, open(f"{OUT}/ergebnis_{VO}.json", "w"), indent=1, ensure_ascii=False)
 print("FERTIG", VAR, "Teile", len(teile), "Paare", paare, "Koll", len(koll), "t", round(time.time() - t0))

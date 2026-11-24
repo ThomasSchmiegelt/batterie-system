@@ -16,6 +16,7 @@ tags: ["dokument"]
 
 ## Genannte Anforderungen (Textvorkommen)
 - [[Anforderung/REQ-D14|REQ-D14]]
+- [[Anforderung/REQ-D15|REQ-D15]]
 - [[Anforderung/REQ-P01|REQ-P01]]
 - [[Anforderung/REQ-P03|REQ-P03]]
 - [[Anforderung/REQ-P05|REQ-P05]]
@@ -23,6 +24,8 @@ tags: ["dokument"]
 - [[Anforderung/REQ-P07|REQ-P07]]
 - [[Anforderung/REQ-P09|REQ-P09]]
 - [[Anforderung/REQ-P16|REQ-P16]]
+- [[Anforderung/REQ-P17|REQ-P17]]
+- [[Anforderung/REQ-P19|REQ-P19]]
 
 ## Genannte Entscheidungen, Befunde, Bauteile (Textvorkommen)
 - [[Befund/B-BAT-004|B-BAT-004]]
@@ -30,6 +33,7 @@ tags: ["dokument"]
 - [[Bauteil/BT-111|BT-111]]
 - [[Bauteil/BT-220|BT-220]]
 - [[Bauteil/BT-250|BT-250]]
+- [[Bauteil/BT-311|BT-311]]
 - [[Bauteil/BT-440|BT-440]]
 - [[Bauteil/BT-540|BT-540]]
 - [[Bauteil/BT-710|BT-710]]
@@ -53,6 +57,9 @@ tags: ["dokument"]
 - [[Entscheidung/ENT-102|ENT-102]]
 - [[Entscheidung/ENT-103|ENT-103]]
 - [[Entscheidung/ENT-151|ENT-151]]
+- [[Entscheidung/ENT-168|ENT-168]]
+- [[Entscheidung/ENT-172|ENT-172]]
+- [[Entscheidung/ENT-184|ENT-184]]
 
 ## Vorgänge, die dieses Dokument nennen
 - –
@@ -89,4 +96,6 @@ tags: ["dokument"]
 | AEN-017 | 2026-11-17 | 67 Akten (Zellmaße, Innenaufbau, Bäume ENT-002/031) entschieden; alle 103 Akten entschieden | ENT-002, 014…080 | Autor 2026-11-17 |
 | AEN-018 | 2026-11-18 | Lastenheft: REQ-P16 Herstellkosten je Variante (vorgeschlagen, Zielwert offen); Stückliste auf Konstruktionsstand je Variante | REQ-P16, docs/13 | Autor 2026-11-18 („kümmern um die Stückliste … Kostenbewertung“) |
 | AEN-019 | 2026-11-19 | Keine Knautschzone im Pack (ENT-151), BT-540 Rolle; Geometrie wird aus der Stückliste erzeugt (G5, cad/baukasten), neue BT-440/450/580/590 | ENT-151, struktur.json, docs/13 | Autor 2026-11-19 („verwerfe die knautschzone. Überarbeite die geometrie“) |
+| AEN-020 | 2026-11-24 | Lastenheft REQ-P17…P21 (EMV, ISO 26262, Kriechstrecken, Umwelt, Cyber) und REQ-D15 (Kreativmethode) als Vorschlag; HARA BAT-DOC-24; BT-311, 321…325, 715; Aufträge E3, KR1 | docs/01, docs/24, struktur.json, anforderungen.json | Autor 2026-11-24 („elektronik weiter detailieren … mosfets und wiederstände und die Platine“, „c, beides … paarbewertung“) |
+| AEN-021 | 2026-11-24 | ENT-168 Abstand CMU 0,6 → 0,2 mm, ENT-172 NMC 34 → 32,45 Ω (Korrekturen Opus nach E3); ENT-184 Wärmeleitpad (Autor, KR1); REQ-P19 Einsatzhöhe 3000 m; Zielmarkt nur Europa; HARA SG-06 FTTI 60 s (R94, W48); Regel „erst konservativ“, pm/optimierungen.md | ENT-168, 172, 184, REQ-P19, docs/24, CLAUDE.md | Autor 2026-11-24 |
 

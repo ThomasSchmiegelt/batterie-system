@@ -1,13 +1,13 @@
 ---
 typ: software
-status: "nicht installiert / nicht geprüft"
+status: "im Projekt (SOFTWARE.md)"
 tags: ["software"]
 ---
 # ngspice
 
 > KI-generiert, erzeugt aus pm/plan/wissensnetz.json – nicht von Hand bearbeiten
 
-- Status: nicht installiert / nicht geprüft
+- Status: im Projekt (SOFTWARE.md)
 - Übersicht: [[Dokument/SOFTWARE]]
 
 ## Vorgänge

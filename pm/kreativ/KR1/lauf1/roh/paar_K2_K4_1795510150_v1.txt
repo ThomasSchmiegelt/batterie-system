@@ -1,0 +1,1 @@
+{"urteile":{"Bauraum":{"gewinner":"A","grund":"A behält die CMU-Platine bei 120 x 60 x 10 mm und verlegt den Kühlkreislauf extern, während B die Platinenfläche lokal auf das Doppelte vergrößert.","zahl":{"wert":"Platine 120 x 60 x 10 mm","quelle":"F6"}}}}

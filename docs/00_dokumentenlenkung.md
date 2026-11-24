@@ -51,6 +51,10 @@ Dokumentkopf (Nummer, Version, Status, Ersteller, Prüfer), Hinweis „KI-generi
 | BAT-DOC-21 | 21_graph_luecken.md | Lücken aus dem Wissensgraphen (erzeugt) |
 | BAT-DOC-22 | 22_qualitaetsnachweis.md | Qualitätsnachweis, Glaubwürdigkeit der Kernergebnisse |
 | BAT-DOC-23 | 17_workflow_schleife.md | Workflow Schleife 2 (V-Modell, Tore T0–T6); Dateiname historisch, Nummer 17 ist der Bericht |
+| BAT-DOC-24 | 24_gefahrenanalyse_hara.md | Gefahrenanalyse und Risikobewertung (HARA) ISO 26262-3, Sicherheitsziele, FSR (Entwurf) |
+| BAT-PM-OPT | ../pm/optimierungen.md | Optimierungsliste (erst konservativ, Bewertung Kosten/Sicherheit/Effizienz) |
+| BAT-KR-00 | ../pm/kreativ/METHODE.md | Kreativmethoden mit Paarvergleich (Werkzeug pm/kreativ) |
+| BAT-DOC-25 | 25_loesungen_aus_kreativmethoden.md | Lösungen aus Kreativsitzungen und Opus-Abwägung, mit Zuschreibung und verworfenen Alternativen |
 
 ---
 *KI-generiert (Claude Opus, 2026-11-11). Status Entwurf. Freigabe nur durch den Autor.*

@@ -13,15 +13,15 @@ verifiziert_durch: ["sim/mechanik/x3_crash_g5/ergebnis.json::LFP_a.zellblock_vor
 
 Mechanik: Stoß, Schwingung, Crash
 
-- Wert (Lastenheft): nach Norm
+- Wert (Lastenheft): Zellverschiebung ≤ 0,5 mm bei Pfahl 5 kJ und bei Quetschung nach R100 (100–105 kN) (Autor, Freigaberunde 2026-11-23)
 - Priorität: Muss
-- Vom Autor bestätigt: nein
+- Vom Autor bestätigt: ja
 
 ## Verifikation (V-Modell-Matrix)
 
 - Methode: S (A Analyse, S Simulation, I Inspektion, T Test, R Review)
 - Ebene: System
-- Kriterium: dy_a <= 0.5 mm [Annahme Opus]<br>dy_b <= 0.5 mm [Annahme Opus]
+- Kriterium: dy_a <= 0.5 mm [Autor (Freigaberunde 2026-11-23)]<br>dy_b <= 0.5 mm [Autor (Freigaberunde 2026-11-23)]
 - Ist-Wert: [dy_a] LFP dy_a = 6.732 [sim/mechanik/x3_crash_g5/ergebnis.json :: LFP_a.zellblock_vorderseite_dy_max_mm]; NMC dy_a = 8.279 [sim/mechanik/x3_crash_g5/ergebnis.json :: NMC_a.zellblock_vorderseite_dy_max_mm]; [dy_b] LFP dy_b = 0.0188 [sim/mechanik/x3_crash_g5/ergebnis.json :: LFP_b.zellblock_vorderseite_dy_max_mm]; NMC dy_b = 2.591 [sim/mechanik/x3_crash_g5/ergebnis.json :: NMC_b.zellblock_vorderseite_dy_max_mm]
 - Bewertung: **verfehlt (Kriterium Annahme, Autor offen)**
 - Matrix: [[Dokument/06_verifikationsplan]] · Lastenheft: [[Dokument/01_lastenheft]] · Verfolgung: [[Dokument/03_anforderungsverfolgung]]

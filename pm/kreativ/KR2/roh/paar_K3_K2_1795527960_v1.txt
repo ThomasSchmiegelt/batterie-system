@@ -1,0 +1,1 @@
+{"urteile":{"Nachweisaufwand":{"gewinner":"B","grund":"Einkanalige 1oo1-Auslegung mit nur Software als Reaktionsweg vermeidet den Unabhängigkeitsnachweis zweier aktiver Pfade und die Voting-Logik, wodurch FMEDA-Umfang und Software-ASIL-Nachweis gegenüber 2oo3 mit Hardwarepfad deutlich geringer sind.","zahl":null}}}

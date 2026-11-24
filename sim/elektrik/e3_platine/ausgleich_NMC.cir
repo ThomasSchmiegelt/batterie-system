@@ -1,0 +1,14 @@
+* Ausgleichskanal NMC (KI-generiert, Sonnet 2026-11-24)
+Vz z 0 DC 4.2
+R1 z d 64.9
+R2 z d 64.9
+M1 d g 0 0 NFET W=2.8571u L=1u
+Vg g 0 DC 5
+.model NFET NMOS (LEVEL=1 VTO=1.5 KP=0.2 LAMBDA=0)
+.dc Vz 3.500 4.2 0.05
+.control
+run
+set wr_vecnames
+wrdata /home/cae/hermes/batterie/sim/elektrik/e3_platine/ausgleich_NMC.dat i(Vz) v(d)
+.endc
+.end

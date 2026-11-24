@@ -12,15 +12,15 @@ tags: ["anforderung", "bewertung/offen"]
 
 Kennzeichnung, CO₂-Fußabdruck und Batteriepass nach VO (EU) 2023/1542
 
-- Wert (Lastenheft): Pflichten der Batterieverordnung für Traktionsbatterien erfüllen (Artikel zu belegen, W37)
-- Priorität: –
-- Vom Autor bestätigt: nein
+- Wert (Lastenheft): Batteriepass, Kennzeichnung und CO₂-Fußabdruck nach VO (EU) 2023/1542 (Autor, Freigaberunde 2026-11-23)
+- Priorität: Muss
+- Vom Autor bestätigt: ja
 
 ## Verifikation (V-Modell-Matrix)
 
 - Methode: R (A Analyse, S Simulation, I Inspektion, T Test, R Review)
 - Ebene: System
-- Kriterium: Batteriepass_Datensatz vorhanden [Norm VO (EU) 2023/1542, belegt in W37b (forschung/ergebnis/W37b.md, Zitatprüfung 13/0): Batteriepass und QR-Code ab 18.02.2027; Wert des Kriteriums unverändert] (vorgeschlagen)
+- Kriterium: Batteriepass_Datensatz vorhanden [Autor (Freigaberunde 2026-11-23)] (festgelegt)
 - Ist-Wert: kein Nachweis verknüpft
 - Bewertung: **offen**
 - Matrix: [[Dokument/06_verifikationsplan]] · Lastenheft: [[Dokument/01_lastenheft]] · Verfolgung: [[Dokument/03_anforderungsverfolgung]]

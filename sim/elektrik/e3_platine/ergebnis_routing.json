@@ -1,0 +1,42 @@
+{
+ "LFP": {
+  "lauf_D": [
+   74,
+   61,
+   {
+    "clearance": 31,
+    "via_dangling": 30
+   }
+  ]
+ },
+ "NMC": {
+  "lauf_D": [
+   76,
+   66,
+   {
+    "clearance": 30,
+    "via_dangling": 35,
+    "track_dangling": 1
+   }
+  ]
+ },
+ "lauf2_daisy2500_unverbunden": {
+  "LFP": 82,
+  "NMC": 82
+ },
+ "lauf2_hinweis": "B: Daisy 2,5 mm im DSN, -mp 3: DRC 82 unverbunden (LFP und NMC), 30/31 Verstöße (via_dangling)",
+ "lauf1": "A: Daisy 2,5 mm im DSN, -mp 40, nach 6 Durchläufen von mir beendet (154 von 155 unverbunden laut Router, kein Fortschritt)",
+ "lauf3": "C: Daisy 2,5 mm, -mp 8, nach 5 Durchläufen beendet (Durchlauf 3-5: 152-154 unverbunden laut Router)",
+ "lauf_D": "D: DSN-Daisy 0,6 mm, -mp 3: je Variante (unverbunden, Verstöße, Typen) unter LFP/NMC lauf_D",
+ "lauf_final": {
+  "beschreibung": "Lauf 3 (Nachtrag 5): DSN Default 0,2 mm, Daisy-Klasse 2,5 mm, Ausgleich (D-Netze) 0,3 mm, Signal 0,2 mm, Via 0,6/0,3; Daisy-Leitungen (8 Verbindungen) von Hand vorverlegt, 10 Durchläufe",
+  "LFP": {
+   "unverbunden": 0,
+   "verstoesse": 0
+  },
+  "NMC": {
+   "unverbunden": 0,
+   "verstoesse": 0
+  }
+ }
+}

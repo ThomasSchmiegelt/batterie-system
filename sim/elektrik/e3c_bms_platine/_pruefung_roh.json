@@ -1,0 +1,163 @@
+{
+ "sperrzone_x_mm": [
+  100.0,
+  110.0
+ ],
+ "sperrzone_breite_mm": 10.0,
+ "objekte_in_sperrzone": 0,
+ "nv_kupfer_max_x_mm": 99.8,
+ "hv_kupfer_min_x_mm": 110.2,
+ "abstand_nv_hv_kupfer_mm": 10.4,
+ "nv_kupfer_rechts_der_zone": 0,
+ "hv_kupfer_links_der_zone": 0,
+ "bruecken": [
+  {
+   "ref": "U11",
+   "tag": "U_ISO_SHUNT",
+   "pad_abstand_mm": 10.4,
+   "nv_netze": [
+    "+3V3",
+    "GND",
+    "SH_CLK",
+    "SH_DAT"
+   ],
+   "hv_netze": [
+    "HV_CLK",
+    "HV_DAT",
+    "HV_GND",
+    "HV_VDD"
+   ]
+  },
+  {
+   "ref": "U12",
+   "tag": "U_ISO_SEK",
+   "pad_abstand_mm": 10.4,
+   "nv_netze": [
+    "+3V3",
+    "GND",
+    "SEK_OK",
+    "SEK_STATUS"
+   ],
+   "hv_netze": [
+    "HV_GND",
+    "HV_VDD",
+    "SEK_IN_HV"
+   ]
+  },
+  {
+   "ref": "T2",
+   "tag": "T_DAISY2",
+   "pad_abstand_mm": 10.4,
+   "nv_netze": [
+    "DM_RXA",
+    "DM_RXB"
+   ],
+   "hv_netze": [
+    "DC2_A",
+    "DC2_B"
+   ]
+  },
+  {
+   "ref": "T1",
+   "tag": "T_DAISY1",
+   "pad_abstand_mm": 10.4,
+   "nv_netze": [
+    "DM_TXA",
+    "DM_TXB"
+   ],
+   "hv_netze": [
+    "DC1_A",
+    "DC1_B"
+   ]
+  }
+ ],
+ "zonen": [
+  {
+   "netz": "HV_GND",
+   "lage": "B.Cu",
+   "x_min": 110.5,
+   "x_max": 159.5
+  },
+  {
+   "netz": "GND",
+   "lage": "B.Cu",
+   "x_min": 0.5,
+   "x_max": 99.5
+  },
+  {
+   "netz": "GND",
+   "lage": "In1.Cu",
+   "x_min": 0.5,
+   "x_max": 99.5
+  },
+  {
+   "netz": "HV_GND",
+   "lage": "In1.Cu",
+   "x_min": 110.5,
+   "x_max": 159.5
+  }
+ ],
+ "flaeche_cu_mm2": {
+  "F.Cu": {
+   "bahn": 269.3507364563466,
+   "pad": 609.4374999999992,
+   "via": 51.317915996389296,
+   "zone": 0.0
+  },
+  "In1.Cu": {
+   "bahn": 285.74504646105885,
+   "pad": 0.0,
+   "via": 51.317915996389296,
+   "zone": 13782.52838601781
+  },
+  "In2.Cu": {
+   "bahn": 201.6988612122299,
+   "pad": 0.0,
+   "via": 51.317915996389296,
+   "zone": 0.0
+  },
+  "B.Cu": {
+   "bahn": 12.617952510561311,
+   "pad": 0.0,
+   "via": 51.317915996389296,
+   "zone": 14473.378380629374
+  }
+ },
+ "platine_flaeche_mm2": 16026.009999999998,
+ "laenge_mm": 160.1,
+ "breite_mm": 100.1,
+ "footprints": {
+  "R_0603_1608Metric": 34,
+  "C_0603_1608Metric": 39,
+  "D_SMB": 1,
+  "Crystal_SMD_3225-4Pin_3.2x2.5mm": 1,
+  "JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal": 1,
+  "SOIC-16_3.9x9.9mm_P1.27mm": 2,
+  "SOT-23": 4,
+  "C_0805_2012Metric": 4,
+  "JST_PH_S4B-PH-SM4-TB_1x04-1MP_P2.00mm_Horizontal": 3,
+  "LQFP-144_20x20mm_P0.5mm": 1,
+  "D_SOD-323": 6,
+  "L_CommonModeChoke_Coilcraft_1812CAN": 2,
+  "CP_Elec_6.3x7.7": 1,
+  "D_SMA": 6,
+  "C_1206_3216Metric": 2,
+  "PinHeader_2x05_P1.27mm_Vertical_SMD": 1,
+  "LED_0603_1608Metric": 3,
+  "JST_SH_SM03B-SRSS-TB_1x03-1MP_P1.00mm_Horizontal": 1,
+  "JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal": 2,
+  "SOIC-14_3.9x8.7mm_P1.27mm": 2,
+  "JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal": 3,
+  "LQFP-48_7x7mm_P0.5mm": 1,
+  "SOT-23-5": 3,
+  "ISO_Bruecke_8": 2,
+  "D_SOD-123": 1,
+  "Uebertrager_Bruecke_4": 2,
+  "L_1210_3225Metric": 1,
+  "SOIC-8_3.9x4.9mm_P1.27mm": 2
+ },
+ "teile": 131,
+ "bahnsegmente": 1167,
+ "vias": 242,
+ "lagen": 4
+}

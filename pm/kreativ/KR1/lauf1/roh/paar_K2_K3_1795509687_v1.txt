@@ -1,0 +1,19 @@
+{
+  "urteile": {
+    "Wärme in der CMU": {
+      "gewinner": "B",
+      "grund": "Konzept B verlagert die Hauptverluste an das induktive Koppellelement zwischen den Zellen, sodass die 9,83 W I²R-Verlust in den 34-Ohm-Pfaden der CMU-Platine entfallen.",
+      "zahl": { "wert": "9,83 W, Grenze 10 W", "quelle": "F2" }
+    },
+    "Kosten": {
+      "gewinner": "A",
+      "grund": "Konzept A nutzt einfache PWM-Schalter und den bereits vorhandenen 34-Ohm-Widerstand pro Kanal, während Konzept B zusätzlich HF-Schalter und induktive Koppellelemente je Zelle erfordert.",
+      "zahl": { "wert": "Leiterbahnen und Schalter je Zelle", "quelle": "F10" }
+    },
+    "Wirkungsgrad": {
+      "gewinner": "B",
+      "grund": "Konzept B überträgt Energie aktiv von starken zu schwachen Zellen über Induktivkopplung, während Konzept A die gesamte Ausgleichsleistung als I²R-Wärme in dem 34-Ohm-Widerstand verliert.",
+      "zahl": { "wert": "34 Ohm, 124 mA bei 4,2 V", "quelle": "F4" }
+    }
+  }
+}

@@ -6,7 +6,7 @@ tags: ["start"]
 
 > KI-generiert, erzeugt aus pm/plan/wissensnetz.json – nicht von Hand bearbeiten
 
-Projektdauer (kritischer Pfad): 35.5 AT (Annahmen). Vorgänge: 47; fertig: 11, ohne Nachweis: 9, offen: 27.
+Projektdauer (kritischer Pfad): 35.5 AT (Annahmen). Vorgänge: 50; fertig: 16, ohne Nachweis: 9, offen: 25.
 
 Weiter: [[Dokument/PLAN]] · [[Dokument/BEFUNDE]] · [[Dokument/03_anforderungsverfolgung]] · [[Dokument/13_stueckliste]] · Netzplan-Ansicht (`pm/plan/wissensnetz.html`, im Repo)
 
@@ -16,20 +16,20 @@ Weiter: [[Dokument/PLAN]] · [[Dokument/BEFUNDE]] · [[Dokument/03_anforderungsv
 - V-Modell-Matrix: [[Dokument/06_verifikationsplan]] (Bewertung je Anforderung in den Anforderungsnotizen, Tag `bewertung/...`)
 - Workflow: [[Dokument/17_workflow_schleife]] · Freigaberunde: [[Dokument/19_freigaberunde]]
 - Normen und Regelwerke: [[Dokument/07_normen_und_vorschriften]]
-- Präsentation: [[Dokument/praesentation__STORYBOARD]] (27 Folienbausteine, Ordner wissen/Baustein)
+- Präsentation: [[Dokument/praesentation__STORYBOARD]] (31 Folienbausteine, Ordner wissen/Baustein)
 - Steckbriefe: [[Steckbrief/BT-610_LFP|BT-610_LFP]]
-- Dokumente: Ordner wissen/Dokument (31 Notizen)
+- Dokumente: Ordner wissen/Dokument (33 Notizen)
 
 ## Verifikation der Anforderungen
 
 | Bewertung | Anzahl |
 |---|---|
 | nachgewiesen | 18 |
-| offen | 9 |
+| offen | 15 |
 | blockiert | 1 |
 | verfehlt | 3 |
 | rechnerisch erfüllt (nicht validiert) | 1 |
-| gesamt | 32 |
+| gesamt | 38 |
 
 ## Stückliste nach Art
 
@@ -61,8 +61,6 @@ Weiter: [[Dokument/PLAN]] · [[Dokument/BEFUNDE]] · [[Dokument/03_anforderungsv
 | [[Vorgang/E1\|E1]] | Zellverbinder/Kabel: Querschnitt, Verluste, Erwärmung (Zielband als Annahme) | offen | 2 | 9.0 |
 | [[Vorgang/E2\|E2]] | Schutzkonzept: Sicherung, Schütze, Vorladung, Isolationswächter | offen | 2 | 9.0 |
 | [[Vorgang/L1\|L1]] | Kabelverlegung: Weg skizzieren (Sketch-to-Prompt), Prüfskript Biegeradius/Abstand HV-NV/Kühlleitung, FreeCAD-Sweep | offen | 3 | 8.0 |
-| [[Vorgang/E3\|E3]] | Steuerung/BMS: Messkonzept, Ladezustand, Ausgleich (Konzept, offene Software aus T06) | offen | 2 | 10.0 |
-| [[Vorgang/E4\|E4]] | Schaltungsmodell ngspice/Modelica: Vorladung, Kurzschluss | offen | 2 | 11.0 |
 | [[Vorgang/K1\|K1]] | ERWARTUNG Kühlung Schnellladen (max. Zelltemperatur, Spreizung) | offen | 0.5 | 0.0 |
 | [[Vorgang/K2\|K2]] | Kanalverteilung 1D (Verteiler, Druckverlust) | offen | 1 | 0.0 |
 | [[Vorgang/K3\|K3]] | Elmer: Zelle -> Paste -> Platte, Schnellladefall | offen | 3 | 0.0 |
@@ -80,7 +78,6 @@ Weiter: [[Dokument/PLAN]] · [[Dokument/BEFUNDE]] · [[Dokument/03_anforderungsv
 | Software | Status | Vorgänge |
 |---|---|---|
 | [[Software/foxBMS\|foxBMS]] | nicht installiert / nicht geprüft | [[Vorgang/E3\|E3]] |
-| [[Software/ngspice\|ngspice]] | nicht installiert / nicht geprüft | [[Vorgang/E4\|E4]] |
 | [[Software/OpenModelica\|OpenModelica]] | nicht installiert / nicht geprüft | [[Vorgang/E4\|E4]] |
 | [[Software/OpenRadioss\|OpenRadioss]] | nicht installiert / nicht geprüft | [[Vorgang/X2\|X2]] |
 
@@ -162,6 +159,10 @@ Weiter: [[Dokument/PLAN]] · [[Dokument/BEFUNDE]] · [[Dokument/03_anforderungsv
 | [[Recherche/W42\|W42]] | fertig | 6 Belege bestaetigt, 1 Fehler |
 | [[Recherche/W43\|W43]] | fertig | 15 Belege bestaetigt, 2 Fehler |
 | [[Recherche/W44\|W44]] | fertig | 3 Belege bestaetigt, 0 Fehler |
+| [[Recherche/W47\|W47]] | fertig | 9 Belege bestaetigt, 0 Fehler |
+| [[Recherche/W48\|W48]] | fertig | 11 Belege bestaetigt, 0 Fehler |
+| [[Recherche/W49\|W49]] | fertig | 6 Belege bestaetigt, 0 Fehler |
+| [[Recherche/W50\|W50]] | fertig | 11 Belege bestaetigt, 0 Fehler |
 
 ---
 *KI-generiert, erzeugt aus pm/plan/wissensnetz.json – nicht von Hand bearbeiten*

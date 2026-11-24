@@ -1,0 +1,146 @@
+{
+ "kopf": "KI-generiert (Datei). Konzepte von Opus vorgegeben (konzepte_vorgabe.json); Skript prüft nur Ausschlüsse und Hamming >= 2.",
+ "ausschluesse": 6,
+ "min_hamming": 1,
+ "hamming_paare": {
+  "K1-K2": 1,
+  "K1-K3": 3,
+  "K1-K4": 3,
+  "K1-K5": 4,
+  "K1-K6": 4,
+  "K2-K3": 3,
+  "K2-K4": 2,
+  "K2-K5": 5,
+  "K2-K6": 5,
+  "K3-K4": 3,
+  "K3-K5": 5,
+  "K3-K6": 5,
+  "K4-K5": 5,
+  "K4-K6": 5,
+  "K5-K6": 1
+ },
+ "konzepte": [
+  {
+   "id": "K1",
+   "richtung": "Ist-Entwurf (Referenz)",
+   "leitidee": "Ist-Entwurf (Referenz)",
+   "wahl": [
+    "T1.1",
+    "T2.1",
+    "T3.1",
+    "T4.1",
+    "T5.1"
+   ],
+   "namen": [
+    "Passiv, Widerstand",
+    "CMU-Platine",
+    "Beim Laden und in Ruhe (Ist)",
+    "130 mA konstant",
+    "Konvektion und Strahlung"
+   ]
+  },
+  {
+   "id": "K2",
+   "richtung": "Ist mit Wärmepfad",
+   "leitidee": "Ist mit Wärmepfad",
+   "wahl": [
+    "T1.1",
+    "T2.1",
+    "T3.1",
+    "T4.1",
+    "T5.2"
+   ],
+   "namen": [
+    "Passiv, Widerstand",
+    "CMU-Platine",
+    "Beim Laden und in Ruhe (Ist)",
+    "130 mA konstant",
+    "Wärmeleitpad CMU zur Kühlplatte"
+   ]
+  },
+  {
+   "id": "K3",
+   "richtung": "Getaktet in Ruhe, temperaturgeführt",
+   "leitidee": "Getaktet in Ruhe, temperaturgeführt",
+   "wahl": [
+    "T1.1",
+    "T2.1",
+    "T3.2",
+    "T4.2",
+    "T5.3"
+   ],
+   "namen": [
+    "Passiv, Widerstand",
+    "CMU-Platine",
+    "Nur in Ruhe (zyklisches Aufwachen)",
+    "260 mA, 50 % Takt, temperaturgeführt",
+    "Kupferflächen, Platine größer"
+   ]
+  },
+  {
+   "id": "K4",
+   "richtung": "Wärme ausgelagert auf die Kühlplatte",
+   "leitidee": "Wärme ausgelagert auf die Kühlplatte",
+   "wahl": [
+    "T1.1",
+    "T2.2",
+    "T3.1",
+    "T4.2",
+    "T5.2"
+   ],
+   "namen": [
+    "Passiv, Widerstand",
+    "Widerstand auf Kühlplatte bzw. Zellverbinder (Leitung von CMU)",
+    "Beim Laden und in Ruhe (Ist)",
+    "260 mA, 50 % Takt, temperaturgeführt",
+    "Wärmeleitpad CMU zur Kühlplatte"
+   ]
+  },
+  {
+   "id": "K5",
+   "richtung": "Aktiv induktiv",
+   "leitidee": "Aktiv induktiv",
+   "wahl": [
+    "T1.2",
+    "T2.3",
+    "T3.3",
+    "T4.3",
+    "T5.1"
+   ],
+   "namen": [
+    "Aktiv induktiv (Zelle zu Modul, Übertrager)",
+    "Kaum Verlust (aktiv)",
+    "Dauernd, auch beim Fahren",
+    "1 bis 2 A (aktiv)",
+    "Konvektion und Strahlung"
+   ]
+  },
+  {
+   "id": "K6",
+   "richtung": "Aktiv kapazitiv",
+   "leitidee": "Aktiv kapazitiv",
+   "wahl": [
+    "T1.3",
+    "T2.3",
+    "T3.3",
+    "T4.3",
+    "T5.1"
+   ],
+   "namen": [
+    "Aktiv kapazitiv (umgeschalteter Kondensator)",
+    "Kaum Verlust (aktiv)",
+    "Dauernd, auch beim Fahren",
+    "1 bis 2 A (aktiv)",
+    "Konvektion und Strahlung"
+   ]
+  }
+ ],
+ "pruefung": {
+  "ausschluss_verletzt": [],
+  "hamming_unter_2": [
+   "K1-K2",
+   "K5-K6"
+  ],
+  "anzahl_5_bis_8": true
+ }
+}

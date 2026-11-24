@@ -1,0 +1,39 @@
+{
+  "urteile": {
+    "Ausgleichszeit": {
+      "gewinner": "A",
+      "grund": "A liefert 130 mA durchgehend und erreicht 14,2 h; B ist nur in Ruhephasen aktiv, sodass die Wanduhrzeit bei gleicher Durchschnittsstromstärke länger wird.",
+      "zahl": {"wert": "14,2 h", "quelle": "F1"}
+    },
+    "Wärme in der CMU": {
+      "gewinner": "A",
+      "grund": "A erzeugt konstant 9,83 W; B hat bei 260 mA und 50 % Takt eine Spitzenleistung von ≈ 39 W, die bereits bei 9,64 W die 105-°C-Grenze überschreitet.",
+      "zahl": {"wert": "9,83 W", "quelle": "F1"}
+    },
+    "Kosten": {
+      "gewinner": "A",
+      "grund": "B benötigt zusätzlich Temperatursensoren, Taktstellungselektronik und eine größere Platine mit erweiterten Kupferflächen, was den Bauteilebestand über die 106 bis 108 Teile hinaus erhöht.",
+      "zahl": null
+    },
+    "Bauraum": {
+      "gewinner": "A",
+      "grund": "A passt in 120 × 60 mm bei 4 Lagern; B erfordert laut Konzept eine größere Platine plus zusätzliche Wärmeableitung.",
+      "zahl": {"wert": "120 x 60 mm", "quelle": "F5"}
+    },
+    "Fehlermöglichkeiten (FSR, HARA)": {
+      "gewinner": "B",
+      "grund": "B stoppt bei Grenzwertüberschreitung temperaturgeführt und verhindert so die in F4 beschriebene Überschreitung von 105 °C; A arbeitet ohne thermische Abschaltlogik durch.",
+      "zahl": {"wert": "105 °C Grenze", "quelle": "F4"}
+    },
+    "Wirkungsgrad": {
+      "gewinner": "B",
+      "grund": "B dissipiert Energie nur in Ruhephasen und vermeidet die nutzlose Verlustleistung während der Lade- und Betriebszeit, die A konstant verursacht.",
+      "zahl": null
+    },
+    "Reifegrad": {
+      "gewinner": "A",
+      "grund": "A ist mit 218 Spannungsabgriffen und vollständiger E3-Simulation validiert; B hat offene thermische Grenzen (F3), 212 ungeroutete Verbindungen (F5) und keinen nachgewiesenen Taktbetrieb.",
+      "zahl": {"wert": "212 Verbindungen nicht geroutet", "quelle": "F5"}
+    }
+  }
+}

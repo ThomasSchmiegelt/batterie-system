@@ -1,0 +1,13 @@
+ERC WARNING: Unconnected pin: PASSIVE pin 4/4 of Stecker_4/J1.
+ERC WARNING: Unconnected pin: PASSIVE pin 4/4 of Stecker_4/J3.
+ERC WARNING: Unconnected pin: PASSIVE pin 4/4 of Stecker_4/J4.
+ERC WARNING: Unconnected pin: PASSIVE pin 8/Y3 of UND_Gatter_4fach/U6.
+ERC WARNING: Unconnected pin: PASSIVE pin 9/A3 of UND_Gatter_4fach/U6.
+ERC WARNING: Unconnected pin: PASSIVE pin 10/B3 of UND_Gatter_4fach/U6.
+ERC WARNING: Unconnected pin: PASSIVE pin 11/Y4 of UND_Gatter_4fach/U6.
+ERC WARNING: Unconnected pin: PASSIVE pin 12/A4 of UND_Gatter_4fach/U6.
+ERC WARNING: Unconnected pin: PASSIVE pin 13/B4 of UND_Gatter_4fach/U6.
+ERC WARNING: Unconnected pin: PASSIVE pin 5/IN_B of Digital_Isolator_verstaerkt/U12.
+ERC INFO: 10 warnings found while running ERC.
+ERC INFO: 0 errors found while running ERC.
+

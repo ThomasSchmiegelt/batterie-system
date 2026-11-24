@@ -1,0 +1,34 @@
+{
+  "35": [
+    "Die Ausgleichsströmung von 130 mA (F1) wird in gepulster Form mit höherem Spitzenwert bei gleicher mittlere Leistung unter 9,83 W (F2) ausgeführt, um die 14,2 h (F1) zu verkürzen.",
+    "Der Ausgangswiderstand von 34 Ohm (F4) wird temperaturabhängig geschaltet: bei niedriger CMU-Temperatur wird 124 mA bei 4,2 V (F4) genutzt, bei Annäherung an 10 W (F2) wird auf 109 mA bei 3,7 V (F4) reduziert."
+  ],
+  "10": [
+    "Die Ausgleichskapazität dQ 1,848 Ah (F1) wird während der Dormanz-Aufwachphase (F9) vorab berechnet und in einem einzigen Durchgang über die 18 Kanäle (F6) abgearbeitet statt iterativ.",
+    "Die schwächsten Zellen (über 5 % Kapazitätsstreuung, F7) werden vor dem Normalbetrieb vorgeglichen, damit der aktive Ausgleich im Betrieb nur die verbleibende 10 bis 15 % (F4) abdecken muss."
+  ],
+  "28": [
+    "Der ohmsche Balancepfad (34 Ohm, F4) wird durch einen transformergekoppelten Energiefluss zwischen Zellen ersetzt (F10), sodass keine 9,83 W (F2) in der Platine 120 x 60 mm (F6) abgebaut werden.",
+    "Statt Widerstandsheizung wird ein induktives Kopplungselement eingesetzt, das die 1,848 Ah (F1) ohne Resistivverlust zwischen starken und schwachen Zellen verschiebt (F10)."
+  ],
+  "21": [
+    "Alle 18 Kanäle (F6) balancieren parallel in einem kurzen Hochstromfenster (124 mA bei 4,2 V, F4), statt nacheinander über 14,2 h (F1) zu laufen.",
+    "Der Ausgleich erfolgt in gepulstem Betrieb mit kurzer Einschaltzeit, sodass die mittlere Leistung unter 8,63 W (F3) bleibt und die 130 mA (F1) nur noch für einen Bruchteil der Zeitspanne fließen."
+  ],
+  "29": [
+    "Ein geschlossenes Flüssigkeitskühlmittel-Kreisnetz auf der 120 x 60 mm Platine (F6) führt die 9,83 W (F2) von der CMU ab und ermöglicht längere Hochstromphasen ohne die 60 bis 100 K Übertemperatur (F5) zu erreichen.",
+    "Ein Wärmepumpenmodul (Peltier) an der Kühlplatte (F5) hält die CMU bei Nennbetrieb unter 8,63 W (F3), damit der Ausgleich mit 130 mA (F1) ohne thermische Abschaltung bei 105 °C (F5) bleibt."
+  ],
+  "18": [
+    "Ein Ultraschallschwinger an der Kühlplatte der CMU (F6) erhöht die Konvektionskühlung und hält die 9,83 W (F2) ohne die 60 bis 100 K Übertemperatur (F5) aus.",
+    "Ein piezoelektrischer Vibrationsantrieb liefert einen Teil der Ausgleichsstromversorgung (130 mA, F1) ohne zusätzlichen Verlustwiderstand in den 130 bis 170 Bauteilen (F6)."
+  ],
+  "5": [
+    "Zwei der 13 CMU-Einheiten (F6) werden zu einer gemeinsamen Platine zusammengefasst, sodass der Ausgleichsstrom über die doppelte Fläche gestreut wird und die 9,83 W (F2) auf weniger als 5 W pro Fläche sinken.",
+    "Der aktive Balance-Pfad (F10) wird in die Ladeelektronik integriert, sodass die 1,848 Ah (F1) über die gemeinsame Leiterbahn zu 217 Zellen (F6) verschoben werden, ohne separaten Widerstand je Zelle."
+  ],
+  "32": [
+    "Eine thermo­chrome Beschichtung auf der 120 x 60 mm Platine (F6) visualisiert die Zonen, in denen die 9,83 W (F2) lokal über 10 W (F2) steigen, und ermöglicht gezieltes Abschalten nur der betroffenen Kanäle von 18 (F6).",
+    "Eine selektiv absorbierende Schicht auf der CMU-Rückseite kanalisiert die Strahlungsanteile der 8,63 W (F3) direkt auf eine externe Kühlplatte (F5), während die vordere Seite freie Konvektion für einen höheren Gleichstrom behält."
+  ]
+}

@@ -1,0 +1,10 @@
+* Vorladung (KI-generiert, Sonnet 2026-11-24)
+V1 a 0 DC 912.0
+R1 a c 100.0
+C1 c 0 0.001 ic=0
+.tran 1m 1.5 uic
+.control
+run
+wrdata /home/cae/hermes/batterie/sim/elektrik/e3_platine/vorladung.dat i(V1) v(c)
+.endc
+.end

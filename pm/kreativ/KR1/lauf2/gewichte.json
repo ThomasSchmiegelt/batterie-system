@@ -1,0 +1,35 @@
+{
+ "gewichte": {
+  "Ausgleichszeit": 2,
+  "Wärme in der CMU": 7,
+  "Kosten": 3,
+  "Bauraum": 2,
+  "Fehlermöglichkeiten (FSR, HARA)": 8,
+  "Wirkungsgrad": 11,
+  "Reifegrad": 9
+ },
+ "von": "Autor 2026-11-24 im Chat, übertragen von Sonnet (Paarvergleich 21 Einträge, Formular gewichte_formular.md)",
+ "eintraege": [
+  0,
+  1,
+  1,
+  0,
+  0,
+  0,
+  2,
+  2,
+  1,
+  0,
+  0,
+  1,
+  1,
+  0,
+  0,
+  0,
+  0,
+  0,
+  1,
+  1,
+  2
+ ]
+}

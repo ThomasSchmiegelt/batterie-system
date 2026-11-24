@@ -1,0 +1,1 @@
+{"urteile":{"Bauraum":{"gewinner":"B","grund":"Konzept A legt die Verlustwärme auf doppelter Platinenfläche ab und verdoppelt damit die Belegfläche der 120 × 60 mm-Platine, während B die Koppellelemente zwischen den Zellen verteilt und die CMU in ihrer vorhandenen Bauform belässt.","zahl":{"wert":"120 × 60 × 10 mm","quelle":"F6"}}}}

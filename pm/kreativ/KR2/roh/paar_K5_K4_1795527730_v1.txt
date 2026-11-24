@@ -1,0 +1,35 @@
+{
+  "urteile": {
+    "Sicherheit": {
+      "gewinner": "B",
+      "grund": "B verfügt über einen unabhängigen Hardware-Abschaltpfad (FSR-06, Sekundärschutz), der den Schütze ohne Software öffnet und damit die ASIL-D-Anforderung von SG-01 auch bei Software-Ausfall erfüllt.",
+      "zahl": {
+        "wert": "FSR-06: Sekundärschutz öffnet Schütze ohne Software",
+        "quelle": "F4"
+      }
+    },
+    "Verfügbarkeit": {
+      "gewinner": "A",
+      "grund": "A nutzt 2oo3-Mehrheit und abgestufte Stufen (drosseln → warnen → trennen), sodass ein Einzelfehler kein volles Trennen auslöst und die 2-s-Vorwarnung (SG-05) eingehalten wird.",
+      "zahl": {
+        "wert": "2 s Vorwarnung, erst Leistung verringern und warnen, dann trennen (außer SG-01/04)",
+        "quelle": "F3"
+      }
+    },
+    "Kosten": {
+      "gewinner": "A",
+      "grund": "A benötigt ausschließlich Software-BMS auf der vorhandenen CMU; B zusätzlich einen physischen Sekundärschutz (BT-715) und eine unabhängige Schützensteuerung ohne Software.",
+      "zahl": null
+    },
+    "Nachweisaufwand": {
+      "gewinner": "A",
+      "grund": "A konzentriert den Sicherheitsnachweis in einem Domain (Software, 2oo3-Voting); B muss zusätzlich die Unabhängigkeit zwischen Software- und Hardwarepfad (FSR-06) und die FMEDA für zwei getrennte Kanäle nachweisen.",
+      "zahl": null
+    },
+    "Reifegrad": {
+      "gewinner": "B",
+      "grund": "In Serien-BMS ist ein hardwareseitiger, softwareunabhängiger Sicherheitspfad für Überladung und Übertemperatur der verbreitete und erprobte Ansatz; eine rein softwarebasierte ASIL-D-Trennung ist dagegen少见.",
+      "zahl": null
+    }
+  }
+}

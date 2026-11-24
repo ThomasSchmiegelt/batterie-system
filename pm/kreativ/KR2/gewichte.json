@@ -1,0 +1,22 @@
+{
+ "gewichte": {
+  "Sicherheit": 8,
+  "Verfügbarkeit": 6,
+  "Kosten": 1,
+  "Nachweisaufwand": 2,
+  "Reifegrad": 3
+ },
+ "von": "Autor 2026-11-24 im Chat, übertragen von Sonnet (Paarvergleich 10 Einträge, Formular gewichte_formular.md)",
+ "eintraege": [
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  1,
+  0,
+  1
+ ]
+}

@@ -1,0 +1,246 @@
+{
+ "erstellt": "Claude Sonnet (KI), 2026-11-24",
+ "eingabe": "sim/elektrik/e3_platine/cmu_<V>_bom.csv",
+ "ziel": {
+  "SG-01": {
+   "ASIL": "D",
+   "SPFM": 0.99,
+   "LFM": 0.9
+  },
+  "SG-02": {
+   "ASIL": "C",
+   "SPFM": 0.97,
+   "LFM": 0.8
+  }
+ },
+ "annahmen": {
+  "FIT": {
+   "Widerstand Chip": 0.3,
+   "Kondensator MLCC": 0.5,
+   "MOSFET klein": 1,
+   "TVS-Diode": 1,
+   "AFE-IC": 20,
+   "Sekundaerschutz-IC": 5,
+   "Uebertrager": 2,
+   "Stecker": 2,
+   "NTC-Eingang": 1
+  },
+  "DC_MESS": 0.99,
+  "DC_LB": 0.99,
+  "DC_AUSGL": 0.9,
+  "DC_SEK": 0.9,
+  "herkunft": "ERWARTUNG.md (ERW-E3d, Annahmen Opus)"
+ },
+ "cmu": {
+  "LFP": {
+   "SG-01": {
+    "lambda_SR_FIT": 28.8,
+    "lambda_SPF_RF_FIT": 0.020000000000000018,
+    "lambda_MPF_latent_FIT": 0.943,
+    "SPFM": 0.9993055555555556,
+    "LFM": 0.9672341904100069,
+    "PMHF_Beitrag_FIT": 0.020000000000000018
+   },
+   "SG-02": {
+    "lambda_SR_FIT": 33.58,
+    "lambda_SPF_RF_FIT": 0.7210000000000001,
+    "lambda_MPF_latent_FIT": 0.7199999999999999,
+    "SPFM": 0.9785288862418106,
+    "LFM": 0.9780881950150644,
+    "PMHF_Beitrag_FIT": 0.7210000000000001
+   },
+   "Teile": 110
+  },
+  "NMC": {
+   "SG-01": {
+    "lambda_SR_FIT": 28.8,
+    "lambda_SPF_RF_FIT": 0.020000000000000018,
+    "lambda_MPF_latent_FIT": 0.943,
+    "SPFM": 0.9993055555555556,
+    "LFM": 0.9672341904100069,
+    "PMHF_Beitrag_FIT": 0.020000000000000018
+   },
+   "SG-02": {
+    "lambda_SR_FIT": 33.58,
+    "lambda_SPF_RF_FIT": 0.7210000000000001,
+    "lambda_MPF_latent_FIT": 0.7199999999999999,
+    "SPFM": 0.9785288862418106,
+    "LFM": 0.9780881950150644,
+    "PMHF_Beitrag_FIT": 0.7210000000000001
+   },
+   "Teile": 110
+  }
+ },
+ "pack": {
+  "LFP": {
+   "anzahl_CMU": 14,
+   "SG-01": {
+    "SPFM": 0.9993055555555556,
+    "LFM": 0.9672341904100069,
+    "PMHF_Beitrag_FIT": 0.28000000000000025,
+    "lambda_SR_FIT": 403.2,
+    "hinweis": "nur CMU-Platinen, identische CMU: Quoten gleich, FIT summiert; ohne BMS-Rechner, Schuetze, Software"
+   },
+   "SG-02": {
+    "SPFM": 0.9785288862418106,
+    "LFM": 0.9780881950150644,
+    "PMHF_Beitrag_FIT": 10.094000000000001,
+    "lambda_SR_FIT": 470.12,
+    "hinweis": "nur CMU-Platinen, identische CMU: Quoten gleich, FIT summiert; ohne BMS-Rechner, Schuetze, Software"
+   }
+  },
+  "NMC": {
+   "anzahl_CMU": 13,
+   "SG-01": {
+    "SPFM": 0.9993055555555556,
+    "LFM": 0.9672341904100069,
+    "PMHF_Beitrag_FIT": 0.26000000000000023,
+    "lambda_SR_FIT": 374.40000000000003,
+    "hinweis": "nur CMU-Platinen, identische CMU: Quoten gleich, FIT summiert; ohne BMS-Rechner, Schuetze, Software"
+   },
+   "SG-02": {
+    "SPFM": 0.9785288862418106,
+    "LFM": 0.9780881950150644,
+    "PMHF_Beitrag_FIT": 9.373000000000001,
+    "lambda_SR_FIT": 436.53999999999996,
+    "hinweis": "nur CMU-Platinen, identische CMU: Quoten gleich, FIT summiert; ohne BMS-Rechner, Schuetze, Software"
+   }
+  }
+ },
+ "top": {
+  "LFP": {
+   "SG-01": [
+    {
+     "posten": "Sekundaerschutz loest nicht aus",
+     "SPF_RF_FIT": 0.0,
+     "MPF_latent_FIT": 0.7499999999999998,
+     "anzahl_Teile": 3
+    },
+    {
+     "posten": "AFE Messfehler",
+     "SPF_RF_FIT": 0.0,
+     "MPF_latent_FIT": 0.10000000000000009,
+     "anzahl_Teile": 1
+    },
+    {
+     "posten": "Filterkondensator Zellabgriff Kurzschluss",
+     "SPF_RF_FIT": 0.0,
+     "MPF_latent_FIT": 0.03600000000000003,
+     "anzahl_Teile": 18
+    },
+    {
+     "posten": "Filterwiderstand Zellabgriff offen",
+     "SPF_RF_FIT": 0.0,
+     "MPF_latent_FIT": 0.03420000000000004,
+     "anzahl_Teile": 19
+    },
+    {
+     "posten": "Filterwiderstand Zellabgriff Drift",
+     "SPF_RF_FIT": 0.0,
+     "MPF_latent_FIT": 0.01710000000000002,
+     "anzahl_Teile": 19
+    }
+   ],
+   "SG-02": [
+    {
+     "posten": "Ausgleichs-FET Kurzschluss D-S",
+     "SPF_RF_FIT": 0.0,
+     "MPF_latent_FIT": 0.72,
+     "anzahl_Teile": 18
+    },
+    {
+     "posten": "AFE Ausgleich haengt an",
+     "SPF_RF_FIT": 0.3999999999999999,
+     "MPF_latent_FIT": 0.0,
+     "anzahl_Teile": 1
+    },
+    {
+     "posten": "Ausgleichswiderstand Kurzschluss",
+     "SPF_RF_FIT": 0.10800000000000005,
+     "MPF_latent_FIT": 0.0,
+     "anzahl_Teile": 36
+    },
+    {
+     "posten": "AFE Messfehler",
+     "SPF_RF_FIT": 0.10000000000000009,
+     "MPF_latent_FIT": 0.0,
+     "anzahl_Teile": 1
+    },
+    {
+     "posten": "Filterkondensator Zellabgriff Kurzschluss",
+     "SPF_RF_FIT": 0.03600000000000003,
+     "MPF_latent_FIT": 0.0,
+     "anzahl_Teile": 18
+    }
+   ]
+  },
+  "NMC": {
+   "SG-01": [
+    {
+     "posten": "Sekundaerschutz loest nicht aus",
+     "SPF_RF_FIT": 0.0,
+     "MPF_latent_FIT": 0.7499999999999998,
+     "anzahl_Teile": 3
+    },
+    {
+     "posten": "AFE Messfehler",
+     "SPF_RF_FIT": 0.0,
+     "MPF_latent_FIT": 0.10000000000000009,
+     "anzahl_Teile": 1
+    },
+    {
+     "posten": "Filterkondensator Zellabgriff Kurzschluss",
+     "SPF_RF_FIT": 0.0,
+     "MPF_latent_FIT": 0.03600000000000003,
+     "anzahl_Teile": 18
+    },
+    {
+     "posten": "Filterwiderstand Zellabgriff offen",
+     "SPF_RF_FIT": 0.0,
+     "MPF_latent_FIT": 0.03420000000000004,
+     "anzahl_Teile": 19
+    },
+    {
+     "posten": "Filterwiderstand Zellabgriff Drift",
+     "SPF_RF_FIT": 0.0,
+     "MPF_latent_FIT": 0.01710000000000002,
+     "anzahl_Teile": 19
+    }
+   ],
+   "SG-02": [
+    {
+     "posten": "Ausgleichs-FET Kurzschluss D-S",
+     "SPF_RF_FIT": 0.0,
+     "MPF_latent_FIT": 0.72,
+     "anzahl_Teile": 18
+    },
+    {
+     "posten": "AFE Ausgleich haengt an",
+     "SPF_RF_FIT": 0.3999999999999999,
+     "MPF_latent_FIT": 0.0,
+     "anzahl_Teile": 1
+    },
+    {
+     "posten": "Ausgleichswiderstand Kurzschluss",
+     "SPF_RF_FIT": 0.10800000000000005,
+     "MPF_latent_FIT": 0.0,
+     "anzahl_Teile": 36
+    },
+    {
+     "posten": "AFE Messfehler",
+     "SPF_RF_FIT": 0.10000000000000009,
+     "MPF_latent_FIT": 0.0,
+     "anzahl_Teile": 1
+    },
+    {
+     "posten": "Filterkondensator Zellabgriff Kurzschluss",
+     "SPF_RF_FIT": 0.03600000000000003,
+     "MPF_latent_FIT": 0.0,
+     "anzahl_Teile": 18
+    }
+   ]
+  }
+ },
+ "massnahmen": {},
+ "verfehlt": []
+}

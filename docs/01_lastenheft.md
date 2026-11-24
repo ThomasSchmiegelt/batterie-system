@@ -33,6 +33,11 @@ Vorschlagswerte für REQ-P01…P10 aus einem Startsatz: `docs/startparameter.md`
 | REQ-P14 | Mechanik: Stoß, Schwingung, Crash | Zellverschiebung ≤ 0,5 mm bei Pfahl 5 kJ und Quetschung nach R100 (100–105 kN) (Autor, Freigaberunde 2026-11-23) | Norm | Muss | festgelegt |
 | REQ-P15 | Messung und BMS: Zellspannung, Temperatur, Isolationswächter | Messumfang: Zellspannung je Reihe, Temperaturfühler, Isolationswächter (Stücklistenposition) (Autor, Freigaberunde 2026-11-23) | Autor | Muss | festgelegt |
 | REQ-P16 | Herstellkosten je Variante ausweisen (€/kWh Pack, Anteile je Baugruppe) | kein Zielwert (Autor 2026-11-18: „lass offen“); Preise als Schätzung oder verifiziert kennzeichnen | Autor (2026-11-18) | Soll | vorgeschlagen |
+| REQ-P17 | EMV der Elektronik (BMS, CMU, Schützansteuerung) | Vorschlag: Störaussendung CISPR 25 Klasse 3; Störfestigkeit ISO 11452-2/-4; Transienten ISO 7637-2 am 12-V-Anschluss; ESD ISO 10605; Typgenehmigung UN R10 (Opus 2026-11-24); Klasse 3 (Autor, Freigaberunde 2026-11-24) | Norm | Muss | festgelegt |
+| REQ-P18 | Funktionale Sicherheit nach ISO 26262 | ASIL je Sicherheitsziel nach HARA BAT-DOC-24; SG-01 Überladung ASIL D, Umfang HARA + Sicherheitsziele + FSR + grobe FMEDA (Autor, Freigaberunde 2026-11-24); alle Einstufungen und FTTI (Annahme) übernommen (Autor, Freigaberunde 2026-11-24) | Norm | Muss | festgelegt |
+| REQ-P19 | Isolationskoordination (Luft- und Kriechstrecken) auf Leiterplatten und in der Schaltbox | IEC 60664-1, Arbeitsspannung U_max, Verschmutzungsgrad 2, Überspannungskategorie II, verstärkte Isolierung HV ↔ NV (Opus 2026-11-24); festgelegt, Zahlen Annahme bis W46 (Autor, Freigaberunde 2026-11-24); Auslegungshöhe 3000 m ü. NN (Luftstrecken mit Höhenkorrektur, Faktor 1,14–1,25 Annahme bis Normtext) (Autor 2026-11-24) | Norm | Muss | festgelegt |
+| REQ-P20 | Umweltfestigkeit und Bauteilqualifikation der Elektronik | ISO 16750-1…5; AEC-Q100/Q101/Q200; IPC-A-610 Klasse 3; IPC-2152 (Opus 2026-11-24); festgelegt, Zahlen Annahme bis W46 (Autor, Freigaberunde 2026-11-24) | Norm | Muss | festgelegt |
+| REQ-P21 | Cybersicherheit BMS | ISO/SAE 21434, UN R155/R156; nur benennen, nicht auslegen (Autor, Freigaberunde 2026-11-24) | Norm | Kann | festgelegt |
 
 ## 3 Anforderungen an Entwicklung und Dokumentation (Testprojekt gewerblich)
 | ID | Anforderung | Nachweis | Status |
@@ -51,6 +56,7 @@ Vorschlagswerte für REQ-P01…P10 aus einem Startsatz: `docs/startparameter.md`
 | REQ-D13 | Projektdokumentation als Abschlussvideo (Zelle → … → System) | video/STORYBOARD.md | geplant |
 | REQ-D14 | Unternehmenspräsentation am Projektende, erzeugt aus den Projektdaten; jeder Vorgang liefert unterwegs seinen Folienbaustein | praesentation/STORYBOARD.md | geplant |
 | REQ-D10 | Aufwand messbar: Laufzeiten und Agentenaufrufe je Arbeitspaket | BAT-DOC-08 | eingerichtet |
+| REQ-D15 | Alternativen einer Akte mit echter Abwägung stammen aus einer Kreativmethode (Morphologischer Kasten, TRIZ, Kopfstand) und sind per Paarvergleich bewertet; Gewichtung durch den Autor (Autor 2026-11-24, festgelegt Freigaberunde 2026-11-24) | pm/kreativ/METHODE.md, Konsistenzprüfung | festgelegt |
 
 ---
 *KI-generiert (Claude Opus, 2026-11-11). Status Entwurf. Freigabe nur durch den Autor.*

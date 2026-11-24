@@ -1,0 +1,1 @@
+{"optionen":[{"name":"MOSFET plus 34-Ohm-Widerstand","quelle":"Fakt F4"},{"name":"HF-Schalter in Induktivkopplung","quelle":"TRIZ-28"},{"name":"PWM-Schalter mit Pulsmodulation","quelle":"TRIZ-35"},{"name":"Zellenweiser Schalter mit Leiterbahn","quelle":"Fakt F10"},{"name":"Sequenzschalter für Parallelvorabgleich","quelle":"TRIZ-10"}]}

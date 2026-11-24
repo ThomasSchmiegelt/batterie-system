@@ -3,6 +3,7 @@
 | Titel | Regelwerke im Vergleich: Prüffälle nach EU/UN, USA und China | Ersteller | Claude Sonnet (KI), Auftrag Opus | Prüfer | – (Mensch offen) |
 
 > **KI-generiert.** Entwurf, nicht vom Menschen freigegeben. Testprojekt „KI im Engineering“, kein Produkt. Keine rechtliche Bewertung.
+> **Zielmarkt (Autor, Freigaberunde 2026-11-24): nur Europa.** Maßgebend sind EU/UN. Die Spalten USA und China dienen nur dem Vergleich.
 
 Erzeugt am 2026-11-23 nach `forschung/AUFTRAG_REGELWERKE_2.md`.
 

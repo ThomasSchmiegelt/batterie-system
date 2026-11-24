@@ -1,0 +1,111 @@
+Ref;Wert;Footprint;Bauteilklasse
+J1;FPC 24-polig (Zellabgriffe);Connector_FFC-FPC:Hirose_FH12-24S-0.5SH_1x24-1MP_P0.50mm_Horizontal;FPC_24
+U1;AFE generisch 18 Kanaele, ASIL-D-faehig (BT-322);Package_QFP:LQFP-80_12x12mm_P0.5mm;AFE_generisch_18K
+R1;100;Resistor_SMD:R_0603_1608Metric;R
+R2;100;Resistor_SMD:R_0603_1608Metric;R
+R3;100;Resistor_SMD:R_0603_1608Metric;R
+R4;100;Resistor_SMD:R_0603_1608Metric;R
+R5;100;Resistor_SMD:R_0603_1608Metric;R
+R6;100;Resistor_SMD:R_0603_1608Metric;R
+R7;100;Resistor_SMD:R_0603_1608Metric;R
+R8;100;Resistor_SMD:R_0603_1608Metric;R
+R9;100;Resistor_SMD:R_0603_1608Metric;R
+R10;100;Resistor_SMD:R_0603_1608Metric;R
+R11;100;Resistor_SMD:R_0603_1608Metric;R
+R12;100;Resistor_SMD:R_0603_1608Metric;R
+R13;100;Resistor_SMD:R_0603_1608Metric;R
+R14;100;Resistor_SMD:R_0603_1608Metric;R
+R15;100;Resistor_SMD:R_0603_1608Metric;R
+R16;100;Resistor_SMD:R_0603_1608Metric;R
+R17;100;Resistor_SMD:R_0603_1608Metric;R
+R18;100;Resistor_SMD:R_0603_1608Metric;R
+R19;100;Resistor_SMD:R_0603_1608Metric;R
+C1;100n;Capacitor_SMD:C_0603_1608Metric;C
+R20;64.9;Resistor_SMD:R_2512_6332Metric;R
+R21;64.9;Resistor_SMD:R_2512_6332Metric;R
+Q1;Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101;Package_TO_SOT_SMD:SOT-363_SC-70-6;Doppel_NMOS_generisch
+C2;100n;Capacitor_SMD:C_0603_1608Metric;C
+R22;64.9;Resistor_SMD:R_2512_6332Metric;R
+R23;64.9;Resistor_SMD:R_2512_6332Metric;R
+Q2;Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101;Package_TO_SOT_SMD:SOT-363_SC-70-6;Doppel_NMOS_generisch
+C3;100n;Capacitor_SMD:C_0603_1608Metric;C
+R24;64.9;Resistor_SMD:R_2512_6332Metric;R
+R25;64.9;Resistor_SMD:R_2512_6332Metric;R
+Q3;Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101;Package_TO_SOT_SMD:SOT-363_SC-70-6;Doppel_NMOS_generisch
+C4;100n;Capacitor_SMD:C_0603_1608Metric;C
+R26;64.9;Resistor_SMD:R_2512_6332Metric;R
+R27;64.9;Resistor_SMD:R_2512_6332Metric;R
+Q4;Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101;Package_TO_SOT_SMD:SOT-363_SC-70-6;Doppel_NMOS_generisch
+C5;100n;Capacitor_SMD:C_0603_1608Metric;C
+R28;64.9;Resistor_SMD:R_2512_6332Metric;R
+R29;64.9;Resistor_SMD:R_2512_6332Metric;R
+Q5;Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101;Package_TO_SOT_SMD:SOT-363_SC-70-6;Doppel_NMOS_generisch
+C6;100n;Capacitor_SMD:C_0603_1608Metric;C
+R30;64.9;Resistor_SMD:R_2512_6332Metric;R
+R31;64.9;Resistor_SMD:R_2512_6332Metric;R
+Q6;Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101;Package_TO_SOT_SMD:SOT-363_SC-70-6;Doppel_NMOS_generisch
+C7;100n;Capacitor_SMD:C_0603_1608Metric;C
+R32;64.9;Resistor_SMD:R_2512_6332Metric;R
+R33;64.9;Resistor_SMD:R_2512_6332Metric;R
+Q7;Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101;Package_TO_SOT_SMD:SOT-363_SC-70-6;Doppel_NMOS_generisch
+C8;100n;Capacitor_SMD:C_0603_1608Metric;C
+R34;64.9;Resistor_SMD:R_2512_6332Metric;R
+R35;64.9;Resistor_SMD:R_2512_6332Metric;R
+Q8;Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101;Package_TO_SOT_SMD:SOT-363_SC-70-6;Doppel_NMOS_generisch
+C9;100n;Capacitor_SMD:C_0603_1608Metric;C
+R36;64.9;Resistor_SMD:R_2512_6332Metric;R
+R37;64.9;Resistor_SMD:R_2512_6332Metric;R
+Q9;Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101;Package_TO_SOT_SMD:SOT-363_SC-70-6;Doppel_NMOS_generisch
+C10;100n;Capacitor_SMD:C_0603_1608Metric;C
+R38;64.9;Resistor_SMD:R_2512_6332Metric;R
+R39;64.9;Resistor_SMD:R_2512_6332Metric;R
+Q10;Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101;Package_TO_SOT_SMD:SOT-363_SC-70-6;Doppel_NMOS_generisch
+C11;100n;Capacitor_SMD:C_0603_1608Metric;C
+R40;64.9;Resistor_SMD:R_2512_6332Metric;R
+R41;64.9;Resistor_SMD:R_2512_6332Metric;R
+Q11;Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101;Package_TO_SOT_SMD:SOT-363_SC-70-6;Doppel_NMOS_generisch
+C12;100n;Capacitor_SMD:C_0603_1608Metric;C
+R42;64.9;Resistor_SMD:R_2512_6332Metric;R
+R43;64.9;Resistor_SMD:R_2512_6332Metric;R
+Q12;Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101;Package_TO_SOT_SMD:SOT-363_SC-70-6;Doppel_NMOS_generisch
+C13;100n;Capacitor_SMD:C_0603_1608Metric;C
+R44;64.9;Resistor_SMD:R_2512_6332Metric;R
+R45;64.9;Resistor_SMD:R_2512_6332Metric;R
+Q13;Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101;Package_TO_SOT_SMD:SOT-363_SC-70-6;Doppel_NMOS_generisch
+C14;100n;Capacitor_SMD:C_0603_1608Metric;C
+R46;64.9;Resistor_SMD:R_2512_6332Metric;R
+R47;64.9;Resistor_SMD:R_2512_6332Metric;R
+Q14;Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101;Package_TO_SOT_SMD:SOT-363_SC-70-6;Doppel_NMOS_generisch
+C15;100n;Capacitor_SMD:C_0603_1608Metric;C
+R48;64.9;Resistor_SMD:R_2512_6332Metric;R
+R49;64.9;Resistor_SMD:R_2512_6332Metric;R
+Q15;Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101;Package_TO_SOT_SMD:SOT-363_SC-70-6;Doppel_NMOS_generisch
+C16;100n;Capacitor_SMD:C_0603_1608Metric;C
+R50;64.9;Resistor_SMD:R_2512_6332Metric;R
+R51;64.9;Resistor_SMD:R_2512_6332Metric;R
+Q16;Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101;Package_TO_SOT_SMD:SOT-363_SC-70-6;Doppel_NMOS_generisch
+C17;100n;Capacitor_SMD:C_0603_1608Metric;C
+R52;64.9;Resistor_SMD:R_2512_6332Metric;R
+R53;64.9;Resistor_SMD:R_2512_6332Metric;R
+Q17;Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101;Package_TO_SOT_SMD:SOT-363_SC-70-6;Doppel_NMOS_generisch
+C18;100n;Capacitor_SMD:C_0603_1608Metric;C
+R54;64.9;Resistor_SMD:R_2512_6332Metric;R
+R55;64.9;Resistor_SMD:R_2512_6332Metric;R
+Q18;Doppel-NMOS generisch SOT-363, zwei FET in Reihe, Logikpegel, RDSon<=0,5 Ohm je FET, AEC-Q101;Package_TO_SOT_SMD:SOT-363_SC-70-6;Doppel_NMOS_generisch
+J2;NTC 1 (extern);Connector_JST:JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal;NTC_Eingang
+J3;NTC 2 (extern);Connector_JST:JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal;NTC_Eingang
+J4;NTC 3 (extern);Connector_JST:JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal;NTC_Eingang
+J5;NTC 4 (extern);Connector_JST:JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal;NTC_Eingang
+T1;Uebertrager generisch 1,5 kV Basisisolierung;Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm;Uebertrager_generisch
+J6;Daisy-Chain oben;Connector_JST:JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal;Daisy_Stecker
+D1;TVS generisch (Annahme ERW-E3 N2) Eingang;Diode_SMD:D_SOD-323;TVS_generisch
+T2;Uebertrager generisch 1,5 kV Basisisolierung;Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm;Uebertrager_generisch
+J7;Daisy-Chain unten;Connector_JST:JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal;Daisy_Stecker
+D2;TVS generisch (Annahme ERW-E3 N2) Ausgang;Diode_SMD:D_SOD-323;TVS_generisch
+U2;6-Zellen-Ueberspannungsschutz generisch, Schwelle je Zelle 4.25 V, 1000 ms;Package_SO:TSSOP-16_4.4x5mm_P0.65mm;OVP6_generisch
+U3;6-Zellen-Ueberspannungsschutz generisch, Schwelle je Zelle 4.25 V, 1000 ms;Package_SO:TSSOP-16_4.4x5mm_P0.65mm;OVP6_generisch
+U4;6-Zellen-Ueberspannungsschutz generisch, Schwelle je Zelle 4.25 V, 1000 ms;Package_SO:TSSOP-16_4.4x5mm_P0.65mm;OVP6_generisch
+C19;100n (Entkopplung je Versorgungspin, ERW-E3 N2);Capacitor_SMD:C_0603_1608Metric;C
+C20;100n (Entkopplung je Versorgungspin, ERW-E3 N2);Capacitor_SMD:C_0603_1608Metric;C
+C21;100n (Entkopplung je Versorgungspin, ERW-E3 N2);Capacitor_SMD:C_0603_1608Metric;C
+C22;100n (Entkopplung je Versorgungspin, ERW-E3 N2);Capacitor_SMD:C_0603_1608Metric;C

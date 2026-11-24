@@ -50,6 +50,9 @@ A = [
     ("L1", "Kabelverlegung: Weg skizzieren (Sketch-to-Prompt), Prüfskript Biegeradius/Abstand HV-NV/Kühlleitung, FreeCAD-Sweep", 3, ["E2", "G4", "W1"], ["Opus", "Sonnet"], "Nutzerwunsch 2026-11-12, Vorbild spulen_montage.py"),
     ("E3", "Steuerung/BMS: Messkonzept, Ladezustand, Ausgleich (Konzept, offene Software aus T06)", 2, ["E2", "C4"], ["Opus", "Sonnet"], "Stufe 4"),
     ("E4", "Schaltungsmodell ngspice/Modelica: Vorladung, Kurzschluss", 2, ["E2", "R5"], ["Sonnet", "Maschine"], "Stufe 4"),
+    ("S1", "Gefahrenanalyse HARA ISO 26262-3, Sicherheitsziele, FSR (BAT-DOC-24)", 1, ["E2"], ["Opus", "Mensch"], "Autor 2026-11-24"),
+    ("KR1", "Kreativmethode + Paarvergleich, Pilot Zellausgleich (pm/kreativ)", 1, ["E3"], ["Opus", "Sonnet", "PI"], "Autor 2026-11-24"),
+    ("E3b", "Wärme CMU-Platine mit Pad (Elmer)", 1, ["E3", "KR1"], ["Sonnet", "Maschine"], "Autor 2026-11-24"),
     # Stufe 5 Kühlung
     ("K1", "ERWARTUNG Kühlung Schnellladen (max. Zelltemperatur, Spreizung)", 0.5, ["C3", "G4", "K0", "W2"], ["Opus"], "Stufe 5"),
     ("K2", "Kanalverteilung 1D (Verteiler, Druckverlust)", 1, ["K1"], ["Sonnet", "Maschine"], "Stufe 5"),

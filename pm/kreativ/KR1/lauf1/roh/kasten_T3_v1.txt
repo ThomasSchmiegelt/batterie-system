@@ -1,0 +1,1 @@
+{"optionen":[{"name":"Kontinuierlich passiv, 14,2 h Zyklus","quelle":"Fakt F1"},{"name":"Einmalig im Dormanz-Aufwachfenster","quelle":"TRIZ-10"},{"name":"Kurz parallel im Hochstromfenster","quelle":"TRIZ-21"},{"name":"Temperaturgepumpt, nur bei kühlem Zustand","quelle":"TRIZ-35"},{"name":"Vorgleich vor Betrieb, Rest laufend","quelle":"TRIZ-10"}]}

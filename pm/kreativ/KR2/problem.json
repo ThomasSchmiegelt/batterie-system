@@ -1,0 +1,61 @@
+{
+ "titel": "Trennen gegen Verfügbarkeit (SG-01/03 gegen SG-05)",
+ "bezug": {
+  "BT": "BT-310 (BMS), BT-325/BT-715 (Sekundärschutz), BT-711 (Schütze)",
+  "merkmal": "Abschaltstrategie",
+  "REQ": "SG-01, SG-03, SG-05 (docs/24)",
+  "akte": "noch keine (Vorschlag)"
+ },
+ "widerspruch": "Bei Überladung bzw. Übertemperatur muss getrennt werden (SG-01 ASIL D, SG-03 ASIL C, FTTI 1 s), während der Fahrt darf aber nicht unerwartet getrennt werden (SG-05 ASIL B). Kurzschluss (SG-04) ist nicht im Umfang.",
+ "triz_gegenstand": "die Abschaltstrategie eines Batteriemanagementsystems (Überladung und Übertemperatur: Vorwarnung, Drosseln, Trennen, Plausibilisierung, Hardwarepfad)",
+ "festforderung": "Die erste sichere Reaktion (Leistung begrenzen oder trennen) erfolgt innerhalb der FTTI von 1 s (SG-01/03). Eine Vorwarnung vor dem vollständigen Trennen ist nur zulässig, wenn innerhalb von 1 s gedrosselt wird.",
+ "verbessern": [
+  27
+ ],
+ "verschlechtern": [
+  35
+ ],
+ "teilfunktionen": [
+  "Stufen",
+  "Plausibilisierung",
+  "Reaktionsweg",
+  "Ausmaß",
+  "Vorwarnung an Fahrer"
+ ],
+ "kriterien": [
+  "Sicherheit",
+  "Verfügbarkeit",
+  "Kosten",
+  "Nachweisaufwand",
+  "Reifegrad"
+ ],
+ "kriteriendefinitionen": {
+  "Sicherheit": "Wie sicher werden Überladung und Übertemperatur beherrscht (Abdeckung, Unabhängigkeit, ASIL D für SG-01)?",
+  "Verfügbarkeit": "Wie selten trennt das System während der Fahrt unerwartet (Fehlauslösung, Vorwarnung, Notlauf)?",
+  "Kosten": "Bauteile und Kanäle.",
+  "Nachweisaufwand": "Aufwand für FMEDA, Software-ASIL, Unabhängigkeitsnachweis.",
+  "Reifegrad": "Verbreitung des Prinzips in Serien-BMS (nicht der Projektstand)."
+ },
+ "fakten": {
+  "F1": {
+   "quelle": "docs/24_gefahrenanalyse_hara.md §4, Zeile SG-01",
+   "text": "SG-01 Überladung verhindern: ASIL D, sicherer Zustand Laden beendet und Schütze offen, FTTI 1 s (Annahme Opus, vom Autor übernommen)"
+  },
+  "F2": {
+   "quelle": "docs/24_gefahrenanalyse_hara.md §4, Zeile SG-03",
+   "text": "SG-03 Zelltemperatur über T_krit verhindern: ASIL C, sicherer Zustand Leistung begrenzen, dann trennen, FTTI 1 s"
+  },
+  "F3": {
+   "quelle": "docs/24_gefahrenanalyse_hara.md §4, Zeile SG-05",
+   "text": "SG-05 unerwartetes Trennen während der Fahrt verhindern: ASIL B, erst Leistung verringern und warnen, dann trennen (außer SG-01/04), 2 s Vorwarnung"
+  },
+  "F4": {
+   "quelle": "docs/24_gefahrenanalyse_hara.md §5, Zeilen FSR-01, FSR-06, FSR-07",
+   "text": "FSR-01 Zellspannung auf zwei unabhängigen Wegen messen (AFE und Sekundärschutz je CMU); FSR-06 unabhängiger Abschaltpfad, Sekundärschutz öffnet Schütze ohne Software; FSR-07 Derating vor dem Trennen per CAN mit Warnzeit"
+  },
+  "F5": {
+   "quelle": "sim/elektrik/e3d_fmeda/ergebnis.json, cmu.NMC.SG-01 und ziel.SG-01",
+   "text": "FMEDA nur CMU-Platine NMC, SG-01: SPFM 0,9992 (Ziel 0,99), LFM 0,9814 (Ziel 0,9); ohne BMS-Rechner, Schütze und Software"
+  }
+ }
+}

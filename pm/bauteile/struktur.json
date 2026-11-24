@@ -1,5 +1,5 @@
 {
-  "hinweis": "KI-generiert (Claude Opus, 2026-11-11, erweitert 2026-11-16, Vorschlag ENT-004). Bauteilbaum des Batteriesystems. Reihenfolge = Entstehung im Abschlussvideo. Merkmale bekommen Werte erst über Entscheidungen (pm/entscheidungen/ENT-*.md). Feld stueckliste: Positionen in pm/bauteile/stueckliste.json. Feld art: K Kaufteil, E Eigenteil, S Schnittstelle Fahrzeug, D Detail eines Kaufteils (nur CAD/Video). | 2026-11-16 Opus: Feld \"varianten\" (fehlt = alle), BT-250 Zellhalter (NMC), BT-100 durchmesser/hoehe (ENT-012). | 2026-11-17 Opus: Innenaufbau BT-111…116, 121, 122, 131, 132; BT-140 lage (ENT-031). | 2026-11-18 Opus: BT-260 Verguss (NMC), BT-361 FPC-Halter, BT-440 Pol-Anschlusslaschen, BT-721 Trennbrücke, BT-722 Servicedeckel (LFP), BT-720 bauform (SL2, B-BAT-028). | 2026-11-19 Opus (Auftrag Autor): Kühlkreis BT-661…665 unter BT-660.",
+  "hinweis": "KI-generiert (Claude Opus, 2026-11-11, erweitert 2026-11-16, Vorschlag ENT-004). Bauteilbaum des Batteriesystems. Reihenfolge = Entstehung im Abschlussvideo. Merkmale bekommen Werte erst über Entscheidungen (pm/entscheidungen/ENT-*.md). Feld stueckliste: Positionen in pm/bauteile/stueckliste.json. Feld art: K Kaufteil, E Eigenteil, S Schnittstelle Fahrzeug, D Detail eines Kaufteils (nur CAD/Video). | 2026-11-16 Opus: Feld \"varianten\" (fehlt = alle), BT-250 Zellhalter (NMC), BT-100 durchmesser/hoehe (ENT-012). | 2026-11-17 Opus: Innenaufbau BT-111…116, 121, 122, 131, 132; BT-140 lage (ENT-031). | 2026-11-18 Opus: BT-260 Verguss (NMC), BT-361 FPC-Halter, BT-440 Pol-Anschlusslaschen, BT-721 Trennbrücke, BT-722 Servicedeckel (LFP), BT-720 bauform (SL2, B-BAT-028). | 2026-11-19 Opus (Auftrag Autor): Kühlkreis BT-661…665 unter BT-660. | 2026-11-24 Opus (Auftrag Autor „elektronik weiter detaillieren“): BT-311, BT-321…325, BT-715; BT-712 schalter/pulsenergie_J (E3, HARA BAT-DOC-24). | 2026-11-24 Opus: BT-323 filter_R_Ohm/filter_C_nF, BT-321 kriechstrecke_daisy_mm (ERW-E3 N1). | 2026-11-24 Opus: BT-321 waermeabfuhr (KR1, Autor). | 2026-11-24 Opus: BT-321 pad_dicke_mm, pad_lambda_W_mK, vias_je_widerstandspaar (E3b).",
   "bauteile": [
     {
       "id": "BT-000",
@@ -442,6 +442,29 @@
       }
     },
     {
+      "id": "BT-311",
+      "name": "BMS-Leiterplatte",
+      "eltern": "BT-310",
+      "rolle": "trägt Rechner, CAN, Schützansteuerung und die verstärkte Isolation zur Daisy-Chain (HV/NV-Grenze)",
+      "anforderungen": [
+        "REQ-P15",
+        "REQ-P17",
+        "REQ-P18",
+        "REQ-P19"
+      ],
+      "art": "E",
+      "stueckliste": [],
+      "merkmale": {
+        "laenge_mm": null,
+        "breite_mm": null,
+        "lagen": null,
+        "kriechstrecke_hv_nv_mm": null,
+        "luftstrecke_hv_nv_mm": null,
+        "abstand_nv_mm": null,
+        "schuetzkanaele": null
+      }
+    },
+    {
       "id": "BT-320",
       "name": "Zellüberwachung",
       "eltern": "BT-300",
@@ -458,6 +481,100 @@
         "kanaele": null,
         "ausgleich": null,
         "ausgleichsstrom_mA": null
+      }
+    },
+    {
+      "id": "BT-321",
+      "name": "CMU-Leiterplatte",
+      "eltern": "BT-320",
+      "rolle": "trägt Mess-IC, Ausgleichskreise, Filter und Daisy-Chain-Anschluss einer Zellgruppe",
+      "anforderungen": [
+        "REQ-P15",
+        "REQ-P17",
+        "REQ-P19",
+        "REQ-P20"
+      ],
+      "art": "E",
+      "stueckliste": [],
+      "merkmale": {
+        "laenge_mm": null,
+        "breite_mm": null,
+        "lagen": null,
+        "dicke_mm": null,
+        "kupfer_um": null,
+        "kriechstrecke_mm": null,
+        "kriechstrecke_daisy_mm": null,
+        "waermeabfuhr": null,
+        "pad_dicke_mm": null,
+        "pad_lambda_W_mK": null,
+        "vias_je_widerstandspaar": null
+      }
+    },
+    {
+      "id": "BT-322",
+      "name": "Mess-IC (AFE)",
+      "eltern": "BT-321",
+      "rolle": "misst bis zu 18 Zellspannungen und steuert den Ausgleich",
+      "anforderungen": [
+        "REQ-P15",
+        "REQ-P18"
+      ],
+      "art": "K",
+      "stueckliste": [],
+      "merkmale": {
+        "kanaele": null,
+        "asil": null,
+        "messfehler_mV": null
+      }
+    },
+    {
+      "id": "BT-323",
+      "name": "Ausgleichskreis",
+      "eltern": "BT-321",
+      "rolle": "entlädt eine Zelle über Widerstand und Schalter (passiver Ausgleich)",
+      "anforderungen": [
+        "REQ-P15"
+      ],
+      "art": "E",
+      "stueckliste": [],
+      "merkmale": {
+        "widerstand_Ohm": null,
+        "verlust_W": null,
+        "schalter": null,
+        "bauform": null,
+        "filter_R_Ohm": null,
+        "filter_C_nF": null
+      }
+    },
+    {
+      "id": "BT-324",
+      "name": "Daisy-Chain-Übertrager",
+      "eltern": "BT-321",
+      "rolle": "überträgt Daten isoliert zur Nachbar-CMU",
+      "anforderungen": [
+        "REQ-P17",
+        "REQ-P19"
+      ],
+      "art": "K",
+      "stueckliste": [],
+      "merkmale": {
+        "pruefspannung_V": null
+      }
+    },
+    {
+      "id": "BT-325",
+      "name": "Sekundärschutz Überspannung",
+      "eltern": "BT-321",
+      "rolle": "zweiter, unabhängiger Überspannungspfad je CMU (FSR-01, FSR-06)",
+      "anforderungen": [
+        "REQ-P18"
+      ],
+      "art": "K",
+      "stueckliste": [],
+      "merkmale": {
+        "schwelle_V": null,
+        "verzoegerung_ms": null,
+        "bauform": null
       }
     },
     {
@@ -1122,7 +1239,9 @@
       ],
       "merkmale": {
         "widerstand_Ohm": null,
-        "vorladezeit_ms": null
+        "vorladezeit_ms": null,
+        "schalter": null,
+        "pulsenergie_J": null
       }
     },
     {
@@ -1141,6 +1260,23 @@
       "merkmale": {
         "art": null,
         "nennstrom_A": null
+      }
+    },
+    {
+      "id": "BT-715",
+      "name": "Schützansteuerung",
+      "eltern": "BT-710",
+      "rolle": "treibt die Schützspulen mit Sparschaltung und schneller Löschung, unabhängiger Abschaltpfad (FSR-06)",
+      "anforderungen": [
+        "REQ-P13",
+        "REQ-P18"
+      ],
+      "art": "E",
+      "stueckliste": [],
+      "merkmale": {
+        "haltestrom_A": null,
+        "loeschung": null,
+        "abschaltzeit_ms": null
       }
     },
     {
@@ -1190,7 +1326,8 @@
       "stueckliste": [],
       "merkmale": {
         "laenge_mm": null,
-        "breite_mm": null
+        "breite_mm": null,
+        "lichte_hoehe_zugabe_mm": null
       },
       "varianten": [
         "LFP"

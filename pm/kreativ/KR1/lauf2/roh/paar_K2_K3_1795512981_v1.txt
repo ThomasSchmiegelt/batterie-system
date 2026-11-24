@@ -1,0 +1,1 @@
+{"urteile":{"Fehlermöglichkeiten (FSR, HARA)":{"gewinner":"A","grund":"A enthält nur einen passiven Widerstand im Ausgleichspfad, während B zusätzlich FET, Temperatursensor und Taktung erfordert, die jeweils eigene FSR- und HARA-Zweige (FET-Kurzschluss, Sensorverstoß, Taktungsfehler) erzeugen.","zahl":{"wert":"FET 0,008 W","quelle":"F2"}}}}

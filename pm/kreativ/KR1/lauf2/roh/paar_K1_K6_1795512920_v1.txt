@@ -1,0 +1,1 @@
+{"urteile":{"Fehlermöglichkeiten (FSR, HARA)":{"gewinner":"A","grund":"Passiv besteht nur aus Widerstand und FET pro Zelle, während aktiv mindestens zwei FETs, ein Kondensator, Treiber und Steuerlogik je Zellenpaar nötig sind, was deutlich mehr Fehlerelemente und -pfade in der HARA erzeugt.","zahl":null}}}

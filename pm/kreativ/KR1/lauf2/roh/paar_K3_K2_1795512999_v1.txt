@@ -1,0 +1,1 @@
+{"urteile":{"Fehlermöglichkeiten (FSR, HARA)":{"gewinner":"B","grund":"B benötigt nur ein thermisches Interface (Wärmeleitpad) und konstante Stromführung, während A zusätzlich Temperatursensor, Taktlogik, Wake-up-Sequenz und Duty-Cycle-Regelung als elektronische Fehlerquellen einfügt.","zahl":null}}}

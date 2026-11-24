@@ -22,6 +22,7 @@ tags: ["dokument"]
 - [[Anforderung/REQ-D11|REQ-D11]]
 - [[Anforderung/REQ-D12|REQ-D12]]
 - [[Anforderung/REQ-D13|REQ-D13]]
+- [[Anforderung/REQ-D15|REQ-D15]]
 - [[Anforderung/REQ-P02|REQ-P02]]
 - [[Anforderung/REQ-P03|REQ-P03]]
 - [[Anforderung/REQ-P05|REQ-P05]]
@@ -35,6 +36,10 @@ tags: ["dokument"]
 - [[Anforderung/REQ-P13|REQ-P13]]
 - [[Anforderung/REQ-P14|REQ-P14]]
 - [[Anforderung/REQ-P15|REQ-P15]]
+- [[Anforderung/REQ-P17|REQ-P17]]
+- [[Anforderung/REQ-P18|REQ-P18]]
+- [[Anforderung/REQ-P19|REQ-P19]]
+- [[Anforderung/REQ-P20|REQ-P20]]
 
 ## Genannte Entscheidungen, Befunde, Bauteile (Textvorkommen)
 - [[Befund/B-BAT-004|B-BAT-004]]
@@ -58,6 +63,8 @@ tags: ["dokument"]
 - [[Befund/B-BAT-038|B-BAT-038]]
 - [[Befund/B-BAT-040|B-BAT-040]]
 - [[Befund/B-BAT-043|B-BAT-043]]
+- [[Befund/B-BAT-050|B-BAT-050]]
+- [[Befund/B-BAT-051|B-BAT-051]]
 - [[Bauteil/BT-000|BT-000]]
 - [[Bauteil/BT-100|BT-100]]
 - [[Bauteil/BT-110|BT-110]]
@@ -81,7 +88,13 @@ tags: ["dokument"]
 - [[Bauteil/BT-250|BT-250]]
 - [[Bauteil/BT-300|BT-300]]
 - [[Bauteil/BT-310|BT-310]]
+- [[Bauteil/BT-311|BT-311]]
 - [[Bauteil/BT-320|BT-320]]
+- [[Bauteil/BT-321|BT-321]]
+- [[Bauteil/BT-322|BT-322]]
+- [[Bauteil/BT-323|BT-323]]
+- [[Bauteil/BT-324|BT-324]]
+- [[Bauteil/BT-325|BT-325]]
 - [[Bauteil/BT-330|BT-330]]
 - [[Bauteil/BT-340|BT-340]]
 - [[Bauteil/BT-350|BT-350]]
@@ -89,15 +102,7 @@ tags: ["dokument"]
 - [[Bauteil/BT-400|BT-400]]
 - [[Bauteil/BT-410|BT-410]]
 - [[Bauteil/BT-420|BT-420]]
-- [[Bauteil/BT-430|BT-430]]
-- [[Bauteil/BT-500|BT-500]]
-- [[Bauteil/BT-530|BT-530]]
-- [[Bauteil/BT-540|BT-540]]
-- [[Bauteil/BT-600|BT-600]]
-- [[Bauteil/BT-610|BT-610]]
-- [[Bauteil/BT-660|BT-660]]
-- [[Bauteil/BT-700|BT-700]]
-- … und 171 weitere
+- … und 208 weitere
 
 ## Vorgänge, die dieses Dokument nennen
 - [[Vorgang/R5|R5]] – Werkzeugwahl festlegen (ENT): Zellmodell, Packmodell, Schaltung
@@ -258,7 +263,7 @@ tags: ["dokument"]
 | ENT-144 (`../pm/entscheidungen/ENT-144.md`, im Repo) | 2026-11-18 | Schaltbox auf dem Deckel hinten, unter der Rücksitzbank (Turm 89 mm), beide Varianten | LFP, NMC | BT-710 | einbauort = deckel_hinten | REQ-P13 | B-BAT-024 | Opus (Vorschlag Turm) / Autor (2026-11-18: „ja, das ist ok. das wird unter der rücksitzbank verortet.“) | entschieden (Mensch) |
 | ENT-145 (`../pm/entscheidungen/ENT-145.md`, im Repo) | 2026-11-18 | Verschaltung Mäander (4 Bänder aus Spaltenzügen): Plus, Minus, Mitte hinten | NMC | BT-200 | verschaltung = maeander | REQ-P02 | B-BAT-024 | Opus (Vorschlag, AUFTRAG E2 Fortsetzung 2; Geometrie Sonnet) | entschieden (Opus, delegiert durch Autor 2026-11-23) |
 | ENT-146 (`../pm/entscheidungen/ENT-146.md`, im Repo) | 2026-11-18 | Ausgleichsstrom NMC 130 mA | NMC | BT-320 | ausgleichsstrom_mA = 130.0 mA | REQ-P15 | B-BAT-024 | Opus (Annahme, AUFTRAG E2 Fortsetzung 2) | entschieden (Opus, delegiert durch Autor 2026-11-23) |
-| ENT-147 (`../pm/entscheidungen/ENT-147.md`, im Repo) | 2026-11-18 | Bauraumlänge LFP 2050 mm (CMU hochkant in beiden Endzonen, je +10 mm) | LFP | BT-000 | bauraum_laenge_mm = 2050.0 mm | REQ-P07 | B-BAT-024 | Opus (Annahme, AUFTRAG E2 Fortsetzung 2) | vorgeschlagen |
+| ENT-147 (`../pm/entscheidungen/ENT-147.md`, im Repo) | 2026-11-18 | Bauraumlänge LFP 2050 mm (CMU hochkant in beiden Endzonen, je +10 mm) | LFP | BT-000 | bauraum_laenge_mm = 2050.0 mm | REQ-P07 | B-BAT-024 | Opus (Annahme, AUFTRAG E2 Fortsetzung 2) | entschieden (Opus, delegiert durch Autor 2026-11-23) |
 | ENT-148 (`../pm/entscheidungen/ENT-148.md`, im Repo) | 2026-11-18 | Verschaltung LFP Schleife 2 Reihen: Plus und Minus hinten, Mitte vorn | LFP | BT-200 | verschaltung = schleife_2reihen | REQ-P02 | B-BAT-024 | Opus (Vorschlag, AUFTRAG E2 Fortsetzung 3; Geometrie Sonnet) | entschieden (Opus, delegiert durch Autor 2026-11-23) |
 | ENT-149 (`../pm/entscheidungen/ENT-149.md`, im Repo) | 2026-11-18 | Messleitung FPC Breite LFP 16 mm | LFP | BT-360 | breite_mm = 16.0 mm | REQ-P02 | B-BAT-024 | Opus (Vorschlag, AUFTRAG E2 Fortsetzung 3; Geometrie Sonnet) | entschieden (Opus, delegiert durch Autor 2026-11-23) |
 | ENT-150 (`../pm/entscheidungen/ENT-150.md`, im Repo) | 2026-11-18 | Service-Trennbrücke LFP unter Servicedeckel | LFP | BT-720 | bauform = trennbruecke_servicedeckel_vorn | REQ-P13 | B-BAT-024 | Opus (Vorschlag, AUFTRAG E2 Änderung zu Punkt 4, Autor 2026-11-18); Geometrie Sonnet | entschieden (Opus, delegiert durch Autor 2026-11-23) |
@@ -274,6 +279,35 @@ tags: ["dokument"]
 | ENT-160 (`../pm/entscheidungen/ENT-160.md`, im Repo) | 2026-11-23 | Zellzahl LFP 250 (wie gebaut, folgt aus 800 V) | LFP | BT-200 | zellen_anzahl = 250.0 "-" | REQ-P02, REQ-P03 | ENT-006, cad/baukasten/ausgabe/ergebnis_LFP.json (Annahme A_zellzahl_LFP in cad/baukasten/annahmen.json) | Opus (Vorschlag, Wert wie gebaut; erstellt durch Sonnet) / Opus delegiert durch Autor | entschieden (Opus, delegiert durch Autor 2026-11-23) |
 | ENT-161 (`../pm/entscheidungen/ENT-161.md`, im Repo) | 2026-11-23 | Zellzahl NMC 868 (wie gebaut) | NMC | BT-200 | zellen_anzahl = 868.0 "-" | REQ-P02, REQ-P03 | ENT-006, cad/baukasten/ausgabe/ergebnis_NMC.json (Annahme A_zellzahl_NMC in cad/baukasten/annahmen.json) | Opus (Vorschlag, Wert wie gebaut; erstellt durch Sonnet) / Opus delegiert durch Autor | entschieden (Opus, delegiert durch Autor 2026-11-23) |
 | ENT-162 (`../pm/entscheidungen/ENT-162.md`, im Repo) | 2026-11-23 | Zellabstand NMC 2,0 mm (wie gebaut) | NMC | BT-250 | zellabstand_mm = 2.0 mm | REQ-P06, REQ-P11 | ENT-006, cad/baukasten/ausgabe/ergebnis_NMC.json (Annahme A_zellabstand_NMC_mm in cad/baukasten/annahmen.json) | Opus (Vorschlag, Wert wie gebaut; erstellt durch Sonnet) / Opus delegiert durch Autor | entschieden (Opus, delegiert durch Autor 2026-11-23) |
+| ENT-163 (`../pm/entscheidungen/ENT-163.md`, im Repo) | 2026-11-24 | CMU-Platine Lagen 4 | alle | BT-321 | lagen = 4.0 - | REQ-P15, REQ-P17 | B-BAT-050, sim/elektrik/e3_platine/ERWARTUNG.md | Opus (Annahme ERW-E3); Akte angelegt von Sonnet | vorgeschlagen |
+| ENT-164 (`../pm/entscheidungen/ENT-164.md`, im Repo) | 2026-11-24 | CMU-Platine Dicke 1,6 mm | alle | BT-321 | dicke_mm = 1.6 mm | REQ-P15 | B-BAT-050, sim/elektrik/e3_platine/ERWARTUNG.md | Opus (Annahme ERW-E3); Akte angelegt von Sonnet | vorgeschlagen |
+| ENT-165 (`../pm/entscheidungen/ENT-165.md`, im Repo) | 2026-11-24 | CMU-Platine Kupfer außen 70 µm | alle | BT-321 | kupfer_um = 70.0 um | REQ-P15 | B-BAT-050, sim/elektrik/e3_platine/ERWARTUNG.md | Opus (Annahme ERW-E3); Akte angelegt von Sonnet | vorgeschlagen |
+| ENT-166 (`../pm/entscheidungen/ENT-166.md`, im Repo) | 2026-11-24 | CMU-Platine Länge 120 mm | alle | BT-321 | laenge_mm = 120.0 mm | REQ-P15 | B-BAT-050, sim/elektrik/e3_platine/ERWARTUNG.md | Opus (Annahme ERW-E3); Akte angelegt von Sonnet | vorgeschlagen |
+| ENT-167 (`../pm/entscheidungen/ENT-167.md`, im Repo) | 2026-11-24 | CMU-Platine Breite 60 mm | alle | BT-321 | breite_mm = 60.0 mm | REQ-P15 | B-BAT-050, sim/elektrik/e3_platine/ERWARTUNG.md | Opus (Annahme ERW-E3); Akte angelegt von Sonnet | vorgeschlagen |
+| ENT-168 (`../pm/entscheidungen/ENT-168.md`, im Repo) | 2026-11-24 | CMU-Platine Abstand innerhalb einer CMU 0,2 mm (Leiterplattenwerkstoff, PD2, ≤ 100 V) | alle | BT-321 | kriechstrecke_mm = 0.2 mm | REQ-P17, REQ-P19 | B-BAT-050, sim/elektrik/e3_platine/ERWARTUNG.md | Opus (Annahme ERW-E3, korrigiert ERW-E3 N5); Akte angelegt von Sonnet | vorgeschlagen |
+| ENT-169 (`../pm/entscheidungen/ENT-169.md`, im Repo) | 2026-11-24 | Mess-IC 18 Kanäle | alle | BT-322 | kanaele = 18.0 - | REQ-P15, REQ-P18 | B-BAT-050, sim/elektrik/e3_platine/ERWARTUNG.md | Opus (Annahme ERW-E3); Akte angelegt von Sonnet | vorgeschlagen |
+| ENT-170 (`../pm/entscheidungen/ENT-170.md`, im Repo) | 2026-11-24 | Mess-IC ASIL D | alle | BT-322 | asil = "D" - | REQ-P18 | B-BAT-050, sim/elektrik/e3_platine/ERWARTUNG.md | Opus (Annahme ERW-E3); Akte angelegt von Sonnet | vorgeschlagen |
+| ENT-171 (`../pm/entscheidungen/ENT-171.md`, im Repo) | 2026-11-24 | Ausgleichswiderstand LFP 23,5 Ohm (2 x 47 Ohm parallel) | LFP | BT-323 | widerstand_Ohm = 23.5 Ohm | REQ-P15 | B-BAT-050, sim/elektrik/e3_platine/ERWARTUNG.md | Opus (Annahme ERW-E3); Akte angelegt von Sonnet | vorgeschlagen |
+| ENT-172 (`../pm/entscheidungen/ENT-172.md`, im Repo) | 2026-11-24 | Ausgleichswiderstand NMC 32,45 Ohm (2 x 64,9 Ohm parallel, E96) | NMC | BT-323 | widerstand_Ohm = 32.45 Ohm | REQ-P15 | B-BAT-050, sim/elektrik/e3_platine/ERWARTUNG.md | Opus (Annahme ERW-E3, korrigiert ERW-E3 N1); Akte angelegt von Sonnet | vorgeschlagen |
+| ENT-173 (`../pm/entscheidungen/ENT-173.md`, im Repo) | 2026-11-24 | Ausgleichsschalter N-MOSFET Logikpegel | alle | BT-323 | schalter = "N-MOSFET Logikpegel, R_DS,on <= 0,5 Ohm, AEC-Q101" - | REQ-P15 | B-BAT-050, sim/elektrik/e3_platine/ERWARTUNG.md | Opus (Annahme ERW-E3); Akte angelegt von Sonnet | vorgeschlagen |
+| ENT-174 (`../pm/entscheidungen/ENT-174.md`, im Repo) | 2026-11-24 | Daisy-Chain Prüfspannung 1,5 kV | alle | BT-324 | pruefspannung_V = 1500.0 V | REQ-P17, REQ-P19 | B-BAT-050, sim/elektrik/e3_platine/ERWARTUNG.md | Opus (Annahme ERW-E3); Akte angelegt von Sonnet | vorgeschlagen |
+| ENT-175 (`../pm/entscheidungen/ENT-175.md`, im Repo) | 2026-11-24 | Sekundärschutz Schwelle LFP 3,75 V | LFP | BT-325 | schwelle_V = 3.75 V | REQ-P18 | B-BAT-050, sim/elektrik/e3_platine/ERWARTUNG.md | Opus (Annahme ERW-E3); Akte angelegt von Sonnet | vorgeschlagen |
+| ENT-176 (`../pm/entscheidungen/ENT-176.md`, im Repo) | 2026-11-24 | Sekundärschutz Schwelle NMC 4,25 V | NMC | BT-325 | schwelle_V = 4.25 V | REQ-P18 | B-BAT-050, sim/elektrik/e3_platine/ERWARTUNG.md | Opus (Annahme ERW-E3); Akte angelegt von Sonnet | vorgeschlagen |
+| ENT-177 (`../pm/entscheidungen/ENT-177.md`, im Repo) | 2026-11-24 | Sekundärschutz Verzögerung 1000 ms | alle | BT-325 | verzoegerung_ms = 1000.0 ms | REQ-P18 | B-BAT-050, sim/elektrik/e3_platine/ERWARTUNG.md | Opus (Annahme ERW-E3); Akte angelegt von Sonnet | vorgeschlagen |
+| ENT-178 (`../pm/entscheidungen/ENT-178.md`, im Repo) | 2026-11-24 | BMS-Platine Kriechstrecke HV/NV 10 mm | alle | BT-311 | kriechstrecke_hv_nv_mm = 10.0 mm | REQ-P17, REQ-P19 | B-BAT-050, sim/elektrik/e3_platine/ERWARTUNG.md | Opus (Annahme ERW-E3); Akte angelegt von Sonnet | vorgeschlagen |
+| ENT-179 (`../pm/entscheidungen/ENT-179.md`, im Repo) | 2026-11-24 | Vorladung Pulsenergie 450 J | alle | BT-712 | pulsenergie_J = 450.0 J | REQ-P13 | B-BAT-050, sim/elektrik/e3_platine/ERWARTUNG.md | Opus (Annahme ERW-E3); Akte angelegt von Sonnet | vorgeschlagen |
+| ENT-180 (`../pm/entscheidungen/ENT-180.md`, im Repo) | 2026-11-24 | Vorladung Schalter Vorladeschütz | alle | BT-712 | schalter = "Vorladeschütz + Widerstand" - | REQ-P13 | B-BAT-050, sim/elektrik/e3_platine/ERWARTUNG.md | Opus (Annahme ERW-E3); Akte angelegt von Sonnet | vorgeschlagen |
+| ENT-181 (`../pm/entscheidungen/ENT-181.md`, im Repo) | 2026-11-24 | Messfilter Widerstand 100 Ohm | alle | BT-323 | filter_R_Ohm = 100.0 Ohm | REQ-P17 | B-BAT-050, sim/elektrik/e3_platine/ERWARTUNG.md | Opus (Annahme ERW-E3 N1); Akte angelegt von Sonnet | vorgeschlagen |
+| ENT-182 (`../pm/entscheidungen/ENT-182.md`, im Repo) | 2026-11-24 | Messfilter Kondensator 100 nF | alle | BT-323 | filter_C_nF = 100.0 nF | REQ-P17 | B-BAT-050, sim/elektrik/e3_platine/ERWARTUNG.md | Opus (Annahme ERW-E3 N1); Akte angelegt von Sonnet | vorgeschlagen |
+| ENT-183 (`../pm/entscheidungen/ENT-183.md`, im Repo) | 2026-11-24 | CMU-Platine Kriechstrecke Daisy-Chain-Ausgang 2,5 mm | alle | BT-321 | kriechstrecke_daisy_mm = 2.5 mm | REQ-P17, REQ-P19 | B-BAT-050, sim/elektrik/e3_platine/ERWARTUNG.md | Opus (Annahme ERW-E3 N1); Akte angelegt von Sonnet | vorgeschlagen |
+| ENT-184 (`../pm/entscheidungen/ENT-184.md`, im Repo) | 2026-11-24 | CMU-Platine Wärmeabfuhr: Wärmeleitpad zur Kühlplatte (KR1 K2) | alle | BT-321 | waermeabfuhr = waermeleitpad_kuehlplatte "-" | REQ-P15, REQ-P20, REQ-D15 | B-BAT-051, pm/kreativ/KR1/ERGEBNIS.md, pm/kreativ/KR1/rang.json, sim/elektrik/e3_platine/ergebnis_waerme.json | Autor (Auswahl 2026-11-24 im Chat), Vorschlag Opus aus KR1 | entschieden (Mensch) |
+| ENT-185 (`../pm/entscheidungen/ENT-185.md`, im Repo) | 2026-11-24 | Wärmeleitpad CMU 1,0 mm | alle | BT-321 | pad_dicke_mm = 1.0 "mm" | REQ-P20, REQ-P15 | sim/elektrik/e3b_platine_waerme/ergebnis.json, sim/elektrik/e3b_platine_waerme/ERWARTUNG.md, ENT-184 | Opus (Annahme ERW-E3b, durch E3b bestätigt) | entschieden (Opus, delegiert durch Autor 2026-11-24) |
+| ENT-186 (`../pm/entscheidungen/ENT-186.md`, im Repo) | 2026-11-24 | Wärmeleitpad CMU λ 3 W/mK | alle | BT-321 | pad_lambda_W_mK = 3.0 "W/mK" | REQ-P20, REQ-P15 | sim/elektrik/e3b_platine_waerme/ergebnis.json, sim/elektrik/e3b_platine_waerme/ERWARTUNG.md, ENT-184 | Opus (Annahme ERW-E3b, durch E3b bestätigt) | entschieden (Opus, delegiert durch Autor 2026-11-24) |
+| ENT-187 (`../pm/entscheidungen/ENT-187.md`, im Repo) | 2026-11-24 | Thermische Vias 8 je Widerstandspaar | alle | BT-321 | vias_je_widerstandspaar = 8.0 "-" | REQ-P20, REQ-P15 | sim/elektrik/e3b_platine_waerme/ergebnis.json, sim/elektrik/e3b_platine_waerme/ERWARTUNG.md, ENT-184 | Opus (Annahme ERW-E3b, durch E3b bestätigt) | entschieden (Opus, delegiert durch Autor 2026-11-24) |
+| ENT-188 (`../pm/entscheidungen/ENT-188.md`, im Repo) | 2026-11-24 | BMS-Platine BT-311 Länge 160 mm | alle | BT-311 | laenge_mm = 160.0 mm | REQ-P15, REQ-P19 | sim/elektrik/e3c_bms_platine/ERWARTUNG.md | Opus (Annahme ERW-E3c); Akte angelegt von Sonnet | vorgeschlagen |
+| ENT-189 (`../pm/entscheidungen/ENT-189.md`, im Repo) | 2026-11-24 | BMS-Platine BT-311 Breite 100 mm | alle | BT-311 | breite_mm = 100.0 mm | REQ-P15, REQ-P19 | sim/elektrik/e3c_bms_platine/ERWARTUNG.md | Opus (Annahme ERW-E3c); Akte angelegt von Sonnet | vorgeschlagen |
+| ENT-190 (`../pm/entscheidungen/ENT-190.md`, im Repo) | 2026-11-24 | BMS-Platine BT-311 vier Lagen | alle | BT-311 | lagen = 4.0 "-" | REQ-P15, REQ-P19 | sim/elektrik/e3c_bms_platine/ERWARTUNG.md | Opus (Annahme ERW-E3c); Akte angelegt von Sonnet | vorgeschlagen |
+| ENT-191 (`../pm/entscheidungen/ENT-191.md`, im Repo) | 2026-11-24 | BMS-Platine Kriechstrecke HV/NV 10 mm (Luftstrecke 8 mm, Höhe 3000 m) | alle | BT-311 | kriechstrecke_hv_nv_mm = 10.0 mm | REQ-P17, REQ-P18, REQ-P19 | sim/elektrik/e3c_bms_platine/ERWARTUNG.md | Opus (Annahme ERW-E3c); Akte angelegt von Sonnet | vorgeschlagen |
 
 ---
 *KI-generiert (pm.py). Status „entschieden“ setzt nur der Autor.*

@@ -1,0 +1,2434 @@
+{
+ "herkunft": {
+  "BT-311.laenge_mm": "160.0 (ENT-188)",
+  "BT-311.breite_mm": "100.0 (ENT-189)",
+  "BT-311.lagen": "4.0 (ENT-190)",
+  "BT-311.kriechstrecke_hv_nv_mm": "10.0 (ENT-191)"
+ },
+ "teile": [
+  {
+   "ref": "J1",
+   "tag": "J_VERSORGUNG",
+   "name": "Stecker_4",
+   "value": "Stecker 12 V (VBAT, GND, KL15)",
+   "footprint": "Connector_JST:JST_PH_S4B-PH-SM4-TB_1x04-1MP_P2.00mm_Horizontal",
+   "seite": "NV",
+   "pins": {
+    "1": "VBAT_IN",
+    "2": "GND",
+    "3": "KL15",
+    "4": null
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2",
+    "3": "3",
+    "4": "4"
+   }
+  },
+  {
+   "ref": "Q1",
+   "tag": "Q_VERPOL",
+   "name": "PMOS_Verpolschutz",
+   "value": "PMOS Verpolschutz generisch",
+   "footprint": "Package_TO_SOT_SMD:SOT-23",
+   "seite": "NV",
+   "pins": {
+    "1": "N$1",
+    "2": "VBAT",
+    "3": "VBAT_IN"
+   },
+   "pinnamen": {
+    "1": "G",
+    "2": "S",
+    "3": "D"
+   }
+  },
+  {
+   "ref": "R1",
+   "tag": "R_VERPOL",
+   "name": "R",
+   "value": "R Gate Verpolschutz (Wert offen)",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "N$1",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "D1",
+   "tag": "D_VERPOL",
+   "name": "Z_Diode_Gate",
+   "value": "Z-Diode Gate-Schutz generisch",
+   "footprint": "Diode_SMD:D_SOD-123",
+   "seite": "NV",
+   "pins": {
+    "1": "N$1",
+    "2": "VBAT"
+   },
+   "pinnamen": {
+    "1": "A",
+    "2": "K"
+   }
+  },
+  {
+   "ref": "D2",
+   "tag": "D_TVS",
+   "name": "TVS_ISO7637",
+   "value": "TVS ISO 7637-2 generisch",
+   "footprint": "Diode_SMD:D_SMB",
+   "seite": "NV",
+   "pins": {
+    "1": "GND",
+    "2": "VBAT"
+   },
+   "pinnamen": {
+    "1": "A",
+    "2": "K"
+   }
+  },
+  {
+   "ref": "L1",
+   "tag": "L_VERSORGUNG",
+   "name": "L_Drossel",
+   "value": "Drossel Eingangsfilter (Wert offen)",
+   "footprint": "Inductor_SMD:L_1210_3225Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "VBAT",
+    "2": "VBAT_F"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C1",
+   "tag": "C_VBAT0",
+   "name": "C_12",
+   "value": "C Pufferung (Wert offen)",
+   "footprint": "Capacitor_SMD:C_1206_3216Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "VBAT_F",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C2",
+   "tag": "C_VBAT1",
+   "name": "C_12",
+   "value": "C Pufferung (Wert offen)",
+   "footprint": "Capacitor_SMD:C_1206_3216Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "VBAT_F",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C3",
+   "tag": "C_VBAT_ELKO",
+   "name": "C_Elko",
+   "value": "C Elko Pufferung (Wert offen)",
+   "footprint": "Capacitor_SMD:CP_Elec_6.3x7.7",
+   "seite": "NV",
+   "pins": {
+    "1": "VBAT_F",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C4",
+   "tag": "C_VBAT_HF",
+   "name": "C",
+   "value": "C Entkopplung (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "VBAT_F",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "U1",
+   "tag": "U_SBC",
+   "name": "SBC_generisch_Watchdog",
+   "value": "Systembasis-IC generisch mit Watchdog, ASIL D",
+   "footprint": "Package_QFP:LQFP-48_7x7mm_P0.5mm",
+   "seite": "NV",
+   "pins": {
+    "1": "VBAT_F",
+    "2": "VBAT_F",
+    "3": "GND",
+    "4": "GND",
+    "5": "+3V3",
+    "6": "+5V",
+    "7": "NRST",
+    "8": "WDI",
+    "9": "N$2",
+    "10": "INTN",
+    "11": "VBAT_F"
+   },
+   "pinnamen": {
+    "1": "VS1",
+    "2": "VS2",
+    "3": "GND1",
+    "4": "GND2",
+    "5": "V1",
+    "6": "V2",
+    "7": "RSTN",
+    "8": "WDI",
+    "9": "WAKE",
+    "10": "INTN",
+    "11": "EN"
+   }
+  },
+  {
+   "ref": "R2",
+   "tag": "R_KL15",
+   "name": "R",
+   "value": "R Weckeingang KL15 (Wert offen)",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "KL15",
+    "2": "N$2"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C5",
+   "tag": "C_SBC_OUT0",
+   "name": "C_8",
+   "value": "C Ausgang SBC (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0805_2012Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "+3V3",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C6",
+   "tag": "C_SBC_OUT1",
+   "name": "C_8",
+   "value": "C Ausgang SBC (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0805_2012Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "+5V",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C7",
+   "tag": "C_SBC_VS",
+   "name": "C",
+   "value": "C Entkopplung (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "VBAT_F",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "U2",
+   "tag": "U_MCU",
+   "name": "MCU_ASIL_D_Lockstep_generisch",
+   "value": "Mikrocontroller generisch ASIL D Lockstep LQFP-144",
+   "footprint": "Package_QFP:LQFP-144_20x20mm_P0.5mm",
+   "seite": "NV",
+   "pins": {
+    "6": "+3V3",
+    "14": "+3V3",
+    "22": "+3V3",
+    "30": "+3V3",
+    "41": "+3V3",
+    "53": "+3V3",
+    "65": "+3V3",
+    "76": "+3V3",
+    "88": "+3V3",
+    "100": "+3V3",
+    "8": "GND",
+    "16": "GND",
+    "24": "GND",
+    "32": "GND",
+    "43": "GND",
+    "55": "GND",
+    "67": "GND",
+    "78": "GND",
+    "90": "GND",
+    "102": "GND",
+    "3": "+3V3",
+    "4": "GND",
+    "5": "+3V3",
+    "133": "XTAL1",
+    "135": "XTAL2",
+    "10": "NRST",
+    "12": "WDI",
+    "18": "INTN",
+    "20": "N$3",
+    "21": "N$4",
+    "26": "N$5",
+    "28": "NTC_ADC",
+    "34": "LED1",
+    "35": "LED2",
+    "36": "LED3",
+    "46": "P_HS_EN",
+    "47": "P_LS_EN",
+    "48": "P_DIAG",
+    "49": "P_I",
+    "56": "M_HS_EN",
+    "57": "M_LS_EN",
+    "58": "M_DIAG",
+    "59": "M_I",
+    "61": "V_HS_EN",
+    "62": "V_LS_EN",
+    "63": "V_DIAG",
+    "64": "V_I",
+    "80": "DM_SCK",
+    "81": "DM_MOSI",
+    "82": "DM_MISO",
+    "83": "DM_CS",
+    "92": "SH_CLK",
+    "93": "SH_DAT",
+    "96": "SEK_OK",
+    "98": "SEK_STATUS",
+    "112": "CAN2_TX",
+    "113": "CAN2_RX",
+    "116": "CAN1_TX",
+    "117": "CAN1_RX"
+   },
+   "pinnamen": {
+    "6": "VDD1",
+    "14": "VDD2",
+    "22": "VDD3",
+    "30": "VDD4",
+    "41": "VDD5",
+    "53": "VDD6",
+    "65": "VDD7",
+    "76": "VDD8",
+    "88": "VDD9",
+    "100": "VDD10",
+    "8": "VSS1",
+    "16": "VSS2",
+    "24": "VSS3",
+    "32": "VSS4",
+    "43": "VSS5",
+    "55": "VSS6",
+    "67": "VSS7",
+    "78": "VSS8",
+    "90": "VSS9",
+    "102": "VSS10",
+    "3": "VDDA",
+    "4": "VSSA",
+    "5": "VREF",
+    "133": "XTAL1",
+    "135": "XTAL2",
+    "10": "NRST",
+    "12": "WDI",
+    "18": "INTN",
+    "20": "SWDIO",
+    "21": "SWCLK",
+    "26": "SWO",
+    "28": "NTC_ADC",
+    "34": "LED1",
+    "35": "LED2",
+    "36": "LED3",
+    "46": "P_HS_EN",
+    "47": "P_LS_EN",
+    "48": "P_DIAG",
+    "49": "P_I",
+    "56": "M_HS_EN",
+    "57": "M_LS_EN",
+    "58": "M_DIAG",
+    "59": "M_I",
+    "61": "V_HS_EN",
+    "62": "V_LS_EN",
+    "63": "V_DIAG",
+    "64": "V_I",
+    "80": "DM_SCK",
+    "81": "DM_MOSI",
+    "82": "DM_MISO",
+    "83": "DM_CS",
+    "92": "SH_CLK",
+    "93": "SH_DAT",
+    "96": "SEK_OK",
+    "98": "SEK_STATUS",
+    "112": "CAN2_TX",
+    "113": "CAN2_RX",
+    "116": "CAN1_TX",
+    "117": "CAN1_RX"
+   }
+  },
+  {
+   "ref": "C8",
+   "tag": "C_MCU1",
+   "name": "C",
+   "value": "C Entkopplung (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "+3V3",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C9",
+   "tag": "C_MCU2",
+   "name": "C",
+   "value": "C Entkopplung (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "+3V3",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C10",
+   "tag": "C_MCU3",
+   "name": "C",
+   "value": "C Entkopplung (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "+3V3",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C11",
+   "tag": "C_MCU4",
+   "name": "C",
+   "value": "C Entkopplung (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "+3V3",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C12",
+   "tag": "C_MCU5",
+   "name": "C",
+   "value": "C Entkopplung (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "+3V3",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C13",
+   "tag": "C_MCU6",
+   "name": "C",
+   "value": "C Entkopplung (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "+3V3",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C14",
+   "tag": "C_MCU7",
+   "name": "C",
+   "value": "C Entkopplung (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "+3V3",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C15",
+   "tag": "C_MCU8",
+   "name": "C",
+   "value": "C Entkopplung (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "+3V3",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C16",
+   "tag": "C_MCU9",
+   "name": "C",
+   "value": "C Entkopplung (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "+3V3",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C17",
+   "tag": "C_MCU10",
+   "name": "C",
+   "value": "C Entkopplung (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "+3V3",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C18",
+   "tag": "C_MCUA0",
+   "name": "C",
+   "value": "C Entkopplung analog (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "+3V3",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C19",
+   "tag": "C_MCUA1",
+   "name": "C",
+   "value": "C Entkopplung analog (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "+3V3",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C20",
+   "tag": "C_MCUA2",
+   "name": "C",
+   "value": "C Entkopplung analog (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "+3V3",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C21",
+   "tag": "C_MCUB0",
+   "name": "C_8",
+   "value": "C Puffer Rechner (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0805_2012Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "+3V3",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C22",
+   "tag": "C_MCUB1",
+   "name": "C_8",
+   "value": "C Puffer Rechner (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0805_2012Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "+3V3",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C23",
+   "tag": "C_RESET",
+   "name": "C",
+   "value": "C Reset (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "NRST",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "Y1",
+   "tag": "Y_MCU",
+   "name": "Quarz",
+   "value": "Quarz Rechner (Wert offen)",
+   "footprint": "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm",
+   "seite": "NV",
+   "pins": {
+    "1": "XTAL1",
+    "2": "GND",
+    "3": "XTAL2",
+    "4": "GND"
+   },
+   "pinnamen": {
+    "1": "X1",
+    "2": "G1",
+    "3": "X2",
+    "4": "G2"
+   }
+  },
+  {
+   "ref": "C24",
+   "tag": "C_XTAL0",
+   "name": "C",
+   "value": "C Quarz (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "XTAL1",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C25",
+   "tag": "C_XTAL1",
+   "name": "C",
+   "value": "C Quarz (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "XTAL2",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "J2",
+   "tag": "J_DEBUG",
+   "name": "Debug_Stecker",
+   "value": "Debug-Stecker SWD",
+   "footprint": "Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical_SMD",
+   "seite": "NV",
+   "pins": {
+    "1": "+3V3",
+    "2": "N$3",
+    "3": "GND",
+    "4": "N$4",
+    "5": "GND",
+    "6": "N$5",
+    "9": "GND",
+    "10": "NRST"
+   },
+   "pinnamen": {
+    "1": "VREF",
+    "2": "SWDIO",
+    "3": "GND",
+    "4": "SWCLK",
+    "5": "GND2",
+    "6": "SWO",
+    "9": "GND3",
+    "10": "NRST"
+   }
+  },
+  {
+   "ref": "D3",
+   "tag": "D_LED1",
+   "name": "LED",
+   "value": "LED Status",
+   "footprint": "LED_SMD:LED_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "GND",
+    "2": "N$6"
+   },
+   "pinnamen": {
+    "1": "K",
+    "2": "A"
+   }
+  },
+  {
+   "ref": "R3",
+   "tag": "R_LED1",
+   "name": "R",
+   "value": "R LED (Wert offen)",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "LED1",
+    "2": "N$6"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "D4",
+   "tag": "D_LED2",
+   "name": "LED",
+   "value": "LED Status",
+   "footprint": "LED_SMD:LED_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "GND",
+    "2": "N$7"
+   },
+   "pinnamen": {
+    "1": "K",
+    "2": "A"
+   }
+  },
+  {
+   "ref": "R4",
+   "tag": "R_LED2",
+   "name": "R",
+   "value": "R LED (Wert offen)",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "LED2",
+    "2": "N$7"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "D5",
+   "tag": "D_LED3",
+   "name": "LED",
+   "value": "LED Status",
+   "footprint": "LED_SMD:LED_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "GND",
+    "2": "N$8"
+   },
+   "pinnamen": {
+    "1": "K",
+    "2": "A"
+   }
+  },
+  {
+   "ref": "R5",
+   "tag": "R_LED3",
+   "name": "R",
+   "value": "R LED (Wert offen)",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "LED3",
+    "2": "N$8"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R6",
+   "tag": "R_NTC",
+   "name": "R",
+   "value": "NTC Platinentemperatur (extern bestückt, Wert offen)",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "NTC_ADC",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R7",
+   "tag": "R_NTC_PU",
+   "name": "R",
+   "value": "R Pull-up NTC (Wert offen)",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "+3V3",
+    "2": "NTC_ADC"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "U3",
+   "tag": "U_CAN1",
+   "name": "CAN_FD_Transceiver",
+   "value": "CAN-FD-Transceiver Fahrzeug",
+   "footprint": "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",
+   "seite": "NV",
+   "pins": {
+    "1": "CAN1_TX",
+    "2": "GND",
+    "3": "+5V",
+    "4": "CAN1_RX",
+    "5": "+3V3",
+    "6": "CANL1",
+    "7": "CANH1",
+    "8": "N$9"
+   },
+   "pinnamen": {
+    "1": "TXD",
+    "2": "GND",
+    "3": "VCC",
+    "4": "RXD",
+    "5": "VIO",
+    "6": "CANL",
+    "7": "CANH",
+    "8": "STB"
+   }
+  },
+  {
+   "ref": "R8",
+   "tag": "R_STB1",
+   "name": "R",
+   "value": "R Standby (Wert offen)",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "N$9",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "L2",
+   "tag": "L_CAN1",
+   "name": "CAN_Gleichtaktdrossel",
+   "value": "Gleichtaktdrossel CAN",
+   "footprint": "Inductor_SMD:L_CommonModeChoke_Coilcraft_1812CAN",
+   "seite": "NV",
+   "pins": {
+    "1": "CANH1",
+    "2": "CANH1_BUS",
+    "3": "CANL1_BUS",
+    "4": "CANL1"
+   },
+   "pinnamen": {
+    "1": "A1",
+    "2": "B1",
+    "3": "B2",
+    "4": "A2"
+   }
+  },
+  {
+   "ref": "R9",
+   "tag": "R_TERM1_0",
+   "name": "R",
+   "value": "R Terminierung geteilt (Wert offen)",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "CANH1_BUS",
+    "2": "CAN1_MITTE"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R10",
+   "tag": "R_TERM1_1",
+   "name": "R",
+   "value": "R Terminierung geteilt (Wert offen)",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "CAN1_MITTE",
+    "2": "CANL1_BUS"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C26",
+   "tag": "C_TERM1",
+   "name": "C",
+   "value": "C Terminierung (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "CAN1_MITTE",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "D6",
+   "tag": "D_ESD1_0",
+   "name": "ESD_Diode",
+   "value": "ESD-Diode CAN",
+   "footprint": "Diode_SMD:D_SOD-323",
+   "seite": "NV",
+   "pins": {
+    "1": "GND",
+    "2": "CANH1_BUS"
+   },
+   "pinnamen": {
+    "1": "A",
+    "2": "K"
+   }
+  },
+  {
+   "ref": "D7",
+   "tag": "D_ESD1_1",
+   "name": "ESD_Diode",
+   "value": "ESD-Diode CAN",
+   "footprint": "Diode_SMD:D_SOD-323",
+   "seite": "NV",
+   "pins": {
+    "1": "GND",
+    "2": "CANL1_BUS"
+   },
+   "pinnamen": {
+    "1": "A",
+    "2": "K"
+   }
+  },
+  {
+   "ref": "C27",
+   "tag": "C_CAN1_0",
+   "name": "C",
+   "value": "C Entkopplung (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "+5V",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C28",
+   "tag": "C_CAN1_1",
+   "name": "C",
+   "value": "C Entkopplung (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "+3V3",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "J3",
+   "tag": "J_CAN1",
+   "name": "Stecker_4",
+   "value": "Stecker CAN Fahrzeug (CANH, CANL, GND)",
+   "footprint": "Connector_JST:JST_PH_S4B-PH-SM4-TB_1x04-1MP_P2.00mm_Horizontal",
+   "seite": "NV",
+   "pins": {
+    "1": "CANH1_BUS",
+    "2": "CANL1_BUS",
+    "3": "GND",
+    "4": null
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2",
+    "3": "3",
+    "4": "4"
+   }
+  },
+  {
+   "ref": "U4",
+   "tag": "U_CAN2",
+   "name": "CAN_FD_Transceiver",
+   "value": "CAN-FD-Transceiver Laden",
+   "footprint": "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",
+   "seite": "NV",
+   "pins": {
+    "1": "CAN2_TX",
+    "2": "GND",
+    "3": "+5V",
+    "4": "CAN2_RX",
+    "5": "+3V3",
+    "6": "CANL2",
+    "7": "CANH2",
+    "8": "N$10"
+   },
+   "pinnamen": {
+    "1": "TXD",
+    "2": "GND",
+    "3": "VCC",
+    "4": "RXD",
+    "5": "VIO",
+    "6": "CANL",
+    "7": "CANH",
+    "8": "STB"
+   }
+  },
+  {
+   "ref": "R11",
+   "tag": "R_STB2",
+   "name": "R",
+   "value": "R Standby (Wert offen)",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "N$10",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "L3",
+   "tag": "L_CAN2",
+   "name": "CAN_Gleichtaktdrossel",
+   "value": "Gleichtaktdrossel CAN",
+   "footprint": "Inductor_SMD:L_CommonModeChoke_Coilcraft_1812CAN",
+   "seite": "NV",
+   "pins": {
+    "1": "CANH2",
+    "2": "CANH2_BUS",
+    "3": "CANL2_BUS",
+    "4": "CANL2"
+   },
+   "pinnamen": {
+    "1": "A1",
+    "2": "B1",
+    "3": "B2",
+    "4": "A2"
+   }
+  },
+  {
+   "ref": "R12",
+   "tag": "R_TERM2_0",
+   "name": "R",
+   "value": "R Terminierung geteilt (Wert offen)",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "CANH2_BUS",
+    "2": "CAN2_MITTE"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R13",
+   "tag": "R_TERM2_1",
+   "name": "R",
+   "value": "R Terminierung geteilt (Wert offen)",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "CAN2_MITTE",
+    "2": "CANL2_BUS"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C29",
+   "tag": "C_TERM2",
+   "name": "C",
+   "value": "C Terminierung (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "CAN2_MITTE",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "D8",
+   "tag": "D_ESD2_0",
+   "name": "ESD_Diode",
+   "value": "ESD-Diode CAN",
+   "footprint": "Diode_SMD:D_SOD-323",
+   "seite": "NV",
+   "pins": {
+    "1": "GND",
+    "2": "CANH2_BUS"
+   },
+   "pinnamen": {
+    "1": "A",
+    "2": "K"
+   }
+  },
+  {
+   "ref": "D9",
+   "tag": "D_ESD2_1",
+   "name": "ESD_Diode",
+   "value": "ESD-Diode CAN",
+   "footprint": "Diode_SMD:D_SOD-323",
+   "seite": "NV",
+   "pins": {
+    "1": "GND",
+    "2": "CANL2_BUS"
+   },
+   "pinnamen": {
+    "1": "A",
+    "2": "K"
+   }
+  },
+  {
+   "ref": "C30",
+   "tag": "C_CAN2_0",
+   "name": "C",
+   "value": "C Entkopplung (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "+5V",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C31",
+   "tag": "C_CAN2_1",
+   "name": "C",
+   "value": "C Entkopplung (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "+3V3",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "J4",
+   "tag": "J_CAN2",
+   "name": "Stecker_4",
+   "value": "Stecker CAN Laden (CANH, CANL, GND)",
+   "footprint": "Connector_JST:JST_PH_S4B-PH-SM4-TB_1x04-1MP_P2.00mm_Horizontal",
+   "seite": "NV",
+   "pins": {
+    "1": "CANH2_BUS",
+    "2": "CANL2_BUS",
+    "3": "GND",
+    "4": null
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2",
+    "3": "3",
+    "4": "4"
+   }
+  },
+  {
+   "ref": "U5",
+   "tag": "U_AND1",
+   "name": "UND_Gatter_4fach",
+   "value": "UND-Gatter 4fach (Hardware-UND Sekundärpfad, FSR-06)",
+   "footprint": "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm",
+   "seite": "NV",
+   "pins": {
+    "1": "P_HS_EN",
+    "2": "SEK_OK",
+    "3": "P_HS_IN",
+    "4": "P_LS_EN",
+    "5": "SEK_OK",
+    "6": "P_LS_G",
+    "7": "GND",
+    "8": "M_HS_IN",
+    "9": "M_HS_EN",
+    "10": "SEK_OK",
+    "11": "M_LS_G",
+    "12": "M_LS_EN",
+    "13": "SEK_OK",
+    "14": "+3V3"
+   },
+   "pinnamen": {
+    "1": "A1",
+    "2": "B1",
+    "3": "Y1",
+    "4": "A2",
+    "5": "B2",
+    "6": "Y2",
+    "7": "GND",
+    "8": "Y3",
+    "9": "A3",
+    "10": "B3",
+    "11": "Y4",
+    "12": "A4",
+    "13": "B4",
+    "14": "VCC"
+   }
+  },
+  {
+   "ref": "U6",
+   "tag": "U_AND2",
+   "name": "UND_Gatter_4fach",
+   "value": "UND-Gatter 4fach (Hardware-UND Sekundärpfad, FSR-06)",
+   "footprint": "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm",
+   "seite": "NV",
+   "pins": {
+    "1": "V_HS_EN",
+    "2": "SEK_OK",
+    "3": "V_HS_IN",
+    "4": "V_LS_EN",
+    "5": "SEK_OK",
+    "6": "V_LS_G",
+    "7": "GND",
+    "8": null,
+    "9": null,
+    "10": null,
+    "11": null,
+    "12": null,
+    "13": null,
+    "14": "+3V3"
+   },
+   "pinnamen": {
+    "1": "A1",
+    "2": "B1",
+    "3": "Y1",
+    "4": "A2",
+    "5": "B2",
+    "6": "Y2",
+    "7": "GND",
+    "8": "Y3",
+    "9": "A3",
+    "10": "B3",
+    "11": "Y4",
+    "12": "A4",
+    "13": "B4",
+    "14": "VCC"
+   }
+  },
+  {
+   "ref": "C32",
+   "tag": "C_AND1",
+   "name": "C",
+   "value": "C Entkopplung (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "+3V3",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C33",
+   "tag": "C_AND2",
+   "name": "C",
+   "value": "C Entkopplung (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "+3V3",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "U7",
+   "tag": "U_HS_P",
+   "name": "HighSide_Schalter_generisch",
+   "value": "High-Side-Schalter generisch, Schütz P",
+   "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+   "seite": "NV",
+   "pins": {
+    "1": "P_HS_IN",
+    "2": "GND",
+    "3": "P_DIAG",
+    "4": "P_SPULE_P",
+    "5": "VBAT_F"
+   },
+   "pinnamen": {
+    "1": "IN",
+    "2": "GND",
+    "3": "DIAG",
+    "4": "OUT",
+    "5": "VS"
+   }
+  },
+  {
+   "ref": "R14",
+   "tag": "R_HS_PD_P",
+   "name": "R",
+   "value": "R Pull-down Eingang (Wert offen)",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "P_HS_IN",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "Q2",
+   "tag": "Q_LS_P",
+   "name": "NMOS_Low_Side",
+   "value": "NMOS Low-Side, Schütz P",
+   "footprint": "Package_TO_SOT_SMD:SOT-23",
+   "seite": "NV",
+   "pins": {
+    "1": "P_LS_GATE",
+    "2": "P_SENSE",
+    "3": "P_SPULE_N"
+   },
+   "pinnamen": {
+    "1": "G",
+    "2": "S",
+    "3": "D"
+   }
+  },
+  {
+   "ref": "R15",
+   "tag": "R_LS_G_P",
+   "name": "R",
+   "value": "R Gate (Wert offen)",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "P_LS_G",
+    "2": "P_LS_GATE"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R16",
+   "tag": "R_LS_PD_P",
+   "name": "R",
+   "value": "R Gate-Pull-down (Wert offen)",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "P_LS_GATE",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R17",
+   "tag": "R_SENSE_P",
+   "name": "R_Sense",
+   "value": "R Messwiderstand Spulenstrom (Wert offen)",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "P_SENSE",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R18",
+   "tag": "R_I_P",
+   "name": "R",
+   "value": "R Filter Strommessung (Wert offen)",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "P_SENSE",
+    "2": "P_I"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C34",
+   "tag": "C_I_P",
+   "name": "C",
+   "value": "C Filter Strommessung (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "P_I",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "D10",
+   "tag": "D_FREI_P",
+   "name": "Diode_Freilauf",
+   "value": "Diode Freilauf in Reihe zur Z-Diode",
+   "footprint": "Diode_SMD:D_SMA",
+   "seite": "NV",
+   "pins": {
+    "1": "P_SPULE_N",
+    "2": "P_ZENER"
+   },
+   "pinnamen": {
+    "1": "A",
+    "2": "K"
+   }
+  },
+  {
+   "ref": "D11",
+   "tag": "D_ZENER_P",
+   "name": "Z_Diode_Loeschung",
+   "value": "Z-Diode Löschung generisch",
+   "footprint": "Diode_SMD:D_SMA",
+   "seite": "NV",
+   "pins": {
+    "1": "VBAT_F",
+    "2": "P_ZENER"
+   },
+   "pinnamen": {
+    "1": "A",
+    "2": "K"
+   }
+  },
+  {
+   "ref": "J5",
+   "tag": "J_SPULE_P",
+   "name": "Stecker_2",
+   "value": "Stecker Spule Schütz P (BT-715)",
+   "footprint": "Connector_JST:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal",
+   "seite": "NV",
+   "pins": {
+    "1": "P_SPULE_P",
+    "2": "P_SPULE_N"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "U8",
+   "tag": "U_HS_M",
+   "name": "HighSide_Schalter_generisch",
+   "value": "High-Side-Schalter generisch, Schütz M",
+   "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+   "seite": "NV",
+   "pins": {
+    "1": "M_HS_IN",
+    "2": "GND",
+    "3": "M_DIAG",
+    "4": "M_SPULE_P",
+    "5": "VBAT_F"
+   },
+   "pinnamen": {
+    "1": "IN",
+    "2": "GND",
+    "3": "DIAG",
+    "4": "OUT",
+    "5": "VS"
+   }
+  },
+  {
+   "ref": "R19",
+   "tag": "R_HS_PD_M",
+   "name": "R",
+   "value": "R Pull-down Eingang (Wert offen)",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "M_HS_IN",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "Q3",
+   "tag": "Q_LS_M",
+   "name": "NMOS_Low_Side",
+   "value": "NMOS Low-Side, Schütz M",
+   "footprint": "Package_TO_SOT_SMD:SOT-23",
+   "seite": "NV",
+   "pins": {
+    "1": "M_LS_GATE",
+    "2": "M_SENSE",
+    "3": "M_SPULE_N"
+   },
+   "pinnamen": {
+    "1": "G",
+    "2": "S",
+    "3": "D"
+   }
+  },
+  {
+   "ref": "R20",
+   "tag": "R_LS_G_M",
+   "name": "R",
+   "value": "R Gate (Wert offen)",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "M_LS_G",
+    "2": "M_LS_GATE"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R21",
+   "tag": "R_LS_PD_M",
+   "name": "R",
+   "value": "R Gate-Pull-down (Wert offen)",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "M_LS_GATE",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R22",
+   "tag": "R_SENSE_M",
+   "name": "R_Sense",
+   "value": "R Messwiderstand Spulenstrom (Wert offen)",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "M_SENSE",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R23",
+   "tag": "R_I_M",
+   "name": "R",
+   "value": "R Filter Strommessung (Wert offen)",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "M_SENSE",
+    "2": "M_I"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C35",
+   "tag": "C_I_M",
+   "name": "C",
+   "value": "C Filter Strommessung (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "M_I",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "D12",
+   "tag": "D_FREI_M",
+   "name": "Diode_Freilauf",
+   "value": "Diode Freilauf in Reihe zur Z-Diode",
+   "footprint": "Diode_SMD:D_SMA",
+   "seite": "NV",
+   "pins": {
+    "1": "M_SPULE_N",
+    "2": "M_ZENER"
+   },
+   "pinnamen": {
+    "1": "A",
+    "2": "K"
+   }
+  },
+  {
+   "ref": "D13",
+   "tag": "D_ZENER_M",
+   "name": "Z_Diode_Loeschung",
+   "value": "Z-Diode Löschung generisch",
+   "footprint": "Diode_SMD:D_SMA",
+   "seite": "NV",
+   "pins": {
+    "1": "VBAT_F",
+    "2": "M_ZENER"
+   },
+   "pinnamen": {
+    "1": "A",
+    "2": "K"
+   }
+  },
+  {
+   "ref": "J6",
+   "tag": "J_SPULE_M",
+   "name": "Stecker_2",
+   "value": "Stecker Spule Schütz M (BT-715)",
+   "footprint": "Connector_JST:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal",
+   "seite": "NV",
+   "pins": {
+    "1": "M_SPULE_P",
+    "2": "M_SPULE_N"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "U9",
+   "tag": "U_HS_V",
+   "name": "HighSide_Schalter_generisch",
+   "value": "High-Side-Schalter generisch, Schütz V",
+   "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+   "seite": "NV",
+   "pins": {
+    "1": "V_HS_IN",
+    "2": "GND",
+    "3": "V_DIAG",
+    "4": "V_SPULE_P",
+    "5": "VBAT_F"
+   },
+   "pinnamen": {
+    "1": "IN",
+    "2": "GND",
+    "3": "DIAG",
+    "4": "OUT",
+    "5": "VS"
+   }
+  },
+  {
+   "ref": "R24",
+   "tag": "R_HS_PD_V",
+   "name": "R",
+   "value": "R Pull-down Eingang (Wert offen)",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "V_HS_IN",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "Q4",
+   "tag": "Q_LS_V",
+   "name": "NMOS_Low_Side",
+   "value": "NMOS Low-Side, Schütz V",
+   "footprint": "Package_TO_SOT_SMD:SOT-23",
+   "seite": "NV",
+   "pins": {
+    "1": "V_LS_GATE",
+    "2": "V_SENSE",
+    "3": "V_SPULE_N"
+   },
+   "pinnamen": {
+    "1": "G",
+    "2": "S",
+    "3": "D"
+   }
+  },
+  {
+   "ref": "R25",
+   "tag": "R_LS_G_V",
+   "name": "R",
+   "value": "R Gate (Wert offen)",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "V_LS_G",
+    "2": "V_LS_GATE"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R26",
+   "tag": "R_LS_PD_V",
+   "name": "R",
+   "value": "R Gate-Pull-down (Wert offen)",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "V_LS_GATE",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R27",
+   "tag": "R_SENSE_V",
+   "name": "R_Sense",
+   "value": "R Messwiderstand Spulenstrom (Wert offen)",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "V_SENSE",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R28",
+   "tag": "R_I_V",
+   "name": "R",
+   "value": "R Filter Strommessung (Wert offen)",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "V_SENSE",
+    "2": "V_I"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C36",
+   "tag": "C_I_V",
+   "name": "C",
+   "value": "C Filter Strommessung (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "V_I",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "D14",
+   "tag": "D_FREI_V",
+   "name": "Diode_Freilauf",
+   "value": "Diode Freilauf in Reihe zur Z-Diode",
+   "footprint": "Diode_SMD:D_SMA",
+   "seite": "NV",
+   "pins": {
+    "1": "V_SPULE_N",
+    "2": "V_ZENER"
+   },
+   "pinnamen": {
+    "1": "A",
+    "2": "K"
+   }
+  },
+  {
+   "ref": "D15",
+   "tag": "D_ZENER_V",
+   "name": "Z_Diode_Loeschung",
+   "value": "Z-Diode Löschung generisch",
+   "footprint": "Diode_SMD:D_SMA",
+   "seite": "NV",
+   "pins": {
+    "1": "VBAT_F",
+    "2": "V_ZENER"
+   },
+   "pinnamen": {
+    "1": "A",
+    "2": "K"
+   }
+  },
+  {
+   "ref": "J7",
+   "tag": "J_SPULE_V",
+   "name": "Stecker_2",
+   "value": "Stecker Spule Schütz V (BT-715)",
+   "footprint": "Connector_JST:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal",
+   "seite": "NV",
+   "pins": {
+    "1": "V_SPULE_P",
+    "2": "V_SPULE_N"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "J8",
+   "tag": "J_SHUNT",
+   "name": "Stecker_4_HV",
+   "value": "Stecker Shunt (BT-340, HV-Seite): Shunt+, Shunt-, HV_VDD, HV_GND",
+   "footprint": "Connector_JST:JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal",
+   "seite": "HV",
+   "pins": {
+    "1": "SHUNT_P",
+    "2": "SHUNT_N",
+    "3": "HV_VDD",
+    "4": "HV_GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2",
+    "3": "3",
+    "4": "4"
+   }
+  },
+  {
+   "ref": "R29",
+   "tag": "R_SHF0",
+   "name": "R",
+   "value": "R Eingangsfilter Shunt (Wert offen)",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "seite": "HV",
+   "pins": {
+    "1": "SHUNT_P",
+    "2": "ADC_INP"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R30",
+   "tag": "R_SHF1",
+   "name": "R",
+   "value": "R Eingangsfilter Shunt (Wert offen)",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "seite": "HV",
+   "pins": {
+    "1": "SHUNT_N",
+    "2": "ADC_INN"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C37",
+   "tag": "C_SHF_D",
+   "name": "C",
+   "value": "C Differenzfilter Shunt (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "HV",
+   "pins": {
+    "1": "ADC_INP",
+    "2": "ADC_INN"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C38",
+   "tag": "C_SHF0",
+   "name": "C",
+   "value": "C Filter nach HV_GND (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "HV",
+   "pins": {
+    "1": "ADC_INP",
+    "2": "HV_GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C39",
+   "tag": "C_SHF1",
+   "name": "C",
+   "value": "C Filter nach HV_GND (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "HV",
+   "pins": {
+    "1": "ADC_INN",
+    "2": "HV_GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "U10",
+   "tag": "U_ADC",
+   "name": "Shunt_ADC_generisch_HV",
+   "value": "Shunt-ADC generisch (Sigma-Delta, HV-Seite)",
+   "footprint": "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm",
+   "seite": "HV",
+   "pins": {
+    "1": "ADC_INP",
+    "2": "ADC_INN",
+    "3": "HV_VDD",
+    "4": "HV_GND",
+    "5": "HV_CLK",
+    "6": "HV_DAT"
+   },
+   "pinnamen": {
+    "1": "INP",
+    "2": "INN",
+    "3": "VDD",
+    "4": "GND",
+    "5": "MCLK",
+    "6": "MDAT"
+   }
+  },
+  {
+   "ref": "C40",
+   "tag": "C_ADC0",
+   "name": "C",
+   "value": "C Entkopplung HV (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "HV",
+   "pins": {
+    "1": "HV_VDD",
+    "2": "HV_GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C41",
+   "tag": "C_ADC1",
+   "name": "C",
+   "value": "C Entkopplung HV (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "HV",
+   "pins": {
+    "1": "HV_VDD",
+    "2": "HV_GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "U11",
+   "tag": "U_ISO_SHUNT",
+   "name": "Digital_Isolator_verstaerkt",
+   "value": "Shunt-ADC-Isolator: digitaler Isolator, verstärkt (HV/NV)",
+   "footprint": "E3c:ISO_Bruecke_8",
+   "seite": "BR",
+   "pins": {
+    "1": "+3V3",
+    "2": "GND",
+    "3": "SH_CLK",
+    "4": "SH_DAT",
+    "5": "HV_DAT",
+    "6": "HV_CLK",
+    "7": "HV_GND",
+    "8": "HV_VDD"
+   },
+   "pinnamen": {
+    "1": "VDD2",
+    "2": "GND2",
+    "3": "OUT_A",
+    "4": "OUT_B",
+    "5": "IN_B",
+    "6": "IN_A",
+    "7": "GND1",
+    "8": "VDD1"
+   }
+  },
+  {
+   "ref": "C42",
+   "tag": "C_ISO1_HV",
+   "name": "C",
+   "value": "C Entkopplung HV (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "HV",
+   "pins": {
+    "1": "HV_VDD",
+    "2": "HV_GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C43",
+   "tag": "C_ISO1_NV",
+   "name": "C",
+   "value": "C Entkopplung NV (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "+3V3",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "J9",
+   "tag": "J_SEKUNDAER",
+   "name": "Stecker_3_HV",
+   "value": "Stecker Sekundärpfad der CMUs (ABSCHALT, HV_GND, HV_VDD)",
+   "footprint": "Connector_JST:JST_SH_SM03B-SRSS-TB_1x03-1MP_P1.00mm_Horizontal",
+   "seite": "HV",
+   "pins": {
+    "1": "SEK_IN_HV",
+    "2": "HV_GND",
+    "3": "HV_VDD"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2",
+    "3": "3"
+   }
+  },
+  {
+   "ref": "U12",
+   "tag": "U_ISO_SEK",
+   "name": "Digital_Isolator_verstaerkt",
+   "value": "Isolator Sekundärpfad: digitaler Isolator, verstärkt (HV/NV)",
+   "footprint": "E3c:ISO_Bruecke_8",
+   "seite": "BR",
+   "pins": {
+    "1": "+3V3",
+    "2": "GND",
+    "3": "SEK_OK",
+    "4": "SEK_STATUS",
+    "5": null,
+    "6": "SEK_IN_HV",
+    "7": "HV_GND",
+    "8": "HV_VDD"
+   },
+   "pinnamen": {
+    "1": "VDD2",
+    "2": "GND2",
+    "3": "OUT_A",
+    "4": "OUT_B",
+    "5": "IN_B",
+    "6": "IN_A",
+    "7": "GND1",
+    "8": "VDD1"
+   }
+  },
+  {
+   "ref": "R31",
+   "tag": "R_SEK_HV",
+   "name": "R",
+   "value": "R Eingang Sekundärpfad HV (Wert offen)",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "seite": "HV",
+   "pins": {
+    "1": "SEK_IN_HV",
+    "2": "HV_GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C44",
+   "tag": "C_ISO2_HV",
+   "name": "C",
+   "value": "C Entkopplung HV (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "HV",
+   "pins": {
+    "1": "HV_VDD",
+    "2": "HV_GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "C45",
+   "tag": "C_ISO2_NV",
+   "name": "C",
+   "value": "C Entkopplung NV (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "+3V3",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "R32",
+   "tag": "R_SEK_NV",
+   "name": "R",
+   "value": "R Pull-down SEK_OK (Wert offen)",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "SEK_OK",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "U13",
+   "tag": "U_DM",
+   "name": "Daisy_Master_generisch",
+   "value": "Daisy-Chain-Master generisch (BT-322-Gegenstück)",
+   "footprint": "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm",
+   "seite": "NV",
+   "pins": {
+    "1": "+3V3",
+    "2": "GND",
+    "3": "DM_SCK",
+    "4": "DM_MOSI",
+    "5": "DM_MISO",
+    "6": "DM_CS",
+    "7": "DM_TXA",
+    "8": "DM_TXB",
+    "9": "DM_RXA",
+    "10": "DM_RXB"
+   },
+   "pinnamen": {
+    "1": "VDD",
+    "2": "GND",
+    "3": "SCK",
+    "4": "MOSI",
+    "5": "MISO",
+    "6": "CS",
+    "7": "TXA",
+    "8": "TXB",
+    "9": "RXA",
+    "10": "RXB"
+   }
+  },
+  {
+   "ref": "C46",
+   "tag": "C_DM",
+   "name": "C",
+   "value": "C Entkopplung (Wert offen)",
+   "footprint": "Capacitor_SMD:C_0603_1608Metric",
+   "seite": "NV",
+   "pins": {
+    "1": "+3V3",
+    "2": "GND"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "T1",
+   "tag": "T_DAISY1",
+   "name": "Uebertrager_verstaerkt",
+   "value": "Übertrager verstärkte Isolation zur ersten CMU (Senden)",
+   "footprint": "E3c:Uebertrager_Bruecke_4",
+   "seite": "BR",
+   "pins": {
+    "1": "DM_TXA",
+    "2": "DM_TXB",
+    "3": "DC1_A",
+    "4": "DC1_B"
+   },
+   "pinnamen": {
+    "1": "P1",
+    "2": "P2",
+    "3": "S1",
+    "4": "S2"
+   }
+  },
+  {
+   "ref": "J10",
+   "tag": "J_DAISY1",
+   "name": "Daisy_Stecker",
+   "value": "Daisy-Chain-Stecker Ausgang zur ersten CMU",
+   "footprint": "Connector_JST:JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal",
+   "seite": "HV",
+   "pins": {
+    "1": "DC1_A",
+    "2": "DC1_B"
+   },
+   "pinnamen": {
+    "1": "A",
+    "2": "B"
+   }
+  },
+  {
+   "ref": "D16",
+   "tag": "D_TVS_DAISY1",
+   "name": "TVS_Daisy",
+   "value": "TVS Daisy-Chain (analog E3 N2)",
+   "footprint": "Diode_SMD:D_SOD-323",
+   "seite": "HV",
+   "pins": {
+    "1": "DC1_A",
+    "2": "DC1_B"
+   },
+   "pinnamen": {
+    "1": "A",
+    "2": "K"
+   }
+  },
+  {
+   "ref": "R33",
+   "tag": "R_DC1",
+   "name": "R",
+   "value": "R Abschluss Daisy-Chain (Wert offen)",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "seite": "HV",
+   "pins": {
+    "1": "DC1_A",
+    "2": "DC1_B"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  },
+  {
+   "ref": "T2",
+   "tag": "T_DAISY2",
+   "name": "Uebertrager_verstaerkt",
+   "value": "Übertrager verstärkte Isolation zur ersten CMU (Empfang)",
+   "footprint": "E3c:Uebertrager_Bruecke_4",
+   "seite": "BR",
+   "pins": {
+    "1": "DM_RXA",
+    "2": "DM_RXB",
+    "3": "DC2_A",
+    "4": "DC2_B"
+   },
+   "pinnamen": {
+    "1": "P1",
+    "2": "P2",
+    "3": "S1",
+    "4": "S2"
+   }
+  },
+  {
+   "ref": "J11",
+   "tag": "J_DAISY2",
+   "name": "Daisy_Stecker",
+   "value": "Daisy-Chain-Stecker Eingang zur ersten CMU",
+   "footprint": "Connector_JST:JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal",
+   "seite": "HV",
+   "pins": {
+    "1": "DC2_A",
+    "2": "DC2_B"
+   },
+   "pinnamen": {
+    "1": "A",
+    "2": "B"
+   }
+  },
+  {
+   "ref": "D17",
+   "tag": "D_TVS_DAISY2",
+   "name": "TVS_Daisy",
+   "value": "TVS Daisy-Chain (analog E3 N2)",
+   "footprint": "Diode_SMD:D_SOD-323",
+   "seite": "HV",
+   "pins": {
+    "1": "DC2_A",
+    "2": "DC2_B"
+   },
+   "pinnamen": {
+    "1": "A",
+    "2": "K"
+   }
+  },
+  {
+   "ref": "R34",
+   "tag": "R_DC2",
+   "name": "R",
+   "value": "R Abschluss Daisy-Chain (Wert offen)",
+   "footprint": "Resistor_SMD:R_0603_1608Metric",
+   "seite": "HV",
+   "pins": {
+    "1": "DC2_A",
+    "2": "DC2_B"
+   },
+   "pinnamen": {
+    "1": "1",
+    "2": "2"
+   }
+  }
+ ]
+}

@@ -1,0 +1,1 @@
+{"urteile":{"Sicherheit":{"gewinner":"A","grund":"1oo2 löst auf einem einzigen gültigen Fehlerpfad aus und erfüllt damit den FTTI von 1 s für ASIL D (SG-01) ohne zusätzliche Mehrheitsbildung; 2oo3 würde die Auslösung durch Konsensverpflichtung verzögern und riskiert, die 1-s-Grenze zu überschreiten.","zahl":{"wert":"FTTI 1 s","quelle":"F1"}}}}

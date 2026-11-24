@@ -1,0 +1,100 @@
+{
+ "kopf": "KI-generiert (Datei). Kasten von Opus vorgegeben (kasten_vorgabe.json), unverändert übernommen.",
+ "zeilen": [
+  {
+   "id": "T1",
+   "name": "Stufen",
+   "optionen": [
+    {
+     "id": "T1.1",
+     "name": "eine Schwelle → trennen",
+     "quelle": "Opus"
+    },
+    {
+     "id": "T1.2",
+     "name": "Warnung → trennen",
+     "quelle": "Opus"
+    },
+    {
+     "id": "T1.3",
+     "name": "drosseln → warnen → trennen",
+     "quelle": "Opus"
+    }
+   ]
+  },
+  {
+   "id": "T2",
+   "name": "Plausibilisierung",
+   "optionen": [
+    {
+     "id": "T2.1",
+     "name": "einkanalig (1oo1)",
+     "quelle": "Opus"
+    },
+    {
+     "id": "T2.2",
+     "name": "zweikanalig, einer genügt (1oo2)",
+     "quelle": "Opus"
+    },
+    {
+     "id": "T2.3",
+     "name": "Mehrheit (2oo3)",
+     "quelle": "Opus"
+    }
+   ]
+  },
+  {
+   "id": "T3",
+   "name": "Reaktionsweg",
+   "optionen": [
+    {
+     "id": "T3.1",
+     "name": "nur Software BMS",
+     "quelle": "Opus"
+    },
+    {
+     "id": "T3.2",
+     "name": "Software + unabhängiger Hardwarepfad (Sekundärschutz, FSR-06)",
+     "quelle": "Opus"
+    }
+   ]
+  },
+  {
+   "id": "T4",
+   "name": "Ausmaß",
+   "optionen": [
+    {
+     "id": "T4.1",
+     "name": "sofort ganzes Pack",
+     "quelle": "Opus"
+    },
+    {
+     "id": "T4.2",
+     "name": "abgestuft: Laden sperren bzw. Leistung 0 per CAN, dann Schütze",
+     "quelle": "Opus"
+    }
+   ]
+  },
+  {
+   "id": "T5",
+   "name": "Vorwarnung an Fahrer",
+   "optionen": [
+    {
+     "id": "T5.1",
+     "name": "keine",
+     "quelle": "Opus"
+    },
+    {
+     "id": "T5.2",
+     "name": "≥ 2 s (FSR-07)",
+     "quelle": "Opus"
+    },
+    {
+     "id": "T5.3",
+     "name": "≥ 10 s Notlauf mit gedrosselter Leistung",
+     "quelle": "Opus"
+    }
+   ]
+  }
+ ]
+}

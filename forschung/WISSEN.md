@@ -2542,3 +2542,183 @@ nichts
 
 
 Prüfung: 3 Belege bestaetigt, 0 Fehler
+
+## W47
+
+# Wissensaufbau – UN-Regelung Nr. 100: Sicherheit elektrischer Antriebe und REESS (Paket W47)
+
+## Erklärung
+
+UN-Regelung Nr. 100 (Revision 3) legt die sicherheitsrelevanten Zulassungsanforderungen für elektrische Antriebsstränge und deren Energie-Speichersysteme in Kraftfahrzeugen der Kategorien M und N fest. Der zentrale Begriff ist das *REESS* (Rechargeable Electrical Energy Storage System, wiederaufladbares elektrisches Energiespeichersystem), also der Hochvolt-Batteriesatz inklusive thermischer Leitung, BMS und Gehäuse. Die Regelung ist in zwei Teilbereiche gegliedert: **Part I** regelt die fahrzeugbezogene Integration (Schutz vor elektrischem Schlag, Wasserfestigkeit, Warnsysteme), **Part II** die stand-alone-Prüfung des Batteriesystems selbst. Für Part II sind eine definierte Abfolge von Missbrauchs- und Belastungstests vorgeschrieben – Vibration, Thermoschock, mechanischer Aufprall, Kurzschluss, Überladung, Überentladung, Überhitzung und Überstrom – bei denen das System weder in Brand geraten noch explodieren noch Elektrolyt in den Fahrgastraum verlieren darf. Ein *Thermal Event* (thermisches Ereignis) ist dabei die vom Hersteller definierte Grenzsituation, bei der die Temperatur im REESS die maximal zulässige Betriebs überschreitet; *Thermal Propagation* (thermische Ausbreitung) beschreibt die Kette solcher Ereignisse von Zelle zu Zelle. Der *Isolation widerstand* (Isolation resistance) ist der Widerstand zwischen dem Hochvolt-Bus und dem elektrischen Chassis (Fahrzeugkörper) und dient als Schutz gegen indirekten Stromschlag; er muss nach DC-Anteil mindestens 100 Ω/V und nach AC-Anteil mindestens 500 Ω/V betragen. Für den Aufbau eines homologationsfähigen Batteriesystems liefert diese Regelung damit die verbindlichen Belastungsgrenzen, an denen Mechanik (Aufprall, Vibration), Elektrik (Isolation, BMS-Abschaltungen) und Thermik (Kühlung, Brandwiderstand) gemeinsam erfüllt sein müssen.
+
+## Kennwerte
+
+| Größe | Wert | Einheit | Beleg |
+|---|---|---|---|
+| Mindest-Isolationswiderstand DC | 100 | Ω/V | Beleg: "chassis shall have a minimum value of 100 Ω/volt of the working" (file:///home/cae/hermes/batterie/quellen/normen/R0100r3e.pdf) |
+| Mindest-Isolationswiderstand AC | 500 | Ω/V | Beleg: "a minimum value of 500 Ω/volt of the working" (file:///home/cae/hermes/batterie/quellen/normen/R0100r3e.pdf) |
+| Max. Widerstand zwischenExposed conductive parts (< 2,5 m) | 0,2 | Ω | Beleg: "shall not exceed 0.2 Ω" (file:///home/cae/hermes/batterie/quellen/normen/R0100r3e.pdf) |
+| Max. Elektrolytaustritt, Anteil | 7 | Vol.-% | Beleg: "no more than 7 per cent by volume of the REESS electrolyte" (file:///home/cae/hermes/batterie/quellen/normen/R0100r3e.pdf) |
+| Max. Elektrolytaustritt, absolute Menge | 5,0 | l | Beleg: "with a maximum of 5.0 l leaked from the REESS" (file:///home/cae/hermes/batterie/quellen/normen/R0100r3e.pdf) |
+| Max. Temperaturgradient nach Überstrom | 4 | °C / 2 h | Beleg: "less than 4 °C through 2 hours" (file:///home/cae/hermes/batterie/quellen/normen/R0100r3e.pdf) |
+| Zeitfenster für Elektrolyt-Nachweis nach Aufprall | 60 | min | Beleg: "For a period from the impact until 60 minutes after the impact" (file:///home/cae/hermes/batterie/quellen/normen/R0100r3e.pdf) |
+| Freigrenze Feuerwiderstandstest (Unterseite über Boden) | 1,5 | m | Beleg: "lowest surface of the casing of the REESS is more than" (file:///home/cae/hermes/batterie/quellen/normen/R0100r3e.pdf) |
+| Max. Ladezeit bei externem Fehler | 30 | min | Beleg: "charger shall limit this possible failure to 30 minutes" (file:///home/cae/hermes/batterie/quellen/normen/R0100r3e.pdf) |
+
+## Bedeutung für unser Batteriesystem
+
+- **(Folgerung – Elektrik):** Die Vorgabe von ≥ 100 Ω/V DC bedeutet bei 400 V Nennspannung einen Mindestisolationswiderstand von 40 kΩ; das ist eine harte Grenze für die Auswahl von Isolatormaterialien, Dichtungen und dem Klemmenabstand im Pack.
+- **(Folgerung – Mechanik / CAE):** Die mechanischen Prüfungen (Vibration nach Anhang 9A, Aufprall nach 9C/9D, Vorderrad-Anprall) definieren die Lastspektra, die unsere Rahmen- und Befestigungs-Simulationen (FE-Simulation, Crash-Boundary) nachweisen müssen; die Auflagedefinition in Anhang 1 Anhang 2 muss im CAE-Modell exakt abgebildet werden.
+- **(Folgerung – Thermik / Sicherheit):** Die Absenkung des Temperaturgradienten auf < 4 °C in 2 h nach dem Überstromtest legt die Mindestleistung der Kühlung und die BMS-Abschaltlogik fest; unsere thermischen Wärmesimulationsmodelle müssen diesen Grenzwert als Akzeptanzkriterium enthalten.
+- **(Folgerung – Chemie / Zellgeometrie):** Die Elektrolytgrenze (≤ 7 Vol.-%, ≤ 5 l, 60-min-Nachweisfenster) schränkt die Anzahl und Füllmenge von Zellen mit wässrigem Elektrolyt ein und beeinflusst die Auslegung von Dichtungen, Ventilen und dem Auffangvolumen im Gehäuse.
+- **(Folgerung – Integration / Bauplatz):** Der Verzicht auf den Feuerwiderstandstest ist nur bei > 1,5 m Unterseithöhe zulässig; bei Bodengruppe-Montage entfällt diese Option und der Test muss einkalkuliert werden.
+
+## Offene Fragen
+
+1. Welche konkrete Nennspannung (350 V / 400 V / 800 V) planen wir, und wie viele Zellen parallel/reihengschaltet ergibt das – damit kann der absolute Mindestisolationswiderstand (Ω) und die zugehörige BMS-Warnschwelle berechnet werden.
+2. Welche Zellchemie (NMC, LFP, wässrig vs. nicht-wässrig) ist vorgesehen? Die Elektrolytaustrittsgrenzen unterscheiden sich je nach Elektrolyttyp (aqueous vs. non-aqueous, § 6.4.1.3 / 6.4.2.3) und verändern die Dichtungs- und Gefäßauslegung.
+3. Ist das REESS in einem Fahrzeug der Kategorie M1/N1 (Pkw/Kleinst-lastwagen) oder M2/N2 (Bus/Mittellast) eingebaut? Davon hängen die zulässigen Testalternativen (z. B. Ersatz des Prägungs-Crash durch Fahrzeug-Crash gemäß UN-R95) und die mechanische Integritäts-Prüfung (§ 6.4.2) ab.
+4. Soll die Isolation über ein reines Gehäuse-Konzept (IPXXB/IPXXD) oder über eine aktive Isolationsspannungsüberwachung realisiert werden – beides wird in § 5.1.3 gefordert, aber die Umsetzungsstrategie beeinflusst BMS-Hardware und Verkabelung.
+
+## Auffälliges
+
+- Im PDF-Extrakt sind mehrere Definitionsnr. übersprungen (z. B. 2.21, 2.23, 2.24, 2.26–2.31, 2.39, 2.42–2.43, 2.46, 2.49–2.51 fehlen); die Zeilen „caused by exothermic reactions inside the cell." und „train and the high voltage bus galvanically connected to it." sind vermutlich abgeschnittene Definitionstexte (2.46 und 2.52-Fortsetzung) und daher nicht vollständig zitierbar.
+- Das Zeichen „Ω" erscheint in mehreren Prüfwert-Zeilen anstelle des erwarteten „Ω" (z. B. „100 Ω/Volt" in § 6.2.2.1, 6.3.2.2, 6.6.2.2, 6.7.2.2, 6.8.2.2, 6.9.2.2, 6.10.2.3) – offensichtlich ein PDF-Extraktionsartefakt; der Inhalt ist identisch mit den korrekt extrahierten „100 Ω/Volt"-Angaben in § 5.1.3.
+- Die Zeile „DeviceTested-Device expressed as a percentage of its rated capacity." zu Nr. 2.43 ist ein Layout-Artefakt (vermutlich Überschrift + Definitionstext zusammengewachsen); die eigentliche Definition von 2.43 ist nicht vollständig lesbar.
+
+
+Prüfung: 9 Belege bestaetigt, 0 Fehler
+
+## W48
+
+## Erklärung
+
+Die UN-ECE-Verordnungen R094 (Frontalcrash) und R095 (Seitensturz) definieren die elektrischen Sicherheitsanforderungen an das REESS (Rechargeable Electrical Energy Storage System, wiederaufladbares elektrisches Energiespeichersystem) nach einem Verkehrsunfall. „Hochspannung" liegt dabei ab 60 V Gleichstrom bzw. 30 V Wechselstrom (RMS, Effektivwert) vor – ab diesem Wert gelten zusätzliche Schutzpflichten gegenüber Berührung. Nach der Kollision muss innerhalb von 60 Sekunden entweder die Spannung der Hochspannungsbusse unterhalb 30 V AC / 60 V DC fallen, die gespeicherte Energie unter 0,2 Joule sinken oder ein ausreichend hoher Isolationswiderstand (mindestens 500 Ω pro Volt Betriebsspannung) zur Fahrzeugmasse gegeben sein. Zusätzlich dürfen in den 60 Minuten nach dem Aufprall keine brennbaren Elektroflüssigkeiten austreten und kein Feuerrisiko vom Batteriesystem ausgehen. Das REESS muss mechanisch am Fahrzeug bleiben und darf nicht in den Fahrgastraum wandern. Die Verordnungen legen auch vor dem Crash fest, in welchem Ladungszustand (SOC, State of Charge – Ladezustand als Prozentsatz der Nennkapazität) der Test durchzuführen ist. Für unser Batteriesystem sind diese Normen die verbindliche Grenze: jeder Crash-Nachweis (Spannung, Energie, Isolierung, Dichtheit, Feuer) muss aus den genannten Werten nachweisbar erfüllt sein.
+
+## Kennwerte
+
+| Größe | Wert | Einheit | Beleg |
+|---|---|---|---|
+| Hochspannungsschwelle (DC) | > 60 bis ≤ 1 500 | V | Beleg: "working voltage is > 60 V and ≤ 1,500 V direct current (DC) or > 30 V" (file:///home/cae/hermes/batterie/quellen/normen/R094r4e.pdf) |
+| Postcrash-Spanngrenze | ≤ 30 AC / 60 DC (60 s) | V | Beleg: "30 VAC or 60 VDC within 60 s after the impact when measured" (file:///home/cae/hermes/batterie/quellen/normen/R094r4e.pdf) |
+| Energiegrenze im HV-Bus | < 0,2 | J | Beleg: "Total Energy (TE) on the high voltage buses shall be less than 0.2 joules" (file:///home/cae/hermes/batterie/quellen/normen/R094r4e.pdf) |
+| Isolationswiderstand (Basis) | ≥ 500 | Ω/V Betriebsspannung | Beleg: "minimum value of 500 Ω/V of the working voltage" (file:///home/cae/hermes/batterie/quellen/normen/R094r4e.pdf) |
+| Isolationswiderstand (alternativ) | ≥ 100 | Ω/V Betriebsspannung | Beleg: "minimum value of 100 Ω/V of the working voltage" (file:///home/cae/hermes/batterie/quellen/normen/R094r4e.pdf) |
+| Elektrolyt-Austritt (Volumenbruchteil) | ≤ 7 | % | Beleg: "more than 7 per cent by volume of the REESS electrolyte with a maximum" (file:///home/cae/hermes/batterie/quellen/normen/R094r4e.pdf) |
+| Elektrolyt-Austritt (maximal) | ≤ 5,0 | l | Beleg: "5.0 l leaked from the REESS to the outside of the passenger compartment" (file:///home/cae/hermes/batterie/quellen/normen/R094r4e.pdf) |
+| Überwachungszeitraum nach Crash | 60 | min | Beleg: "For a period from the impact until 60 minutes after the impact, there shall be no" (file:///home/cae/hermes/batterie/quellen/normen/R094r4e.pdf) |
+| Mindest-SOC (externe Ladung) | ≥ 95 | % | Beleg: "SOC shall be no less than 95 per cent of SOC" (file:///home/cae/hermes/batterie/quellen/normen/R094r4e.pdf) |
+| Mindest-SOC (nur Fahrzeuglader) | ≥ 90 | % | Beleg: "shall be no less than 90 per cent of SOC according to" (file:///home/cae/hermes/batterie/quellen/normen/R094r4e.pdf) |
+| REESS-Definition | – | – | Beleg: "rechargeable energy storage system that provides electric energy for electrical" (file:///home/cae/hermes/batterie/quellen/normen/R094r4e.pdf) |
+| Nicht gefunden | – | – | nicht gefunden |
+
+## Bedeutung für unser Batteriesystem
+
+- **(Folgerung, Zusammenbau/Mechanik)** Das REESS muss nach dem Crash durch mindestens ein Ankerbauteil am Fahrwerk verbleiben und darf in den Fahrgastraum wandern – die Montagestruktur und das Crash-Lastpfad-Design müssen diese Retention sicherstellen.
+- **(Folgerung, Elektrik)** Der Isolationswiderstand von ≥ 500 Ω/V der Betriebsspannung muss auch *nach* dem Crash bestehen bleiben; die Isolator-Geometrie und die Verkabelung im Pack dürfen durch Verformung nicht die galvanische Trennung verlieren.
+- **(Folgerung, Sicherheit/CHEMIE)** Die 0,2-Joule-Grenze für X- und Y-Kondensatoren im Hochspannungsbus betrifft primär die Power-Elektronik, nicht die Zelle selbst; dennoch muss das Pack-Design so gewählt sein, dass kein externer Kondensator > 0,2 J in den HV-Kreis bringt.
+- **(Folgerung, Sicherheit/Dichtheit)** Bei wasserbasierendem Elektrolyt ist ein Verlust von > 7 % bzw. > 5 l nicht zulässig; dies verlangt ein Dicht- und Gehäusekonzept, das unter Crash-Last die Elektrolyt-Trennung hält.
+- **(Folgerung, Elektrik/Steuerung)** Die Automatische Trennfunktion (automatic disconnect) wird in der Norm als zulässiges Schutzmittel anerkannt; deren Auslösesignal und die galvanische Trennung müssen crash-induziert funktionieren, was die EMV- und Mechanikfestigkeit des Sensors beeinflusst.
+
+## Offene Fragen
+
+1. Wie ist der Betriebs-SOC (Typischer Fahrsituation, z. B. 50 %) für die Isolationswiderstandsnachrechnung einzusetzen – gilt der Worst-Case (95 %) oder der Design-SOC?
+2. Welche Prüfmethode (Messung vs. Berechnung) ist für den 500 Ω/V-Nachweis im Crash-Nachzustand im Zulassungsverfahren am praktikabelsten – Megger-Messung nach Annex 11 oder FE-Ersatzschaltung, und welche Toleranzen sind einzurechnen?
+3. Gilt die 0,2-Joule-Energiegrenze auch für Y-Kondensatoren zwischen HV und Fahrzeugmasse im REESS-Gehäuse, oder nur für die Power-Elektronik-Bausteine außerhalb der Zelle?
+4. Wie wird der Nachweis „kein Feuer/explosion 60 min" bei nicht-wasserbasierende Elektrolyte (z. B., Lithium-Fluorid) experimentell abgegrenzt – visuell nur, oder auch über Rauch-/Gasdetektoren?
+
+## Auffälliges
+
+- Beides Quelltexte enthalten **Verfahrensanweisungen** an Prüfstellen, z. B. „The voltage measurement shall be made not earlier than 10 seconds, but, not later than 60 seconds after the impact" – diese sind Testprotokoll, kein Konstruktionskennwert; beim Abgleichen mit unserem Design nicht als Anforderung an das Zellenverhalten missdeuten.
+- R094 und R095 decken nahezu identische Sicherheitswerte ab (gleiche Spannungs-, Energie-, Isolations- und Elektrolytgrenzen), unterscheiden sich nur in den Prüfverfahren (Annex 11 vs. Annex 9) und dem Crash-Szenario (Frontal vs. Seitensturz). Konstruktiv gilt: ein einzelner Nachweis deckt beide ab, wenn die Werte identisch sind.
+- Keine Widersprüche zwischen den beiden Quellen festgestellt.
+
+
+Prüfung: 11 Belege bestaetigt, 0 Fehler
+
+## W49
+
+# W49: EU-Batterieverordnung 2023/1542 — Nachhaltigkeits-, Sicherheits- und Informationsanforderungen
+
+## Erklärung
+
+Die Verordnung (EU) 2023/1542 legt verbindliche Mindestanforderungen an Nachhaltigkeit, Sicherheit, Kennzeichnung und Information für alle Batteriearten im EU-Binnenmarkt fest. Sie gilt für Gerätebatterien, Starterbatterien, Batterie für leichte Verkehrsmittel (LV-Batterien), Elektrofahrzeugbatterien und Industriebatterien, unabhängig von chemischer Zusammensetzung oder Bauform. Kernelemente sind die Pflicht zur Erstellung einer Erklärung zum CO₂-Fußabdruck („Summe der Mengen von Treibhausgasen … angegeben als Kohlendioxid-Äquivalente"), zur Angabe von Leistungs- und Haltbarkeitsparametern sowie zur Einführung eines digitalen Batteriepasses, der Verfolgbarkeit und Transparenz über den gesamten Lebenszyklus sicherstellt. Zusätzlich werden Lieferkette-Sorgfaltspflichten (Due Diligence) nach OECD-Prinzipien vorgeschrieben, die soziale und Umwelt-Risiken bei der Rohstoffgewebe abdecken. Der Batteriepass basiert auf einem dezentralen Datensystem und muss u. a. Alterungszustand, voraussichtliche Lebensdauer und CO₂-Intensität bereitstellen. Ein Batteriemanagementsystem (BMS) ist definiert als „ein elektronisches Bauelement, das im Interesse der Sicherheit, Leistung und Lebensdauer der Batterie die elektrischen und thermischen Funktionen einer Batterie überwacht und steuert". Für Elektrofahrzeugbatterien werden schrittweise Höchstwerte für den CO₂-Fußabdruck über den gesamten Lebenszyklus eingeführt. Die Verordnung ersetzt die bisherige Richtlinie 2006/66/EG und schafft damit ein einheitliches, produktsicherheitsrechtliches Regime mit CE-Kennzeichnung und Konformitätsbewertung.
+
+## Kennwerte
+
+| Größe | Wert | Einheit | Beleg |
+|---|---|---|---|
+| Maximalmasse Gerätebatterie | 5 | kg | Beleg: "eine Batterie, die gekapselt ist, 5 kg oder weniger wiegt" (file:///home/cae/hermes/batterie/quellen/normen/CELEX_32023R1542_DE_TXT.pdf) |
+| Mindestmasse E-Fahrzeugbatterie (Klasse L) | 25 | kg | Beleg: "ausgelegt ist und mehr als 25 kg wiegt, oder eine Batterie" (file:///home/cae/hermes/batterie/quellen/normen/CELEX_32023R1542_DE_TXT.pdf) |
+| Schwellenwert Industriebatterie (CO₂-Pflicht) | 2 | kWh | Beleg: "wiederaufladbaren Industriebatterien mit einer Kapazität von mehr als 2 kWh" (file:///home/cae/hermes/batterie/quellen/normen/CELEX_32023R1542_DE_TXT.pdf) |
+| Einheit CO₂-Fußabdruck | kg CO₂-Äq. | pro kWh | Beleg: "berechnet als kg Kohlendioxid-Äquivalent pro eine kWh der Gesamtenergie" (file:///home/cae/hermes/batterie/quellen/normen/CELEX_32023R1542_DE_TXT.pdf) |
+| Frist CO₂-Methode (E-Fahrzeugbatterien) | 18. Feb 2024 | — | Beleg: "Die Kommission erlässt für Elektrofahrzeugbatterien bis zum 18. Februar 2024" (file:///home/cae/hermes/batterie/quellen/normen/CELEX_32023R1542_DE_TXT.pdf) |
+| Geltung CO₂-Höchstwert (E-Fahrzeugbatterien) | 18. Feb 2028 | — | Beleg: "18. Februar 2028 oder 18 Monate nach dem Tag des Inkrafttretens" (file:///home/cae/hermes/batterie/quellen/normen/CELEX_32023R1542_DE_TXT.pdf) |
+
+## Bedeutung für unser Batteriesystem
+
+- **Zusammenbau / Mechanik:** Die Batterie muss „von unabhängigen Fachleuten entfernt und ausgetauscht werden können" (Erwägung 42) — als Folgerung: Modularität, definierte Demontagepunkte und Werkzeugfreiheit sind Konstruktionsanforderung.
+- **Elektrik / BMS:** Das BMS muss Alterungszustand und voraussichtliche Lebensdauer jederzeit bereitstellen (Erwägung 46) — als Folgerung: Zustands- und Prognosealgorithmen (z. B. SOC/SOH, RUL) sind nicht optional, sondern regelwerksverankert.
+- **Kühlung / Thermomanagement:** Das BMS überwacht explizit „die elektrischen und thermischen Funktionen" (Definition Nr. 25) — als Folgerung: Thermisches Design muss die BMS-Sensorik und deren Grenzwerte einplanen; reine Konvektion reicht ggf. nicht.
+- **Dokumentation / Digitalisierung:** Der Batteriepass erfordert dezentral gespeicherte Daten pro Batterieeinheit (Erwägung 126) — als Folgerung: Seriennummerierung, Datenmanagement und Schnittstellen (QR-Code, ISO/IEC 18004) sind in das PDM-System zu integrieren.
+- **Sicherheit / Ende Lebensdauer:** Industriebatterien und E-Fahrzeugbatterien nach Erstnutzung sollen der Wiederverwendung als stationärer Speicher zugänglich sein (Erwägung 118) — als Folgerung: thermische und mechanische Robustheit über zwei Nutzungszyklen einplanen.
+
+## Offene Fragen
+
+1. Die Verordnung verweist auf UNECE-R-Regelung Nr. 22 und eine zukünftige Euro-7-Verordnung für Mindestleistungsanforderungen — welche konkreten Zyklen und Grenzwerte (z. B. Kapazitätseinbruch, thermische Auslegung) gelten für die Haltbarkeitsnachweisung im Prüfplan?
+2. Der CO₂-Höchstwert ist bis 18.02.2028 als delegiertem Rechtsakt vorgesehen — welche konkreten kg CO₂-Äq./kWh-Werte sind für die Zellen- und Modulauswahl (Erstmaterial vs. Rezyklatanteil) bereits heute realistisch?
+3. Welche technischen Spezifikationen der UNECE-AG „Elektrofahrzeuge und Umwelt" gelten als Referenz für BMS-Datenzugang (Zugriff auf SOH, RUL), und wie ist das gegenüber dem OEM/Flottenbetreiber umzusetzen?
+4. Gibt es für unser mechanisches Gehäuse (Schutzart, Crash-Sicherheit bei N/O- oder M-Klasse) bereits normative Grenzwerte aus der künftigen Typgenehmigungsverordnung, oder bleibt das national?
+
+## Auffälliges
+
+nichts
+
+
+Prüfung: 6 Belege bestaetigt, 0 Fehler
+
+## W50
+
+# W50 – POLE SIDE IMPACT (UN-Reg. 135)
+
+## Erklärung
+
+Die UN-Verordnung Nr. 135 (Pole Side Impact, PSI) regelt einen standardisierten Krashtest für die Typgenehmigung von Fahrzeugen, bei dem ein fahrendes Fahrzeug seitlich-punktlastig auf einen starren, aufrecht stehenden Metallzylinder (den „Pole") prallt. Der Pole simuliert schlanke Hindernisse wie Baumstämme, Brückenpfeiler oder Laternenmasten, deren Querschnitt nur einen kleinen Bereich des Fahrzeugs trifft – ein deutlich härterer Lastfall als eine vollflächige seitliche Wand. Der Pole ist ein fester, vertikal orientierter Metallkörper mit 254 mm Außendurchmesser, dessen unteres Ende höchstens 102 mm über dem tiefsten Reifepunkt der Aufprallsseite beginnt. Die Testgeschwindigkeit beträgt in der Regel 32 ± 1 km/h; für Fahrzeuge mit einer Breite von 1,50 m oder weniger werden 26 +7/−0 km/h gefordert. Der Anprall erfolgt unter einem Winkel von 75 ± 3° zwischen Fahrtrichtung und Längsmittellinie des Fahrzeugs, die Anprallreferenzlinie ist so gelegt, dass die Pole-Mittellinie den Bereich zwischen zwei senkrechten Ebenen 25 mm vor bzw. hinter einer definierten Referenzebene trifft. Ein Anthropometrischer Crash-Sensor (WorldSID, 50. Perzentil männlich) sitzt auf dem betroffenen Sitzplatz; seine untere Wirbelsäulenbeschleunigung darf 75 g nicht überschreiten. Außerdem dürfen sich Türen, die den Pole treffen, nicht vollständig vom Fahrzeug trennen, und bei Wasserstoffantrieb gilt ein strenger Leckgrenzwert (142 g H₂ in den ersten 5 Minuten) sowie ein Absperrventil, das binnen 5 Sekunden schließen muss. Für Batteriesysteme ist dies relevant, weil ein derart konzentrierter seitlicher Anprall sehr hohe, lokalisierte Lasten erzeugt, die die Batterieeinheit, ihr Gehäuse und deren Befestigung belasten, ohne dass Elektrolyt, Kühlmittel oder Gase austreten dürfen. Die Verordnung ist ein verbindliches Zulassungs-Abnahmeverfahren: Der Hersteller muss nachweisen, dass die Fahrzeugkonstruktion (inklusive aller an Bord befindlichen Komponenten wie der Batterie) die geforderten Grenzen einhält.
+
+## Kennwerte
+
+| Größe | Wert | Einheit | Beleg |
+|---|---|---|---|
+| Außendurchmesser des Poles | 254 ± 6 | mm | Beleg: „continuous outer cross section diameter of 254 mm ± 6 mm" (file:///home/cae/hermes/batterie/quellen/normen/R135e.pdf) |
+| Max. Abstand Pole-Unterkante zum tiefsten Reifepunkt | ≤ 102 | mm | Beleg: „beginning no more than 102 mm above the lowest point of the tyres on the impact" (file:///home/cae/hermes/batterie/quellen/normen/R135e.pdf) |
+| Anprallwinkel (Fahrtrichtung → Längsmittellinie) | 75 ± 3 | ° | Beleg: „the direction of vehicle motion forms an angle of 75° ± 3°" (file:///home/cae/hermes/batterie/quellen/normen/R135e.pdf) |
+| Testgeschwindigkeit (Standard) | 32 ± 1 | km/h | Beleg: „the test vehicle speed at the moment of first vehicle-to-pole contact shall be 32 ± 1 km/h" (file:///home/cae/hermes/batterie/quellen/normen/R135e.pdf) |
+| Testgeschwindigkeit (Fahrzeugbreite ≤ 1,50 m) | 26 +7/−0 | km/h | Beleg: „the test vehicle speed at the moment of first vehicle-to-pole contact shall be 26 -0/+7 km/h" (file:///home/cae/hermes/batterie/quellen/normen/R135e.pdf) |
+| Maximale Beschleunigung in der Anrollphase | ≤ 1,5 | m/s² | Beleg: „the acceleration of the test vehicle shall not exceed 1.5 m/s2" (file:///home/cae/hermes/batterie/quellen/normen/R135e.pdf) |
+| Max. untere Wirbelsäulen-Beschleunigung (Dummy) | 75 | g | Beleg: „The resultant lower spine acceleration shall not exceed 75 g" (file:///home/cae/hermes/batterie/quellen/normen/R135e.pdf) |
+| H₂-Leckgrenze, 1. 5 Min. nach Anprall | 142 | g | Beleg: „A total of 142 grams during the 5 minute period immediately following first" (file:///home/cae/hermes/batterie/quellen/normen/R135e.pdf) |
+| H₂-Leckgrenze, jede weitere 1-Min.-Spanne (5–30 Min.) | 28 | g | Beleg: „A total of 28 grams during each subsequent 1 minute period from 5 minutes" (file:///home/cae/hermes/batterie/quellen/normen/R135e.pdf) |
+| Max. Schließzeit H₂-Absperrventil nach Anprall | 5 | s | Beleg: „the shut-off valve of each hydrogen storage system has closed within 5 seconds" (file:///home/cae/hermes/batterie/quellen/normen/R135e.pdf) |
+| Max. Anprallzeit, ab der Pole-Montage nicht berührt werden darf | 100 | ms | Beleg: „the test vehicle will not contact such a mount or support at any time within 100 ms" (file:///home/cae/hermes/batterie/quellen/normen/R135e.pdf) |
+
+## Bedeutung für unser Batteriesystem
+
+- **Sicherheit / Dichtheit (Folgerung):** Die für Wasserstoff definierten Leckgrenzwerte (142 g / 5 min, 28 g / min) und das 5-s-Absparrventil deuten darauf hin, dass für eine LFP- bzw. NMC-Batterie analoge Anforderungen an Elektrolytdichtheit, Kühlmittelauslass und Gasableitung nach einem PSI-Vorfall zu erwarten sind.
+- **Zusammenbau / Befestigung (Folgerung):** Ein Punktlast-Anprall mit 32 km/h und 75°-Winkel erzeugt lokalisierte, hochfrequente Belastungen im Fahrzeugchassis; die Batterie-Befestigung (Bolzen, Gummilager, Crash-Pfaden) muss sicherstellen, dass das Gehäuse nicht als Projektil frei fliegt und die Zellen nicht durch Verformung des Trägers zusammengepresst werden.
+- **Kühlung / Dichtung (Folgerung):** Wenn das Kühlsystem (Liquid Cooling Plate) in die Pfadstruktur eingreift, muss der Kräftepfad bei PSI die Dichtflächen der Schläuche und Verteilerblasen so belasten, dass kein Kühlmedium austritt – analog zur H₂-Grenze.
+- **Elektrik / Trennschutz (Folgerung):** Die 5-s-Ventil-Schließzeit bei H₂ legt nahe, dass für Hochvolt-Batterien ein äquidistanter Trennzeit-Takt (Main Fuse / Contactor / eFuse) nach Kollisionssensor-Auslösung gefordert ist, um einen nachträglichen Stromfluss über beschädigte Leiter zu unterbinden.
+- **Chemie / Zellgeometrie (Folgerung):** Die 75 g-Dummy-Beschleunigung am Sitzplatz impliziert, dass in der Batterieträgerebene noch höhere lokale Beschleunigungen auftreten können; die Zellgeometrie (Prisma vs. Pouch vs. Zylinder) beeinflusst die Bruchmechanik unter einseitiger Biegung und Scherung, wie sie bei PSI typisch ist.
+
+## Offene Fragen
+
+1. Welche konkreten Einzellast-Szenarien (Biege- und Scherkräfte an den Batterie-Bolzen) hat der Fahrzeughersteller aus dem PSI-Zielwert abgeleitet, und sind diese in die CAE-Befestigungsbemessung der Batterie übernommen?
+2. Liegen für LFP-/NMC-Systeme bereits regulatorische Leckgrenzwerte (Elektrolyt, Kühlfluid) an, die den H₂-Grenzwerten in R135 entsprechen, oder bleibt dies eine herstellereigene Spezifikation?
+3. Wie wird die Batterie im 30-minütigen Nachbeobachtungszeitraum (Übertemperatur, Gasentwicklung, HV-Leckstrom) gemessen und bewertet – gibt es Messpunkte an der Zell- oder Modulfläche, die im PSI-Test mitzuführen sind?
+4. Gilt die R135-PSI-Vorschrift unmittelbar für die Batterieeinheit als „Zubehör" (Annex 4 bzw. zugehörige ECE-Testanforderungen), oder wird die Batterie allein über die Fahrzeugtypgenehmigung indirekt abgedeckt?
+
+## Auffälliges
+
+nichts
+
+
+Prüfung: 11 Belege bestaetigt, 0 Fehler

@@ -60,3 +60,5 @@ openpyxl
 chromadb==1.5.9
 networkx==3.7
 lxml==6.1.3
+skidl==3.0.0
+spicelib==1.6.4

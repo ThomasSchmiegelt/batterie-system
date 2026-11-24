@@ -1,0 +1,1 @@
+{"urteile":{"Wärme in der CMU":{"gewinner":"A","grund":"Konzept A eliminiert die ohmschen Verluste in der Leitbahn durch Transformatorkopplung, sodass menos Verlustleistung in der CMU-Stromschleife erzeugt wird; Konzept B erzeugt im PWM-Betrieb weiterhin I²R-Verluste in den Schaltern vor Ort und entfernt die Wärme lediglich anschließend.","zahl":{"wert":"9,83 W","quelle":"F2"}}}}

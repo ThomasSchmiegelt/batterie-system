@@ -1,0 +1,13 @@
+{
+ "innerhalb": {
+  "kriech_mm": 0.2,
+  "luft_mm": 0.2,
+  "ok": true
+ },
+ "daisy_trennstelle": {
+  "kriech_mm": 2.5,
+  "luft_mm": 2.5,
+  "ok": true
+ },
+ "hinweis": "Luftstrecke richtet sich nach Stoßspannung, Kriechstrecke nach Arbeitsspannung (N4 Regel 2); hier ohne Wert für die Stoßspannung gleich dem DRC-Abstand gesetzt, Auslegungshöhe 3000 m offen (Frage an Autor)"
+}

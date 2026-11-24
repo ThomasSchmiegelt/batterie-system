@@ -1,0 +1,1 @@
+{"urteile":{"Sicherheit":{"gewinner":"B","grund":"1oo2 (B) ist für die Fehlerdetektion konservativer, da ein einzelner Kanal genügt, und entspricht damit der FSR-01-Architektur (zwei unabhängige Wege) für ASIL D, während 2oo3 (A) zwei Stimmungen verlangt und eine Echtstörung bei gleichzeitigem Fehler zweier Kanäle verpassen könnte.","zahl":{"wert":"0,9992","quelle":"F5"}}}}

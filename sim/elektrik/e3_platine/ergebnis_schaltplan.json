@@ -1,0 +1,22 @@
+{
+ "LFP": {
+  "netze_schaltplan": 125,
+  "netze_layout": 125,
+  "nur_im_schaltplan": 0,
+  "nur_im_layout": 0,
+  "teile_schaltplan": 110,
+  "teile_layout": 110,
+  "beispiele_abweichung": [],
+  "gleich": true
+ },
+ "NMC": {
+  "netze_schaltplan": 125,
+  "netze_layout": 125,
+  "nur_im_schaltplan": 0,
+  "nur_im_layout": 0,
+  "teile_schaltplan": 110,
+  "teile_layout": 110,
+  "beispiele_abweichung": [],
+  "gleich": true
+ }
+}

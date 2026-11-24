@@ -1,0 +1,1 @@
+{"urteile":{"Nachweisaufwand":{"gewinner":"B","grund":"Konzept B (1oo1, eine Schwelle, sofort trennen) verlangt keinen Unabhängigkeitsnachweis zwischen Kanälen und keine ASIL-Zerlegung; Konzept A (2oo3, abgestuft) muss laut FSR-01/FSR-06 zudem die Unabhängigkeit mehrerer Mess- und Abschaltwege nachweisen und eine komplexere ASIL-D-Software plausibilisieren.","zahl":null}}}

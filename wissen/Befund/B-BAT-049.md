@@ -6,12 +6,12 @@ tags: ["befund"]
 
 > KI-generiert, erzeugt aus pm/plan/wissensnetz.json – nicht von Hand bearbeiten
 
-Werkzeug-Testfälle QN1: Löser verifiziert, LFP-Zellmodell liefert nur die halbe Kapazität (2026-11-23, gefunden von Sonnet/Tor QN1, Deutung Opus)
+B-BAT-049 Werkzeug-Testfälle QN1: Löser verifiziert, LFP-Zellmodell liefert nur die halbe Kapazität (2026-11-23, gefunden von Sonnet/Tor QN1, Deutung Opus)
 
 Quelle: [[Dokument/BEFUNDE]]
 
 ## Vorgänge
-- –
+- [[Vorgang/R3|R3]] – Patente P01-P10
 
 ## Text aus BEFUNDE.md
 

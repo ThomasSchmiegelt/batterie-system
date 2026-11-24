@@ -1,0 +1,23 @@
+{
+  "risiken": [
+    {
+      "versagen": "Thermisches Versagen der CMU-Platine",
+      "ursache": "Bei 9,83 W Verlustwärme (F2) auf einer Platine von 120 x 60 mm (F6) mit freier Konvektion entsteht eine Übertemperatur von 60 bis 100 K (F5). Der 14,2-h-Zyklus (F1) hält diese Belastung kontinuierlich aufrecht.",
+      "folge": "Die Platine überschreitet 105 °C bei 45 °C Umgebung (F5). Die BMS-Dormanz (F9) schaltet den Ausgleich ab. Die 13 CMU-Einheiten (F6) leiden an Materialdegradation; Bauteile aus dem Bereich 130 bis 170 Bauteile (F6) altern beschleunigt.",
+      "schwere": "hoch"
+    },
+    {
+      "versagen": "Unzulässige Stromerhöhung zur Zeitverkürzung durchbricht Wärmebudget",
+      "ursache": "Die Ausgleichszeit soll unter 14,2 h (F1) sinken. Höherer Strom als 130 mA (F1) über 34 Ohm (F4) erhöht die Verlustleistung quadratisch. Bereits 9,83 W (F2) liegen an der Grenze von 10 W (F2). Die Stromschwankung von 124 mA auf 4,2 V auf 109 mA auf 3,7 V (F4) zeigt: am Zyklusende sinkt der Strom, die Zeit verlängert sich um 10 bis 15 % (F4).",
+      "folge": "Jede Zeitverkürzung treibt die CMU-Wärme über 10 W (F2). Die Thermabschaltung (F9) bricht den Ausgleich ab, die Zellen bleiben unausgeglichen, und der dQ-Zyklus von 1,848 Ah (F1) wird nicht vollständig abgearbeitet.",
+      "schweite": "hoch",
+      "schwere": "hoch"
+    },
+    {
+      "versagen": "Kumulative Zelldegradation durch rein passiven Bleed-Abgleich",
+      "ursache": "Der passive Widerstandsausgleich entlädt nur stärkere Zellen, ohne schwächere aufzuladen. Bei 217 Zellen in Serie (F6) über 13 CMU (F6) begrenzt die schwächste Zelle die nutzbare Kapazität (F7). Die BMS-Dormanz (F9) unterbricht den 14,2-h-Zyklus (F1) periodisch, sodass der Ausgleich nie vollständig läuft.",
+      "folge": "Die Kapazitätsstreuung wächst über 5 % (F7). Die nutzbare Kapazität des 217er-Packs (F6) sinkt bis auf die schwächste Zelle. Jede Zelle durchläuft mehr Partialladetiefen, was die Lebensdauer der gesamten Kette verkürzt.",
+      "schwere": "mittel"
+    }
+  ]
+}
