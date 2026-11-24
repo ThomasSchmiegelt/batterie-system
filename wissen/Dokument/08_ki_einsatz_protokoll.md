@@ -19,6 +19,7 @@ tags: ["dokument"]
 - [[Anforderung/REQ-G02|REQ-G02]]
 - [[Anforderung/REQ-P01|REQ-P01]]
 - [[Anforderung/REQ-P03|REQ-P03]]
+- [[Anforderung/REQ-P07|REQ-P07]]
 - [[Anforderung/REQ-P09|REQ-P09]]
 - [[Anforderung/REQ-P16|REQ-P16]]
 
@@ -44,7 +45,9 @@ tags: ["dokument"]
 - [[Bauteil/BT-000|BT-000]]
 - [[Bauteil/BT-100|BT-100]]
 - [[Bauteil/BT-220|BT-220]]
+- [[Bauteil/BT-311|BT-311]]
 - [[Bauteil/BT-610|BT-610]]
+- [[Bauteil/BT-722|BT-722]]
 - [[Bauteil/BT-770|BT-770]]
 - [[Entscheidung/ENT-001|ENT-001]]
 - [[Entscheidung/ENT-005|ENT-005]]
@@ -68,6 +71,8 @@ tags: ["dokument"]
 - [[Entscheidung/ENT-163|ENT-163]]
 - [[Entscheidung/ENT-168|ENT-168]]
 - [[Entscheidung/ENT-187|ENT-187]]
+- [[Entscheidung/ENT-188|ENT-188]]
+- [[Entscheidung/ENT-194|ENT-194]]
 
 ## Vorgänge, die dieses Dokument nennen
 - [[Vorgang/B1|B1]] – Bericht DE/EN je Kapitel, Prozessdoku, Lessons Learned
@@ -259,4 +264,9 @@ Eine Zeile je verteiltem Auftrag (CLAUDE.md, Regel 3). Dauer aus `date`, nicht g
 | 2026-11-24 11:40 | Sonnet | E3 Routing Lauf 3 (ERW-E3 N5, ENT-168 = 0,2 mm): Daisy-Strecke von Hand vorverlegt, Freerouting-Jar, beide Platinen vollständig geroutet (DRC 0 Verstöße, 0 offen), 143 von 144 Thermovias (ENT-187), Kriechstrecke-Prüfung, Gerber/STEP/Pack (NMC kollisionsfrei), KiCad-3D-Bilder; Blender-Explosion und Einbauort-Bild offen | sim/elektrik/e3_platine/ERGEBNIS.md | Prüfung Opus offen | Erwartung 6 erreicht; 5 verfehlt (108 Teile); Explosion/Einbauort fehlen |
 | 2026-11-24 12:21 | Sonnet | E3 Nachtrag 6: Thermovias neu im eigenen Netz der Widerstandspads mit B.Cu-Kupferfläche je Netz (thermovias.py; LFP 144/144, NMC 144/144 (1 Via 0,45/0,2 mm), DRC 0 und 0 offen; zwei Innenlagenbahnen um je 10,75 µm verschoben), Masse nach ERWARTUNG Nachtrag 6 (Platine ohne Pad LFP 27,2 g, NMC 27,2 g, Pad 21,6 g) in ergebnis_platine.json und im Pack (pack_e2d.py, CMU je 48,9 g; NMC 0 Kollisionen, LFP 3 alte), Gerber, STEP, KiCad-3D neu, Blender-Explosionsansicht und Einbauort-Bild (platine_<V>_explosion.png, _einbau.png), ERGEBNIS v0.5, Baustein E3, docs/16 | sim/elektrik/e3_platine/ERGEBNIS.md | Prüfung Opus offen | NMC 144/144 durch eine Via 0,45/0,2 mm (Ausnahme Opus), Innenkupfer 70 µm und SOIC-8/SOD-323-Masse offen |
 | 2026-11-24 14:20 | Sonnet | E3d (ERW-E3d): grobe FMEDA CMU-Platine (fmeda.py, 108 Teile LFP/NMC, SG-01/SG-02, SPFM/LFM/PMHF je CMU und Pack), Bild mit Lesehilfe, Folienbaustein E3d, OPT-013 | sim/elektrik/e3d_fmeda/ERGEBNIS.md | Prüfung Opus offen | SG-01 SPFM 99,92 %/LFM 98,14 % ok; SG-02 SPFM 95,71 % (Ziel 97 %) verfehlt, M1 zweiter Schalter 97,85 %; Frage: Sekundärschutz misst T18-T0 |
+| 2026-11-24 15:10 | Sonnet | E3c (ERW-E3c): LFP-Kollisionen behoben (Servicedeckel BT-722, Kontakt zugelassen), BMS-Platine BT-311 in KiCad (131 Teile, Freerouting, DRC 0, Sperrzone, Masse), Bilder mit Lesehilfe, hierarchischer Schaltplan (ERC 0, Netzliste = Layout), Akten ENT-188..191, OPT-014, Folienbaustein E3c | sim/elektrik/e3c_bms_platine/ERGEBNIS.md | Prüfung Opus offen | LFP 0 Kollisionen, Platine DRC 0; Teilezahl unter Band; Merkmal BT-722 fehlt |
+| 2026-11-24 14:55 | Sonnet (PI als Urteiler) | KR2: Zielkonflikt Trennen gegen Verfügbarkeit (SG-01/03 gegen SG-05), Kasten T1–T5 und Konzepte K1–K5 von Opus unverändert, TRIZ (27/35), Kopfstand, Festforderung (keines ausgeschieden), 20 Paarfragen × 5 Kriterien, 2 Nachfragerunden, Gewichte Autor (Chat) 8/6/3/2/1; Platz 1 K1 (0,731), K3 (0,609), K4 (0,603); gleiche Gewichte als Vergleich; kreativ.py eine Zeile (triz_gegenstand) | pm/kreativ/KR2/ERGEBNIS.md v0.1, rang.json, rang.png, praesentation/bausteine/KR2.md | Opus: Rohdaten, Stichprobe offen; Skript: 4 von 100 Urteilen mit falscher Fundstelle | 1 Zirkel (Ziel 0, Nachweisaufwand), Erwartung überwiegend erfüllt (Platz 2 K3 statt K4) |
+| 2026-11-24 15:15 | Sonnet | E3c Nacharbeit (Opus): Schaltplan v0.2 mit Drähten, Blattpins, Zeilen je Schützkanal, A2 für große Blätter (ERC 0, Netzliste = Layout); Platine im Pack-STEP (PACK_E3C, LFP und NMC 0 Kollisionen); Deckelhöhe aus parameter.json (ENT-194); pack_e2d.py nach Skriptfehler aus HEAD und Änderungsprotokoll rekonstruiert | sim/elektrik/e3c_bms_platine/ERGEBNIS.md | Prüfung Opus offen: git diff pack_e2d.py | Kollisionen 0/0, ERC 0 |
+| 2026-11-24 15:45 | Sonnet | E3 Überarbeitung (ERW-E3 N7/N8): 3 × OVP6, Doppel-FET, AFE LQFP-80 (110 Teile), Platzierung gelockert bei 120 × 60 mm, LFP vollständig geroutet, NMC per Übertragung des LFP-Routings (DRC 0, 0 offen, 144 Thermovias), Gerber/STEP/Masse (N8), Pack 0 Kollisionen, Bilder, FMEDA E3d v0.2 (SG-02 SPFM 97,85 %), hierarchischer Schaltplan (ERC 0, Netzliste = Layout) | sim/elektrik/e3_platine/ERGEBNIS.md v0.6, sim/elektrik/e3d_fmeda/ERGEBNIS.md v0.2 | offen (Prüfung Opus) | offen |
+| 2026-11-24 15:50 | Sonnet | L1 (ERW-L1): Leichtbau-Potenzial OPT-012 ohne CAD-Änderung, Nachrechnung Gruppen ≥ 3 kg (alle < 5 %), Hebel H1–H7 (Spannen Opus) mit Rückrechnung, Wasserfallbilder mit Zielband REQ-P07, Folienbaustein L1, bilder.py nachgeführt; W51 offen (W51.md fehlt) | sim/mechanik/l1_leichtbau/ERGEBNIS.md | Prüfung Opus offen: ergebnis.json gegen cad/pack/entwurf/ergebnis_<V>_e2d_e3c.json | LFP 540…576 kg (Ziel 528), NMC 394…433 kg (Ziel 370); H1 laut Rückrechnung zu hoch, H3 Ist ist Al statt Stahl, H6/H7 im Ist schon Kammerprofil/halbe Höhe |
 

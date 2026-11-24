@@ -13,7 +13,7 @@ verifiziert_durch: ["cad/baukasten/ausgabe/ergebnis_LFP.json::breite_mm", "cad/b
 
 Bauraum (L × B × H) und Masse
 
-- Wert (Lastenheft): L ≤ 2400 mm (Autor, Freigaberunde 2026-11-23); B = 1430 mm (ENT-030, Autor 2026-11-17); H ≤ 130 mm im Zellbereich, Dom Schaltbox ≤ 250 mm; Masse LFP ≤ 528 kg, NMC ≤ 370 kg (Startwerte als Ziel)
+- Wert (Lastenheft): L ≤ 2400 mm (Autor, Freigaberunde 2026-11-23); B = 1430 mm (ENT-030, Autor 2026-11-17); H ≤ 130 mm im Zellbereich, Dom Schaltbox ≤ 250 mm; Masse LFP ≤ 600 kg, NMC ≤ 450 kg (Zellanteil ≥ 77 % bzw. ≥ 68 %, über Richtwert W51 70/65 %; Autor 2026-11-24, AEN-022); Fernziel 528/370 kg nur mit Cell-to-Pack (OPT-012)
 - Priorität: Muss
 - Vom Autor bestätigt: ja
 

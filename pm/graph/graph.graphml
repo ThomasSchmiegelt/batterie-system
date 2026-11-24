@@ -933,15 +933,52 @@
 </node>
 <node id="BT-311.laenge_mm">
   <data key="d0">Merkmal</data>
+  <data key="d5">160.0</data>
+  <data key="d6">160.0</data>
+  <data key="d7">160.0</data>
+  <data key="d8">ENT-188</data>
 </node>
 <node id="BT-311.breite_mm">
   <data key="d0">Merkmal</data>
+  <data key="d5">100.0</data>
+  <data key="d6">100.0</data>
+  <data key="d7">100.0</data>
+  <data key="d8">ENT-189</data>
 </node>
 <node id="BT-311.lagen">
   <data key="d0">Merkmal</data>
+  <data key="d5">4.0</data>
+  <data key="d6">4.0</data>
+  <data key="d7">4.0</data>
+  <data key="d8">ENT-190</data>
 </node>
 <node id="BT-311.kriechstrecke_hv_nv_mm">
   <data key="d0">Merkmal</data>
+  <data key="d5">10.0</data>
+  <data key="d6">10.0</data>
+  <data key="d7">10.0</data>
+  <data key="d8">ENT-191</data>
+</node>
+<node id="BT-311.luftstrecke_hv_nv_mm">
+  <data key="d0">Merkmal</data>
+  <data key="d5">8.0</data>
+  <data key="d6">8.0</data>
+  <data key="d7">8.0</data>
+  <data key="d8">ENT-195</data>
+</node>
+<node id="BT-311.abstand_nv_mm">
+  <data key="d0">Merkmal</data>
+  <data key="d5">0.15</data>
+  <data key="d6">0.15</data>
+  <data key="d7">0.15</data>
+  <data key="d8">ENT-196</data>
+</node>
+<node id="BT-311.schuetzkanaele">
+  <data key="d0">Merkmal</data>
+  <data key="d5">3.0</data>
+  <data key="d6">3.0</data>
+  <data key="d7">3.0</data>
+  <data key="d8">ENT-197</data>
 </node>
 <node id="BT-320.anzahl">
   <data key="d0">Merkmal</data>
@@ -1050,6 +1087,9 @@
   <data key="d0">Merkmal</data>
 </node>
 <node id="BT-325.verzoegerung_ms">
+  <data key="d0">Merkmal</data>
+</node>
+<node id="BT-325.bauform">
   <data key="d0">Merkmal</data>
 </node>
 <node id="BT-330.anzahl">
@@ -1514,6 +1554,13 @@
 </node>
 <node id="BT-722.breite_mm">
   <data key="d0">Merkmal</data>
+</node>
+<node id="BT-722.lichte_hoehe_zugabe_mm">
+  <data key="d0">Merkmal</data>
+  <data key="d5">3.0</data>
+  <data key="d6">3.0</data>
+  <data key="d7">3.0</data>
+  <data key="d8">ENT-194</data>
 </node>
 <node id="BT-730.anzahl">
   <data key="d0">Merkmal</data>
@@ -4693,7 +4740,7 @@
 <node id="ENT-173">
   <data key="d0">Entscheidung</data>
   <data key="d1">Ausgleichsschalter N-MOSFET Logikpegel</data>
-  <data key="d12">vorgeschlagen</data>
+  <data key="d12">ersetzt (durch ENT-192)</data>
   <data key="d17">2026-11-24</data>
   <data key="d18">alle</data>
   <data key="d3">pm/entscheidungen/ENT-173.md</data>
@@ -4708,7 +4755,7 @@
 </node>
 <node id="ENT-175">
   <data key="d0">Entscheidung</data>
-  <data key="d1">Sekundärschutz Schwelle LFP 3,75 V</data>
+  <data key="d1">Sekundärschutz Schwelle je Zelle LFP 3,75 V</data>
   <data key="d12">vorgeschlagen</data>
   <data key="d17">2026-11-24</data>
   <data key="d18">["LFP"]</data>
@@ -4716,7 +4763,7 @@
 </node>
 <node id="ENT-176">
   <data key="d0">Entscheidung</data>
-  <data key="d1">Sekundärschutz Schwelle NMC 4,25 V</data>
+  <data key="d1">Sekundärschutz Schwelle je Zelle NMC 4,25 V</data>
   <data key="d12">vorgeschlagen</data>
   <data key="d17">2026-11-24</data>
   <data key="d18">["NMC"]</data>
@@ -4813,7 +4860,7 @@
 <node id="ENT-188">
   <data key="d0">Entscheidung</data>
   <data key="d1">BMS-Platine BT-311 Länge 160 mm</data>
-  <data key="d12">vorgeschlagen</data>
+  <data key="d12">entschieden (Opus, delegiert durch Autor 2026-11-23)</data>
   <data key="d17">2026-11-24</data>
   <data key="d18">alle</data>
   <data key="d3">pm/entscheidungen/ENT-188.md</data>
@@ -4821,7 +4868,7 @@
 <node id="ENT-189">
   <data key="d0">Entscheidung</data>
   <data key="d1">BMS-Platine BT-311 Breite 100 mm</data>
-  <data key="d12">vorgeschlagen</data>
+  <data key="d12">entschieden (Opus, delegiert durch Autor 2026-11-23)</data>
   <data key="d17">2026-11-24</data>
   <data key="d18">alle</data>
   <data key="d3">pm/entscheidungen/ENT-189.md</data>
@@ -4829,7 +4876,7 @@
 <node id="ENT-190">
   <data key="d0">Entscheidung</data>
   <data key="d1">BMS-Platine BT-311 vier Lagen</data>
-  <data key="d12">vorgeschlagen</data>
+  <data key="d12">entschieden (Opus, delegiert durch Autor 2026-11-23)</data>
   <data key="d17">2026-11-24</data>
   <data key="d18">alle</data>
   <data key="d3">pm/entscheidungen/ENT-190.md</data>
@@ -4837,10 +4884,58 @@
 <node id="ENT-191">
   <data key="d0">Entscheidung</data>
   <data key="d1">BMS-Platine Kriechstrecke HV/NV 10 mm (Luftstrecke 8 mm, Höhe 3000 m)</data>
-  <data key="d12">vorgeschlagen</data>
+  <data key="d12">entschieden (Opus, delegiert durch Autor 2026-11-23)</data>
   <data key="d17">2026-11-24</data>
   <data key="d18">alle</data>
   <data key="d3">pm/entscheidungen/ENT-191.md</data>
+</node>
+<node id="ENT-192">
+  <data key="d0">Entscheidung</data>
+  <data key="d1">Ausgleichsschalter Doppel-N-FET SOT-363, zwei Schalter in Reihe</data>
+  <data key="d12">vorgeschlagen (Opus, delegiert durch Autor 2026-11-23)</data>
+  <data key="d17">2026-11-24</data>
+  <data key="d18">alle</data>
+  <data key="d3">pm/entscheidungen/ENT-192.md</data>
+</node>
+<node id="ENT-193">
+  <data key="d0">Entscheidung</data>
+  <data key="d1">Sekundärschutz 3 x 6-Zellen-Überspannungsschutz TSSOP-16, Messung je Zelle</data>
+  <data key="d12">vorgeschlagen (Opus, delegiert durch Autor 2026-11-23)</data>
+  <data key="d17">2026-11-24</data>
+  <data key="d18">alle</data>
+  <data key="d3">pm/entscheidungen/ENT-193.md</data>
+</node>
+<node id="ENT-194">
+  <data key="d0">Entscheidung</data>
+  <data key="d1">Servicedeckel LFP: lichte Höhe Kopf M8 + 3 mm</data>
+  <data key="d12">entschieden (Opus, delegiert durch Autor 2026-11-23)</data>
+  <data key="d17">2026-11-24</data>
+  <data key="d18">alle</data>
+  <data key="d3">pm/entscheidungen/ENT-194.md</data>
+</node>
+<node id="ENT-195">
+  <data key="d0">Entscheidung</data>
+  <data key="d1">BMS-Platine Luftstrecke HV/NV 8 mm (3000 m)</data>
+  <data key="d12">entschieden (Opus, delegiert durch Autor 2026-11-23)</data>
+  <data key="d17">2026-11-24</data>
+  <data key="d18">alle</data>
+  <data key="d3">pm/entscheidungen/ENT-195.md</data>
+</node>
+<node id="ENT-196">
+  <data key="d0">Entscheidung</data>
+  <data key="d1">BMS-Platine Abstand NV-Bereich 0,15 mm</data>
+  <data key="d12">entschieden (Opus, delegiert durch Autor 2026-11-23)</data>
+  <data key="d17">2026-11-24</data>
+  <data key="d18">alle</data>
+  <data key="d3">pm/entscheidungen/ENT-196.md</data>
+</node>
+<node id="ENT-197">
+  <data key="d0">Entscheidung</data>
+  <data key="d1">BMS-Platine drei Schützkanäle (Plus, Minus, Vorladung)</data>
+  <data key="d12">entschieden (Opus, delegiert durch Autor 2026-11-23)</data>
+  <data key="d17">2026-11-24</data>
+  <data key="d18">alle</data>
+  <data key="d3">pm/entscheidungen/ENT-197.md</data>
 </node>
 <node id="B-BAT-001">
   <data key="d0">Befund</data>
@@ -5169,6 +5264,24 @@
 <node id="B-BAT-055">
   <data key="d0">Befund</data>
   <data key="d1">FMEDA E3d: Sekundärschutz misst die Summe statt jeder Zelle, SG-02 verfehlt ASIL C (2026-11-24, gefunden von Sonnet in E3d, Deutung Opus)</data>
+  <data key="d17">2026-11-24</data>
+  <data key="d3">BEFUNDE.md</data>
+</node>
+<node id="B-BAT-056">
+  <data key="d0">Befund</data>
+  <data key="d1">KR2: Konzept K4 verletzt die Festforderung, von PI gefunden (2026-11-24)</data>
+  <data key="d17">2026-11-24</data>
+  <data key="d3">BEFUNDE.md</data>
+</node>
+<node id="B-BAT-057">
+  <data key="d0">Befund</data>
+  <data key="d1">pack_e2d.py war kurz leer (Skriptfehler Sonnet E3c), rekonstruiert (2026-11-24)</data>
+  <data key="d17">2026-11-24</data>
+  <data key="d3">BEFUNDE.md</data>
+</node>
+<node id="B-BAT-058">
+  <data key="d0">Befund</data>
+  <data key="d1">Massenziel REQ-P07 war unerreichbar, neu 600/450 kg (2026-11-24)</data>
   <data key="d17">2026-11-24</data>
   <data key="d3">BEFUNDE.md</data>
 </node>
@@ -5526,6 +5639,11 @@
   <data key="d0">Quelle</data>
   <data key="d12">11 Belege bestaetigt, 0 Fehler</data>
   <data key="d3">forschung/ergebnis/W50.md</data>
+</node>
+<node id="W51">
+  <data key="d0">Quelle</data>
+  <data key="d12">9 Belege bestaetigt, 0 Fehler</data>
+  <data key="d3">forschung/ergebnis/W51.md</data>
 </node>
 <node id="UN-Regelung Nr. 100 (Rev. 3)">
   <data key="d0">Norm</data>
@@ -7084,6 +7202,11 @@
   <data key="d15">sim/elektrik/e3_platine/ergebnis_routing.json</data>
   <data key="d3">sim/elektrik/e3_platine/ergebnis_routing.json</data>
 </node>
+<node id="sim/elektrik/e3_platine/ergebnis_schaltplan.json">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/elektrik/e3_platine/ergebnis_schaltplan.json</data>
+  <data key="d3">sim/elektrik/e3_platine/ergebnis_schaltplan.json</data>
+</node>
 <node id="sim/elektrik/e3_platine/ergebnis_vorladung.json">
   <data key="d0">Ergebnis</data>
   <data key="d15">sim/elektrik/e3_platine/ergebnis_vorladung.json</data>
@@ -7169,6 +7292,76 @@
   <data key="d15">sim/elektrik/e3_platine/schaltbild_cmu.png</data>
   <data key="d3">sim/elektrik/e3_platine/schaltbild_cmu.png</data>
 </node>
+<node id="sim/elektrik/e3_platine/schaltplan_LFP_afe.png">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/elektrik/e3_platine/schaltplan_LFP_afe.png</data>
+  <data key="d3">sim/elektrik/e3_platine/schaltplan_LFP_afe.png</data>
+</node>
+<node id="sim/elektrik/e3_platine/schaltplan_LFP_daisy.png">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/elektrik/e3_platine/schaltplan_LFP_daisy.png</data>
+  <data key="d3">sim/elektrik/e3_platine/schaltplan_LFP_daisy.png</data>
+</node>
+<node id="sim/elektrik/e3_platine/schaltplan_LFP_deckblatt.png">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/elektrik/e3_platine/schaltplan_LFP_deckblatt.png</data>
+  <data key="d3">sim/elektrik/e3_platine/schaltplan_LFP_deckblatt.png</data>
+</node>
+<node id="sim/elektrik/e3_platine/schaltplan_LFP_kanaele.png">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/elektrik/e3_platine/schaltplan_LFP_kanaele.png</data>
+  <data key="d3">sim/elektrik/e3_platine/schaltplan_LFP_kanaele.png</data>
+</node>
+<node id="sim/elektrik/e3_platine/schaltplan_LFP_kanal.png">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/elektrik/e3_platine/schaltplan_LFP_kanal.png</data>
+  <data key="d3">sim/elektrik/e3_platine/schaltplan_LFP_kanal.png</data>
+</node>
+<node id="sim/elektrik/e3_platine/schaltplan_LFP_ntc_stecker.png">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/elektrik/e3_platine/schaltplan_LFP_ntc_stecker.png</data>
+  <data key="d3">sim/elektrik/e3_platine/schaltplan_LFP_ntc_stecker.png</data>
+</node>
+<node id="sim/elektrik/e3_platine/schaltplan_LFP_sekundaerschutz.png">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/elektrik/e3_platine/schaltplan_LFP_sekundaerschutz.png</data>
+  <data key="d3">sim/elektrik/e3_platine/schaltplan_LFP_sekundaerschutz.png</data>
+</node>
+<node id="sim/elektrik/e3_platine/schaltplan_NMC_afe.png">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/elektrik/e3_platine/schaltplan_NMC_afe.png</data>
+  <data key="d3">sim/elektrik/e3_platine/schaltplan_NMC_afe.png</data>
+</node>
+<node id="sim/elektrik/e3_platine/schaltplan_NMC_daisy.png">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/elektrik/e3_platine/schaltplan_NMC_daisy.png</data>
+  <data key="d3">sim/elektrik/e3_platine/schaltplan_NMC_daisy.png</data>
+</node>
+<node id="sim/elektrik/e3_platine/schaltplan_NMC_deckblatt.png">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/elektrik/e3_platine/schaltplan_NMC_deckblatt.png</data>
+  <data key="d3">sim/elektrik/e3_platine/schaltplan_NMC_deckblatt.png</data>
+</node>
+<node id="sim/elektrik/e3_platine/schaltplan_NMC_kanaele.png">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/elektrik/e3_platine/schaltplan_NMC_kanaele.png</data>
+  <data key="d3">sim/elektrik/e3_platine/schaltplan_NMC_kanaele.png</data>
+</node>
+<node id="sim/elektrik/e3_platine/schaltplan_NMC_kanal.png">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/elektrik/e3_platine/schaltplan_NMC_kanal.png</data>
+  <data key="d3">sim/elektrik/e3_platine/schaltplan_NMC_kanal.png</data>
+</node>
+<node id="sim/elektrik/e3_platine/schaltplan_NMC_ntc_stecker.png">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/elektrik/e3_platine/schaltplan_NMC_ntc_stecker.png</data>
+  <data key="d3">sim/elektrik/e3_platine/schaltplan_NMC_ntc_stecker.png</data>
+</node>
+<node id="sim/elektrik/e3_platine/schaltplan_NMC_sekundaerschutz.png">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/elektrik/e3_platine/schaltplan_NMC_sekundaerschutz.png</data>
+  <data key="d3">sim/elektrik/e3_platine/schaltplan_NMC_sekundaerschutz.png</data>
+</node>
 <node id="sim/elektrik/e3_platine/spice_ausgleich_vorladung.png">
   <data key="d0">Ergebnis</data>
   <data key="d15">sim/elektrik/e3_platine/spice_ausgleich_vorladung.png</data>
@@ -7205,6 +7398,101 @@
   <data key="d0">Ergebnis</data>
   <data key="d15">sim/elektrik/e3c_bms_platine/ergebnis_kriechstrecke.json</data>
   <data key="d3">sim/elektrik/e3c_bms_platine/ergebnis_kriechstrecke.json</data>
+</node>
+<node id="sim/elektrik/e3c_bms_platine/ergebnis_pack_LFP_teilA.json">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/elektrik/e3c_bms_platine/ergebnis_pack_LFP_teilA.json</data>
+  <data key="d3">sim/elektrik/e3c_bms_platine/ergebnis_pack_LFP_teilA.json</data>
+</node>
+<node id="sim/elektrik/e3c_bms_platine/ergebnis_platine.json">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/elektrik/e3c_bms_platine/ergebnis_platine.json</data>
+  <data key="d3">sim/elektrik/e3c_bms_platine/ergebnis_platine.json</data>
+</node>
+<node id="sim/elektrik/e3c_bms_platine/ergebnis_routing.json">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/elektrik/e3c_bms_platine/ergebnis_routing.json</data>
+  <data key="d3">sim/elektrik/e3c_bms_platine/ergebnis_routing.json</data>
+</node>
+<node id="sim/elektrik/e3c_bms_platine/ergebnis_schaltplan.json">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/elektrik/e3c_bms_platine/ergebnis_schaltplan.json</data>
+  <data key="d3">sim/elektrik/e3c_bms_platine/ergebnis_schaltplan.json</data>
+</node>
+<node id="sim/elektrik/e3c_bms_platine/ERGEBNIS.md">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/elektrik/e3c_bms_platine/ERGEBNIS.md</data>
+  <data key="d3">sim/elektrik/e3c_bms_platine/ERGEBNIS.md</data>
+</node>
+<node id="sim/elektrik/e3c_bms_platine/platine_bms.png">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/elektrik/e3c_bms_platine/platine_bms.png</data>
+  <data key="d3">sim/elektrik/e3c_bms_platine/platine_bms.png</data>
+</node>
+<node id="sim/elektrik/e3c_bms_platine/platine_bms_3d_bottom.png">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/elektrik/e3c_bms_platine/platine_bms_3d_bottom.png</data>
+  <data key="d3">sim/elektrik/e3c_bms_platine/platine_bms_3d_bottom.png</data>
+</node>
+<node id="sim/elektrik/e3c_bms_platine/platine_bms_3d_iso.png">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/elektrik/e3c_bms_platine/platine_bms_3d_iso.png</data>
+  <data key="d3">sim/elektrik/e3c_bms_platine/platine_bms_3d_iso.png</data>
+</node>
+<node id="sim/elektrik/e3c_bms_platine/platine_bms_3d_nah.png">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/elektrik/e3c_bms_platine/platine_bms_3d_nah.png</data>
+  <data key="d3">sim/elektrik/e3c_bms_platine/platine_bms_3d_nah.png</data>
+</node>
+<node id="sim/elektrik/e3c_bms_platine/platine_bms_3d_top.png">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/elektrik/e3c_bms_platine/platine_bms_3d_top.png</data>
+  <data key="d3">sim/elektrik/e3c_bms_platine/platine_bms_3d_top.png</data>
+</node>
+<node id="sim/elektrik/e3c_bms_platine/platine_bms_einbau.png">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/elektrik/e3c_bms_platine/platine_bms_einbau.png</data>
+  <data key="d3">sim/elektrik/e3c_bms_platine/platine_bms_einbau.png</data>
+</node>
+<node id="sim/elektrik/e3c_bms_platine/platine_bms_explosion.png">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/elektrik/e3c_bms_platine/platine_bms_explosion.png</data>
+  <data key="d3">sim/elektrik/e3c_bms_platine/platine_bms_explosion.png</data>
+</node>
+<node id="sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-1.png">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-1.png</data>
+  <data key="d3">sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-1.png</data>
+</node>
+<node id="sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-2.png">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-2.png</data>
+  <data key="d3">sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-2.png</data>
+</node>
+<node id="sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-3.png">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-3.png</data>
+  <data key="d3">sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-3.png</data>
+</node>
+<node id="sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-4.png">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-4.png</data>
+  <data key="d3">sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-4.png</data>
+</node>
+<node id="sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-5.png">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-5.png</data>
+  <data key="d3">sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-5.png</data>
+</node>
+<node id="sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-6.png">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-6.png</data>
+  <data key="d3">sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-6.png</data>
+</node>
+<node id="sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-7.png">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-7.png</data>
+  <data key="d3">sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-7.png</data>
 </node>
 <node id="sim/elektrik/e3d_fmeda">
   <data key="d0">Rechnung</data>
@@ -13968,6 +14256,32 @@
   <data key="d15">sim/kuehlung/k2_kuehlplatte/ergebnis_k2b.json</data>
   <data key="d3">sim/kuehlung/k2_kuehlplatte/ergebnis_k2b.json</data>
 </node>
+<node id="sim/mechanik/l1_leichtbau">
+  <data key="d0">Rechnung</data>
+  <data key="d1">l1_leichtbau</data>
+  <data key="d3">sim/mechanik/l1_leichtbau</data>
+  <data key="d22">0</data>
+</node>
+<node id="sim/mechanik/l1_leichtbau/ergebnis.json">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/mechanik/l1_leichtbau/ergebnis.json</data>
+  <data key="d3">sim/mechanik/l1_leichtbau/ergebnis.json</data>
+</node>
+<node id="sim/mechanik/l1_leichtbau/ERGEBNIS.md">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/mechanik/l1_leichtbau/ERGEBNIS.md</data>
+  <data key="d3">sim/mechanik/l1_leichtbau/ERGEBNIS.md</data>
+</node>
+<node id="sim/mechanik/l1_leichtbau/wasserfall_LFP.png">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/mechanik/l1_leichtbau/wasserfall_LFP.png</data>
+  <data key="d3">sim/mechanik/l1_leichtbau/wasserfall_LFP.png</data>
+</node>
+<node id="sim/mechanik/l1_leichtbau/wasserfall_NMC.png">
+  <data key="d0">Ergebnis</data>
+  <data key="d15">sim/mechanik/l1_leichtbau/wasserfall_NMC.png</data>
+  <data key="d3">sim/mechanik/l1_leichtbau/wasserfall_NMC.png</data>
+</node>
 <node id="sim/mechanik/m0_gehaeuse">
   <data key="d0">Rechnung</data>
   <data key="d1">m0_gehaeuse</data>
@@ -16407,6 +16721,12 @@
   <data key="d3">praesentation/bausteine/E3b.md</data>
   <data key="d4">bausteine</data>
 </node>
+<node id="praesentation/bausteine/E3c.md">
+  <data key="d0">Dokument</data>
+  <data key="d1">E3c</data>
+  <data key="d3">praesentation/bausteine/E3c.md</data>
+  <data key="d4">bausteine</data>
+</node>
 <node id="praesentation/bausteine/E3d.md">
   <data key="d0">Dokument</data>
   <data key="d1">E3d</data>
@@ -16507,6 +16827,18 @@
   <data key="d0">Dokument</data>
   <data key="d1">KR1</data>
   <data key="d3">praesentation/bausteine/KR1.md</data>
+  <data key="d4">bausteine</data>
+</node>
+<node id="praesentation/bausteine/KR2.md">
+  <data key="d0">Dokument</data>
+  <data key="d1">KR2</data>
+  <data key="d3">praesentation/bausteine/KR2.md</data>
+  <data key="d4">bausteine</data>
+</node>
+<node id="praesentation/bausteine/L1.md">
+  <data key="d0">Dokument</data>
+  <data key="d1">L1</data>
+  <data key="d3">praesentation/bausteine/L1.md</data>
   <data key="d4">bausteine</data>
 </node>
 <node id="praesentation/bausteine/M0.md">
@@ -16985,6 +17317,18 @@
   <data key="d23">hat_merkmal</data>
   <data key="d24">struktur.json merkmale</data>
 </edge>
+<edge source="BT-311" target="BT-311.luftstrecke_hv_nv_mm" id="hat_merkmal">
+  <data key="d23">hat_merkmal</data>
+  <data key="d24">struktur.json merkmale</data>
+</edge>
+<edge source="BT-311" target="BT-311.abstand_nv_mm" id="hat_merkmal">
+  <data key="d23">hat_merkmal</data>
+  <data key="d24">struktur.json merkmale</data>
+</edge>
+<edge source="BT-311" target="BT-311.schuetzkanaele" id="hat_merkmal">
+  <data key="d23">hat_merkmal</data>
+  <data key="d24">struktur.json merkmale</data>
+</edge>
 <edge source="BT-320" target="BT-300" id="teil_von">
   <data key="d23">teil_von</data>
   <data key="d24">struktur.json eltern</data>
@@ -17114,6 +17458,10 @@
   <data key="d24">struktur.json merkmale</data>
 </edge>
 <edge source="BT-325" target="BT-325.verzoegerung_ms" id="hat_merkmal">
+  <data key="d23">hat_merkmal</data>
+  <data key="d24">struktur.json merkmale</data>
+</edge>
+<edge source="BT-325" target="BT-325.bauform" id="hat_merkmal">
   <data key="d23">hat_merkmal</data>
   <data key="d24">struktur.json merkmale</data>
 </edge>
@@ -17734,6 +18082,10 @@
   <data key="d24">struktur.json merkmale</data>
 </edge>
 <edge source="BT-722" target="BT-722.breite_mm" id="hat_merkmal">
+  <data key="d23">hat_merkmal</data>
+  <data key="d24">struktur.json merkmale</data>
+</edge>
+<edge source="BT-722" target="BT-722.lichte_hoehe_zugabe_mm" id="hat_merkmal">
   <data key="d23">hat_merkmal</data>
   <data key="d24">struktur.json merkmale</data>
 </edge>
@@ -18477,6 +18829,30 @@
   <data key="d23">eingang_cad</data>
   <data key="d24">Schema Nachtrag 1: CAD liest alle Merkmale</data>
 </edge>
+<edge source="BT-311.luftstrecke_hv_nv_mm" target="cad:LFP" id="eingang_cad">
+  <data key="d23">eingang_cad</data>
+  <data key="d24">Schema Nachtrag 1: CAD liest alle Merkmale</data>
+</edge>
+<edge source="BT-311.luftstrecke_hv_nv_mm" target="cad:NMC" id="eingang_cad">
+  <data key="d23">eingang_cad</data>
+  <data key="d24">Schema Nachtrag 1: CAD liest alle Merkmale</data>
+</edge>
+<edge source="BT-311.abstand_nv_mm" target="cad:LFP" id="eingang_cad">
+  <data key="d23">eingang_cad</data>
+  <data key="d24">Schema Nachtrag 1: CAD liest alle Merkmale</data>
+</edge>
+<edge source="BT-311.abstand_nv_mm" target="cad:NMC" id="eingang_cad">
+  <data key="d23">eingang_cad</data>
+  <data key="d24">Schema Nachtrag 1: CAD liest alle Merkmale</data>
+</edge>
+<edge source="BT-311.schuetzkanaele" target="cad:LFP" id="eingang_cad">
+  <data key="d23">eingang_cad</data>
+  <data key="d24">Schema Nachtrag 1: CAD liest alle Merkmale</data>
+</edge>
+<edge source="BT-311.schuetzkanaele" target="cad:NMC" id="eingang_cad">
+  <data key="d23">eingang_cad</data>
+  <data key="d24">Schema Nachtrag 1: CAD liest alle Merkmale</data>
+</edge>
 <edge source="BT-320.anzahl" target="cad:LFP" id="eingang_cad">
   <data key="d23">eingang_cad</data>
   <data key="d24">Schema Nachtrag 1: CAD liest alle Merkmale</data>
@@ -18690,6 +19066,14 @@
   <data key="d24">Schema Nachtrag 1: CAD liest alle Merkmale</data>
 </edge>
 <edge source="BT-325.verzoegerung_ms" target="cad:NMC" id="eingang_cad">
+  <data key="d23">eingang_cad</data>
+  <data key="d24">Schema Nachtrag 1: CAD liest alle Merkmale</data>
+</edge>
+<edge source="BT-325.bauform" target="cad:LFP" id="eingang_cad">
+  <data key="d23">eingang_cad</data>
+  <data key="d24">Schema Nachtrag 1: CAD liest alle Merkmale</data>
+</edge>
+<edge source="BT-325.bauform" target="cad:NMC" id="eingang_cad">
   <data key="d23">eingang_cad</data>
   <data key="d24">Schema Nachtrag 1: CAD liest alle Merkmale</data>
 </edge>
@@ -19597,6 +19981,14 @@
   <data key="d23">eingang_cad</data>
   <data key="d24">Schema Nachtrag 1: CAD liest alle Merkmale</data>
 </edge>
+<edge source="BT-722.lichte_hoehe_zugabe_mm" target="cad:LFP" id="eingang_cad">
+  <data key="d23">eingang_cad</data>
+  <data key="d24">Schema Nachtrag 1: CAD liest alle Merkmale</data>
+</edge>
+<edge source="BT-722.lichte_hoehe_zugabe_mm" target="cad:NMC" id="eingang_cad">
+  <data key="d23">eingang_cad</data>
+  <data key="d24">Schema Nachtrag 1: CAD liest alle Merkmale</data>
+</edge>
 <edge source="BT-730.anzahl" target="cad:LFP" id="eingang_cad">
   <data key="d23">eingang_cad</data>
   <data key="d24">Schema Nachtrag 1: CAD liest alle Merkmale</data>
@@ -20082,6 +20474,10 @@
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
+<edge source="docs/03_anforderungsverfolgung.md" target="B-BAT-058" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
 <edge source="docs/03_anforderungsverfolgung.md" target="REQ-D01" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
@@ -20348,7 +20744,15 @@
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
+<edge source="docs/08_ki_einsatz_protokoll.md" target="BT-311" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
 <edge source="docs/08_ki_einsatz_protokoll.md" target="BT-610" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="docs/08_ki_einsatz_protokoll.md" target="BT-722" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
@@ -20444,6 +20848,14 @@
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
+<edge source="docs/08_ki_einsatz_protokoll.md" target="ENT-188" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="docs/08_ki_einsatz_protokoll.md" target="ENT-194" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
 <edge source="docs/08_ki_einsatz_protokoll.md" target="P01" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
@@ -20501,6 +20913,10 @@
   <data key="d24">Textvorkommen</data>
 </edge>
 <edge source="docs/08_ki_einsatz_protokoll.md" target="REQ-P03" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="docs/08_ki_einsatz_protokoll.md" target="REQ-P07" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
@@ -20660,6 +21076,10 @@
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
+<edge source="docs/08_ki_einsatz_protokoll.md" target="W51" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
 <edge source="docs/08_ki_einsatz_protokoll.md" target="docs/03_anforderungsverfolgung.md" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen Pfad</data>
@@ -20708,6 +21128,10 @@
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen Pfad</data>
 </edge>
+<edge source="docs/08_ki_einsatz_protokoll.md" target="sim/elektrik/e3c_bms_platine/ERGEBNIS.md" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
 <edge source="docs/08_ki_einsatz_protokoll.md" target="sim/elektrik/e3d_fmeda/ERGEBNIS.md" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen Pfad</data>
@@ -20737,6 +21161,10 @@
   <data key="d24">Textvorkommen Pfad</data>
 </edge>
 <edge source="docs/08_ki_einsatz_protokoll.md" target="sim/kuehlung/k3_gesamt/ERGEBNIS.md" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="docs/08_ki_einsatz_protokoll.md" target="sim/mechanik/l1_leichtbau/ERGEBNIS.md" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen Pfad</data>
 </edge>
@@ -25418,11 +25846,23 @@
   <data key="d23">belegt_durch</data>
   <data key="d24">ENT belege</data>
 </edge>
+<edge source="ENT-175" target="B-BAT-055" id="belegt_durch">
+  <data key="d23">belegt_durch</data>
+  <data key="d24">ENT belege</data>
+</edge>
+<edge source="ENT-175" target="B-BAT-055" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
 <edge source="ENT-175" target="LFP" id="gilt_fuer">
   <data key="d23">gilt_fuer</data>
   <data key="d24">ENT variante</data>
 </edge>
 <edge source="ENT-175" target="BT-325" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="ENT-175" target="ENT-193" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
@@ -25439,11 +25879,23 @@
   <data key="d23">belegt_durch</data>
   <data key="d24">ENT belege</data>
 </edge>
+<edge source="ENT-176" target="B-BAT-055" id="belegt_durch">
+  <data key="d23">belegt_durch</data>
+  <data key="d24">ENT belege</data>
+</edge>
+<edge source="ENT-176" target="B-BAT-055" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
 <edge source="ENT-176" target="NMC" id="gilt_fuer">
   <data key="d23">gilt_fuer</data>
   <data key="d24">ENT variante</data>
 </edge>
 <edge source="ENT-176" target="BT-325" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="ENT-176" target="ENT-193" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
@@ -25765,6 +26217,108 @@
 <edge source="ENT-191" target="BT-311" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="ENT-192" target="BT-323.schalter" id="legt_fest">
+  <data key="d23">legt_fest</data>
+  <data key="d24">ENT bauteile+merkmal</data>
+  <data key="d27">"Doppel-N-FET SOT-363, zwei Schalter in Reihe, getrennte Gates, R_DS,on je FET &lt;= 0,5 Ohm, AEC-Q101"</data>
+</edge>
+<edge source="ENT-192" target="REQ-P15" id="erfuellt_beitrag">
+  <data key="d23">erfuellt_beitrag</data>
+  <data key="d24">ENT anforderungen</data>
+</edge>
+<edge source="ENT-192" target="REQ-P18" id="erfuellt_beitrag">
+  <data key="d23">erfuellt_beitrag</data>
+  <data key="d24">ENT anforderungen</data>
+</edge>
+<edge source="ENT-192" target="B-BAT-055" id="belegt_durch">
+  <data key="d23">belegt_durch</data>
+  <data key="d24">ENT belege</data>
+</edge>
+<edge source="ENT-192" target="sim/elektrik/e3d_fmeda/ERGEBNIS.md" id="belegt_durch">
+  <data key="d23">belegt_durch</data>
+  <data key="d24">ENT belege</data>
+</edge>
+<edge source="ENT-192" target="ENT-173" id="ersetzt">
+  <data key="d23">ersetzt</data>
+  <data key="d24">ENT ersetzt</data>
+</edge>
+<edge source="ENT-192" target="ENT-173" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="ENT-193" target="BT-325.bauform" id="legt_fest">
+  <data key="d23">legt_fest</data>
+  <data key="d24">ENT bauteile+merkmal</data>
+  <data key="d27">"3 x generischer 6-Zellen-Überspannungsschutz, TSSOP-16, je 7 Messeingänge, Ausgänge wired-OR auf ABSCHALT"</data>
+</edge>
+<edge source="ENT-193" target="REQ-P18" id="erfuellt_beitrag">
+  <data key="d23">erfuellt_beitrag</data>
+  <data key="d24">ENT anforderungen</data>
+</edge>
+<edge source="ENT-193" target="B-BAT-055" id="belegt_durch">
+  <data key="d23">belegt_durch</data>
+  <data key="d24">ENT belege</data>
+</edge>
+<edge source="ENT-193" target="sim/elektrik/e3d_fmeda/ERGEBNIS.md" id="belegt_durch">
+  <data key="d23">belegt_durch</data>
+  <data key="d24">ENT belege</data>
+</edge>
+<edge source="ENT-193" target="ENT-175" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="ENT-194" target="BT-722.lichte_hoehe_zugabe_mm" id="legt_fest">
+  <data key="d23">legt_fest</data>
+  <data key="d24">ENT bauteile+merkmal</data>
+  <data key="d27">3</data>
+</edge>
+<edge source="ENT-194" target="REQ-P13" id="erfuellt_beitrag">
+  <data key="d23">erfuellt_beitrag</data>
+  <data key="d24">ENT anforderungen</data>
+</edge>
+<edge source="ENT-194" target="sim/elektrik/e3c_bms_platine/ERGEBNIS.md" id="belegt_durch">
+  <data key="d23">belegt_durch</data>
+  <data key="d24">ENT belege</data>
+</edge>
+<edge source="ENT-195" target="BT-311.luftstrecke_hv_nv_mm" id="legt_fest">
+  <data key="d23">legt_fest</data>
+  <data key="d24">ENT bauteile+merkmal</data>
+  <data key="d27">8</data>
+</edge>
+<edge source="ENT-195" target="REQ-P19" id="erfuellt_beitrag">
+  <data key="d23">erfuellt_beitrag</data>
+  <data key="d24">ENT anforderungen</data>
+</edge>
+<edge source="ENT-195" target="sim/elektrik/e3c_bms_platine/ERGEBNIS.md" id="belegt_durch">
+  <data key="d23">belegt_durch</data>
+  <data key="d24">ENT belege</data>
+</edge>
+<edge source="ENT-196" target="BT-311.abstand_nv_mm" id="legt_fest">
+  <data key="d23">legt_fest</data>
+  <data key="d24">ENT bauteile+merkmal</data>
+  <data key="d27">0.15</data>
+</edge>
+<edge source="ENT-196" target="REQ-P19" id="erfuellt_beitrag">
+  <data key="d23">erfuellt_beitrag</data>
+  <data key="d24">ENT anforderungen</data>
+</edge>
+<edge source="ENT-196" target="sim/elektrik/e3c_bms_platine/ERGEBNIS.md" id="belegt_durch">
+  <data key="d23">belegt_durch</data>
+  <data key="d24">ENT belege</data>
+</edge>
+<edge source="ENT-197" target="BT-311.schuetzkanaele" id="legt_fest">
+  <data key="d23">legt_fest</data>
+  <data key="d24">ENT bauteile+merkmal</data>
+  <data key="d27">3</data>
+</edge>
+<edge source="ENT-197" target="REQ-P18" id="erfuellt_beitrag">
+  <data key="d23">erfuellt_beitrag</data>
+  <data key="d24">ENT anforderungen</data>
+</edge>
+<edge source="ENT-197" target="sim/elektrik/e3c_bms_platine/ERGEBNIS.md" id="belegt_durch">
+  <data key="d23">belegt_durch</data>
+  <data key="d24">ENT belege</data>
 </edge>
 <edge source="B-BAT-001" target="W01" id="erwaehnt">
   <data key="d23">erwaehnt</data>
@@ -26547,6 +27101,22 @@
   <data key="d24">Textvorkommen</data>
 </edge>
 <edge source="B-BAT-054" target="ENT-185" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="B-BAT-055" target="BT-311" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="B-BAT-055" target="BT-722" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="B-BAT-058" target="REQ-P07" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="B-BAT-058" target="W51" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
@@ -27518,19 +28088,19 @@
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
-<edge source="sim/elektrik/e2_elektronik" target="REQ-P13" id="gehoert_zu">
-  <data key="d23">gehoert_zu</data>
-  <data key="d24">ERWARTUNG ## Anforderung</data>
-</edge>
-<edge source="sim/elektrik/e2_elektronik" target="REQ-P13" id="erwaehnt">
-  <data key="d23">erwaehnt</data>
-  <data key="d24">Textvorkommen</data>
-</edge>
 <edge source="sim/elektrik/e2_elektronik" target="REQ-P11" id="gehoert_zu">
   <data key="d23">gehoert_zu</data>
   <data key="d24">ERWARTUNG ## Anforderung</data>
 </edge>
 <edge source="sim/elektrik/e2_elektronik" target="REQ-P11" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="sim/elektrik/e2_elektronik" target="REQ-P13" id="gehoert_zu">
+  <data key="d23">gehoert_zu</data>
+  <data key="d24">ERWARTUNG ## Anforderung</data>
+</edge>
+<edge source="sim/elektrik/e2_elektronik" target="REQ-P13" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
@@ -27862,6 +28432,14 @@
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
+<edge source="sim/elektrik/e3_platine" target="REQ-P20" id="gehoert_zu">
+  <data key="d23">gehoert_zu</data>
+  <data key="d24">ERWARTUNG ## Anforderung</data>
+</edge>
+<edge source="sim/elektrik/e3_platine" target="REQ-P20" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
 <edge source="sim/elektrik/e3_platine" target="REQ-P19" id="gehoert_zu">
   <data key="d23">gehoert_zu</data>
   <data key="d24">ERWARTUNG ## Anforderung</data>
@@ -27870,19 +28448,11 @@
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
-<edge source="sim/elektrik/e3_platine" target="REQ-P15" id="gehoert_zu">
+<edge source="sim/elektrik/e3_platine" target="REQ-P18" id="gehoert_zu">
   <data key="d23">gehoert_zu</data>
   <data key="d24">ERWARTUNG ## Anforderung</data>
 </edge>
-<edge source="sim/elektrik/e3_platine" target="REQ-P15" id="erwaehnt">
-  <data key="d23">erwaehnt</data>
-  <data key="d24">Textvorkommen</data>
-</edge>
-<edge source="sim/elektrik/e3_platine" target="REQ-P20" id="gehoert_zu">
-  <data key="d23">gehoert_zu</data>
-  <data key="d24">ERWARTUNG ## Anforderung</data>
-</edge>
-<edge source="sim/elektrik/e3_platine" target="REQ-P20" id="erwaehnt">
+<edge source="sim/elektrik/e3_platine" target="REQ-P18" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
@@ -27894,11 +28464,11 @@
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
-<edge source="sim/elektrik/e3_platine" target="REQ-P18" id="gehoert_zu">
+<edge source="sim/elektrik/e3_platine" target="REQ-P15" id="gehoert_zu">
   <data key="d23">gehoert_zu</data>
   <data key="d24">ERWARTUNG ## Anforderung</data>
 </edge>
-<edge source="sim/elektrik/e3_platine" target="REQ-P18" id="erwaehnt">
+<edge source="sim/elektrik/e3_platine" target="REQ-P15" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
@@ -27915,6 +28485,10 @@
   <data key="d24">Ergebnisdatei im Ordner</data>
 </edge>
 <edge source="sim/elektrik/e3_platine" target="sim/elektrik/e3_platine/ergebnis_routing.json" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/elektrik/e3_platine" target="sim/elektrik/e3_platine/ergebnis_schaltplan.json" id="erzeugt">
   <data key="d23">erzeugt</data>
   <data key="d24">Ergebnisdatei im Ordner</data>
 </edge>
@@ -27990,6 +28564,62 @@
   <data key="d23">erzeugt</data>
   <data key="d24">Ergebnisdatei im Ordner</data>
 </edge>
+<edge source="sim/elektrik/e3_platine" target="sim/elektrik/e3_platine/schaltplan_LFP_afe.png" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/elektrik/e3_platine" target="sim/elektrik/e3_platine/schaltplan_LFP_daisy.png" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/elektrik/e3_platine" target="sim/elektrik/e3_platine/schaltplan_LFP_deckblatt.png" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/elektrik/e3_platine" target="sim/elektrik/e3_platine/schaltplan_LFP_kanaele.png" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/elektrik/e3_platine" target="sim/elektrik/e3_platine/schaltplan_LFP_kanal.png" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/elektrik/e3_platine" target="sim/elektrik/e3_platine/schaltplan_LFP_ntc_stecker.png" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/elektrik/e3_platine" target="sim/elektrik/e3_platine/schaltplan_LFP_sekundaerschutz.png" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/elektrik/e3_platine" target="sim/elektrik/e3_platine/schaltplan_NMC_afe.png" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/elektrik/e3_platine" target="sim/elektrik/e3_platine/schaltplan_NMC_daisy.png" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/elektrik/e3_platine" target="sim/elektrik/e3_platine/schaltplan_NMC_deckblatt.png" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/elektrik/e3_platine" target="sim/elektrik/e3_platine/schaltplan_NMC_kanaele.png" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/elektrik/e3_platine" target="sim/elektrik/e3_platine/schaltplan_NMC_kanal.png" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/elektrik/e3_platine" target="sim/elektrik/e3_platine/schaltplan_NMC_ntc_stecker.png" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/elektrik/e3_platine" target="sim/elektrik/e3_platine/schaltplan_NMC_sekundaerschutz.png" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
 <edge source="sim/elektrik/e3_platine" target="sim/elektrik/e3_platine/spice_ausgleich_vorladung.png" id="erzeugt">
   <data key="d23">erzeugt</data>
   <data key="d24">Ergebnisdatei im Ordner</data>
@@ -28050,7 +28680,15 @@
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
+<edge source="sim/elektrik/e3_platine" target="BT-722" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
 <edge source="sim/elektrik/e3_platine" target="ENT-163" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="sim/elektrik/e3_platine" target="ENT-173" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
@@ -28062,6 +28700,14 @@
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
+<edge source="sim/elektrik/e3_platine" target="ENT-192" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="sim/elektrik/e3_platine" target="ENT-193" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
 <edge source="sim/elektrik/e3b_platine_waerme" target="REQ-P09" id="gehoert_zu">
   <data key="d23">gehoert_zu</data>
   <data key="d24">ERWARTUNG ## Anforderung</data>
@@ -28070,19 +28716,19 @@
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
-<edge source="sim/elektrik/e3b_platine_waerme" target="REQ-P15" id="gehoert_zu">
-  <data key="d23">gehoert_zu</data>
-  <data key="d24">ERWARTUNG ## Anforderung</data>
-</edge>
-<edge source="sim/elektrik/e3b_platine_waerme" target="REQ-P15" id="erwaehnt">
-  <data key="d23">erwaehnt</data>
-  <data key="d24">Textvorkommen</data>
-</edge>
 <edge source="sim/elektrik/e3b_platine_waerme" target="REQ-P20" id="gehoert_zu">
   <data key="d23">gehoert_zu</data>
   <data key="d24">ERWARTUNG ## Anforderung</data>
 </edge>
 <edge source="sim/elektrik/e3b_platine_waerme" target="REQ-P20" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="sim/elektrik/e3b_platine_waerme" target="REQ-P15" id="gehoert_zu">
+  <data key="d23">gehoert_zu</data>
+  <data key="d24">ERWARTUNG ## Anforderung</data>
+</edge>
+<edge source="sim/elektrik/e3b_platine_waerme" target="REQ-P15" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
@@ -28110,6 +28756,14 @@
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
+<edge source="sim/elektrik/e3c_bms_platine" target="REQ-P20" id="gehoert_zu">
+  <data key="d23">gehoert_zu</data>
+  <data key="d24">ERWARTUNG ## Anforderung</data>
+</edge>
+<edge source="sim/elektrik/e3c_bms_platine" target="REQ-P20" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
 <edge source="sim/elektrik/e3c_bms_platine" target="REQ-P19" id="gehoert_zu">
   <data key="d23">gehoert_zu</data>
   <data key="d24">ERWARTUNG ## Anforderung</data>
@@ -28118,19 +28772,11 @@
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
-<edge source="sim/elektrik/e3c_bms_platine" target="REQ-P15" id="gehoert_zu">
+<edge source="sim/elektrik/e3c_bms_platine" target="REQ-P18" id="gehoert_zu">
   <data key="d23">gehoert_zu</data>
   <data key="d24">ERWARTUNG ## Anforderung</data>
 </edge>
-<edge source="sim/elektrik/e3c_bms_platine" target="REQ-P15" id="erwaehnt">
-  <data key="d23">erwaehnt</data>
-  <data key="d24">Textvorkommen</data>
-</edge>
-<edge source="sim/elektrik/e3c_bms_platine" target="REQ-P20" id="gehoert_zu">
-  <data key="d23">gehoert_zu</data>
-  <data key="d24">ERWARTUNG ## Anforderung</data>
-</edge>
-<edge source="sim/elektrik/e3c_bms_platine" target="REQ-P20" id="erwaehnt">
+<edge source="sim/elektrik/e3c_bms_platine" target="REQ-P18" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
@@ -28150,15 +28796,91 @@
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
-<edge source="sim/elektrik/e3c_bms_platine" target="REQ-P18" id="gehoert_zu">
+<edge source="sim/elektrik/e3c_bms_platine" target="REQ-P15" id="gehoert_zu">
   <data key="d23">gehoert_zu</data>
   <data key="d24">ERWARTUNG ## Anforderung</data>
 </edge>
-<edge source="sim/elektrik/e3c_bms_platine" target="REQ-P18" id="erwaehnt">
+<edge source="sim/elektrik/e3c_bms_platine" target="REQ-P15" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
 <edge source="sim/elektrik/e3c_bms_platine" target="sim/elektrik/e3c_bms_platine/ergebnis_kriechstrecke.json" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/elektrik/e3c_bms_platine" target="sim/elektrik/e3c_bms_platine/ergebnis_pack_LFP_teilA.json" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/elektrik/e3c_bms_platine" target="sim/elektrik/e3c_bms_platine/ergebnis_platine.json" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/elektrik/e3c_bms_platine" target="sim/elektrik/e3c_bms_platine/ergebnis_routing.json" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/elektrik/e3c_bms_platine" target="sim/elektrik/e3c_bms_platine/ergebnis_schaltplan.json" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/elektrik/e3c_bms_platine" target="sim/elektrik/e3c_bms_platine/ERGEBNIS.md" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/elektrik/e3c_bms_platine" target="sim/elektrik/e3c_bms_platine/platine_bms.png" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/elektrik/e3c_bms_platine" target="sim/elektrik/e3c_bms_platine/platine_bms_3d_bottom.png" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/elektrik/e3c_bms_platine" target="sim/elektrik/e3c_bms_platine/platine_bms_3d_iso.png" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/elektrik/e3c_bms_platine" target="sim/elektrik/e3c_bms_platine/platine_bms_3d_nah.png" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/elektrik/e3c_bms_platine" target="sim/elektrik/e3c_bms_platine/platine_bms_3d_top.png" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/elektrik/e3c_bms_platine" target="sim/elektrik/e3c_bms_platine/platine_bms_einbau.png" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/elektrik/e3c_bms_platine" target="sim/elektrik/e3c_bms_platine/platine_bms_explosion.png" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/elektrik/e3c_bms_platine" target="sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-1.png" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/elektrik/e3c_bms_platine" target="sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-2.png" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/elektrik/e3c_bms_platine" target="sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-3.png" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/elektrik/e3c_bms_platine" target="sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-4.png" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/elektrik/e3c_bms_platine" target="sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-5.png" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/elektrik/e3c_bms_platine" target="sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-6.png" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/elektrik/e3c_bms_platine" target="sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-7.png" id="erzeugt">
   <data key="d23">erzeugt</data>
   <data key="d24">Ergebnisdatei im Ordner</data>
 </edge>
@@ -28186,6 +28908,38 @@
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
+<edge source="sim/elektrik/e3c_bms_platine" target="BT-310" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="sim/elektrik/e3c_bms_platine" target="BT-321" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="sim/elektrik/e3c_bms_platine" target="ENT-188" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="sim/elektrik/e3c_bms_platine" target="ENT-189" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="sim/elektrik/e3c_bms_platine" target="ENT-190" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="sim/elektrik/e3c_bms_platine" target="ENT-191" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="sim/elektrik/e3c_bms_platine" target="ENT-194" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="sim/elektrik/e3c_bms_platine" target="ENT-195" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
 <edge source="sim/elektrik/e3d_fmeda" target="REQ-P18" id="gehoert_zu">
   <data key="d23">gehoert_zu</data>
   <data key="d24">ERWARTUNG ## Anforderung</data>
@@ -28205,6 +28959,14 @@
 <edge source="sim/elektrik/e3d_fmeda" target="sim/elektrik/e3d_fmeda/e3d_fmeda.png" id="erzeugt">
   <data key="d23">erzeugt</data>
   <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/elektrik/e3d_fmeda" target="B-BAT-055" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="sim/elektrik/e3d_fmeda" target="ENT-192" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
 </edge>
 <edge source="sim/geometrie/g1_anordnung" target="REQ-D11" id="gehoert_zu">
   <data key="d23">gehoert_zu</data>
@@ -28498,19 +29260,19 @@
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
-<edge source="sim/kuehlung/k1_schnellladen" target="REQ-D06" id="gehoert_zu">
-  <data key="d23">gehoert_zu</data>
-  <data key="d24">ERWARTUNG ## Anforderung</data>
-</edge>
-<edge source="sim/kuehlung/k1_schnellladen" target="REQ-D06" id="erwaehnt">
-  <data key="d23">erwaehnt</data>
-  <data key="d24">Textvorkommen</data>
-</edge>
 <edge source="sim/kuehlung/k1_schnellladen" target="REQ-P09" id="gehoert_zu">
   <data key="d23">gehoert_zu</data>
   <data key="d24">ERWARTUNG ## Anforderung</data>
 </edge>
 <edge source="sim/kuehlung/k1_schnellladen" target="REQ-P09" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="sim/kuehlung/k1_schnellladen" target="REQ-D06" id="gehoert_zu">
+  <data key="d23">gehoert_zu</data>
+  <data key="d24">ERWARTUNG ## Anforderung</data>
+</edge>
+<edge source="sim/kuehlung/k1_schnellladen" target="REQ-D06" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
@@ -33874,6 +34636,66 @@
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
+<edge source="sim/mechanik/l1_leichtbau" target="REQ-P07" id="gehoert_zu">
+  <data key="d23">gehoert_zu</data>
+  <data key="d24">ERWARTUNG ## Anforderung</data>
+</edge>
+<edge source="sim/mechanik/l1_leichtbau" target="REQ-P07" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="sim/mechanik/l1_leichtbau" target="REQ-P09" id="gehoert_zu">
+  <data key="d23">gehoert_zu</data>
+  <data key="d24">ERWARTUNG ## Anforderung</data>
+</edge>
+<edge source="sim/mechanik/l1_leichtbau" target="REQ-P09" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="sim/mechanik/l1_leichtbau" target="REQ-P13" id="gehoert_zu">
+  <data key="d23">gehoert_zu</data>
+  <data key="d24">ERWARTUNG ## Anforderung</data>
+</edge>
+<edge source="sim/mechanik/l1_leichtbau" target="REQ-P13" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="sim/mechanik/l1_leichtbau" target="sim/mechanik/l1_leichtbau/ergebnis.json" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/mechanik/l1_leichtbau" target="sim/mechanik/l1_leichtbau/ERGEBNIS.md" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/mechanik/l1_leichtbau" target="sim/mechanik/l1_leichtbau/wasserfall_LFP.png" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/mechanik/l1_leichtbau" target="sim/mechanik/l1_leichtbau/wasserfall_NMC.png" id="erzeugt">
+  <data key="d23">erzeugt</data>
+  <data key="d24">Ergebnisdatei im Ordner</data>
+</edge>
+<edge source="sim/mechanik/l1_leichtbau" target="P13" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="sim/mechanik/l1_leichtbau" target="REQ-P14" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="sim/mechanik/l1_leichtbau" target="W51" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="sim/mechanik/l1_leichtbau" target="ENT-090" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="sim/mechanik/l1_leichtbau" target="W22" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
 <edge source="sim/mechanik/m0_gehaeuse" target="REQ-P14" id="gehoert_zu">
   <data key="d23">gehoert_zu</data>
   <data key="d24">ERWARTUNG ## Anforderung</data>
@@ -35734,19 +36556,19 @@
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
-<edge source="sim/verifikation_werkzeuge" target="REQ-D01" id="gehoert_zu">
-  <data key="d23">gehoert_zu</data>
-  <data key="d24">ERWARTUNG ## Anforderung</data>
-</edge>
-<edge source="sim/verifikation_werkzeuge" target="REQ-D01" id="erwaehnt">
-  <data key="d23">erwaehnt</data>
-  <data key="d24">Textvorkommen</data>
-</edge>
 <edge source="sim/verifikation_werkzeuge" target="REQ-D09" id="gehoert_zu">
   <data key="d23">gehoert_zu</data>
   <data key="d24">ERWARTUNG ## Anforderung</data>
 </edge>
 <edge source="sim/verifikation_werkzeuge" target="REQ-D09" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="sim/verifikation_werkzeuge" target="REQ-D01" id="gehoert_zu">
+  <data key="d23">gehoert_zu</data>
+  <data key="d24">ERWARTUNG ## Anforderung</data>
+</edge>
+<edge source="sim/verifikation_werkzeuge" target="REQ-D01" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
@@ -36154,6 +36976,10 @@
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
+<edge source="docs/01_lastenheft.md" target="W51" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
 <edge source="docs/01_lastenheft.md" target=".gitignore" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen Pfad</data>
@@ -36259,6 +37085,10 @@
   <data key="d24">Textvorkommen</data>
 </edge>
 <edge source="docs/04_entscheidungen.md" target="B-BAT-051" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="docs/04_entscheidungen.md" target="B-BAT-055" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
@@ -36459,6 +37289,10 @@
   <data key="d24">Textvorkommen</data>
 </edge>
 <edge source="docs/04_entscheidungen.md" target="BT-720" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="docs/04_entscheidungen.md" target="BT-722" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
@@ -37242,6 +38076,30 @@
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
+<edge source="docs/04_entscheidungen.md" target="ENT-192" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="docs/04_entscheidungen.md" target="ENT-193" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="docs/04_entscheidungen.md" target="ENT-194" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="docs/04_entscheidungen.md" target="ENT-195" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="docs/04_entscheidungen.md" target="ENT-196" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="docs/04_entscheidungen.md" target="ENT-197" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
 <edge source="docs/04_entscheidungen.md" target="REQ-D01" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
@@ -37367,6 +38225,14 @@
   <data key="d24">Textvorkommen Pfad</data>
 </edge>
 <edge source="docs/04_entscheidungen.md" target="sim/elektrik/e3b_platine_waerme/ergebnis.json" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="docs/04_entscheidungen.md" target="sim/elektrik/e3c_bms_platine/ERGEBNIS.md" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="docs/04_entscheidungen.md" target="sim/elektrik/e3d_fmeda/ERGEBNIS.md" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen Pfad</data>
 </edge>
@@ -37811,6 +38677,10 @@
   <data key="d24">Textvorkommen</data>
 </edge>
 <edge source="docs/09_aenderungen.md" target="W48" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="docs/09_aenderungen.md" target="W51" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
@@ -38890,6 +39760,10 @@
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen Pfad</data>
 </edge>
+<edge source="docs/16_ergebnisbilder.md" target="BT-310" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
 <edge source="docs/16_ergebnisbilder.md" target="ENT-023" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
@@ -38906,7 +39780,15 @@
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
+<edge source="docs/16_ergebnisbilder.md" target="REQ-P07" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
 <edge source="docs/16_ergebnisbilder.md" target="REQ-P09" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="docs/16_ergebnisbilder.md" target="W51" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
@@ -39174,6 +40056,62 @@
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen Pfad</data>
 </edge>
+<edge source="docs/16_ergebnisbilder.md" target="sim/elektrik/e3_platine/schaltplan_LFP_afe.png" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="docs/16_ergebnisbilder.md" target="sim/elektrik/e3_platine/schaltplan_LFP_daisy.png" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="docs/16_ergebnisbilder.md" target="sim/elektrik/e3_platine/schaltplan_LFP_deckblatt.png" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="docs/16_ergebnisbilder.md" target="sim/elektrik/e3_platine/schaltplan_LFP_kanaele.png" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="docs/16_ergebnisbilder.md" target="sim/elektrik/e3_platine/schaltplan_LFP_kanal.png" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="docs/16_ergebnisbilder.md" target="sim/elektrik/e3_platine/schaltplan_LFP_ntc_stecker.png" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="docs/16_ergebnisbilder.md" target="sim/elektrik/e3_platine/schaltplan_LFP_sekundaerschutz.png" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="docs/16_ergebnisbilder.md" target="sim/elektrik/e3_platine/schaltplan_NMC_afe.png" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="docs/16_ergebnisbilder.md" target="sim/elektrik/e3_platine/schaltplan_NMC_daisy.png" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="docs/16_ergebnisbilder.md" target="sim/elektrik/e3_platine/schaltplan_NMC_deckblatt.png" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="docs/16_ergebnisbilder.md" target="sim/elektrik/e3_platine/schaltplan_NMC_kanaele.png" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="docs/16_ergebnisbilder.md" target="sim/elektrik/e3_platine/schaltplan_NMC_kanal.png" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="docs/16_ergebnisbilder.md" target="sim/elektrik/e3_platine/schaltplan_NMC_ntc_stecker.png" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="docs/16_ergebnisbilder.md" target="sim/elektrik/e3_platine/schaltplan_NMC_sekundaerschutz.png" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
 <edge source="docs/16_ergebnisbilder.md" target="sim/elektrik/e3_platine/spice_ausgleich_vorladung.png" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen Pfad</data>
@@ -39183,6 +40121,66 @@
   <data key="d24">Textvorkommen Pfad</data>
 </edge>
 <edge source="docs/16_ergebnisbilder.md" target="sim/elektrik/e3b_platine_waerme/e3b_temperatur.png" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="docs/16_ergebnisbilder.md" target="sim/elektrik/e3c_bms_platine/ergebnis_platine.json" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="docs/16_ergebnisbilder.md" target="sim/elektrik/e3c_bms_platine/platine_bms.png" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="docs/16_ergebnisbilder.md" target="sim/elektrik/e3c_bms_platine/platine_bms_3d_bottom.png" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="docs/16_ergebnisbilder.md" target="sim/elektrik/e3c_bms_platine/platine_bms_3d_iso.png" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="docs/16_ergebnisbilder.md" target="sim/elektrik/e3c_bms_platine/platine_bms_3d_nah.png" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="docs/16_ergebnisbilder.md" target="sim/elektrik/e3c_bms_platine/platine_bms_3d_top.png" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="docs/16_ergebnisbilder.md" target="sim/elektrik/e3c_bms_platine/platine_bms_einbau.png" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="docs/16_ergebnisbilder.md" target="sim/elektrik/e3c_bms_platine/platine_bms_explosion.png" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="docs/16_ergebnisbilder.md" target="sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-1.png" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="docs/16_ergebnisbilder.md" target="sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-2.png" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="docs/16_ergebnisbilder.md" target="sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-3.png" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="docs/16_ergebnisbilder.md" target="sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-4.png" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="docs/16_ergebnisbilder.md" target="sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-5.png" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="docs/16_ergebnisbilder.md" target="sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-6.png" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="docs/16_ergebnisbilder.md" target="sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-7.png" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen Pfad</data>
 </edge>
@@ -39539,6 +40537,18 @@
   <data key="d24">Textvorkommen Pfad</data>
 </edge>
 <edge source="docs/16_ergebnisbilder.md" target="sim/kuehlung/k5_parallel/verteilung.png" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="docs/16_ergebnisbilder.md" target="sim/mechanik/l1_leichtbau/ergebnis.json" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="docs/16_ergebnisbilder.md" target="sim/mechanik/l1_leichtbau/wasserfall_LFP.png" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="docs/16_ergebnisbilder.md" target="sim/mechanik/l1_leichtbau/wasserfall_NMC.png" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen Pfad</data>
 </edge>
@@ -40643,6 +41653,10 @@
   <data key="d24">Textvorkommen</data>
 </edge>
 <edge source="docs/25_loesungen_aus_kreativmethoden.md" target="B-BAT-055" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="docs/25_loesungen_aus_kreativmethoden.md" target="B-BAT-056" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
@@ -42378,6 +43392,10 @@
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
 </edge>
+<edge source="ERINNERUNGEN.md" target="BT-722" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
 <edge source="ERINNERUNGEN.md" target="BT-730" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen</data>
@@ -42698,6 +43716,10 @@
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen Pfad</data>
 </edge>
+<edge source="ERINNERUNGEN.md" target="sim/elektrik/e3c_bms_platine/ERGEBNIS.md" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
 <edge source="praesentation/bausteine/C0.md" target="sim/chemie/vergleich_lfp_nmc/ergebnis.json" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen Pfad</data>
@@ -42774,6 +43796,10 @@
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen Pfad</data>
 </edge>
+<edge source="praesentation/bausteine/E3.md" target="sim/elektrik/e3_platine/schaltplan_LFP_kanal.png" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
 <edge source="praesentation/bausteine/E3b.md" target="sim/elektrik/e3b_platine_waerme/ergebnis.json" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen Pfad</data>
@@ -42785,6 +43811,38 @@
 <edge source="praesentation/bausteine/E3b.md" target="sim/elektrik/e3b_platine_waerme/e3b_temperatur.png" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="praesentation/bausteine/E3c.md" target="BT-310" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="praesentation/bausteine/E3c.md" target="sim/elektrik/e3c_bms_platine/ergebnis_platine.json" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="praesentation/bausteine/E3c.md" target="sim/elektrik/e3c_bms_platine/ERGEBNIS.md" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="praesentation/bausteine/E3c.md" target="sim/elektrik/e3c_bms_platine/platine_bms_einbau.png" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="praesentation/bausteine/E3c.md" target="sim/elektrik/e3c_bms_platine/platine_bms_explosion.png" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="praesentation/bausteine/E3d.md" target="B-BAT-055" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="praesentation/bausteine/E3d.md" target="ENT-192" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="praesentation/bausteine/E3d.md" target="ENT-193" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
 </edge>
 <edge source="praesentation/bausteine/E3d.md" target="sim/elektrik/e3d_fmeda/ergebnis.json" id="erwaehnt">
   <data key="d23">erwaehnt</data>
@@ -42935,6 +43993,26 @@
   <data key="d24">Textvorkommen</data>
 </edge>
 <edge source="praesentation/bausteine/KR1.md" target="sim/elektrik/e3_platine/ergebnis_waerme.json" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="praesentation/bausteine/KR2.md" target="docs/24_gefahrenanalyse_hara.md" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="praesentation/bausteine/L1.md" target="REQ-P07" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="praesentation/bausteine/L1.md" target="W51" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen</data>
+</edge>
+<edge source="praesentation/bausteine/L1.md" target="sim/mechanik/l1_leichtbau/ergebnis.json" id="erwaehnt">
+  <data key="d23">erwaehnt</data>
+  <data key="d24">Textvorkommen Pfad</data>
+</edge>
+<edge source="praesentation/bausteine/L1.md" target="sim/mechanik/l1_leichtbau/wasserfall_LFP.png" id="erwaehnt">
   <data key="d23">erwaehnt</data>
   <data key="d24">Textvorkommen Pfad</data>
 </edge>

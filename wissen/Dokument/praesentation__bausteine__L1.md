@@ -1,0 +1,29 @@
+---
+typ: dokument
+datei: "praesentation/bausteine/L1.md"
+tags: ["dokument", "kopie"]
+---
+# L1
+
+> KI-generiert, erzeugt aus pm/plan/wissensnetz.json – nicht von Hand bearbeiten
+
+- Kopie von `praesentation/bausteine/L1.md` (Quelle im Repo, hier nur Lesekopie)
+
+## Inhalt
+
+> **KI-generiert** (Claude Sonnet, 2026-11-24), Entwurf. Folienbaustein Vorgang L1.
+
+# Leichtbau-Potenzial des Packs (OPT-012)
+**Kernaussage: Auch mit allen sieben Leichtbau-Hebeln (Schätzung) bleibt der LFP-Pack bei 540…576 kg über dem Ziel von 528 kg, der NMC-Pack bei 394…433 kg über 370 kg; das Ziel REQ-P07 ist neu abzuleiten.**
+
+**Bild:** sim/mechanik/l1_leichtbau/wasserfall_LFP.png und wasserfall_NMC.png (Zielband REQ-P07: Masse höchstens 528 bzw. 370 kg)
+
+**Zahlen** (Quelle sim/mechanik/l1_leichtbau/ergebnis.json; Spannen der Hebel sind Schätzungen Opus):
+- Ist (CAD): LFP 620 kg (Zellanteil 74.6 %), NMC 482 kg (63.9 %)
+- Summe Hebel: LFP −44…−80 kg, NMC −49…−88 kg
+- NMC: Zellen allein 308 kg, Rest dürfte nur 62 kg wiegen (heute 174 kg)
+- Kühlplatte = 3.2 mm Al-äquivalent (8 mm × Füllgrad 0,4), Hebel H1 wahrscheinlich zu hoch angesetzt
+- Band aus W51: offen
+
+*KI-generiert, Entwurf.*
+

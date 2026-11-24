@@ -65,6 +65,7 @@ tags: ["dokument"]
 - [[Befund/B-BAT-043|B-BAT-043]]
 - [[Befund/B-BAT-050|B-BAT-050]]
 - [[Befund/B-BAT-051|B-BAT-051]]
+- [[Befund/B-BAT-055|B-BAT-055]]
 - [[Bauteil/BT-000|BT-000]]
 - [[Bauteil/BT-100|BT-100]]
 - [[Bauteil/BT-110|BT-110]]
@@ -101,8 +102,7 @@ tags: ["dokument"]
 - [[Bauteil/BT-360|BT-360]]
 - [[Bauteil/BT-400|BT-400]]
 - [[Bauteil/BT-410|BT-410]]
-- [[Bauteil/BT-420|BT-420]]
-- … und 208 weitere
+- … und 216 weitere
 
 ## Vorgänge, die dieses Dokument nennen
 - [[Vorgang/R5|R5]] – Werkzeugwahl festlegen (ENT): Zellmodell, Packmodell, Schaltung
@@ -289,10 +289,10 @@ tags: ["dokument"]
 | ENT-170 (`../pm/entscheidungen/ENT-170.md`, im Repo) | 2026-11-24 | Mess-IC ASIL D | alle | BT-322 | asil = "D" - | REQ-P18 | B-BAT-050, sim/elektrik/e3_platine/ERWARTUNG.md | Opus (Annahme ERW-E3); Akte angelegt von Sonnet | vorgeschlagen |
 | ENT-171 (`../pm/entscheidungen/ENT-171.md`, im Repo) | 2026-11-24 | Ausgleichswiderstand LFP 23,5 Ohm (2 x 47 Ohm parallel) | LFP | BT-323 | widerstand_Ohm = 23.5 Ohm | REQ-P15 | B-BAT-050, sim/elektrik/e3_platine/ERWARTUNG.md | Opus (Annahme ERW-E3); Akte angelegt von Sonnet | vorgeschlagen |
 | ENT-172 (`../pm/entscheidungen/ENT-172.md`, im Repo) | 2026-11-24 | Ausgleichswiderstand NMC 32,45 Ohm (2 x 64,9 Ohm parallel, E96) | NMC | BT-323 | widerstand_Ohm = 32.45 Ohm | REQ-P15 | B-BAT-050, sim/elektrik/e3_platine/ERWARTUNG.md | Opus (Annahme ERW-E3, korrigiert ERW-E3 N1); Akte angelegt von Sonnet | vorgeschlagen |
-| ENT-173 (`../pm/entscheidungen/ENT-173.md`, im Repo) | 2026-11-24 | Ausgleichsschalter N-MOSFET Logikpegel | alle | BT-323 | schalter = "N-MOSFET Logikpegel, R_DS,on <= 0,5 Ohm, AEC-Q101" - | REQ-P15 | B-BAT-050, sim/elektrik/e3_platine/ERWARTUNG.md | Opus (Annahme ERW-E3); Akte angelegt von Sonnet | vorgeschlagen |
+| ENT-173 (`../pm/entscheidungen/ENT-173.md`, im Repo) | 2026-11-24 | Ausgleichsschalter N-MOSFET Logikpegel | alle | BT-323 | schalter = "N-MOSFET Logikpegel, R_DS,on <= 0,5 Ohm, AEC-Q101" - | REQ-P15 | B-BAT-050, sim/elektrik/e3_platine/ERWARTUNG.md | Opus (Annahme ERW-E3); Akte angelegt von Sonnet | ersetzt (durch ENT-192) |
 | ENT-174 (`../pm/entscheidungen/ENT-174.md`, im Repo) | 2026-11-24 | Daisy-Chain Prüfspannung 1,5 kV | alle | BT-324 | pruefspannung_V = 1500.0 V | REQ-P17, REQ-P19 | B-BAT-050, sim/elektrik/e3_platine/ERWARTUNG.md | Opus (Annahme ERW-E3); Akte angelegt von Sonnet | vorgeschlagen |
-| ENT-175 (`../pm/entscheidungen/ENT-175.md`, im Repo) | 2026-11-24 | Sekundärschutz Schwelle LFP 3,75 V | LFP | BT-325 | schwelle_V = 3.75 V | REQ-P18 | B-BAT-050, sim/elektrik/e3_platine/ERWARTUNG.md | Opus (Annahme ERW-E3); Akte angelegt von Sonnet | vorgeschlagen |
-| ENT-176 (`../pm/entscheidungen/ENT-176.md`, im Repo) | 2026-11-24 | Sekundärschutz Schwelle NMC 4,25 V | NMC | BT-325 | schwelle_V = 4.25 V | REQ-P18 | B-BAT-050, sim/elektrik/e3_platine/ERWARTUNG.md | Opus (Annahme ERW-E3); Akte angelegt von Sonnet | vorgeschlagen |
+| ENT-175 (`../pm/entscheidungen/ENT-175.md`, im Repo) | 2026-11-24 | Sekundärschutz Schwelle je Zelle LFP 3,75 V | LFP | BT-325 | schwelle_V = 3.75 V | REQ-P18 | B-BAT-050, B-BAT-055, sim/elektrik/e3_platine/ERWARTUNG.md | Opus (Annahme ERW-E3); Akte angelegt von Sonnet | vorgeschlagen |
+| ENT-176 (`../pm/entscheidungen/ENT-176.md`, im Repo) | 2026-11-24 | Sekundärschutz Schwelle je Zelle NMC 4,25 V | NMC | BT-325 | schwelle_V = 4.25 V | REQ-P18 | B-BAT-050, B-BAT-055, sim/elektrik/e3_platine/ERWARTUNG.md | Opus (Annahme ERW-E3); Akte angelegt von Sonnet | vorgeschlagen |
 | ENT-177 (`../pm/entscheidungen/ENT-177.md`, im Repo) | 2026-11-24 | Sekundärschutz Verzögerung 1000 ms | alle | BT-325 | verzoegerung_ms = 1000.0 ms | REQ-P18 | B-BAT-050, sim/elektrik/e3_platine/ERWARTUNG.md | Opus (Annahme ERW-E3); Akte angelegt von Sonnet | vorgeschlagen |
 | ENT-178 (`../pm/entscheidungen/ENT-178.md`, im Repo) | 2026-11-24 | BMS-Platine Kriechstrecke HV/NV 10 mm | alle | BT-311 | kriechstrecke_hv_nv_mm = 10.0 mm | REQ-P17, REQ-P19 | B-BAT-050, sim/elektrik/e3_platine/ERWARTUNG.md | Opus (Annahme ERW-E3); Akte angelegt von Sonnet | vorgeschlagen |
 | ENT-179 (`../pm/entscheidungen/ENT-179.md`, im Repo) | 2026-11-24 | Vorladung Pulsenergie 450 J | alle | BT-712 | pulsenergie_J = 450.0 J | REQ-P13 | B-BAT-050, sim/elektrik/e3_platine/ERWARTUNG.md | Opus (Annahme ERW-E3); Akte angelegt von Sonnet | vorgeschlagen |
@@ -304,10 +304,16 @@ tags: ["dokument"]
 | ENT-185 (`../pm/entscheidungen/ENT-185.md`, im Repo) | 2026-11-24 | Wärmeleitpad CMU 1,0 mm | alle | BT-321 | pad_dicke_mm = 1.0 "mm" | REQ-P20, REQ-P15 | sim/elektrik/e3b_platine_waerme/ergebnis.json, sim/elektrik/e3b_platine_waerme/ERWARTUNG.md, ENT-184 | Opus (Annahme ERW-E3b, durch E3b bestätigt) | entschieden (Opus, delegiert durch Autor 2026-11-24) |
 | ENT-186 (`../pm/entscheidungen/ENT-186.md`, im Repo) | 2026-11-24 | Wärmeleitpad CMU λ 3 W/mK | alle | BT-321 | pad_lambda_W_mK = 3.0 "W/mK" | REQ-P20, REQ-P15 | sim/elektrik/e3b_platine_waerme/ergebnis.json, sim/elektrik/e3b_platine_waerme/ERWARTUNG.md, ENT-184 | Opus (Annahme ERW-E3b, durch E3b bestätigt) | entschieden (Opus, delegiert durch Autor 2026-11-24) |
 | ENT-187 (`../pm/entscheidungen/ENT-187.md`, im Repo) | 2026-11-24 | Thermische Vias 8 je Widerstandspaar | alle | BT-321 | vias_je_widerstandspaar = 8.0 "-" | REQ-P20, REQ-P15 | sim/elektrik/e3b_platine_waerme/ergebnis.json, sim/elektrik/e3b_platine_waerme/ERWARTUNG.md, ENT-184 | Opus (Annahme ERW-E3b, durch E3b bestätigt) | entschieden (Opus, delegiert durch Autor 2026-11-24) |
-| ENT-188 (`../pm/entscheidungen/ENT-188.md`, im Repo) | 2026-11-24 | BMS-Platine BT-311 Länge 160 mm | alle | BT-311 | laenge_mm = 160.0 mm | REQ-P15, REQ-P19 | sim/elektrik/e3c_bms_platine/ERWARTUNG.md | Opus (Annahme ERW-E3c); Akte angelegt von Sonnet | vorgeschlagen |
-| ENT-189 (`../pm/entscheidungen/ENT-189.md`, im Repo) | 2026-11-24 | BMS-Platine BT-311 Breite 100 mm | alle | BT-311 | breite_mm = 100.0 mm | REQ-P15, REQ-P19 | sim/elektrik/e3c_bms_platine/ERWARTUNG.md | Opus (Annahme ERW-E3c); Akte angelegt von Sonnet | vorgeschlagen |
-| ENT-190 (`../pm/entscheidungen/ENT-190.md`, im Repo) | 2026-11-24 | BMS-Platine BT-311 vier Lagen | alle | BT-311 | lagen = 4.0 "-" | REQ-P15, REQ-P19 | sim/elektrik/e3c_bms_platine/ERWARTUNG.md | Opus (Annahme ERW-E3c); Akte angelegt von Sonnet | vorgeschlagen |
-| ENT-191 (`../pm/entscheidungen/ENT-191.md`, im Repo) | 2026-11-24 | BMS-Platine Kriechstrecke HV/NV 10 mm (Luftstrecke 8 mm, Höhe 3000 m) | alle | BT-311 | kriechstrecke_hv_nv_mm = 10.0 mm | REQ-P17, REQ-P18, REQ-P19 | sim/elektrik/e3c_bms_platine/ERWARTUNG.md | Opus (Annahme ERW-E3c); Akte angelegt von Sonnet | vorgeschlagen |
+| ENT-188 (`../pm/entscheidungen/ENT-188.md`, im Repo) | 2026-11-24 | BMS-Platine BT-311 Länge 160 mm | alle | BT-311 | laenge_mm = 160.0 mm | REQ-P15, REQ-P19 | sim/elektrik/e3c_bms_platine/ERWARTUNG.md | Opus (Annahme ERW-E3c); Akte angelegt von Sonnet | entschieden (Opus, delegiert durch Autor 2026-11-23) |
+| ENT-189 (`../pm/entscheidungen/ENT-189.md`, im Repo) | 2026-11-24 | BMS-Platine BT-311 Breite 100 mm | alle | BT-311 | breite_mm = 100.0 mm | REQ-P15, REQ-P19 | sim/elektrik/e3c_bms_platine/ERWARTUNG.md | Opus (Annahme ERW-E3c); Akte angelegt von Sonnet | entschieden (Opus, delegiert durch Autor 2026-11-23) |
+| ENT-190 (`../pm/entscheidungen/ENT-190.md`, im Repo) | 2026-11-24 | BMS-Platine BT-311 vier Lagen | alle | BT-311 | lagen = 4.0 "-" | REQ-P15, REQ-P19 | sim/elektrik/e3c_bms_platine/ERWARTUNG.md | Opus (Annahme ERW-E3c); Akte angelegt von Sonnet | entschieden (Opus, delegiert durch Autor 2026-11-23) |
+| ENT-191 (`../pm/entscheidungen/ENT-191.md`, im Repo) | 2026-11-24 | BMS-Platine Kriechstrecke HV/NV 10 mm (Luftstrecke 8 mm, Höhe 3000 m) | alle | BT-311 | kriechstrecke_hv_nv_mm = 10.0 mm | REQ-P17, REQ-P18, REQ-P19 | sim/elektrik/e3c_bms_platine/ERWARTUNG.md | Opus (Annahme ERW-E3c); Akte angelegt von Sonnet | entschieden (Opus, delegiert durch Autor 2026-11-23) |
+| ENT-192 (`../pm/entscheidungen/ENT-192.md`, im Repo) | 2026-11-24 | Ausgleichsschalter Doppel-N-FET SOT-363, zwei Schalter in Reihe | alle | BT-323 | schalter = "Doppel-N-FET SOT-363, zwei Schalter in Reihe, getrennte Gates, R_DS,on je FET <= 0,5 Ohm, AEC-Q101" - | REQ-P15, REQ-P18 | B-BAT-055, sim/elektrik/e3d_fmeda/ERGEBNIS.md, sim/elektrik/e3_platine/ERWARTUNG.md Nachtrag 7 | Opus (Maßnahme M1 der FMEDA E3d, ERW-E3 N7); Akte angelegt von Sonnet | vorgeschlagen (Opus, delegiert durch Autor 2026-11-23) |
+| ENT-193 (`../pm/entscheidungen/ENT-193.md`, im Repo) | 2026-11-24 | Sekundärschutz 3 x 6-Zellen-Überspannungsschutz TSSOP-16, Messung je Zelle | alle | BT-325 | bauform = "3 x generischer 6-Zellen-Überspannungsschutz, TSSOP-16, je 7 Messeingänge, Ausgänge wired-OR auf ABSCHALT" - | REQ-P18 | B-BAT-055, sim/elektrik/e3d_fmeda/ERGEBNIS.md, sim/elektrik/e3_platine/ERWARTUNG.md Nachtrag 7 | Opus (Korrektur ERW-E3 N7); Akte angelegt von Sonnet | vorgeschlagen (Opus, delegiert durch Autor 2026-11-23) |
+| ENT-194 (`../pm/entscheidungen/ENT-194.md`, im Repo) | 2026-11-24 | Servicedeckel LFP: lichte Höhe Kopf M8 + 3 mm | alle | BT-722 | lichte_hoehe_zugabe_mm = 3.0 "mm" | REQ-P13 | sim/elektrik/e3c_bms_platine/ERWARTUNG.md, sim/elektrik/e3c_bms_platine/ERGEBNIS.md | Opus (Annahme ERW-E3c), umgesetzt Sonnet E3c | entschieden (Opus, delegiert durch Autor 2026-11-23) |
+| ENT-195 (`../pm/entscheidungen/ENT-195.md`, im Repo) | 2026-11-24 | BMS-Platine Luftstrecke HV/NV 8 mm (3000 m) | alle | BT-311 | luftstrecke_hv_nv_mm = 8.0 "mm" | REQ-P19 | sim/elektrik/e3c_bms_platine/ERWARTUNG.md, sim/elektrik/e3c_bms_platine/ERGEBNIS.md | Opus (Annahme ERW-E3c), umgesetzt Sonnet E3c | entschieden (Opus, delegiert durch Autor 2026-11-23) |
+| ENT-196 (`../pm/entscheidungen/ENT-196.md`, im Repo) | 2026-11-24 | BMS-Platine Abstand NV-Bereich 0,15 mm | alle | BT-311 | abstand_nv_mm = 0.15 "mm" | REQ-P19 | sim/elektrik/e3c_bms_platine/ERWARTUNG.md, sim/elektrik/e3c_bms_platine/ERGEBNIS.md | Opus (Annahme ERW-E3c), umgesetzt Sonnet E3c | entschieden (Opus, delegiert durch Autor 2026-11-23) |
+| ENT-197 (`../pm/entscheidungen/ENT-197.md`, im Repo) | 2026-11-24 | BMS-Platine drei Schützkanäle (Plus, Minus, Vorladung) | alle | BT-311 | schuetzkanaele = 3.0 "-" | REQ-P18 | sim/elektrik/e3c_bms_platine/ERWARTUNG.md, sim/elektrik/e3c_bms_platine/ERGEBNIS.md | Opus (Annahme ERW-E3c), umgesetzt Sonnet E3c | entschieden (Opus, delegiert durch Autor 2026-11-23) |
 
 ---
 *KI-generiert (pm.py). Status „entschieden“ setzt nur der Autor.*

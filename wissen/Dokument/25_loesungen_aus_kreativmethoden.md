@@ -21,6 +21,7 @@ tags: ["dokument"]
 - [[Befund/B-BAT-051|B-BAT-051]]
 - [[Befund/B-BAT-053|B-BAT-053]]
 - [[Befund/B-BAT-055|B-BAT-055]]
+- [[Befund/B-BAT-056|B-BAT-056]]
 - [[Bauteil/BT-311|BT-311]]
 - [[Bauteil/BT-324|BT-324]]
 - [[Entscheidung/ENT-168|ENT-168]]
@@ -47,9 +48,9 @@ tags: ["dokument"]
 | Nr | Problem (Widerspruch) | gewählte Lösung | verworfene Alternativen (Grund) | Herkunft | Entscheidung | Akte | Nachweis |
 |---|---|---|---|---|---|---|---|
 | KR1 | Ausgleichszeit kürzer, ohne dass die CMU heißer wird (B-BAT-051: 112–184 °C) | **K2: passiver Ausgleich + Wärmeleitpad zur Rahmenwand**, dazu 8 thermische Vias je Widerstandspaar | K6 aktiv kapazitiv (Rang 1 mit 0,563, aber innerhalb der Empfindlichkeit; mehr Fehlerarten, Reife unbelegt → OPT-001) · K4 Widerstände auf Kühlplatte (Leitungen, Fehlerarten) · K5 aktiv induktiv (Kosten, Reife) · K1 Ist und K3 getaktet (Festforderung 105 °C verfehlt; K3 verdoppelt die Wärme) | Kasten und Konzepte Opus (Lauf 2/3), TRIZ und Kopfstand PI, Paarurteile PI, Gewichte **Autor** (21 Paare) | **Autor** 2026-11-24 | ENT-184, ENT-185…187 | `pm/kreativ/KR1/ERGEBNIS.md`, E3b: 52,6 °C konservativ |
-| KR2 | Bei Überladung/Übertemperatur trennen (SG-01/03), aber nicht unerwartet während der Fahrt (SG-05) | *läuft* | *läuft* | Kasten und Konzepte Opus, Gewichte **Autor** (10 Paare) | offen | – | `pm/kreativ/KR2/` |
+| KR2 | Bei Überladung/Übertemperatur trennen (SG-01/03), aber nicht unerwartet während der Fahrt (SG-05) | **K1: gestuft drosseln → warnen (≥ 2 s) → trennen, 1oo2, unabhängiger Hardwarepfad, abgestuft (Laden sperren / Leistung 0, dann Schütze)**, Rang 0,731, robust bei ±1 | K3 2oo3 + Notlauf (Rang 2, 0,609; dritter Kanal → OPT-015) · K4 nur warnen, dann ganzes Pack trennen (verletzt FTTI: 2 s Warnung ohne Drosseln, **von PI im Kopfstand erkannt**, Opus hatte es übersehen) · K5 ohne Hardwarepfad (Sicherheit) · K2 sofort trennen (Verfügbarkeit, Rang 0,131) | Kasten und Konzepte Opus, TRIZ/Kopfstand/Paarurteile PI, Gewichte **Autor** (10 Paare) | Opus delegiert (klare Empfehlung, bestätigt bestehende FSR) | docs/24 FSR | `pm/kreativ/KR2/ERGEBNIS.md`, `PRUEFUNG_OPUS.md` |
 
-**Lehren aus der Methode** (B-BAT-053): Drei Fehler von Opus im Pilot KR1 – zufällige Konzeptauswahl, undefiniertes Kriterium, fehlende Festforderung. Behoben in METHODE.md.
+**Lehren aus der Methode** (B-BAT-053, B-BAT-056: in KR2 hat Opus ein Konzept gegen die Festforderung gebaut, gefunden von PI): Drei Fehler von Opus im Pilot KR1 – zufällige Konzeptauswahl, undefiniertes Kriterium, fehlende Festforderung. Behoben in METHODE.md.
 
 ## Teil B: Lösungen, die Opus aus eigener Abwägung gefunden hat (ohne formale Sitzung)
 Kein Kasten und kein Paarvergleich. Opus hat die Lösung als Ingenieururteil vorgeschlagen und meist selbst entschieden (delegiert, klare Empfehlung). Nach der Regel „erst konservativ“ wurde die bewährte Variante gewählt.

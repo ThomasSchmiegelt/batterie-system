@@ -16,7 +16,7 @@ Weiter: [[Dokument/PLAN]] · [[Dokument/BEFUNDE]] · [[Dokument/03_anforderungsv
 - V-Modell-Matrix: [[Dokument/06_verifikationsplan]] (Bewertung je Anforderung in den Anforderungsnotizen, Tag `bewertung/...`)
 - Workflow: [[Dokument/17_workflow_schleife]] · Freigaberunde: [[Dokument/19_freigaberunde]]
 - Normen und Regelwerke: [[Dokument/07_normen_und_vorschriften]]
-- Präsentation: [[Dokument/praesentation__STORYBOARD]] (31 Folienbausteine, Ordner wissen/Baustein)
+- Präsentation: [[Dokument/praesentation__STORYBOARD]] (34 Folienbausteine, Ordner wissen/Baustein)
 - Steckbriefe: [[Steckbrief/BT-610_LFP|BT-610_LFP]]
 - Dokumente: Ordner wissen/Dokument (33 Notizen)
 
@@ -163,6 +163,7 @@ Weiter: [[Dokument/PLAN]] · [[Dokument/BEFUNDE]] · [[Dokument/03_anforderungsv
 | [[Recherche/W48\|W48]] | fertig | 11 Belege bestaetigt, 0 Fehler |
 | [[Recherche/W49\|W49]] | fertig | 6 Belege bestaetigt, 0 Fehler |
 | [[Recherche/W50\|W50]] | fertig | 11 Belege bestaetigt, 0 Fehler |
+| [[Recherche/W51\|W51]] | fertig | 9 Belege bestaetigt, 0 Fehler |
 
 ---
 *KI-generiert, erzeugt aus pm/plan/wissensnetz.json – nicht von Hand bearbeiten*

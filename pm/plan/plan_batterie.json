@@ -110,7 +110,7 @@
           "rate": 0
         }
       ],
-      "notes": "Stufe 1 | Status: fertig | REQ: REQ-D08 | Wissen: P01, P02, P03, P04, P05, P06, P07, P08, P09, P10 | Befunde: B-BAT-003, B-BAT-004, B-BAT-023, B-BAT-022, B-BAT-020, B-BAT-019, B-BAT-017, B-BAT-013, B-BAT-007, B-BAT-044, B-BAT-045, B-BAT-049 | Software: PI, patent-recherche | Ergebnis: forschung/PATENTE.md ✓",
+      "notes": "Stufe 1 | Status: fertig | REQ: REQ-D08 | Wissen: P01, P02, P03, P04, P05, P06, P07, P08, P09, P10 | Befunde: B-BAT-003, B-BAT-004, B-BAT-023, B-BAT-022, B-BAT-020, B-BAT-019, B-BAT-017, B-BAT-013, B-BAT-007, B-BAT-044, B-BAT-045, B-BAT-049, B-BAT-058 | Software: PI, patent-recherche | Ergebnis: forschung/PATENTE.md ✓",
       "is_start": false,
       "is_end": false
     },
@@ -755,7 +755,7 @@
           "rate": 0
         }
       ],
-      "notes": "Stufe 4 | Status: fertig | REQ: REQ-P15, REQ-P17, REQ-P19, REQ-P20 | Bauteil: BT-300, BT-320, BT-321 | Wissen: W05, W14, T06, P07 | Befunde: B-BAT-002, B-BAT-004, B-BAT-013, B-BAT-045 | ENT: ENT-004, ENT-110, ENT-111, ENT-112, ENT-113, ENT-114, ENT-115, ENT-146, ENT-163, ENT-164, ENT-165, ENT-166, ENT-167, ENT-168, ENT-183, ENT-184, ENT-185, ENT-186, ENT-187 | Stückliste: 300.1, 300.2, 300.3, 300.4, 300.6, 600.4, 700.7, 700.10 | Software: foxBMS | Doku: sim/elektrik/e3_platine/ERWARTUNG.md | Ergebnis: sim/elektrik/e3_platine/ERGEBNIS.md ✓",
+      "notes": "Stufe 4 | Status: fertig | REQ: REQ-P15, REQ-P17, REQ-P19, REQ-P20 | Bauteil: BT-300, BT-320, BT-321 | Wissen: W05, W14, T06, P07 | Befunde: B-BAT-002, B-BAT-004, B-BAT-013, B-BAT-045, B-BAT-058 | ENT: ENT-004, ENT-110, ENT-111, ENT-112, ENT-113, ENT-114, ENT-115, ENT-146, ENT-163, ENT-164, ENT-165, ENT-166, ENT-167, ENT-168, ENT-183, ENT-184, ENT-185, ENT-186, ENT-187 | Stückliste: 300.1, 300.2, 300.3, 300.4, 300.6, 600.4, 700.7, 700.10 | Software: foxBMS | Doku: sim/elektrik/e3_platine/ERWARTUNG.md | Ergebnis: sim/elektrik/e3_platine/ERGEBNIS.md ✓",
       "is_start": false,
       "is_end": false
     },

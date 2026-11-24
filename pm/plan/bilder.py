@@ -3,7 +3,7 @@
 Sucht alle *.png unter sim/ und cad/ und erzeugt docs/16_ergebnisbilder.md (nicht von Hand bearbeiten)."""
 import os, re, glob, datetime
 R = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-VORGANG = {"vergleich_lfp_nmc": "C0", "varianten_lfp_nmc": "C0b", "g1_anordnung": "G1", "entwurf": "G2", "render": "G2", "detail": "G2", "k0_zelle": "K0", "bilder": "K0", "k1_schnellladen": "K1", "e1_querschnitte": "E1", "e3b_platine_waerme": "E3b", "e3_platine": "E3", "e3d_fmeda": "E3d", "e3c_bms_platine": "E3c"}
+VORGANG = {"vergleich_lfp_nmc": "C0", "varianten_lfp_nmc": "C0b", "g1_anordnung": "G1", "entwurf": "G2", "render": "G2", "detail": "G2", "k0_zelle": "K0", "bilder": "K0", "k1_schnellladen": "K1", "e1_querschnitte": "E1", "e3b_platine_waerme": "E3b", "e3_platine": "E3", "e3d_fmeda": "E3d", "e3c_bms_platine": "E3c", "l1_leichtbau": "L1"}
 bilder = sorted(p for t in ("sim", "cad") for p in glob.glob(os.path.join(R, t, "**", "*.png"), recursive=True))
 # Filmeinzelbilder (_film, lauf_film) sind Zwischendateien fuer mp4, keine Ergebnisbilder (Opus-Auftrag 2026-11-23)
 bilder = [p for p in bilder if not any(x in p.split(os.sep) for x in ("_film", "lauf_film"))]
@@ -41,6 +41,7 @@ for p in bilder:
     if not os.path.exists(erg): erg = os.path.join(os.path.dirname(ordner), "ergebnis.json")  # render/ -> entwurf/..
     if rel == "cad/baukasten/bilder" and name.startswith("g5_"): erg = os.path.join(R, "cad/baukasten/ausgabe", "ergebnis_" + name.split("_")[1] + ".json")   # G5.8
     if rel == "sim/elektrik/e3_platine": erg = os.path.join(ordner, "ergebnis_platine.json")   # E3 (Sonnet 2026-11-24)
+    if rel == "sim/mechanik/l1_leichtbau": erg = os.path.join(ordner, "ergebnis.json")   # L1 (Sonnet 2026-11-24)
     if rel == "sim/elektrik/e3c_bms_platine": erg = os.path.join(ordner, "ergebnis_platine.json")   # E3c (Sonnet 2026-11-24)
     quelle = os.path.relpath(erg, R) if os.path.exists(erg) else "ergebnis.json fehlt"
     vorg = "G5" if rel.startswith("cad/baukasten") else "G4" if rel.startswith("cad/pack") else VORGANG.get(os.path.basename(ordner), "unbekannt")

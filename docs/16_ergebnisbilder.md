@@ -2188,6 +2188,27 @@ Alle Bilder unter `sim/` und `cad/` mit Lesehilfe für Nicht-Fachleute, Quelle u
 - Vorgang: unbekannt
 
 
+## sim/mechanik/l1_leichtbau
+
+### wasserfall_LFP.png
+
+![wasserfall_LFP.png](../sim/mechanik/l1_leichtbau/wasserfall_LFP.png)
+
+**Lesehilfe:** Links der heutige Pack aus dem CAD (620 kg), dann je eine grüne Stufe pro Leichtbau-Hebel H1 bis H6 (Stufe = Mitte der Schätzung von Opus, schwarzer Strich = Spanne von–bis), rechts die Masse danach als Spanne (540 bis 576 kg). Die grüne Fläche mit dicker Linie ist das Ziel aus REQ-P07 (höchstens 528 kg). Liegt der blaue Balken samt Strich über der Linie, reichen die Hebel nicht. Die rote Raute bei H5 ist die Einsparung, die sich allein aus der Geometrie ergibt. Das Band aus W51 fehlt noch. Die Achse beginnt nicht bei null.
+
+- Quelle: `sim/mechanik/l1_leichtbau/ergebnis.json`; Lesehilfe: `sim/mechanik/l1_leichtbau/wasserfall_lesehilfe.md`
+- Vorgang: L1
+
+### wasserfall_NMC.png
+
+![wasserfall_NMC.png](../sim/mechanik/l1_leichtbau/wasserfall_NMC.png)
+
+**Lesehilfe:** Gleiche Darstellung für den NMC-Pack (Ist 482 kg, Ziel 370 kg) mit sieben Hebeln (H7: Verguss). Die gestrichelte blaue Linie zeigt die Masse der Zellen allein (308 kg): nur 62 kg blieben für alles andere, der Rest wiegt heute 174 kg.
+
+- Quelle: `sim/mechanik/l1_leichtbau/ergebnis.json`; Lesehilfe: `sim/mechanik/l1_leichtbau/wasserfall_lesehilfe.md`
+- Vorgang: L1
+
+
 ## sim/mechanik/m0_gehaeuse
 
 ### draufsicht_LFP.png

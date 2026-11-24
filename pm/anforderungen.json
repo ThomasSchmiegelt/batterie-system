@@ -279,7 +279,7 @@
    "id": "REQ-P07",
    "gruppe": "REQ-P",
    "text": "Bauraum (L × B × H) und Masse",
-   "wert": "L ≤ 2400 mm (Autor, Freigaberunde 2026-11-23); B = 1430 mm (ENT-030, Autor 2026-11-17); H ≤ 130 mm im Zellbereich, Dom Schaltbox ≤ 250 mm; Masse LFP ≤ 528 kg, NMC ≤ 370 kg (Startwerte als Ziel)",
+   "wert": "L ≤ 2400 mm (Autor, Freigaberunde 2026-11-23); B = 1430 mm (ENT-030, Autor 2026-11-17); H ≤ 130 mm im Zellbereich, Dom Schaltbox ≤ 250 mm; Masse LFP ≤ 600 kg, NMC ≤ 450 kg (Zellanteil ≥ 77 % bzw. ≥ 68 %, über Richtwert W51 70/65 %; Autor 2026-11-24, AEN-022); Fernziel 528/370 kg nur mit Cell-to-Pack (OPT-012)",
    "quelle_lastenheft": "Autor",
    "prioritaet": "Muss",
    "status_lastenheft": "festgelegt",
@@ -330,7 +330,7 @@
       "datei": "pm/startwerte_LFP.json",
       "schluessel": "abgeleitet.masse_kg"
      },
-     "hinweis": "Startwerte als Ziel (Runde 1): LFP ≤ 528 kg, NMC ≤ 370 kg; beide aktuell verfehlt, Leichtbauziel Schleife 2"
+     "hinweis": "Neu 2026-11-24 (AEN-022): LFP ≤ 600 kg, NMC ≤ 450 kg; Ist 620/482 kg verfehlt, Leichtbau L2 (Schleife 2). Alt 528/370 kg = Fernziel OPT-012"
     },
     {
      "groesse": "Masse",
@@ -342,7 +342,7 @@
       "datei": "pm/startwerte_NMC.json",
       "schluessel": "abgeleitet.masse_kg"
      },
-     "hinweis": "Startwerte als Ziel (Runde 1): LFP ≤ 528 kg, NMC ≤ 370 kg; beide aktuell verfehlt, Leichtbauziel Schleife 2"
+     "hinweis": "Neu 2026-11-24 (AEN-022): LFP ≤ 600 kg, NMC ≤ 450 kg; Ist 620/482 kg verfehlt, Leichtbau L2 (Schleife 2). Alt 528/370 kg = Fernziel OPT-012"
     }
    ],
    "nachweis": [

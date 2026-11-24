@@ -1070,19 +1070,59 @@
   },
   {
    "typ": "Merkmal",
+   "wert": 160.0,
+   "wert_LFP": 160.0,
+   "wert_NMC": 160.0,
+   "entscheidung": "ENT-188",
    "id": "BT-311.laenge_mm"
   },
   {
    "typ": "Merkmal",
+   "wert": 100.0,
+   "wert_LFP": 100.0,
+   "wert_NMC": 100.0,
+   "entscheidung": "ENT-189",
    "id": "BT-311.breite_mm"
   },
   {
    "typ": "Merkmal",
+   "wert": 4.0,
+   "wert_LFP": 4.0,
+   "wert_NMC": 4.0,
+   "entscheidung": "ENT-190",
    "id": "BT-311.lagen"
   },
   {
    "typ": "Merkmal",
+   "wert": 10.0,
+   "wert_LFP": 10.0,
+   "wert_NMC": 10.0,
+   "entscheidung": "ENT-191",
    "id": "BT-311.kriechstrecke_hv_nv_mm"
+  },
+  {
+   "typ": "Merkmal",
+   "wert": 8.0,
+   "wert_LFP": 8.0,
+   "wert_NMC": 8.0,
+   "entscheidung": "ENT-195",
+   "id": "BT-311.luftstrecke_hv_nv_mm"
+  },
+  {
+   "typ": "Merkmal",
+   "wert": 0.15,
+   "wert_LFP": 0.15,
+   "wert_NMC": 0.15,
+   "entscheidung": "ENT-196",
+   "id": "BT-311.abstand_nv_mm"
+  },
+  {
+   "typ": "Merkmal",
+   "wert": 3.0,
+   "wert_LFP": 3.0,
+   "wert_NMC": 3.0,
+   "entscheidung": "ENT-197",
+   "id": "BT-311.schuetzkanaele"
   },
   {
    "typ": "Merkmal",
@@ -1219,6 +1259,10 @@
   {
    "typ": "Merkmal",
    "id": "BT-325.verzoegerung_ms"
+  },
+  {
+   "typ": "Merkmal",
+   "id": "BT-325.bauform"
   },
   {
    "typ": "Merkmal",
@@ -1795,6 +1839,14 @@
   {
    "typ": "Merkmal",
    "id": "BT-722.breite_mm"
+  },
+  {
+   "typ": "Merkmal",
+   "wert": 3.0,
+   "wert_LFP": 3.0,
+   "wert_NMC": 3.0,
+   "entscheidung": "ENT-194",
+   "id": "BT-722.lichte_hoehe_zugabe_mm"
   },
   {
    "typ": "Merkmal",
@@ -5483,7 +5535,7 @@
   {
    "typ": "Entscheidung",
    "name": "Ausgleichsschalter N-MOSFET Logikpegel",
-   "status": "vorgeschlagen",
+   "status": "ersetzt (durch ENT-192)",
    "datum": "2026-11-24",
    "variante": "alle",
    "pfad": "pm/entscheidungen/ENT-173.md",
@@ -5500,7 +5552,7 @@
   },
   {
    "typ": "Entscheidung",
-   "name": "Sekundärschutz Schwelle LFP 3,75 V",
+   "name": "Sekundärschutz Schwelle je Zelle LFP 3,75 V",
    "status": "vorgeschlagen",
    "datum": "2026-11-24",
    "variante": "[\"LFP\"]",
@@ -5509,7 +5561,7 @@
   },
   {
    "typ": "Entscheidung",
-   "name": "Sekundärschutz Schwelle NMC 4,25 V",
+   "name": "Sekundärschutz Schwelle je Zelle NMC 4,25 V",
    "status": "vorgeschlagen",
    "datum": "2026-11-24",
    "variante": "[\"NMC\"]",
@@ -5618,7 +5670,7 @@
   {
    "typ": "Entscheidung",
    "name": "BMS-Platine BT-311 Länge 160 mm",
-   "status": "vorgeschlagen",
+   "status": "entschieden (Opus, delegiert durch Autor 2026-11-23)",
    "datum": "2026-11-24",
    "variante": "alle",
    "pfad": "pm/entscheidungen/ENT-188.md",
@@ -5627,7 +5679,7 @@
   {
    "typ": "Entscheidung",
    "name": "BMS-Platine BT-311 Breite 100 mm",
-   "status": "vorgeschlagen",
+   "status": "entschieden (Opus, delegiert durch Autor 2026-11-23)",
    "datum": "2026-11-24",
    "variante": "alle",
    "pfad": "pm/entscheidungen/ENT-189.md",
@@ -5636,7 +5688,7 @@
   {
    "typ": "Entscheidung",
    "name": "BMS-Platine BT-311 vier Lagen",
-   "status": "vorgeschlagen",
+   "status": "entschieden (Opus, delegiert durch Autor 2026-11-23)",
    "datum": "2026-11-24",
    "variante": "alle",
    "pfad": "pm/entscheidungen/ENT-190.md",
@@ -5645,11 +5697,65 @@
   {
    "typ": "Entscheidung",
    "name": "BMS-Platine Kriechstrecke HV/NV 10 mm (Luftstrecke 8 mm, Höhe 3000 m)",
-   "status": "vorgeschlagen",
+   "status": "entschieden (Opus, delegiert durch Autor 2026-11-23)",
    "datum": "2026-11-24",
    "variante": "alle",
    "pfad": "pm/entscheidungen/ENT-191.md",
    "id": "ENT-191"
+  },
+  {
+   "typ": "Entscheidung",
+   "name": "Ausgleichsschalter Doppel-N-FET SOT-363, zwei Schalter in Reihe",
+   "status": "vorgeschlagen (Opus, delegiert durch Autor 2026-11-23)",
+   "datum": "2026-11-24",
+   "variante": "alle",
+   "pfad": "pm/entscheidungen/ENT-192.md",
+   "id": "ENT-192"
+  },
+  {
+   "typ": "Entscheidung",
+   "name": "Sekundärschutz 3 x 6-Zellen-Überspannungsschutz TSSOP-16, Messung je Zelle",
+   "status": "vorgeschlagen (Opus, delegiert durch Autor 2026-11-23)",
+   "datum": "2026-11-24",
+   "variante": "alle",
+   "pfad": "pm/entscheidungen/ENT-193.md",
+   "id": "ENT-193"
+  },
+  {
+   "typ": "Entscheidung",
+   "name": "Servicedeckel LFP: lichte Höhe Kopf M8 + 3 mm",
+   "status": "entschieden (Opus, delegiert durch Autor 2026-11-23)",
+   "datum": "2026-11-24",
+   "variante": "alle",
+   "pfad": "pm/entscheidungen/ENT-194.md",
+   "id": "ENT-194"
+  },
+  {
+   "typ": "Entscheidung",
+   "name": "BMS-Platine Luftstrecke HV/NV 8 mm (3000 m)",
+   "status": "entschieden (Opus, delegiert durch Autor 2026-11-23)",
+   "datum": "2026-11-24",
+   "variante": "alle",
+   "pfad": "pm/entscheidungen/ENT-195.md",
+   "id": "ENT-195"
+  },
+  {
+   "typ": "Entscheidung",
+   "name": "BMS-Platine Abstand NV-Bereich 0,15 mm",
+   "status": "entschieden (Opus, delegiert durch Autor 2026-11-23)",
+   "datum": "2026-11-24",
+   "variante": "alle",
+   "pfad": "pm/entscheidungen/ENT-196.md",
+   "id": "ENT-196"
+  },
+  {
+   "typ": "Entscheidung",
+   "name": "BMS-Platine drei Schützkanäle (Plus, Minus, Vorladung)",
+   "status": "entschieden (Opus, delegiert durch Autor 2026-11-23)",
+   "datum": "2026-11-24",
+   "variante": "alle",
+   "pfad": "pm/entscheidungen/ENT-197.md",
+   "id": "ENT-197"
   },
   {
    "typ": "Befund",
@@ -6035,6 +6141,27 @@
    "datum": "2026-11-24",
    "pfad": "BEFUNDE.md",
    "id": "B-BAT-055"
+  },
+  {
+   "typ": "Befund",
+   "name": "KR2: Konzept K4 verletzt die Festforderung, von PI gefunden (2026-11-24)",
+   "datum": "2026-11-24",
+   "pfad": "BEFUNDE.md",
+   "id": "B-BAT-056"
+  },
+  {
+   "typ": "Befund",
+   "name": "pack_e2d.py war kurz leer (Skriptfehler Sonnet E3c), rekonstruiert (2026-11-24)",
+   "datum": "2026-11-24",
+   "pfad": "BEFUNDE.md",
+   "id": "B-BAT-057"
+  },
+  {
+   "typ": "Befund",
+   "name": "Massenziel REQ-P07 war unerreichbar, neu 600/450 kg (2026-11-24)",
+   "datum": "2026-11-24",
+   "pfad": "BEFUNDE.md",
+   "id": "B-BAT-058"
   },
   {
    "typ": "Quelle",
@@ -6461,6 +6588,12 @@
    "status": "11 Belege bestaetigt, 0 Fehler",
    "pfad": "forschung/ergebnis/W50.md",
    "id": "W50"
+  },
+  {
+   "typ": "Quelle",
+   "status": "9 Belege bestaetigt, 0 Fehler",
+   "pfad": "forschung/ergebnis/W51.md",
+   "id": "W51"
   },
   {
    "typ": "Norm",
@@ -8265,6 +8398,12 @@
   },
   {
    "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/ergebnis_schaltplan.json",
+   "pfad": "sim/elektrik/e3_platine/ergebnis_schaltplan.json",
+   "id": "sim/elektrik/e3_platine/ergebnis_schaltplan.json"
+  },
+  {
+   "typ": "Ergebnis",
    "datei": "sim/elektrik/e3_platine/ergebnis_vorladung.json",
    "pfad": "sim/elektrik/e3_platine/ergebnis_vorladung.json",
    "id": "sim/elektrik/e3_platine/ergebnis_vorladung.json"
@@ -8367,6 +8506,90 @@
   },
   {
    "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/schaltplan_LFP_afe.png",
+   "pfad": "sim/elektrik/e3_platine/schaltplan_LFP_afe.png",
+   "id": "sim/elektrik/e3_platine/schaltplan_LFP_afe.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/schaltplan_LFP_daisy.png",
+   "pfad": "sim/elektrik/e3_platine/schaltplan_LFP_daisy.png",
+   "id": "sim/elektrik/e3_platine/schaltplan_LFP_daisy.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/schaltplan_LFP_deckblatt.png",
+   "pfad": "sim/elektrik/e3_platine/schaltplan_LFP_deckblatt.png",
+   "id": "sim/elektrik/e3_platine/schaltplan_LFP_deckblatt.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/schaltplan_LFP_kanaele.png",
+   "pfad": "sim/elektrik/e3_platine/schaltplan_LFP_kanaele.png",
+   "id": "sim/elektrik/e3_platine/schaltplan_LFP_kanaele.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/schaltplan_LFP_kanal.png",
+   "pfad": "sim/elektrik/e3_platine/schaltplan_LFP_kanal.png",
+   "id": "sim/elektrik/e3_platine/schaltplan_LFP_kanal.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/schaltplan_LFP_ntc_stecker.png",
+   "pfad": "sim/elektrik/e3_platine/schaltplan_LFP_ntc_stecker.png",
+   "id": "sim/elektrik/e3_platine/schaltplan_LFP_ntc_stecker.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/schaltplan_LFP_sekundaerschutz.png",
+   "pfad": "sim/elektrik/e3_platine/schaltplan_LFP_sekundaerschutz.png",
+   "id": "sim/elektrik/e3_platine/schaltplan_LFP_sekundaerschutz.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/schaltplan_NMC_afe.png",
+   "pfad": "sim/elektrik/e3_platine/schaltplan_NMC_afe.png",
+   "id": "sim/elektrik/e3_platine/schaltplan_NMC_afe.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/schaltplan_NMC_daisy.png",
+   "pfad": "sim/elektrik/e3_platine/schaltplan_NMC_daisy.png",
+   "id": "sim/elektrik/e3_platine/schaltplan_NMC_daisy.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/schaltplan_NMC_deckblatt.png",
+   "pfad": "sim/elektrik/e3_platine/schaltplan_NMC_deckblatt.png",
+   "id": "sim/elektrik/e3_platine/schaltplan_NMC_deckblatt.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/schaltplan_NMC_kanaele.png",
+   "pfad": "sim/elektrik/e3_platine/schaltplan_NMC_kanaele.png",
+   "id": "sim/elektrik/e3_platine/schaltplan_NMC_kanaele.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/schaltplan_NMC_kanal.png",
+   "pfad": "sim/elektrik/e3_platine/schaltplan_NMC_kanal.png",
+   "id": "sim/elektrik/e3_platine/schaltplan_NMC_kanal.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/schaltplan_NMC_ntc_stecker.png",
+   "pfad": "sim/elektrik/e3_platine/schaltplan_NMC_ntc_stecker.png",
+   "id": "sim/elektrik/e3_platine/schaltplan_NMC_ntc_stecker.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3_platine/schaltplan_NMC_sekundaerschutz.png",
+   "pfad": "sim/elektrik/e3_platine/schaltplan_NMC_sekundaerschutz.png",
+   "id": "sim/elektrik/e3_platine/schaltplan_NMC_sekundaerschutz.png"
+  },
+  {
+   "typ": "Ergebnis",
    "datei": "sim/elektrik/e3_platine/spice_ausgleich_vorladung.png",
    "pfad": "sim/elektrik/e3_platine/spice_ausgleich_vorladung.png",
    "id": "sim/elektrik/e3_platine/spice_ausgleich_vorladung.png"
@@ -8408,6 +8631,120 @@
    "datei": "sim/elektrik/e3c_bms_platine/ergebnis_kriechstrecke.json",
    "pfad": "sim/elektrik/e3c_bms_platine/ergebnis_kriechstrecke.json",
    "id": "sim/elektrik/e3c_bms_platine/ergebnis_kriechstrecke.json"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3c_bms_platine/ergebnis_pack_LFP_teilA.json",
+   "pfad": "sim/elektrik/e3c_bms_platine/ergebnis_pack_LFP_teilA.json",
+   "id": "sim/elektrik/e3c_bms_platine/ergebnis_pack_LFP_teilA.json"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3c_bms_platine/ergebnis_platine.json",
+   "pfad": "sim/elektrik/e3c_bms_platine/ergebnis_platine.json",
+   "id": "sim/elektrik/e3c_bms_platine/ergebnis_platine.json"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3c_bms_platine/ergebnis_routing.json",
+   "pfad": "sim/elektrik/e3c_bms_platine/ergebnis_routing.json",
+   "id": "sim/elektrik/e3c_bms_platine/ergebnis_routing.json"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3c_bms_platine/ergebnis_schaltplan.json",
+   "pfad": "sim/elektrik/e3c_bms_platine/ergebnis_schaltplan.json",
+   "id": "sim/elektrik/e3c_bms_platine/ergebnis_schaltplan.json"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3c_bms_platine/ERGEBNIS.md",
+   "pfad": "sim/elektrik/e3c_bms_platine/ERGEBNIS.md",
+   "id": "sim/elektrik/e3c_bms_platine/ERGEBNIS.md"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3c_bms_platine/platine_bms.png",
+   "pfad": "sim/elektrik/e3c_bms_platine/platine_bms.png",
+   "id": "sim/elektrik/e3c_bms_platine/platine_bms.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3c_bms_platine/platine_bms_3d_bottom.png",
+   "pfad": "sim/elektrik/e3c_bms_platine/platine_bms_3d_bottom.png",
+   "id": "sim/elektrik/e3c_bms_platine/platine_bms_3d_bottom.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3c_bms_platine/platine_bms_3d_iso.png",
+   "pfad": "sim/elektrik/e3c_bms_platine/platine_bms_3d_iso.png",
+   "id": "sim/elektrik/e3c_bms_platine/platine_bms_3d_iso.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3c_bms_platine/platine_bms_3d_nah.png",
+   "pfad": "sim/elektrik/e3c_bms_platine/platine_bms_3d_nah.png",
+   "id": "sim/elektrik/e3c_bms_platine/platine_bms_3d_nah.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3c_bms_platine/platine_bms_3d_top.png",
+   "pfad": "sim/elektrik/e3c_bms_platine/platine_bms_3d_top.png",
+   "id": "sim/elektrik/e3c_bms_platine/platine_bms_3d_top.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3c_bms_platine/platine_bms_einbau.png",
+   "pfad": "sim/elektrik/e3c_bms_platine/platine_bms_einbau.png",
+   "id": "sim/elektrik/e3c_bms_platine/platine_bms_einbau.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3c_bms_platine/platine_bms_explosion.png",
+   "pfad": "sim/elektrik/e3c_bms_platine/platine_bms_explosion.png",
+   "id": "sim/elektrik/e3c_bms_platine/platine_bms_explosion.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-1.png",
+   "pfad": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-1.png",
+   "id": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-1.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-2.png",
+   "pfad": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-2.png",
+   "id": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-2.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-3.png",
+   "pfad": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-3.png",
+   "id": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-3.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-4.png",
+   "pfad": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-4.png",
+   "id": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-4.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-5.png",
+   "pfad": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-5.png",
+   "id": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-5.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-6.png",
+   "pfad": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-6.png",
+   "id": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-6.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-7.png",
+   "pfad": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-7.png",
+   "id": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-7.png"
   },
   {
    "typ": "Rechnung",
@@ -16524,6 +16861,37 @@
   },
   {
    "typ": "Rechnung",
+   "name": "l1_leichtbau",
+   "pfad": "sim/mechanik/l1_leichtbau",
+   "eingaben_praefix": 0,
+   "id": "sim/mechanik/l1_leichtbau"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/mechanik/l1_leichtbau/ergebnis.json",
+   "pfad": "sim/mechanik/l1_leichtbau/ergebnis.json",
+   "id": "sim/mechanik/l1_leichtbau/ergebnis.json"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/mechanik/l1_leichtbau/ERGEBNIS.md",
+   "pfad": "sim/mechanik/l1_leichtbau/ERGEBNIS.md",
+   "id": "sim/mechanik/l1_leichtbau/ERGEBNIS.md"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/mechanik/l1_leichtbau/wasserfall_LFP.png",
+   "pfad": "sim/mechanik/l1_leichtbau/wasserfall_LFP.png",
+   "id": "sim/mechanik/l1_leichtbau/wasserfall_LFP.png"
+  },
+  {
+   "typ": "Ergebnis",
+   "datei": "sim/mechanik/l1_leichtbau/wasserfall_NMC.png",
+   "pfad": "sim/mechanik/l1_leichtbau/wasserfall_NMC.png",
+   "id": "sim/mechanik/l1_leichtbau/wasserfall_NMC.png"
+  },
+  {
+   "typ": "Rechnung",
    "name": "m0_gehaeuse",
    "pfad": "sim/mechanik/m0_gehaeuse",
    "eingaben_praefix": 0,
@@ -19441,6 +19809,13 @@
   },
   {
    "typ": "Dokument",
+   "name": "E3c",
+   "pfad": "praesentation/bausteine/E3c.md",
+   "art": "bausteine",
+   "id": "praesentation/bausteine/E3c.md"
+  },
+  {
+   "typ": "Dokument",
    "name": "E3d",
    "pfad": "praesentation/bausteine/E3d.md",
    "art": "bausteine",
@@ -19557,6 +19932,20 @@
    "pfad": "praesentation/bausteine/KR1.md",
    "art": "bausteine",
    "id": "praesentation/bausteine/KR1.md"
+  },
+  {
+   "typ": "Dokument",
+   "name": "KR2",
+   "pfad": "praesentation/bausteine/KR2.md",
+   "art": "bausteine",
+   "id": "praesentation/bausteine/KR2.md"
+  },
+  {
+   "typ": "Dokument",
+   "name": "L1",
+   "pfad": "praesentation/bausteine/L1.md",
+   "art": "bausteine",
+   "id": "praesentation/bausteine/L1.md"
   },
   {
    "typ": "Dokument",
@@ -20373,6 +20762,27 @@
    "key": "hat_merkmal"
   },
   {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-311",
+   "target": "BT-311.luftstrecke_hv_nv_mm",
+   "key": "hat_merkmal"
+  },
+  {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-311",
+   "target": "BT-311.abstand_nv_mm",
+   "key": "hat_merkmal"
+  },
+  {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-311",
+   "target": "BT-311.schuetzkanaele",
+   "key": "hat_merkmal"
+  },
+  {
    "typ": "teil_von",
    "quelle": "struktur.json eltern",
    "source": "BT-320",
@@ -20601,6 +21011,13 @@
    "quelle": "struktur.json merkmale",
    "source": "BT-325",
    "target": "BT-325.verzoegerung_ms",
+   "key": "hat_merkmal"
+  },
+  {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-325",
+   "target": "BT-325.bauform",
    "key": "hat_merkmal"
   },
   {
@@ -21686,6 +22103,13 @@
    "quelle": "struktur.json merkmale",
    "source": "BT-722",
    "target": "BT-722.breite_mm",
+   "key": "hat_merkmal"
+  },
+  {
+   "typ": "hat_merkmal",
+   "quelle": "struktur.json merkmale",
+   "source": "BT-722",
+   "target": "BT-722.lichte_hoehe_zugabe_mm",
    "key": "hat_merkmal"
   },
   {
@@ -22986,6 +23410,48 @@
   {
    "typ": "eingang_cad",
    "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-311.luftstrecke_hv_nv_mm",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-311.luftstrecke_hv_nv_mm",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-311.abstand_nv_mm",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-311.abstand_nv_mm",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-311.schuetzkanaele",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-311.schuetzkanaele",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
    "source": "BT-320.anzahl",
    "target": "cad:LFP",
    "key": "eingang_cad"
@@ -23358,6 +23824,20 @@
    "typ": "eingang_cad",
    "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
    "source": "BT-325.verzoegerung_ms",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-325.bauform",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-325.bauform",
    "target": "cad:NMC",
    "key": "eingang_cad"
   },
@@ -24940,6 +25420,20 @@
    "typ": "eingang_cad",
    "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
    "source": "BT-722.breite_mm",
+   "target": "cad:NMC",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-722.lichte_hoehe_zugabe_mm",
+   "target": "cad:LFP",
+   "key": "eingang_cad"
+  },
+  {
+   "typ": "eingang_cad",
+   "quelle": "Schema Nachtrag 1: CAD liest alle Merkmale",
+   "source": "BT-722.lichte_hoehe_zugabe_mm",
    "target": "cad:NMC",
    "key": "eingang_cad"
   },
@@ -25732,6 +26226,13 @@
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "docs/03_anforderungsverfolgung.md",
+   "target": "B-BAT-058",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/03_anforderungsverfolgung.md",
    "target": "REQ-D01",
    "key": "erwaehnt"
   },
@@ -26196,7 +26697,21 @@
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "docs/08_ki_einsatz_protokoll.md",
+   "target": "BT-311",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/08_ki_einsatz_protokoll.md",
    "target": "BT-610",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/08_ki_einsatz_protokoll.md",
+   "target": "BT-722",
    "key": "erwaehnt"
   },
   {
@@ -26364,6 +26879,20 @@
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "docs/08_ki_einsatz_protokoll.md",
+   "target": "ENT-188",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/08_ki_einsatz_protokoll.md",
+   "target": "ENT-194",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/08_ki_einsatz_protokoll.md",
    "target": "P01",
    "key": "erwaehnt"
   },
@@ -26463,6 +26992,13 @@
    "quelle": "Textvorkommen",
    "source": "docs/08_ki_einsatz_protokoll.md",
    "target": "REQ-P03",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/08_ki_einsatz_protokoll.md",
+   "target": "REQ-P07",
    "key": "erwaehnt"
   },
   {
@@ -26740,6 +27276,13 @@
   },
   {
    "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/08_ki_einsatz_protokoll.md",
+   "target": "W51",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
    "quelle": "Textvorkommen Pfad",
    "source": "docs/08_ki_einsatz_protokoll.md",
    "target": "docs/03_anforderungsverfolgung.md",
@@ -26826,6 +27369,13 @@
    "typ": "erwaehnt",
    "quelle": "Textvorkommen Pfad",
    "source": "docs/08_ki_einsatz_protokoll.md",
+   "target": "sim/elektrik/e3c_bms_platine/ERGEBNIS.md",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/08_ki_einsatz_protokoll.md",
    "target": "sim/elektrik/e3d_fmeda/ERGEBNIS.md",
    "key": "erwaehnt"
   },
@@ -26876,6 +27426,13 @@
    "quelle": "Textvorkommen Pfad",
    "source": "docs/08_ki_einsatz_protokoll.md",
    "target": "sim/kuehlung/k3_gesamt/ERGEBNIS.md",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/08_ki_einsatz_protokoll.md",
+   "target": "sim/mechanik/l1_leichtbau/ERGEBNIS.md",
    "key": "erwaehnt"
   },
   {
@@ -34923,6 +35480,20 @@
    "key": "belegt_durch"
   },
   {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-175",
+   "target": "B-BAT-055",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-175",
+   "target": "B-BAT-055",
+   "key": "erwaehnt"
+  },
+  {
    "typ": "gilt_fuer",
    "quelle": "ENT variante",
    "source": "ENT-175",
@@ -34934,6 +35505,13 @@
    "quelle": "Textvorkommen",
    "source": "ENT-175",
    "target": "BT-325",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-175",
+   "target": "ENT-193",
    "key": "erwaehnt"
   },
   {
@@ -34959,6 +35537,20 @@
    "key": "belegt_durch"
   },
   {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-176",
+   "target": "B-BAT-055",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-176",
+   "target": "B-BAT-055",
+   "key": "erwaehnt"
+  },
+  {
    "typ": "gilt_fuer",
    "quelle": "ENT variante",
    "source": "ENT-176",
@@ -34970,6 +35562,13 @@
    "quelle": "Textvorkommen",
    "source": "ENT-176",
    "target": "BT-325",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-176",
+   "target": "ENT-193",
    "key": "erwaehnt"
   },
   {
@@ -35518,6 +36117,180 @@
    "source": "ENT-191",
    "target": "BT-311",
    "key": "erwaehnt"
+  },
+  {
+   "typ": "legt_fest",
+   "quelle": "ENT bauteile+merkmal",
+   "wert": "\"Doppel-N-FET SOT-363, zwei Schalter in Reihe, getrennte Gates, R_DS,on je FET <= 0,5 Ohm, AEC-Q101\"",
+   "source": "ENT-192",
+   "target": "BT-323.schalter",
+   "key": "legt_fest"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-192",
+   "target": "REQ-P15",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-192",
+   "target": "REQ-P18",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-192",
+   "target": "B-BAT-055",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-192",
+   "target": "sim/elektrik/e3d_fmeda/ERGEBNIS.md",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "ersetzt",
+   "quelle": "ENT ersetzt",
+   "source": "ENT-192",
+   "target": "ENT-173",
+   "key": "ersetzt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-192",
+   "target": "ENT-173",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "legt_fest",
+   "quelle": "ENT bauteile+merkmal",
+   "wert": "\"3 x generischer 6-Zellen-Überspannungsschutz, TSSOP-16, je 7 Messeingänge, Ausgänge wired-OR auf ABSCHALT\"",
+   "source": "ENT-193",
+   "target": "BT-325.bauform",
+   "key": "legt_fest"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-193",
+   "target": "REQ-P18",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-193",
+   "target": "B-BAT-055",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-193",
+   "target": "sim/elektrik/e3d_fmeda/ERGEBNIS.md",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ENT-193",
+   "target": "ENT-175",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "legt_fest",
+   "quelle": "ENT bauteile+merkmal",
+   "wert": "3",
+   "source": "ENT-194",
+   "target": "BT-722.lichte_hoehe_zugabe_mm",
+   "key": "legt_fest"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-194",
+   "target": "REQ-P13",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-194",
+   "target": "sim/elektrik/e3c_bms_platine/ERGEBNIS.md",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "legt_fest",
+   "quelle": "ENT bauteile+merkmal",
+   "wert": "8",
+   "source": "ENT-195",
+   "target": "BT-311.luftstrecke_hv_nv_mm",
+   "key": "legt_fest"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-195",
+   "target": "REQ-P19",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-195",
+   "target": "sim/elektrik/e3c_bms_platine/ERGEBNIS.md",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "legt_fest",
+   "quelle": "ENT bauteile+merkmal",
+   "wert": "0.15",
+   "source": "ENT-196",
+   "target": "BT-311.abstand_nv_mm",
+   "key": "legt_fest"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-196",
+   "target": "REQ-P19",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-196",
+   "target": "sim/elektrik/e3c_bms_platine/ERGEBNIS.md",
+   "key": "belegt_durch"
+  },
+  {
+   "typ": "legt_fest",
+   "quelle": "ENT bauteile+merkmal",
+   "wert": "3",
+   "source": "ENT-197",
+   "target": "BT-311.schuetzkanaele",
+   "key": "legt_fest"
+  },
+  {
+   "typ": "erfuellt_beitrag",
+   "quelle": "ENT anforderungen",
+   "source": "ENT-197",
+   "target": "REQ-P18",
+   "key": "erfuellt_beitrag"
+  },
+  {
+   "typ": "belegt_durch",
+   "quelle": "ENT belege",
+   "source": "ENT-197",
+   "target": "sim/elektrik/e3c_bms_platine/ERGEBNIS.md",
+   "key": "belegt_durch"
   },
   {
    "typ": "erwaehnt",
@@ -36889,6 +37662,34 @@
    "quelle": "Textvorkommen",
    "source": "B-BAT-054",
    "target": "ENT-185",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "B-BAT-055",
+   "target": "BT-311",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "B-BAT-055",
+   "target": "BT-722",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "B-BAT-058",
+   "target": "REQ-P07",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "B-BAT-058",
+   "target": "W51",
    "key": "erwaehnt"
   },
   {
@@ -38589,28 +39390,28 @@
    "typ": "gehoert_zu",
    "quelle": "ERWARTUNG ## Anforderung",
    "source": "sim/elektrik/e2_elektronik",
-   "target": "REQ-P13",
+   "target": "REQ-P11",
    "key": "gehoert_zu"
   },
   {
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "sim/elektrik/e2_elektronik",
-   "target": "REQ-P13",
+   "target": "REQ-P11",
    "key": "erwaehnt"
   },
   {
    "typ": "gehoert_zu",
    "quelle": "ERWARTUNG ## Anforderung",
    "source": "sim/elektrik/e2_elektronik",
-   "target": "REQ-P11",
+   "target": "REQ-P13",
    "key": "gehoert_zu"
   },
   {
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "sim/elektrik/e2_elektronik",
-   "target": "REQ-P11",
+   "target": "REQ-P13",
    "key": "erwaehnt"
   },
   {
@@ -39191,6 +39992,20 @@
    "typ": "gehoert_zu",
    "quelle": "ERWARTUNG ## Anforderung",
    "source": "sim/elektrik/e3_platine",
+   "target": "REQ-P20",
+   "key": "gehoert_zu"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3_platine",
+   "target": "REQ-P20",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "gehoert_zu",
+   "quelle": "ERWARTUNG ## Anforderung",
+   "source": "sim/elektrik/e3_platine",
    "target": "REQ-P19",
    "key": "gehoert_zu"
   },
@@ -39205,28 +40020,14 @@
    "typ": "gehoert_zu",
    "quelle": "ERWARTUNG ## Anforderung",
    "source": "sim/elektrik/e3_platine",
-   "target": "REQ-P15",
+   "target": "REQ-P18",
    "key": "gehoert_zu"
   },
   {
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "sim/elektrik/e3_platine",
-   "target": "REQ-P15",
-   "key": "erwaehnt"
-  },
-  {
-   "typ": "gehoert_zu",
-   "quelle": "ERWARTUNG ## Anforderung",
-   "source": "sim/elektrik/e3_platine",
-   "target": "REQ-P20",
-   "key": "gehoert_zu"
-  },
-  {
-   "typ": "erwaehnt",
-   "quelle": "Textvorkommen",
-   "source": "sim/elektrik/e3_platine",
-   "target": "REQ-P20",
+   "target": "REQ-P18",
    "key": "erwaehnt"
   },
   {
@@ -39247,14 +40048,14 @@
    "typ": "gehoert_zu",
    "quelle": "ERWARTUNG ## Anforderung",
    "source": "sim/elektrik/e3_platine",
-   "target": "REQ-P18",
+   "target": "REQ-P15",
    "key": "gehoert_zu"
   },
   {
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "sim/elektrik/e3_platine",
-   "target": "REQ-P18",
+   "target": "REQ-P15",
    "key": "erwaehnt"
   },
   {
@@ -39283,6 +40084,13 @@
    "quelle": "Ergebnisdatei im Ordner",
    "source": "sim/elektrik/e3_platine",
    "target": "sim/elektrik/e3_platine/ergebnis_routing.json",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/ergebnis_schaltplan.json",
    "key": "erzeugt"
   },
   {
@@ -39415,6 +40223,104 @@
    "typ": "erzeugt",
    "quelle": "Ergebnisdatei im Ordner",
    "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/schaltplan_LFP_afe.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/schaltplan_LFP_daisy.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/schaltplan_LFP_deckblatt.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/schaltplan_LFP_kanaele.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/schaltplan_LFP_kanal.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/schaltplan_LFP_ntc_stecker.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/schaltplan_LFP_sekundaerschutz.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/schaltplan_NMC_afe.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/schaltplan_NMC_daisy.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/schaltplan_NMC_deckblatt.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/schaltplan_NMC_kanaele.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/schaltplan_NMC_kanal.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/schaltplan_NMC_ntc_stecker.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
+   "target": "sim/elektrik/e3_platine/schaltplan_NMC_sekundaerschutz.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3_platine",
    "target": "sim/elektrik/e3_platine/spice_ausgleich_vorladung.png",
    "key": "erzeugt"
   },
@@ -39520,7 +40426,21 @@
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "sim/elektrik/e3_platine",
+   "target": "BT-722",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3_platine",
    "target": "ENT-163",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3_platine",
+   "target": "ENT-173",
    "key": "erwaehnt"
   },
   {
@@ -39538,6 +40458,20 @@
    "key": "erwaehnt"
   },
   {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3_platine",
+   "target": "ENT-192",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3_platine",
+   "target": "ENT-193",
+   "key": "erwaehnt"
+  },
+  {
    "typ": "gehoert_zu",
    "quelle": "ERWARTUNG ## Anforderung",
    "source": "sim/elektrik/e3b_platine_waerme",
@@ -39555,28 +40489,28 @@
    "typ": "gehoert_zu",
    "quelle": "ERWARTUNG ## Anforderung",
    "source": "sim/elektrik/e3b_platine_waerme",
-   "target": "REQ-P15",
+   "target": "REQ-P20",
    "key": "gehoert_zu"
   },
   {
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "sim/elektrik/e3b_platine_waerme",
-   "target": "REQ-P15",
+   "target": "REQ-P20",
    "key": "erwaehnt"
   },
   {
    "typ": "gehoert_zu",
    "quelle": "ERWARTUNG ## Anforderung",
    "source": "sim/elektrik/e3b_platine_waerme",
-   "target": "REQ-P20",
+   "target": "REQ-P15",
    "key": "gehoert_zu"
   },
   {
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "sim/elektrik/e3b_platine_waerme",
-   "target": "REQ-P20",
+   "target": "REQ-P15",
    "key": "erwaehnt"
   },
   {
@@ -39625,6 +40559,20 @@
    "typ": "gehoert_zu",
    "quelle": "ERWARTUNG ## Anforderung",
    "source": "sim/elektrik/e3c_bms_platine",
+   "target": "REQ-P20",
+   "key": "gehoert_zu"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "REQ-P20",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "gehoert_zu",
+   "quelle": "ERWARTUNG ## Anforderung",
+   "source": "sim/elektrik/e3c_bms_platine",
    "target": "REQ-P19",
    "key": "gehoert_zu"
   },
@@ -39639,28 +40587,14 @@
    "typ": "gehoert_zu",
    "quelle": "ERWARTUNG ## Anforderung",
    "source": "sim/elektrik/e3c_bms_platine",
-   "target": "REQ-P15",
+   "target": "REQ-P18",
    "key": "gehoert_zu"
   },
   {
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "sim/elektrik/e3c_bms_platine",
-   "target": "REQ-P15",
-   "key": "erwaehnt"
-  },
-  {
-   "typ": "gehoert_zu",
-   "quelle": "ERWARTUNG ## Anforderung",
-   "source": "sim/elektrik/e3c_bms_platine",
-   "target": "REQ-P20",
-   "key": "gehoert_zu"
-  },
-  {
-   "typ": "erwaehnt",
-   "quelle": "Textvorkommen",
-   "source": "sim/elektrik/e3c_bms_platine",
-   "target": "REQ-P20",
+   "target": "REQ-P18",
    "key": "erwaehnt"
   },
   {
@@ -39695,14 +40629,14 @@
    "typ": "gehoert_zu",
    "quelle": "ERWARTUNG ## Anforderung",
    "source": "sim/elektrik/e3c_bms_platine",
-   "target": "REQ-P18",
+   "target": "REQ-P15",
    "key": "gehoert_zu"
   },
   {
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "sim/elektrik/e3c_bms_platine",
-   "target": "REQ-P18",
+   "target": "REQ-P15",
    "key": "erwaehnt"
   },
   {
@@ -39710,6 +40644,139 @@
    "quelle": "Ergebnisdatei im Ordner",
    "source": "sim/elektrik/e3c_bms_platine",
    "target": "sim/elektrik/e3c_bms_platine/ergebnis_kriechstrecke.json",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "sim/elektrik/e3c_bms_platine/ergebnis_pack_LFP_teilA.json",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "sim/elektrik/e3c_bms_platine/ergebnis_platine.json",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "sim/elektrik/e3c_bms_platine/ergebnis_routing.json",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "sim/elektrik/e3c_bms_platine/ergebnis_schaltplan.json",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "sim/elektrik/e3c_bms_platine/ERGEBNIS.md",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "sim/elektrik/e3c_bms_platine/platine_bms.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "sim/elektrik/e3c_bms_platine/platine_bms_3d_bottom.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "sim/elektrik/e3c_bms_platine/platine_bms_3d_iso.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "sim/elektrik/e3c_bms_platine/platine_bms_3d_nah.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "sim/elektrik/e3c_bms_platine/platine_bms_3d_top.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "sim/elektrik/e3c_bms_platine/platine_bms_einbau.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "sim/elektrik/e3c_bms_platine/platine_bms_explosion.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-1.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-2.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-3.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-4.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-5.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-6.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-7.png",
    "key": "erzeugt"
   },
   {
@@ -39755,6 +40822,62 @@
    "key": "erwaehnt"
   },
   {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "BT-310",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "BT-321",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "ENT-188",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "ENT-189",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "ENT-190",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "ENT-191",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "ENT-194",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3c_bms_platine",
+   "target": "ENT-195",
+   "key": "erwaehnt"
+  },
+  {
    "typ": "gehoert_zu",
    "quelle": "ERWARTUNG ## Anforderung",
    "source": "sim/elektrik/e3d_fmeda",
@@ -39788,6 +40911,20 @@
    "source": "sim/elektrik/e3d_fmeda",
    "target": "sim/elektrik/e3d_fmeda/e3d_fmeda.png",
    "key": "erzeugt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3d_fmeda",
+   "target": "B-BAT-055",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/elektrik/e3d_fmeda",
+   "target": "ENT-192",
+   "key": "erwaehnt"
   },
   {
    "typ": "gehoert_zu",
@@ -40304,28 +41441,28 @@
    "typ": "gehoert_zu",
    "quelle": "ERWARTUNG ## Anforderung",
    "source": "sim/kuehlung/k1_schnellladen",
-   "target": "REQ-D06",
+   "target": "REQ-P09",
    "key": "gehoert_zu"
   },
   {
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "sim/kuehlung/k1_schnellladen",
-   "target": "REQ-D06",
+   "target": "REQ-P09",
    "key": "erwaehnt"
   },
   {
    "typ": "gehoert_zu",
    "quelle": "ERWARTUNG ## Anforderung",
    "source": "sim/kuehlung/k1_schnellladen",
-   "target": "REQ-P09",
+   "target": "REQ-D06",
    "key": "gehoert_zu"
   },
   {
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "sim/kuehlung/k1_schnellladen",
-   "target": "REQ-P09",
+   "target": "REQ-D06",
    "key": "erwaehnt"
   },
   {
@@ -49711,6 +50848,111 @@
   {
    "typ": "gehoert_zu",
    "quelle": "ERWARTUNG ## Anforderung",
+   "source": "sim/mechanik/l1_leichtbau",
+   "target": "REQ-P07",
+   "key": "gehoert_zu"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/mechanik/l1_leichtbau",
+   "target": "REQ-P07",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "gehoert_zu",
+   "quelle": "ERWARTUNG ## Anforderung",
+   "source": "sim/mechanik/l1_leichtbau",
+   "target": "REQ-P09",
+   "key": "gehoert_zu"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/mechanik/l1_leichtbau",
+   "target": "REQ-P09",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "gehoert_zu",
+   "quelle": "ERWARTUNG ## Anforderung",
+   "source": "sim/mechanik/l1_leichtbau",
+   "target": "REQ-P13",
+   "key": "gehoert_zu"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/mechanik/l1_leichtbau",
+   "target": "REQ-P13",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/mechanik/l1_leichtbau",
+   "target": "sim/mechanik/l1_leichtbau/ergebnis.json",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/mechanik/l1_leichtbau",
+   "target": "sim/mechanik/l1_leichtbau/ERGEBNIS.md",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/mechanik/l1_leichtbau",
+   "target": "sim/mechanik/l1_leichtbau/wasserfall_LFP.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erzeugt",
+   "quelle": "Ergebnisdatei im Ordner",
+   "source": "sim/mechanik/l1_leichtbau",
+   "target": "sim/mechanik/l1_leichtbau/wasserfall_NMC.png",
+   "key": "erzeugt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/mechanik/l1_leichtbau",
+   "target": "P13",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/mechanik/l1_leichtbau",
+   "target": "REQ-P14",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/mechanik/l1_leichtbau",
+   "target": "W51",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/mechanik/l1_leichtbau",
+   "target": "ENT-090",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "sim/mechanik/l1_leichtbau",
+   "target": "W22",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "gehoert_zu",
+   "quelle": "ERWARTUNG ## Anforderung",
    "source": "sim/mechanik/m0_gehaeuse",
    "target": "REQ-P14",
    "key": "gehoert_zu"
@@ -52967,28 +54209,28 @@
    "typ": "gehoert_zu",
    "quelle": "ERWARTUNG ## Anforderung",
    "source": "sim/verifikation_werkzeuge",
-   "target": "REQ-D01",
+   "target": "REQ-D09",
    "key": "gehoert_zu"
   },
   {
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "sim/verifikation_werkzeuge",
-   "target": "REQ-D01",
+   "target": "REQ-D09",
    "key": "erwaehnt"
   },
   {
    "typ": "gehoert_zu",
    "quelle": "ERWARTUNG ## Anforderung",
    "source": "sim/verifikation_werkzeuge",
-   "target": "REQ-D09",
+   "target": "REQ-D01",
    "key": "gehoert_zu"
   },
   {
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "sim/verifikation_werkzeuge",
-   "target": "REQ-D09",
+   "target": "REQ-D01",
    "key": "erwaehnt"
   },
   {
@@ -53700,6 +54942,13 @@
   },
   {
    "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/01_lastenheft.md",
+   "target": "W51",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
    "quelle": "Textvorkommen Pfad",
    "source": "docs/01_lastenheft.md",
    "target": ".gitignore",
@@ -53885,6 +55134,13 @@
    "quelle": "Textvorkommen",
    "source": "docs/04_entscheidungen.md",
    "target": "B-BAT-051",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "B-BAT-055",
    "key": "erwaehnt"
   },
   {
@@ -54235,6 +55491,13 @@
    "quelle": "Textvorkommen",
    "source": "docs/04_entscheidungen.md",
    "target": "BT-720",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "BT-722",
    "key": "erwaehnt"
   },
   {
@@ -55606,6 +56869,48 @@
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "docs/04_entscheidungen.md",
+   "target": "ENT-192",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "ENT-193",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "ENT-194",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "ENT-195",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "ENT-196",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
+   "target": "ENT-197",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/04_entscheidungen.md",
    "target": "REQ-D01",
    "key": "erwaehnt"
   },
@@ -55824,6 +57129,20 @@
    "quelle": "Textvorkommen Pfad",
    "source": "docs/04_entscheidungen.md",
    "target": "sim/elektrik/e3b_platine_waerme/ergebnis.json",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/04_entscheidungen.md",
+   "target": "sim/elektrik/e3c_bms_platine/ERGEBNIS.md",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/04_entscheidungen.md",
+   "target": "sim/elektrik/e3d_fmeda/ERGEBNIS.md",
    "key": "erwaehnt"
   },
   {
@@ -56601,6 +57920,13 @@
    "quelle": "Textvorkommen",
    "source": "docs/09_aenderungen.md",
    "target": "W48",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/09_aenderungen.md",
+   "target": "W51",
    "key": "erwaehnt"
   },
   {
@@ -58490,6 +59816,13 @@
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "docs/16_ergebnisbilder.md",
+   "target": "BT-310",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/16_ergebnisbilder.md",
    "target": "ENT-023",
    "key": "erwaehnt"
   },
@@ -58518,7 +59851,21 @@
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "docs/16_ergebnisbilder.md",
+   "target": "REQ-P07",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/16_ergebnisbilder.md",
    "target": "REQ-P09",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "W51",
    "key": "erwaehnt"
   },
   {
@@ -58987,6 +60334,104 @@
    "typ": "erwaehnt",
    "quelle": "Textvorkommen Pfad",
    "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3_platine/schaltplan_LFP_afe.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3_platine/schaltplan_LFP_daisy.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3_platine/schaltplan_LFP_deckblatt.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3_platine/schaltplan_LFP_kanaele.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3_platine/schaltplan_LFP_kanal.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3_platine/schaltplan_LFP_ntc_stecker.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3_platine/schaltplan_LFP_sekundaerschutz.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3_platine/schaltplan_NMC_afe.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3_platine/schaltplan_NMC_daisy.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3_platine/schaltplan_NMC_deckblatt.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3_platine/schaltplan_NMC_kanaele.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3_platine/schaltplan_NMC_kanal.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3_platine/schaltplan_NMC_ntc_stecker.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3_platine/schaltplan_NMC_sekundaerschutz.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
    "target": "sim/elektrik/e3_platine/spice_ausgleich_vorladung.png",
    "key": "erwaehnt"
   },
@@ -59002,6 +60447,111 @@
    "quelle": "Textvorkommen Pfad",
    "source": "docs/16_ergebnisbilder.md",
    "target": "sim/elektrik/e3b_platine_waerme/e3b_temperatur.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3c_bms_platine/ergebnis_platine.json",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3c_bms_platine/platine_bms.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3c_bms_platine/platine_bms_3d_bottom.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3c_bms_platine/platine_bms_3d_iso.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3c_bms_platine/platine_bms_3d_nah.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3c_bms_platine/platine_bms_3d_top.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3c_bms_platine/platine_bms_einbau.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3c_bms_platine/platine_bms_explosion.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-1.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-2.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-3.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-4.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-5.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-6.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-7.png",
    "key": "erwaehnt"
   },
   {
@@ -59625,6 +61175,27 @@
    "quelle": "Textvorkommen Pfad",
    "source": "docs/16_ergebnisbilder.md",
    "target": "sim/kuehlung/k5_parallel/verteilung.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/mechanik/l1_leichtbau/ergebnis.json",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/mechanik/l1_leichtbau/wasserfall_LFP.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "docs/16_ergebnisbilder.md",
+   "target": "sim/mechanik/l1_leichtbau/wasserfall_NMC.png",
    "key": "erwaehnt"
   },
   {
@@ -61557,6 +63128,13 @@
    "quelle": "Textvorkommen",
    "source": "docs/25_loesungen_aus_kreativmethoden.md",
    "target": "B-BAT-055",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "docs/25_loesungen_aus_kreativmethoden.md",
+   "target": "B-BAT-056",
    "key": "erwaehnt"
   },
   {
@@ -64594,6 +66172,13 @@
    "typ": "erwaehnt",
    "quelle": "Textvorkommen",
    "source": "ERINNERUNGEN.md",
+   "target": "BT-722",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "ERINNERUNGEN.md",
    "target": "BT-730",
    "key": "erwaehnt"
   },
@@ -65153,6 +66738,13 @@
   {
    "typ": "erwaehnt",
    "quelle": "Textvorkommen Pfad",
+   "source": "ERINNERUNGEN.md",
+   "target": "sim/elektrik/e3c_bms_platine/ERGEBNIS.md",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
    "source": "praesentation/bausteine/C0.md",
    "target": "sim/chemie/vergleich_lfp_nmc/ergebnis.json",
    "key": "erwaehnt"
@@ -65286,6 +66878,13 @@
   {
    "typ": "erwaehnt",
    "quelle": "Textvorkommen Pfad",
+   "source": "praesentation/bausteine/E3.md",
+   "target": "sim/elektrik/e3_platine/schaltplan_LFP_kanal.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
    "source": "praesentation/bausteine/E3b.md",
    "target": "sim/elektrik/e3b_platine_waerme/ergebnis.json",
    "key": "erwaehnt"
@@ -65302,6 +66901,62 @@
    "quelle": "Textvorkommen Pfad",
    "source": "praesentation/bausteine/E3b.md",
    "target": "sim/elektrik/e3b_platine_waerme/e3b_temperatur.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "praesentation/bausteine/E3c.md",
+   "target": "BT-310",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "praesentation/bausteine/E3c.md",
+   "target": "sim/elektrik/e3c_bms_platine/ergebnis_platine.json",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "praesentation/bausteine/E3c.md",
+   "target": "sim/elektrik/e3c_bms_platine/ERGEBNIS.md",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "praesentation/bausteine/E3c.md",
+   "target": "sim/elektrik/e3c_bms_platine/platine_bms_einbau.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "praesentation/bausteine/E3c.md",
+   "target": "sim/elektrik/e3c_bms_platine/platine_bms_explosion.png",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "praesentation/bausteine/E3d.md",
+   "target": "B-BAT-055",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "praesentation/bausteine/E3d.md",
+   "target": "ENT-192",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "praesentation/bausteine/E3d.md",
+   "target": "ENT-193",
    "key": "erwaehnt"
   },
   {
@@ -65568,6 +67223,41 @@
    "quelle": "Textvorkommen Pfad",
    "source": "praesentation/bausteine/KR1.md",
    "target": "sim/elektrik/e3_platine/ergebnis_waerme.json",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "praesentation/bausteine/KR2.md",
+   "target": "docs/24_gefahrenanalyse_hara.md",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "praesentation/bausteine/L1.md",
+   "target": "REQ-P07",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen",
+   "source": "praesentation/bausteine/L1.md",
+   "target": "W51",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "praesentation/bausteine/L1.md",
+   "target": "sim/mechanik/l1_leichtbau/ergebnis.json",
+   "key": "erwaehnt"
+  },
+  {
+   "typ": "erwaehnt",
+   "quelle": "Textvorkommen Pfad",
+   "source": "praesentation/bausteine/L1.md",
+   "target": "sim/mechanik/l1_leichtbau/wasserfall_LFP.png",
    "key": "erwaehnt"
   },
   {
@@ -66016,6 +67706,36 @@
   },
   {
    "von": "ENT-191",
+   "nach": "sim/elektrik/e3c_bms_platine/ERWARTUNG.md",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-192",
+   "nach": "sim/elektrik/e3_platine/ERWARTUNG.md Nachtrag 7",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-193",
+   "nach": "sim/elektrik/e3_platine/ERWARTUNG.md Nachtrag 7",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-194",
+   "nach": "sim/elektrik/e3c_bms_platine/ERWARTUNG.md",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-195",
+   "nach": "sim/elektrik/e3c_bms_platine/ERWARTUNG.md",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-196",
+   "nach": "sim/elektrik/e3c_bms_platine/ERWARTUNG.md",
+   "kante": "belegt_durch"
+  },
+  {
+   "von": "ENT-197",
    "nach": "sim/elektrik/e3c_bms_platine/ERWARTUNG.md",
    "kante": "belegt_durch"
   },

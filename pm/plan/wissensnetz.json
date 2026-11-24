@@ -504,6 +504,10 @@
     {
      "id": "B-BAT-049",
      "titel": "B-BAT-049 Werkzeug-Testfälle QN1: Löser verifiziert, LFP-Zellmodell liefert nur die halbe Kapazität (2026-11-23, gefunden von Sonnet/Tor QN1, Deutung Opus)"
+    },
+    {
+     "id": "B-BAT-058",
+     "titel": "B-BAT-058 Massenziel REQ-P07 war unerreichbar, neu 600/450 kg (2026-11-24)"
     }
    ],
    "entscheidungen": [],
@@ -5068,6 +5072,10 @@
     {
      "id": "B-BAT-045",
      "titel": "B-BAT-045 Erste Prüfung mit den neuen Workflow-Werkzeugen (2026-11-23, Opus)"
+    },
+    {
+     "id": "B-BAT-058",
+     "titel": "B-BAT-058 Massenziel REQ-P07 war unerreichbar, neu 600/450 kg (2026-11-24)"
     }
    ],
    "entscheidungen": [
@@ -8582,7 +8590,7 @@
    "id": "REQ-P07",
    "gruppe": "REQ-P",
    "text": "Bauraum (L × B × H) und Masse",
-   "wert": "L ≤ 2400 mm (Autor, Freigaberunde 2026-11-23); B = 1430 mm (ENT-030, Autor 2026-11-17); H ≤ 130 mm im Zellbereich, Dom Schaltbox ≤ 250 mm; Masse LFP ≤ 528 kg, NMC ≤ 370 kg (Startwerte als Ziel)",
+   "wert": "L ≤ 2400 mm (Autor, Freigaberunde 2026-11-23); B = 1430 mm (ENT-030, Autor 2026-11-17); H ≤ 130 mm im Zellbereich, Dom Schaltbox ≤ 250 mm; Masse LFP ≤ 600 kg, NMC ≤ 450 kg (Zellanteil ≥ 77 % bzw. ≥ 68 %, über Richtwert W51 70/65 %; Autor 2026-11-24, AEN-022); Fernziel 528/370 kg nur mit Cell-to-Pack (OPT-012)",
    "prioritaet": "Muss",
    "methode": "I",
    "ebene": "System",
@@ -9926,7 +9934,8 @@
    ],
    "quellen": [
     "sim/elektrik/e3_platine/ergebnis_ausgleich.json",
-    "sim/elektrik/e3_platine/platine_NMC_explosion.png"
+    "sim/elektrik/e3_platine/platine_NMC_explosion.png",
+    "sim/elektrik/e3_platine/schaltplan_LFP_kanal.png"
    ]
   },
   {
@@ -9941,10 +9950,29 @@
    ]
   },
   {
+   "datei": "praesentation/bausteine/E3c.md",
+   "stem": "E3c",
+   "titel": "Die BMS-Platine trennt Hochvolt und Niedervolt durch einen kupferfreien Streifen",
+   "ids": [
+    "BT-310"
+   ],
+   "quellen": [
+    "cad/pack/entwurf/ergebnis_LFP_e2d_e3.json",
+    "sim/elektrik/e3c_bms_platine/ERGEBNIS.md",
+    "sim/elektrik/e3c_bms_platine/ergebnis_platine.json",
+    "sim/elektrik/e3c_bms_platine/platine_bms_einbau.png",
+    "sim/elektrik/e3c_bms_platine/platine_bms_explosion.png"
+   ]
+  },
+  {
    "datei": "praesentation/bausteine/E3d.md",
    "stem": "E3d",
-   "titel": "Grobe FMEDA der CMU-Platine: Tiefentladeschutz knapp verfehlt",
-   "ids": [],
+   "titel": "Grobe FMEDA der CMU-Platine: mit zwei Schaltern in Reihe und Zellschutz je Zelle werden beide Ziele erreicht",
+   "ids": [
+    "B-BAT-055",
+    "ENT-192",
+    "ENT-193"
+   ],
    "quellen": [
     "sim/elektrik/e3d_fmeda/ERGEBNIS.md",
     "sim/elektrik/e3d_fmeda/e3d_fmeda.png",
@@ -10146,6 +10174,30 @@
     "pm/kreativ/KR1/rang.json",
     "pm/kreativ/KR1/rang.png",
     "sim/elektrik/e3_platine/ergebnis_waerme.json"
+   ]
+  },
+  {
+   "datei": "praesentation/bausteine/KR2.md",
+   "stem": "KR2",
+   "titel": "Trennen und Verfügbarkeit: das gestufte Konzept aus der HARA liegt vorn",
+   "ids": [],
+   "quellen": [
+    "docs/24_gefahrenanalyse_hara.md",
+    "pm/kreativ/KR2/gewichte.json",
+    "pm/kreativ/KR2/rang.json",
+    "pm/kreativ/KR2/rang.png"
+   ]
+  },
+  {
+   "datei": "praesentation/bausteine/L1.md",
+   "stem": "L1",
+   "titel": "Leichtbau-Potenzial des Packs (OPT-012)",
+   "ids": [
+    "REQ-P07"
+   ],
+   "quellen": [
+    "sim/mechanik/l1_leichtbau/ergebnis.json",
+    "sim/mechanik/l1_leichtbau/wasserfall_LFP.png"
    ]
   },
   {
@@ -10620,6 +10672,13 @@
    "pruefung": "11 Belege bestaetigt, 0 Fehler",
    "datei": "forschung/ergebnis/W50.md",
    "thema": "UN R135 Pfahl-Seitenaufprall (Grundtext 2015 + Rev.1 Amend. 1/2, Autor-PDF): Pfahl, Geschwindigkeit, Winkel, HV-Sicherheit nach dem Test (REQ-P14, SG-06)"
+  },
+  {
+   "id": "W51",
+   "status": "fertig",
+   "pruefung": "9 Belege bestaetigt, 0 Fehler",
+   "datei": "forschung/ergebnis/W51.md",
+   "thema": "Zellanteil an der Packmasse (Cell-to-Pack-Massenverhältnis) je Chemie und Format, Serienbeispiele (OPT-012, REQ-P07 neu ableiten)"
   },
   {
    "id": "T01",

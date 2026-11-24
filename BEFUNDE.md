@@ -379,3 +379,8 @@ Werkzeuge nach BAT-DOC-23 (Sonnet), Vorschläge für Methode, Ebene und Lastfall
 ## B-BAT-057 pack_e2d.py war kurz leer (Skriptfehler Sonnet E3c), rekonstruiert (2026-11-24)
 - Sonnet hat die Datei aus git HEAD und den 5 protokollierten Änderungen (E3, E3c) wiederhergestellt. Prüfung Opus: Diff gelesen, beide Schalter (PACK_E3, PACK_E3C) vollständig. Ergebnisse plausibel: E3 NMC unverändert 482,75 kg und 0 Kollisionen, E3c LFP 619,85 kg / NMC 482,41 kg mit 0 Kollisionen. Die Massedifferenz entsteht, weil die BMS-Platine 66,5 g statt des Platzhalterquaders wiegt.
 - Lehre: Vor jeder Skriptänderung an geteilten CAD-Dateien eine Sicherung anlegen bzw. einen Commit machen. Der Tagesstand war uncommittet, deshalb das Risiko.
+
+## B-BAT-058 Massenziel REQ-P07 war unerreichbar, neu 600/450 kg (2026-11-24)
+- Alte Startwerte 528/370 kg = Zellanteil 88/83 %, Serienbestwert nur mit Cell-to-Pack (W51). Opus hatte zuerst „Serie 75–80 %“ aus dem Gedächtnis genannt. Das war falsch und wurde vor der Entscheidung korrigiert (BYD Han 90 %, i3 84 %).
+- L1: Die Hebelschätzungen von Opus waren zu hoch (Kühlplatte schon 3,2 mm äquivalent). Realistisch LFP −20 … −35, NMC −25 … −40 kg.
+- Autor: REQ-P07 LFP ≤ 600, NMC ≤ 450 kg (AEN-022). Ist verfehlt um 20 bzw. 32 kg → L2.

@@ -1,0 +1,455 @@
+{
+ "LFP": {
+  "masse_ist_kg": 619.8458578630615,
+  "zellen_kg": 462.500000000002,
+  "rest_kg": 157.3458578630595,
+  "zellanteil_ist_prozent": 74.61532478324298,
+  "ziel_kg": 528.0,
+  "zellanteil_ziel_prozent": 87.59469696969734,
+  "rest_max_fuer_ziel_kg": 65.49999999999801,
+  "rest_muss_sinken_um_kg": 91.8458578630615,
+  "gruppen": [
+   {
+    "gruppe": "Unterfahrschutz",
+    "masse_kg": 23.74515,
+    "nachgerechnet_kg": 23.74515,
+    "abw_prozent": 0.0,
+    "werkstoff": "Al"
+   },
+   {
+    "gruppe": "Boden",
+    "masse_kg": 23.74515,
+    "nachgerechnet_kg": 23.74515,
+    "abw_prozent": 0.0,
+    "werkstoff": "Al"
+   },
+   {
+    "gruppe": "Seitenrahmen",
+    "masse_kg": 21.79224000000001,
+    "nachgerechnet_kg": 21.792240000000007,
+    "abw_prozent": -1.1102230246251565e-14,
+    "werkstoff": "Al (Vollprofil, Obergrenze)"
+   },
+   {
+    "gruppe": "Kuehlplatte",
+    "masse_kg": 46.94274753806548,
+    "nachgerechnet_kg": 47.11046400000001,
+    "abw_prozent": 0.3572787506707531,
+    "werkstoff": "Al (Vollmaterial, Obergrenze)"
+   },
+   {
+    "gruppe": "Pad",
+    "masse_kg": 13.52912142179218,
+    "nachgerechnet_kg": 13.6315,
+    "abw_prozent": 0.7567274697003912,
+    "werkstoff": "Pad"
+   },
+   {
+    "gruppe": "Deckel",
+    "masse_kg": 15.79647159567678,
+    "nachgerechnet_kg": 15.8301,
+    "abw_prozent": 0.21288554294887074,
+    "werkstoff": "Al"
+   },
+   {
+    "gruppe": "Quertraeger",
+    "masse_kg": 4.161375,
+    "nachgerechnet_kg": 4.161375,
+    "abw_prozent": 0.0,
+    "werkstoff": "Al"
+   }
+  ],
+  "hebel": {
+   "H1": {
+    "name": "Kühlplatte dünner / Strangpressprofil",
+    "gruppe": "Kuehlplatte",
+    "masse_gruppe_kg": 46.94274753806548,
+    "spanne_kg": [
+     15,
+     25
+    ]
+   },
+   "H2": {
+    "name": "Boden + Kühlplatte zusammenlegen",
+    "gruppe": "Boden",
+    "masse_gruppe_kg": 23.74515,
+    "spanne_kg": [
+     10,
+     20
+    ]
+   },
+   "H3": {
+    "name": "Unterfahrschutz dünner / Verbund",
+    "gruppe": "Unterfahrschutz",
+    "masse_gruppe_kg": 23.74515,
+    "spanne_kg": [
+     5,
+     10
+    ]
+   },
+   "H4": {
+    "name": "Deckel aus Verbund",
+    "gruppe": "Deckel",
+    "masse_gruppe_kg": 15.79647159567678,
+    "spanne_kg": [
+     5,
+     8
+    ]
+   },
+   "H5": {
+    "name": "Pad nur unter den Zellen / dünner",
+    "gruppe": "Pad",
+    "masse_gruppe_kg": 13.52912142179218,
+    "spanne_kg": [
+     4,
+     7
+    ]
+   },
+   "H6": {
+    "name": "Seitenrahmen Kammerprofil",
+    "gruppe": "Seitenrahmen",
+    "masse_gruppe_kg": 21.79224000000001,
+    "spanne_kg": [
+     5,
+     10
+    ]
+   }
+  },
+  "rueckrechnung": {
+   "H1": {
+    "aequiv_dicke_ist_mm": 3.2,
+    "fuellgrad_ist": 0.4,
+    "masse_6mm_voll_kg": 88.33212,
+    "fuellgrad_fuer_spanne": [
+     0.2721847289587247,
+     0.18697454826454113
+    ],
+    "aequiv_dicke_fuer_spanne_mm": [
+     2.1774778316697976,
+     1.495796386116329
+    ]
+   },
+   "H2": {
+    "anteil_boden_prozent": [
+     42.11386325207464,
+     84.22772650414927
+    ],
+    "obergrenze_boden_entfaellt_kg": 23.74515,
+    "hoehe_gewinn_mm": 8
+   },
+   "H3": {
+    "anteil_prozent": [
+     21.05693162603732,
+     42.11386325207464
+    ],
+    "aequiv_al_dicke_mm": [
+     2.36829205121888,
+     1.736584102437761
+    ],
+    "werkstoff_ist": "Al"
+   },
+   "H4": {
+    "anteil_prozent": [
+     31.65263818388667,
+     50.64422109421867
+    ],
+    "aequiv_al_dicke_mm": [
+     1.3669472363222668,
+     0.9871155781156267
+    ]
+   },
+   "H5": {
+    "pad_flaeche_cm2": 27058.242843584358,
+    "zellfussflaeche_cm2": 23835.0,
+    "einsparung_geometrie_kg": 1.6116214217921792,
+    "anteil_prozent": 11.912240060143464
+   },
+   "H6": {
+    "hr_mm": 108.00000000000004,
+    "masse_vollprofil_kg": 59.83632000000002,
+    "faktor_ist": 0.36419753086419754,
+    "wand_fuer_spanne_mm": [
+     1.9072396977331985,
+     1.326418577813552
+    ],
+    "ist_bereits_kammerprofil": true,
+    "masse_wand_2mm_kg": 17.581536000000003
+   }
+  },
+  "summe_spanne_kg": [
+   44,
+   80
+  ],
+  "masse_neu_kg": [
+   539.8458578630615,
+   575.8458578630615
+  ],
+  "masse_neu_mitte_kg": 557.8458578630615,
+  "zellanteil_neu_prozent": [
+   80.31663225230429,
+   85.67260325582062
+  ],
+  "luecke_zum_ziel_kg": [
+   11.845857863061497,
+   47.8458578630615
+  ],
+  "ziel_erreicht_mit_oberer_spanne": false,
+  "hoehe_stapel_mm": 121.0,
+  "hoehe_max_mm": 130
+ },
+ "NMC": {
+  "masse_ist_kg": 482.4149100285088,
+  "zellen_kg": 308.1399999999994,
+  "rest_kg": 174.2749100285094,
+  "zellanteil_ist_prozent": 63.87447684438061,
+  "ziel_kg": 370.0,
+  "zellanteil_ziel_prozent": 83.28108108108093,
+  "rest_max_fuer_ziel_kg": 61.86000000000058,
+  "rest_muss_sinken_um_kg": 112.41491002850881,
+  "gruppen": [
+   {
+    "gruppe": "Unterfahrschutz",
+    "masse_kg": 22.58685,
+    "nachgerechnet_kg": 22.58685,
+    "abw_prozent": 0.0,
+    "werkstoff": "Al"
+   },
+   {
+    "gruppe": "Boden",
+    "masse_kg": 22.58685,
+    "nachgerechnet_kg": 22.58685,
+    "abw_prozent": 0.0,
+    "werkstoff": "Al"
+   },
+   {
+    "gruppe": "Seitenrahmen",
+    "masse_kg": 20.07936,
+    "nachgerechnet_kg": 20.079359999999998,
+    "abw_prozent": -2.220446049250313e-14,
+    "werkstoff": "Al (Vollprofil, Obergrenze)"
+   },
+   {
+    "gruppe": "Kuehlplatte",
+    "masse_kg": 44.34224581671955,
+    "nachgerechnet_kg": 44.743104,
+    "abw_prozent": 0.9040096546695686,
+    "werkstoff": "Al (Vollmaterial, Obergrenze)"
+   },
+   {
+    "gruppe": "Pad",
+    "masse_kg": 12.608259376034743,
+    "nachgerechnet_kg": 12.9465,
+    "abw_prozent": 2.6826908764914226,
+    "werkstoff": "Pad"
+   },
+   {
+    "gruppe": "Deckel",
+    "masse_kg": 15.05545709755257,
+    "nachgerechnet_kg": 15.0579,
+    "abw_prozent": 0.016226026427501594,
+    "werkstoff": "Al"
+   },
+   {
+    "gruppe": "Zelltraeger",
+    "masse_kg": 3.068533854197585,
+    "nachgerechnet_kg": 3.068533854197586,
+    "abw_prozent": 2.220446049250313e-14,
+    "werkstoff": "offen (Werkstoff/Dichte fehlt)"
+   },
+   {
+    "gruppe": "Verguss",
+    "masse_kg": 11.361119245741941,
+    "nachgerechnet_kg": 11.36111924574194,
+    "abw_prozent": -1.1102230246251565e-14,
+    "werkstoff": "offen (Dichte fehlt)"
+   },
+   {
+    "gruppe": "Quertraeger",
+    "masse_kg": 4.161375,
+    "nachgerechnet_kg": 4.161375,
+    "abw_prozent": 0.0,
+    "werkstoff": "Al"
+   },
+   {
+    "gruppe": "Gruppenverbinder",
+    "masse_kg": 7.940355047051335,
+    "nachgerechnet_kg": 7.940355047051349,
+    "abw_prozent": 1.7763568394002505e-13,
+    "werkstoff": "Al (Annahme, Cu offen)"
+   },
+   {
+    "gruppe": "Gruppenbruecke",
+    "masse_kg": 3.0162027889480436,
+    "nachgerechnet_kg": 3.0162027889480494,
+    "abw_prozent": 1.9984014443252818e-13,
+    "werkstoff": "Al (Annahme, Cu offen)"
+   }
+  ],
+  "hebel": {
+   "H1": {
+    "name": "Kühlplatte dünner / Strangpressprofil",
+    "gruppe": "Kuehlplatte",
+    "masse_gruppe_kg": 44.34224581671955,
+    "spanne_kg": [
+     15,
+     25
+    ]
+   },
+   "H2": {
+    "name": "Boden + Kühlplatte zusammenlegen",
+    "gruppe": "Boden",
+    "masse_gruppe_kg": 22.58685,
+    "spanne_kg": [
+     10,
+     20
+    ]
+   },
+   "H3": {
+    "name": "Unterfahrschutz dünner / Verbund",
+    "gruppe": "Unterfahrschutz",
+    "masse_gruppe_kg": 22.58685,
+    "spanne_kg": [
+     5,
+     10
+    ]
+   },
+   "H4": {
+    "name": "Deckel aus Verbund",
+    "gruppe": "Deckel",
+    "masse_gruppe_kg": 15.05545709755257,
+    "spanne_kg": [
+     5,
+     8
+    ]
+   },
+   "H5": {
+    "name": "Pad nur unter den Zellen / dünner",
+    "gruppe": "Pad",
+    "masse_gruppe_kg": 12.608259376034743,
+    "spanne_kg": [
+     4,
+     7
+    ]
+   },
+   "H6": {
+    "name": "Seitenrahmen Kammerprofil",
+    "gruppe": "Seitenrahmen",
+    "masse_gruppe_kg": 20.07936,
+    "spanne_kg": [
+     5,
+     10
+    ]
+   },
+   "H7": {
+    "name": "NMC Verguss nur oben",
+    "gruppe": "Verguss",
+    "masse_gruppe_kg": 11.361119245741941,
+    "spanne_kg": [
+     5,
+     8
+    ]
+   }
+  },
+  "rueckrechnung": {
+   "H1": {
+    "aequiv_dicke_ist_mm": 3.2,
+    "fuellgrad_ist": 0.4,
+    "masse_6mm_voll_kg": 83.89332,
+    "fuellgrad_fuer_spanne": [
+     0.26468885620273075,
+     0.17448142700455127
+    ],
+    "aequiv_dicke_fuer_spanne_mm": [
+     2.117510849621846,
+     1.3958514160364102
+    ]
+   },
+   "H2": {
+    "anteil_boden_prozent": [
+     44.273548547052826,
+     88.54709709410565
+    ],
+    "obergrenze_boden_entfaellt_kg": 22.58685,
+    "hoehe_gewinn_mm": 8
+   },
+   "H3": {
+    "anteil_prozent": [
+     22.136774273526413,
+     44.273548547052826
+    ],
+    "aequiv_al_dicke_mm": [
+     2.335896771794208,
+     1.6717935435884153
+    ],
+    "werkstoff_ist": "Al"
+   },
+   "H4": {
+    "anteil_prozent": [
+     33.21054928855534,
+     53.13687886168855
+    ],
+    "aequiv_al_dicke_mm": [
+     1.335789014228893,
+     0.937262422766229
+    ]
+   },
+   "H5": {
+    "pad_flaeche_cm2": 25216.51875206949,
+    "zellfussflaeche_cm2": 14425.313819341325,
+    "einsparung_geometrie_kg": 5.395602466364081,
+    "anteil_prozent": 42.79418994678852
+   },
+   "H6": {
+    "hr_mm": 102.0,
+    "masse_vollprofil_kg": 54.85968,
+    "faktor_ist": 0.3660130718954248,
+    "wand_fuer_spanne_mm": [
+     1.8561289902683988,
+     1.227048017818913
+    ],
+    "ist_bereits_kammerprofil": true,
+    "masse_wand_2mm_kg": 16.206912
+   },
+   "H7": {
+    "vergusshoehe_anteil_ist": 0.5,
+    "anteil_fuer_spanne": [
+     0.27995125780085617,
+     0.14792201248136982
+    ],
+    "ist_bereits_halbe_hoehe": true
+   }
+  },
+  "summe_spanne_kg": [
+   49,
+   88
+  ],
+  "masse_neu_kg": [
+   394.4149100285088,
+   433.4149100285088
+  ],
+  "masse_neu_mitte_kg": 413.9149100285088,
+  "zellanteil_neu_prozent": [
+   71.09584669796682,
+   78.12584974988057
+  ],
+  "luecke_zum_ziel_kg": [
+   24.414910028508814,
+   63.414910028508814
+  ],
+  "ziel_erreicht_mit_oberer_spanne": false,
+  "hoehe_stapel_mm": 115.0,
+  "hoehe_max_mm": 130
+ },
+ "quellen": [
+  "cad/pack/entwurf/ergebnis_LFP_e2d_e3c.json",
+  "cad/pack/entwurf/ergebnis_NMC_e2d_e3c.json",
+  "cad/pack/entwurf/parameter_LFP.json",
+  "cad/pack/entwurf/parameter_NMC.json",
+  "sim/mechanik/l1_leichtbau/ERWARTUNG.md (Hebelspannen: Schätzung Opus)",
+  "docs/01_lastenheft.md (REQ-P07)"
+ ],
+ "w51": {
+  "band": null,
+  "stand": "offen: forschung/ergebnis/W51.md fehlt (nur W51.err, W51.jsonl), keine bestandene Zitatprüfung"
+ }
+}

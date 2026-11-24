@@ -43,3 +43,10 @@ Keine CAD-Änderung, nur Rechnung (`leichtbau.py` → `ergebnis.json`, Wasserfal
 
 ## Abbruch → OPUS
 Masse der Gruppe nicht nachvollziehbar (> 5 %); Hebel braucht eine neue Annahme außerhalb der Liste.
+
+## Nachtrag 1 (Opus, 2026-11-24, Prüfung)
+- **Meine Hebelschätzungen waren zu optimistisch.** Die Kühlplatte ist bereits 3,2 mm Al-äquivalent (8 mm × Füllgrad 0,4). Seitenrahmen und Verguss sind schon leicht. Der Unterfahrschutz ist Al 3 mm. H1 und H2 sind nicht additiv.
+- Neu geschätzt (Opus): H1/H2 zusammen −10 … −20, H4 −3 … −6, H5 −1,6 (LFP) bzw. −5,4 (NMC), H3 0 … −5, H6/H7 ≈ 0. **LFP ≈ −20 … −35 kg, NMC ≈ −25 … −40 kg.**
+- W51 (9 Belege, 0 Fehler): Richtwert LFP 70 %, NMC 65 %, Schnitt 62,9 %, Bestwert 90 % (BYD Han). Ist: LFP 74,6 %, NMC 63,9 %, also üblich.
+- Folge: REQ-P07 neu LFP ≤ 600 / NMC ≤ 450 kg (Autor, AEN-022). Benötigt sind LFP −20, NMC −32 kg → L2 im CAD mit Crash- und Thermik-Nachweis.
+- Crash heißt REQ-P14 (nicht P13), korrigiert.

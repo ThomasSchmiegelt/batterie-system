@@ -32,3 +32,6 @@ Offen: Normtexte R100/R135/2023/1542 vollständig als PDF nach `quellen/normen/`
 
 ## Runde 5: Gewichte KR2 (10 Paare im Chat)
 Ziffern `2 2 2 2 2 2 2 1 0 1` → Sicherheit 8, Verfügbarkeit 6, Reifegrad 3, Nachweisaufwand 2, Kosten 1.
+
+## Runde 6: REQ-P07 Packmasse (Autor im Chat)
+LFP ≤ 600 kg, NMC ≤ 450 kg (Empfehlung Opus übernommen). Grundlage W51, L1. AEN-022.

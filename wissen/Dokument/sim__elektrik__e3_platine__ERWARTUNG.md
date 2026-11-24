@@ -119,3 +119,16 @@ Quelle: Fachartikel eines Kabelherstellers (COTRONIC, 20.10.2025), vom Autor ein
   - Thermovias unverändert 144
   - Bilder und Explosionsansicht neu
 
+## Nachtrag 8 (Opus, 2026-11-24, Routing nach N7 bleibt stehen)
+Nach N7 (3 OVP, Doppel-FET, AFE LQFP-80) bleiben 1 bzw. 3 Verbindungen offen, das Routing stagniert. Entscheidung, der Reihe nach, erst konservativ:
+1. **Platzierung lockern bei gleicher Größe:** AFE in die Mitte, die 3 OVP direkt an den FPC-Zellabgriff, je 6 Kanäle als Block vor „ihrem“ OVP. Fanout-Vias am AFE vorgeben. Danach neu routen.
+2. Bleibt etwas offen: **Platine 10 mm länger (130 × 60 mm)**, als neue Akte BT-321 laenge_mm (ersetzt die alte). Danach Pack-Kollisionen beider Varianten prüfen. Gibt es eine Kollision → OPUS.
+3. **6 Lagen** nur, wenn auch 2. scheitert → OPUS.
+- „via_dangling“ (Vias ohne Bahn) und track_width nach dem Routing bereinigen. Abnahme: DRC 0, 0 offen, 144 Thermovias.
+- Annahmen Opus für die Masse (ERW-E3 N8): SOT-363 0,006 g, TSSOP-16 0,06 g, LQFP-80 0,45 g. AFE LQFP-80 ist bestätigt (69 Pins).
+
+## Nachtrag 9 (Opus, 2026-11-24, Prüfung N7/N8)
+- Geprüft an `ergebnis_platine.json`: beide 120 × 60 mm, 110 Teile, DRC 0, 0 offen, 399 Vias. Größer werden musste die Platine nicht.
+- Die Übertragung des LFP-Routings auf NMC ist **bestätigt**: Netzliste, Footprints und Platzierung sind gleich, nur die Werte unterscheiden sich, und der DRC auf der NMC-Platine selbst meldet 0. Methode zulässig.
+- Kanalblatt gelesen: Doppel-FET SOT-363 richtig in Reihe (D1 ← Widerstände, S1–D2 verbunden, S2 → TL). Masse SOD-323 0,005 g (Annahme Opus, vernachlässigbar).
+

@@ -34,3 +34,23 @@ REQ-P15, REQ-P17, REQ-P18, REQ-P19, REQ-P20, REQ-P13
 
 ## Abbruch → OPUS
 Passt nicht in die Schaltbox; Sperrzone nicht durchgehend möglich; fehlendes Maß; jede neue Annahme.
+
+## Nachtrag 1: OPT-006 Sparschaltung Schütze (Opus, 2026-11-24, Auftrag Autor „machen wir deine reihenfolge durch“)
+Ziel: Haltestrom nach dem Anzug absenken, Löschung bleibt schnell. Annahmen Opus (ERW-E3c N1), solange keine Schützdaten vorliegen:
+- Spule 12 V, R = 8 Ω, L = 50 mH (Anzug 1,5 A, 18 W)
+- Anzugzeit 100 ms mit vollem Strom, danach Halten mit 0,3 × I_Anzug per PWM 20 kHz
+- Abfallstrom 0,15 × I_Anzug
+- Topologie:
+  - Der High-Side-Schalter taktet. Der Freilauf beim Takten läuft über eine Diode vom Spulenende auf GND hinter dem Low-Side-FET (langsamer Abbau, kleine Welligkeit).
+  - Beim Öffnen sperrt der Low-Side-FET. Der Strom muss dann über die Zener (z. B. 36 V) und klingt schnell ab.
+  - Ein Hardware-UND (FSR-06) wirkt weiter auf beide Schalter.
+
+## Erwartung N1
+1. Haltestrom 0,45 A ± 10 %, Welligkeit < 10 %, Haltleistung ≈ 1,6 W statt 18 W (−90 %, ≈ 3 × 16 W = 49 W weniger im Dauerbetrieb).
+2. Abfallzeit Strom bis 0,15 × I_Anzug: mit Zener ≈ 2–4 ms, nur mit Freilaufdiode ≈ 30–40 ms. Die Zener ist also Pflicht für SG-01/03 (Trennen innerhalb der FTTI).
+3. Fehlerbetrachtung:
+   - PWM bleibt dauernd an → voller Strom, nur Wärme, sicher.
+   - PWM bleibt aus → das Schütz fällt ab. Das betrifft SG-05 (Verfügbarkeit) → Diagnose über den Spulenstrom-Shunt (vorhanden).
+4. Platine: + ≈ 3 Dioden und Treiberanteil, Routing DRC 0, ERC 0, Schaltplan nachführen.
+
+Abbruch → OPUS: Abfallzeit > 10 ms mit Zener; Platz reicht nicht.
