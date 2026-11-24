@@ -25,7 +25,7 @@ KiCad 10.0.8 (Flatpak, Nutzerinstallation; Auftrag nannte KiCad 9, Version weich
 - **Fanout-Vias am AFE vorgeben (Nachtrag 8):** nicht umgesetzt; der Router-Fanout reichte (LFP 0 offen).
 
 ## Schaltplan
-Hierarchischer KiCad-Schaltplan aus derselben Quelle (`cmu_<V>_teile.json`, `schaltplan.py`), Ablage `/home/cae/cae_projekte/batterie/e3/schaltplan_<V>/`, PDF und PNG in `schaltplan/` (dieser Ordner). Blätter: Deckblatt (Blattpins ABSCHALT, NTC1–4, TXA/B, RXA/B), Kanäle (18 × Blatt Kanal), AFE und Versorgung, Sekundärschutz, Daisy-Chain, NTC und Stecker; Aktenverweise im Feld „Akte“. Das Kanalblatt ist einmal gezeichnet (Abgriff → Filter-RC → AFE-Eingang; Abgriff → 2 R → Doppel-FET → Abgriff n−1) und 18-mal verwendet.
+Hierarchischer KiCad-Schaltplan aus derselben Quelle (`cmu_<V>_teile.json`, `schaltplan.py`), Ablage `/home/cae/cae_projekte/batterie/e3/schaltplan_<V>/`, PDF in `schaltplan/`, PNG je Blatt `schaltplan_<V>_*.png` (dieser Ordner). Blätter: Deckblatt (Blattpins ABSCHALT, NTC1–4, TXA/B, RXA/B), Kanäle (18 × Blatt Kanal), AFE und Versorgung, Sekundärschutz, Daisy-Chain, NTC und Stecker; Aktenverweise im Feld „Akte“. Das Kanalblatt ist einmal gezeichnet (Abgriff → Filter-RC → AFE-Eingang; Abgriff → 2 R → Doppel-FET → Abgriff n−1) und 18-mal verwendet.
 - `kicad-cli sch erc`: 0 Fehler (LFP), 0 Fehler (NMC), 25 Warnungen je Variante (nur „Symbol- und Footprint-Bibliothek nicht in der Konfiguration“, weil die Symbole eingebettet sind).
 - Netzliste aus dem Schaltplan = Netzliste des Layouts (`schaltplan_pruefen.py`, `ergebnis_schaltplan.json`): 125 Netze, 110 Teile, Abweichungen 0 (LFP) und 0 (NMC).
 - Grenze: Die Messnetze T0..T18, S0..S18, G/H der Kanäle laufen über globale Netznamen zwischen den Blättern (keine Busse und keine Blattpins dafür). Die Symbole sind generische Kästen, keine Herstellersymbole.
@@ -55,7 +55,7 @@ Ablauf: `pcb_bauen.py` (Platzierung, Daisy-Leitungen von Hand) → DSN (`route_d
 5. Platzhalter N2 (siehe oben) und NTC als externe 2-polige Anschlüsse sind Annahmen. GND/VCC am Daisy-Stecker ist laut Nachtrag 3 entfernt.
 6. FET-Modell U_GS = 5 V, VTO = 1,5 V: Modellwahl (von Opus übernommen). Platinen-STEP: Bauteilmodelle ersetzt (`--subst-models`), nur Hüllformen.
 7. Platinenhöhe nach Nachtrag 3: 4.56 mm (Platz 10 mm).
-8. Pack-Lauf LFP: vor E3 (`ergebnis_LFP_e2d.json`) 3 Kollisionen (Trennbrücke/Servicedeckel, Schmelzlasche), mit E3 (`ergebnis_LFP_e2d_e3.json`) 0. Ursache der Differenz nicht untersucht (der Pack-Aufbau `pack_e2d.py` ist seit v0.5 geändert worden; nicht von mir). NMC: 0 Kollisionen.
+8. Pack-Lauf LFP: vor E3 (`ergebnis_LFP_e2d.json`) 3 Kollisionen (Trennbrücke/Servicedeckel, Schmelzlasche), mit E3 (`ergebnis_LFP_e2d_e3.json`) 0. Ursache laut Protokoll docs/08 (E3c, 15:10): Servicedeckel BT-722 geändert, Kontakt zugelassen (nicht von mir). NMC: 0 Kollisionen.
 9. NMC: alle 144 Thermovias gesetzt, davon 0 als kleinere Via 0,45/0,2 mm (Ausnahme laut Opus, siehe Thermovias oben).
 
 *KI-generiert (Claude Sonnet, 2026-11-24). Status Entwurf.*

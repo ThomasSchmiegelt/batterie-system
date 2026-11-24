@@ -1122,137 +1122,131 @@ Alle Bilder unter `sim/` und `cad/` mit Lesehilfe für Nicht-Fachleute, Quelle u
 - Quelle: `sim/elektrik/e3_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3_platine/lesehilfe.md`
 - Vorgang: E3
 
-
-## sim/elektrik/e3_platine/schaltplan
-
 ### schaltplan_LFP_afe.png
 
-![schaltplan_LFP_afe.png](../sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_afe.png)
+![schaltplan_LFP_afe.png](../sim/elektrik/e3_platine/schaltplan_LFP_afe.png)
 
-**Lesehilfe:** Lesehilfe fehlt
+**Lesehilfe:** Das Blatt AFE und Versorgung: der Mess-Chip mit Filterwiderstand am Abgriff 0 und vier Kondensatoren an der Versorgung. Variante LFP. Es gibt kein Zielband, weil es ein Schaltplan ist; geprüft wird mit ERC (0 Fehler) und dem Vergleich der Netzliste mit der Platine (0 Abweichungen, ergebnis_schaltplan.json). Generische Symbole, Aktenverweise im Feld Akte. KI-generiert, Entwurf.
 
-- Quelle: `ergebnis.json fehlt`
-- Vorgang: unbekannt
+- Quelle: `sim/elektrik/e3_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3_platine/lesehilfe.md`
+- Vorgang: E3
 
 ### schaltplan_LFP_daisy.png
 
-![schaltplan_LFP_daisy.png](../sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_daisy.png)
+![schaltplan_LFP_daisy.png](../sim/elektrik/e3_platine/schaltplan_LFP_daisy.png)
 
-**Lesehilfe:** Lesehilfe fehlt
+**Lesehilfe:** Das Blatt Daisy-Chain: zwei Übertrager mit Stecker und Überspannungsableiter zur galvanisch getrennten Verbindung zum Nachbarmodul. Variante LFP. Es gibt kein Zielband, weil es ein Schaltplan ist; geprüft wird mit ERC (0 Fehler) und dem Vergleich der Netzliste mit der Platine (0 Abweichungen, ergebnis_schaltplan.json). Generische Symbole, Aktenverweise im Feld Akte. KI-generiert, Entwurf.
 
-- Quelle: `ergebnis.json fehlt`
-- Vorgang: unbekannt
+- Quelle: `sim/elektrik/e3_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3_platine/lesehilfe.md`
+- Vorgang: E3
 
 ### schaltplan_LFP_deckblatt.png
 
-![schaltplan_LFP_deckblatt.png](../sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_deckblatt.png)
+![schaltplan_LFP_deckblatt.png](../sim/elektrik/e3_platine/schaltplan_LFP_deckblatt.png)
 
-**Lesehilfe:** Lesehilfe fehlt
+**Lesehilfe:** Deckblatt des Schaltplans: die Blöcke Sekundärschutz, NTC und Stecker, AFE, Daisy-Chain und Kanäle mit den Verbindungen ABSCHALT, NTC1-4, TX und RX über Blattpins. Variante LFP. Es gibt kein Zielband, weil es ein Schaltplan ist; geprüft wird mit ERC (0 Fehler) und dem Vergleich der Netzliste mit der Platine (0 Abweichungen, ergebnis_schaltplan.json). Generische Symbole, Aktenverweise im Feld Akte. KI-generiert, Entwurf.
 
-- Quelle: `ergebnis.json fehlt`
-- Vorgang: unbekannt
+- Quelle: `sim/elektrik/e3_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3_platine/lesehilfe.md`
+- Vorgang: E3
 
 ### schaltplan_LFP_kanaele.png
 
-![schaltplan_LFP_kanaele.png](../sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_kanaele.png)
+![schaltplan_LFP_kanaele.png](../sim/elektrik/e3_platine/schaltplan_LFP_kanaele.png)
 
-**Lesehilfe:** Lesehilfe fehlt
+**Lesehilfe:** Das Blatt Kanäle des Schaltplans: 18 gleiche Messkanäle als Unterblätter; die Pins hängen an den Zellabgriffen, Messeingängen und Gates. Variante LFP. Es gibt kein Zielband, weil es ein Schaltplan ist; geprüft wird mit ERC (0 Fehler) und dem Vergleich der Netzliste mit der Platine (0 Abweichungen, ergebnis_schaltplan.json). Generische Symbole, Aktenverweise im Feld Akte. KI-generiert, Entwurf.
 
-- Quelle: `ergebnis.json fehlt`
-- Vorgang: unbekannt
+- Quelle: `sim/elektrik/e3_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3_platine/lesehilfe.md`
+- Vorgang: E3
 
 ### schaltplan_LFP_kanal.png
 
-![schaltplan_LFP_kanal.png](../sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_kanal.png)
+![schaltplan_LFP_kanal.png](../sim/elektrik/e3_platine/schaltplan_LFP_kanal.png)
 
-**Lesehilfe:** Lesehilfe fehlt
+**Lesehilfe:** Ein Messkanal (wird 18-mal verwendet): Zellabgriff, Filter-Widerstand mit Kondensator zum Mess-Chip, zwei Ausgleichswiderstände parallel und der Doppel-FET (zwei Schalter in Reihe) zum Abgriff darunter. Variante LFP. Es gibt kein Zielband, weil es ein Schaltplan ist; geprüft wird mit ERC (0 Fehler) und dem Vergleich der Netzliste mit der Platine (0 Abweichungen, ergebnis_schaltplan.json). Generische Symbole, Aktenverweise im Feld Akte. KI-generiert, Entwurf.
 
-- Quelle: `ergebnis.json fehlt`
-- Vorgang: unbekannt
+- Quelle: `sim/elektrik/e3_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3_platine/lesehilfe.md`
+- Vorgang: E3
 
 ### schaltplan_LFP_ntc_stecker.png
 
-![schaltplan_LFP_ntc_stecker.png](../sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_ntc_stecker.png)
+![schaltplan_LFP_ntc_stecker.png](../sim/elektrik/e3_platine/schaltplan_LFP_ntc_stecker.png)
 
-**Lesehilfe:** Lesehilfe fehlt
+**Lesehilfe:** Das Blatt NTC und Stecker: Zellabgriff-Stecker mit 24 Pins und die vier Anschlüsse für externe Temperaturfühler. Variante LFP. Es gibt kein Zielband, weil es ein Schaltplan ist; geprüft wird mit ERC (0 Fehler) und dem Vergleich der Netzliste mit der Platine (0 Abweichungen, ergebnis_schaltplan.json). Generische Symbole, Aktenverweise im Feld Akte. KI-generiert, Entwurf.
 
-- Quelle: `ergebnis.json fehlt`
-- Vorgang: unbekannt
+- Quelle: `sim/elektrik/e3_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3_platine/lesehilfe.md`
+- Vorgang: E3
 
 ### schaltplan_LFP_sekundaerschutz.png
 
-![schaltplan_LFP_sekundaerschutz.png](../sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_sekundaerschutz.png)
+![schaltplan_LFP_sekundaerschutz.png](../sim/elektrik/e3_platine/schaltplan_LFP_sekundaerschutz.png)
 
-**Lesehilfe:** Lesehilfe fehlt
+**Lesehilfe:** Das Blatt Sekundärschutz: drei Überspannungsschutz-Bausteine für je sechs Zellen, ihre Ausgänge sind zusammen auf ABSCHALT gelegt (wired-OR). Variante LFP. Es gibt kein Zielband, weil es ein Schaltplan ist; geprüft wird mit ERC (0 Fehler) und dem Vergleich der Netzliste mit der Platine (0 Abweichungen, ergebnis_schaltplan.json). Generische Symbole, Aktenverweise im Feld Akte. KI-generiert, Entwurf.
 
-- Quelle: `ergebnis.json fehlt`
-- Vorgang: unbekannt
+- Quelle: `sim/elektrik/e3_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3_platine/lesehilfe.md`
+- Vorgang: E3
 
 ### schaltplan_NMC_afe.png
 
-![schaltplan_NMC_afe.png](../sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_afe.png)
+![schaltplan_NMC_afe.png](../sim/elektrik/e3_platine/schaltplan_NMC_afe.png)
 
-**Lesehilfe:** Lesehilfe fehlt
+**Lesehilfe:** Das Blatt AFE und Versorgung: der Mess-Chip mit Filterwiderstand am Abgriff 0 und vier Kondensatoren an der Versorgung. Variante NMC. Es gibt kein Zielband, weil es ein Schaltplan ist; geprüft wird mit ERC (0 Fehler) und dem Vergleich der Netzliste mit der Platine (0 Abweichungen, ergebnis_schaltplan.json). Generische Symbole, Aktenverweise im Feld Akte. KI-generiert, Entwurf.
 
-- Quelle: `ergebnis.json fehlt`
-- Vorgang: unbekannt
+- Quelle: `sim/elektrik/e3_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3_platine/lesehilfe.md`
+- Vorgang: E3
 
 ### schaltplan_NMC_daisy.png
 
-![schaltplan_NMC_daisy.png](../sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_daisy.png)
+![schaltplan_NMC_daisy.png](../sim/elektrik/e3_platine/schaltplan_NMC_daisy.png)
 
-**Lesehilfe:** Lesehilfe fehlt
+**Lesehilfe:** Das Blatt Daisy-Chain: zwei Übertrager mit Stecker und Überspannungsableiter zur galvanisch getrennten Verbindung zum Nachbarmodul. Variante NMC. Es gibt kein Zielband, weil es ein Schaltplan ist; geprüft wird mit ERC (0 Fehler) und dem Vergleich der Netzliste mit der Platine (0 Abweichungen, ergebnis_schaltplan.json). Generische Symbole, Aktenverweise im Feld Akte. KI-generiert, Entwurf.
 
-- Quelle: `ergebnis.json fehlt`
-- Vorgang: unbekannt
+- Quelle: `sim/elektrik/e3_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3_platine/lesehilfe.md`
+- Vorgang: E3
 
 ### schaltplan_NMC_deckblatt.png
 
-![schaltplan_NMC_deckblatt.png](../sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_deckblatt.png)
+![schaltplan_NMC_deckblatt.png](../sim/elektrik/e3_platine/schaltplan_NMC_deckblatt.png)
 
-**Lesehilfe:** Lesehilfe fehlt
+**Lesehilfe:** Deckblatt des Schaltplans: die Blöcke Sekundärschutz, NTC und Stecker, AFE, Daisy-Chain und Kanäle mit den Verbindungen ABSCHALT, NTC1-4, TX und RX über Blattpins. Variante NMC. Es gibt kein Zielband, weil es ein Schaltplan ist; geprüft wird mit ERC (0 Fehler) und dem Vergleich der Netzliste mit der Platine (0 Abweichungen, ergebnis_schaltplan.json). Generische Symbole, Aktenverweise im Feld Akte. KI-generiert, Entwurf.
 
-- Quelle: `ergebnis.json fehlt`
-- Vorgang: unbekannt
+- Quelle: `sim/elektrik/e3_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3_platine/lesehilfe.md`
+- Vorgang: E3
 
 ### schaltplan_NMC_kanaele.png
 
-![schaltplan_NMC_kanaele.png](../sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_kanaele.png)
+![schaltplan_NMC_kanaele.png](../sim/elektrik/e3_platine/schaltplan_NMC_kanaele.png)
 
-**Lesehilfe:** Lesehilfe fehlt
+**Lesehilfe:** Das Blatt Kanäle des Schaltplans: 18 gleiche Messkanäle als Unterblätter; die Pins hängen an den Zellabgriffen, Messeingängen und Gates. Variante NMC. Es gibt kein Zielband, weil es ein Schaltplan ist; geprüft wird mit ERC (0 Fehler) und dem Vergleich der Netzliste mit der Platine (0 Abweichungen, ergebnis_schaltplan.json). Generische Symbole, Aktenverweise im Feld Akte. KI-generiert, Entwurf.
 
-- Quelle: `ergebnis.json fehlt`
-- Vorgang: unbekannt
+- Quelle: `sim/elektrik/e3_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3_platine/lesehilfe.md`
+- Vorgang: E3
 
 ### schaltplan_NMC_kanal.png
 
-![schaltplan_NMC_kanal.png](../sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_kanal.png)
+![schaltplan_NMC_kanal.png](../sim/elektrik/e3_platine/schaltplan_NMC_kanal.png)
 
-**Lesehilfe:** Lesehilfe fehlt
+**Lesehilfe:** Ein Messkanal (wird 18-mal verwendet): Zellabgriff, Filter-Widerstand mit Kondensator zum Mess-Chip, zwei Ausgleichswiderstände parallel und der Doppel-FET (zwei Schalter in Reihe) zum Abgriff darunter. Variante NMC. Es gibt kein Zielband, weil es ein Schaltplan ist; geprüft wird mit ERC (0 Fehler) und dem Vergleich der Netzliste mit der Platine (0 Abweichungen, ergebnis_schaltplan.json). Generische Symbole, Aktenverweise im Feld Akte. KI-generiert, Entwurf.
 
-- Quelle: `ergebnis.json fehlt`
-- Vorgang: unbekannt
+- Quelle: `sim/elektrik/e3_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3_platine/lesehilfe.md`
+- Vorgang: E3
 
 ### schaltplan_NMC_ntc_stecker.png
 
-![schaltplan_NMC_ntc_stecker.png](../sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_ntc_stecker.png)
+![schaltplan_NMC_ntc_stecker.png](../sim/elektrik/e3_platine/schaltplan_NMC_ntc_stecker.png)
 
-**Lesehilfe:** Lesehilfe fehlt
+**Lesehilfe:** Das Blatt NTC und Stecker: Zellabgriff-Stecker mit 24 Pins und die vier Anschlüsse für externe Temperaturfühler. Variante NMC. Es gibt kein Zielband, weil es ein Schaltplan ist; geprüft wird mit ERC (0 Fehler) und dem Vergleich der Netzliste mit der Platine (0 Abweichungen, ergebnis_schaltplan.json). Generische Symbole, Aktenverweise im Feld Akte. KI-generiert, Entwurf.
 
-- Quelle: `ergebnis.json fehlt`
-- Vorgang: unbekannt
+- Quelle: `sim/elektrik/e3_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3_platine/lesehilfe.md`
+- Vorgang: E3
 
 ### schaltplan_NMC_sekundaerschutz.png
 
-![schaltplan_NMC_sekundaerschutz.png](../sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_sekundaerschutz.png)
+![schaltplan_NMC_sekundaerschutz.png](../sim/elektrik/e3_platine/schaltplan_NMC_sekundaerschutz.png)
 
-**Lesehilfe:** Lesehilfe fehlt
+**Lesehilfe:** Das Blatt Sekundärschutz: drei Überspannungsschutz-Bausteine für je sechs Zellen, ihre Ausgänge sind zusammen auf ABSCHALT gelegt (wired-OR). Variante NMC. Es gibt kein Zielband, weil es ein Schaltplan ist; geprüft wird mit ERC (0 Fehler) und dem Vergleich der Netzliste mit der Platine (0 Abweichungen, ergebnis_schaltplan.json). Generische Symbole, Aktenverweise im Feld Akte. KI-generiert, Entwurf.
 
-- Quelle: `ergebnis.json fehlt`
-- Vorgang: unbekannt
-
-
-## sim/elektrik/e3_platine
+- Quelle: `sim/elektrik/e3_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3_platine/lesehilfe.md`
+- Vorgang: E3
 
 ### spice_ausgleich_vorladung.png
 
@@ -2909,34 +2903,6 @@ Alle Bilder unter `sim/` und `cad/` mit Lesehilfe für Nicht-Fachleute, Quelle u
 - sim/elektrik/e2_elektronik/kabelplan_NMC.png
 - sim/elektrik/e2_elektronik/schaltbild_LFP.png
 - sim/elektrik/e2_elektronik/schaltbild_NMC.png
-- sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_afe.png
-- sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_afe.png (Quelle ergebnis.json fehlt)
-- sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_daisy.png
-- sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_daisy.png (Quelle ergebnis.json fehlt)
-- sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_deckblatt.png
-- sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_deckblatt.png (Quelle ergebnis.json fehlt)
-- sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_kanaele.png
-- sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_kanaele.png (Quelle ergebnis.json fehlt)
-- sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_kanal.png
-- sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_kanal.png (Quelle ergebnis.json fehlt)
-- sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_ntc_stecker.png
-- sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_ntc_stecker.png (Quelle ergebnis.json fehlt)
-- sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_sekundaerschutz.png
-- sim/elektrik/e3_platine/schaltplan/schaltplan_LFP_sekundaerschutz.png (Quelle ergebnis.json fehlt)
-- sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_afe.png
-- sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_afe.png (Quelle ergebnis.json fehlt)
-- sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_daisy.png
-- sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_daisy.png (Quelle ergebnis.json fehlt)
-- sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_deckblatt.png
-- sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_deckblatt.png (Quelle ergebnis.json fehlt)
-- sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_kanaele.png
-- sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_kanaele.png (Quelle ergebnis.json fehlt)
-- sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_kanal.png
-- sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_kanal.png (Quelle ergebnis.json fehlt)
-- sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_ntc_stecker.png
-- sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_ntc_stecker.png (Quelle ergebnis.json fehlt)
-- sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_sekundaerschutz.png
-- sim/elektrik/e3_platine/schaltplan/schaltplan_NMC_sekundaerschutz.png (Quelle ergebnis.json fehlt)
 - sim/kuehlung/k2_kuehlplatte/platte_NMC.png
 - sim/kuehlung/k3_gesamt/film/f000.png
 - sim/kuehlung/k3_gesamt/film/f001.png
