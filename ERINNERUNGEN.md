@@ -2,6 +2,10 @@
 
 KI-generiert (Claude Opus).
 
+## 2026-11-24 20:00: Übergabe (Frist des Autors 20:30)
+Erledigt: CMU N7–N9 (Sekundärschutz je Zelle, Doppel-FET, DRC 0, FMEDA v0.2), BMS BT-311 mit Schaltplan und Sparschaltung (OPT-006), KR2 (K1), REQ-P07 neu 600/450 kg (AEN-022), docs/25. Abgabe STEP + Schaltpläne: /home/cae/cae_projekte/batterie/abgabe_2026-11-24/.
+Offen: SV1 (B-BAT-059, ERW-SV1 N1): Freigangslogik prüfen, NMC-Daisy-Kollision, CMU-Bohrungen. L2 Leichtbau im CAD (LFP −20, NMC −32 kg). BT-715 Merkmale Schütz. Bilder BMS nach OPT-006 neu. git push durch Autor.
+
 ## 2026-11-24 Abend: offene Punkte (Autor: „mach die offenen punkte“), noch nicht begonnen, Nutzungslimit
 1. LFP-Kollisionen (3): 2 × M8-Kopf der Trennbrücke im Servicedeckel (je 212 mm³) → Deckel-Innenhöhe ≥ Kopfhöhe + 3 mm (konservativ); Schmelz_Lasche_A/Schiene_5 0,0017 mm³ = Berührung (verschraubt), als Kontakt zulassen.
 2. BMS-Platine BT-311 (ERWARTUNG schreiben, Ordner sim/elektrik/e3c_bms_platine): MCU generisch ASIL D, 2 × CAN-FD, Schützansteuerung mit Zener-Löschung (Sparschaltung = OPT-006), isoSPI-Master mit verstärkter Isolation, Shunt-ADC auf der HV-Seite mit isolierter Strecke, 12 V mit ISO-7637-Schutz. Trennung HV/NV: Kriechstrecke 10 mm, Luftstrecke 8 mm (inkl. Höhe 1,25). Erwartung ≈ 150–220 Teile, ≈ 160 × 100 mm, passt in die Schaltbox (ENT-144), DRC 0.

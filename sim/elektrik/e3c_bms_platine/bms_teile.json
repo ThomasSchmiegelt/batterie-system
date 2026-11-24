@@ -3,7 +3,10 @@
   "BT-311.laenge_mm": "160.0 (ENT-188)",
   "BT-311.breite_mm": "100.0 (ENT-189)",
   "BT-311.lagen": "4.0 (ENT-190)",
-  "BT-311.kriechstrecke_hv_nv_mm": "10.0 (ENT-191)"
+  "BT-311.kriechstrecke_hv_nv_mm": "10.0 (ENT-191)",
+  "BT-311.luftstrecke_hv_nv_mm": "8.0 (ENT-195)",
+  "BT-311.abstand_nv_mm": "0.15 (ENT-196)",
+  "BT-311.schuetzkanaele": "3.0 (ENT-197)"
  },
  "teile": [
   {
@@ -1508,7 +1511,7 @@
    "ref": "D10",
    "tag": "D_FREI_P",
    "name": "Diode_Freilauf",
-   "value": "Diode Freilauf in Reihe zur Z-Diode",
+   "value": "Diode Löschpfad in Reihe zur Z-Diode",
    "footprint": "Diode_SMD:D_SMA",
    "seite": "NV",
    "pins": {
@@ -1524,12 +1527,28 @@
    "ref": "D11",
    "tag": "D_ZENER_P",
    "name": "Z_Diode_Loeschung",
-   "value": "Z-Diode Löschung generisch",
+   "value": "Z-Diode Löschung 36 V generisch (ENT-199)",
    "footprint": "Diode_SMD:D_SMA",
    "seite": "NV",
    "pins": {
-    "1": "VBAT_F",
+    "1": "GND",
     "2": "P_ZENER"
+   },
+   "pinnamen": {
+    "1": "A",
+    "2": "K"
+   }
+  },
+  {
+   "ref": "D12",
+   "tag": "D_PWM_P",
+   "name": "Diode_Freilauf",
+   "value": "Diode PWM-Freilauf GND -> HS-Ende der Spule (ENT-198/199)",
+   "footprint": "Diode_SMD:D_SMA",
+   "seite": "NV",
+   "pins": {
+    "1": "GND",
+    "2": "P_SPULE_P"
    },
    "pinnamen": {
     "1": "A",
@@ -1689,10 +1708,10 @@
    }
   },
   {
-   "ref": "D12",
+   "ref": "D13",
    "tag": "D_FREI_M",
    "name": "Diode_Freilauf",
-   "value": "Diode Freilauf in Reihe zur Z-Diode",
+   "value": "Diode Löschpfad in Reihe zur Z-Diode",
    "footprint": "Diode_SMD:D_SMA",
    "seite": "NV",
    "pins": {
@@ -1705,15 +1724,31 @@
    }
   },
   {
-   "ref": "D13",
+   "ref": "D14",
    "tag": "D_ZENER_M",
    "name": "Z_Diode_Loeschung",
-   "value": "Z-Diode Löschung generisch",
+   "value": "Z-Diode Löschung 36 V generisch (ENT-199)",
    "footprint": "Diode_SMD:D_SMA",
    "seite": "NV",
    "pins": {
-    "1": "VBAT_F",
+    "1": "GND",
     "2": "M_ZENER"
+   },
+   "pinnamen": {
+    "1": "A",
+    "2": "K"
+   }
+  },
+  {
+   "ref": "D15",
+   "tag": "D_PWM_M",
+   "name": "Diode_Freilauf",
+   "value": "Diode PWM-Freilauf GND -> HS-Ende der Spule (ENT-198/199)",
+   "footprint": "Diode_SMD:D_SMA",
+   "seite": "NV",
+   "pins": {
+    "1": "GND",
+    "2": "M_SPULE_P"
    },
    "pinnamen": {
     "1": "A",
@@ -1873,10 +1908,10 @@
    }
   },
   {
-   "ref": "D14",
+   "ref": "D16",
    "tag": "D_FREI_V",
    "name": "Diode_Freilauf",
-   "value": "Diode Freilauf in Reihe zur Z-Diode",
+   "value": "Diode Löschpfad in Reihe zur Z-Diode",
    "footprint": "Diode_SMD:D_SMA",
    "seite": "NV",
    "pins": {
@@ -1889,15 +1924,31 @@
    }
   },
   {
-   "ref": "D15",
+   "ref": "D17",
    "tag": "D_ZENER_V",
    "name": "Z_Diode_Loeschung",
-   "value": "Z-Diode Löschung generisch",
+   "value": "Z-Diode Löschung 36 V generisch (ENT-199)",
    "footprint": "Diode_SMD:D_SMA",
    "seite": "NV",
    "pins": {
-    "1": "VBAT_F",
+    "1": "GND",
     "2": "V_ZENER"
+   },
+   "pinnamen": {
+    "1": "A",
+    "2": "K"
+   }
+  },
+  {
+   "ref": "D18",
+   "tag": "D_PWM_V",
+   "name": "Diode_Freilauf",
+   "value": "Diode PWM-Freilauf GND -> HS-Ende der Spule (ENT-198/199)",
+   "footprint": "Diode_SMD:D_SMA",
+   "seite": "NV",
+   "pins": {
+    "1": "GND",
+    "2": "V_SPULE_P"
    },
    "pinnamen": {
     "1": "A",
@@ -2331,7 +2382,7 @@
    }
   },
   {
-   "ref": "D16",
+   "ref": "D19",
    "tag": "D_TVS_DAISY1",
    "name": "TVS_Daisy",
    "value": "TVS Daisy-Chain (analog E3 N2)",
@@ -2399,7 +2450,7 @@
    }
   },
   {
-   "ref": "D17",
+   "ref": "D20",
    "tag": "D_TVS_DAISY2",
    "name": "TVS_Daisy",
    "value": "TVS Daisy-Chain (analog E3 N2)",

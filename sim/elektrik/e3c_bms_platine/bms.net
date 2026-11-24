@@ -2,7 +2,7 @@
   (version "D")
   (design
     (source "bms_skidl.py")
-    (date "11/24/2026 02:14 PM")
+    (date "11/24/2026 03:55 PM")
     (tool "SKiDL (3.0.0)")
     (sheet
       (number 1)
@@ -55,9 +55,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "ljvXaadzil")
+          (name "SKiDL Tag") "TnohP3DWVU")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C_12"))
@@ -65,7 +65,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "01a1c830-a570-5b48-8a53-50058ea3bb2a"))
+      (tstamps "938be836-07e9-5e79-9cda-9c83740bbc28"))
     (comp
       (ref "C10")
       (value "C Entkopplung (Wert offen)")
@@ -79,9 +79,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "ei2ObSWTCb")
+          (name "SKiDL Tag") "rrCU1mQpnP")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -89,7 +89,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "0890e427-9c82-5e60-b044-8b96aae2d03c"))
+      (tstamps "65e75bfe-0d48-502c-8a0a-88214f08e59c"))
     (comp
       (ref "C11")
       (value "C Entkopplung (Wert offen)")
@@ -103,9 +103,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "Yq937aLsCX")
+          (name "SKiDL Tag") "KUafXOMKmX")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -113,7 +113,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "782f4bc5-b261-523d-9179-3c71a934458e"))
+      (tstamps "64bb74ff-862e-59e9-97f6-37879f5bac33"))
     (comp
       (ref "C12")
       (value "C Entkopplung (Wert offen)")
@@ -127,9 +127,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "QCmSr9N0iV")
+          (name "SKiDL Tag") "Gq_UmoJfYZ")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -137,7 +137,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "3aafb716-c8bd-5d3a-bf16-02f6807cec67"))
+      (tstamps "11938081-1a63-57e7-8c6c-a0d656ac29af"))
     (comp
       (ref "C13")
       (value "C Entkopplung (Wert offen)")
@@ -151,9 +151,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "KSxdeQEDjO")
+          (name "SKiDL Tag") "l_7f6Zg92B")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -161,7 +161,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "6593bb15-d967-5b07-bdd3-80fcad8caf78"))
+      (tstamps "b42c68b6-95dc-523f-aad6-8f7881c212f7"))
     (comp
       (ref "C14")
       (value "C Entkopplung (Wert offen)")
@@ -175,9 +175,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "V3CcfBtA8E")
+          (name "SKiDL Tag") "8ExoqikvED")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -185,7 +185,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "d3e212bb-029c-5c04-8f27-83c88c35528f"))
+      (tstamps "397dfa91-55b2-5831-847c-0eb9524f4b56"))
     (comp
       (ref "C15")
       (value "C Entkopplung (Wert offen)")
@@ -199,9 +199,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "jSMuXeoFTk")
+          (name "SKiDL Tag") "h6Vmqr_sgl")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -209,7 +209,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "f6aed0e5-4c80-53f7-a41b-ffa7698395a3"))
+      (tstamps "f2e98bcc-c93a-5210-86ff-c11c90cf653a"))
     (comp
       (ref "C16")
       (value "C Entkopplung (Wert offen)")
@@ -223,9 +223,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "0hjvmq0DqA")
+          (name "SKiDL Tag") "bB56gGp70F")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -233,7 +233,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "f1851c70-5758-507c-b731-bb354aea2643"))
+      (tstamps "8d5bc3c8-48af-5bfe-8711-faac20a8ebd5"))
     (comp
       (ref "C17")
       (value "C Entkopplung (Wert offen)")
@@ -247,9 +247,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "fzn1m_deYX")
+          (name "SKiDL Tag") "M5PxOk7BIr")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -257,7 +257,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "f2d74524-7579-5394-9759-cb66ac849f87"))
+      (tstamps "bef4788f-fbe7-5b49-992a-c2f2fd400b46"))
     (comp
       (ref "C18")
       (value "C Entkopplung analog (Wert offen)")
@@ -271,9 +271,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "k1Vw3ZngL9")
+          (name "SKiDL Tag") "pgnEK3S655")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -281,7 +281,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "d6624912-42b4-548a-b6b4-ea50eefde5ff"))
+      (tstamps "892156b8-e37b-5c82-ae7b-84ce01ee2df0"))
     (comp
       (ref "C19")
       (value "C Entkopplung analog (Wert offen)")
@@ -295,9 +295,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "QW0Qz03T_H")
+          (name "SKiDL Tag") "6FX6b1aHkE")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -305,7 +305,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "551279fd-f570-5e88-a711-f92b322bd577"))
+      (tstamps "fcf791b5-45b9-5ff7-aae7-8f183fd8108d"))
     (comp
       (ref "C2")
       (value "C Pufferung (Wert offen)")
@@ -319,9 +319,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "ODRO693Dp8")
+          (name "SKiDL Tag") "hYWcq0IFLV")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C_12"))
@@ -329,7 +329,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "697ca859-6cd3-5796-a84c-5fd9c51bc18d"))
+      (tstamps "5f5c525e-e329-5d32-b57c-d6edbb0131fe"))
     (comp
       (ref "C20")
       (value "C Entkopplung analog (Wert offen)")
@@ -343,9 +343,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "l6y77Hds3Z")
+          (name "SKiDL Tag") "p3JzPG40pA")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -353,7 +353,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "e7ed04be-4917-58d8-8049-513508088205"))
+      (tstamps "8c8298bd-9ee8-5c17-aa75-2d348261648d"))
     (comp
       (ref "C21")
       (value "C Puffer Rechner (Wert offen)")
@@ -367,9 +367,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "phlRjBuWf9")
+          (name "SKiDL Tag") "HEhkB7OPwK")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C_8"))
@@ -377,7 +377,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "254e967e-e48c-5602-89de-06f8ab3fba7f"))
+      (tstamps "718416dc-e156-5dbd-996e-4ecb36ac9cf6"))
     (comp
       (ref "C22")
       (value "C Puffer Rechner (Wert offen)")
@@ -391,9 +391,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "lDBpnYMNXV")
+          (name "SKiDL Tag") "4QthyUnIPN")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C_8"))
@@ -401,7 +401,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "ea835f08-6f81-5c56-a2c3-d77e872e57c5"))
+      (tstamps "95058ac0-9927-57c1-8cb4-46796e0d7087"))
     (comp
       (ref "C23")
       (value "C Reset (Wert offen)")
@@ -415,9 +415,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "LsOyPWA5KZ")
+          (name "SKiDL Tag") "fhiHvIItck")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -425,7 +425,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "ad5319eb-26ee-5b6b-ab07-bebbfca1989b"))
+      (tstamps "1b8ac658-8294-5a02-8544-5645c851f92c"))
     (comp
       (ref "C24")
       (value "C Quarz (Wert offen)")
@@ -439,9 +439,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "pMhkbl0UN8")
+          (name "SKiDL Tag") "b44ht2G7WI")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -449,7 +449,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "afacf53f-c029-580f-8de0-1802dcf3276c"))
+      (tstamps "2c9d83b4-bf9d-545a-9a1d-6557583157a1"))
     (comp
       (ref "C25")
       (value "C Quarz (Wert offen)")
@@ -463,9 +463,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "LChmbUAO0Z")
+          (name "SKiDL Tag") "suxQHg4vIm")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -473,7 +473,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "b5555312-5aa3-5b10-b8a6-a066f34f4a5b"))
+      (tstamps "d02a186e-adc0-5857-9848-75901277f3b3"))
     (comp
       (ref "C26")
       (value "C Terminierung (Wert offen)")
@@ -487,9 +487,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "Ywp_bqtynC")
+          (name "SKiDL Tag") "UwNQ3lnj_v")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -497,7 +497,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "1e568dd0-e184-586b-a2bf-ada696789004"))
+      (tstamps "49b7ca8c-7824-517b-b98b-414f906ae567"))
     (comp
       (ref "C27")
       (value "C Entkopplung (Wert offen)")
@@ -511,9 +511,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "LVOPmtbWd2")
+          (name "SKiDL Tag") "x4Ipt3Q7cJ")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -521,7 +521,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "a755c577-363f-59c5-9d70-ba0c95810257"))
+      (tstamps "a8110a9e-2e01-54f7-a3b2-4519e0470f35"))
     (comp
       (ref "C28")
       (value "C Entkopplung (Wert offen)")
@@ -535,9 +535,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "dCULbR2c1c")
+          (name "SKiDL Tag") "lwDt1REMpG")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -545,7 +545,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "dd3e6661-091f-572e-b56e-dcc5197daddf"))
+      (tstamps "410f408f-f8c6-521e-aa70-6d0ead943b34"))
     (comp
       (ref "C29")
       (value "C Terminierung (Wert offen)")
@@ -559,9 +559,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "tw7_8ZPPOt")
+          (name "SKiDL Tag") "2FwCk5_zhI")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -569,7 +569,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "f042df51-3173-5f74-bf5c-af63ee08d69b"))
+      (tstamps "3d81a959-96c7-5735-9100-afc1757dad03"))
     (comp
       (ref "C3")
       (value "C Elko Pufferung (Wert offen)")
@@ -583,9 +583,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "wH5C8qH2On")
+          (name "SKiDL Tag") "ax66gxShPw")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C_Elko"))
@@ -593,7 +593,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "c75e1909-6f7e-557c-aef4-3ee7440e154e"))
+      (tstamps "cf3e52a3-1c2d-5de1-bda3-6826fbab3bf0"))
     (comp
       (ref "C30")
       (value "C Entkopplung (Wert offen)")
@@ -607,9 +607,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "5Ajwxv67wl")
+          (name "SKiDL Tag") "KTStUbmL3n")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -617,7 +617,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "1bcc42b6-94ed-58a4-8e9d-1f559fab1511"))
+      (tstamps "511dbe5b-aacc-5d3f-b471-5ff2939dcb02"))
     (comp
       (ref "C31")
       (value "C Entkopplung (Wert offen)")
@@ -631,9 +631,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "zE4lBSLTv9")
+          (name "SKiDL Tag") "BaP_jwScQL")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -641,7 +641,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "0188cc88-e1d2-56a8-9f45-c12d8bbb22eb"))
+      (tstamps "7d8e9622-4f6d-582e-90f1-1f5968f36be4"))
     (comp
       (ref "C32")
       (value "C Entkopplung (Wert offen)")
@@ -655,9 +655,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "prwLySPTs3")
+          (name "SKiDL Tag") "qsh0BWkMzQ")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -665,7 +665,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "5cced2a0-e477-52af-be04-8f800b2913fe"))
+      (tstamps "2ba6463b-7f7b-5191-81da-786a442ecf2c"))
     (comp
       (ref "C33")
       (value "C Entkopplung (Wert offen)")
@@ -679,9 +679,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "DNvRz8q0FF")
+          (name "SKiDL Tag") "zWreLr39ia")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -689,7 +689,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "c89dabaa-ac08-5c93-a6bb-499b3018cb4e"))
+      (tstamps "ebb2f3d0-6d11-5e37-bcce-f0b78ab240d0"))
     (comp
       (ref "C34")
       (value "C Filter Strommessung (Wert offen)")
@@ -703,9 +703,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "s4DuPL5iiI")
+          (name "SKiDL Tag") "Eyz4OK4w6w")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -713,7 +713,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "de4cd815-be7d-5a06-9678-84329e6845ad"))
+      (tstamps "a7cf822f-c44d-5787-8762-c2d48686205a"))
     (comp
       (ref "C35")
       (value "C Filter Strommessung (Wert offen)")
@@ -727,9 +727,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "uQ4ZGZmPoR")
+          (name "SKiDL Tag") "_mzAqihxEW")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -737,7 +737,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "eaf96278-e0e7-5d58-a741-a093fc7da535"))
+      (tstamps "00715627-fd07-551d-984b-e0cbc8bdec84"))
     (comp
       (ref "C36")
       (value "C Filter Strommessung (Wert offen)")
@@ -751,9 +751,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "BuY0_PDgVN")
+          (name "SKiDL Tag") "5H0uewf85H")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -761,7 +761,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "264620e4-1c25-595c-9742-ccd4932b12fa"))
+      (tstamps "73142655-397a-5677-acc0-191f5b7a3372"))
     (comp
       (ref "C37")
       (value "C Differenzfilter Shunt (Wert offen)")
@@ -775,9 +775,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "nioKFeCdVi")
+          (name "SKiDL Tag") "exasbi1KiK")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -785,7 +785,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "1672656c-047c-547d-8a1b-b489a4b230dc"))
+      (tstamps "0d3c26c6-ad0c-5fb9-9924-e7dc700b626b"))
     (comp
       (ref "C38")
       (value "C Filter nach HV_GND (Wert offen)")
@@ -799,9 +799,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "CA6vxAsO91")
+          (name "SKiDL Tag") "f98ND72Ugv")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -809,7 +809,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "b25b8389-708c-55ab-a953-6fa479d9912c"))
+      (tstamps "29c36f14-e7f2-5813-bc55-5a1b0ca3dd78"))
     (comp
       (ref "C39")
       (value "C Filter nach HV_GND (Wert offen)")
@@ -823,9 +823,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "CNGeziG96E")
+          (name "SKiDL Tag") "Fli051OeIZ")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -833,7 +833,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "5d888ae1-a356-5a42-b4f9-eed77e9f0405"))
+      (tstamps "3e7e6044-4cd9-58e9-8548-b05957444940"))
     (comp
       (ref "C4")
       (value "C Entkopplung (Wert offen)")
@@ -847,9 +847,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "JYDoAhNTP6")
+          (name "SKiDL Tag") "OeGI4CMnBp")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -857,7 +857,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "55d18cab-66f9-5133-921a-c156696f77b2"))
+      (tstamps "0d4f2b11-37f9-5e76-9ecb-77d840c03362"))
     (comp
       (ref "C40")
       (value "C Entkopplung HV (Wert offen)")
@@ -871,9 +871,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "yXTxk8sBji")
+          (name "SKiDL Tag") "1wMl7c_VQJ")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -881,7 +881,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "0a06cd84-de4f-5195-880b-3f968e797c0d"))
+      (tstamps "6c6c647e-5f6c-5199-823a-b6cd01787e6f"))
     (comp
       (ref "C41")
       (value "C Entkopplung HV (Wert offen)")
@@ -895,9 +895,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "5T7zph3Bkb")
+          (name "SKiDL Tag") "5VVPpwQSkY")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -905,7 +905,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "05700246-9515-500b-936e-cd7c7cb42c9d"))
+      (tstamps "ac2de67b-b49e-5dc3-96a3-a5527b853330"))
     (comp
       (ref "C42")
       (value "C Entkopplung HV (Wert offen)")
@@ -919,9 +919,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "M0bcF1Mrih")
+          (name "SKiDL Tag") "fXftgEFJkJ")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -929,7 +929,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "03ba005d-ee62-56fa-ab40-048a6624d0f0"))
+      (tstamps "b077c5c7-40aa-5344-adad-283196ee6fb1"))
     (comp
       (ref "C43")
       (value "C Entkopplung NV (Wert offen)")
@@ -943,9 +943,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "af2ng80HQW")
+          (name "SKiDL Tag") "V6FvyMEuY5")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -953,7 +953,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "05934b5f-88fa-5571-be0f-927efb6241ec"))
+      (tstamps "2589eb9b-b7b2-530e-9ef3-48258bad7771"))
     (comp
       (ref "C44")
       (value "C Entkopplung HV (Wert offen)")
@@ -967,9 +967,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "vj5wmYUYjs")
+          (name "SKiDL Tag") "F0agz2FUtV")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -977,7 +977,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "d2910086-0031-50a5-a045-51b814096928"))
+      (tstamps "57e10b6c-0f68-53b7-8311-0c30686212ee"))
     (comp
       (ref "C45")
       (value "C Entkopplung NV (Wert offen)")
@@ -991,9 +991,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "nbwYqq8RR8")
+          (name "SKiDL Tag") "rvxe3LOzvG")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -1001,7 +1001,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "2e0865c7-5357-53d7-aee4-fb279904bf1d"))
+      (tstamps "849d76b1-9e6e-5490-9081-2e06e6106948"))
     (comp
       (ref "C46")
       (value "C Entkopplung (Wert offen)")
@@ -1015,9 +1015,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "NOuJOv0ZEK")
+          (name "SKiDL Tag") "K_09eZpLsM")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -1025,7 +1025,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "ca7c90b5-9079-5b5c-ad5d-efe40abcb504"))
+      (tstamps "22f2849d-cbd3-5798-8294-b7ab7d943292"))
     (comp
       (ref "C5")
       (value "C Ausgang SBC (Wert offen)")
@@ -1039,9 +1039,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "I3_4QhAiiC")
+          (name "SKiDL Tag") "YaMDoa1oKL")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C_8"))
@@ -1049,7 +1049,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "ad127cb4-433d-5920-b5ec-99b8bd084011"))
+      (tstamps "341c6f62-1ce9-5077-a6a6-f11fe3dcd645"))
     (comp
       (ref "C6")
       (value "C Ausgang SBC (Wert offen)")
@@ -1063,9 +1063,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "DWMD1iEODj")
+          (name "SKiDL Tag") "2X1tehDhxv")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C_8"))
@@ -1073,7 +1073,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "ada4b656-9a47-5351-8f0b-ae03135fdbdc"))
+      (tstamps "0f940d3e-7bba-594a-9df2-00e67dbd223f"))
     (comp
       (ref "C7")
       (value "C Entkopplung (Wert offen)")
@@ -1087,9 +1087,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "pKuKZzg5wP")
+          (name "SKiDL Tag") "Gh9RBoTq5G")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -1097,7 +1097,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "bf2001bf-b5d6-5274-acce-bfa1675144ae"))
+      (tstamps "8e033fc4-244d-51f7-807e-4bd5df1c87ce"))
     (comp
       (ref "C8")
       (value "C Entkopplung (Wert offen)")
@@ -1111,9 +1111,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "Jq8CeGYZjA")
+          (name "SKiDL Tag") "QQgcpUnnnh")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -1121,7 +1121,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "ff474dbc-385e-59a6-8951-f7abcbbfd9c5"))
+      (tstamps "4131b74b-9016-5ccf-8310-3edc5333d530"))
     (comp
       (ref "C9")
       (value "C Entkopplung (Wert offen)")
@@ -1135,9 +1135,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "c0loI7ky6o")
+          (name "SKiDL Tag") "x_5oTfop9z")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "C"))
@@ -1145,7 +1145,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "4a231911-9e95-5f10-a024-76b90a8a87ae"))
+      (tstamps "0a7389c1-f4f7-53a3-88f2-4ad964a4e7df"))
     (comp
       (ref "D1")
       (value "Z-Diode Gate-Schutz generisch")
@@ -1159,9 +1159,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "9z_he5bXqz")
+          (name "SKiDL Tag") "HUkbfeezp9")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "Z_Diode_Gate"))
@@ -1169,10 +1169,10 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "36429476-cdef-51aa-9735-7047a0bd35d0"))
+      (tstamps "df17790f-4f9f-5664-8dae-469205898007"))
     (comp
       (ref "D10")
-      (value "Diode Freilauf in Reihe zur Z-Diode")
+      (value "Diode Löschpfad in Reihe zur Z-Diode")
       (description "")
       (footprint "Diode_SMD:D_SMA")
       (fields
@@ -1183,9 +1183,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "8HlnWT6DhS")
+          (name "SKiDL Tag") "lPIjHeGhoW")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "Diode_Freilauf"))
@@ -1193,10 +1193,10 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "76fdd4ce-a336-570c-8506-1be1be16ac11"))
+      (tstamps "5d910aa6-ac8b-5c29-8e8e-30ba4460f322"))
     (comp
       (ref "D11")
-      (value "Z-Diode Löschung generisch")
+      (value "Z-Diode Löschung 36 V generisch (ENT-199)")
       (description "")
       (footprint "Diode_SMD:D_SMA")
       (fields
@@ -1207,9 +1207,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "KOW1BKyD1N")
+          (name "SKiDL Tag") "O5pDr7pfuP")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "Z_Diode_Loeschung"))
@@ -1217,10 +1217,10 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "703e4ae3-9e06-58d9-bde0-a4d9d17ab669"))
+      (tstamps "9c54e180-0cca-54e6-ba59-9548b79a0b63"))
     (comp
       (ref "D12")
-      (value "Diode Freilauf in Reihe zur Z-Diode")
+      (value "Diode PWM-Freilauf GND -> HS-Ende der Spule (ENT-198/199)")
       (description "")
       (footprint "Diode_SMD:D_SMA")
       (fields
@@ -1231,9 +1231,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "QCaPAF4I_5")
+          (name "SKiDL Tag") "JZ7L9pmv_P")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "Diode_Freilauf"))
@@ -1241,10 +1241,10 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "835cc29b-0063-56d9-a81e-7c33f9e674c6"))
+      (tstamps "a78c584c-56bd-5bf5-9768-de59e4499249"))
     (comp
       (ref "D13")
-      (value "Z-Diode Löschung generisch")
+      (value "Diode Löschpfad in Reihe zur Z-Diode")
       (description "")
       (footprint "Diode_SMD:D_SMA")
       (fields
@@ -1255,33 +1255,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "ao3dlDUVuY")
+          (name "SKiDL Tag") "_9cYnR0uyO")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
-      (libsource
-        (lib "NO_LIB")
-        (part "Z_Diode_Loeschung"))
-      (sheetpath
-        (names "/")
-        (tstamps "/"))
-      (component_classes)
-      (tstamps "0c732f1f-4f20-5b5a-a416-8e9f2d27ea65"))
-    (comp
-      (ref "D14")
-      (value "Diode Freilauf in Reihe zur Z-Diode")
-      (description "")
-      (footprint "Diode_SMD:D_SMA")
-      (fields
-        (field
-          (name "Description"))
-        (field
-          (name "Footprint") "Diode_SMD:D_SMA")
-        (field
-          (name "Datasheet"))
-        (field
-          (name "SKiDL Tag") "6Jvn99PGJq")
-        (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "Diode_Freilauf"))
@@ -1289,10 +1265,10 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "68ed16e1-2835-529f-bf33-e859010e3991"))
+      (tstamps "221c16fe-6520-5a4c-9a13-2e1fd905778f"))
     (comp
-      (ref "D15")
-      (value "Z-Diode Löschung generisch")
+      (ref "D14")
+      (value "Z-Diode Löschung 36 V generisch (ENT-199)")
       (description "")
       (footprint "Diode_SMD:D_SMA")
       (fields
@@ -1303,9 +1279,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "HFBKX4WTb9")
+          (name "SKiDL Tag") "gVtwzY3Xqk")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "Z_Diode_Loeschung"))
@@ -1313,33 +1289,105 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "9fc32866-92c4-5b9e-bf4a-a87b9e7d7f1e"))
+      (tstamps "c99a5eb2-5243-5cad-98c4-5ff0f0d7e1c1"))
+    (comp
+      (ref "D15")
+      (value "Diode PWM-Freilauf GND -> HS-Ende der Spule (ENT-198/199)")
+      (description "")
+      (footprint "Diode_SMD:D_SMA")
+      (fields
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Diode_SMD:D_SMA")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "tTO5sV8UHz")
+        (field
+          (name "SKiDL Line") "bms_skidl.py:69"))
+      (libsource
+        (lib "NO_LIB")
+        (part "Diode_Freilauf"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "baadaec4-4e07-5d19-b3dd-06ab5cc0d6ba"))
     (comp
       (ref "D16")
-      (value "TVS Daisy-Chain (analog E3 N2)")
+      (value "Diode Löschpfad in Reihe zur Z-Diode")
       (description "")
-      (footprint "Diode_SMD:D_SOD-323")
+      (footprint "Diode_SMD:D_SMA")
       (fields
         (field
           (name "Description"))
         (field
-          (name "Footprint") "Diode_SMD:D_SOD-323")
+          (name "Footprint") "Diode_SMD:D_SMA")
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "GJl8pXZIss")
+          (name "SKiDL Tag") "QRHIKItx_d")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
-        (part "TVS_Daisy"))
+        (part "Diode_Freilauf"))
       (sheetpath
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "454fe7ce-4c12-5a32-a713-b8c4781ec6e9"))
+      (tstamps "0f826f13-4fb7-59e7-8850-80e689331638"))
     (comp
       (ref "D17")
+      (value "Z-Diode Löschung 36 V generisch (ENT-199)")
+      (description "")
+      (footprint "Diode_SMD:D_SMA")
+      (fields
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Diode_SMD:D_SMA")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "lh41j2iLZo")
+        (field
+          (name "SKiDL Line") "bms_skidl.py:69"))
+      (libsource
+        (lib "NO_LIB")
+        (part "Z_Diode_Loeschung"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "3615e51c-2b8c-5f47-8d2e-8f3b2d8869ef"))
+    (comp
+      (ref "D18")
+      (value "Diode PWM-Freilauf GND -> HS-Ende der Spule (ENT-198/199)")
+      (description "")
+      (footprint "Diode_SMD:D_SMA")
+      (fields
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Diode_SMD:D_SMA")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "BjQz9_txo8")
+        (field
+          (name "SKiDL Line") "bms_skidl.py:69"))
+      (libsource
+        (lib "NO_LIB")
+        (part "Diode_Freilauf"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "682444ec-847c-57fc-ac0d-d1282c20e95a"))
+    (comp
+      (ref "D19")
       (value "TVS Daisy-Chain (analog E3 N2)")
       (description "")
       (footprint "Diode_SMD:D_SOD-323")
@@ -1351,9 +1399,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "Q1CXJNrLfi")
+          (name "SKiDL Tag") "6xqXS8qgX9")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "TVS_Daisy"))
@@ -1361,7 +1409,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "d675467f-789e-5585-ac37-610c862d7a93"))
+      (tstamps "8d6c63a4-2859-5792-8472-9fc4d0c8e823"))
     (comp
       (ref "D2")
       (value "TVS ISO 7637-2 generisch")
@@ -1375,9 +1423,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "d2crH4M9w0")
+          (name "SKiDL Tag") "3zplO3JAWA")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "TVS_ISO7637"))
@@ -1385,7 +1433,31 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "1422335b-9bc4-5980-9adf-86c5bd54fb58"))
+      (tstamps "35171305-5fa3-5f1b-a277-8217d7fcf86c"))
+    (comp
+      (ref "D20")
+      (value "TVS Daisy-Chain (analog E3 N2)")
+      (description "")
+      (footprint "Diode_SMD:D_SOD-323")
+      (fields
+        (field
+          (name "Description"))
+        (field
+          (name "Footprint") "Diode_SMD:D_SOD-323")
+        (field
+          (name "Datasheet"))
+        (field
+          (name "SKiDL Tag") "ZGxRpJE040")
+        (field
+          (name "SKiDL Line") "bms_skidl.py:69"))
+      (libsource
+        (lib "NO_LIB")
+        (part "TVS_Daisy"))
+      (sheetpath
+        (names "/")
+        (tstamps "/"))
+      (component_classes)
+      (tstamps "f4ab0e34-b8f0-5b2b-a86f-3c2b9ec41e28"))
     (comp
       (ref "D3")
       (value "LED Status")
@@ -1399,9 +1471,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "kEI38UIR1L")
+          (name "SKiDL Tag") "mbiwPmsoKc")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "LED"))
@@ -1409,7 +1481,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "9e7fbc13-8918-558f-9243-18ebbf59015b"))
+      (tstamps "83330a3a-fa99-5a6c-8241-854aeda49b17"))
     (comp
       (ref "D4")
       (value "LED Status")
@@ -1423,9 +1495,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "sZFKfYuZmj")
+          (name "SKiDL Tag") "qsC1xWG5m1")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "LED"))
@@ -1433,7 +1505,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "130b16a2-ef93-59f1-ba08-6c0bb36e2ff7"))
+      (tstamps "46204285-11b3-5d78-bc49-b2d1dc138c0b"))
     (comp
       (ref "D5")
       (value "LED Status")
@@ -1447,9 +1519,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "FpTqFrw1cK")
+          (name "SKiDL Tag") "L6gJgG9ZfZ")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "LED"))
@@ -1457,7 +1529,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "accabfd7-889c-5c66-89bc-be1668830851"))
+      (tstamps "9a779a55-ae71-5623-87e7-10683615c49d"))
     (comp
       (ref "D6")
       (value "ESD-Diode CAN")
@@ -1471,9 +1543,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "bXB_KcREZT")
+          (name "SKiDL Tag") "AYrV2VML7v")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "ESD_Diode"))
@@ -1481,7 +1553,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "3522bb20-0d8f-5d10-94b4-9c434f6c5089"))
+      (tstamps "addbe177-7d0f-51f0-87d5-5d851c13a08c"))
     (comp
       (ref "D7")
       (value "ESD-Diode CAN")
@@ -1495,9 +1567,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "sKrBjo3m6o")
+          (name "SKiDL Tag") "gBXfcEAWMP")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "ESD_Diode"))
@@ -1505,7 +1577,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "9a75367c-c084-51cb-abaf-86d69dfcaa4b"))
+      (tstamps "0aa594c4-a7c1-547b-b6b8-e16636288d97"))
     (comp
       (ref "D8")
       (value "ESD-Diode CAN")
@@ -1519,9 +1591,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "UVM_xTn9Pw")
+          (name "SKiDL Tag") "fwWBPLfW05")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "ESD_Diode"))
@@ -1529,7 +1601,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "f1fe8ed2-20a5-5b56-ae97-6c982a8c24df"))
+      (tstamps "632513a5-8275-5d53-bef6-2f616b85017c"))
     (comp
       (ref "D9")
       (value "ESD-Diode CAN")
@@ -1543,9 +1615,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "FJyBy8ajZ_")
+          (name "SKiDL Tag") "LxhxWCMD13")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "ESD_Diode"))
@@ -1553,7 +1625,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "3994a66a-f1e3-5c08-8f57-00597a3017e5"))
+      (tstamps "0a79fdfe-f696-5a0a-9db8-23994506eb98"))
     (comp
       (ref "J1")
       (value "Stecker 12 V (VBAT, GND, KL15)")
@@ -1567,9 +1639,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "odoycnk_JD")
+          (name "SKiDL Tag") "_MtQlQxEys")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "Stecker_4"))
@@ -1577,7 +1649,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "14cefcfd-fefd-534a-80ee-ed765d42b682"))
+      (tstamps "86ccad86-0a3c-565f-9ddd-a14912b98a03"))
     (comp
       (ref "J10")
       (value "Daisy-Chain-Stecker Ausgang zur ersten CMU")
@@ -1591,9 +1663,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "cHPurq3J6E")
+          (name "SKiDL Tag") "MZiexyhZB0")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "Daisy_Stecker"))
@@ -1601,7 +1673,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "1e32a695-9f3e-5375-af7f-ecb2a13cd4fb"))
+      (tstamps "bc80a421-4412-50bf-9dfa-58d52666a75e"))
     (comp
       (ref "J11")
       (value "Daisy-Chain-Stecker Eingang zur ersten CMU")
@@ -1615,9 +1687,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "d7BggsonrC")
+          (name "SKiDL Tag") "mTQla1uuvQ")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "Daisy_Stecker"))
@@ -1625,7 +1697,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "c8769e3e-0f2e-5d01-a4fa-1a1c61e0411c"))
+      (tstamps "51de30fd-1f29-5ed8-809f-89c8a58437a7"))
     (comp
       (ref "J2")
       (value "Debug-Stecker SWD")
@@ -1639,9 +1711,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "EudFvjUxk6")
+          (name "SKiDL Tag") "fz5kNmoNZ6")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "Debug_Stecker"))
@@ -1649,7 +1721,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "86ec6c1b-2b07-5480-8bb3-1e7c1dfe4b81"))
+      (tstamps "4b682735-285d-5773-9565-30f29a254201"))
     (comp
       (ref "J3")
       (value "Stecker CAN Fahrzeug (CANH, CANL, GND)")
@@ -1663,9 +1735,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "MgA4yRcKmW")
+          (name "SKiDL Tag") "yF0V92xrFv")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "Stecker_4"))
@@ -1673,7 +1745,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "d80a866d-29ec-5aa0-a353-5662d00c9d55"))
+      (tstamps "b0b8bc1c-b4ed-5ede-80f5-3be039e98f39"))
     (comp
       (ref "J4")
       (value "Stecker CAN Laden (CANH, CANL, GND)")
@@ -1687,9 +1759,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "kriFgQPVSl")
+          (name "SKiDL Tag") "FQu6atsHTe")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "Stecker_4"))
@@ -1697,7 +1769,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "19422b4e-7a82-579c-a83e-8bafea19854c"))
+      (tstamps "9d6dac7d-34da-582a-8886-325df3a326e7"))
     (comp
       (ref "J5")
       (value "Stecker Spule Schütz P (BT-715)")
@@ -1711,9 +1783,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "cOJ8v0iJeG")
+          (name "SKiDL Tag") "FNOdhHR1hN")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "Stecker_2"))
@@ -1721,7 +1793,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "a572c8f5-bd64-5b81-a527-590bd653ace7"))
+      (tstamps "9cb26cf2-bb69-5973-ab85-4844b54e8222"))
     (comp
       (ref "J6")
       (value "Stecker Spule Schütz M (BT-715)")
@@ -1735,9 +1807,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "f1G1lPAHq9")
+          (name "SKiDL Tag") "xJm1GZXUeP")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "Stecker_2"))
@@ -1745,7 +1817,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "13e1585d-492e-521f-a8e8-94e5bae17fcb"))
+      (tstamps "70d4c5eb-c8a7-5d15-8fc7-c2c8f5f2a493"))
     (comp
       (ref "J7")
       (value "Stecker Spule Schütz V (BT-715)")
@@ -1759,9 +1831,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "4qZTB64F0F")
+          (name "SKiDL Tag") "AQGqziCFdk")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "Stecker_2"))
@@ -1769,7 +1841,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "1038b8e1-5b79-5a63-95e1-99420283c6d6"))
+      (tstamps "8a5d4b78-570b-5d23-8244-b0036027eac0"))
     (comp
       (ref "J8")
       (value "Stecker Shunt (BT-340, HV-Seite): Shunt+, Shunt-, HV_VDD, HV_GND")
@@ -1783,9 +1855,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "AxXWXDKW3F")
+          (name "SKiDL Tag") "laoDsIVP_h")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "Stecker_4_HV"))
@@ -1793,7 +1865,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "9c1293f0-37d5-54b6-9f5f-9ae8053e5887"))
+      (tstamps "0570d322-029f-5c81-b024-4153f6c8e09b"))
     (comp
       (ref "J9")
       (value "Stecker Sekundärpfad der CMUs (ABSCHALT, HV_GND, HV_VDD)")
@@ -1807,9 +1879,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "demNHECJVm")
+          (name "SKiDL Tag") "sCOmzf4onh")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "Stecker_3_HV"))
@@ -1817,7 +1889,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "88268f8f-0059-550a-a261-9170cde3ab85"))
+      (tstamps "1fe6da99-09ee-5c50-ba96-44968580a80b"))
     (comp
       (ref "L1")
       (value "Drossel Eingangsfilter (Wert offen)")
@@ -1831,9 +1903,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "d2wlXT26f7")
+          (name "SKiDL Tag") "EHj7zTKw97")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "L_Drossel"))
@@ -1841,7 +1913,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "c5e1c76e-15e5-5d13-8806-52e92835d39f"))
+      (tstamps "204eba8d-6a9c-5c64-bc4a-1552839a29a1"))
     (comp
       (ref "L2")
       (value "Gleichtaktdrossel CAN")
@@ -1855,9 +1927,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "CMxBO7c7g0")
+          (name "SKiDL Tag") "woKWdwPDp4")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "CAN_Gleichtaktdrossel"))
@@ -1865,7 +1937,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "9cbf3610-c69a-527e-ad58-b83f838cb2bc"))
+      (tstamps "5289b960-81a4-5d59-9f83-5a75a0e8457f"))
     (comp
       (ref "L3")
       (value "Gleichtaktdrossel CAN")
@@ -1879,9 +1951,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "WsUGK0Z90g")
+          (name "SKiDL Tag") "xRIDJyh7Vg")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "CAN_Gleichtaktdrossel"))
@@ -1889,7 +1961,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "67c489be-f888-5b63-bdae-00cf8a8d7512"))
+      (tstamps "87f0af5c-cfa4-5e6d-bd0a-70b79a3dc4d4"))
     (comp
       (ref "Q1")
       (value "PMOS Verpolschutz generisch")
@@ -1903,9 +1975,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "EAHGwQgVxp")
+          (name "SKiDL Tag") "Oa_w39kPCR")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "PMOS_Verpolschutz"))
@@ -1913,7 +1985,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "25a2a046-0568-5446-9d27-e2f09ad1056f"))
+      (tstamps "8aabf08a-dc2f-53b1-b6ba-403ac46b748d"))
     (comp
       (ref "Q2")
       (value "NMOS Low-Side, Schütz P")
@@ -1927,9 +1999,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "SlGRCFDHIo")
+          (name "SKiDL Tag") "VGaEc8m638")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "NMOS_Low_Side"))
@@ -1937,7 +2009,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "a525fdb0-7c04-5376-add1-8806fdc1ca10"))
+      (tstamps "5e2c21f1-879b-5387-b77c-c5975b9ae023"))
     (comp
       (ref "Q3")
       (value "NMOS Low-Side, Schütz M")
@@ -1951,9 +2023,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "bNdvHYR4yy")
+          (name "SKiDL Tag") "VDxdCdCMxv")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "NMOS_Low_Side"))
@@ -1961,7 +2033,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "7f614ac4-5bbe-5ea8-8d93-a6d376c458cc"))
+      (tstamps "a6a39e31-f76f-5407-8f71-a93219fb797a"))
     (comp
       (ref "Q4")
       (value "NMOS Low-Side, Schütz V")
@@ -1975,9 +2047,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "z5b47Bzjh4")
+          (name "SKiDL Tag") "1B4J8Vd3zC")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "NMOS_Low_Side"))
@@ -1985,7 +2057,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "6893d191-703b-516e-a8a2-d4c956e0ea25"))
+      (tstamps "d9303780-4291-5a90-89c4-2181f8a8949f"))
     (comp
       (ref "R1")
       (value "R Gate Verpolschutz (Wert offen)")
@@ -1999,9 +2071,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "IR1zR6q6ZF")
+          (name "SKiDL Tag") "IPdnnYpShX")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "R"))
@@ -2009,7 +2081,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "b9a86e22-f30c-583d-b396-fff51c734227"))
+      (tstamps "89453670-6a17-580b-b187-ff340fdad030"))
     (comp
       (ref "R10")
       (value "R Terminierung geteilt (Wert offen)")
@@ -2023,9 +2095,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "99WNbYEsLF")
+          (name "SKiDL Tag") "jN7U_DOQjx")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "R"))
@@ -2033,7 +2105,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "1286e4da-d9fd-5038-9f82-7ed6688635d9"))
+      (tstamps "cdcb645b-97fc-5011-8ec1-36f7375a24fc"))
     (comp
       (ref "R11")
       (value "R Standby (Wert offen)")
@@ -2047,9 +2119,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "QIBBxkg2rA")
+          (name "SKiDL Tag") "dU5Pky9wJD")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "R"))
@@ -2057,7 +2129,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "197666bc-1127-561b-bd7b-d67998f449ed"))
+      (tstamps "3549f869-e495-5a33-a2ee-73e5f5c40570"))
     (comp
       (ref "R12")
       (value "R Terminierung geteilt (Wert offen)")
@@ -2071,9 +2143,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "62L4UALbXw")
+          (name "SKiDL Tag") "viTDJmQd_K")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "R"))
@@ -2081,7 +2153,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "090e7a2c-3ffa-59ae-949c-620b5c546e28"))
+      (tstamps "5ce5f495-b36b-5e32-ae75-930366f1a594"))
     (comp
       (ref "R13")
       (value "R Terminierung geteilt (Wert offen)")
@@ -2095,9 +2167,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "Zz30ItG1w4")
+          (name "SKiDL Tag") "aNWEGQbIUO")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "R"))
@@ -2105,7 +2177,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "0913c2ee-c0c1-5689-aa41-3c139ec82da6"))
+      (tstamps "01cd0894-68a1-5870-b5bb-014a9f270d8e"))
     (comp
       (ref "R14")
       (value "R Pull-down Eingang (Wert offen)")
@@ -2119,9 +2191,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "e7UWpbdHFg")
+          (name "SKiDL Tag") "g23sEGno6b")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "R"))
@@ -2129,7 +2201,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "3ca9b15e-a184-561e-84ef-39d9953eb4c0"))
+      (tstamps "f0705102-665f-553d-ba98-6e53a0b214f9"))
     (comp
       (ref "R15")
       (value "R Gate (Wert offen)")
@@ -2143,9 +2215,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "OO2PbmYWAE")
+          (name "SKiDL Tag") "5LdSAMSmTf")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "R"))
@@ -2153,7 +2225,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "380eb7f4-6fa6-5c90-af38-f6401a116319"))
+      (tstamps "e4a40e3e-f19b-5459-9805-f281cf3b99ba"))
     (comp
       (ref "R16")
       (value "R Gate-Pull-down (Wert offen)")
@@ -2167,9 +2239,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "fdLEG25w3l")
+          (name "SKiDL Tag") "Sewn7JfBpg")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "R"))
@@ -2177,7 +2249,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "0eefb054-da86-5d2f-8d81-72e2a1266d22"))
+      (tstamps "7a282e36-ffd9-54b6-9c5c-c0ef269d0884"))
     (comp
       (ref "R17")
       (value "R Messwiderstand Spulenstrom (Wert offen)")
@@ -2191,9 +2263,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "ySn_fVVUo8")
+          (name "SKiDL Tag") "X5BJuxNgwQ")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "R_Sense"))
@@ -2201,7 +2273,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "c1b223c0-f465-509c-8b5b-f087440fb8a8"))
+      (tstamps "278e0841-cd65-5fb8-afa8-862c827250c4"))
     (comp
       (ref "R18")
       (value "R Filter Strommessung (Wert offen)")
@@ -2215,9 +2287,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "AKdrWkTA_U")
+          (name "SKiDL Tag") "iEqJckbX18")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "R"))
@@ -2225,7 +2297,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "e660e677-5250-526a-89f9-16079754038a"))
+      (tstamps "ac909204-04b0-55d0-8794-34a0480ffec9"))
     (comp
       (ref "R19")
       (value "R Pull-down Eingang (Wert offen)")
@@ -2239,9 +2311,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "FhZSMVgCjx")
+          (name "SKiDL Tag") "uR9yl5v5Mh")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "R"))
@@ -2249,7 +2321,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "5121beae-ac3e-571a-8928-609a707fc4f8"))
+      (tstamps "2320695b-0cdb-54b1-81f3-7ba0727aba4d"))
     (comp
       (ref "R2")
       (value "R Weckeingang KL15 (Wert offen)")
@@ -2263,9 +2335,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "ERrlTOHEGF")
+          (name "SKiDL Tag") "1QwR70j84M")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "R"))
@@ -2273,7 +2345,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "1686a624-c982-56ae-b277-120447036708"))
+      (tstamps "04bb9d68-eed2-5b94-9c7c-396474a173bd"))
     (comp
       (ref "R20")
       (value "R Gate (Wert offen)")
@@ -2287,9 +2359,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "DliChBQQ8X")
+          (name "SKiDL Tag") "ozImLXyQ6M")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "R"))
@@ -2297,7 +2369,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "93bc6aa2-d432-5f5e-97f6-738f04cc09c3"))
+      (tstamps "cdee37fc-c322-58a1-aa43-a726fe9dd345"))
     (comp
       (ref "R21")
       (value "R Gate-Pull-down (Wert offen)")
@@ -2311,9 +2383,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "d1cOk7NbfT")
+          (name "SKiDL Tag") "_htHneCF9g")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "R"))
@@ -2321,7 +2393,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "ccab1387-58dc-5d44-969f-6335c7ce626d"))
+      (tstamps "26947021-8c34-54dd-afb6-327c4580450c"))
     (comp
       (ref "R22")
       (value "R Messwiderstand Spulenstrom (Wert offen)")
@@ -2335,9 +2407,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "B1Ciosl41k")
+          (name "SKiDL Tag") "oGPyc2txaJ")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "R_Sense"))
@@ -2345,7 +2417,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "b54db3a1-7dde-5751-8ac3-abea91cf7d5f"))
+      (tstamps "00a02e9d-f805-5af8-af5c-2cc294e3d388"))
     (comp
       (ref "R23")
       (value "R Filter Strommessung (Wert offen)")
@@ -2359,9 +2431,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "clRPkIKWij")
+          (name "SKiDL Tag") "soFEjMxKNI")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "R"))
@@ -2369,7 +2441,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "130364af-6b63-53e8-a007-e72c818535b3"))
+      (tstamps "c6109a00-c42b-52c4-8c2e-53062f2b5b91"))
     (comp
       (ref "R24")
       (value "R Pull-down Eingang (Wert offen)")
@@ -2383,9 +2455,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "8cMc3WxXDl")
+          (name "SKiDL Tag") "jQafcrme6z")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "R"))
@@ -2393,7 +2465,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "cebcff7e-9de8-5f5a-90d1-b6a0afeef478"))
+      (tstamps "48170952-8ad0-5ee3-aa40-1b972228f349"))
     (comp
       (ref "R25")
       (value "R Gate (Wert offen)")
@@ -2407,9 +2479,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "VTuV1471D2")
+          (name "SKiDL Tag") "Gx06E8_4Vh")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "R"))
@@ -2417,7 +2489,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "a02218b8-046b-5acd-bcc8-0951d9487ae5"))
+      (tstamps "a3b86ee3-d11a-5e2c-9402-2ea294bf785e"))
     (comp
       (ref "R26")
       (value "R Gate-Pull-down (Wert offen)")
@@ -2431,9 +2503,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "1sOcb64Wpd")
+          (name "SKiDL Tag") "OnT1Gz8mjA")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "R"))
@@ -2441,7 +2513,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "e74dbd9c-146e-5043-bf45-5cae613156ad"))
+      (tstamps "24672885-223f-5ee3-9d2c-61e3b3c867a3"))
     (comp
       (ref "R27")
       (value "R Messwiderstand Spulenstrom (Wert offen)")
@@ -2455,9 +2527,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "OkTHs0hwPK")
+          (name "SKiDL Tag") "mJ89NqKkaB")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "R_Sense"))
@@ -2465,7 +2537,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "003489ad-2238-5ed6-b587-8ea10254f720"))
+      (tstamps "da760907-eed6-51eb-8a12-bebdebab009c"))
     (comp
       (ref "R28")
       (value "R Filter Strommessung (Wert offen)")
@@ -2479,9 +2551,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "d9UZQywlP1")
+          (name "SKiDL Tag") "eG2_yzt7db")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "R"))
@@ -2489,7 +2561,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "b6e00e36-fb48-52a7-8741-509caeeccd12"))
+      (tstamps "b9f40b2a-17ba-53ea-8368-7bc7cf7b83c2"))
     (comp
       (ref "R29")
       (value "R Eingangsfilter Shunt (Wert offen)")
@@ -2503,9 +2575,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "HhRwLHOhPM")
+          (name "SKiDL Tag") "tvl23PnASz")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "R"))
@@ -2513,7 +2585,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "0d1b10ec-87b3-55b6-8999-0b19837a5853"))
+      (tstamps "fefa76ed-e69c-5f97-8462-307a4d557b0f"))
     (comp
       (ref "R3")
       (value "R LED (Wert offen)")
@@ -2527,9 +2599,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "mcSN3kkMY7")
+          (name "SKiDL Tag") "77PIgLuySV")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "R"))
@@ -2537,7 +2609,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "abc50a00-3e2b-5ad2-8391-9ffc03f8bbb1"))
+      (tstamps "821afbd7-50f8-5660-b9bc-274a907bd780"))
     (comp
       (ref "R30")
       (value "R Eingangsfilter Shunt (Wert offen)")
@@ -2551,9 +2623,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "KHvG7tF8M4")
+          (name "SKiDL Tag") "X5je1Lv6Bd")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "R"))
@@ -2561,7 +2633,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "0764575a-c7e5-5383-8ff2-ec1231959196"))
+      (tstamps "2e59b874-a5e6-5059-a7ef-a651d04184db"))
     (comp
       (ref "R31")
       (value "R Eingang Sekundärpfad HV (Wert offen)")
@@ -2575,9 +2647,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "Aov96hT7I_")
+          (name "SKiDL Tag") "led_ofAhRk")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "R"))
@@ -2585,7 +2657,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "ade2cf48-2a7e-5fd4-928a-21944cc6a7b2"))
+      (tstamps "fbb249ac-595e-534f-b4c8-6eb83a75d9ad"))
     (comp
       (ref "R32")
       (value "R Pull-down SEK_OK (Wert offen)")
@@ -2599,9 +2671,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "yba1Mkv846")
+          (name "SKiDL Tag") "7uVFs1PYki")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "R"))
@@ -2609,7 +2681,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "3a3e57d3-08ba-5395-9462-f238dea5c7c3"))
+      (tstamps "a643992e-c050-5cf3-aec2-c9ec8b25e995"))
     (comp
       (ref "R33")
       (value "R Abschluss Daisy-Chain (Wert offen)")
@@ -2623,9 +2695,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "Hpy77qQOIr")
+          (name "SKiDL Tag") "XtFmdt_SUM")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "R"))
@@ -2633,7 +2705,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "47f315ff-4083-571f-8653-67b51437dba6"))
+      (tstamps "7d249750-de23-5b1d-9998-7173447b771f"))
     (comp
       (ref "R34")
       (value "R Abschluss Daisy-Chain (Wert offen)")
@@ -2647,9 +2719,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "kA6ACT8ta5")
+          (name "SKiDL Tag") "orM5JwPnwp")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "R"))
@@ -2657,7 +2729,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "3af12816-f107-5b3f-a945-656bd5175eaf"))
+      (tstamps "f1ec4c0d-57ac-50ed-8045-5589094e7308"))
     (comp
       (ref "R4")
       (value "R LED (Wert offen)")
@@ -2671,9 +2743,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "pKG0lEJdGb")
+          (name "SKiDL Tag") "p1RSqH9i0Y")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "R"))
@@ -2681,7 +2753,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "b992c7b7-6196-59a0-be46-0980f6f66f29"))
+      (tstamps "a8beb2c6-05ef-550d-b5f7-215bd8feeed7"))
     (comp
       (ref "R5")
       (value "R LED (Wert offen)")
@@ -2695,9 +2767,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "sPQPOhWp6M")
+          (name "SKiDL Tag") "NiurtlCxK0")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "R"))
@@ -2705,7 +2777,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "046c3083-a9a0-520e-a313-f5f8a8e33a0e"))
+      (tstamps "0822f0fd-94ff-5d11-8042-82883de0ed16"))
     (comp
       (ref "R6")
       (value "NTC Platinentemperatur (extern bestückt, Wert offen)")
@@ -2719,9 +2791,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "A5h51oyeGY")
+          (name "SKiDL Tag") "F46n1ix9x7")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "R"))
@@ -2729,7 +2801,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "bbbb5bbd-84fa-5d42-a350-9178bf06b347"))
+      (tstamps "c38fbeeb-fe6f-5df2-b8c7-4b0edb14871c"))
     (comp
       (ref "R7")
       (value "R Pull-up NTC (Wert offen)")
@@ -2743,9 +2815,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "MJvRcwzt_6")
+          (name "SKiDL Tag") "F8XSojCifT")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "R"))
@@ -2753,7 +2825,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "345695d6-90d4-5b96-990e-9c4256383d47"))
+      (tstamps "9eb7ac53-916f-587f-857b-227e7c84bc17"))
     (comp
       (ref "R8")
       (value "R Standby (Wert offen)")
@@ -2767,9 +2839,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "VwmJlgS9ly")
+          (name "SKiDL Tag") "4_vgL_szfN")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "R"))
@@ -2777,7 +2849,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "90044adb-bd82-5069-bf48-b0de8fe6bc42"))
+      (tstamps "53efa83e-ff3a-541d-a5ba-4bd0e9fecaeb"))
     (comp
       (ref "R9")
       (value "R Terminierung geteilt (Wert offen)")
@@ -2791,9 +2863,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "anmi7rlw88")
+          (name "SKiDL Tag") "s_iufvuXT0")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "R"))
@@ -2801,7 +2873,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "96cfc3db-b217-5e14-ac5c-13f2b6c7d4c2"))
+      (tstamps "657c5ab7-50bb-543c-a78b-4840c4fa7748"))
     (comp
       (ref "T1")
       (value "Übertrager verstärkte Isolation zur ersten CMU (Senden)")
@@ -2815,9 +2887,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "FClo7Dm6tr")
+          (name "SKiDL Tag") "PZawbCmBoY")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "Uebertrager_verstaerkt"))
@@ -2825,7 +2897,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "f95a339c-f882-5892-a14c-43dbd6b043c9"))
+      (tstamps "7c17e470-9797-5291-9645-9ca88e3d472d"))
     (comp
       (ref "T2")
       (value "Übertrager verstärkte Isolation zur ersten CMU (Empfang)")
@@ -2839,9 +2911,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "clOdBRD5cC")
+          (name "SKiDL Tag") "ThhB_pfX49")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "Uebertrager_verstaerkt"))
@@ -2849,7 +2921,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "4bdd446b-4404-53d5-8ba5-bbe7cec99c36"))
+      (tstamps "e801ddef-e2b4-5c09-86f6-84128b196309"))
     (comp
       (ref "U1")
       (value "Systembasis-IC generisch mit Watchdog, ASIL D")
@@ -2863,9 +2935,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "iTnuUTRuLH")
+          (name "SKiDL Tag") "6HrjE5qRkd")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "SBC_generisch_Watchdog"))
@@ -2873,7 +2945,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "71e05caa-8b49-55ef-923b-09f1ff796812"))
+      (tstamps "568195e2-7f65-56a7-b8d1-60f55d7c7db2"))
     (comp
       (ref "U10")
       (value "Shunt-ADC generisch (Sigma-Delta, HV-Seite)")
@@ -2887,9 +2959,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "VoE0mcfAhp")
+          (name "SKiDL Tag") "kFWBvEt8X4")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "Shunt_ADC_generisch_HV"))
@@ -2897,7 +2969,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "706ccc82-e29f-5553-88ce-e8d25488ee5f"))
+      (tstamps "b3789892-8bea-509a-8b4a-b3412422d601"))
     (comp
       (ref "U11")
       (value "Shunt-ADC-Isolator: digitaler Isolator, verstärkt (HV/NV)")
@@ -2911,9 +2983,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "y06t2OzPtL")
+          (name "SKiDL Tag") "MGMcijqI4Z")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "Digital_Isolator_verstaerkt"))
@@ -2921,7 +2993,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "7debd9c2-4245-5bd0-92bc-4f0245733af6"))
+      (tstamps "bb2342a5-1455-52a8-98c7-4906e20e31e4"))
     (comp
       (ref "U12")
       (value "Isolator Sekundärpfad: digitaler Isolator, verstärkt (HV/NV)")
@@ -2935,9 +3007,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "CcWCc6Gp59")
+          (name "SKiDL Tag") "z0vFHqB7DL")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "Digital_Isolator_verstaerkt"))
@@ -2945,7 +3017,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "d89d8089-6b33-5431-abea-c36140514c89"))
+      (tstamps "aa3fefa8-458c-5aa2-a174-14ac00974b6f"))
     (comp
       (ref "U13")
       (value "Daisy-Chain-Master generisch (BT-322-Gegenstück)")
@@ -2959,9 +3031,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "6VKmYxed5z")
+          (name "SKiDL Tag") "tNjkt_zsrQ")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "Daisy_Master_generisch"))
@@ -2969,7 +3041,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "ac9d4822-0360-5d66-bdc8-d591c8c520fe"))
+      (tstamps "cd9650a9-b9a5-57fa-871b-7704041a5578"))
     (comp
       (ref "U2")
       (value "Mikrocontroller generisch ASIL D Lockstep LQFP-144")
@@ -2983,9 +3055,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "OCOB7rwsrC")
+          (name "SKiDL Tag") "7dTgEfmLXt")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "MCU_ASIL_D_Lockstep_generisch"))
@@ -2993,7 +3065,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "8457cb31-3f63-5c43-becd-e2a403cbddad"))
+      (tstamps "ad1248bd-b64c-517d-bbbb-cd0d16d052dc"))
     (comp
       (ref "U3")
       (value "CAN-FD-Transceiver Fahrzeug")
@@ -3007,9 +3079,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "dSqtePleql")
+          (name "SKiDL Tag") "UOHl0LtND6")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "CAN_FD_Transceiver"))
@@ -3017,7 +3089,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "021d8b24-d017-524b-9ebe-0882611eb692"))
+      (tstamps "452fcd3b-6818-58d5-96b4-3c2055c9c14f"))
     (comp
       (ref "U4")
       (value "CAN-FD-Transceiver Laden")
@@ -3031,9 +3103,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "pDRB13XWnS")
+          (name "SKiDL Tag") "udymlYnp7S")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "CAN_FD_Transceiver"))
@@ -3041,7 +3113,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "78952685-eec1-5866-8a9f-eced57df4d0c"))
+      (tstamps "8f9bfef2-3733-58b6-877a-64148a91d1c2"))
     (comp
       (ref "U5")
       (value "UND-Gatter 4fach (Hardware-UND Sekundärpfad, FSR-06)")
@@ -3055,9 +3127,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "QjzBRGBABW")
+          (name "SKiDL Tag") "ErGNFFmnI6")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "UND_Gatter_4fach"))
@@ -3065,7 +3137,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "7f99f0c0-eb9b-5014-a66d-bb4b9c010dba"))
+      (tstamps "49324f5d-714b-5390-9940-fcfd7bae3825"))
     (comp
       (ref "U6")
       (value "UND-Gatter 4fach (Hardware-UND Sekundärpfad, FSR-06)")
@@ -3079,9 +3151,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "KKSnfesrSq")
+          (name "SKiDL Tag") "OQYG5kaE5G")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "UND_Gatter_4fach"))
@@ -3089,7 +3161,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "ea96694a-e651-51e2-acd6-181c2cb649a1"))
+      (tstamps "17212975-94d5-551b-9a3b-6d0953a1f189"))
     (comp
       (ref "U7")
       (value "High-Side-Schalter generisch, Schütz P")
@@ -3103,9 +3175,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "CLxkb7joXh")
+          (name "SKiDL Tag") "VJHkXt7XvK")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "HighSide_Schalter_generisch"))
@@ -3113,7 +3185,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "239fd60c-4671-5356-b222-292c21b07649"))
+      (tstamps "90b5aab9-4513-5f54-807e-c4403f1102cb"))
     (comp
       (ref "U8")
       (value "High-Side-Schalter generisch, Schütz M")
@@ -3127,9 +3199,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "i6M5oJL2ic")
+          (name "SKiDL Tag") "LSIQCIGbBN")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "HighSide_Schalter_generisch"))
@@ -3137,7 +3209,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "cae28d2b-f9b6-5ab7-80ab-07a9744a8525"))
+      (tstamps "7e589c7e-982e-5004-9645-621f72387613"))
     (comp
       (ref "U9")
       (value "High-Side-Schalter generisch, Schütz V")
@@ -3151,9 +3223,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "nOFtv5exYJ")
+          (name "SKiDL Tag") "WtGwdU1J6i")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "HighSide_Schalter_generisch"))
@@ -3161,7 +3233,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "5eda4e24-9fed-5dbf-ab12-44ced339bbac"))
+      (tstamps "98ea2849-4412-5f3d-83ec-9f7f35ff4d0c"))
     (comp
       (ref "Y1")
       (value "Quarz Rechner (Wert offen)")
@@ -3175,9 +3247,9 @@
         (field
           (name "Datasheet"))
         (field
-          (name "SKiDL Tag") "Grb5DvsfsW")
+          (name "SKiDL Tag") "mgb6Y5CoAG")
         (field
-          (name "SKiDL Line") "bms_skidl.py:82"))
+          (name "SKiDL Line") "bms_skidl.py:69"))
       (libsource
         (lib "NO_LIB")
         (part "Quarz"))
@@ -3185,7 +3257,7 @@
         (names "/")
         (tstamps "/"))
       (component_classes)
-      (tstamps "2efadc35-999a-5c60-8e60-e1a1f7e3db61")))
+      (tstamps "ca85212b-c64f-5825-97a6-a1b3add4790e")))
   (nets
     (net
       (code 1)
@@ -3652,7 +3724,7 @@
       (name "DC1_A")
       (class "Default")
       (node
-        (ref "D16")
+        (ref "D19")
         (pin "1")
         (pintype "PASSIVE"))
       (node
@@ -3672,7 +3744,7 @@
       (name "DC1_B")
       (class "Default")
       (node
-        (ref "D16")
+        (ref "D19")
         (pin "2")
         (pintype "PASSIVE"))
       (node
@@ -3692,7 +3764,7 @@
       (name "DC2_A")
       (class "Default")
       (node
-        (ref "D17")
+        (ref "D20")
         (pin "1")
         (pintype "PASSIVE"))
       (node
@@ -3712,7 +3784,7 @@
       (name "DC2_B")
       (class "Default")
       (node
-        (ref "D17")
+        (ref "D20")
         (pin "2")
         (pintype "PASSIVE"))
       (node
@@ -3982,6 +4054,30 @@
       (node
         (ref "C9")
         (pin "2")
+        (pintype "PASSIVE"))
+      (node
+        (ref "D11")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "D12")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "D14")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "D15")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "D17")
+        (pin "1")
+        (pintype "PASSIVE"))
+      (node
+        (ref "D18")
+        (pin "1")
         (pintype "PASSIVE"))
       (node
         (ref "D2")
@@ -4488,7 +4584,7 @@
       (name "M_SPULE_N")
       (class "Default")
       (node
-        (ref "D12")
+        (ref "D13")
         (pin "1")
         (pintype "PASSIVE"))
       (node
@@ -4504,6 +4600,10 @@
       (name "M_SPULE_P")
       (class "Default")
       (node
+        (ref "D15")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
         (ref "J6")
         (pin "1")
         (pintype "PASSIVE"))
@@ -4516,11 +4616,11 @@
       (name "M_ZENER")
       (class "Default")
       (node
-        (ref "D12")
+        (ref "D13")
         (pin "2")
         (pintype "PASSIVE"))
       (node
-        (ref "D13")
+        (ref "D14")
         (pin "2")
         (pintype "PASSIVE")))
     (net
@@ -4816,6 +4916,10 @@
       (name "P_SPULE_P")
       (class "Default")
       (node
+        (ref "D12")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
         (ref "J5")
         (pin "1")
         (pintype "PASSIVE"))
@@ -4996,18 +5100,6 @@
         (pin "1")
         (pintype "PASSIVE"))
       (node
-        (ref "D11")
-        (pin "1")
-        (pintype "PASSIVE"))
-      (node
-        (ref "D13")
-        (pin "1")
-        (pintype "PASSIVE"))
-      (node
-        (ref "D15")
-        (pin "1")
-        (pintype "PASSIVE"))
-      (node
         (ref "L1")
         (pin "2")
         (pintype "PASSIVE"))
@@ -5164,7 +5256,7 @@
       (name "V_SPULE_N")
       (class "Default")
       (node
-        (ref "D14")
+        (ref "D16")
         (pin "1")
         (pintype "PASSIVE"))
       (node
@@ -5180,6 +5272,10 @@
       (name "V_SPULE_P")
       (class "Default")
       (node
+        (ref "D18")
+        (pin "2")
+        (pintype "PASSIVE"))
+      (node
         (ref "J7")
         (pin "1")
         (pintype "PASSIVE"))
@@ -5192,11 +5288,11 @@
       (name "V_ZENER")
       (class "Default")
       (node
-        (ref "D14")
+        (ref "D16")
         (pin "2")
         (pintype "PASSIVE"))
       (node
-        (ref "D15")
+        (ref "D17")
         (pin "2")
         (pintype "PASSIVE")))
     (net

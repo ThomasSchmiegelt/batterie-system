@@ -85,42 +85,42 @@
    "x_max": 99.5
   },
   {
-   "netz": "GND",
-   "lage": "In1.Cu",
-   "x_min": 0.5,
-   "x_max": 99.5
-  },
-  {
    "netz": "HV_GND",
    "lage": "In1.Cu",
    "x_min": 110.5,
    "x_max": 159.5
+  },
+  {
+   "netz": "GND",
+   "lage": "In1.Cu",
+   "x_min": 0.5,
+   "x_max": 99.5
   }
  ],
  "flaeche_cu_mm2": {
   "F.Cu": {
-   "bahn": 269.3507364563466,
-   "pad": 609.4374999999992,
-   "via": 51.317915996389296,
+   "bahn": 278.8058166488693,
+   "pad": 636.4374999999994,
+   "via": 51.52997350050661,
    "zone": 0.0
   },
   "In1.Cu": {
-   "bahn": 285.74504646105885,
+   "bahn": 254.41044542765698,
    "pad": 0.0,
-   "via": 51.317915996389296,
-   "zone": 13782.52838601781
+   "via": 51.52997350050661,
+   "zone": 13646.723646155384
   },
   "In2.Cu": {
-   "bahn": 201.6988612122299,
+   "bahn": 224.72465035102854,
    "pad": 0.0,
-   "via": 51.317915996389296,
+   "via": 51.52997350050661,
    "zone": 0.0
   },
   "B.Cu": {
-   "bahn": 12.617952510561311,
+   "bahn": 15.992047448437734,
    "pad": 0.0,
-   "via": 51.317915996389296,
-   "zone": 14473.378380629374
+   "via": 51.52997350050661,
+   "zone": 14461.166067138909
   }
  },
  "platine_flaeche_mm2": 16026.009999999998,
@@ -129,35 +129,35 @@
  "footprints": {
   "R_0603_1608Metric": 34,
   "C_0603_1608Metric": 39,
-  "D_SMB": 1,
-  "Crystal_SMD_3225-4Pin_3.2x2.5mm": 1,
-  "JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal": 1,
-  "SOIC-16_3.9x9.9mm_P1.27mm": 2,
-  "SOT-23": 4,
-  "C_0805_2012Metric": 4,
-  "JST_PH_S4B-PH-SM4-TB_1x04-1MP_P2.00mm_Horizontal": 3,
-  "LQFP-144_20x20mm_P0.5mm": 1,
   "D_SOD-323": 6,
-  "L_CommonModeChoke_Coilcraft_1812CAN": 2,
-  "CP_Elec_6.3x7.7": 1,
-  "D_SMA": 6,
-  "C_1206_3216Metric": 2,
-  "PinHeader_2x05_P1.27mm_Vertical_SMD": 1,
-  "LED_0603_1608Metric": 3,
-  "JST_SH_SM03B-SRSS-TB_1x03-1MP_P1.00mm_Horizontal": 1,
-  "JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal": 2,
-  "SOIC-14_3.9x8.7mm_P1.27mm": 2,
-  "JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal": 3,
-  "LQFP-48_7x7mm_P0.5mm": 1,
-  "SOT-23-5": 3,
+  "LQFP-144_20x20mm_P0.5mm": 1,
+  "D_SMA": 9,
+  "C_0805_2012Metric": 4,
   "ISO_Bruecke_8": 2,
+  "JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal": 1,
+  "JST_SH_SM03B-SRSS-TB_1x03-1MP_P1.00mm_Horizontal": 1,
+  "CP_Elec_6.3x7.7": 1,
+  "JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal": 3,
+  "L_CommonModeChoke_Coilcraft_1812CAN": 2,
+  "Crystal_SMD_3225-4Pin_3.2x2.5mm": 1,
+  "SOT-23": 4,
+  "SOIC-16_3.9x9.9mm_P1.27mm": 2,
+  "PinHeader_2x05_P1.27mm_Vertical_SMD": 1,
+  "JST_PH_S4B-PH-SM4-TB_1x04-1MP_P2.00mm_Horizontal": 3,
+  "LQFP-48_7x7mm_P0.5mm": 1,
   "D_SOD-123": 1,
-  "Uebertrager_Bruecke_4": 2,
+  "SOIC-14_3.9x8.7mm_P1.27mm": 2,
   "L_1210_3225Metric": 1,
-  "SOIC-8_3.9x4.9mm_P1.27mm": 2
+  "Uebertrager_Bruecke_4": 2,
+  "SOIC-8_3.9x4.9mm_P1.27mm": 2,
+  "SOT-23-5": 3,
+  "LED_0603_1608Metric": 3,
+  "JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal": 2,
+  "D_SMB": 1,
+  "C_1206_3216Metric": 2
  },
- "teile": 131,
- "bahnsegmente": 1167,
- "vias": 242,
+ "teile": 134,
+ "bahnsegmente": 1181,
+ "vias": 243,
  "lagen": 4
 }

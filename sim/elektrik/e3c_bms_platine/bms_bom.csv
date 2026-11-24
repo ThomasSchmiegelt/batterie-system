@@ -77,8 +77,9 @@ R16;R_LS_PD_P;R Gate-Pull-down (Wert offen);Resistor_SMD:R_0603_1608Metric;R;NV
 R17;R_SENSE_P;R Messwiderstand Spulenstrom (Wert offen);Resistor_SMD:R_0603_1608Metric;R_Sense;NV
 R18;R_I_P;R Filter Strommessung (Wert offen);Resistor_SMD:R_0603_1608Metric;R;NV
 C34;C_I_P;C Filter Strommessung (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
-D10;D_FREI_P;Diode Freilauf in Reihe zur Z-Diode;Diode_SMD:D_SMA;Diode_Freilauf;NV
-D11;D_ZENER_P;Z-Diode Löschung generisch;Diode_SMD:D_SMA;Z_Diode_Loeschung;NV
+D10;D_FREI_P;Diode Löschpfad in Reihe zur Z-Diode;Diode_SMD:D_SMA;Diode_Freilauf;NV
+D11;D_ZENER_P;Z-Diode Löschung 36 V generisch (ENT-199);Diode_SMD:D_SMA;Z_Diode_Loeschung;NV
+D12;D_PWM_P;Diode PWM-Freilauf GND -> HS-Ende der Spule (ENT-198/199);Diode_SMD:D_SMA;Diode_Freilauf;NV
 J5;J_SPULE_P;Stecker Spule Schütz P (BT-715);Connector_JST:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal;Stecker_2;NV
 U8;U_HS_M;High-Side-Schalter generisch, Schütz M;Package_TO_SOT_SMD:SOT-23-5;HighSide_Schalter_generisch;NV
 R19;R_HS_PD_M;R Pull-down Eingang (Wert offen);Resistor_SMD:R_0603_1608Metric;R;NV
@@ -88,8 +89,9 @@ R21;R_LS_PD_M;R Gate-Pull-down (Wert offen);Resistor_SMD:R_0603_1608Metric;R;NV
 R22;R_SENSE_M;R Messwiderstand Spulenstrom (Wert offen);Resistor_SMD:R_0603_1608Metric;R_Sense;NV
 R23;R_I_M;R Filter Strommessung (Wert offen);Resistor_SMD:R_0603_1608Metric;R;NV
 C35;C_I_M;C Filter Strommessung (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
-D12;D_FREI_M;Diode Freilauf in Reihe zur Z-Diode;Diode_SMD:D_SMA;Diode_Freilauf;NV
-D13;D_ZENER_M;Z-Diode Löschung generisch;Diode_SMD:D_SMA;Z_Diode_Loeschung;NV
+D13;D_FREI_M;Diode Löschpfad in Reihe zur Z-Diode;Diode_SMD:D_SMA;Diode_Freilauf;NV
+D14;D_ZENER_M;Z-Diode Löschung 36 V generisch (ENT-199);Diode_SMD:D_SMA;Z_Diode_Loeschung;NV
+D15;D_PWM_M;Diode PWM-Freilauf GND -> HS-Ende der Spule (ENT-198/199);Diode_SMD:D_SMA;Diode_Freilauf;NV
 J6;J_SPULE_M;Stecker Spule Schütz M (BT-715);Connector_JST:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal;Stecker_2;NV
 U9;U_HS_V;High-Side-Schalter generisch, Schütz V;Package_TO_SOT_SMD:SOT-23-5;HighSide_Schalter_generisch;NV
 R24;R_HS_PD_V;R Pull-down Eingang (Wert offen);Resistor_SMD:R_0603_1608Metric;R;NV
@@ -99,8 +101,9 @@ R26;R_LS_PD_V;R Gate-Pull-down (Wert offen);Resistor_SMD:R_0603_1608Metric;R;NV
 R27;R_SENSE_V;R Messwiderstand Spulenstrom (Wert offen);Resistor_SMD:R_0603_1608Metric;R_Sense;NV
 R28;R_I_V;R Filter Strommessung (Wert offen);Resistor_SMD:R_0603_1608Metric;R;NV
 C36;C_I_V;C Filter Strommessung (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
-D14;D_FREI_V;Diode Freilauf in Reihe zur Z-Diode;Diode_SMD:D_SMA;Diode_Freilauf;NV
-D15;D_ZENER_V;Z-Diode Löschung generisch;Diode_SMD:D_SMA;Z_Diode_Loeschung;NV
+D16;D_FREI_V;Diode Löschpfad in Reihe zur Z-Diode;Diode_SMD:D_SMA;Diode_Freilauf;NV
+D17;D_ZENER_V;Z-Diode Löschung 36 V generisch (ENT-199);Diode_SMD:D_SMA;Z_Diode_Loeschung;NV
+D18;D_PWM_V;Diode PWM-Freilauf GND -> HS-Ende der Spule (ENT-198/199);Diode_SMD:D_SMA;Diode_Freilauf;NV
 J7;J_SPULE_V;Stecker Spule Schütz V (BT-715);Connector_JST:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal;Stecker_2;NV
 J8;J_SHUNT;Stecker Shunt (BT-340, HV-Seite): Shunt+, Shunt-, HV_VDD, HV_GND;Connector_JST:JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal;Stecker_4_HV;HV
 R29;R_SHF0;R Eingangsfilter Shunt (Wert offen);Resistor_SMD:R_0603_1608Metric;R;HV
@@ -124,9 +127,9 @@ U13;U_DM;Daisy-Chain-Master generisch (BT-322-Gegenstück);Package_SO:SOIC-16_3.
 C46;C_DM;C Entkopplung (Wert offen);Capacitor_SMD:C_0603_1608Metric;C;NV
 T1;T_DAISY1;Übertrager verstärkte Isolation zur ersten CMU (Senden);E3c:Uebertrager_Bruecke_4;Uebertrager_verstaerkt;BR
 J10;J_DAISY1;Daisy-Chain-Stecker Ausgang zur ersten CMU;Connector_JST:JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal;Daisy_Stecker;HV
-D16;D_TVS_DAISY1;TVS Daisy-Chain (analog E3 N2);Diode_SMD:D_SOD-323;TVS_Daisy;HV
+D19;D_TVS_DAISY1;TVS Daisy-Chain (analog E3 N2);Diode_SMD:D_SOD-323;TVS_Daisy;HV
 R33;R_DC1;R Abschluss Daisy-Chain (Wert offen);Resistor_SMD:R_0603_1608Metric;R;HV
 T2;T_DAISY2;Übertrager verstärkte Isolation zur ersten CMU (Empfang);E3c:Uebertrager_Bruecke_4;Uebertrager_verstaerkt;BR
 J11;J_DAISY2;Daisy-Chain-Stecker Eingang zur ersten CMU;Connector_JST:JST_SH_SM02B-SRSS-TB_1x02-1MP_P1.00mm_Horizontal;Daisy_Stecker;HV
-D17;D_TVS_DAISY2;TVS Daisy-Chain (analog E3 N2);Diode_SMD:D_SOD-323;TVS_Daisy;HV
+D20;D_TVS_DAISY2;TVS Daisy-Chain (analog E3 N2);Diode_SMD:D_SOD-323;TVS_Daisy;HV
 R34;R_DC2;R Abschluss Daisy-Chain (Wert offen);Resistor_SMD:R_0603_1608Metric;R;HV

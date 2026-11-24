@@ -32,4 +32,6 @@
 
 **Lesehilfe zu `schaltplan_bms_blatt-7.png`** Schaltplanblatt 7, Strommessung HV-Seite (KiCad-Schaltplan, echter hierarchischer Plan aus derselben Quelle wie das Layout). Der Shunt-Messbaustein mit Stecker und Filter auf der Hochvoltseite (rechts), der digitale Isolator in der Trennzone (Mitte) und die Niedervoltseite (links). Jedes Teil zeigt Referenz, Wert (offen = nicht festgelegt), Tag und Aktenverweis; Grüne Linien sind Drähte; Netznamen stehen nur für Versorgung/GND und für Verbindungen zu anderen Blättern (Blattpins auf dem Deckblatt). Es gibt kein Zielband, weil es ein Schaltplan ist; Prüfung: ERC 0, Netzliste gleich der des Layouts (ergebnis_schaltplan.json).
 
+**Lesehilfe zu `spice_schuetz.png`** Das Bild zeigt den Strom in der Spule eines Hauptschützes. Links: der Strom steigt in 100 ms auf 1,5 A (Anzug), wird dann durch schnelles Ein- und Ausschalten auf rund 0,45 A (grünes Zielband) gehalten und bei 200 ms abgeschaltet. Mitte: Ausschnitt des Haltens, die Kurve ist fast glatt. Rechts: Wie schnell der Strom nach dem Abschalten fällt, mit Zener-Löschung und ohne; getönt ist die erwartete Abfallzeit, gestrichelt der Abfallstrom 0,225 A. Je früher die Kurve diese Linie erreicht, desto schneller fällt das Schütz ab.
+
 *KI-generiert (Claude Sonnet, 2026-11-24). Status Entwurf.*

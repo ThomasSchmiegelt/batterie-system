@@ -1,0 +1,108 @@
+{
+ "A_sv1_stecker_wand_mm": {
+  "wert": 3.0,
+  "herkunft": "ERW-SV1 (Sonnet-Annahme, an Opus gemeldet)",
+  "text": "Wand der Kabelstecker-Haube"
+ },
+ "A_sv1_stecker_kappe_mm": {
+  "wert": 10.0,
+  "herkunft": "ERW-SV1 (Sonnet-Annahme, an Opus gemeldet)",
+  "text": "Haube ueber der Stirnflaeche des Gegenstuecks; Steckerlaenge = Steckweg + Kappe"
+ },
+ "A_sv1_greifraum_mm": {
+  "wert": 25.0,
+  "herkunft": "ERW-SV1 (Sonnet-Annahme, an Opus gemeldet)",
+  "text": "ERW-SV1 Greifraum in Steckrichtung"
+ },
+ "A_sv1_quer_mm": {
+  "wert": 10.0,
+  "herkunft": "ERW-SV1 (Sonnet-Annahme, an Opus gemeldet)",
+  "text": "ERW-SV1 quer je Seite (Verriegelung, Finger)"
+ },
+ "A_sv1_handraum_d_mm": {
+  "wert": 75.0,
+  "herkunft": "ERW-SV1 (Sonnet-Annahme, an Opus gemeldet)",
+  "text": "ERW-SV1 Werkzeug- und Handraum Aussendeckel"
+ },
+ "A_sv1_steckweg_hv250_mm": {
+  "wert": 30.0,
+  "herkunft": "ERW-SV1 (Sonnet-Annahme, an Opus gemeldet)",
+  "text": "Eingriff HV250 = halbe Koerperlaenge (Opus-Vorgabe fehlt, Annahme Sonnet)"
+ },
+ "A_sv1_steckweg_platine_mm": {
+  "wert": 8.0,
+  "herkunft": "ERW-SV1 (Sonnet-Annahme, an Opus gemeldet)",
+  "text": "Steckweg Platinenstecker (Annahme Sonnet)"
+ },
+ "A_sv1_steckweg_service_mm": {
+  "wert": 10.0,
+  "herkunft": "ERW-SV1 (Sonnet-Annahme, an Opus gemeldet)",
+  "text": "Steckweg Service-Trennstecker NMC (Annahme Sonnet)"
+ },
+ "A_sv1_abgang_d_mm": {
+  "wert": 14.0,
+  "herkunft": "ERW-SV1 (Sonnet-Annahme, an Opus gemeldet)",
+  "text": "Kabelabgang 90 Grad Durchmesser (Annahme Sonnet)"
+ },
+ "A_sv1_abgang_l_mm": {
+  "wert": 40.0,
+  "herkunft": "ERW-SV1 (Sonnet-Annahme, an Opus gemeldet)",
+  "text": "Kabelabgang Laenge (Annahme Sonnet)"
+ },
+ "A_sv1_bms_kabelstecker_mm": {
+  "wert": [
+   12.0,
+   8.0,
+   8.0
+  ],
+  "herkunft": "ERW-SV1 (Sonnet-Annahme, an Opus gemeldet)",
+  "text": "BMS-Kabelstecker L (Steckrichtung) x B x H (Annahme Sonnet)"
+ },
+ "A_sv1_buchse_service_h_mm": {
+  "wert": 10.0,
+  "herkunft": "ERW-SV1 (Sonnet-Annahme, an Opus gemeldet)",
+  "text": "Buchsenrahmen Service-Trennstecker NMC (Annahme Sonnet)"
+ },
+ "A_sv1_cmu_schraube_kopf_mm": {
+  "wert": [
+   5.5,
+   3.0
+  ],
+  "herkunft": "ERW-SV1 (Sonnet-Annahme, an Opus gemeldet)",
+  "text": "M3 ISO 14580 Kopf D x H (ERW-SV1, Norm)"
+ },
+ "A_sv1_cmu_schaft_d_mm": {
+  "wert": 3.0,
+  "herkunft": "ERW-SV1 (Sonnet-Annahme, an Opus gemeldet)",
+  "text": "M3"
+ },
+ "A_sv1_cmu_bolzen_mm": {
+  "wert": [
+   6.0,
+   6.0
+  ],
+  "herkunft": "ERW-SV1 (Sonnet-Annahme, an Opus gemeldet)",
+  "text": "Abstandsbolzen D x L, L=6 ERW-SV1, D Annahme Sonnet"
+ },
+ "A_sv1_cmu_platine_dicke_mm": {
+  "wert": 1.6,
+  "herkunft": "ERW-SV1 (Sonnet-Annahme, an Opus gemeldet)",
+  "text": "Annahme Sonnet (Standard-Leiterplatte)"
+ },
+ "A_sv1_cmu_bohrung_inset_mm": {
+  "wert": 2.8,
+  "herkunft": "ERW-SV1 (Sonnet-Annahme, an Opus gemeldet)",
+  "text": "Bohrungsmitte vom Rand (aus Kupferabstand 2 mm, pcb_bauen.py)"
+ },
+ "A_sv1_masse_kg": {
+  "wert": {
+   "HV_Stecker_250A": 0.35,
+   "HV_Stecker_40A": 0.12,
+   "NV_Stecker_26pol": 0.1,
+   "klein": 0.005,
+   "M3_Satz": 0.008
+  },
+  "herkunft": "ERW-SV1 (Sonnet-Annahme, an Opus gemeldet)",
+  "text": "Massen Gegenstecker und Schrauben (Annahme Sonnet)"
+ }
+}

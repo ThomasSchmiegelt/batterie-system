@@ -3,8 +3,9 @@
 import json, sys, re, pathlib
 H = pathlib.Path(__file__).resolve().parent; OUT = pathlib.Path("/home/cae/cae_projekte/batterie/e3c")
 def ent(i): return float(re.search(r"^wert: ([^\s#]+)", (H.parents[2] / f"pm/entscheidungen/ENT-{i}.md").read_text(), re.M).group(1))
-k_hv, k_hvnv = ent(168), ent(191)       # 0,2 mm HV-Bereich (ENT-168); 10 mm (ENT-191)
-k_nv, luft = 0.15, 8.0                  # Annahmen ERW-E3c Teil B: 0,15 mm NV, Luftstrecke 8 mm
+PJ = json.load(open(H.parents[2] / "pm/bauteile/parameter.json"))["parameter"]["BT-311"]   # E3c N1: ENT-191/195/196 aus parameter.json
+k_hv, k_hvnv = ent(168), PJ["kriechstrecke_hv_nv_mm"]["wert"]       # 0,2 mm HV-Bereich (ENT-168); 10 mm (ENT-191)
+k_nv, luft = PJ["abstand_nv_mm"]["wert"], PJ["luftstrecke_hv_nv_mm"]["wert"]   # ENT-196 (0,15 mm NV), ENT-195 (8 mm)
 LP = 0.4                                # Platzhalter Leiterbahnbreite Leistungsnetze (Haltestrom BT-715 nicht festgelegt)
 info = json.load(open(H / "layout_info.json")); teile = json.load(open(H / "bms_teile.json"))["teile"]
 netze = {n for t in teile for n in t["pins"].values() if n}
@@ -25,5 +26,5 @@ json.dump(pro, open(OUT / "bms.kicad_pro", "w"), indent=1)
   (constraint clearance (min 0.15mm)))
 ''')
 chk = dict(hv_nv=dict(kriech_mm=k_hvnv, luft_mm=luft, ok=k_hvnv >= luft), innerhalb_hv=dict(abstand_mm=k_hv), innerhalb_nv=dict(abstand_mm=k_nv), leistungsnetze=leist, leistung_breite_mm_platzhalter=LP,
-           hinweis="Luftstrecke 8 mm und Abstand NV 0,15 mm aus ERWARTUNG ERW-E3c (Annahme Opus); für beide gibt es kein Merkmal an BT-311, deshalb keine Akte.")
+           hinweis="Luftstrecke 8 mm und Abstand NV 0,15 mm aus ERWARTUNG ERW-E3c (Annahme Opus); Akten ENT-195/ENT-196, Werte aus parameter.json.")
 json.dump(chk, open(H / "ergebnis_kriechstrecke.json", "w"), indent=1, ensure_ascii=False); print(chk)

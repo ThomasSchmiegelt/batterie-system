@@ -21,6 +21,9 @@ for V in ("LFP", "NMC"):
 (rule "Pad_zu_Pad_im_Bauteil_Gehaeuseraster"
   (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.Parent == B.Parent")
   (constraint clearance (min 0.15mm)))
+(rule "SV1_Bohrung_Kupfer_2mm"
+  (condition "A.Pad_Type == 'NPTH, mechanical'")
+  (constraint hole_clearance (min 2.0mm)))
 ''')
 # Prüfung Kriechstrecke >= Luftstrecke (ERW-E3 N4 Regel 1). Luftstrecke = der im DRC angesetzte Mindestabstand (Stoßspannung nicht abgeleitet, kein Wert vorhanden), Kriechstrecke = ENT-168 / ENT-183
 luft_in, luft_dc = k_in, k_dc

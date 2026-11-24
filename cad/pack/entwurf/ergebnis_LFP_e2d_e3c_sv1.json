@@ -1,0 +1,5521 @@
+{
+ "schnittebene_quer_x_mm": null,
+ "schnittebene_halb_x_mm": null,
+ "hinweis": "KI-generiert, ENTWURF, nicht freigegeben. Erzeugt von cad/pack/pack_e2d.py (Kopie von pack.py mit E2D) aus cad/pack/entwurf/parameter_LFP.json",
+ "variante": "LFP",
+ "laenge_mm": 2050.0,
+ "breite_mm": 1430.0,
+ "hoehe_mm": 249.0,
+ "hoehe_stapel_mm": 121.0,
+ "hoehe_max_mm": 130,
+ "gehaeuse_L_mm": 2050.0,
+ "zellen": 250,
+ "quertraeger_x_mm": [
+  524.0,
+  1018.0,
+  1512.0
+ ],
+ "zellmasse_je_kg": 1.85,
+ "gruppen": {
+  "Unterfahrschutz": {
+   "anzahl": 1,
+   "volumen_cm3": 8794.5,
+   "masse_kg": 23.74515,
+   "masse_bekannt": true,
+   "werkstoff": "Al"
+  },
+  "Boden": {
+   "anzahl": 1,
+   "volumen_cm3": 8794.5,
+   "masse_kg": 23.74515,
+   "masse_bekannt": true,
+   "werkstoff": "Al"
+  },
+  "Seitenrahmen": {
+   "anzahl": 1,
+   "volumen_cm3": 22161.600000000006,
+   "masse_kg": 21.79224000000001,
+   "masse_bekannt": true,
+   "werkstoff": "Al (Vollprofil, Obergrenze)"
+  },
+  "Kuehlplatte": {
+   "anzahl": 2,
+   "volumen_cm3": 43465.50697969025,
+   "masse_kg": 46.94274753806548,
+   "masse_bekannt": true,
+   "werkstoff": "Al (Vollmaterial, Obergrenze)"
+  },
+  "Pad": {
+   "anzahl": 2,
+   "volumen_cm3": 5411.6485687168715,
+   "masse_kg": 13.52912142179218,
+   "masse_bekannt": true,
+   "werkstoff": "Pad"
+  },
+  "Deckel": {
+   "anzahl": 1,
+   "volumen_cm3": 5850.5450354358445,
+   "masse_kg": 15.79647159567678,
+   "masse_bekannt": true,
+   "werkstoff": "Al"
+  },
+  "Zellverbinder": {
+   "anzahl": 130,
+   "volumen_cm3": 371.4504071052555,
+   "masse_kg": 1.002916099184189,
+   "masse_bekannt": true,
+   "werkstoff": "Al"
+  },
+  "Quertraeger": {
+   "anzahl": 3,
+   "volumen_cm3": 1541.25,
+   "masse_kg": 4.161375,
+   "masse_bekannt": true,
+   "werkstoff": "Al"
+  },
+  "Zellen": {
+   "anzahl": 250,
+   "volumen_cm3": 214514.99999999953,
+   "masse_kg": 462.500000000002,
+   "masse_bekannt": true,
+   "werkstoff": "Zelle (Masse aus Akte)"
+  },
+  "E2_CMU": {
+   "anzahl": 14,
+   "volumen_cm3": 172.81801308219232,
+   "masse_kg": 0.6895000000000001,
+   "masse_bekannt": true,
+   "werkstoff": "E3 Platine STEP; Masse 49.25 g = Platine 27.60 g + Wärmeleitpad 21.65 g (ergebnis_platine.json, ERW-E3 Nachtrag 6)"
+  },
+  "E2_Schaltbox_Inhalt": {
+   "anzahl": 28,
+   "volumen_cm3": 1101.9429443230654,
+   "masse_kg": 1.4665899999999998,
+   "masse_bekannt": true,
+   "werkstoff": "E3c BMS-Platine STEP; Masse 66.6 g (ergebnis_platine.json, ERW-E3c)"
+  },
+  "E2_Schraube": {
+   "anzahl": 84,
+   "volumen_cm3": 16.483151255222168,
+   "masse_kg": 0.0,
+   "masse_bekannt": true,
+   "werkstoff": "Stahl (Masse offen, 0 gesetzt)"
+  },
+  "SV1_Stecker": {
+   "anzahl": 65,
+   "volumen_cm3": 167.16076835549137,
+   "masse_kg": 0.6760577276630881,
+   "masse_bekannt": true,
+   "werkstoff": "E2 Teil (Masse offen, 0 gesetzt)"
+  },
+  "E2_HV_Leitung": {
+   "anzahl": 8,
+   "volumen_cm3": 163.09912150148176,
+   "masse_kg": 0.4746611456165759,
+   "masse_bekannt": true,
+   "werkstoff": "Cu (Leiter)"
+  },
+  "E2_Kabelschuh": {
+   "anzahl": 8,
+   "volumen_cm3": 31.58249808583358,
+   "masse_kg": 0.0,
+   "masse_bekannt": true,
+   "werkstoff": "Cu (Masse offen, 0 gesetzt)"
+  },
+  "E2_Clip": {
+   "anzahl": 4,
+   "volumen_cm3": 5.842478398964003,
+   "masse_kg": 0.0,
+   "masse_bekannt": true,
+   "werkstoff": "Kunststoff (Masse offen, 0 gesetzt)"
+  },
+  "E2_Stromschiene": {
+   "anzahl": 6,
+   "volumen_cm3": 68.37813535613311,
+   "masse_kg": 0.6126680927909527,
+   "masse_bekannt": true,
+   "werkstoff": "Cu 25 x 3"
+  },
+  "E2_Schrumpfschlauch": {
+   "anzahl": 6,
+   "volumen_cm3": 18.090550502210085,
+   "masse_kg": 0.0,
+   "masse_bekannt": true,
+   "werkstoff": "Schrumpfschlauch 0,5 mm (Masse offen, 0 gesetzt)"
+  },
+  "E2_Schaltbox": {
+   "anzahl": 1,
+   "volumen_cm3": 507.02069041113356,
+   "masse_kg": 1.3689558641100605,
+   "masse_bekannt": true,
+   "werkstoff": "Al"
+  },
+  "E2_Dichtung": {
+   "anzahl": 3,
+   "volumen_cm3": 15.55239659414706,
+   "masse_kg": 0.0,
+   "masse_bekannt": true,
+   "werkstoff": "Dichtung (Masse offen, 0 gesetzt)"
+  },
+  "E2_Schaltbox_Deckel": {
+   "anzahl": 2,
+   "volumen_cm3": 221.9695222039232,
+   "masse_kg": 0.5976212499176541,
+   "masse_bekannt": true,
+   "werkstoff": "Al"
+  },
+  "E2_Stecker_Sensor": {
+   "anzahl": 8,
+   "volumen_cm3": 253.236025638929,
+   "masse_kg": 0.6300000000000001,
+   "masse_bekannt": true,
+   "werkstoff": "E2 Teil (Masse ERW-E2 N1)"
+  },
+  "E2_Lasche": {
+   "anzahl": 2,
+   "volumen_cm3": 20.971194625843946,
+   "masse_kg": 0.05662222548977865,
+   "masse_bekannt": true,
+   "werkstoff": "Al"
+  },
+  "E2_Trennbruecke": {
+   "anzahl": 1,
+   "volumen_cm3": 1.2,
+   "masse_kg": 0.0,
+   "masse_bekannt": true,
+   "werkstoff": "E2 Teil (Masse offen, 0 gesetzt)"
+  },
+  "E2_Servicedeckel": {
+   "anzahl": 1,
+   "volumen_cm3": 36.383297314703555,
+   "masse_kg": 0.09823490274969959,
+   "masse_bekannt": true,
+   "werkstoff": "Al"
+  },
+  "E2_FPC": {
+   "anzahl": 14,
+   "volumen_cm3": 56.50367999999802,
+   "masse_kg": 0.589585,
+   "masse_bekannt": true,
+   "werkstoff": "FPC (Masse ERW-E2 N1)"
+  },
+  "E2_FPC_Halter": {
+   "anzahl": 2,
+   "volumen_cm3": 113.45471999999859,
+   "masse_kg": 0.0,
+   "masse_bekannt": true,
+   "werkstoff": "Halter (Masse offen, 0 gesetzt)"
+  },
+  "E2_Daisy": {
+   "anzahl": 12,
+   "volumen_cm3": 17.844246272390087,
+   "masse_kg": 0.0,
+   "masse_bekannt": true,
+   "werkstoff": "Leitung (Masse offen, 0 gesetzt)"
+  },
+  "E2_FPC_Detail": {
+   "anzahl": 307,
+   "volumen_cm3": 1.9424000000001824,
+   "masse_kg": 0.0,
+   "masse_bekannt": true,
+   "werkstoff": "Ni (Masse offen, 0 gesetzt)"
+  },
+  "E2_Steckfreigang": {
+   "anzahl": 62,
+   "volumen_cm3": 3970.4286749599714,
+   "masse_kg": 0.0,
+   "masse_bekannt": true,
+   "werkstoff": "Steckfreigang (kein Bauteil)"
+  },
+  "SV1_Gegenstueck": {
+   "anzahl": 42,
+   "volumen_cm3": 43.68000000000002,
+   "masse_kg": 0.2100000000000001,
+   "masse_bekannt": true,
+   "werkstoff": "SV1 Gegenstück auf der CMU (Annahme)"
+  },
+  "SV1_Schraube": {
+   "anzahl": 112,
+   "volumen_cm3": 14.12491472980504,
+   "masse_kg": 0.44800000000000034,
+   "masse_bekannt": true,
+   "werkstoff": "Stahl A2 (Annahme Masse)"
+  }
+ },
+ "masse_bekannt_kg": 621.1336678630641,
+ "schwerpunkt_mm": [
+  1030.6926154040254,
+  714.9657395876525,
+  62.910290583851115
+ ],
+ "mitte_mm": [
+  1025.0,
+  715.0
+ ],
+ "schwerpunkt_abw_mm": [
+  5.692615404025446,
+  -0.034260412347521196
+ ],
+ "teile": 1183,
+ "kollisionspaare_geprueft": 2537,
+ "kollisionen": [],
+ "anzahl_kollisionen": 0,
+ "steckfreigang_verletzungen": [
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_00",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 8352.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_00_In",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 13932.000000000002
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_00_Out",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 7776.0
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_01",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 8352.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_01_In",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 7776.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_01_Out",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 7776.0
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_02",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 8352.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_02_In",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 7776.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_02_Out",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 7776.0
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_03",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 8352.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_03_In",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 13932.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_03_Out",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 7776.0
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_04",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 8352.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_04_In",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 7776.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_04_Out",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 7776.0
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_05",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 8352.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_05_In",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 7776.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_05_Out",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 7776.0
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_06",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 8352.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_06_In",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 7776.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_06_Out",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 7776.0
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_07",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 8352.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_07_In",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 7776.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_07_Out",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 7776.0
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_08",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 8352.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_08_In",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 7776.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_08_Out",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 7776.0
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_09",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 8352.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_09_In",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 7776.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_09_Out",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 13932.0
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_10",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 8352.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_10_In",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 7776.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_10_Out",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 7776.0
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_11",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 8352.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_11_In",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 7776.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_11_Out",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 7776.0
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_12",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 8352.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_12_In",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 7776.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_12_Out",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 7776.0
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_13",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 8352.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_13_In",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 7776.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_13_Out",
+   "teil": "Seitenrahmen",
+   "gruppe": "Seitenrahmen",
+   "volumen_mm3": 13932.000000000002
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_00_In",
+   "teil": "Kuehlplatte_unten",
+   "gruppe": "Kuehlplatte",
+   "volumen_mm3": 1140.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_00_Out",
+   "teil": "Kuehlplatte_unten",
+   "gruppe": "Kuehlplatte",
+   "volumen_mm3": 1823.9999999999998
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_01_In",
+   "teil": "Kuehlplatte_unten",
+   "gruppe": "Kuehlplatte",
+   "volumen_mm3": 1823.9999999999998
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_01_Out",
+   "teil": "Kuehlplatte_unten",
+   "gruppe": "Kuehlplatte",
+   "volumen_mm3": 1823.9999999999998
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_02_In",
+   "teil": "Kuehlplatte_unten",
+   "gruppe": "Kuehlplatte",
+   "volumen_mm3": 1823.9999999999998
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_02_Out",
+   "teil": "Kuehlplatte_unten",
+   "gruppe": "Kuehlplatte",
+   "volumen_mm3": 1823.9999999999998
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_03_In",
+   "teil": "Kuehlplatte_unten",
+   "gruppe": "Kuehlplatte",
+   "volumen_mm3": 1140.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_03_Out",
+   "teil": "Kuehlplatte_unten",
+   "gruppe": "Kuehlplatte",
+   "volumen_mm3": 1823.9999999999998
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_04_In",
+   "teil": "Kuehlplatte_unten",
+   "gruppe": "Kuehlplatte",
+   "volumen_mm3": 1823.9999999999998
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_04_Out",
+   "teil": "Kuehlplatte_unten",
+   "gruppe": "Kuehlplatte",
+   "volumen_mm3": 1823.9999999999998
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_05_In",
+   "teil": "Kuehlplatte_unten",
+   "gruppe": "Kuehlplatte",
+   "volumen_mm3": 1823.9999999999998
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_05_Out",
+   "teil": "Kuehlplatte_unten",
+   "gruppe": "Kuehlplatte",
+   "volumen_mm3": 1823.9999999999998
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_06_In",
+   "teil": "Kuehlplatte_unten",
+   "gruppe": "Kuehlplatte",
+   "volumen_mm3": 1823.9999999999998
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_06_Out",
+   "teil": "Kuehlplatte_unten",
+   "gruppe": "Kuehlplatte",
+   "volumen_mm3": 1823.9999999999998
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_07_In",
+   "teil": "Kuehlplatte_unten",
+   "gruppe": "Kuehlplatte",
+   "volumen_mm3": 1823.9999999999998
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_07_Out",
+   "teil": "Kuehlplatte_unten",
+   "gruppe": "Kuehlplatte",
+   "volumen_mm3": 1823.9999999999998
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_08_In",
+   "teil": "Kuehlplatte_unten",
+   "gruppe": "Kuehlplatte",
+   "volumen_mm3": 1823.9999999999998
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_08_Out",
+   "teil": "Kuehlplatte_unten",
+   "gruppe": "Kuehlplatte",
+   "volumen_mm3": 1823.9999999999998
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_09_In",
+   "teil": "Kuehlplatte_unten",
+   "gruppe": "Kuehlplatte",
+   "volumen_mm3": 1823.9999999999998
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_09_Out",
+   "teil": "Kuehlplatte_unten",
+   "gruppe": "Kuehlplatte",
+   "volumen_mm3": 1140.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_10_In",
+   "teil": "Kuehlplatte_unten",
+   "gruppe": "Kuehlplatte",
+   "volumen_mm3": 1823.9999999999998
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_10_Out",
+   "teil": "Kuehlplatte_unten",
+   "gruppe": "Kuehlplatte",
+   "volumen_mm3": 1823.9999999999998
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_11_In",
+   "teil": "Kuehlplatte_unten",
+   "gruppe": "Kuehlplatte",
+   "volumen_mm3": 1823.9999999999998
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_11_Out",
+   "teil": "Kuehlplatte_unten",
+   "gruppe": "Kuehlplatte",
+   "volumen_mm3": 1823.9999999999998
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_12_In",
+   "teil": "Kuehlplatte_unten",
+   "gruppe": "Kuehlplatte",
+   "volumen_mm3": 1823.9999999999998
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_12_Out",
+   "teil": "Kuehlplatte_unten",
+   "gruppe": "Kuehlplatte",
+   "volumen_mm3": 1823.9999999999998
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_13_In",
+   "teil": "Kuehlplatte_unten",
+   "gruppe": "Kuehlplatte",
+   "volumen_mm3": 1823.9999999999998
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_13_Out",
+   "teil": "Kuehlplatte_unten",
+   "gruppe": "Kuehlplatte",
+   "volumen_mm3": 1140.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_00_In",
+   "teil": "Pad_unten",
+   "gruppe": "Pad",
+   "volumen_mm3": 570.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_00_Out",
+   "teil": "Pad_unten",
+   "gruppe": "Pad",
+   "volumen_mm3": 911.9999999999999
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_01_In",
+   "teil": "Pad_unten",
+   "gruppe": "Pad",
+   "volumen_mm3": 911.9999999999999
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_01_Out",
+   "teil": "Pad_unten",
+   "gruppe": "Pad",
+   "volumen_mm3": 911.9999999999999
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_02_In",
+   "teil": "Pad_unten",
+   "gruppe": "Pad",
+   "volumen_mm3": 911.9999999999999
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_02_Out",
+   "teil": "Pad_unten",
+   "gruppe": "Pad",
+   "volumen_mm3": 911.9999999999999
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_03_In",
+   "teil": "Pad_unten",
+   "gruppe": "Pad",
+   "volumen_mm3": 570.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_03_Out",
+   "teil": "Pad_unten",
+   "gruppe": "Pad",
+   "volumen_mm3": 911.9999999999999
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_04_In",
+   "teil": "Pad_unten",
+   "gruppe": "Pad",
+   "volumen_mm3": 911.9999999999999
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_04_Out",
+   "teil": "Pad_unten",
+   "gruppe": "Pad",
+   "volumen_mm3": 911.9999999999999
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_05_In",
+   "teil": "Pad_unten",
+   "gruppe": "Pad",
+   "volumen_mm3": 911.9999999999999
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_05_Out",
+   "teil": "Pad_unten",
+   "gruppe": "Pad",
+   "volumen_mm3": 911.9999999999999
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_06_In",
+   "teil": "Pad_unten",
+   "gruppe": "Pad",
+   "volumen_mm3": 911.9999999999999
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_06_Out",
+   "teil": "Pad_unten",
+   "gruppe": "Pad",
+   "volumen_mm3": 911.9999999999999
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_07_In",
+   "teil": "Pad_unten",
+   "gruppe": "Pad",
+   "volumen_mm3": 911.9999999999999
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_07_Out",
+   "teil": "Pad_unten",
+   "gruppe": "Pad",
+   "volumen_mm3": 911.9999999999999
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_08_In",
+   "teil": "Pad_unten",
+   "gruppe": "Pad",
+   "volumen_mm3": 911.9999999999999
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_08_Out",
+   "teil": "Pad_unten",
+   "gruppe": "Pad",
+   "volumen_mm3": 911.9999999999999
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_09_In",
+   "teil": "Pad_unten",
+   "gruppe": "Pad",
+   "volumen_mm3": 911.9999999999999
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_09_Out",
+   "teil": "Pad_unten",
+   "gruppe": "Pad",
+   "volumen_mm3": 570.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_10_In",
+   "teil": "Pad_unten",
+   "gruppe": "Pad",
+   "volumen_mm3": 911.9999999999999
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_10_Out",
+   "teil": "Pad_unten",
+   "gruppe": "Pad",
+   "volumen_mm3": 911.9999999999999
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_11_In",
+   "teil": "Pad_unten",
+   "gruppe": "Pad",
+   "volumen_mm3": 911.9999999999999
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_11_Out",
+   "teil": "Pad_unten",
+   "gruppe": "Pad",
+   "volumen_mm3": 911.9999999999999
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_12_In",
+   "teil": "Pad_unten",
+   "gruppe": "Pad",
+   "volumen_mm3": 911.9999999999999
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_12_Out",
+   "teil": "Pad_unten",
+   "gruppe": "Pad",
+   "volumen_mm3": 911.9999999999999
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_13_In",
+   "teil": "Pad_unten",
+   "gruppe": "Pad",
+   "volumen_mm3": 911.9999999999999
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_13_Out",
+   "teil": "Pad_unten",
+   "gruppe": "Pad",
+   "volumen_mm3": 570.0
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_00",
+   "teil": "Pad_oben",
+   "gruppe": "Pad",
+   "volumen_mm3": 1101.9999999999998
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_01",
+   "teil": "Pad_oben",
+   "gruppe": "Pad",
+   "volumen_mm3": 1101.9999999999998
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_02",
+   "teil": "Pad_oben",
+   "gruppe": "Pad",
+   "volumen_mm3": 1101.9999999999998
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_03",
+   "teil": "Pad_oben",
+   "gruppe": "Pad",
+   "volumen_mm3": 753.9999999999999
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_04",
+   "teil": "Pad_oben",
+   "gruppe": "Pad",
+   "volumen_mm3": 753.9999999999999
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_05",
+   "teil": "Pad_oben",
+   "gruppe": "Pad",
+   "volumen_mm3": 753.9999999999999
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_06",
+   "teil": "Pad_oben",
+   "gruppe": "Pad",
+   "volumen_mm3": 753.9999999999999
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_07",
+   "teil": "Pad_oben",
+   "gruppe": "Pad",
+   "volumen_mm3": 753.9999999999999
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_08",
+   "teil": "Pad_oben",
+   "gruppe": "Pad",
+   "volumen_mm3": 753.9999999999999
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_09",
+   "teil": "Pad_oben",
+   "gruppe": "Pad",
+   "volumen_mm3": 753.9999999999999
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_10",
+   "teil": "Pad_oben",
+   "gruppe": "Pad",
+   "volumen_mm3": 1101.9999999999998
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_11",
+   "teil": "Pad_oben",
+   "gruppe": "Pad",
+   "volumen_mm3": 1101.9999999999998
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_12",
+   "teil": "Pad_oben",
+   "gruppe": "Pad",
+   "volumen_mm3": 1101.9999999999998
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_13",
+   "teil": "Pad_oben",
+   "gruppe": "Pad",
+   "volumen_mm3": 1060.5078284225506
+  },
+  {
+   "freigang": "Steckfreigang_HV_Stecker_250A",
+   "teil": "Kuehlplatte_oben",
+   "gruppe": "Kuehlplatte",
+   "volumen_mm3": 5669.4391960914445
+  },
+  {
+   "freigang": "Handraum_HV_Stecker_250A",
+   "teil": "Kuehlplatte_oben",
+   "gruppe": "Kuehlplatte",
+   "volumen_mm3": 4292.514037093005
+  },
+  {
+   "freigang": "Steckfreigang_HV_Stecker_250A",
+   "teil": "Deckel",
+   "gruppe": "Deckel",
+   "volumen_mm3": 6429.891980952904
+  },
+  {
+   "freigang": "Handraum_HV_Stecker_250A",
+   "teil": "Deckel",
+   "gruppe": "Deckel",
+   "volumen_mm3": 5988.4982394652325
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_03",
+   "teil": "Zelle_000",
+   "gruppe": "Zellen",
+   "volumen_mm3": 5220.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_03_In",
+   "teil": "Zelle_000",
+   "gruppe": "Zellen",
+   "volumen_mm3": 2340.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_03_Out",
+   "teil": "Zelle_000",
+   "gruppe": "Zellen",
+   "volumen_mm3": 4320.0
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_04",
+   "teil": "Zelle_000",
+   "gruppe": "Zellen",
+   "volumen_mm3": 5220.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_04_In",
+   "teil": "Zelle_000",
+   "gruppe": "Zellen",
+   "volumen_mm3": 4320.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_04_Out",
+   "teil": "Zelle_000",
+   "gruppe": "Zellen",
+   "volumen_mm3": 4320.0
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_05",
+   "teil": "Zelle_000",
+   "gruppe": "Zellen",
+   "volumen_mm3": 5220.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_05_In",
+   "teil": "Zelle_000",
+   "gruppe": "Zellen",
+   "volumen_mm3": 4320.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_05_Out",
+   "teil": "Zelle_000",
+   "gruppe": "Zellen",
+   "volumen_mm3": 4320.0
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_06",
+   "teil": "Zelle_000",
+   "gruppe": "Zellen",
+   "volumen_mm3": 5220.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_06_In",
+   "teil": "Zelle_000",
+   "gruppe": "Zellen",
+   "volumen_mm3": 4320.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_06_Out",
+   "teil": "Zelle_000",
+   "gruppe": "Zellen",
+   "volumen_mm3": 4320.0
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_07",
+   "teil": "Zelle_032",
+   "gruppe": "Zellen",
+   "volumen_mm3": 5220.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_07_In",
+   "teil": "Zelle_032",
+   "gruppe": "Zellen",
+   "volumen_mm3": 4320.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_07_Out",
+   "teil": "Zelle_032",
+   "gruppe": "Zellen",
+   "volumen_mm3": 4320.0
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_08",
+   "teil": "Zelle_032",
+   "gruppe": "Zellen",
+   "volumen_mm3": 5220.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_08_In",
+   "teil": "Zelle_032",
+   "gruppe": "Zellen",
+   "volumen_mm3": 4320.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_08_Out",
+   "teil": "Zelle_032",
+   "gruppe": "Zellen",
+   "volumen_mm3": 4320.0
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_09",
+   "teil": "Zelle_032",
+   "gruppe": "Zellen",
+   "volumen_mm3": 5220.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_09_In",
+   "teil": "Zelle_032",
+   "gruppe": "Zellen",
+   "volumen_mm3": 4320.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_09_Out",
+   "teil": "Zelle_032",
+   "gruppe": "Zellen",
+   "volumen_mm3": 2340.0
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_00",
+   "teil": "Zelle_218",
+   "gruppe": "Zellen",
+   "volumen_mm3": 2610.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_00_In",
+   "teil": "Zelle_218",
+   "gruppe": "Zellen",
+   "volumen_mm3": 1170.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_00_Out",
+   "teil": "Zelle_218",
+   "gruppe": "Zellen",
+   "volumen_mm3": 2160.0
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_01",
+   "teil": "Zelle_218",
+   "gruppe": "Zellen",
+   "volumen_mm3": 2610.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_01_In",
+   "teil": "Zelle_218",
+   "gruppe": "Zellen",
+   "volumen_mm3": 2160.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_01_Out",
+   "teil": "Zelle_218",
+   "gruppe": "Zellen",
+   "volumen_mm3": 2160.0
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_02",
+   "teil": "Zelle_218",
+   "gruppe": "Zellen",
+   "volumen_mm3": 2610.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_02_In",
+   "teil": "Zelle_218",
+   "gruppe": "Zellen",
+   "volumen_mm3": 2160.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_02_Out",
+   "teil": "Zelle_218",
+   "gruppe": "Zellen",
+   "volumen_mm3": 2160.0
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_10",
+   "teil": "Zelle_249",
+   "gruppe": "Zellen",
+   "volumen_mm3": 2610.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_10_In",
+   "teil": "Zelle_249",
+   "gruppe": "Zellen",
+   "volumen_mm3": 2160.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_10_Out",
+   "teil": "Zelle_249",
+   "gruppe": "Zellen",
+   "volumen_mm3": 2160.0
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_11",
+   "teil": "Zelle_249",
+   "gruppe": "Zellen",
+   "volumen_mm3": 2610.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_11_In",
+   "teil": "Zelle_249",
+   "gruppe": "Zellen",
+   "volumen_mm3": 2160.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_11_Out",
+   "teil": "Zelle_249",
+   "gruppe": "Zellen",
+   "volumen_mm3": 2160.0
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_12",
+   "teil": "Zelle_249",
+   "gruppe": "Zellen",
+   "volumen_mm3": 2610.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_12_In",
+   "teil": "Zelle_249",
+   "gruppe": "Zellen",
+   "volumen_mm3": 2160.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_12_Out",
+   "teil": "Zelle_249",
+   "gruppe": "Zellen",
+   "volumen_mm3": 2160.0
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_13",
+   "teil": "Zelle_249",
+   "gruppe": "Zellen",
+   "volumen_mm3": 2610.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_13_In",
+   "teil": "Zelle_249",
+   "gruppe": "Zellen",
+   "volumen_mm3": 2160.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_13_Out",
+   "teil": "Zelle_249",
+   "gruppe": "Zellen",
+   "volumen_mm3": 1170.0
+  },
+  {
+   "freigang": "Steckfreigang_Hauptschuetz_1_Spulenstecker",
+   "teil": "Pyrosicherung",
+   "gruppe": "E2_Schaltbox_Inhalt",
+   "volumen_mm3": 6480.0
+  },
+  {
+   "freigang": "Steckfreigang_Hauptschuetz_2_Spulenstecker",
+   "teil": "Schmelz_Halter",
+   "gruppe": "E2_Schaltbox_Inhalt",
+   "volumen_mm3": 5560.0
+  },
+  {
+   "freigang": "Steckfreigang_Hauptschuetz_2_Spulenstecker",
+   "teil": "Schmelzsicherung",
+   "gruppe": "E2_Schaltbox_Inhalt",
+   "volumen_mm3": 1568.0000000000005
+  },
+  {
+   "freigang": "Steckfreigang_BMS_Kabelstecker_J_VERSORGUNG",
+   "teil": "Schaltbox_Wanne",
+   "gruppe": "E2_Schaltbox",
+   "volumen_mm3": 1008.0
+  },
+  {
+   "freigang": "Steckfreigang_BMS_Kabelstecker_J_DEBUG",
+   "teil": "Schaltbox_Wanne",
+   "gruppe": "E2_Schaltbox",
+   "volumen_mm3": 1008.0
+  },
+  {
+   "freigang": "Steckfreigang_BMS_Kabelstecker_J_SPULE_P",
+   "teil": "Schaltbox_Wanne",
+   "gruppe": "E2_Schaltbox",
+   "volumen_mm3": 1007.9999999999999
+  },
+  {
+   "freigang": "Steckfreigang_BMS_Kabelstecker_J_SPULE_M",
+   "teil": "Schaltbox_Wanne",
+   "gruppe": "E2_Schaltbox",
+   "volumen_mm3": 1007.9999999999999
+  },
+  {
+   "freigang": "Steckfreigang_BMS_Kabelstecker_J_SPULE_V",
+   "teil": "Schaltbox_Wanne",
+   "gruppe": "E2_Schaltbox",
+   "volumen_mm3": 1007.9999999999999
+  },
+  {
+   "freigang": "Handraum_HV_Stecker_40A",
+   "teil": "HV_Stecker_250A_Flansch",
+   "gruppe": "E2_Stecker_Sensor",
+   "volumen_mm3": 459.8468684811115
+  },
+  {
+   "freigang": "Handraum_HV_Stecker_40A",
+   "teil": "HV_Stecker_250A_Schraube_3_Kopf",
+   "gruppe": "E2_Schraube",
+   "volumen_mm3": 30.419658484234475
+  },
+  {
+   "freigang": "Steckfreigang_BMS_Kabelstecker_J_VERSORGUNG",
+   "teil": "HV_Stecker_250A_Schraube_3_Kopf",
+   "gruppe": "E2_Schraube",
+   "volumen_mm3": 57.19367123332677
+  },
+  {
+   "freigang": "Handraum_HV_Stecker_40A",
+   "teil": "HV_Stecker_250A_Verriegelungshebel",
+   "gruppe": "E2_Stecker_Sensor",
+   "volumen_mm3": 1854.686178756518
+  },
+  {
+   "freigang": "Handraum_NV_Stecker_26pol",
+   "teil": "HV_Stecker_40A_Flansch",
+   "gruppe": "E2_Stecker_Sensor",
+   "volumen_mm3": 451.9802706334933
+  },
+  {
+   "freigang": "Handraum_NV_Stecker_26pol",
+   "teil": "HV_Stecker_40A_Schraube_2_Kopf",
+   "gruppe": "E2_Schraube",
+   "volumen_mm3": 115.0485363372542
+  },
+  {
+   "freigang": "Handraum_NV_Stecker_26pol",
+   "teil": "HV_Stecker_40A_Schraube_2_Schaft",
+   "gruppe": "E2_Schraube",
+   "volumen_mm3": 11.485244452181522
+  },
+  {
+   "freigang": "Handraum_NV_Stecker_26pol",
+   "teil": "HV_Stecker_40A_Schraube_3_Kopf",
+   "gruppe": "E2_Schraube",
+   "volumen_mm3": 115.04853633725423
+  },
+  {
+   "freigang": "Handraum_NV_Stecker_26pol",
+   "teil": "HV_Stecker_40A_Schraube_3_Schaft",
+   "gruppe": "E2_Schraube",
+   "volumen_mm3": 11.485244452181549
+  },
+  {
+   "freigang": "Handraum_NV_Stecker_26pol",
+   "teil": "HV_Stecker_40A_Steckkoerper",
+   "gruppe": "E2_Stecker_Sensor",
+   "volumen_mm3": 3667.6695996218255
+  },
+  {
+   "freigang": "Handraum_HV_Stecker_40A",
+   "teil": "NV_Stecker_26pol_Schraube_0_Kopf",
+   "gruppe": "E2_Schraube",
+   "volumen_mm3": 5.638055471173393
+  },
+  {
+   "freigang": "Handraum_HV_Stecker_40A",
+   "teil": "NV_Stecker_26pol_Schraube_1_Kopf",
+   "gruppe": "E2_Schraube",
+   "volumen_mm3": 5.638055471173357
+  },
+  {
+   "freigang": "Handraum_NV_Stecker_26pol",
+   "teil": "Gas_Drucksensor",
+   "gruppe": "E2_Stecker_Sensor",
+   "volumen_mm3": 4491.274998653002
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_13",
+   "teil": "Lasche_Minus",
+   "gruppe": "E2_Lasche",
+   "volumen_mm3": 657.9921715774498
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_03",
+   "teil": "Querverbinder_Mitte_A",
+   "gruppe": "Zellverbinder",
+   "volumen_mm3": 348.0
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_04",
+   "teil": "Querverbinder_Mitte_A",
+   "gruppe": "Zellverbinder",
+   "volumen_mm3": 348.0
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_05",
+   "teil": "Querverbinder_Mitte_A",
+   "gruppe": "Zellverbinder",
+   "volumen_mm3": 348.0
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_06",
+   "teil": "Querverbinder_Mitte_A",
+   "gruppe": "Zellverbinder",
+   "volumen_mm3": 348.0
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_07",
+   "teil": "Querverbinder_Mitte_B",
+   "gruppe": "Zellverbinder",
+   "volumen_mm3": 348.0
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_08",
+   "teil": "Querverbinder_Mitte_B",
+   "gruppe": "Zellverbinder",
+   "volumen_mm3": 348.0
+  },
+  {
+   "freigang": "Steckfreigang_FPC_Stecker_09",
+   "teil": "Querverbinder_Mitte_B",
+   "gruppe": "Zellverbinder",
+   "volumen_mm3": 348.0
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_01_In",
+   "teil": "Daisy_Stecker_00_Out",
+   "gruppe": "SV1_Stecker",
+   "volumen_mm3": 191.99999999999997
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_00_Out",
+   "teil": "Daisy_Stecker_01_In",
+   "gruppe": "SV1_Stecker",
+   "volumen_mm3": 191.99999999999997
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_02_In",
+   "teil": "Daisy_Stecker_01_Out",
+   "gruppe": "SV1_Stecker",
+   "volumen_mm3": 191.99999999999997
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_01_Out",
+   "teil": "Daisy_Stecker_02_In",
+   "gruppe": "SV1_Stecker",
+   "volumen_mm3": 191.99999999999997
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_04_In",
+   "teil": "Daisy_Stecker_03_Out",
+   "gruppe": "SV1_Stecker",
+   "volumen_mm3": 191.99999999999997
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_03_Out",
+   "teil": "Daisy_Stecker_04_In",
+   "gruppe": "SV1_Stecker",
+   "volumen_mm3": 191.99999999999997
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_05_In",
+   "teil": "Daisy_Stecker_04_Out",
+   "gruppe": "SV1_Stecker",
+   "volumen_mm3": 191.99999999999997
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_04_Out",
+   "teil": "Daisy_Stecker_05_In",
+   "gruppe": "SV1_Stecker",
+   "volumen_mm3": 191.99999999999997
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_06_In",
+   "teil": "Daisy_Stecker_05_Out",
+   "gruppe": "SV1_Stecker",
+   "volumen_mm3": 191.99999999999997
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_05_Out",
+   "teil": "Daisy_Stecker_06_In",
+   "gruppe": "SV1_Stecker",
+   "volumen_mm3": 191.99999999999997
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_08_In",
+   "teil": "Daisy_Stecker_07_Out",
+   "gruppe": "SV1_Stecker",
+   "volumen_mm3": 191.99999999999997
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_07_Out",
+   "teil": "Daisy_Stecker_08_In",
+   "gruppe": "SV1_Stecker",
+   "volumen_mm3": 191.99999999999997
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_09_In",
+   "teil": "Daisy_Stecker_08_Out",
+   "gruppe": "SV1_Stecker",
+   "volumen_mm3": 191.99999999999997
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_08_Out",
+   "teil": "Daisy_Stecker_09_In",
+   "gruppe": "SV1_Stecker",
+   "volumen_mm3": 191.99999999999997
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_11_In",
+   "teil": "Daisy_Stecker_10_Out",
+   "gruppe": "SV1_Stecker",
+   "volumen_mm3": 191.99999999999997
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_10_Out",
+   "teil": "Daisy_Stecker_11_In",
+   "gruppe": "SV1_Stecker",
+   "volumen_mm3": 191.99999999999997
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_12_In",
+   "teil": "Daisy_Stecker_11_Out",
+   "gruppe": "SV1_Stecker",
+   "volumen_mm3": 191.99999999999997
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_11_Out",
+   "teil": "Daisy_Stecker_12_In",
+   "gruppe": "SV1_Stecker",
+   "volumen_mm3": 191.99999999999997
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_13_In",
+   "teil": "Daisy_Stecker_12_Out",
+   "gruppe": "SV1_Stecker",
+   "volumen_mm3": 191.99999999999997
+  },
+  {
+   "freigang": "Steckfreigang_Daisy_Stecker_12_Out",
+   "teil": "Daisy_Stecker_13_In",
+   "gruppe": "SV1_Stecker",
+   "volumen_mm3": 191.99999999999997
+  },
+  {
+   "freigang": "Handraum_NV_Stecker_26pol",
+   "teil": "HV_Stecker_40A_Kabelstecker",
+   "gruppe": "SV1_Stecker",
+   "volumen_mm3": 6254.131120518169
+  },
+  {
+   "freigang": "Handraum_HV_Stecker_40A",
+   "teil": "NV_Stecker_26pol_Kabelstecker",
+   "gruppe": "SV1_Stecker",
+   "volumen_mm3": 1988.1117645483505
+  },
+  {
+   "freigang": "Steckfreigang_BMS_Kabelstecker_J_DAISY2",
+   "teil": "BMS_Kabelstecker_J_DAISY1",
+   "gruppe": "SV1_Stecker",
+   "volumen_mm3": 576.0
+  },
+  {
+   "freigang": "Steckfreigang_BMS_Kabelstecker_J_DAISY1",
+   "teil": "BMS_Kabelstecker_J_DAISY2",
+   "gruppe": "SV1_Stecker",
+   "volumen_mm3": 576.0
+  }
+ ],
+ "anzahl_steckfreigang_verletzungen": 211,
+ "kontakte_zugelassen": [
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_00_Schraube_969",
+   "volumen_mm3": 42.411500823462625,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_00_Bolzen_970",
+   "volumen_mm3": 127.2345024703865,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_00_Schraube_971",
+   "volumen_mm3": 42.41150082346266,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_00_Bolzen_972",
+   "volumen_mm3": 127.23450247038667,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_00_Schraube_973",
+   "volumen_mm3": 42.411500823462625,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_00_Bolzen_974",
+   "volumen_mm3": 127.23450247038649,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_00_Schraube_975",
+   "volumen_mm3": 42.41150082346266,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_00_Bolzen_976",
+   "volumen_mm3": 127.23450247038662,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_01_Schraube_983",
+   "volumen_mm3": 42.41150082346266,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_01_Bolzen_984",
+   "volumen_mm3": 127.23450247038667,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_01_Schraube_985",
+   "volumen_mm3": 42.41150082346258,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_01_Bolzen_986",
+   "volumen_mm3": 127.23450247038681,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_01_Schraube_987",
+   "volumen_mm3": 42.41150082346266,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_01_Bolzen_988",
+   "volumen_mm3": 127.23450247038663,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_01_Schraube_989",
+   "volumen_mm3": 42.411500823462596,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_01_Bolzen_990",
+   "volumen_mm3": 127.23450247038681,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_02_Schraube_997",
+   "volumen_mm3": 42.411500823462596,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_02_Bolzen_998",
+   "volumen_mm3": 127.23450247038681,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_02_Schraube_999",
+   "volumen_mm3": 42.411500823462596,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_02_Bolzen_1000",
+   "volumen_mm3": 127.23450247038681,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_02_Schraube_1001",
+   "volumen_mm3": 42.411500823462596,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_02_Bolzen_1002",
+   "volumen_mm3": 127.23450247038681,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_02_Schraube_1003",
+   "volumen_mm3": 42.411500823462596,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_02_Bolzen_1004",
+   "volumen_mm3": 127.23450247038681,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_03_Schraube_1011",
+   "volumen_mm3": 42.4115008234622,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_03_Bolzen_1012",
+   "volumen_mm3": 127.23450247038653,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_03_Schraube_1013",
+   "volumen_mm3": 42.411500823462234,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_03_Bolzen_1014",
+   "volumen_mm3": 127.23450247038667,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_03_Schraube_1015",
+   "volumen_mm3": 42.4115008234622,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_03_Bolzen_1016",
+   "volumen_mm3": 127.23450247038649,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_03_Schraube_1017",
+   "volumen_mm3": 42.411500823462234,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_03_Bolzen_1018",
+   "volumen_mm3": 127.23450247038662,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_04_Schraube_1025",
+   "volumen_mm3": 42.411500823462234,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_04_Bolzen_1026",
+   "volumen_mm3": 127.23450247038667,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_04_Schraube_1027",
+   "volumen_mm3": 42.411500823462156,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_04_Bolzen_1028",
+   "volumen_mm3": 127.23450247038681,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_04_Schraube_1029",
+   "volumen_mm3": 42.411500823462234,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_04_Bolzen_1030",
+   "volumen_mm3": 127.23450247038663,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_04_Schraube_1031",
+   "volumen_mm3": 42.41150082346216,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_04_Bolzen_1032",
+   "volumen_mm3": 127.23450247038684,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_05_Schraube_1039",
+   "volumen_mm3": 42.41150082346216,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_05_Bolzen_1040",
+   "volumen_mm3": 127.23450247038681,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_05_Schraube_1041",
+   "volumen_mm3": 42.41150082346216,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_05_Bolzen_1042",
+   "volumen_mm3": 127.23450247038681,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_05_Schraube_1043",
+   "volumen_mm3": 42.41150082346216,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_05_Bolzen_1044",
+   "volumen_mm3": 127.23450247038681,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_05_Schraube_1045",
+   "volumen_mm3": 42.41150082346217,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_05_Bolzen_1046",
+   "volumen_mm3": 127.23450247038681,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_06_Schraube_1053",
+   "volumen_mm3": 42.41150082346216,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_06_Bolzen_1054",
+   "volumen_mm3": 127.23450247038681,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_06_Schraube_1055",
+   "volumen_mm3": 42.41150082346216,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_06_Bolzen_1056",
+   "volumen_mm3": 127.23450247038681,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_06_Schraube_1057",
+   "volumen_mm3": 42.41150082346216,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_06_Bolzen_1058",
+   "volumen_mm3": 127.23450247038681,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_06_Schraube_1059",
+   "volumen_mm3": 42.41150082346217,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_06_Bolzen_1060",
+   "volumen_mm3": 127.23450247038681,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_07_Schraube_1067",
+   "volumen_mm3": 42.41150082346165,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_07_Bolzen_1068",
+   "volumen_mm3": 127.2345024703873,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_07_Schraube_1069",
+   "volumen_mm3": 42.41150082346165,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_07_Bolzen_1070",
+   "volumen_mm3": 127.2345024703873,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_07_Schraube_1071",
+   "volumen_mm3": 42.41150082346166,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_07_Bolzen_1072",
+   "volumen_mm3": 127.23450247038727,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_07_Schraube_1073",
+   "volumen_mm3": 42.41150082346166,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_07_Bolzen_1074",
+   "volumen_mm3": 127.23450247038727,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_08_Schraube_1081",
+   "volumen_mm3": 42.41150082346165,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_08_Bolzen_1082",
+   "volumen_mm3": 127.2345024703873,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_08_Schraube_1083",
+   "volumen_mm3": 42.41150082346165,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_08_Bolzen_1084",
+   "volumen_mm3": 127.2345024703873,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_08_Schraube_1085",
+   "volumen_mm3": 42.41150082346166,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_08_Bolzen_1086",
+   "volumen_mm3": 127.23450247038727,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_08_Schraube_1087",
+   "volumen_mm3": 42.41150082346166,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_08_Bolzen_1088",
+   "volumen_mm3": 127.23450247038727,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_09_Schraube_1095",
+   "volumen_mm3": 42.41150082346165,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_09_Bolzen_1096",
+   "volumen_mm3": 127.2345024703873,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_09_Schraube_1097",
+   "volumen_mm3": 42.41150082346165,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_09_Bolzen_1098",
+   "volumen_mm3": 127.23450247038738,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_09_Schraube_1099",
+   "volumen_mm3": 42.41150082346166,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_09_Bolzen_1100",
+   "volumen_mm3": 127.23450247038727,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_09_Schraube_1101",
+   "volumen_mm3": 42.41150082346166,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_09_Bolzen_1102",
+   "volumen_mm3": 127.23450247038738,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_10_Schraube_1109",
+   "volumen_mm3": 42.41150082346265,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_10_Bolzen_1110",
+   "volumen_mm3": 127.23450247038647,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_10_Schraube_1111",
+   "volumen_mm3": 42.411500823462084,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_10_Bolzen_1112",
+   "volumen_mm3": 127.2345024703873,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_10_Schraube_1113",
+   "volumen_mm3": 42.41150082346265,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_10_Bolzen_1114",
+   "volumen_mm3": 127.23450247038646,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_10_Schraube_1115",
+   "volumen_mm3": 42.411500823462084,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_10_Bolzen_1116",
+   "volumen_mm3": 127.23450247038727,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_11_Schraube_1123",
+   "volumen_mm3": 42.411500823462084,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_11_Bolzen_1124",
+   "volumen_mm3": 127.2345024703873,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_11_Schraube_1125",
+   "volumen_mm3": 42.411500823462084,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_11_Bolzen_1126",
+   "volumen_mm3": 127.2345024703873,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_11_Schraube_1127",
+   "volumen_mm3": 42.411500823462084,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_11_Bolzen_1128",
+   "volumen_mm3": 127.23450247038727,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_11_Schraube_1129",
+   "volumen_mm3": 42.411500823462084,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_11_Bolzen_1130",
+   "volumen_mm3": 127.23450247038727,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_12_Schraube_1137",
+   "volumen_mm3": 42.411500823462084,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_12_Bolzen_1138",
+   "volumen_mm3": 127.2345024703873,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_12_Schraube_1139",
+   "volumen_mm3": 42.411500823462084,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_12_Bolzen_1140",
+   "volumen_mm3": 127.2345024703873,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_12_Schraube_1141",
+   "volumen_mm3": 42.411500823462084,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_12_Bolzen_1142",
+   "volumen_mm3": 127.23450247038727,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_12_Schraube_1143",
+   "volumen_mm3": 42.411500823462084,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_12_Bolzen_1144",
+   "volumen_mm3": 127.23450247038727,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_13_Schraube_1151",
+   "volumen_mm3": 42.411500823462084,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_13_Bolzen_1152",
+   "volumen_mm3": 127.2345024703873,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_13_Schraube_1153",
+   "volumen_mm3": 42.411500823462084,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_13_Bolzen_1154",
+   "volumen_mm3": 127.23450247038738,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_13_Schraube_1155",
+   "volumen_mm3": 42.411500823462084,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_13_Bolzen_1156",
+   "volumen_mm3": 127.23450247038727,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_13_Schraube_1157",
+   "volumen_mm3": 42.411500823462084,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Seitenrahmen",
+   "b": "SV1_CMU_13_Bolzen_1158",
+   "volumen_mm3": 127.23450247038738,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_00",
+   "b": "SV1_CMU_00_Schraube_969",
+   "volumen_mm3": 10.673561040571258,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_00",
+   "b": "SV1_CMU_00_Schraube_971",
+   "volumen_mm3": 10.67356104057127,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_00",
+   "b": "SV1_CMU_00_Schraube_973",
+   "volumen_mm3": 10.673561040571258,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_00",
+   "b": "SV1_CMU_00_Schraube_975",
+   "volumen_mm3": 10.67356104057127,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_01",
+   "b": "SV1_CMU_01_Schraube_983",
+   "volumen_mm3": 10.673561040571267,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_01",
+   "b": "SV1_CMU_01_Schraube_985",
+   "volumen_mm3": 10.67356104057125,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_01",
+   "b": "SV1_CMU_01_Schraube_987",
+   "volumen_mm3": 10.673561040571267,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_01",
+   "b": "SV1_CMU_01_Schraube_989",
+   "volumen_mm3": 10.673561040571252,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_02",
+   "b": "SV1_CMU_02_Schraube_997",
+   "volumen_mm3": 10.673561040571249,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_02",
+   "b": "SV1_CMU_02_Schraube_999",
+   "volumen_mm3": 10.673561040571252,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_02",
+   "b": "SV1_CMU_02_Schraube_1001",
+   "volumen_mm3": 10.673561040571249,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_02",
+   "b": "SV1_CMU_02_Schraube_1003",
+   "volumen_mm3": 10.673561040571254,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_03",
+   "b": "SV1_CMU_03_Schraube_1011",
+   "volumen_mm3": 10.67356104057133,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_03",
+   "b": "SV1_CMU_03_Schraube_1013",
+   "volumen_mm3": 10.673561040571347,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_03",
+   "b": "SV1_CMU_03_Schraube_1015",
+   "volumen_mm3": 10.67356104057133,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_03",
+   "b": "SV1_CMU_03_Schraube_1017",
+   "volumen_mm3": 10.673561040571347,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_04",
+   "b": "SV1_CMU_04_Schraube_1025",
+   "volumen_mm3": 10.673561040571341,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_04",
+   "b": "SV1_CMU_04_Schraube_1027",
+   "volumen_mm3": 10.673561040571325,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_04",
+   "b": "SV1_CMU_04_Schraube_1029",
+   "volumen_mm3": 10.673561040571341,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_04",
+   "b": "SV1_CMU_04_Schraube_1031",
+   "volumen_mm3": 10.673561040571329,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_05",
+   "b": "SV1_CMU_05_Schraube_1039",
+   "volumen_mm3": 10.673561040571323,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_05",
+   "b": "SV1_CMU_05_Schraube_1041",
+   "volumen_mm3": 10.673561040571329,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_05",
+   "b": "SV1_CMU_05_Schraube_1043",
+   "volumen_mm3": 10.673561040571323,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_05",
+   "b": "SV1_CMU_05_Schraube_1045",
+   "volumen_mm3": 10.673561040571329,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_06",
+   "b": "SV1_CMU_06_Schraube_1053",
+   "volumen_mm3": 10.673561040571323,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_06",
+   "b": "SV1_CMU_06_Schraube_1055",
+   "volumen_mm3": 10.673561040571329,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_06",
+   "b": "SV1_CMU_06_Schraube_1057",
+   "volumen_mm3": 10.673561040571323,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_06",
+   "b": "SV1_CMU_06_Schraube_1059",
+   "volumen_mm3": 10.673561040571329,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_07",
+   "b": "SV1_CMU_07_Schraube_1067",
+   "volumen_mm3": 10.673561040571196,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_07",
+   "b": "SV1_CMU_07_Schraube_1069",
+   "volumen_mm3": 10.673561040571197,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_07",
+   "b": "SV1_CMU_07_Schraube_1071",
+   "volumen_mm3": 10.673561040571196,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_07",
+   "b": "SV1_CMU_07_Schraube_1073",
+   "volumen_mm3": 10.673561040571201,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_08",
+   "b": "SV1_CMU_08_Schraube_1081",
+   "volumen_mm3": 10.673561040571196,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_08",
+   "b": "SV1_CMU_08_Schraube_1083",
+   "volumen_mm3": 10.673561040571197,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_08",
+   "b": "SV1_CMU_08_Schraube_1085",
+   "volumen_mm3": 10.673561040571196,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_08",
+   "b": "SV1_CMU_08_Schraube_1087",
+   "volumen_mm3": 10.673561040571201,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_09",
+   "b": "SV1_CMU_09_Schraube_1095",
+   "volumen_mm3": 10.673561040571196,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_09",
+   "b": "SV1_CMU_09_Schraube_1097",
+   "volumen_mm3": 10.673561040571197,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_09",
+   "b": "SV1_CMU_09_Schraube_1099",
+   "volumen_mm3": 10.673561040571196,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_09",
+   "b": "SV1_CMU_09_Schraube_1101",
+   "volumen_mm3": 10.673561040571201,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_10",
+   "b": "SV1_CMU_10_Schraube_1109",
+   "volumen_mm3": 10.673561040571265,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_10",
+   "b": "SV1_CMU_10_Schraube_1111",
+   "volumen_mm3": 10.673561040571125,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_10",
+   "b": "SV1_CMU_10_Schraube_1113",
+   "volumen_mm3": 10.673561040571265,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_10",
+   "b": "SV1_CMU_10_Schraube_1115",
+   "volumen_mm3": 10.673561040571125,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_11",
+   "b": "SV1_CMU_11_Schraube_1123",
+   "volumen_mm3": 10.673561040571121,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_11",
+   "b": "SV1_CMU_11_Schraube_1125",
+   "volumen_mm3": 10.673561040571125,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_11",
+   "b": "SV1_CMU_11_Schraube_1127",
+   "volumen_mm3": 10.673561040571121,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_11",
+   "b": "SV1_CMU_11_Schraube_1129",
+   "volumen_mm3": 10.673561040571125,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_12",
+   "b": "SV1_CMU_12_Schraube_1137",
+   "volumen_mm3": 10.673561040571121,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_12",
+   "b": "SV1_CMU_12_Schraube_1139",
+   "volumen_mm3": 10.673561040571125,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_12",
+   "b": "SV1_CMU_12_Schraube_1141",
+   "volumen_mm3": 10.673561040571121,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_12",
+   "b": "SV1_CMU_12_Schraube_1143",
+   "volumen_mm3": 10.673561040571125,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_13",
+   "b": "SV1_CMU_13_Schraube_1151",
+   "volumen_mm3": 10.673561040571121,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_13",
+   "b": "SV1_CMU_13_Schraube_1153",
+   "volumen_mm3": 10.673561040571125,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_13",
+   "b": "SV1_CMU_13_Schraube_1155",
+   "volumen_mm3": 10.673561040571121,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "CMU_13",
+   "b": "SV1_CMU_13_Schraube_1157",
+   "volumen_mm3": 10.673561040571125,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Schmelz_Lasche_A",
+   "b": "Schiene_5_Pyro_Schmelz",
+   "volumen_mm3": 0.0016773152299528042
+  },
+  {
+   "a": "HV_Stecker_250A_Flansch",
+   "b": "HV_Stecker_250A_Kabelstecker",
+   "volumen_mm3": 2040.1818283185776,
+   "art": "SV1 gesteckt"
+  },
+  {
+   "a": "HV_Stecker_250A_Verriegelungshebel",
+   "b": "HV_Stecker_250A_Kabelstecker",
+   "volumen_mm3": 855.1411385549678,
+   "art": "SV1 gesteckt"
+  },
+  {
+   "a": "HV_Stecker_40A_Schraube_0_Kopf",
+   "b": "HV_Stecker_40A_Kabelstecker",
+   "volumen_mm3": 38.48451000647487,
+   "art": "SV1 gesteckt"
+  },
+  {
+   "a": "HV_Stecker_40A_Schraube_1_Kopf",
+   "b": "HV_Stecker_40A_Kabelstecker",
+   "volumen_mm3": 38.48451000647488,
+   "art": "SV1 gesteckt"
+  },
+  {
+   "a": "HV_Stecker_40A_Schraube_2_Kopf",
+   "b": "HV_Stecker_40A_Kabelstecker",
+   "volumen_mm3": 38.48451000647486,
+   "art": "SV1 gesteckt"
+  },
+  {
+   "a": "HV_Stecker_40A_Schraube_3_Kopf",
+   "b": "HV_Stecker_40A_Kabelstecker",
+   "volumen_mm3": 38.48451000647487,
+   "art": "SV1 gesteckt"
+  },
+  {
+   "a": "NV_Stecker_26pol_Schraube_0_Kopf",
+   "b": "NV_Stecker_26pol_Kabelstecker",
+   "volumen_mm3": 38.48451000647487,
+   "art": "SV1 gesteckt"
+  },
+  {
+   "a": "NV_Stecker_26pol_Schraube_1_Kopf",
+   "b": "NV_Stecker_26pol_Kabelstecker",
+   "volumen_mm3": 38.48451000647488,
+   "art": "SV1 gesteckt"
+  },
+  {
+   "a": "SV1_CMU_00_Bolzen_972",
+   "b": "SV1_CMU_01_Bolzen_984",
+   "volumen_mm3": 3.4701587163023744,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "SV1_CMU_00_Bolzen_976",
+   "b": "SV1_CMU_01_Bolzen_988",
+   "volumen_mm3": 3.4701587163023166,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "SV1_CMU_01_Bolzen_986",
+   "b": "SV1_CMU_02_Bolzen_998",
+   "volumen_mm3": 3.4701587163021705,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "SV1_CMU_01_Bolzen_990",
+   "b": "SV1_CMU_02_Bolzen_1002",
+   "volumen_mm3": 3.470158716302392,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "SV1_CMU_03_Bolzen_1014",
+   "b": "SV1_CMU_04_Bolzen_1026",
+   "volumen_mm3": 3.4701587163023744,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "SV1_CMU_03_Bolzen_1018",
+   "b": "SV1_CMU_04_Bolzen_1030",
+   "volumen_mm3": 3.4701587163023166,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "SV1_CMU_04_Bolzen_1028",
+   "b": "SV1_CMU_05_Bolzen_1040",
+   "volumen_mm3": 3.4701587163021705,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "SV1_CMU_04_Bolzen_1032",
+   "b": "SV1_CMU_05_Bolzen_1044",
+   "volumen_mm3": 3.470158716302392,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "SV1_CMU_05_Bolzen_1042",
+   "b": "SV1_CMU_06_Bolzen_1054",
+   "volumen_mm3": 3.4701587163021705,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "SV1_CMU_05_Bolzen_1046",
+   "b": "SV1_CMU_06_Bolzen_1058",
+   "volumen_mm3": 3.470158716302392,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "SV1_CMU_07_Bolzen_1070",
+   "b": "SV1_CMU_08_Bolzen_1082",
+   "volumen_mm3": 3.470158716303928,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "SV1_CMU_07_Bolzen_1074",
+   "b": "SV1_CMU_08_Bolzen_1086",
+   "volumen_mm3": 3.470158716303242,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "SV1_CMU_08_Bolzen_1084",
+   "b": "SV1_CMU_09_Bolzen_1096",
+   "volumen_mm3": 3.470158716303928,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "SV1_CMU_08_Bolzen_1088",
+   "b": "SV1_CMU_09_Bolzen_1100",
+   "volumen_mm3": 3.470158716303242,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "SV1_CMU_10_Bolzen_1112",
+   "b": "SV1_CMU_11_Bolzen_1124",
+   "volumen_mm3": 3.470158716303928,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "SV1_CMU_10_Bolzen_1116",
+   "b": "SV1_CMU_11_Bolzen_1128",
+   "volumen_mm3": 3.470158716303242,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "SV1_CMU_11_Bolzen_1126",
+   "b": "SV1_CMU_12_Bolzen_1138",
+   "volumen_mm3": 3.470158716303928,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "SV1_CMU_11_Bolzen_1130",
+   "b": "SV1_CMU_12_Bolzen_1142",
+   "volumen_mm3": 3.470158716303242,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "SV1_CMU_12_Bolzen_1140",
+   "b": "SV1_CMU_13_Bolzen_1152",
+   "volumen_mm3": 3.470158716303928,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "SV1_CMU_12_Bolzen_1144",
+   "b": "SV1_CMU_13_Bolzen_1156",
+   "volumen_mm3": 3.470158716303242,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  }
+ ],
+ "rechenzeit_s": 269.20115089416504,
+ "e3": {
+  "platine_mm": [
+   120.0,
+   60.0,
+   4.56
+  ],
+  "hoehe_bauteile_ueber_leiter_mm": null,
+  "anzahl_cmu": 14,
+  "step": "/home/cae/cae_projekte/batterie/e3/cmu_LFP.step",
+  "cmu_masse_gesamt_kg": 0.6895000000000001,
+  "cmu_masse_je_g": 49.25,
+  "cmu_masse_alt_e2_kg": 1.12
+ },
+ "e2": {
+  "fall": "hinten (ENT-144)",
+  "verschaltung": {
+   "variante": "LFP",
+   "machbar": true,
+   "konzept": "schleife_2reihen (ENT-148)",
+   "reihen_physisch": 2,
+   "zellen_je_reihe": 125,
+   "kette": "Plus hinten Reihe 0 -> vorn, Querverbinder vorn (Mitte, Service-Trennstecker in der Deckelöffnung), Reihe 1 -> hinten Minus",
+   "mitte_vorn_x": 50.0,
+   "plus_hinten_x": 1997.0,
+   "minus_hinten_x": 1997.0
+  },
+  "schaltbox_L_mm": 320.0,
+  "schaltbox_B_mm": 300.0,
+  "schaltbox_H_mm": 123.0,
+  "schaltbox_x0_y0_z0_mm": [
+   1688.0,
+   565.0,
+   121.0
+  ],
+  "reihenbreiten_mm": [
+   290.0,
+   290.0,
+   180.0
+  ],
+  "hoechstes_teil_mm": 116.0,
+  "hoehenzuwachs_gesamt_mm": 128.0,
+  "hoehe_stapel_vor_e2_mm": 121.0,
+  "hoehe_max_A_mm": 130,
+  "cmu_anzahl": 14,
+  "cmu_seite": {
+   "vorn": 7,
+   "hinten": 7
+  },
+  "cmu_kapazitaet_je_endzone": 11,
+  "cmu_masse_kg": 1.12,
+  "freier_abstand_endzone_vorn_mm": 13.0,
+  "freier_abstand_endzone_hinten_mm": 16.0,
+  "cmu_dicke_mm": 10.0,
+  "abgriffe": 251,
+  "cmu_y": [
+   90.0,
+   210.0,
+   330.0,
+   90.0,
+   210.0,
+   330.0,
+   450.0,
+   1100.0,
+   1220.0,
+   1340.0,
+   980.0,
+   1100.0,
+   1220.0,
+   1340.0
+  ],
+  "fpc": [
+   {
+    "cmu": 3,
+    "reihe": 0,
+    "seite": "vorn",
+    "laenge_mm": 1183.55,
+    "davon_x_mm": 1125.5,
+    "davon_y_mm": 58.05,
+    "platziert": true,
+    "spur": 0,
+    "lage": 0
+   },
+   {
+    "cmu": 10,
+    "reihe": 1,
+    "seite": "hinten",
+    "laenge_mm": 1531.55,
+    "davon_x_mm": 1113.5,
+    "davon_y_mm": 418.04999999999995,
+    "platziert": true,
+    "spur": 0,
+    "lage": 0
+   },
+   {
+    "cmu": 9,
+    "reihe": 1,
+    "seite": "vorn",
+    "laenge_mm": 899.55,
+    "davon_x_mm": 841.5,
+    "davon_y_mm": 58.049999999999955,
+    "platziert": true,
+    "spur": 0,
+    "lage": 0
+   },
+   {
+    "cmu": 2,
+    "reihe": 0,
+    "seite": "hinten",
+    "laenge_mm": 1127.55,
+    "davon_x_mm": 829.5,
+    "davon_y_mm": 298.05,
+    "platziert": true,
+    "spur": 0,
+    "lage": 0
+   },
+   {
+    "cmu": 4,
+    "reihe": 0,
+    "seite": "vorn",
+    "laenge_mm": 1004.55,
+    "davon_x_mm": 826.5,
+    "davon_y_mm": 178.05,
+    "platziert": true,
+    "spur": 0,
+    "lage": 1
+   },
+   {
+    "cmu": 11,
+    "reihe": 1,
+    "seite": "hinten",
+    "laenge_mm": 1112.55,
+    "davon_x_mm": 814.5,
+    "davon_y_mm": 298.04999999999995,
+    "platziert": true,
+    "spur": 0,
+    "lage": 1
+   },
+   {
+    "cmu": 8,
+    "reihe": 1,
+    "seite": "vorn",
+    "laenge_mm": 749.55,
+    "davon_x_mm": 571.5,
+    "davon_y_mm": 178.04999999999995,
+    "platziert": true,
+    "spur": 0,
+    "lage": 1
+   },
+   {
+    "cmu": 1,
+    "reihe": 0,
+    "seite": "hinten",
+    "laenge_mm": 737.55,
+    "davon_x_mm": 559.5,
+    "davon_y_mm": 178.05,
+    "platziert": true,
+    "spur": 0,
+    "lage": 1
+   },
+   {
+    "cmu": 5,
+    "reihe": 0,
+    "seite": "vorn",
+    "laenge_mm": 854.55,
+    "davon_x_mm": 556.5,
+    "davon_y_mm": 298.05,
+    "platziert": true,
+    "spur": 0,
+    "lage": 2
+   },
+   {
+    "cmu": 12,
+    "reihe": 1,
+    "seite": "hinten",
+    "laenge_mm": 722.55,
+    "davon_x_mm": 544.5,
+    "davon_y_mm": 178.04999999999995,
+    "platziert": true,
+    "spur": 0,
+    "lage": 2
+   },
+   {
+    "cmu": 7,
+    "reihe": 1,
+    "seite": "vorn",
+    "laenge_mm": 570.55,
+    "davon_x_mm": 272.5,
+    "davon_y_mm": 298.04999999999995,
+    "platziert": true,
+    "spur": 0,
+    "lage": 2
+   },
+   {
+    "cmu": 0,
+    "reihe": 0,
+    "seite": "hinten",
+    "laenge_mm": 318.55,
+    "davon_x_mm": 260.5,
+    "davon_y_mm": 58.05,
+    "platziert": true,
+    "spur": 0,
+    "lage": 2
+   },
+   {
+    "cmu": 6,
+    "reihe": 0,
+    "seite": "vorn",
+    "laenge_mm": 675.55,
+    "davon_x_mm": 257.5,
+    "davon_y_mm": 418.05,
+    "platziert": true,
+    "spur": 0,
+    "lage": 3
+   },
+   {
+    "cmu": 13,
+    "reihe": 1,
+    "seite": "hinten",
+    "laenge_mm": 303.54999999999995,
+    "davon_x_mm": 245.5,
+    "davon_y_mm": 58.049999999999955,
+    "platziert": true,
+    "spur": 0,
+    "lage": 3
+   }
+  ],
+  "fpc_laenge_gesamt_m": 11.791699999999995,
+  "fpc_laenge_platziert_m": 11.791699999999995,
+  "fpc_stuecke": 14,
+  "fpc_nicht_platziert": 0,
+  "fpc_masse_kg": 0.5895849999999998,
+  "hv": [
+   {
+    "strecke": "Plus Zelle -> Schaltbox",
+    "laenge_mm": 529.7557428756428
+   },
+   {
+    "strecke": "Minus Zelle -> Schaltbox",
+    "laenge_mm": 529.7557428756427
+   }
+  ],
+  "hv_laenge_gesamt_m": 1.0795114857512853,
+  "hv_W_je_m": 12.946784000000001,
+  "hv_verlust_W": 13.97620203154097,
+  "hv_cu_masse_kg": 0.48362114561657593,
+  "stecker_lfp": {
+   "bauform": "trennbruecke_servicedeckel (ENT-150), E2D: Deckel auf Dichtung",
+   "x": 55.5,
+   "y": 715.0,
+   "oberkante_mm": 130.6,
+   "ueber_deckel_mm": 9.599999999999994,
+   "servicedeckel_lichte_hoehe_mm": 12.6,
+   "servicedeckel_hoehenzuwachs_mm": 4.599999999999994,
+   "serviceoeffnung_mm": [
+    120.0,
+    80.0
+   ],
+   "oeffnung_x0_mm": 32,
+   "bruecke_mm": [
+    25.0,
+    3.0,
+    80.0
+   ],
+   "luecke_mm": 30,
+   "querverbinder_laenge_mm": 1338.0,
+   "laschen": [
+    {
+     "name": "Plus",
+     "pfad_mm": 141.81858347057704,
+     "querschnitt_mm2": 75.0,
+     "bohrungsrand_mm": null
+    },
+    {
+     "name": "Minus",
+     "pfad_mm": 141.81858347057704,
+     "querschnitt_mm2": 75.0,
+     "bohrungsrand_mm": null
+    }
+   ],
+   "nut": {
+    "kuehlflaeche_oben_mm2": 2726300.0,
+    "nut_flaeche_gesamt_mm2": 34200.0,
+    "nut_flaeche_ohne_oeffnung_mm2": 31200.0,
+    "nut_tiefe_in_kuehlplatte_mm": 2.0,
+    "nut_anteil_prozent": 1.1444081722481019,
+    "oeffnung_flaeche_mm2": 9600.0,
+    "nut_plus_oeffnung_anteil_prozent": 1.4965337637090563,
+    "oeffnung_anteil_prozent": 0.3521255914609544
+   },
+   "schraubenstapel_mm": 9.6,
+   "schraubenstapel_oberkante_mm": 125.6,
+   "freie_hoehe_unter_deckel_mm": 8.0,
+   "deckel_oeffnung_rand_mm": 12,
+   "servicedeckel_unterkante_mm": 124.0
+  },
+  "hoehe_vorn_mm": 134.0,
+  "hoehe_vorn_grenze_x_mm": 1588.0,
+  "hv_gebaut": true,
+  "hv_kurze_leitungen_box_stecker_mm": 20,
+  "masse_elektronik_ohne_hv_leitungen_kg": 6.109777335058145,
+  "aussparungen_mm3": {
+   "Pad_oben": 40951.43128312845,
+   "Kuehlplatte_oben": 155293.02030974254,
+   "Deckel": 12454.964564156719
+  },
+  "geometrie": {
+   "cmu": [
+    {
+     "i": 0,
+     "seite": "hinten",
+     "x": 2015.0,
+     "y": 90.0,
+     "taps": 18
+    },
+    {
+     "i": 1,
+     "seite": "hinten",
+     "x": 2015.0,
+     "y": 210.0,
+     "taps": 18
+    },
+    {
+     "i": 2,
+     "seite": "hinten",
+     "x": 2015.0,
+     "y": 330.0,
+     "taps": 18
+    },
+    {
+     "i": 3,
+     "seite": "vorn",
+     "x": 35.0,
+     "y": 90.0,
+     "taps": 18
+    },
+    {
+     "i": 4,
+     "seite": "vorn",
+     "x": 35.0,
+     "y": 210.0,
+     "taps": 18
+    },
+    {
+     "i": 5,
+     "seite": "vorn",
+     "x": 35.0,
+     "y": 330.0,
+     "taps": 18
+    },
+    {
+     "i": 6,
+     "seite": "vorn",
+     "x": 35.0,
+     "y": 450.0,
+     "taps": 18
+    },
+    {
+     "i": 7,
+     "seite": "vorn",
+     "x": 35.0,
+     "y": 1100.0,
+     "taps": 18
+    },
+    {
+     "i": 8,
+     "seite": "vorn",
+     "x": 35.0,
+     "y": 1220.0,
+     "taps": 18
+    },
+    {
+     "i": 9,
+     "seite": "vorn",
+     "x": 35.0,
+     "y": 1340.0,
+     "taps": 18
+    },
+    {
+     "i": 10,
+     "seite": "hinten",
+     "x": 2015.0,
+     "y": 980.0,
+     "taps": 18
+    },
+    {
+     "i": 11,
+     "seite": "hinten",
+     "x": 2015.0,
+     "y": 1100.0,
+     "taps": 18
+    },
+    {
+     "i": 12,
+     "seite": "hinten",
+     "x": 2015.0,
+     "y": 1220.0,
+     "taps": 18
+    },
+    {
+     "i": 13,
+     "seite": "hinten",
+     "x": 2015.0,
+     "y": 1340.0,
+     "taps": 17
+    }
+   ],
+   "fpc": [
+    {
+     "cmu": 3,
+     "reihe": 0,
+     "xy": [
+      [
+       40.0,
+       90.0
+      ],
+      [
+       40.0,
+       31.950000000000003
+      ],
+      [
+       1165.5,
+       31.950000000000003
+      ]
+     ],
+     "platziert": true
+    },
+    {
+     "cmu": 10,
+     "reihe": 1,
+     "xy": [
+      [
+       2010.0,
+       980.0
+      ],
+      [
+       2010.0,
+       1398.0500000000002
+      ],
+      [
+       896.5,
+       1398.0500000000002
+      ]
+     ],
+     "platziert": true
+    },
+    {
+     "cmu": 9,
+     "reihe": 1,
+     "xy": [
+      [
+       40.0,
+       1340.0
+      ],
+      [
+       40.0,
+       1398.0500000000002
+      ],
+      [
+       881.5,
+       1398.0500000000002
+      ]
+     ],
+     "platziert": true
+    },
+    {
+     "cmu": 2,
+     "reihe": 0,
+     "xy": [
+      [
+       2010.0,
+       330.0
+      ],
+      [
+       2010.0,
+       31.950000000000003
+      ],
+      [
+       1180.5,
+       31.950000000000003
+      ]
+     ],
+     "platziert": true
+    },
+    {
+     "cmu": 4,
+     "reihe": 0,
+     "xy": [
+      [
+       40.0,
+       210.0
+      ],
+      [
+       40.0,
+       32.25
+      ],
+      [
+       866.5,
+       32.25
+      ]
+     ],
+     "platziert": true
+    },
+    {
+     "cmu": 11,
+     "reihe": 1,
+     "xy": [
+      [
+       2010.0,
+       1100.0
+      ],
+      [
+       2010.0,
+       1397.75
+      ],
+      [
+       1195.5,
+       1397.75
+      ]
+     ],
+     "platziert": true
+    },
+    {
+     "cmu": 8,
+     "reihe": 1,
+     "xy": [
+      [
+       40.0,
+       1220.0
+      ],
+      [
+       40.0,
+       1397.75
+      ],
+      [
+       611.5,
+       1397.75
+      ]
+     ],
+     "platziert": true
+    },
+    {
+     "cmu": 1,
+     "reihe": 0,
+     "xy": [
+      [
+       2010.0,
+       210.0
+      ],
+      [
+       2010.0,
+       32.25
+      ],
+      [
+       1450.5,
+       32.25
+      ]
+     ],
+     "platziert": true
+    },
+    {
+     "cmu": 5,
+     "reihe": 0,
+     "xy": [
+      [
+       40.0,
+       330.0
+      ],
+      [
+       40.0,
+       32.55
+      ],
+      [
+       596.5,
+       32.55
+      ]
+     ],
+     "platziert": true
+    },
+    {
+     "cmu": 12,
+     "reihe": 1,
+     "xy": [
+      [
+       2010.0,
+       1220.0
+      ],
+      [
+       2010.0,
+       1397.45
+      ],
+      [
+       1465.5,
+       1397.45
+      ]
+     ],
+     "platziert": true
+    },
+    {
+     "cmu": 7,
+     "reihe": 1,
+     "xy": [
+      [
+       40.0,
+       1100.0
+      ],
+      [
+       40.0,
+       1397.45
+      ],
+      [
+       312.5,
+       1397.45
+      ]
+     ],
+     "platziert": true
+    },
+    {
+     "cmu": 0,
+     "reihe": 0,
+     "xy": [
+      [
+       2010.0,
+       90.0
+      ],
+      [
+       2010.0,
+       32.55
+      ],
+      [
+       1749.5,
+       32.55
+      ]
+     ],
+     "platziert": true
+    },
+    {
+     "cmu": 6,
+     "reihe": 0,
+     "xy": [
+      [
+       40.0,
+       450.0
+      ],
+      [
+       40.0,
+       32.85
+      ],
+      [
+       297.5,
+       32.85
+      ]
+     ],
+     "platziert": true
+    },
+    {
+     "cmu": 13,
+     "reihe": 1,
+     "xy": [
+      [
+       2010.0,
+       1340.0
+      ],
+      [
+       2010.0,
+       1397.15
+      ],
+      [
+       1764.5,
+       1397.15
+      ]
+     ],
+     "platziert": true
+    }
+   ],
+   "hv": [
+    {
+     "name": "Plus",
+     "laenge_mm": 529.7557428756428,
+     "xy": [
+      [
+       1933.75,
+       57.7
+      ],
+      [
+       1933.75,
+       547.5
+      ]
+     ]
+    },
+    {
+     "name": "Minus",
+     "laenge_mm": 529.7557428756427,
+     "xy": [
+      [
+       1933.75,
+       1372.3
+      ],
+      [
+       1933.75,
+       882.5
+      ]
+     ]
+    }
+   ],
+   "taps": [
+    [
+     1997.0,
+     31.95
+    ],
+    [
+     1989.5,
+     31.95
+    ],
+    [
+     1974.5,
+     31.95
+    ],
+    [
+     1959.5,
+     31.95
+    ],
+    [
+     1944.5,
+     31.95
+    ],
+    [
+     1929.5,
+     31.95
+    ],
+    [
+     1914.5,
+     31.95
+    ],
+    [
+     1899.5,
+     31.95
+    ],
+    [
+     1884.5,
+     31.95
+    ],
+    [
+     1869.5,
+     31.95
+    ],
+    [
+     1854.5,
+     31.95
+    ],
+    [
+     1839.5,
+     31.95
+    ],
+    [
+     1824.5,
+     31.95
+    ],
+    [
+     1809.5,
+     31.95
+    ],
+    [
+     1794.5,
+     31.95
+    ],
+    [
+     1779.5,
+     31.95
+    ],
+    [
+     1764.5,
+     31.95
+    ],
+    [
+     1749.5,
+     31.95
+    ],
+    [
+     1734.5,
+     31.95
+    ],
+    [
+     1719.5,
+     31.95
+    ],
+    [
+     1704.5,
+     31.95
+    ],
+    [
+     1689.5,
+     31.95
+    ],
+    [
+     1674.5,
+     31.95
+    ],
+    [
+     1659.5,
+     31.95
+    ],
+    [
+     1644.5,
+     31.95
+    ],
+    [
+     1629.5,
+     31.95
+    ],
+    [
+     1614.5,
+     31.95
+    ],
+    [
+     1599.5,
+     31.95
+    ],
+    [
+     1584.5,
+     31.95
+    ],
+    [
+     1569.5,
+     31.95
+    ],
+    [
+     1554.5,
+     31.95
+    ],
+    [
+     1525.0,
+     31.95
+    ],
+    [
+     1495.5,
+     31.95
+    ],
+    [
+     1480.5,
+     31.95
+    ],
+    [
+     1465.5,
+     31.95
+    ],
+    [
+     1450.5,
+     31.95
+    ],
+    [
+     1435.5,
+     31.95
+    ],
+    [
+     1420.5,
+     31.95
+    ],
+    [
+     1405.5,
+     31.95
+    ],
+    [
+     1390.5,
+     31.95
+    ],
+    [
+     1375.5,
+     31.95
+    ],
+    [
+     1360.5,
+     31.95
+    ],
+    [
+     1345.5,
+     31.95
+    ],
+    [
+     1330.5,
+     31.95
+    ],
+    [
+     1315.5,
+     31.95
+    ],
+    [
+     1300.5,
+     31.95
+    ],
+    [
+     1285.5,
+     31.95
+    ],
+    [
+     1270.5,
+     31.95
+    ],
+    [
+     1255.5,
+     31.95
+    ],
+    [
+     1240.5,
+     31.95
+    ],
+    [
+     1225.5,
+     31.95
+    ],
+    [
+     1210.5,
+     31.95
+    ],
+    [
+     1195.5,
+     31.95
+    ],
+    [
+     1180.5,
+     31.95
+    ],
+    [
+     1165.5,
+     31.95
+    ],
+    [
+     1150.5,
+     31.95
+    ],
+    [
+     1135.5,
+     31.95
+    ],
+    [
+     1120.5,
+     31.95
+    ],
+    [
+     1105.5,
+     31.95
+    ],
+    [
+     1090.5,
+     31.95
+    ],
+    [
+     1075.5,
+     31.95
+    ],
+    [
+     1060.5,
+     31.95
+    ],
+    [
+     1031.0,
+     31.95
+    ],
+    [
+     1001.5,
+     31.95
+    ],
+    [
+     986.5,
+     31.95
+    ],
+    [
+     971.5,
+     31.95
+    ],
+    [
+     956.5,
+     31.95
+    ],
+    [
+     941.5,
+     31.95
+    ],
+    [
+     926.5,
+     31.95
+    ],
+    [
+     911.5,
+     31.95
+    ],
+    [
+     896.5,
+     31.95
+    ],
+    [
+     881.5,
+     31.95
+    ],
+    [
+     866.5,
+     31.95
+    ],
+    [
+     851.5,
+     31.95
+    ],
+    [
+     836.5,
+     31.95
+    ],
+    [
+     821.5,
+     31.95
+    ],
+    [
+     806.5,
+     31.95
+    ],
+    [
+     791.5,
+     31.95
+    ],
+    [
+     776.5,
+     31.95
+    ],
+    [
+     761.5,
+     31.95
+    ],
+    [
+     746.5,
+     31.95
+    ],
+    [
+     731.5,
+     31.95
+    ],
+    [
+     716.5,
+     31.95
+    ],
+    [
+     701.5,
+     31.95
+    ],
+    [
+     686.5,
+     31.95
+    ],
+    [
+     671.5,
+     31.95
+    ],
+    [
+     656.5,
+     31.95
+    ],
+    [
+     641.5,
+     31.95
+    ],
+    [
+     626.5,
+     31.95
+    ],
+    [
+     611.5,
+     31.95
+    ],
+    [
+     596.5,
+     31.95
+    ],
+    [
+     581.5,
+     31.95
+    ],
+    [
+     566.5,
+     31.95
+    ],
+    [
+     537.0,
+     31.95
+    ],
+    [
+     507.5,
+     31.95
+    ],
+    [
+     492.5,
+     31.95
+    ],
+    [
+     477.5,
+     31.95
+    ],
+    [
+     462.5,
+     31.95
+    ],
+    [
+     447.5,
+     31.95
+    ],
+    [
+     432.5,
+     31.95
+    ],
+    [
+     417.5,
+     31.95
+    ],
+    [
+     402.5,
+     31.95
+    ],
+    [
+     387.5,
+     31.95
+    ],
+    [
+     372.5,
+     31.95
+    ],
+    [
+     357.5,
+     31.95
+    ],
+    [
+     342.5,
+     31.95
+    ],
+    [
+     327.5,
+     31.95
+    ],
+    [
+     312.5,
+     31.95
+    ],
+    [
+     297.5,
+     31.95
+    ],
+    [
+     282.5,
+     31.95
+    ],
+    [
+     267.5,
+     31.95
+    ],
+    [
+     252.5,
+     31.95
+    ],
+    [
+     237.5,
+     31.95
+    ],
+    [
+     222.5,
+     31.95
+    ],
+    [
+     207.5,
+     31.95
+    ],
+    [
+     192.5,
+     31.95
+    ],
+    [
+     177.5,
+     31.95
+    ],
+    [
+     162.5,
+     31.95
+    ],
+    [
+     147.5,
+     31.95
+    ],
+    [
+     132.5,
+     31.95
+    ],
+    [
+     117.5,
+     31.95
+    ],
+    [
+     102.5,
+     31.95
+    ],
+    [
+     87.5,
+     31.95
+    ],
+    [
+     72.5,
+     31.95
+    ],
+    [
+     57.5,
+     31.95
+    ],
+    [
+     50.0,
+     31.95
+    ],
+    [
+     57.5,
+     1398.05
+    ],
+    [
+     72.5,
+     1398.05
+    ],
+    [
+     87.5,
+     1398.05
+    ],
+    [
+     102.5,
+     1398.05
+    ],
+    [
+     117.5,
+     1398.05
+    ],
+    [
+     132.5,
+     1398.05
+    ],
+    [
+     147.5,
+     1398.05
+    ],
+    [
+     162.5,
+     1398.05
+    ],
+    [
+     177.5,
+     1398.05
+    ],
+    [
+     192.5,
+     1398.05
+    ],
+    [
+     207.5,
+     1398.05
+    ],
+    [
+     222.5,
+     1398.05
+    ],
+    [
+     237.5,
+     1398.05
+    ],
+    [
+     252.5,
+     1398.05
+    ],
+    [
+     267.5,
+     1398.05
+    ],
+    [
+     282.5,
+     1398.05
+    ],
+    [
+     297.5,
+     1398.05
+    ],
+    [
+     312.5,
+     1398.05
+    ],
+    [
+     327.5,
+     1398.05
+    ],
+    [
+     342.5,
+     1398.05
+    ],
+    [
+     357.5,
+     1398.05
+    ],
+    [
+     372.5,
+     1398.05
+    ],
+    [
+     387.5,
+     1398.05
+    ],
+    [
+     402.5,
+     1398.05
+    ],
+    [
+     417.5,
+     1398.05
+    ],
+    [
+     432.5,
+     1398.05
+    ],
+    [
+     447.5,
+     1398.05
+    ],
+    [
+     462.5,
+     1398.05
+    ],
+    [
+     477.5,
+     1398.05
+    ],
+    [
+     492.5,
+     1398.05
+    ],
+    [
+     507.5,
+     1398.05
+    ],
+    [
+     537.0,
+     1398.05
+    ],
+    [
+     566.5,
+     1398.05
+    ],
+    [
+     581.5,
+     1398.05
+    ],
+    [
+     596.5,
+     1398.05
+    ],
+    [
+     611.5,
+     1398.05
+    ],
+    [
+     626.5,
+     1398.05
+    ],
+    [
+     641.5,
+     1398.05
+    ],
+    [
+     656.5,
+     1398.05
+    ],
+    [
+     671.5,
+     1398.05
+    ],
+    [
+     686.5,
+     1398.05
+    ],
+    [
+     701.5,
+     1398.05
+    ],
+    [
+     716.5,
+     1398.05
+    ],
+    [
+     731.5,
+     1398.05
+    ],
+    [
+     746.5,
+     1398.05
+    ],
+    [
+     761.5,
+     1398.05
+    ],
+    [
+     776.5,
+     1398.05
+    ],
+    [
+     791.5,
+     1398.05
+    ],
+    [
+     806.5,
+     1398.05
+    ],
+    [
+     821.5,
+     1398.05
+    ],
+    [
+     836.5,
+     1398.05
+    ],
+    [
+     851.5,
+     1398.05
+    ],
+    [
+     866.5,
+     1398.05
+    ],
+    [
+     881.5,
+     1398.05
+    ],
+    [
+     896.5,
+     1398.05
+    ],
+    [
+     911.5,
+     1398.05
+    ],
+    [
+     926.5,
+     1398.05
+    ],
+    [
+     941.5,
+     1398.05
+    ],
+    [
+     956.5,
+     1398.05
+    ],
+    [
+     971.5,
+     1398.05
+    ],
+    [
+     986.5,
+     1398.05
+    ],
+    [
+     1001.5,
+     1398.05
+    ],
+    [
+     1031.0,
+     1398.05
+    ],
+    [
+     1060.5,
+     1398.05
+    ],
+    [
+     1075.5,
+     1398.05
+    ],
+    [
+     1090.5,
+     1398.05
+    ],
+    [
+     1105.5,
+     1398.05
+    ],
+    [
+     1120.5,
+     1398.05
+    ],
+    [
+     1135.5,
+     1398.05
+    ],
+    [
+     1150.5,
+     1398.05
+    ],
+    [
+     1165.5,
+     1398.05
+    ],
+    [
+     1180.5,
+     1398.05
+    ],
+    [
+     1195.5,
+     1398.05
+    ],
+    [
+     1210.5,
+     1398.05
+    ],
+    [
+     1225.5,
+     1398.05
+    ],
+    [
+     1240.5,
+     1398.05
+    ],
+    [
+     1255.5,
+     1398.05
+    ],
+    [
+     1270.5,
+     1398.05
+    ],
+    [
+     1285.5,
+     1398.05
+    ],
+    [
+     1300.5,
+     1398.05
+    ],
+    [
+     1315.5,
+     1398.05
+    ],
+    [
+     1330.5,
+     1398.05
+    ],
+    [
+     1345.5,
+     1398.05
+    ],
+    [
+     1360.5,
+     1398.05
+    ],
+    [
+     1375.5,
+     1398.05
+    ],
+    [
+     1390.5,
+     1398.05
+    ],
+    [
+     1405.5,
+     1398.05
+    ],
+    [
+     1420.5,
+     1398.05
+    ],
+    [
+     1435.5,
+     1398.05
+    ],
+    [
+     1450.5,
+     1398.05
+    ],
+    [
+     1465.5,
+     1398.05
+    ],
+    [
+     1480.5,
+     1398.05
+    ],
+    [
+     1495.5,
+     1398.05
+    ],
+    [
+     1525.0,
+     1398.05
+    ],
+    [
+     1554.5,
+     1398.05
+    ],
+    [
+     1569.5,
+     1398.05
+    ],
+    [
+     1584.5,
+     1398.05
+    ],
+    [
+     1599.5,
+     1398.05
+    ],
+    [
+     1614.5,
+     1398.05
+    ],
+    [
+     1629.5,
+     1398.05
+    ],
+    [
+     1644.5,
+     1398.05
+    ],
+    [
+     1659.5,
+     1398.05
+    ],
+    [
+     1674.5,
+     1398.05
+    ],
+    [
+     1689.5,
+     1398.05
+    ],
+    [
+     1704.5,
+     1398.05
+    ],
+    [
+     1719.5,
+     1398.05
+    ],
+    [
+     1734.5,
+     1398.05
+    ],
+    [
+     1749.5,
+     1398.05
+    ],
+    [
+     1764.5,
+     1398.05
+    ],
+    [
+     1779.5,
+     1398.05
+    ],
+    [
+     1794.5,
+     1398.05
+    ],
+    [
+     1809.5,
+     1398.05
+    ],
+    [
+     1824.5,
+     1398.05
+    ],
+    [
+     1839.5,
+     1398.05
+    ],
+    [
+     1854.5,
+     1398.05
+    ],
+    [
+     1869.5,
+     1398.05
+    ],
+    [
+     1884.5,
+     1398.05
+    ],
+    [
+     1899.5,
+     1398.05
+    ],
+    [
+     1914.5,
+     1398.05
+    ],
+    [
+     1929.5,
+     1398.05
+    ],
+    [
+     1944.5,
+     1398.05
+    ],
+    [
+     1959.5,
+     1398.05
+    ],
+    [
+     1974.5,
+     1398.05
+    ],
+    [
+     1989.5,
+     1398.05
+    ],
+    [
+     1997.0,
+     1398.05
+    ]
+   ]
+  },
+  "biegeradius_mm": 70.0,
+  "hv_aussendurchmesser_mm": 14,
+  "e2d": true,
+  "teile_entfallen_durch_aussparung": [],
+  "schaltbox_wanne_L_mm": 320.0,
+  "schaltbox_wanne_B_mm": 300.0,
+  "schaltbox_aussen_mit_flansch_L_mm": 344.0,
+  "schaltbox_aussen_mit_flansch_B_mm": 324.0,
+  "schaltbox_innenhoehe_mm": 116.0,
+  "schaltbox_wandoberkante_mm": 239.0,
+  "schaltbox_deckel_oberkante_mm": 244.0,
+  "schaltbox_H_bis_deckel_mm": 123.0,
+  "schaltbox_H_mit_schraubenkoepfen_mm": 128.0,
+  "schaltbox_hoehe_max_N1_mm": 90,
+  "flansch_mm": 12,
+  "schrauben_box": 24,
+  "schienen": [
+   {
+    "name": "Schiene_1_Plus_Shunt",
+    "laenge_mm": 155.13716694115408,
+    "abstand_mm": 40.0,
+    "von": [
+     1933.8,
+     600.0,
+     232.0
+    ],
+    "nach": [
+     1973.8,
+     600.0,
+     138.0
+    ],
+    "hinweis": ""
+   },
+   {
+    "name": "Schiene_2_Shunt_Schuetz1",
+    "laenge_mm": 384.87693494542845,
+    "abstand_mm": 269.6026010631203,
+    "von": [
+     1932.2,
+     600.0,
+     138.0
+    ],
+    "nach": [
+     1723.0,
+     770.0,
+     198.0
+    ],
+    "hinweis": ""
+   },
+   {
+    "name": "Schiene_3_Schuetz1_Schuetz2",
+    "laenge_mm": 75.0,
+    "abstand_mm": 50.0,
+    "von": [
+     1763.0,
+     770.0,
+     198.0
+    ],
+    "nach": [
+     1813.0,
+     770.0,
+     198.0
+    ],
+    "hinweis": ""
+   },
+   {
+    "name": "Schiene_4_Schuetz2_Pyro",
+    "laenge_mm": 174.82577907665342,
+    "abstand_mm": 124.55144519434529,
+    "von": [
+     1853.0,
+     770.0,
+     198.0
+    ],
+    "nach": [
+     1741.2,
+     825.0,
+     203.0
+    ],
+    "hinweis": ""
+   },
+   {
+    "name": "Schiene_5_Pyro_Schmelz",
+    "laenge_mm": 73.96903181720796,
+    "abstand_mm": 37.83186487605389,
+    "von": [
+     1796.2,
+     825.0,
+     203.0
+    ],
+    "nach": [
+     1833.8,
+     830.0,
+     218.0
+    ],
+    "hinweis": ""
+   },
+   {
+    "name": "Schiene_6_Schmelz_Minus",
+    "laenge_mm": 75.13716694115406,
+    "abstand_mm": 40.0,
+    "von": [
+     1893.8,
+     830.0,
+     218.0
+    ],
+    "nach": [
+     1933.8,
+     830.0,
+     232.0
+    ],
+    "hinweis": ""
+   }
+  ],
+  "kabel": [
+   {
+    "name": "Plus",
+    "laenge_mm": 529.7557428756428,
+    "clips": 2,
+    "z_achse_mm": 230.0,
+    "hoehe_ueber_box_boden_mm": 107.0
+   },
+   {
+    "name": "Minus",
+    "laenge_mm": 529.7557428756427,
+    "clips": 2,
+    "z_achse_mm": 230.0,
+    "hoehe_ueber_box_boden_mm": 107.0
+   }
+  ],
+  "kabel_z_achse_mm": 230.0,
+  "kabel_z_achse_ueber_boxboden_mm": 107.0,
+  "kabel_radien_mm": [
+   3.989422804014327,
+   4.992948536009552,
+   5.996474268004776,
+   7.0
+  ],
+  "details": {
+   "tabs": 251,
+   "ntc": 56,
+   "fpc_stecker": 14,
+   "daisy_stecker": 28,
+   "daisy_kabel": 12,
+   "schweiss_verbinder": 32,
+   "daisy_quer_mm_nicht_gezeichnet": 1980.0,
+   "fenster_feld": 3
+  },
+  "fenster_feld": 3,
+  "fenster_x_mm": [
+   1547.0,
+   1997.0
+  ],
+  "fuesse": {
+   "Plus": {
+    "x": 1933.75,
+    "hole": [
+     1933.75,
+     45.7
+    ],
+    "foot": [
+     1933.75,
+     57.7
+    ],
+    "ywall": 565.0,
+    "sgn": 1,
+    "inw": 1,
+    "ya": 33.2,
+    "yb": 58.2,
+    "box_hole_y": 600.0,
+    "box_hole": [
+     1933.75,
+     600.0
+    ],
+    "L": 529.7557428756428
+   },
+   "Minus": {
+    "x": 1933.75,
+    "hole": [
+     1933.75,
+     1384.3
+    ],
+    "foot": [
+     1933.75,
+     1372.3
+    ],
+    "ywall": 865.0,
+    "sgn": -1,
+    "inw": -1,
+    "ya": 1371.8,
+    "yb": 1396.8,
+    "box_hole_y": 830.0,
+    "box_hole": [
+     1933.75,
+     830.0
+    ],
+    "L": 529.7557428756427
+   }
+  },
+  "schiene_mm": [
+   25.0,
+   3.0
+  ],
+  "lug": {
+   "huelse_mm": 40,
+   "palme_mm": [
+    20.0,
+    25.0,
+    4.0
+   ]
+  },
+  "zM_rel_boden_mm": 94.0,
+  "servicedeckel_zmax_mm": 130.6,
+  "sv1": {
+   "freigaenge": [
+    "Handraum_HV_Stecker_250A",
+    "Handraum_HV_Stecker_40A",
+    "Handraum_NV_Stecker_26pol",
+    "Steckfreigang_BMS_Kabelstecker_J_CAN1",
+    "Steckfreigang_BMS_Kabelstecker_J_CAN2",
+    "Steckfreigang_BMS_Kabelstecker_J_DAISY1",
+    "Steckfreigang_BMS_Kabelstecker_J_DAISY2",
+    "Steckfreigang_BMS_Kabelstecker_J_DEBUG",
+    "Steckfreigang_BMS_Kabelstecker_J_SEKUNDAER",
+    "Steckfreigang_BMS_Kabelstecker_J_SHUNT",
+    "Steckfreigang_BMS_Kabelstecker_J_SPULE_M",
+    "Steckfreigang_BMS_Kabelstecker_J_SPULE_P",
+    "Steckfreigang_BMS_Kabelstecker_J_SPULE_V",
+    "Steckfreigang_BMS_Kabelstecker_J_VERSORGUNG",
+    "Steckfreigang_Daisy_Stecker_00_In",
+    "Steckfreigang_Daisy_Stecker_00_Out",
+    "Steckfreigang_Daisy_Stecker_01_In",
+    "Steckfreigang_Daisy_Stecker_01_Out",
+    "Steckfreigang_Daisy_Stecker_02_In",
+    "Steckfreigang_Daisy_Stecker_02_Out",
+    "Steckfreigang_Daisy_Stecker_03_In",
+    "Steckfreigang_Daisy_Stecker_03_Out",
+    "Steckfreigang_Daisy_Stecker_04_In",
+    "Steckfreigang_Daisy_Stecker_04_Out",
+    "Steckfreigang_Daisy_Stecker_05_In",
+    "Steckfreigang_Daisy_Stecker_05_Out",
+    "Steckfreigang_Daisy_Stecker_06_In",
+    "Steckfreigang_Daisy_Stecker_06_Out",
+    "Steckfreigang_Daisy_Stecker_07_In",
+    "Steckfreigang_Daisy_Stecker_07_Out",
+    "Steckfreigang_Daisy_Stecker_08_In",
+    "Steckfreigang_Daisy_Stecker_08_Out",
+    "Steckfreigang_Daisy_Stecker_09_In",
+    "Steckfreigang_Daisy_Stecker_09_Out",
+    "Steckfreigang_Daisy_Stecker_10_In",
+    "Steckfreigang_Daisy_Stecker_10_Out",
+    "Steckfreigang_Daisy_Stecker_11_In",
+    "Steckfreigang_Daisy_Stecker_11_Out",
+    "Steckfreigang_Daisy_Stecker_12_In",
+    "Steckfreigang_Daisy_Stecker_12_Out",
+    "Steckfreigang_Daisy_Stecker_13_In",
+    "Steckfreigang_Daisy_Stecker_13_Out",
+    "Steckfreigang_FPC_Stecker_00",
+    "Steckfreigang_FPC_Stecker_01",
+    "Steckfreigang_FPC_Stecker_02",
+    "Steckfreigang_FPC_Stecker_03",
+    "Steckfreigang_FPC_Stecker_04",
+    "Steckfreigang_FPC_Stecker_05",
+    "Steckfreigang_FPC_Stecker_06",
+    "Steckfreigang_FPC_Stecker_07",
+    "Steckfreigang_FPC_Stecker_08",
+    "Steckfreigang_FPC_Stecker_09",
+    "Steckfreigang_FPC_Stecker_10",
+    "Steckfreigang_FPC_Stecker_11",
+    "Steckfreigang_FPC_Stecker_12",
+    "Steckfreigang_FPC_Stecker_13",
+    "Steckfreigang_HV_Stecker_250A",
+    "Steckfreigang_HV_Stecker_40A",
+    "Steckfreigang_Hauptschuetz_1_Spulenstecker",
+    "Steckfreigang_Hauptschuetz_2_Spulenstecker",
+    "Steckfreigang_NV_Stecker_26pol",
+    "Steckfreigang_Trennbruecke"
+   ],
+   "bms_stecker": [
+    "J_VERSORGUNG",
+    "J_DEBUG",
+    "J_CAN1",
+    "J_CAN2",
+    "J_SPULE_P",
+    "J_SPULE_M",
+    "J_SPULE_V",
+    "J_SHUNT",
+    "J_SEKUNDAER",
+    "J_DAISY1",
+    "J_DAISY2"
+   ],
+   "masse_zusatz_kg": 1.3340577276630856,
+   "anzahl_stecker": 65,
+   "anzahl_gegenstuecke": 42,
+   "anzahl_schrauben_bolzen": 112
+  },
+  "bms_platine_bbox_mm": [
+   1703.0,
+   580.0,
+   131.0,
+   1863.0,
+   680.0,
+   140.295
+  ],
+  "masse_elektronik_gesamt_kg": 6.584438480674721,
+  "masse_hv_leiter_cu_kg": 0.48362114561657593,
+  "querverbinder_mitte_al_kg": 0.2701306991841895
+ },
+ "annahmen": {
+  "A_deckel_mm": {
+   "wert": 2,
+   "herkunft": "M0 eingaben.json hoehenstapel_mm.deckel (Annahme)"
+  },
+  "A_boden_mm": {
+   "wert": 3,
+   "herkunft": "M0 eingaben.json hoehenstapel_mm.boden (Annahme)"
+  },
+  "A_unterfahrschutz_mm": {
+   "wert": 3,
+   "herkunft": "M0 eingaben.json (Annahme)"
+  },
+  "A_luft_mm": {
+   "wert": 5,
+   "herkunft": "M0 eingaben.json (Annahme)"
+  },
+  "A_kuehlplatte_mm": {
+   "wert": 8,
+   "herkunft": "M0 eingaben.json (Annahme); Vollmaterial, real hohl"
+  },
+  "A_pad_mm": {
+   "wert": 1,
+   "herkunft": "M0 eingaben.json waermeleitschicht_je (Annahme)"
+  },
+  "A_rand_mm": {
+   "wert": 30,
+   "herkunft": "M0 eingaben.json rand_mm (Annahme)"
+  },
+  "A_hoehe_max_mm": {
+   "wert": 130,
+   "herkunft": "M0 eingaben.json (Annahme)"
+  },
+  "A_quertraeger_anzahl": {
+   "wert": 3,
+   "herkunft": "M0 eingaben.json (Annahme Opus)"
+  },
+  "A_quertraeger_hoehe_mm": {
+   "wert": 54,
+   "herkunft": "M0 eingaben.json (W22, US9045030)"
+  },
+  "A_quertraeger_breite_mm": {
+   "wert": 26,
+   "herkunft": "M0 eingaben.json (W22, US9045030)"
+  },
+  "A_quertraeger_wand_mm": {
+   "wert": 2.5,
+   "herkunft": "M0 eingaben.json (Annahme, Mitte 2-3 mm)"
+  },
+  "A_quertraeger_spiel_mm": {
+   "wert": 2,
+   "herkunft": "M0 eingaben.json (Annahme)"
+  },
+  "A_alu_dichte_kg_m3": {
+   "wert": 2700,
+   "herkunft": "M0 eingaben.json (Annahme)"
+  },
+  "A_zellabstand_LFP_mm": {
+   "wert": 1.0,
+   "herkunft": "M0 eingaben.json (G1)"
+  },
+  "A_zellabstand_NMC_mm": {
+   "wert": 2.0,
+   "herkunft": "M0 eingaben.json (G1)"
+  },
+  "A_zellzahl_LFP": {
+   "wert": 250,
+   "herkunft": "M0 eingaben.json (G1)"
+  },
+  "A_zellzahl_NMC": {
+   "wert": 868,
+   "herkunft": "M0 eingaben.json (G1 Fall A)"
+  },
+  "A_zellverbinder_LFP_mm": {
+   "wert": [
+    25,
+    3
+   ],
+   "herkunft": "AUFTRAG G4: Querschnitt 25 x 3 (Breite x Dicke)"
+  },
+  "A_gruppenverbinder_NMC_mm": {
+   "wert": [
+    25,
+    3
+   ],
+   "herkunft": "AUFTRAG G4: Querschnitt 25 x 3 (Breite x Dicke)"
+  },
+  "A_zellabgriff_NMC_mm": {
+   "wert": [
+    12,
+    1
+   ],
+   "herkunft": "AUFTRAG G4: 12 x 1 (Durchmesser x Dicke, Scheibe auf dem Pluspol)"
+  },
+  "A_vergusshoehe_anteil_NMC": {
+   "wert": 0.5,
+   "herkunft": "AUFTRAG G4: Verguss bis halbe Zellhöhe (Annahme)"
+  },
+  "A_KUEHLPLATTE_FUELLGRAD": {
+   "wert": 0.4,
+   "herkunft": "Annahme Opus 2026-11-17: 2 Bleche je 1,5 mm + Kanalstege, Füllgrad 0,4 (Masse = Volumen x Füllgrad x Al-Dichte)"
+  },
+  "A_seitenrahmen_wand_mm": {
+   "wert": 2.5,
+   "herkunft": "Annahme Opus 2026-11-17: Mehrkammerprofil, Wand 2,5 mm (W22-Wandbereich)"
+  },
+  "A_seitenrahmen_kammern": {
+   "wert": 3,
+   "herkunft": "Annahme Opus 2026-11-17: 3 Kammern über die Rahmenbreite"
+  },
+  "A_dichte_pad_kg_m3": {
+   "wert": 2500,
+   "herkunft": "Annahme Opus 2026-11-17"
+  },
+  "A_dichte_zelltraeger_kg_m3": {
+   "wert": 1200,
+   "herkunft": "Annahme Opus 2026-11-17 (PC)"
+  },
+  "A_dichte_verguss_kg_m3": {
+   "wert": 300,
+   "herkunft": "Annahme Opus 2026-11-17 (PU-Schaum)"
+  },
+  "A_e2_schuetz_mm": {
+   "wert": [
+    80,
+    60,
+    75
+   ],
+   "herkunft": "ERW-E2 N1 Hauptschütz"
+  },
+  "A_e2_schuetz_masse_kg": {
+   "wert": 0.45,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_vorladeschuetz_mm": {
+   "wert": [
+    40,
+    30,
+    40
+   ],
+   "herkunft": "ERW-E2 N1 Vorladeschütz"
+  },
+  "A_e2_vorladewiderstand_mm": {
+   "wert": [
+    60,
+    20,
+    20
+   ],
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_vorlade_masse_kg": {
+   "wert": 0.15,
+   "herkunft": "ERW-E2 N1 (Schütz + Widerstand zusammen)"
+  },
+  "A_e2_pyro_mm": {
+   "wert": [
+    30,
+    30,
+    80
+   ],
+   "herkunft": "ERW-E2 N1 Pyrosicherung Ø30 x 80, als Quader 30 x 30 x 80 (Vereinfachung)"
+  },
+  "A_e2_pyro_masse_kg": {
+   "wert": 0.15,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_schmelz_mm": {
+   "wert": [
+    30,
+    30,
+    85
+   ],
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_schmelz_masse_kg": {
+   "wert": 0.1,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_shunt_mm": {
+   "wert": [
+    80,
+    40,
+    15
+   ],
+   "herkunft": "ERW-E2 N1 Shunt mit Messplatine"
+  },
+  "A_e2_shunt_masse_kg": {
+   "wert": 0.1,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_bms_masse_kg": {
+   "wert": 0.4,
+   "herkunft": "ERW-E2 N1 BMS-Platine (Maße aus Akte BT-310)"
+  },
+  "A_e2_cmu_mm": {
+   "wert": [
+    120,
+    60,
+    10
+   ],
+   "herkunft": "ERW-E2 N1 CMU-Platine"
+  },
+  "A_e2_cmu_masse_kg": {
+   "wert": 0.08,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_fpc_dicke_mm": {
+   "wert": 0.3,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_fpc_masse_kg_m": {
+   "wert": 0.05,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_fpc_halter_mm": {
+   "wert": 3.0,
+   "herkunft": "ERW-E2 N1 (FPC plus Halter)"
+  },
+  "A_e2_hv250_mm": {
+   "wert": [
+    90,
+    70,
+    60
+   ],
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_hv250_masse_kg": {
+   "wert": 0.4,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_hv40_mm": {
+   "wert": [
+    50,
+    40,
+    40
+   ],
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_hv40_masse_kg": {
+   "wert": 0.15,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_nv_mm": {
+   "wert": [
+    50,
+    30,
+    40
+   ],
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_nv_masse_kg": {
+   "wert": 0.05,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_trennstecker_mm": {
+   "wert": [
+    80,
+    50,
+    60
+   ],
+   "herkunft": "ERW-E2 N1, oben zugänglich (Deckelöffnung)"
+  },
+  "A_e2_trennstecker_masse_kg": {
+   "wert": 0.2,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_bruecke_luecke_mm": {
+   "wert": 30,
+   "herkunft": "ERW-E2 N3 (Platzhalter Opus/Sonnet): Lücke im Querverbinder LFP für die Service-Trennbrücke"
+  },
+  "A_e2_bruecke_ueberlappung_mm": {
+   "wert": 25,
+   "herkunft": "ERW-E2 N3: Überlappung Brücke auf Querverbinder je Seite"
+  },
+  "A_e2_bruecke_querschnitt_mm": {
+   "wert": [
+    25,
+    3
+   ],
+   "herkunft": "ERW-E2 N3: Cu-Brücke 25 x 3, 2 x M8 (je Seite eine Schraube), HV-Interlock-Kontakt nicht modelliert"
+  },
+  "A_e2_serviceoeffnung_mm": {
+   "wert": [
+    120,
+    80
+   ],
+   "herkunft": "ERW-E2 N3: Öffnung 120 (y) x 80 (x) durch Pad, obere Kühlplatte, Deckel; Servicedeckel flach, bündig, Dicke = A_deckel_mm"
+  },
+  "A_e2_lasche_mm": {
+   "wert": [
+    25,
+    3
+   ],
+   "herkunft": "ERW-E2 N3: Anschlusslasche Querschnitt wie Verbinder 25 x 3, Überlappung 25 mm, Bohrung M8"
+  },
+  "A_e2_lasche_bohrung_mm": {
+   "wert": 8,
+   "herkunft": "ERW-E2 N3: Bohrung M8 (Nennmaß 8, Durchgangsloch nicht gesetzt)"
+  },
+  "A_e2_lasche_ueberlappung_mm": {
+   "wert": 25,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2_gas_mm": {
+   "wert": [
+    30,
+    30,
+    20
+   ],
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_gas_masse_kg": {
+   "wert": 0.03,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_hv_aussendurchmesser_LFP_mm": {
+   "wert": 14,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_hv_aussendurchmesser_NMC_mm": {
+   "wert": 12,
+   "herkunft": "ERW-E2 N1"
+  },
+  "A_e2_box_wand_mm": {
+   "wert": 2,
+   "herkunft": "ERW-E2 N1 Schaltbox Al, Wand 2 mm"
+  },
+  "A_e2_box_rand_mm": {
+   "wert": 15,
+   "herkunft": "ERW-E2 N1 Rand 15 mm um den Inhalt"
+  },
+  "A_e2_box_hoehe_max_mm": {
+   "wert": 90,
+   "herkunft": "ERW-E2 N1 H ≤ 90"
+  },
+  "A_e2_box_teilabstand_mm": {
+   "wert": 10,
+   "herkunft": "NEUE ANNAHME (Platzhalter, in ERW-E2 N1 nicht gesetzt; Opus entscheiden): Abstand zwischen den Teilen in der Schaltbox"
+  },
+  "A_traeger_dicke_NMC_mm": {
+   "wert": 2.5,
+   "herkunft": "NEUE ANNAHME (Platzhalter, in M0 nicht gesetzt; Opus entscheiden)"
+  },
+  "A_e2d_schuetz_bolzen_n": {
+   "wert": 2,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_schuetz_bolzen_abstand_mm": {
+   "wert": 40,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_schuetz_bolzen_d_mm": {
+   "wert": 8,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_schuetz_bolzen_h_mm": {
+   "wert": 15,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_schuetz_fusslaschen_n": {
+   "wert": 2,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_schuetz_fusslasche_gewinde_mm": {
+   "wert": 5,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_schuetz_spulenstecker_mm": {
+   "wert": [
+    15,
+    10,
+    12
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_fusslasche_mm": {
+   "wert": [
+    20,
+    9,
+    2
+   ],
+   "herkunft": "abgeleitet (Sonnet): Laschenbreite 20, Auskragung 9 (< Teilabstand 10), Dicke 2; Bohrung M5 nicht in N3 bemaßt"
+  },
+  "A_e2d_schiene_cu_LFP_mm": {
+   "wert": [
+    25,
+    3
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_schiene_cu_NMC_mm": {
+   "wert": [
+    20,
+    3
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_schiene_bohrung_mm": {
+   "wert": 8.5,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_schiene_biegeradius_innen_faktor_dicke": {
+   "wert": 1.0,
+   "herkunft": "ERW-E2 N3: Biegeradius innen = Dicke"
+  },
+  "A_e2d_schrumpfschlauch_mm": {
+   "wert": 0.5,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_pyro_lasche_gewinde_mm": {
+   "wert": 8,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_lasche_pyro_schmelz_mm": {
+   "wert": [
+    25,
+    3,
+    25
+   ],
+   "herkunft": "abgeleitet (Sonnet): Laschen = Querschnitt der Schiene Cu 25 x 3 (LFP) bzw. 20 x 3 (NMC) hat Vorrang; Auskragung 25 ohne Vorgabe"
+  },
+  "A_e2d_schmelz_halter_mm": {
+   "wert": [
+    40,
+    40,
+    95
+   ],
+   "herkunft": "ERW-E2 N3: Schmelzsicherung im Kunststoffhalter"
+  },
+  "A_e2d_schmelz_wand_mm": {
+   "wert": 5,
+   "herkunft": "abgeleitet (Sonnet): Halterwand = (40 - 30) / 2 aus Halter 40 und Sicherung 30"
+  },
+  "A_e2d_shunt_steg_mm": {
+   "wert": 3,
+   "herkunft": "ERW-E2 N3: Manganin-Steg 3 mm zwischen Cu-Enden M8"
+  },
+  "A_e2d_shunt_platine_mm": {
+   "wert": [
+    80,
+    40,
+    1.6
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_shunt_stecker_pol": {
+   "wert": 4,
+   "herkunft": "ERW-E2 N3 (Stecker 4-polig, Maße fehlen)"
+  },
+  "A_e2d_bms_platine_dicke_mm": {
+   "wert": 1.6,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_bms_abstandsbolzen": {
+   "wert": [
+    4,
+    4,
+    8
+   ],
+   "herkunft": "ERW-E2 N3: 4 Stück M4, Höhe 8"
+  },
+  "A_e2d_bms_abstandsbolzen_aussen_mm": {
+   "wert": 7,
+   "herkunft": "abgeleitet (Sonnet): Außendurchmesser Sechskant SW7 (Gedächtnis-Normmaß, nicht belegt)"
+  },
+  "A_e2d_bms_abstandsbolzen_einzug_mm": {
+   "wert": 5,
+   "herkunft": "abgeleitet (Sonnet): Lage 5 mm von der Platinenkante, Lage nicht in N3"
+  },
+  "A_e2d_bms_stecker_mm": {
+   "wert": [
+    30,
+    15,
+    12
+   ],
+   "herkunft": "ERW-E2 N3: Stecker 26-polig und 2 x Daisy-Chain 12-polig je 30 x 15 x 12 (Lesart: Maß gilt für alle drei)"
+  },
+  "A_e2d_box_flansch_mm": {
+   "wert": 12,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_box_deckel_mm": {
+   "wert": 2,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_box_dichtung_mm": {
+   "wert": [
+    3,
+    3
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_box_schraube_teilung_mm": {
+   "wert": 60,
+   "herkunft": "ERW-E2 N3: M5 alle 60 mm"
+  },
+  "A_e2d_box_schraube_gewinde_mm": {
+   "wert": 5,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_box_flansch_dicke_mm": {
+   "wert": 2,
+   "herkunft": "abgeleitet (Sonnet): Flanschdicke = Wanddicke A_e2_box_wand_mm 2 mm"
+  },
+  "A_e2d_box_druckausgleich_d_mm": {
+   "wert": 20,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_m5_kopf_mm": {
+   "wert": [
+    8.5,
+    5
+   ],
+   "herkunft": "abgeleitet (Sonnet): Zylinderkopf M5: Ø 8,5 x 5 (Gedächtnis-Normmaß ISO 4762, nicht belegt)"
+  },
+  "A_e2d_m4_kopf_mm": {
+   "wert": [
+    7,
+    4
+   ],
+   "herkunft": "abgeleitet (Sonnet): Zylinderkopf M4: Ø 7 x 4 (Gedächtnis-Normmaß ISO 4762, nicht belegt)"
+  },
+  "A_e2d_m8_kopf_mm": {
+   "wert": [
+    13,
+    8
+   ],
+   "herkunft": "abgeleitet (Sonnet): Zylinderkopf M8: Ø 13 x 8 (Gedächtnis-Normmaß ISO 4762, nicht belegt)"
+  },
+  "A_e2d_m8_scheibe_mm": {
+   "wert": [
+    16,
+    1.6
+   ],
+   "herkunft": "abgeleitet (Sonnet): Scheibe M8: Ø 16 x 1,6 (Gedächtnis-Normmaß ISO 7089, nicht belegt)"
+  },
+  "A_e2d_kabelschuh_huelse_mm": {
+   "wert": 40,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_kabelschuh_lasche_mm": {
+   "wert": [
+    20,
+    4
+   ],
+   "herkunft": "ERW-E2 N3: Lasche 20 breit x 4 dick"
+  },
+  "A_e2d_kabelschuh_lasche_laenge_mm": {
+   "wert": 20,
+   "herkunft": "abgeleitet (Sonnet): Palme quadratisch 20 x 20"
+  },
+  "A_e2d_kabel_biegeradius_faktor_D": {
+   "wert": 5,
+   "herkunft": "ERW-E2 N3: R >= 5 D"
+  },
+  "A_e2d_kabel_schichten": {
+   "wert": [
+    "Leiter",
+    "Isolierung",
+    "Schirm",
+    "Mantel"
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_kabel_wand_teilung": {
+   "wert": 3,
+   "herkunft": "abgeleitet (Sonnet): Radialwand zwischen Leiter und Außendurchmesser in drei gleiche Teile (Isolierung, Schirm, Mantel); N3 nennt keine Schichtdicken"
+  },
+  "A_e2d_clip_mm": {
+   "wert": [
+    20,
+    15,
+    10
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_clip_abstand_mm": {
+   "wert": 200,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_fpc_tab_mm": {
+   "wert": [
+    8,
+    4,
+    0.2
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_ntc_mm": {
+   "wert": [
+    3,
+    2,
+    1
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_ntc_je_cmu": {
+   "wert": 4,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_fpc_stecker_mm": {
+   "wert": [
+    25,
+    8,
+    6
+   ],
+   "herkunft": "ERW-E2 N3: 20-polig, an der CMU"
+  },
+  "A_e2d_daisy_d_mm": {
+   "wert": 4,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_daisy_stecker_mm": {
+   "wert": [
+    15,
+    8,
+    8
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_daisy_r_min_mm": {
+   "wert": 20,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_hv250_flansch_mm": {
+   "wert": [
+    90,
+    70,
+    8
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_hv250_schrauben": {
+   "wert": [
+    4,
+    5
+   ],
+   "herkunft": "ERW-E2 N3: 4 x M5"
+  },
+  "A_e2d_hv250_koerper_mm": {
+   "wert": [
+    50,
+    60
+   ],
+   "herkunft": "ERW-E2 N3: Ø 50 x 60, 90 Grad gewinkelt (liegend)"
+  },
+  "A_e2d_hv250_hebel_mm": {
+   "wert": [
+    60,
+    10,
+    10
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_hv250_oring_mm": {
+   "wert": [
+    60,
+    3
+   ],
+   "herkunft": "abgeleitet (Sonnet): O-Ring Mittendurchmesser 60, Schnur 3 (Schnur = Dichtungsmaß 3 aus N3)"
+  },
+  "A_e2d_hv40_flansch_mm": {
+   "wert": [
+    50,
+    40,
+    6
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_hv40_schrauben": {
+   "wert": [
+    4,
+    4
+   ],
+   "herkunft": "ERW-E2 N3: 4 x M4"
+  },
+  "A_e2d_nv_flansch_mm": {
+   "wert": [
+    50,
+    30,
+    5
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_nv_schrauben": {
+   "wert": [
+    2,
+    4
+   ],
+   "herkunft": "ERW-E2 N3: 2 x M4"
+  },
+  "A_e2d_stecker_schraube_einzug_mm": {
+   "wert": 5,
+   "herkunft": "abgeleitet (Sonnet): Schrauben 5 mm von der Flanschkante"
+  },
+  "A_e2d_stecker_koerper_einzug_mm": {
+   "wert": 8,
+   "herkunft": "abgeleitet (Sonnet): Körper von HV 40 A / NV: Flanschfläche minus 8 mm je Kante (Platz für Schraubenköpfe); Höhe = Hülle aus N1 minus Flansch"
+  },
+  "A_e2d_bruecke_mm": {
+   "wert": [
+    25,
+    3,
+    80
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_bruecke_schrauben": {
+   "wert": [
+    2,
+    8
+   ],
+   "herkunft": "ERW-E2 N3: 2 x M8 mit Scheibe"
+  },
+  "A_e2d_hvil_mm": {
+   "wert": [
+    15,
+    10,
+    8
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_servicedeckel_mm": {
+   "wert": [
+    120,
+    80,
+    2
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_servicedeckel_schrauben": {
+   "wert": [
+    6,
+    5
+   ],
+   "herkunft": "ERW-E2 N3: 6 x M5 (Senkkopf bündig, Kopfhöhe = Deckeldicke)"
+  },
+  "A_e2d_servicedeckel_dichtung_mm": {
+   "wert": [
+    3,
+    3
+   ],
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_servicedeckel_rand_mm": {
+   "wert": 12,
+   "herkunft": "abgeleitet (Sonnet): Rand des Haupt-Deckels um die Serviceöffnung für Dichtung (3) und Senkschrauben; Öffnung im Deckel = 120 x 80 minus 2 x 12"
+  },
+  "A_e3c_kontakt_schwelle_mm3": {
+   "wert": 0.01,
+   "herkunft": "ERW-E3c Teil A: Schwelle nur für verschraubte Paare (Liste im Skript)"
+  },
+  "A_e2d_omega_h_mm": {
+   "wert": 4,
+   "herkunft": "ERW-E2 N3: Dehnbogen (Omega) h 4"
+  },
+  "A_e2d_schweiss_mm": {
+   "wert": [
+    10,
+    1,
+    0.2,
+    2
+   ],
+   "herkunft": "ERW-E2 N3: 2 Linien 10 x 1, Vertiefung 0,2 je Pol"
+  },
+  "A_e2d_schweiss_abstand_mm": {
+   "wert": 5,
+   "herkunft": "abgeleitet (Sonnet): Abstand der zwei Linien 5 mm (Mitte zu Mitte)"
+  },
+  "A_e2d_beruehrschutz_dicke_mm": {
+   "wert": 1,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_lasche_lfp_gewinde_mm": {
+   "wert": 8,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_lasche_ueberlappung_mm": {
+   "wert": 25,
+   "herkunft": "ERW-E2 N3"
+  },
+  "A_e2d_fenster": {
+   "wert": "letztes Feld (hinten)",
+   "herkunft": "abgeleitet (Sonnet): Zellverbinder-Details (Omega, Schweißnaht, Berührschutz) nur im hintersten Querträger-Feld voll, sonst vereinfacht; Auftrag AUFTRAG.md Fortsetzung 5 erlaubt das bei zu großer Datei"
+  }
+ }
+}

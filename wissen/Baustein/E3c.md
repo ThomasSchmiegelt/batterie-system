@@ -19,5 +19,7 @@ tags: ["baustein"]
 - `cad/pack/entwurf/ergebnis_LFP_e2d_e3.json`
 - `sim/elektrik/e3c_bms_platine/ERGEBNIS.md`
 - `sim/elektrik/e3c_bms_platine/ergebnis_platine.json`
+- `sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json`
 - `sim/elektrik/e3c_bms_platine/platine_bms_einbau.png`
 - `sim/elektrik/e3c_bms_platine/platine_bms_explosion.png`
+- `sim/elektrik/e3c_bms_platine/spice_schuetz.png`

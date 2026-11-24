@@ -26,9 +26,9 @@ SPEC = {
  "can": dict(papier="A2", zeilen=[("CAN-FD Kanal 1", [S("R_STB1"), S("U_CAN1"), S("L_CAN1"), S("D_ESD1_0", "R_TERM1_0", "R_TERM1_1", "C_TERM1", "D_ESD1_1", "J_CAN1"), S("C_CAN1_0", "C_CAN1_1")]),
         ("CAN-FD Kanal 2", [S("R_STB2"), S("U_CAN2"), S("L_CAN2"), S("D_ESD2_0", "R_TERM2_0", "R_TERM2_1", "C_TERM2", "D_ESD2_1", "J_CAN2"), S("C_CAN2_0", "C_CAN2_1")])]),
  "schuetz": dict(papier="A2", zeilen=[
-    ("Kanal P (Plus-Hauptschütz): UND -> High-Side -> Spule -> Low-Side -> Shunt; Zener-Löschpfad parallel zur Spule", [S("U_AND1", "C_AND1"), S("R_HS_PD_P", "U_HS_P", "R_LS_G_P", "R_LS_PD_P"), S("J_SPULE_P", "D_FREI_P", "D_ZENER_P", "Q_LS_P"), S("R_SENSE_P", "R_I_P", "C_I_P")]),
-    ("Kanal M (Minus-Hauptschütz)", [S(), S("R_HS_PD_M", "U_HS_M", "R_LS_G_M", "R_LS_PD_M"), S("J_SPULE_M", "D_FREI_M", "D_ZENER_M", "Q_LS_M"), S("R_SENSE_M", "R_I_M", "C_I_M")]),
-    ("Kanal V (Vorladeschütz)", [S("U_AND2", "C_AND2"), S("R_HS_PD_V", "U_HS_V", "R_LS_G_V", "R_LS_PD_V"), S("J_SPULE_V", "D_FREI_V", "D_ZENER_V", "Q_LS_V"), S("R_SENSE_V", "R_I_V", "C_I_V")])]),
+    ("Kanal P (Plus-Hauptschütz): UND -> High-Side (taktet, OPT-006) -> Spule -> Low-Side -> Shunt; PWM-Freilauf GND -> HS-Ende (D_PWM), Löschpfad Spulenende N -> Diode -> Zener 36 V -> GND", [S("U_AND1", "C_AND1"), S("R_HS_PD_P", "U_HS_P", "R_LS_G_P", "R_LS_PD_P"), S("J_SPULE_P", "D_PWM_P", "D_FREI_P", "D_ZENER_P", "Q_LS_P"), S("R_SENSE_P", "R_I_P", "C_I_P")]),
+    ("Kanal M (Minus-Hauptschütz)", [S(), S("R_HS_PD_M", "U_HS_M", "R_LS_G_M", "R_LS_PD_M"), S("J_SPULE_M", "D_PWM_M", "D_FREI_M", "D_ZENER_M", "Q_LS_M"), S("R_SENSE_M", "R_I_M", "C_I_M")]),
+    ("Kanal V (Vorladeschütz)", [S("U_AND2", "C_AND2"), S("R_HS_PD_V", "U_HS_V", "R_LS_G_V", "R_LS_PD_V"), S("J_SPULE_V", "D_PWM_V", "D_FREI_V", "D_ZENER_V", "Q_LS_V"), S("R_SENSE_V", "R_I_V", "C_I_V")])]),
  "daisy": dict(papier="A3", zonen=[("Niedervoltseite (NV)", 0, 0, "0 0 150"), ("Trennung HV/NV", 1, 1, "194 0 0"), ("Hochvoltseite (HV)", 2, 2, "180 100 0")], zeilen=[
     ("Daisy-Chain zu den Zellüberwachungen", [S("U_DM", "C_DM"), S("T_DAISY1", "T_DAISY2"), S("J_DAISY1", "D_TVS_DAISY1", "R_DC1", "J_DAISY2", "D_TVS_DAISY2", "R_DC2")]),
     ("Sekundärpfad (Abschaltsignal der Zellüberwachungen, verstärkt isoliert)", [S("R_SEK_NV", "C_ISO2_NV"), S("U_ISO_SEK"), S("J_SEKUNDAER", "R_SEK_HV", "C_ISO2_HV")])]),
@@ -36,7 +36,7 @@ SPEC = {
     ("Strommessung: Shunt -> Filter -> Shunt-ADC -> digitaler Isolator -> Rechner", [S("C_ISO1_NV"), S("U_ISO_SHUNT", "C_ISO1_HV"), S("U_ADC", "C_ADC0", "C_ADC1"), S("R_SHF0", "R_SHF1", "C_SHF_D", "C_SHF0", "C_SHF1"), S("J_SHUNT")])]),
 }
 TITEL = {"versorgung": ("Versorgung 12 V", "Verpolschutz, Überspannungsschutz, Filter, Systembasis-IC mit Watchdog"), "rechner": ("Rechner", "Sicherheitsrechner (Lockstep), Takt, Reset, Debug, Leuchtdioden, NTC"),
-         "can": ("CAN", "2 CAN-FD-Kanäle mit Gleichtaktdrossel, ESD, Abschluss"), "schuetz": ("Schützansteuerung", "3 Kanäle, High-Side und Low-Side, Zener-Löschung, Hardware-UND Sekundärpfad"),
+         "can": ("CAN", "2 CAN-FD-Kanäle mit Gleichtaktdrossel, ESD, Abschluss"), "schuetz": ("Schützansteuerung", "3 Kanäle, High-Side (PWM-Halten) und Low-Side, PWM-Freilauf, Zener-Löschung, Hardware-UND Sekundärpfad"),
          "daisy": ("Daisy-Master mit Isolation", "Daisy-Master, 2 Übertrager verstärkt, Sekundärpfad mit digitalem Isolator"), "strom": ("Strommessung HV-Seite", "Shunt-ADC auf der HV-Seite, digitaler Isolator verstärkt")}
 ORDER = ["versorgung", "rechner", "can", "schuetz", "daisy", "strom"]
 SHEET_OF = {}
@@ -56,6 +56,7 @@ for t in teile:
         if n: NETSHEETS[n].add(SHEET_OF[t["tag"]])
 def label_net(n): return n in SUPPLY or len(NETSHEETS[n]) > 1
 def akte(t):
+    if t["tag"].startswith(("D_PWM", "D_FREI", "D_ZENER")): return "ENT-198, ENT-199 (OPT-006), ERW-E3c N1"
     if t["seite"] == "BR": return "ENT-191 (Brücke über die Sperrzone), ERW-E3c"
     return "BT-311 ENT-188..197, ERW-E3c" + (" (HV-Seite)" if t["seite"] == "HV" else "")
 KIND = lambda t: "R" if t["name"] in ("R", "R_Sense") else "C" if t["name"] in ("C", "C_8", "C_12", "C_Elko") else "D" if t["name"] in ("Z_Diode_Gate", "TVS_ISO7637", "ESD_Diode", "TVS_Daisy", "Diode_Freilauf", "Z_Diode_Loeschung", "LED") else "box"

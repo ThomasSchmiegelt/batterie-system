@@ -13,7 +13,7 @@
 | OPT-003 | Thermische Vias weglassen (E3b: konservativ 93,9 °C statt 52,6 °C, Reserve 11 K) | 8 Vias je Widerstandspaar (ENT-187) | + etwas billigere Platine | − weniger Wärmereserve | 0 | C | ERW-E3b |
 | OPT-004 | Kupferflächen bzw. Metallkern statt Wärmeleitpad | Pad zur Wand (ENT-184) | ? Metallkern teurer, Kupferflächen billig | + kein Pad, das sich löst | 0 | B | ENT-184 Folgen |
 | OPT-005 | Vorladung mit MOSFET und Strombegrenzung statt Widerstand + Schütz | Vorladeschütz + Widerstand ≥ 450 J (ERW-E3) | ? | ? Halbleiter fällt anders aus als ein Schütz (FSR-06) | 0 | B | ERW-E3 BT-712 |
-| OPT-006 | Schützansteuerung mit Sparschaltung (Haltestrom) und schneller Löschung | einfache Ansteuerung | − etwas Elektronik | + schnelleres Abschalten | + weniger Spulenleistung im Dauerbetrieb | A | BT-715 |
+| OPT-006 | Schützansteuerung mit Sparschaltung (Haltestrom) und schneller Löschung | einfache Ansteuerung | − etwas Elektronik | + schnelleres Abschalten | + weniger Spulenleistung im Dauerbetrieb | A | BT-715, umgesetzt (E3c N1: Haltestrom 0,435 A, 1,5 W statt 18 W, Abfall mit Zener 0,26/1,43 ms; ENT-198/199 vorgeschlagen) |
 | OPT-007 | AFE mit integrierter ASIL-D-Diagnose statt separatem Sekundärschutz BT-325 | zwei unabhängige Messwege (F-S2, ASIL D) | + weniger Bauteile | ? Nachweis der Unabhängigkeit schwieriger | 0 | C | HARA FSR-01 |
 | OPT-008 | Abstand innerhalb der CMU < 0,2 mm mit Schutzlack (PD1) | 0,2 mm, PD2 (ENT-168) | + kleinere Platine | − Reserve sinkt, Lack muss geprüft werden | 0 | C | ERW-E3 N4/N5 |
 | OPT-009 | Leiterplatte mit CTI ≥ 600 oder Schlitzfräsung an der HV/NV-Grenze BT-311 | Abstand 10 mm verstärkt, Standard-FR4 | − teureres Material bzw. Fräsen | 0 | 0, kleinere BMS-Platine | B | ERW-E3 N4 |

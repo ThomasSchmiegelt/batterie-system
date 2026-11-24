@@ -84,6 +84,22 @@ for t in teile:
             if pad.GetNetname() == "": fp.Remove(pad)
     b.Add(fp)
 
+
+# ---- SV1 (ERW-SV1, 2026-11-24): 4 x M3 Befestigungsbohrung Ø 3,2 (NPTH) in den Ecken, Kupferabstand >= 2 mm zur Bohrung (Sperrfläche R = 1,6 + 2,0 mm, alle Kupferlagen, Bauteil-Pads prüft die DRC-Regel SV1_Bohrung_Kupfer_2mm).
+# Annahmen A_sv1_cmu_bohrung_d_mm = 3.2, A_sv1_cmu_bohrung_randabstand_mm = 2.8 (Mitte; kleinster Wert, bei dem die Pads von R20/R38 noch >= 2 mm vom Bohrungsrand bleiben, ohne Bauteile zu verschieben), A_sv1_cmu_bohrung_kupferabstand_mm = 2.0
+if os.environ.get("E3_SV1", "1") == "1":
+    BD, RA, KA = 3.2, 2.8, 2.0
+    for k_, (hx, hy) in enumerate(((RA, RA), (L - RA, RA), (RA, B - RA), (L - RA, B - RA))):
+        fp = pcbnew.FOOTPRINT(b); fp.SetReference(f"MH{k_ + 1}"); fp.SetValue("M3_Bohrung_3.2"); fp.Reference().SetVisible(False); fp.Value().SetVisible(False)
+        pd = pcbnew.PAD(fp); pd.SetAttribute(pcbnew.PAD_ATTRIB_NPTH); pd.SetShape(pcbnew.PAD_SHAPE_CIRCLE); pd.SetSize(pcbnew.VECTOR2I(mm(BD), mm(BD))); pd.SetDrillSize(pcbnew.VECTOR2I(mm(BD), mm(BD)))
+        pd.SetLayerSet(pcbnew.LSET.AllCuMask()); pd.SetNumber(""); fp.Add(pd); fp.SetPosition(P(hx, hy)); b.Add(fp)
+        z = pcbnew.ZONE(b); z.SetIsRuleArea(True); z.SetDoNotAllowTracks(True); z.SetDoNotAllowVias(True); z.SetDoNotAllowZoneFills(True);
+        z.SetLayerSet(pcbnew.LSET.AllCuMask()); o = z.Outline(); o.NewOutline()
+        for i_ in range(24): o.Append(mm(hx + (BD / 2 + KA) * math.cos(2 * math.pi * i_ / 24)), mm(hy + (BD / 2 + KA) * math.sin(2 * math.pi * i_ / 24)))
+        hi_ = o.NewHole(0)
+        for i_ in range(24): o.Append(mm(hx + (BD / 2 + 0.1) * math.cos(2 * math.pi * i_ / 24)), mm(hy + (BD / 2 + 0.1) * math.sin(2 * math.pi * i_ / 24)), 0, hi_)   # Ring um die Bohrung (Bohrung selbst ausgespart)
+        b.Add(z)
+
 # ---- Daisy-Leitungen (Trennstelle) von Hand vorverlegt, F.Cu, 0,2 mm; Freiraum 2,5 mm zu allem anderen wird per Platzierung und DSN gesichert
 def pad_of(ref, num):
     for q in b.FindFootprintByReference(ref).Pads():

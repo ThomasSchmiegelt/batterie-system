@@ -65,7 +65,7 @@ for k, ch in enumerate("PMV"):
     x0 = 30 + 22 * k
     at(f"U_HS_{ch}", x0 + 5, 77); at(f"R_HS_PD_{ch}", x0 + 9, 77); at(f"Q_LS_{ch}", x0 + 5, 83); at(f"R_LS_G_{ch}", x0 + 9, 80.5); at(f"R_LS_PD_{ch}", x0 + 9, 83.5)
     at(f"R_SENSE_{ch}", x0 + 14, 83); at(f"R_I_{ch}", x0 + 14, 79); at(f"C_I_{ch}", x0 + 14, 75)
-    at(f"D_FREI_{ch}", x0 + 5, 89); at(f"D_ZENER_{ch}", x0 + 5, 93); at(f"J_SPULE_{ch}", x0 + 15, 93, 0)
+    at(f"D_FREI_{ch}", x0 + 5, 89); at(f"D_ZENER_{ch}", x0 + 5, 93); at(f"J_SPULE_{ch}", x0 + 15, 93, 0); at(f"D_PWM_{ch}", x0 + 5, 97)
 at("U_AND1", 54, 70, 90); at("U_AND2", 84, 70, 90); at("C_AND1", 63, 70, 0); at("C_AND2", 93, 70, 0)
 # rechts NV
 at("U_DM", 90, 48); at("C_DM", 94, 55); at("R_SEK_NV", 94, 66); at("C_ISO1_NV", 94, 22); at("C_ISO2_NV", 94, 61)

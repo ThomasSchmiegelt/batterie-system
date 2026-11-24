@@ -9960,8 +9960,10 @@
     "cad/pack/entwurf/ergebnis_LFP_e2d_e3.json",
     "sim/elektrik/e3c_bms_platine/ERGEBNIS.md",
     "sim/elektrik/e3c_bms_platine/ergebnis_platine.json",
+    "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json",
     "sim/elektrik/e3c_bms_platine/platine_bms_einbau.png",
-    "sim/elektrik/e3c_bms_platine/platine_bms_explosion.png"
+    "sim/elektrik/e3c_bms_platine/platine_bms_explosion.png",
+    "sim/elektrik/e3c_bms_platine/spice_schuetz.png"
    ]
   },
   {
@@ -10221,6 +10223,16 @@
     "docs/bilder/stueckliste_massen_LFP.png",
     "docs/bilder/stueckliste_massen_NMC.png",
     "pm/bauteile/stueckliste_LFP.json"
+   ]
+  },
+  {
+   "datei": "praesentation/bausteine/SV1.md",
+   "stem": "SV1",
+   "titel": "Folienbaustein SV1: Stecker, Steckfreigang, Verschraubung (KI-generiert, Entwurf)",
+   "ids": [],
+   "quellen": [
+    "sim/mechanik/sv1_stecker_verschraubung/ergebnis.json",
+    "sim/mechanik/sv1_stecker_verschraubung/sv1_LFP_schaltbox.png"
    ]
   },
   {

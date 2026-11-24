@@ -11,6 +11,7 @@
 - Schaltplan: ERC 0 Verstöße, Netzliste gleich Layout (98 Netze)
 - Platine im Pack-STEP: LFP und NMC je 0 Kollisionen (cad/pack/entwurf/ergebnis_<V>_e2d_e3c.json)
 - Servicedeckel LFP: 0 Kollisionen (cad/pack/entwurf/ergebnis_LFP_e2d_e3.json)
+- OPT-006 Sparschaltung (SPICE sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json): Haltestrom 0,435 A, Haltleistung 1,5 W statt 18 W je Schütz, Abfall mit Zener 0,26 ms (aus Halten) / 1,43 ms (aus Anzug); Bild sim/elektrik/e3c_bms_platine/spice_schuetz.png (Zielbänder)
 - Passivwerte offen; Bericht sim/elektrik/e3c_bms_platine/ERGEBNIS.md
 
 *KI-generiert, Entwurf.*

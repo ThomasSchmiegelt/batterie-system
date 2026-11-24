@@ -1398,6 +1398,15 @@ Alle Bilder unter `sim/` und `cad/` mit Lesehilfe für Nicht-Fachleute, Quelle u
 - Quelle: `sim/elektrik/e3c_bms_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3c_bms_platine/lesehilfe.md`
 - Vorgang: E3c
 
+### spice_schuetz.png
+
+![spice_schuetz.png](../sim/elektrik/e3c_bms_platine/spice_schuetz.png)
+
+**Lesehilfe:** Das Bild zeigt den Strom in der Spule eines Hauptschützes. Links: der Strom steigt in 100 ms auf 1,5 A (Anzug), wird dann durch schnelles Ein- und Ausschalten auf rund 0,45 A (grünes Zielband) gehalten und bei 200 ms abgeschaltet. Mitte: Ausschnitt des Haltens, die Kurve ist fast glatt. Rechts: Wie schnell der Strom nach dem Abschalten fällt, mit Zener-Löschung und ohne; getönt ist die erwartete Abfallzeit, gestrichelt der Abfallstrom 0,225 A. Je früher die Kurve diese Linie erreicht, desto schneller fällt das Schütz ab.
+
+- Quelle: `sim/elektrik/e3c_bms_platine/ergebnis_platine.json`; Lesehilfe: `sim/elektrik/e3c_bms_platine/lesehilfe.md`
+- Vorgang: E3c
+
 
 ## sim/elektrik/e3d_fmeda
 
@@ -2248,6 +2257,45 @@ Alle Bilder unter `sim/` und `cad/` mit Lesehilfe für Nicht-Fachleute, Quelle u
 - Vorgang: unbekannt
 
 
+## sim/mechanik/sv1_stecker_verschraubung
+
+### sv1_LFP_endzone.png
+
+![sv1_LFP_endzone.png](../sim/mechanik/sv1_stecker_verschraubung/sv1_LFP_endzone.png)
+
+**Lesehilfe:** Lesehilfe fehlt
+
+- Quelle: `sim/mechanik/sv1_stecker_verschraubung/ergebnis.json`
+- Vorgang: SV1
+
+### sv1_LFP_schaltbox.png
+
+![sv1_LFP_schaltbox.png](../sim/mechanik/sv1_stecker_verschraubung/sv1_LFP_schaltbox.png)
+
+**Lesehilfe:** Lesehilfe fehlt
+
+- Quelle: `sim/mechanik/sv1_stecker_verschraubung/ergebnis.json`
+- Vorgang: SV1
+
+### sv1_NMC_endzone.png
+
+![sv1_NMC_endzone.png](../sim/mechanik/sv1_stecker_verschraubung/sv1_NMC_endzone.png)
+
+**Lesehilfe:** Lesehilfe fehlt
+
+- Quelle: `sim/mechanik/sv1_stecker_verschraubung/ergebnis.json`
+- Vorgang: SV1
+
+### sv1_NMC_schaltbox.png
+
+![sv1_NMC_schaltbox.png](../sim/mechanik/sv1_stecker_verschraubung/sv1_NMC_schaltbox.png)
+
+**Lesehilfe:** Lesehilfe fehlt
+
+- Quelle: `sim/mechanik/sv1_stecker_verschraubung/ergebnis.json`
+- Vorgang: SV1
+
+
 ## sim/mechanik/x1_seitencrash
 
 ### kraft_weg.png
@@ -2971,6 +3019,10 @@ Alle Bilder unter `sim/` und `cad/` mit Lesehilfe für Nicht-Fachleute, Quelle u
 - sim/kuehlung/k5_parallel/k4_vergleich_V0_V3_V4_V4p.png (Quelle ergebnis.json fehlt)
 - sim/kuehlung/k5_parallel/verteilung.png
 - sim/kuehlung/k5_parallel/verteilung.png (Quelle ergebnis.json fehlt)
+- sim/mechanik/sv1_stecker_verschraubung/sv1_LFP_endzone.png
+- sim/mechanik/sv1_stecker_verschraubung/sv1_LFP_schaltbox.png
+- sim/mechanik/sv1_stecker_verschraubung/sv1_NMC_endzone.png
+- sim/mechanik/sv1_stecker_verschraubung/sv1_NMC_schaltbox.png
 - sim/mechanik/x1_seitencrash/kraft_weg.png
 - sim/mechanik/x1_seitencrash/verformung_LFP_LF1.png
 - sim/mechanik/x1_seitencrash/verformung_LFP_LF2.png

@@ -25,5 +25,5 @@
   "V_ZENER"
  ],
  "leistung_breite_mm_platzhalter": 0.4,
- "hinweis": "Luftstrecke 8 mm und Abstand NV 0,15 mm aus ERWARTUNG ERW-E3c (Annahme Opus); für beide gibt es kein Merkmal an BT-311, deshalb keine Akte."
+ "hinweis": "Luftstrecke 8 mm und Abstand NV 0,15 mm aus ERWARTUNG ERW-E3c (Annahme Opus); Akten ENT-195/ENT-196, Werte aus parameter.json."
 }

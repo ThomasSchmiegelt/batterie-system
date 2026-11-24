@@ -398,3 +398,6 @@ Werkzeuge nach BAT-DOC-23 (Sonnet), Vorschläge für Methode, Ebene und Lastfall
 - L1: Die Hebelschätzungen von Opus waren zu hoch (Kühlplatte schon 3,2 mm äquivalent). Realistisch LFP −20 … −35, NMC −25 … −40 kg.
 - Autor: REQ-P07 LFP ≤ 600, NMC ≤ 450 kg (AEN-022). Ist verfehlt um 20 bzw. 32 kg → L2.
 
+## B-BAT-059 SV1 Stecker/Freigang/Verschraubung nur teilweise (2026-11-24)
+Pack mit Gegenstücken und Freigängen modelliert. LFP 0 harte Kollisionen, NMC 52 (Daisy-Gegenstück gegen Zellträger/Verguss), 211/215 Freigangsverletzungen (Prüflogik vermutlich zu streng, ungeprüft). CMU mit 4 Bohrungen nicht routbar, zurückgesetzt. Zusatzmasse 1,3 kg statt erwartet 0,3–0,6 kg. Fortsetzung: nächste Sitzung (ERW-SV1 N1).
+

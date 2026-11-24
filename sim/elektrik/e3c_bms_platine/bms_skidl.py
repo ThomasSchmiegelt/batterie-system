@@ -6,30 +6,17 @@ Ausgabe: bms.net, bms_bom.csv, bms_teile.json (Teile mit Tag, Pins, Netz, Seite 
 import re, json, csv, sys, pathlib, io, contextlib
 H = pathlib.Path(__file__).resolve().parent; ROOT = H.parents[2]
 
-def akten():
-    d = {}
-    for f in sorted((ROOT / "pm/entscheidungen").glob("ENT-*.md")):
-        t = f.read_text(); m = re.match(r"---\n(.*?)\n---", t, re.S)
-        if not m: continue
-        y = {}
-        for z in m.group(1).splitlines():
-            k, _, v = z.partition(":"); y[k.strip()] = re.sub(r"\s+#.*$", "", v).strip()
-        if not y.get("status", "").startswith(("entschieden", "vorgeschlagen")): continue
-        w = y.get("wert", "").strip('"')
-        try: w = float(w)
-        except ValueError: pass
-        for bt in re.findall(r"BT-\d+", y.get("bauteile", "")): d[(bt, y.get("merkmal"))] = (w, y["id"])
-    return d
-AK = akten()
 def wert(bt, m):
-    if (bt, m) not in AK: sys.exit(f"Wert fehlt: {bt} {m}")
-    return AK[(bt, m)]
+    """Wert aus pm/bauteile/parameter.json (Akten mit Status entschieden), E3c N1: ENT-188..197 nur noch von dort"""
+    p = json.load(open(ROOT / "pm/bauteile/parameter.json"))["parameter"].get(bt, {}).get(m, {})
+    if p.get("wert") is None: sys.exit(f"Wert fehlt in parameter.json: {bt} {m}")
+    return p["wert"], p["entscheidung"]
 
 from skidl import Part, Net, Pin, TEMPLATE, SKIDL, generate_netlist, ERC, reset, KICAD9
 import builtins
 reset()
 herk = {}
-for m in ("laenge_mm", "breite_mm", "lagen", "kriechstrecke_hv_nv_mm"):
+for m in ("laenge_mm", "breite_mm", "lagen", "kriechstrecke_hv_nv_mm", "luftstrecke_hv_nv_mm", "abstand_nv_mm", "schuetzkanaele"):
     w, h = wert("BT-311", m); herk[f"BT-311.{m}"] = f"{w} ({h})"
 FP = dict(
  R0603="Resistor_SMD:R_0603_1608Metric", C0603="Capacitor_SMD:C_0603_1608Metric", C0805="Capacitor_SMD:C_0805_2012Metric", C1206="Capacitor_SMD:C_1206_3216Metric",
@@ -137,7 +124,8 @@ for ia, a in enumerate(ands):
     a["GND"] += GND; a["VCC"] += V33
     c = mk(C, f"C_AND{ia+1}", "C Entkopplung (Wert offen)"); c[1] += V33; c[2] += GND
 gate = 0
-for kc, ch_ in enumerate(("P", "M", "V")):
+NKAN = int(wert("BT-311", "schuetzkanaele")[0]); assert NKAN == 3   # ENT-197
+for kc, ch_ in enumerate(("P", "M", "V")[:NKAN]):
     n_hs_en, n_ls_en = Net(f"{ch_}_HS_EN"), Net(f"{ch_}_LS_EN"); mcu[f"{ch_}_HS_EN"] += n_hs_en; mcu[f"{ch_}_LS_EN"] += n_ls_en
     g_hs, g_ls = Net(f"{ch_}_HS_IN"), Net(f"{ch_}_LS_G")   # Ausgänge der UND-Gatter
     a_hs = ands[(2 * kc) // 4]; k_hs = (2 * kc) % 4 + 1; a_ls = ands[(2 * kc + 1) // 4]; k_ls = (2 * kc + 1) % 4 + 1
@@ -151,9 +139,10 @@ for kc, ch_ in enumerate(("P", "M", "V")):
     rs = mk(RS, f"R_SENSE_{ch_}", "R Messwiderstand Spulenstrom (Wert offen)"); rs[1] += sn; rs[2] += GND
     ri = mk(R, f"R_I_{ch_}", "R Filter Strommessung (Wert offen)"); ci = mk(C, f"C_I_{ch_}", "C Filter Strommessung (Wert offen)"); an = Net(f"{ch_}_I")
     ri[1] += sn; ri[2] += an; ci[1] += an; ci[2] += GND; mcu[f"{ch_}_I"] += an
-    zn = Net(f"{ch_}_ZENER")   # Zener-Löschung: Spulenende N -> Diode -> Z-Diode (in Sperrrichtung) -> VBAT_F
-    db = mk(DBLK, f"D_FREI_{ch_}", "Diode Freilauf in Reihe zur Z-Diode"); db["A"] += cn; db["K"] += zn
-    zl = mk(DZL, f"D_ZENER_{ch_}", "Z-Diode Löschung generisch"); zl["K"] += zn; zl["A"] += VBATF
+    zn = Net(f"{ch_}_ZENER")   # E3c N1 (OPT-006): Löschpfad Spulenende N -> Diode -> Z-Diode 36 V (Sperrrichtung) -> GND; PWM-Freilauf über Diode von GND auf das HS-Ende der Spule
+    db = mk(DBLK, f"D_FREI_{ch_}", "Diode Löschpfad in Reihe zur Z-Diode"); db["A"] += cn; db["K"] += zn
+    zl = mk(DZL, f"D_ZENER_{ch_}", "Z-Diode Löschung 36 V generisch (ENT-199)"); zl["K"] += zn; zl["A"] += GND
+    dp = mk(DBLK, f"D_PWM_{ch_}", "Diode PWM-Freilauf GND -> HS-Ende der Spule (ENT-198/199)"); dp["A"] += GND; dp["K"] += cp
     js = mk(J2, f"J_SPULE_{ch_}", f"Stecker Spule Schütz {ch_} (BT-715)"); js[1] += cp; js[2] += cn
 # ---- HV-Seite: Shunt-ADC (BT-340), Sekundärpfad, Daisy-Chain-Master
 SPS, SNS = Net("SHUNT_P"), Net("SHUNT_N"); jsh = mk(JS4, "J_SHUNT", "Stecker Shunt (BT-340, HV-Seite): Shunt+, Shunt-, HV_VDD, HV_GND", "HV"); jsh[1] += SPS; jsh[2] += SNS; jsh[3] += HVDD; jsh[4] += HGND

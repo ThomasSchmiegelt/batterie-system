@@ -102,7 +102,7 @@ tags: ["dokument"]
 - [[Bauteil/BT-360|BT-360]]
 - [[Bauteil/BT-400|BT-400]]
 - [[Bauteil/BT-410|BT-410]]
-- … und 216 weitere
+- … und 219 weitere
 
 ## Vorgänge, die dieses Dokument nennen
 - [[Vorgang/R5|R5]] – Werkzeugwahl festlegen (ENT): Zellmodell, Packmodell, Schaltung
@@ -314,6 +314,8 @@ tags: ["dokument"]
 | ENT-195 (`../pm/entscheidungen/ENT-195.md`, im Repo) | 2026-11-24 | BMS-Platine Luftstrecke HV/NV 8 mm (3000 m) | alle | BT-311 | luftstrecke_hv_nv_mm = 8.0 "mm" | REQ-P19 | sim/elektrik/e3c_bms_platine/ERWARTUNG.md, sim/elektrik/e3c_bms_platine/ERGEBNIS.md | Opus (Annahme ERW-E3c), umgesetzt Sonnet E3c | entschieden (Opus, delegiert durch Autor 2026-11-23) |
 | ENT-196 (`../pm/entscheidungen/ENT-196.md`, im Repo) | 2026-11-24 | BMS-Platine Abstand NV-Bereich 0,15 mm | alle | BT-311 | abstand_nv_mm = 0.15 "mm" | REQ-P19 | sim/elektrik/e3c_bms_platine/ERWARTUNG.md, sim/elektrik/e3c_bms_platine/ERGEBNIS.md | Opus (Annahme ERW-E3c), umgesetzt Sonnet E3c | entschieden (Opus, delegiert durch Autor 2026-11-23) |
 | ENT-197 (`../pm/entscheidungen/ENT-197.md`, im Repo) | 2026-11-24 | BMS-Platine drei Schützkanäle (Plus, Minus, Vorladung) | alle | BT-311 | schuetzkanaele = 3.0 "-" | REQ-P18 | sim/elektrik/e3c_bms_platine/ERWARTUNG.md, sim/elektrik/e3c_bms_platine/ERGEBNIS.md | Opus (Annahme ERW-E3c), umgesetzt Sonnet E3c | entschieden (Opus, delegiert durch Autor 2026-11-23) |
+| ENT-198 (`../pm/entscheidungen/ENT-198.md`, im Repo) | 2026-11-24 | Schützansteuerung Haltestrom 0,45 A (Sparschaltung OPT-006) | alle | BT-715 | haltestrom_A = 0.45 "A" | REQ-P18 | sim/elektrik/e3c_bms_platine/ERWARTUNG.md, sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json | Opus (Annahme ERW-E3c N1), umgesetzt Sonnet | vorgeschlagen |
+| ENT-199 (`../pm/entscheidungen/ENT-199.md`, im Repo) | 2026-11-24 | Schützansteuerung Löschung Zener 36 V (Sparschaltung OPT-006) | alle | BT-715 | loeschung = "Zener 36 V (Löschpfad Diode + Zener nach GND)" "-" | REQ-P18 | sim/elektrik/e3c_bms_platine/ERWARTUNG.md, sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json | Opus (Annahme ERW-E3c N1), umgesetzt Sonnet | vorgeschlagen |
 
 ---
 *KI-generiert (pm.py). Status „entschieden“ setzt nur der Autor.*

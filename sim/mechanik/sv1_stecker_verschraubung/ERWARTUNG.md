@@ -45,3 +45,9 @@ Neue Merkmale (z. B. BT-321 `befestigung`, `bohrung_d_mm`; BT-311 dasselbe; BT-7
 
 ## Abbruch → OPUS
 Jede Verletzung eines Steckfreigangs; fehlendes Merkmal; Bohrung nicht routbar.
+
+## Nachtrag 1 (Opus, 2026-11-24 19:50, Stand bei Frist 20:30)
+- Teilergebnis: Gegenstücke, Freigänge und Schrauben sind im Pack modelliert, 4 Bilder.
+- **211/215 Freigangsverletzungen sind nicht glaubhaft als echte Verletzungen.** Vermutlich prüft das Skript die Freigänge auch gegen das eigene Kabel, den eigenen Stecker oder Nachbarzellen. Die 52 harten Kollisionen bei NMC (Daisy-Gegenstück gegen Zellträger/Verguss) sind dagegen echt. Beides prüft Opus in der nächsten Sitzung an ergebnis.json (Liste der Paare), dann folgen die Ausnahmen bzw. die Lage der Daisy-Stecker.
+- CMU-Bohrungen: Das Routing ist bei 120 × 60 mit 4 Bohrungen gescheitert, der Stand ist zurückgesetzt. Nächster Versuch: Bohrungen nur an 2 Ecken + Klemmung im Rahmen, oder 3 Bohrungen. Entscheidung Opus offen.
+- Fehlende Merkmale (befestigung, bohrung_*, steckfreigang_mm) → in der nächsten Sitzung anlegen.

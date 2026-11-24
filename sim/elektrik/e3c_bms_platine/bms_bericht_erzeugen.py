@@ -2,12 +2,12 @@
 """Erzeugt ERGEBNIS.md v0.1 aus den Ergebnisdateien (Zahlen nur dort). KI-generiert (Claude Sonnet, 2026-11-24)."""
 import json, pathlib
 H = pathlib.Path(__file__).resolve().parent; R = H.parents[2]
-p = json.load(open(H / "ergebnis_platine.json")); kr = json.load(open(H / "ergebnis_kriechstrecke.json")); pa = json.load(open(H / "ergebnis_pack_LFP_teilA.json")); rt = json.load(open(H / "ergebnis_routing.json")); sp = json.load(open(H / "ergebnis_schaltplan.json")); pe = {k: json.load(open(R / f"cad/pack/entwurf/ergebnis_{k}_e2d_e3c.json")) for k in ("LFP", "NMC")}
+p = json.load(open(H / "ergebnis_platine.json")); kr = json.load(open(H / "ergebnis_kriechstrecke.json")); pa = json.load(open(H / "ergebnis_pack_LFP_teilA.json")); rt = json.load(open(H / "ergebnis_routing.json")); sp = json.load(open(H / "ergebnis_schaltplan.json")); sc = json.load(open(H / "ergebnis_schuetz.json")); pe = {k: json.load(open(R / f"cad/pack/entwurf/ergebnis_{k}_e2d_e3c.json")) for k in ("LFP", "NMC")}
 f = lambda x, n=1: f"{x:.{n}f}".replace(".", ",")
 sd = pa["e2"]["stecker_lfp"]; sz = p["sperrzone"]; ps = p["passt"]; m = p["masse"]
 koll = pa["kollisionen"]; kont = pa["kontakte_zugelassen"]
 ok = lambda b: "ok" if b else "verfehlt"
-t = f"""| Dok.-Nr. | ERG-E3c | Version | 0.1 | Status | Entwurf |
+t = f"""| Dok.-Nr. | ERG-E3c | Version | 0.3 | Status | Entwurf |
 |---|---|---|---|---|---|
 | Titel | Ergebnis E3c: BMS-Leiterplatte BT-311 (KiCad) und LFP-Kollisionen Servicedeckel | Ersteller | Claude Sonnet (KI) | Prüfer | Opus (offen) |
 
@@ -43,6 +43,17 @@ t = f"""| Dok.-Nr. | ERG-E3c | Version | 0.1 | Status | Entwurf |
 
 ## Bilder
 `platine_bms.png` (Ober-/Unterseite, Zielband Umriss, Sperrzone beschriftet), `platine_bms_3d_iso|top|bottom|nah.png` (KiCad 3D), **`platine_bms_explosion.png`** (Blender, Lagen auseinandergezogen, Sperrzone rot), **`platine_bms_einbau.png`** (Platine in der offenen Schaltbox, Platz BT-310 als Zielband). Schaltplanblätter: `schaltplan_bms_blatt-1…7.png`. Lesehilfe: `lesehilfe.md`.
+
+## OPT-006 Sparschaltung Schütze (ERWARTUNG Nachtrag 1, ERW-E3c N1)
+SPICE `spice_schuetz.py` (ngspice 42, nur CPU) → `ergebnis_schuetz.json`, Bild `spice_schuetz.png` (Lesehilfe im Bild und in `lesehilfe.md`). Topologie wie Nachtrag: High-Side-Schalter taktet (PWM 20 kHz), Freilaufdiode `D_PWM` von GND auf das HS-Ende der Spule, beim Öffnen sperrt der Low-Side-FET und der Strom fließt über Diode `D_FREI` und Zener 36 V nach GND (`D_ZENER`, Anode jetzt GND statt VBAT_F), Hardware-UND unverändert. Akten ENT-198 (Haltestrom 0,45 A), ENT-199 (Löschung Zener 36 V), Status vorgeschlagen, Opus ERW-E3c N1.
+| Nr | Erwartung N1 | Ergebnis (Quelle `ergebnis_schuetz.json`) | Urteil |
+|---|---|---|---|
+| 1 | Haltestrom 0,45 A ± 10 %, Welligkeit < 10 %, Haltleistung ≈ 1,6 W statt 18 W | Mittel {f(sc['zener_halten']['i_halt_mittel_A'], 3)} A, Welligkeit {f(100 * sc['zener_halten']['welligkeit_pp_rel'], 2)} %, Haltleistung Spule {f(sc['zener_halten']['P_halt_Spule_W'], 2)} W statt {f(sc['zener_halten']['P_anzug_Spule_W'], 0)} W ({f(100 * sc['zener_halten']['P_einsparung_rel'], 1)} % weniger, 3 Schütze {f(3 * (sc['zener_halten']['P_anzug_Spule_W'] - sc['zener_halten']['P_halt_Spule_W']), 1)} W weniger) | ok |
+| 2 | Abfallzeit bis 0,15 x I_Anzug: Zener 2–4 ms, nur Freilaufdiode 30–40 ms | Zener {f(sc['zener_halten']['t_fall_bis_0_15_ms'], 2)} ms (aus dem Halten), {f(sc['zener_anzug']['t_fall_bis_0_15_ms'], 2)} ms (aus dem Anzug); nur Freilauf {f(sc['freilauf_halten']['t_fall_bis_0_15_ms'], 2)} ms / {f(sc['freilauf_anzug']['t_fall_bis_0_15_ms'], 2)} ms; Zener-Spannung max. {f(sc['zener_halten']['v_n_max_V'], 1)} V; Abbruchgrenze (> 10 ms mit Zener) nicht erreicht | Zener schneller als erwartet, Freilauf deutlich schneller als erwartet (Abweichung nach unten, Abbruch nicht ausgelöst); Zener bleibt Voraussetzung nur im Sinne der Reserve zur FTTI |
+| 3 | Fehlerbetrachtung (PWM dauernd an: Wärme; PWM aus: Schütz fällt ab, Diagnose Shunt) | nicht gerechnet, nur qualitativ nach Erwartung; Spulenstrom-Shunt (R_SENSE, R_I, C_I) je Kanal ist in der Schaltung vorhanden | offen für Opus (kein Simulationsfall verlangt) |
+| 4 | Platine + ≈ 3 Dioden, DRC 0, ERC 0, Schaltplan nachgeführt | + 3 Dioden (`D_PWM_P/M/V`), {p['teile']} Teile, DRC {p['drc_verstoesse']}, offen {p['drc_unverbunden']}, ERC {sp['erc_verstoesse']}, Netzliste Schaltplan = Layout (Abweichungen {sp['schaltplan_vs_layout']['nur_in_a'] + sp['schaltplan_vs_layout']['nur_in_b']}), Masse {f(p['masse']['gesamt_g'])} g | ok |
+Randbedingungen der Rechnung: Annahmen nur aus ERWARTUNG N1; nicht in der Erwartung und generisch gesetzt: Schalter Ron 1 mΩ, Diodenmodell (IS 1e-10, RS 0,05 Ω, N 1,2), Halten 100 ms vor dem Öffnen. Das Tastverhältnis ist Stellgröße: ohne Regelung 0,3 ergäbe wegen der Diodenspannung nur 0,39 A; auf den Mittelwert 0,45 A nachgeregelt (Stromregelung über den Shunt) ergibt {f(sc['annahmen']['Tastverhaeltnis_nachgeregelt'], 3)}. Fehlende Merkmale im Bauteilbaum (nicht angelegt, gemeldet): BT-715 hat nur haltestrom_A, loeschung, abschaltzeit_ms; für Spulenwiderstand/-induktivität, Anzugzeit, PWM-Frequenz, Abfallstrom und Zenerspannung gibt es keine Merkmale (Zener steht im Text von ENT-199), Merkmal abschaltzeit_ms ohne Akte, weil Ergebnis statt Annahme. ENT-195…197 liest der Code jetzt aus `parameter.json` (`bms_skidl.py`, `bms_regeln.py`).
+Nicht neu erzeugt (Frist, Auftrag nur SPICE-Bild und Schützblatt): 3D-Bilder, Explosions- und Einbaubild, `platine_bms.png` (Stand vor OPT-006, drei Dioden fehlen darin) und die Pack-Läufe `_e3c` (bms.step ist aktuell, der Pack-Lauf noch mit der alten Platine).
 
 ## Platine im Pack (Nacharbeit Opus)
 `PACK_E3C=1 PACK_VARIANTE=<V> pack_e2d.py` (Ausgabe `ergebnis_<V>_e2d_e3c.json`, Suffix _e3c): die BMS-Platine BT-311 ist als KiCad-STEP (`bms.step`) anstelle des Quaders im Pack, Ecke auf der Ecke des BMS-Platzes, die drei Steckerplatzhalter des E2-Modells entfallen (Stecker stecken im STEP). Masse 66,5 g aus `ergebnis_platine.json`. Die Deckelhöhe liest `pack_e2d.py` jetzt aus `pm/bauteile/parameter.json` (BT-722 `lichte_hoehe_zugabe_mm`, ENT-194); `A_e3c_servicedeckel_lichte_zugabe_mm` ist entfernt.

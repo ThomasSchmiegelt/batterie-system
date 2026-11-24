@@ -54,3 +54,8 @@ Ziel: Haltestrom nach dem Anzug absenken, Löschung bleibt schnell. Annahmen Opu
 4. Platine: + ≈ 3 Dioden und Treiberanteil, Routing DRC 0, ERC 0, Schaltplan nachführen.
 
 Abbruch → OPUS: Abfallzeit > 10 ms mit Zener; Platz reicht nicht.
+
+## Nachtrag 2 (Opus, 2026-11-24, Prüfung N1)
+- Nachgerechnet: Freilauf τ = L/R = 6,25 ms → von 1,5 A auf 0,225 A ≈ 11,9 ms ohne Diodenspannung (SPICE 8,88 ms mit Diode, plausibel). Zener 36 V: di/dt = 720 A/s → 0,225 A in ≈ 0,3 ms (SPICE 0,26 ms). **Meine Erwartung 2 (30–40 ms bzw. 2–4 ms) war um den Faktor 3–10 falsch geschätzt.** Die Aussage bleibt: Die Zener ist 6- bis 10-mal schneller.
+- Haltleistung 1,5 W statt 18 W bestätigt (−92 %). Das Tastverhältnis muss geregelt werden (Stromregelung über den Shunt vorhanden).
+- BT-715 braucht noch Merkmale für die Schützdaten. Das Fehlerbild bleibt qualitativ (Schleife 2).
