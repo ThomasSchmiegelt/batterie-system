@@ -1,0 +1,19 @@
+* Schuetzspule Sparschaltung freilauf_halten (KI-generiert, Sonnet 2026-11-24)
+VB vb 0 DC 12.0
+Bhs chs 0 V = (time < 0.1) ? 1 : ((time < 0.2) ? ((time*20000.0 - floor(time*20000.0)) < 0.339453125 ? 1 : 0) : 0)
+Bls cls 0 V = (time < 0.2) ? 1 : 0
+SHS vb p chs 0 SW
+SLS n 0 cls 0 SW
+.model SW SW(Vt=0.5 Vh=0.1 Ron=0.001 Roff=1e9)
+RL p m 8.0
+LL m n 0.05 ic=0
+DPWM 0 p DD
+DFREI n z DD
+.model DD D(IS=1e-10 RS=0.05 N=1.2)
+VZ z 0 DC 0
+.tran 0.5u 0.28 0 0.5u uic
+.control
+run
+wrdata /home/cae/hermes/batterie/sim/elektrik/e3c_bms_platine/schuetz_freilauf_halten.dat i(LL) v(n) v(p)
+.endc
+.end
