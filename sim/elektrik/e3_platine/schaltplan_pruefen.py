@@ -27,10 +27,11 @@ erg = {}
 for V in ("LFP", "NMC"):
     sch = O / f"schaltplan_{V}" / f"cmu_{V}.kicad_sch"; netz = O / f"schaltplan_{V}" / f"cmu_{V}_sch.net"
     subprocess.run([K, "sch", "export", "netlist", "--format", "kicadsexpr", "-o", str(netz), str(sch)], capture_output=True)
+    ej = O / f"schaltplan_{V}" / "erc.json"; subprocess.run([K, "sch", "erc", "--severity-all", "--format", "json", "-o", str(ej), str(sch)], capture_output=True); vl = [v for s_ in json.load(open(ej))["sheets"] for v in s_["violations"]]
     a = nets(netz); b = nets(H / f"cmu_{V}.net")
     ga = {g for g in a.values() if len(g) >= 2}; gb = {g for g in b.values() if len(g) >= 2}
     ra = {r for g in a.values() for r, p in g}; rb = {r for g in b.values() for r, p in g}
     erg[V] = dict(netze_schaltplan=len(ga), netze_layout=len(gb), nur_im_schaltplan=len(ga - gb), nur_im_layout=len(gb - ga), teile_schaltplan=len(ra), teile_layout=len(rb),
-                  beispiele_abweichung=[sorted(g)[:6] for g in list(ga ^ gb)[:3]], gleich=(ga == gb))
+                  beispiele_abweichung=[sorted(g)[:6] for g in list(ga ^ gb)[:3]], gleich=(ga == gb), erc_fehler=sum(v['severity'] == 'error' for v in vl), erc_warnungen=sum(v['severity'] == 'warning' for v in vl))
     print(V, erg[V])
 json.dump(erg, open(H / "ergebnis_schaltplan.json", "w"), indent=1, ensure_ascii=False)

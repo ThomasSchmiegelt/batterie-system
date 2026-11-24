@@ -6,7 +6,7 @@ P = json.load(open(f"{H}/ergebnis_platine.json"))
 for V in sys.argv[1:]:
     b = pcbnew.LoadBoard(f"{O}/cmu_{V}.kicad_pcb"); d = json.load(open(f"{O}/cmu_{V}_drc.json")); t = json.load(open(f"{H}/cmu_{V}_teile.json"))
     tr = [x for x in b.GetTracks()]; vias = [x for x in tr if x.GetClass() == "PCB_VIA"]; bahn = [x for x in tr if x.GetClass() == "PCB_TRACK"]
-    bb = b.GetBoardEdgesBoundingBox(); L = round(bb.GetWidth() / 1e6, 1); Bm = round(bb.GetHeight() / 1e6, 1)
+    bb = b.GetBoardEdgesBoundingBox(); L = round(bb.GetWidth() / 1e6 - 0.1, 1); Bm = round(bb.GetHeight() / 1e6 - 0.1, 1)
     kl = {}
     for x in t["teile"]: kl[x["name"]] = kl.get(x["name"], 0) + 1
     P[V].update(laenge_mm=L, breite_mm=Bm, teile=len(t["teile"]), leiterbahnen=len(bahn), vias=len(vias), drc_verstoesse=len(d["violations"]), drc_unverbunden=len(d["unconnected_items"]),

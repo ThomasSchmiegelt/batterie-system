@@ -82,10 +82,10 @@
   },
   "E2_CMU": {
    "anzahl": 14,
-   "volumen_cm3": 171.9910582599014,
-   "masse_kg": 0.68474,
+   "volumen_cm3": 172.81801308219232,
+   "masse_kg": 0.6895000000000001,
    "masse_bekannt": true,
-   "werkstoff": "E3 Platine STEP; Masse 48.91 g = Platine 27.25 g + Wärmeleitpad 21.65 g (ergebnis_platine.json, ERW-E3 Nachtrag 6)"
+   "werkstoff": "E3 Platine STEP; Masse 49.25 g = Platine 27.60 g + Wärmeleitpad 21.65 g (ergebnis_platine.json, ERW-E3 Nachtrag 6)"
   },
   "E2_Schaltbox_Inhalt": {
    "anzahl": 33,
@@ -221,19 +221,19 @@
    "werkstoff": "E2 Teil (Masse offen, 0 gesetzt)"
   }
  },
- "masse_bekannt_kg": 620.1793178630614,
+ "masse_bekannt_kg": 620.1840778630622,
  "schwerpunkt_mm": [
-  1030.5165278028337,
-  715.0083439684503,
-  62.85467468542258
+  1030.516485462705,
+  715.0083484943991,
+  62.854691151095984
  ],
  "mitte_mm": [
   1025.0,
   715.0
  ],
  "schwerpunkt_abw_mm": [
-  5.516527802833707,
-  0.008343968450276407
+  5.516485462705077,
+  0.008348494399115225
  ],
  "teile": 956,
  "kollisionspaare_geprueft": 1693,
@@ -246,7 +246,7 @@
    "volumen_mm3": 0.0016773152299528042
   }
  ],
- "rechenzeit_s": 266.45056414604187,
+ "rechenzeit_s": 342.0363087654114,
  "e3": {
   "platine_mm": [
    120.0,
@@ -256,8 +256,8 @@
   "hoehe_bauteile_ueber_leiter_mm": null,
   "anzahl_cmu": 14,
   "step": "/home/cae/cae_projekte/batterie/e3/cmu_LFP.step",
-  "cmu_masse_gesamt_kg": 0.68474,
-  "cmu_masse_je_g": 48.91,
+  "cmu_masse_gesamt_kg": 0.6895000000000001,
+  "cmu_masse_je_g": 49.25,
   "cmu_masse_alt_e2_kg": 1.12
  },
  "e2": {
@@ -546,7 +546,7 @@
   "hoehe_vorn_grenze_x_mm": 1588.0,
   "hv_gebaut": true,
   "hv_kurze_leitungen_box_stecker_mm": 20,
-  "masse_elektronik_ohne_hv_leitungen_kg": 6.489485062721233,
+  "masse_elektronik_ohne_hv_leitungen_kg": 6.494245062721233,
   "aussparungen_mm3": {
    "Pad_oben": 40951.43128312845,
    "Kuehlplatte_oben": 155293.02030974254,
@@ -2179,7 +2179,7 @@
    730.0,
    132.6
   ],
-  "masse_elektronik_gesamt_kg": 6.964146208337809,
+  "masse_elektronik_gesamt_kg": 6.968906208337809,
   "masse_hv_leiter_cu_kg": 0.48362114561657593,
   "querverbinder_mitte_al_kg": 0.2701306991841895
  },
@@ -2930,10 +2930,6 @@
   "A_e2d_servicedeckel_rand_mm": {
    "wert": 12,
    "herkunft": "abgeleitet (Sonnet): Rand des Haupt-Deckels um die Serviceöffnung für Dichtung (3) und Senkschrauben; Öffnung im Deckel = 120 x 80 minus 2 x 12"
-  },
-  "A_e3c_servicedeckel_lichte_zugabe_mm": {
-   "wert": 3,
-   "herkunft": "ERW-E3c Teil A: lichte Höhe innen >= Kopfhöhe + 3 mm (Annahme Opus, keine Akte: Merkmal an BT-722 fehlt)"
   },
   "A_e3c_kontakt_schwelle_mm3": {
    "wert": 0.01,

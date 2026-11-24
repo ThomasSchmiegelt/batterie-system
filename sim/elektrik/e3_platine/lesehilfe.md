@@ -9,7 +9,11 @@
 - **Zielband:** Der rote Rahmen ist der geforderte Umriss 120 x 60 mm. Alles liegt innerhalb.
 - **Wichtig:** Die Platine ist bestückt, geroutet (Freerouting) und geprüft (DRC). Die dünnen Linien sind die Leiterbahnen, kleine Punkte die Durchkontaktierungen.
 ## schaltbild_cmu.png
-- **Was man sieht:** Blockbild der Schaltung: Zellabgriffe, Filter, Mess-Chip, Ausgleich, Übertrager, Sekundärschutz. Es gibt kein Zielband, weil es ein Schaltbild ist. Das vollständige Schaltbild ist die Netzliste `cmu_<V>.net`.
+- **Was man sieht:** Blockbild der Schaltung: Zellabgriffe, Filter, Mess-Chip, Ausgleich, Übertrager, Sekundärschutz. Es gibt kein Zielband, weil es ein Schaltbild ist. Der vollständige Schaltplan steht im Abschnitt zu schaltplan_<V>. Das ältere Blockbild ist die Netzliste `cmu_<V>.net`.
+## schaltplan/schaltplan_<V>_*.png und cmu_<V>_schaltplan.pdf
+- **Was man sieht:** Der Schaltplan der Platine in KiCad-Form. Das Deckblatt zeigt die Blöcke mit Verbindungen, das Kanalblatt eine Messstelle (Abgriff, Filter, zwei Ausgleichswiderstände, Doppel-FET), die auf dem Blatt „Kanäle“ 18-mal verwendet wird. Dazu Blätter für AFE, Sekundärschutz, Daisy-Chain, NTC und Stecker.
+- **Zielband:** entfällt (Schaltplan). Prüfung: ERC 0 Fehler und Netzliste gleich der Platine (ergebnis_schaltplan.json).
+- **Wichtig:** Die Symbole sind generische Kästen; Aktenverweise stehen im Feld „Akte“.
 ## ausgleich_LFP.cir / ergebnis_ausgleich.json (Zahlen)
 - Der Ausgleichsstrom sinkt mit der Zellspannung (Widerstand fest). Bei Nennspannung dauert der Ausgleich rund 14 % länger als bei voller Zelle.
 ## platine_LFP_explosion.png, platine_NMC_explosion.png
@@ -17,7 +21,7 @@
 - **Wichtig:** Die Vias sitzen im eigenen Netz der Widerstandspads und enden auf einer Kupferfläche auf B.Cu je Widerstandsnetz. Die Abstände der Lagen und die Kupferdicke sind nur zur Darstellung überhöht. Zielband entfällt (Geometriebild).
 ## platine_LFP_einbau.png, platine_NMC_einbau.png
 - **Was man sieht:** Oben das Pack von schräg oben; Zellen und Deckel sind ausgeblendet, alles außer den CMU ist grau und durchsichtig. Die orangen Streifen sind die Platinen in den Endzonen. Unten eine Nahansicht der Platinen einer Endzone vor dem Boden/Rahmen. Zielband entfällt (Geometriebild).
-- **Masse:** Platine ohne Pad LFP 27,2 g, NMC 27,2 g; Pad 21,6 g (Quelle ergebnis_platine.json, Dichten aus ERWARTUNG Nachtrag 6).
+- **Masse:** Platine ohne Pad LFP 27,6 g, NMC 27,6 g; Pad 21,6 g (Quelle ergebnis_platine.json, Dichten aus ERWARTUNG Nachtrag 6, Bauteilmassen Nachtrag 8).
 ## Pack
 - `pack_<V>_e2d_e3.step` zeigt die Platine anstelle des 10-mm-Quaders; die Platine ist mit Steckern rund 10,9 mm dick, 0,9 mm mehr als der Platz.
 

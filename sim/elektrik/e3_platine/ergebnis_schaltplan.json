@@ -7,7 +7,9 @@
   "teile_schaltplan": 110,
   "teile_layout": 110,
   "beispiele_abweichung": [],
-  "gleich": true
+  "gleich": true,
+  "erc_fehler": 0,
+  "erc_warnungen": 25
  },
  "NMC": {
   "netze_schaltplan": 125,
@@ -17,6 +19,8 @@
   "teile_schaltplan": 110,
   "teile_layout": 110,
   "beispiele_abweichung": [],
-  "gleich": true
+  "gleich": true,
+  "erc_fehler": 0,
+  "erc_warnungen": 25
  }
 }

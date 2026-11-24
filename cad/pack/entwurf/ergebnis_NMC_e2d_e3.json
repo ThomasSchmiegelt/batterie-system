@@ -110,10 +110,10 @@
   },
   "E2_CMU": {
    "anzahl": 13,
-   "volumen_cm3": 159.7059826699087,
-   "masse_kg": 0.63557,
+   "volumen_cm3": 160.4738692906074,
+   "masse_kg": 0.6402500000000001,
    "masse_bekannt": true,
-   "werkstoff": "E3 Platine STEP; Masse 48.89 g = Platine 27.23 g + Wärmeleitpad 21.65 g (ergebnis_platine.json, ERW-E3 Nachtrag 6)"
+   "werkstoff": "E3 Platine STEP; Masse 49.25 g = Platine 27.60 g + Wärmeleitpad 21.65 g (ergebnis_platine.json, ERW-E3 Nachtrag 6)"
   },
   "E2_Schaltbox_Inhalt": {
    "anzahl": 33,
@@ -228,25 +228,26 @@
    "werkstoff": "Kunststoff (Masse offen, 0 gesetzt)"
   }
  },
- "masse_bekannt_kg": 482.7483700285088,
+ "masse_bekannt_kg": 482.7530500285088,
  "schwerpunkt_mm": [
-  969.7946826271047,
-  705.8259361624988,
-  58.41529517437835
+  969.7884024346757,
+  705.8262402410372,
+  58.41531286566134
  ],
  "mitte_mm": [
   975.0,
   715.0
  ],
  "schwerpunkt_abw_mm": [
-  -5.2053173728952515,
-  -9.174063837501194
+  -5.2115975653242685,
+  -9.173759758962774
  ],
  "teile": 2701,
  "kollisionspaare_geprueft": 8498,
  "kollisionen": [],
  "anzahl_kollisionen": 0,
- "rechenzeit_s": 729.4949798583984,
+ "kontakte_zugelassen": [],
+ "rechenzeit_s": 413.6832778453827,
  "e3": {
   "platine_mm": [
    120.0,
@@ -256,8 +257,8 @@
   "hoehe_bauteile_ueber_leiter_mm": null,
   "anzahl_cmu": 13,
   "step": "/home/cae/cae_projekte/batterie/e3/cmu_NMC.step",
-  "cmu_masse_gesamt_kg": 0.63557,
-  "cmu_masse_je_g": 48.89,
+  "cmu_masse_gesamt_kg": 0.6402500000000001,
+  "cmu_masse_je_g": 49.25,
   "cmu_masse_alt_e2_kg": 1.04
  },
  "e2": {
@@ -1814,7 +1815,7 @@
   "hoehe_vorn_grenze_x_mm": 1488.0,
   "hv_gebaut": true,
   "hv_kurze_leitungen_box_stecker_mm": 20,
-  "masse_elektronik_ohne_hv_leitungen_kg": 7.201626679333611,
+  "masse_elektronik_ohne_hv_leitungen_kg": 7.206306679333611,
   "aussparungen_mm3": {
    "Pad_oben": 135296.24958610302,
    "Kuehlplatte_oben": 371164.9845189415,
@@ -4133,7 +4134,15 @@
    ]
   },
   "zM_rel_boden_mm": 94.0,
-  "masse_elektronik_gesamt_kg": 7.5367068867035565,
+  "bms_platine_bbox_mm": [
+   1603.0,
+   763.0,
+   125.0,
+   1803.0,
+   913.0,
+   126.6
+  ],
+  "masse_elektronik_gesamt_kg": 7.541386886703557,
   "masse_hv_leiter_cu_kg": 0.34135220736994554,
   "querverbinder_mitte_al_kg": 0
  },
@@ -4884,6 +4893,10 @@
   "A_e2d_servicedeckel_rand_mm": {
    "wert": 12,
    "herkunft": "abgeleitet (Sonnet): Rand des Haupt-Deckels um die Serviceöffnung für Dichtung (3) und Senkschrauben; Öffnung im Deckel = 120 x 80 minus 2 x 12"
+  },
+  "A_e3c_kontakt_schwelle_mm3": {
+   "wert": 0.01,
+   "herkunft": "ERW-E3c Teil A: Schwelle nur für verschraubte Paare (Liste im Skript)"
   },
   "A_e2d_omega_h_mm": {
    "wert": 4,

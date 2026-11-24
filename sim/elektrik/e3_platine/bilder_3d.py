@@ -14,5 +14,5 @@ for V in ("LFP", "NMC"):
         fig = plt.figure(figsize=(10, 10 * h / w + 1.2)); ax = fig.add_axes([0, 0.1, 1, 0.8]); ax.imshow(im); ax.axis("off")
         fig.text(0.5, 0.96, f"E3 CMU-Platine {V}: {t} (KiCad 3D). Umriss {r['laenge_mm']:g} x {r['breite_mm']:g} mm, 4 Lagen, DRC {r['drc_verstoesse']} Verstöße, {r['drc_unverbunden']} offen", ha="center", fontsize=10)
         fig.text(0.5, 0.045, f"Lesehilfe: {lh}", ha="center", fontsize=8.5, wrap=True)
-        fig.text(0.5, 0.012, "KI-generiert (Claude Sonnet, 2026-11-24), Entwurf. Quelle: cmu_" + V + ".kicad_pcb (Opus-Akten ENT-163…187)", ha="center", fontsize=8)
+        fig.text(0.5, 0.012, "KI-generiert (Claude Sonnet, 2026-11-24), Entwurf. Quelle: cmu_" + V + ".kicad_pcb (Opus-Akten ENT-163…193)", ha="center", fontsize=8)
         fig.savefig(f"{H}/platine_{V}_3d_{k}.png", dpi=110); plt.close(fig)
