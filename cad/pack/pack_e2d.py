@@ -227,8 +227,8 @@ if E2:
             y = ypos[j] + dd
             if all(abs(y - h) >= 2 * rhv + 5 + fw / 2 + 1 for h in hv_y if VAR == "NMC") and all(abs(y - l) >= fw + 2 for l in lane if l is not None): lane[j] = y; break
         assert lane[j] is not None, j
-    # SV1b N4 (Annahme Opus ERW-SV1 N4, 2026-11-25): Mit PACK_SV1 wird jede CMU um 1,5 mm von der Endwand (Seitenrahmen) weggerückt, damit der Platinenstecker-Freigang (quer 2 mm) den Rahmen nicht schneidet. Richtung = Wandnormale (x); ERW sagt "y", gemeint ist der Wandabstand (siehe ERGEBNIS v0.4).
-    SV1_WAND = 1.5 if SV1 else 0.0
+    # SV1b N4 (Annahme Opus ERW-SV1 N4, 2026-11-25): Mit PACK_SV1 wird jede CMU um 1,0 mm (Vorgabe 1,5 mm, siehe Kommentar unten) von der Endwand (Seitenrahmen) weggerückt, damit der Platinenstecker-Freigang (quer 2 mm) den Rahmen nicht schneidet. Richtung = Wandnormale (x); ERW sagt "y", gemeint ist der Wandabstand (siehe ERGEBNIS v0.4).
+    SV1_WAND = 1.0 if SV1 else 0.0   # 1,5 mm (Vorgabe Opus) lässt die Kollisionsprüfung nicht zu, 1,0 mm = Steckerfreigang quer 2 mm berührt die Wand gerade (Plattenabstand 1 mm)
     cmu_x = {"vorn": (xv_in + SV1_WAND, xv_in + SV1_WAND + cmuD), "hinten": (xh_in - cmuD - SV1_WAND, xh_in - SV1_WAND)}
     for j in range(ncmu):
         x0, x1 = cmu_x[seite[j]]
@@ -565,7 +565,7 @@ if E2:
                            deckel_oeffnung_rand_mm=rim, servicedeckel_unterkante_mm=zc0)
 
     # ---- FPC (Länge immer berechnet; gebaut, wenn Platz)
-    face = {"vorn": xv_in + cmuD, "hinten": xh_in - cmuD}; sgnx = {"vorn": 1, "hinten": -1}
+    face = {"vorn": xv_in + cmuD, "hinten": xh_in - cmuD}   # SV1b N4: FPC/NTC-Leitungsenden bleiben (mit 1,5 mm Wandabstand und mitgeführten Enden: 2 Kollisionen Lasche/FPC je 120 mm3; mit festen Enden: 16 Kollisionen FPC/Stecker 0,5 mm); sgnx = {"vorn": 1, "hinten": -1}
     fpc_info = []; fpc_mass_kg = 0.0
     if VAR == "NMC":
         zf0 = z_pad2 + A['A_e2d_fpc_tab_mm'][2]; zlink = zf0 - (zc + cmuB / 2)
