@@ -74,3 +74,11 @@ Reihenfolge, erst konservativ:
 - Opus prüft Rohdaten: DRC LFP/NMC 0/0 und 0 offen (e3/cmu_*_drc.json). Kollisionen 0/0 (ergebnis_v04.json). Die Abgabe-STEPs sind verschieden (md5), gleiche Größe ist plausibel bei gleichen Gehäusen.
 - Der Wandabstand der CMU beträgt 1,0 mm in x statt 1,5 mm in y. Bestätigt als Annahme N4, weil 1,5 mm Kollisionen erzeugt.
 - Offen sind 29/26 Freigangsverletzungen an BMS-, Außen- und Schütz-Spulensteckern. Sie werden je Stecker mit Eindringtiefe und Gegenkörper ausgewertet, dann entscheidet Opus über Regel oder Lage. Veraltete Bilder E3 (r3d, explosion, platine_*.png) werden mit Bohrungen neu erzeugt.
+
+## Nachtrag 6 (Opus, 2026-11-25, nach v0.5)
+1. **Außenstecker (HV 250 A, HV 40 A, NV):** Die Regel bleibt (Handraum Ø 75 mm, Servicefall von außen). Die Lage wird geändert:
+   - Gas-Drucksensor aus dem Handraum des NV-Steckers verlegen, Ziel ≥ 2 mm Luft.
+   - Abstand HV 40 A zu HV 250 A und NV zu HV 40 A an der Wand so vergrößern, dass die Handräume frei sind. Dabei die Reihenfolge der Stecker an der Wand beibehalten.
+   - Wächst die Schaltbox dadurch, an Opus melden. Die Breite 1430 bleibt fest.
+2. **Innenstecker in der Schaltbox (Schütz-Spule, BMS-Platinenstecker):** Sie werden bei offenem Deckel gesteckt, Annahme N6. Der Freigang ist Steckweg + 5 mm, dazu ein Fingerraum von 20 mm quer auf der Griffseite statt des Handraums Ø 75.
+3. Ziel: 0 Kollisionen, 0 Freigangsverletzungen bei LFP und NMC.

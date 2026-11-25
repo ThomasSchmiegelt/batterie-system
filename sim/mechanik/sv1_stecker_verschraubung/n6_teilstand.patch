@@ -1,0 +1,1167 @@
+diff --git a/cad/pack/entwurf/ergebnis_LFP_e2d_e3c_sv1.json b/cad/pack/entwurf/ergebnis_LFP_e2d_e3c_sv1.json
+index 478d462..59fb04d 100644
+--- a/cad/pack/entwurf/ergebnis_LFP_e2d_e3c_sv1.json
++++ b/cad/pack/entwurf/ergebnis_LFP_e2d_e3c_sv1.json
+@@ -222,7 +222,7 @@
+   },
+   "E2_Steckfreigang": {
+    "anzahl": 62,
+-   "volumen_cm3": 3074.428674959978,
++   "volumen_cm3": 2812.308674959979,
+    "masse_kg": 0.0,
+    "masse_bekannt": true,
+    "werkstoff": "Steckfreigang (kein Bauteil)"
+@@ -245,7 +245,7 @@
+  "masse_bekannt_kg": 621.1336678630641,
+  "schwerpunkt_mm": [
+   1030.6926154040214,
+-  714.9657425692963,
++  714.9775274722548,
+   62.910290583851115
+  ],
+  "mitte_mm": [
+@@ -254,10 +254,10 @@
+  ],
+  "schwerpunkt_abw_mm": [
+   5.692615404021353,
+-  -0.03425743070374665
++  -0.022472527745208026
+  ],
+  "teile": 1183,
+- "kollisionspaare_geprueft": 2367,
++ "kollisionspaare_geprueft": 2337,
+  "kollisionen": [],
+  "anzahl_kollisionen": 0,
+  "steckfreigang_verletzungen": [
+@@ -349,84 +349,18 @@
+     121.0
+    ]
+   },
+-  {
+-   "freigang": "Steckfreigang_Hauptschuetz_1_Spulenstecker",
+-   "teil": "Pyrosicherung",
+-   "gruppe": "E2_Schaltbox_Inhalt",
+-   "volumen_mm3": 6480.0,
+-   "bb_freigang": [
+-    1725.5,
+-    800.0,
+-    138.0,
+-    1760.5,
+-    843.0,
+-    170.0
+-   ],
+-   "bb_teil": [
+-    1753.8,
+-    810.0,
+-    123.0,
+-    1783.8,
+-    840.0,
+-    203.0
+-   ]
+-  },
+-  {
+-   "freigang": "Steckfreigang_Hauptschuetz_2_Spulenstecker",
+-   "teil": "Schmelz_Halter",
+-   "gruppe": "E2_Schaltbox_Inhalt",
+-   "volumen_mm3": 5560.0,
+-   "bb_freigang": [
+-    1815.5,
+-    800.0,
+-    138.0,
+-    1850.5,
+-    843.0,
+-    170.0
+-   ],
+-   "bb_teil": [
+-    1843.8,
+-    810.0,
+-    123.0,
+-    1883.8,
+-    850.0,
+-    218.0
+-   ]
+-  },
+-  {
+-   "freigang": "Steckfreigang_Hauptschuetz_2_Spulenstecker",
+-   "teil": "Schmelzsicherung",
+-   "gruppe": "E2_Schaltbox_Inhalt",
+-   "volumen_mm3": 1568.0000000000005,
+-   "bb_freigang": [
+-    1815.5,
+-    800.0,
+-    138.0,
+-    1850.5,
+-    843.0,
+-    170.0
+-   ],
+-   "bb_teil": [
+-    1848.8,
+-    815.0,
+-    133.0,
+-    1878.8,
+-    845.0,
+-    218.0
+-   ]
+-  },
+   {
+    "freigang": "Steckfreigang_BMS_Kabelstecker_J_VERSORGUNG",
+    "teil": "Schaltbox_Wanne",
+    "gruppe": "E2_Schaltbox",
+-   "volumen_mm3": 1008.0,
++   "volumen_mm3": 448.00000000000006,
+    "bb_freigang": [
+-    1659.5,
+-    622.0,
++    1679.5,
++    632.0,
+     132.6,
+     1704.5,
+-    650.0,
+-    150.6
++    640.0,
++    160.6
+    ],
+    "bb_teil": [
+     1676.0,
+@@ -441,14 +375,14 @@
+    "freigang": "Steckfreigang_BMS_Kabelstecker_J_DEBUG",
+    "teil": "Schaltbox_Wanne",
+    "gruppe": "E2_Schaltbox",
+-   "volumen_mm3": 1008.0,
++   "volumen_mm3": 448.00000000000006,
+    "bb_freigang": [
+-    1665.0,
+-    590.0,
++    1685.0,
++    600.0,
+     132.6,
+     1710.0,
+-    618.0,
+-    150.6
++    608.0,
++    160.6
+    ],
+    "bb_teil": [
+     1676.0,
+@@ -463,14 +397,14 @@
+    "freigang": "Steckfreigang_BMS_Kabelstecker_J_SPULE_P",
+    "teil": "Schaltbox_Wanne",
+    "gruppe": "E2_Schaltbox",
+-   "volumen_mm3": 1007.9999999999999,
++   "volumen_mm3": 448.00000000000006,
+    "bb_freigang": [
+-    1734.0,
+-    537.0,
++    1744.0,
++    557.0,
+     132.6,
+-    1762.0,
++    1752.0,
+     582.0,
+-    150.6
++    160.6
+    ],
+    "bb_teil": [
+     1676.0,
+@@ -485,14 +419,14 @@
+    "freigang": "Steckfreigang_BMS_Kabelstecker_J_SPULE_M",
+    "teil": "Schaltbox_Wanne",
+    "gruppe": "E2_Schaltbox",
+-   "volumen_mm3": 1007.9999999999999,
++   "volumen_mm3": 448.00000000000006,
+    "bb_freigang": [
+-    1756.0,
+-    537.0,
++    1766.0,
++    557.0,
+     132.6,
+-    1784.0,
++    1774.0,
+     582.0,
+-    150.6
++    160.6
+    ],
+    "bb_teil": [
+     1676.0,
+@@ -507,14 +441,14 @@
+    "freigang": "Steckfreigang_BMS_Kabelstecker_J_SPULE_V",
+    "teil": "Schaltbox_Wanne",
+    "gruppe": "E2_Schaltbox",
+-   "volumen_mm3": 1007.9999999999999,
++   "volumen_mm3": 448.00000000000006,
+    "bb_freigang": [
+-    1778.0,
+-    537.0,
++    1788.0,
++    557.0,
+     132.6,
+-    1806.0,
++    1796.0,
+     582.0,
+-    150.6
++    160.6
+    ],
+    "bb_teil": [
+     1676.0,
+@@ -524,383 +458,9 @@
+     877.0,
+     239.0
+    ]
+-  },
+-  {
+-   "freigang": "Handraum_HV_Stecker_40A",
+-   "teil": "HV_Stecker_250A_Flansch",
+-   "gruppe": "E2_Stecker_Sensor",
+-   "volumen_mm3": 459.8468684811115,
+-   "bb_freigang": [
+-    1603.5,
+-    642.5,
+-    127.0,
+-    1678.5,
+-    717.5,
+-    230.0
+-   ],
+-   "bb_teil": [
+-    1576.0,
+-    580.0,
+-    121.0,
+-    1666.0,
+-    650.0,
+-    129.0
+-   ]
+-  },
+-  {
+-   "freigang": "Handraum_HV_Stecker_40A",
+-   "teil": "HV_Stecker_250A_Schraube_3_Kopf",
+-   "gruppe": "E2_Schraube",
+-   "volumen_mm3": 30.419658484234475,
+-   "bb_freigang": [
+-    1603.5,
+-    642.5,
+-    127.0,
+-    1678.5,
+-    717.5,
+-    230.0
+-   ],
+-   "bb_teil": [
+-    1656.8,
+-    640.8,
+-    129.0,
+-    1665.2,
+-    649.2,
+-    134.0
+-   ]
+-  },
+-  {
+-   "freigang": "Steckfreigang_BMS_Kabelstecker_J_VERSORGUNG",
+-   "teil": "HV_Stecker_250A_Schraube_3_Kopf",
+-   "gruppe": "E2_Schraube",
+-   "volumen_mm3": 57.19367123332677,
+-   "bb_freigang": [
+-    1659.5,
+-    622.0,
+-    132.6,
+-    1704.5,
+-    650.0,
+-    150.6
+-   ],
+-   "bb_teil": [
+-    1656.8,
+-    640.8,
+-    129.0,
+-    1665.2,
+-    649.2,
+-    134.0
+-   ]
+-  },
+-  {
+-   "freigang": "Handraum_HV_Stecker_40A",
+-   "teil": "HV_Stecker_250A_Verriegelungshebel",
+-   "gruppe": "E2_Stecker_Sensor",
+-   "volumen_mm3": 1854.686178756518,
+-   "bb_freigang": [
+-    1603.5,
+-    642.5,
+-    127.0,
+-    1678.5,
+-    717.5,
+-    230.0
+-   ],
+-   "bb_teil": [
+-    1591.0,
+-    640.0,
+-    149.0,
+-    1651.0,
+-    650.0,
+-    159.0
+-   ]
+-  },
+-  {
+-   "freigang": "Handraum_NV_Stecker_26pol",
+-   "teil": "HV_Stecker_40A_Flansch",
+-   "gruppe": "E2_Stecker_Sensor",
+-   "volumen_mm3": 451.9802706334933,
+-   "bb_freigang": [
+-    1603.5,
+-    687.5,
+-    126.0,
+-    1678.5,
+-    762.5,
+-    231.0
+-   ],
+-   "bb_teil": [
+-    1616.0,
+-    660.0,
+-    121.0,
+-    1666.0,
+-    700.0,
+-    127.0
+-   ]
+-  },
+-  {
+-   "freigang": "Handraum_NV_Stecker_26pol",
+-   "teil": "HV_Stecker_40A_Schraube_2_Kopf",
+-   "gruppe": "E2_Schraube",
+-   "volumen_mm3": 115.0485363372542,
+-   "bb_freigang": [
+-    1603.5,
+-    687.5,
+-    126.0,
+-    1678.5,
+-    762.5,
+-    231.0
+-   ],
+-   "bb_teil": [
+-    1617.5,
+-    691.5,
+-    127.0,
+-    1624.5,
+-    698.5,
+-    131.0
+-   ]
+-  },
+-  {
+-   "freigang": "Handraum_NV_Stecker_26pol",
+-   "teil": "HV_Stecker_40A_Schraube_2_Schaft",
+-   "gruppe": "E2_Schraube",
+-   "volumen_mm3": 11.485244452181522,
+-   "bb_freigang": [
+-    1603.5,
+-    687.5,
+-    126.0,
+-    1678.5,
+-    762.5,
+-    231.0
+-   ],
+-   "bb_teil": [
+-    1619.0,
+-    693.0,
+-    121.0,
+-    1623.0,
+-    697.0,
+-    127.0
+-   ]
+-  },
+-  {
+-   "freigang": "Handraum_NV_Stecker_26pol",
+-   "teil": "HV_Stecker_40A_Schraube_3_Kopf",
+-   "gruppe": "E2_Schraube",
+-   "volumen_mm3": 115.04853633725423,
+-   "bb_freigang": [
+-    1603.5,
+-    687.5,
+-    126.0,
+-    1678.5,
+-    762.5,
+-    231.0
+-   ],
+-   "bb_teil": [
+-    1657.5,
+-    691.5,
+-    127.0,
+-    1664.5,
+-    698.5,
+-    131.0
+-   ]
+-  },
+-  {
+-   "freigang": "Handraum_NV_Stecker_26pol",
+-   "teil": "HV_Stecker_40A_Schraube_3_Schaft",
+-   "gruppe": "E2_Schraube",
+-   "volumen_mm3": 11.485244452181549,
+-   "bb_freigang": [
+-    1603.5,
+-    687.5,
+-    126.0,
+-    1678.5,
+-    762.5,
+-    231.0
+-   ],
+-   "bb_teil": [
+-    1659.0,
+-    693.0,
+-    121.0,
+-    1663.0,
+-    697.0,
+-    127.0
+-   ]
+-  },
+-  {
+-   "freigang": "Handraum_NV_Stecker_26pol",
+-   "teil": "HV_Stecker_40A_Steckkoerper",
+-   "gruppe": "E2_Stecker_Sensor",
+-   "volumen_mm3": 3667.6695996218255,
+-   "bb_freigang": [
+-    1603.5,
+-    687.5,
+-    126.0,
+-    1678.5,
+-    762.5,
+-    231.0
+-   ],
+-   "bb_teil": [
+-    1624.0,
+-    668.0,
+-    127.0,
+-    1658.0,
+-    692.0,
+-    161.0
+-   ]
+-  },
+-  {
+-   "freigang": "Handraum_HV_Stecker_40A",
+-   "teil": "NV_Stecker_26pol_Schraube_0_Kopf",
+-   "gruppe": "E2_Schraube",
+-   "volumen_mm3": 5.638055471173393,
+-   "bb_freigang": [
+-    1603.5,
+-    642.5,
+-    127.0,
+-    1678.5,
+-    717.5,
+-    230.0
+-   ],
+-   "bb_teil": [
+-    1617.5,
+-    711.5,
+-    126.0,
+-    1624.5,
+-    718.5,
+-    130.0
+-   ]
+-  },
+-  {
+-   "freigang": "Handraum_HV_Stecker_40A",
+-   "teil": "NV_Stecker_26pol_Schraube_1_Kopf",
+-   "gruppe": "E2_Schraube",
+-   "volumen_mm3": 5.638055471173357,
+-   "bb_freigang": [
+-    1603.5,
+-    642.5,
+-    127.0,
+-    1678.5,
+-    717.5,
+-    230.0
+-   ],
+-   "bb_teil": [
+-    1657.5,
+-    711.5,
+-    126.0,
+-    1664.5,
+-    718.5,
+-    130.0
+-   ]
+-  },
+-  {
+-   "freigang": "Handraum_NV_Stecker_26pol",
+-   "teil": "Gas_Drucksensor",
+-   "gruppe": "E2_Stecker_Sensor",
+-   "volumen_mm3": 4491.274998653002,
+-   "bb_freigang": [
+-    1603.5,
+-    687.5,
+-    126.0,
+-    1678.5,
+-    762.5,
+-    231.0
+-   ],
+-   "bb_teil": [
+-    1636.0,
+-    750.0,
+-    121.0,
+-    1666.0,
+-    780.0,
+-    141.0
+-   ]
+-  },
+-  {
+-   "freigang": "Handraum_NV_Stecker_26pol",
+-   "teil": "HV_Stecker_40A_Kabelstecker",
+-   "gruppe": "SV1_Stecker",
+-   "volumen_mm3": 6254.131120518169,
+-   "bb_freigang": [
+-    1603.5,
+-    687.5,
+-    126.0,
+-    1678.5,
+-    762.5,
+-    231.0
+-   ],
+-   "bb_teil": [
+-    1581.0,
+-    665.0,
+-    127.0,
+-    1661.0,
+-    695.0,
+-    171.0
+-   ]
+-  },
+-  {
+-   "freigang": "Handraum_HV_Stecker_40A",
+-   "teil": "NV_Stecker_26pol_Kabelstecker",
+-   "gruppe": "SV1_Stecker",
+-   "volumen_mm3": 1988.1117645483505,
+-   "bb_freigang": [
+-    1603.5,
+-    642.5,
+-    127.0,
+-    1678.5,
+-    717.5,
+-    230.0
+-   ],
+-   "bb_teil": [
+-    1581.0,
+-    715.0,
+-    126.0,
+-    1661.0,
+-    735.0,
+-    171.0
+-   ]
+-  },
+-  {
+-   "freigang": "Steckfreigang_BMS_Kabelstecker_J_DAISY2",
+-   "teil": "BMS_Kabelstecker_J_DAISY1",
+-   "gruppe": "SV1_Stecker",
+-   "volumen_mm3": 576.0,
+-   "bb_freigang": [
+-    1864.0,
+-    620.0,
+-    132.6,
+-    1909.0,
+-    648.0,
+-    150.6
+-   ],
+-   "bb_teil": [
+-    1864.0,
+-    642.0,
+-    132.6,
+-    1876.0,
+-    650.0,
+-    140.6
+-   ]
+-  },
+-  {
+-   "freigang": "Steckfreigang_BMS_Kabelstecker_J_DAISY1",
+-   "teil": "BMS_Kabelstecker_J_DAISY2",
+-   "gruppe": "SV1_Stecker",
+-   "volumen_mm3": 576.0,
+-   "bb_freigang": [
+-    1864.0,
+-    632.0,
+-    132.6,
+-    1909.0,
+-    660.0,
+-    150.6
+-   ],
+-   "bb_teil": [
+-    1864.0,
+-    630.0,
+-    132.6,
+-    1876.0,
+-    638.0,
+-    140.6
+-   ]
+   }
+  ],
+- "anzahl_steckfreigang_verletzungen": 29,
++ "anzahl_steckfreigang_verletzungen": 9,
+  "kontakte_zugelassen": [
+   {
+    "a": "Seitenrahmen",
+@@ -1748,7 +1308,7 @@
+    "art": "SV1 Schraube im Rahmen/Platine"
+   }
+  ],
+- "rechenzeit_s": 259.1264810562134,
++ "rechenzeit_s": 267.30093717575073,
+  "e3": {
+   "platine_mm": [
+    120.0,
+diff --git a/cad/pack/entwurf/ergebnis_NMC_e2d_e3c_sv1.json b/cad/pack/entwurf/ergebnis_NMC_e2d_e3c_sv1.json
+index 976eb24..310e104 100644
+--- a/cad/pack/entwurf/ergebnis_NMC_e2d_e3c_sv1.json
++++ b/cad/pack/entwurf/ergebnis_NMC_e2d_e3c_sv1.json
+@@ -236,7 +236,7 @@
+   },
+   "E2_Steckfreigang": {
+    "anzahl": 60,
+-   "volumen_cm3": 3895.8578185254887,
++   "volumen_cm3": 3633.7378185254897,
+    "masse_kg": 0.0,
+    "masse_bekannt": true,
+    "werkstoff": "Steckfreigang (kein Bauteil)"
+@@ -259,7 +259,7 @@
+  "masse_bekannt_kg": 483.63085422310934,
+  "schwerpunkt_mm": [
+   969.2756655557944,
+-  705.9233876390755,
++  705.9385231498396,
+   58.491020047443705
+  ],
+  "mitte_mm": [
+@@ -268,10 +268,10 @@
+  ],
+  "schwerpunkt_abw_mm": [
+   -5.724334444205624,
+-  -9.076612360924514
++  -9.061476850160375
+  ],
+  "teile": 2916,
+- "kollisionspaare_geprueft": 9282,
++ "kollisionspaare_geprueft": 9255,
+  "kollisionen": [],
+  "anzahl_kollisionen": 0,
+  "steckfreigang_verletzungen": [
+@@ -367,14 +367,14 @@
+    "freigang": "Steckfreigang_BMS_Kabelstecker_J_VERSORGUNG",
+    "teil": "Schaltbox_Wanne",
+    "gruppe": "E2_Schaltbox",
+-   "volumen_mm3": 1008.0,
++   "volumen_mm3": 448.00000000000006,
+    "bb_freigang": [
+-    1559.5,
+-    805.0,
++    1579.5,
++    815.0,
+     126.6,
+     1604.5,
+-    833.0,
+-    144.6
++    823.0,
++    154.6
+    ],
+    "bb_teil": [
+     1576.0,
+@@ -389,14 +389,14 @@
+    "freigang": "Steckfreigang_BMS_Kabelstecker_J_DEBUG",
+    "teil": "Schaltbox_Wanne",
+    "gruppe": "E2_Schaltbox",
+-   "volumen_mm3": 1008.0,
++   "volumen_mm3": 448.00000000000006,
+    "bb_freigang": [
+-    1565.0,
+-    773.0,
++    1585.0,
++    783.0,
+     126.6,
+     1610.0,
+-    801.0,
+-    144.6
++    791.0,
++    154.6
+    ],
+    "bb_teil": [
+     1576.0,
+@@ -411,14 +411,14 @@
+    "freigang": "Steckfreigang_BMS_Kabelstecker_J_SPULE_P",
+    "teil": "Schaltbox_Wanne",
+    "gruppe": "E2_Schaltbox",
+-   "volumen_mm3": 1007.9999999999999,
++   "volumen_mm3": 448.00000000000006,
+    "bb_freigang": [
+-    1634.0,
+-    720.0,
++    1644.0,
++    740.0,
+     126.6,
+-    1662.0,
++    1652.0,
+     765.0,
+-    144.6
++    154.6
+    ],
+    "bb_teil": [
+     1576.0,
+@@ -433,14 +433,14 @@
+    "freigang": "Steckfreigang_BMS_Kabelstecker_J_SPULE_M",
+    "teil": "Schaltbox_Wanne",
+    "gruppe": "E2_Schaltbox",
+-   "volumen_mm3": 1007.9999999999999,
++   "volumen_mm3": 448.00000000000006,
+    "bb_freigang": [
+-    1656.0,
+-    720.0,
++    1666.0,
++    740.0,
+     126.6,
+-    1684.0,
++    1674.0,
+     765.0,
+-    144.6
++    154.6
+    ],
+    "bb_teil": [
+     1576.0,
+@@ -455,14 +455,14 @@
+    "freigang": "Steckfreigang_BMS_Kabelstecker_J_SPULE_V",
+    "teil": "Schaltbox_Wanne",
+    "gruppe": "E2_Schaltbox",
+-   "volumen_mm3": 1007.9999999999999,
++   "volumen_mm3": 448.00000000000006,
+    "bb_freigang": [
+-    1678.0,
+-    720.0,
++    1688.0,
++    740.0,
+     126.6,
+-    1706.0,
++    1696.0,
+     765.0,
+-    144.6
++    154.6
+    ],
+    "bb_teil": [
+     1576.0,
+@@ -472,383 +472,9 @@
+     1060.0,
+     227.0
+    ]
+-  },
+-  {
+-   "freigang": "Handraum_HV_Stecker_40A",
+-   "teil": "HV_Stecker_250A_Flansch",
+-   "gruppe": "E2_Stecker_Sensor",
+-   "volumen_mm3": 459.8468684811115,
+-   "bb_freigang": [
+-    1503.5,
+-    825.5,
+-    121.0,
+-    1578.5,
+-    900.5,
+-    224.0
+-   ],
+-   "bb_teil": [
+-    1476.0,
+-    763.0,
+-    115.0,
+-    1566.0,
+-    833.0,
+-    123.0
+-   ]
+-  },
+-  {
+-   "freigang": "Handraum_HV_Stecker_40A",
+-   "teil": "HV_Stecker_250A_Schraube_3_Kopf",
+-   "gruppe": "E2_Schraube",
+-   "volumen_mm3": 30.41965848423448,
+-   "bb_freigang": [
+-    1503.5,
+-    825.5,
+-    121.0,
+-    1578.5,
+-    900.5,
+-    224.0
+-   ],
+-   "bb_teil": [
+-    1556.8,
+-    823.8,
+-    123.0,
+-    1565.2,
+-    832.2,
+-    128.0
+-   ]
+-  },
+-  {
+-   "freigang": "Steckfreigang_BMS_Kabelstecker_J_VERSORGUNG",
+-   "teil": "HV_Stecker_250A_Schraube_3_Kopf",
+-   "gruppe": "E2_Schraube",
+-   "volumen_mm3": 57.19367123332677,
+-   "bb_freigang": [
+-    1559.5,
+-    805.0,
+-    126.6,
+-    1604.5,
+-    833.0,
+-    144.6
+-   ],
+-   "bb_teil": [
+-    1556.8,
+-    823.8,
+-    123.0,
+-    1565.2,
+-    832.2,
+-    128.0
+-   ]
+-  },
+-  {
+-   "freigang": "Handraum_HV_Stecker_40A",
+-   "teil": "HV_Stecker_250A_Verriegelungshebel",
+-   "gruppe": "E2_Stecker_Sensor",
+-   "volumen_mm3": 1854.686178756518,
+-   "bb_freigang": [
+-    1503.5,
+-    825.5,
+-    121.0,
+-    1578.5,
+-    900.5,
+-    224.0
+-   ],
+-   "bb_teil": [
+-    1491.0,
+-    823.0,
+-    143.0,
+-    1551.0,
+-    833.0,
+-    153.0
+-   ]
+-  },
+-  {
+-   "freigang": "Handraum_NV_Stecker_26pol",
+-   "teil": "HV_Stecker_40A_Flansch",
+-   "gruppe": "E2_Stecker_Sensor",
+-   "volumen_mm3": 451.9802706334934,
+-   "bb_freigang": [
+-    1503.5,
+-    870.5,
+-    120.0,
+-    1578.5,
+-    945.5,
+-    225.0
+-   ],
+-   "bb_teil": [
+-    1516.0,
+-    843.0,
+-    115.0,
+-    1566.0,
+-    883.0,
+-    121.0
+-   ]
+-  },
+-  {
+-   "freigang": "Handraum_NV_Stecker_26pol",
+-   "teil": "HV_Stecker_40A_Schraube_2_Kopf",
+-   "gruppe": "E2_Schraube",
+-   "volumen_mm3": 115.0485363372542,
+-   "bb_freigang": [
+-    1503.5,
+-    870.5,
+-    120.0,
+-    1578.5,
+-    945.5,
+-    225.0
+-   ],
+-   "bb_teil": [
+-    1517.5,
+-    874.5,
+-    121.0,
+-    1524.5,
+-    881.5,
+-    125.0
+-   ]
+-  },
+-  {
+-   "freigang": "Handraum_NV_Stecker_26pol",
+-   "teil": "HV_Stecker_40A_Schraube_2_Schaft",
+-   "gruppe": "E2_Schraube",
+-   "volumen_mm3": 11.485244452181522,
+-   "bb_freigang": [
+-    1503.5,
+-    870.5,
+-    120.0,
+-    1578.5,
+-    945.5,
+-    225.0
+-   ],
+-   "bb_teil": [
+-    1519.0,
+-    876.0,
+-    115.0,
+-    1523.0,
+-    880.0,
+-    121.0
+-   ]
+-  },
+-  {
+-   "freigang": "Handraum_NV_Stecker_26pol",
+-   "teil": "HV_Stecker_40A_Schraube_3_Kopf",
+-   "gruppe": "E2_Schraube",
+-   "volumen_mm3": 115.04853633725423,
+-   "bb_freigang": [
+-    1503.5,
+-    870.5,
+-    120.0,
+-    1578.5,
+-    945.5,
+-    225.0
+-   ],
+-   "bb_teil": [
+-    1557.5,
+-    874.5,
+-    121.0,
+-    1564.5,
+-    881.5,
+-    125.0
+-   ]
+-  },
+-  {
+-   "freigang": "Handraum_NV_Stecker_26pol",
+-   "teil": "HV_Stecker_40A_Schraube_3_Schaft",
+-   "gruppe": "E2_Schraube",
+-   "volumen_mm3": 11.48524445218154,
+-   "bb_freigang": [
+-    1503.5,
+-    870.5,
+-    120.0,
+-    1578.5,
+-    945.5,
+-    225.0
+-   ],
+-   "bb_teil": [
+-    1559.0,
+-    876.0,
+-    115.0,
+-    1563.0,
+-    880.0,
+-    121.0
+-   ]
+-  },
+-  {
+-   "freigang": "Handraum_NV_Stecker_26pol",
+-   "teil": "HV_Stecker_40A_Steckkoerper",
+-   "gruppe": "E2_Stecker_Sensor",
+-   "volumen_mm3": 3667.6695996218255,
+-   "bb_freigang": [
+-    1503.5,
+-    870.5,
+-    120.0,
+-    1578.5,
+-    945.5,
+-    225.0
+-   ],
+-   "bb_teil": [
+-    1524.0,
+-    851.0,
+-    121.0,
+-    1558.0,
+-    875.0,
+-    155.0
+-   ]
+-  },
+-  {
+-   "freigang": "Handraum_HV_Stecker_40A",
+-   "teil": "NV_Stecker_26pol_Schraube_0_Kopf",
+-   "gruppe": "E2_Schraube",
+-   "volumen_mm3": 5.6380554711733915,
+-   "bb_freigang": [
+-    1503.5,
+-    825.5,
+-    121.0,
+-    1578.5,
+-    900.5,
+-    224.0
+-   ],
+-   "bb_teil": [
+-    1517.5,
+-    894.5,
+-    120.0,
+-    1524.5,
+-    901.5,
+-    124.0
+-   ]
+-  },
+-  {
+-   "freigang": "Handraum_HV_Stecker_40A",
+-   "teil": "NV_Stecker_26pol_Schraube_1_Kopf",
+-   "gruppe": "E2_Schraube",
+-   "volumen_mm3": 5.638055471173358,
+-   "bb_freigang": [
+-    1503.5,
+-    825.5,
+-    121.0,
+-    1578.5,
+-    900.5,
+-    224.0
+-   ],
+-   "bb_teil": [
+-    1557.5,
+-    894.5,
+-    120.0,
+-    1564.5,
+-    901.5,
+-    124.0
+-   ]
+-  },
+-  {
+-   "freigang": "Handraum_NV_Stecker_26pol",
+-   "teil": "Gas_Drucksensor",
+-   "gruppe": "E2_Stecker_Sensor",
+-   "volumen_mm3": 4491.274998653002,
+-   "bb_freigang": [
+-    1503.5,
+-    870.5,
+-    120.0,
+-    1578.5,
+-    945.5,
+-    225.0
+-   ],
+-   "bb_teil": [
+-    1536.0,
+-    933.0,
+-    115.0,
+-    1566.0,
+-    963.0,
+-    135.0
+-   ]
+-  },
+-  {
+-   "freigang": "Handraum_NV_Stecker_26pol",
+-   "teil": "HV_Stecker_40A_Kabelstecker",
+-   "gruppe": "SV1_Stecker",
+-   "volumen_mm3": 6254.13112051817,
+-   "bb_freigang": [
+-    1503.5,
+-    870.5,
+-    120.0,
+-    1578.5,
+-    945.5,
+-    225.0
+-   ],
+-   "bb_teil": [
+-    1481.0,
+-    848.0,
+-    121.0,
+-    1561.0,
+-    878.0,
+-    165.0
+-   ]
+-  },
+-  {
+-   "freigang": "Handraum_HV_Stecker_40A",
+-   "teil": "NV_Stecker_26pol_Kabelstecker",
+-   "gruppe": "SV1_Stecker",
+-   "volumen_mm3": 1988.1117645483505,
+-   "bb_freigang": [
+-    1503.5,
+-    825.5,
+-    121.0,
+-    1578.5,
+-    900.5,
+-    224.0
+-   ],
+-   "bb_teil": [
+-    1481.0,
+-    898.0,
+-    120.0,
+-    1561.0,
+-    918.0,
+-    165.0
+-   ]
+-  },
+-  {
+-   "freigang": "Steckfreigang_BMS_Kabelstecker_J_DAISY2",
+-   "teil": "BMS_Kabelstecker_J_DAISY1",
+-   "gruppe": "SV1_Stecker",
+-   "volumen_mm3": 576.0,
+-   "bb_freigang": [
+-    1764.0,
+-    803.0,
+-    126.6,
+-    1809.0,
+-    831.0,
+-    144.6
+-   ],
+-   "bb_teil": [
+-    1764.0,
+-    825.0,
+-    126.6,
+-    1776.0,
+-    833.0,
+-    134.6
+-   ]
+-  },
+-  {
+-   "freigang": "Steckfreigang_BMS_Kabelstecker_J_DAISY1",
+-   "teil": "BMS_Kabelstecker_J_DAISY2",
+-   "gruppe": "SV1_Stecker",
+-   "volumen_mm3": 576.0,
+-   "bb_freigang": [
+-    1764.0,
+-    815.0,
+-    126.6,
+-    1809.0,
+-    843.0,
+-    144.6
+-   ],
+-   "bb_teil": [
+-    1764.0,
+-    813.0,
+-    126.6,
+-    1776.0,
+-    821.0,
+-    134.6
+-   ]
+   }
+  ],
+- "anzahl_steckfreigang_verletzungen": 26,
++ "anzahl_steckfreigang_verletzungen": 9,
+  "kontakte_zugelassen": [
+   {
+    "a": "Seitenrahmen",
+@@ -1955,7 +1581,7 @@
+    "art": "SV1 Schraube im Rahmen/Platine"
+   }
+  ],
+- "rechenzeit_s": 528.8616635799408,
++ "rechenzeit_s": 535.2342975139618,
+  "e3": {
+   "platine_mm": [
+    120.0,
+diff --git a/cad/pack/pack_e2d.py b/cad/pack/pack_e2d.py
+index 63ff235..2995852 100644
+--- a/cad/pack/pack_e2d.py
++++ b/cad/pack/pack_e2d.py
+@@ -498,7 +498,8 @@ if E2:
+         for k_, (px_, py_) in enumerate(((x0_ + ein, ys_ + ein), (x1 - ein, ys_ + ein), (x0_ + ein, ys_ + fB - ein), (x1 - ein, ys_ + fB - ein))[:int(n_s)]):
+             for pn, shp in G.schraube(px_, py_, z_top + fH, d_s, fH, kh[0], kh[1]): add(f"{nm}_Schraube_{k_}_{pn}", "E2_Schraube", shp, mass=0.0, mat="Stahl (Masse offen, 0 gesetzt)")
+         koerper(nm, x0_, x1, ys_, fB, fH, hh)
+-        ys_ += fB + gap
++        # SV1b N6 (Annahme Opus ERW-SV1 N6): Mit PACK_SV1 werden die Außenstecker an der Wand weiter auseinandergesetzt (Reihenfolge bleibt), damit die Handräume Ø 75 frei sind; Zuschläge in y aus den Schnittmaßen v0.5 (HV 40 A: 7,5 + 2 mm Luft; NV: 12,5 + 2 mm, dazu die Verschiebung des HV 40 A; Gas-Drucksensor: 12,5 + 2 mm, dazu die Verschiebung des NV)
++        ys_ += fB + gap + ({"HV_Stecker_250A": 9.5, "HV_Stecker_40A": 14.5, "NV_Stecker_26pol": 14.5}.get(nm, 0.0) if SV1 else 0.0)
+     def koerper_hv250(nm, x0_, x1, y0_, fB, fH, hh):
+         kd, kl = AD3("hv250_koerper_mm"); ym = y0_ + fB / 2; zm = z_top + fH + kd / 2; xa_ = (x0_ + x1) / 2 - kl / 2
+         add(nm + "_Steckkoerper", "E2_Stecker_Sensor", Part.makeCylinder(kd / 2, kl, V(xa_, ym, zm), V(1, 0, 0)), mass=0.0, mat="E2 Teil (Masse in Flansch enthalten)")
+@@ -719,6 +720,7 @@ if SV1:
+     spl, MS = S["A_sv1_steckweg_platine_mm"], S["A_sv1_masse_kg"]
+     FG_GRF_PL, FG_QUER_PL = 5.0, 2.0   # Annahme Opus ERW-SV1 N3 (Montagefolge: CMU wird vor dem Einbau gesteckt)
+     SV1_AUS = {}
++    FG_GRF_IN, FG_FINGER_IN = 5.0, 20.0   # SV1b N6 (Annahme Opus ERW-SV1 N6): Innenstecker Steckweg + 5 mm, Fingerraum 20 mm quer auf der Griffseite (oben, Deckel offen)
+     TP = {p["name"]: p for p in teile}
+     def sv1_add(name, grp, shp, mass=0.0, mat="SV1 Teil (Annahme ERW-SV1)"): add(name, grp, shp, mass=mass, mat=mat)
+     def freigang(nm, shp, prefix, grp_ok=(), names_ok=()):
+@@ -803,12 +805,12 @@ if SV1:
+         px_ += sx_ * 5.0; py_ += sy_ * 5.0   # Versatz = halbe Buchsenlänge (Annahme 5 mm, JST-Bauform), Stecker beginnt an der Stirnfläche
+         cx_, cy_ = px_ + sx_ * L_ / 2, py_ + sy_ * L_ / 2
+         sv1_add(f"BMS_Kabelstecker_{tag}", "SV1_Stecker", box(cx_ - lx / 2, cy_ - ly / 2, zt_b, cx_ + lx / 2, cy_ + ly / 2, zt_b + H_), MS["klein"], "SV1 Kabelstecker (Annahme)")
+-        Lf = L_ + spl + grf; fcx, fcy = px_ + sx_ * Lf / 2, py_ + sy_ * Lf / 2; fx, fy = (Lf, W_ + 2 * qr) if sx_ else (W_ + 2 * qr, Lf)
+-        freigang(f"Steckfreigang_BMS_Kabelstecker_{tag}", box(fcx - fx / 2, fcy - fy / 2, zt_b, fcx + fx / 2, fcy + fy / 2, zt_b + H_ + qr), f"BMS_Kabelstecker_{tag}", names_ok=("BMS_Platine",)); sv1_bms.append(tag)
++        Lf = L_ + spl + FG_GRF_IN; fcx, fcy = px_ + sx_ * Lf / 2, py_ + sy_ * Lf / 2; fx, fy = (Lf, W_) if sx_ else (W_, Lf)   # SV1b N6: Innenstecker bei offenem Deckel gesteckt, Steckweg + 5 mm, Fingerraum 20 mm auf der Griffseite (oben), seitlich 0
++        freigang(f"Steckfreigang_BMS_Kabelstecker_{tag}", box(fcx - fx / 2, fcy - fy / 2, zt_b, fcx + fx / 2, fcy + fy / 2, zt_b + H_ + FG_FINGER_IN), f"BMS_Kabelstecker_{tag}", names_ok=("BMS_Platine",)); sv1_bms.append(tag)
+     # --- Schütz-Spulenstecker (seitlich +y), Gegenstück = Schütz
+     for n_ in ("Hauptschuetz_1", "Hauptschuetz_2"):
+-        p = TP[f"{n_}_Spulenstecker"]; p["grp"] = "SV1_Stecker"; b_ = p["shape"].BoundBox; Lf = (b_.YMax - b_.YMin) + spl + grf
+-        freigang(f"Steckfreigang_{n_}_Spulenstecker", box(b_.XMin - qr, b_.YMin, b_.ZMin - qr, b_.XMax + qr, b_.YMin + Lf, b_.ZMax + qr), n_)
++        p = TP[f"{n_}_Spulenstecker"]; p["grp"] = "SV1_Stecker"; b_ = p["shape"].BoundBox; Lf = (b_.YMax - b_.YMin) + spl + FG_GRF_IN
++        freigang(f"Steckfreigang_{n_}_Spulenstecker", box(b_.XMin, b_.YMin, b_.ZMin, b_.XMax, b_.YMin + Lf, b_.ZMax + FG_FINGER_IN), n_)   # SV1b N6: Fingerraum 20 mm oben (Griffseite)
+     sv1res = dict(freigaenge=sorted(SV1_FG), bms_stecker=sv1_bms, masse_zusatz_kg=sum(p["mass"] for p in teile if p["grp"] in ("SV1_Stecker", "SV1_Gegenstueck", "SV1_Schraube")), anzahl_stecker=sum(1 for p in teile if p["grp"] == "SV1_Stecker"), anzahl_gegenstuecke=sum(1 for p in teile if p["grp"] == "SV1_Gegenstueck"), anzahl_schrauben_bolzen=sum(1 for p in teile if p["grp"] == "SV1_Schraube"))
+     sv1res["aussparung_daisy_buchsen_mm3"] = SV1_AUS; sv1res["cmu_wandabstand_mm"] = SV1_WAND; sv1res["freigang_platinenstecker"] = dict(greifraum_mm=FG_GRF_PL, quer_mm=FG_QUER_PL)
+     e2res["sv1"] = sv1res

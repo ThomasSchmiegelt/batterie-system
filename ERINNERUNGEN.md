@@ -2,6 +2,11 @@
 
 KI-generiert (Claude Opus).
 
+## 2026-11-25 abends – heruntergefahren, weiter Freitag (Opus)
+- Erledigt heute: Kolibri 1 und Qwen 3.8 (Franconia) eingerichtet und gemessen, Bericht `bericht/Bericht_Modelltest_Kolibri-1_Qwen-3.8.pdf` v2.1 (für Außenstehende, Status Entwurf, Freigabe Autor offen). Kolibri-Buchkapitel Versuch 2 (`~/hermes/buch/kapitel/entwurf_kolibri2_14c_fortsetzung.md`, Rohfassung, erfundene Personenangabe „ohne Ingenieursabschluss“ streichen). Video v3 mit Agentenband, CFD/Crash, Steuergeräte am Einbauort. SV1 v0.5: CMU 4×M3, DRC 0, Kollisionen 0/0, STEP mit Bohrungen in abgabe_2026-11-24/.
+- **Offen SV1 Nachtrag 6** (ERWARTUNG.md): Drucksensor verlegen, Außenstecker-Abstände, Innenstecker-Regel; Ziel 0 Freigangsverletzungen (Stand 29 LFP / 26 NMC). Sonnet brach am Nutzungslimit ab; Teilstand als `sim/mechanik/sv1_stecker_verschraubung/n6_teilstand.patch` gesichert, pack_e2d.py auf HEAD zurück. Danach Einbaubilder neu.
+- Weitere offene Punkte: Qwen 3.8 in Tests B–D (für Bericht), Autorname im Video vom Agentenband abrücken, L2 Leichtbau im CAD, BT-715 Schütz-Merkmale, BEFUNDE/SKILL/Buch-Ereignisprotokoll für 25.11. nachtragen.
+
 ## 2026-11-24 20:00: Übergabe (Frist des Autors 20:30)
 Erledigt: CMU N7–N9 (Sekundärschutz je Zelle, Doppel-FET, DRC 0, FMEDA v0.2), BMS BT-311 mit Schaltplan und Sparschaltung (OPT-006), KR2 (K1), REQ-P07 neu 600/450 kg (AEN-022), docs/25. Abgabe STEP + Schaltpläne: /home/cae/cae_projekte/batterie/abgabe_2026-11-24/.
 Offen: SV1 (B-BAT-059, ERW-SV1 N1): Freigangslogik prüfen, NMC-Daisy-Kollision, CMU-Bohrungen. L2 Leichtbau im CAD (LFP −20, NMC −32 kg). BT-715 Merkmale Schütz. Bilder BMS nach OPT-006 neu. git push durch Autor.

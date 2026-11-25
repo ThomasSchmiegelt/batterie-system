@@ -1,0 +1,30 @@
+stecker,gegenkoerper,eindringtiefe_mm,laenge_steckrichtung_mm,quer_mm,richtung,abstand_offenes_ende_mm,zone,volumen_mm3
+NV_Stecker_26pol (Handraum Ø 75),Gas_Drucksensor,12.5,15.0,30.0 x 12.5,+z,90.0,"Handraum, Höhenbereich Steckerkörper",4491
+HV_Stecker_40A (Handraum Ø 75),HV_Stecker_250A_Verriegelungshebel,7.5,10.0,32.5 x 7.5,+z,71.0,"Handraum, Höhenbereich Steckerkörper",1855
+NV_Stecker_26pol (Handraum Ø 75),HV_Stecker_40A_Kabelstecker,7.5,44.0,40.0 x 7.5,+z,60.0,"Handraum, Höhenbereich Steckerkörper",6254
+Hauptschuetz_1_Spulenstecker,Pyrosicherung,6.8,30.0,6.8 x 32.0,+y,3.0,Greifraum+Steckweg,6480
+Hauptschuetz_2_Spulenstecker,Schmelz_Halter,6.8,33.0,6.8 x 32.0,+y,0.0,Greifraum+Steckweg,5560
+BMS_Kabelstecker_J_DAISY2,BMS_Kabelstecker_J_DAISY1,6.0,12.0,6.0 x 8.0,+x,33.0,Steckerkörper,576
+BMS_Kabelstecker_J_DAISY1,BMS_Kabelstecker_J_DAISY2,6.0,12.0,6.0 x 8.0,+x,33.0,Steckerkörper,576
+NV_Stecker_26pol (Handraum Ø 75),HV_Stecker_40A_Steckkoerper,4.5,34.0,34.0 x 4.5,+z,70.0,"Handraum, Höhenbereich Steckerkörper",3668
+NV_Stecker_26pol (Handraum Ø 75),HV_Stecker_40A_Schraube_2_Kopf,4.0,4.0,6.9 x 6.4,+z,100.0,"Handraum, Höhenbereich Steckerkörper",115
+NV_Stecker_26pol (Handraum Ø 75),HV_Stecker_40A_Schraube_3_Kopf,4.0,4.0,6.9 x 6.4,+z,100.0,"Handraum, Höhenbereich Steckerkörper",115
+HV_Stecker_40A (Handraum Ø 75),HV_Stecker_250A_Schraube_3_Kopf,3.2,5.0,5.3 x 3.2,+z,96.0,"Handraum, Höhenbereich Steckerkörper",30
+HV_Stecker_250A,Kuehlplatte_oben,3.0,95.0,29.6 x 3.0,-x,0.0,Greifraum+Steckweg+Steckerkörper,5669
+HV_Stecker_250A (Handraum Ø 75),Kuehlplatte_oben,2.5,95.0,26.9 x 2.5,-x,0.0,"Handraum, Höhenbereich Greifraum+Steckweg+Steckerkörper",4293
+HV_Stecker_40A (Handraum Ø 75),NV_Stecker_26pol_Kabelstecker,2.5,44.0,26.9 x 2.5,+z,59.0,"Handraum, Höhenbereich Steckerkörper",1988
+HV_Stecker_250A,Deckel,2.0,95.0,37.7 x 2.0,-x,0.0,Greifraum+Steckweg+Steckerkörper,6430
+HV_Stecker_250A (Handraum Ø 75),Deckel,2.0,95.0,35.6 x 2.0,-x,0.0,"Handraum, Höhenbereich Greifraum+Steckweg+Steckerkörper",5988
+BMS_Kabelstecker_J_VERSORGUNG,Schaltbox_Wanne,2.0,2.0,28.0 x 18.0,-x,28.5,Steckweg,1008
+BMS_Kabelstecker_J_DEBUG,Schaltbox_Wanne,2.0,2.0,28.0 x 18.0,-x,23.0,Greifraum,1008
+BMS_Kabelstecker_J_SPULE_P,Schaltbox_Wanne,2.0,2.0,28.0 x 18.0,-y,28.0,Steckweg,1008
+BMS_Kabelstecker_J_SPULE_M,Schaltbox_Wanne,2.0,2.0,28.0 x 18.0,-y,28.0,Steckweg,1008
+BMS_Kabelstecker_J_SPULE_V,Schaltbox_Wanne,2.0,2.0,28.0 x 18.0,-y,28.0,Steckweg,1008
+HV_Stecker_40A (Handraum Ø 75),HV_Stecker_250A_Flansch,2.0,2.0,45.0 x 7.5,+z,101.0,"Handraum, Höhenbereich Steckerkörper",460
+HV_Stecker_40A (Handraum Ø 75),NV_Stecker_26pol_Schraube_0_Kopf,2.0,3.0,3.5 x 2.0,+z,100.0,"Handraum, Höhenbereich Steckerkörper",6
+HV_Stecker_40A (Handraum Ø 75),NV_Stecker_26pol_Schraube_1_Kopf,2.0,3.0,3.5 x 2.0,+z,100.0,"Handraum, Höhenbereich Steckerkörper",6
+Hauptschuetz_2_Spulenstecker,Schmelzsicherung,1.8,28.0,1.8 x 32.0,+y,0.0,Greifraum+Steckweg,1568
+BMS_Kabelstecker_J_VERSORGUNG,HV_Stecker_250A_Schraube_3_Kopf,1.4,5.8,8.5 x 1.4,-x,0.0,Greifraum,57
+NV_Stecker_26pol (Handraum Ø 75),HV_Stecker_40A_Flansch,1.0,1.0,50.0 x 12.5,+z,104.0,"Handraum, Höhenbereich Steckerkörper",452
+NV_Stecker_26pol (Handraum Ø 75),HV_Stecker_40A_Schraube_2_Schaft,1.0,1.0,4.0 x 4.0,+z,104.0,"Handraum, Höhenbereich Steckerkörper",11
+NV_Stecker_26pol (Handraum Ø 75),HV_Stecker_40A_Schraube_3_Schaft,1.0,1.0,4.0 x 4.0,+z,104.0,"Handraum, Höhenbereich Steckerkörper",11

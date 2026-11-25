@@ -1,8 +1,57 @@
-| Dok.-Nr. | ERG-SV1 | Version | 0.4 | Status | Entwurf |
+| Dok.-Nr. | ERG-SV1 | Version | 0.5 | Status | Entwurf |
 |---|---|---|---|---|---|
 | Titel | Ergebnis SV1: Stecker mit Gegenstück, Steckfreigang, Verschraubungen im Pack-CAD (Fortsetzung Nachtrag 2) | Ersteller | Claude Sonnet (KI) | Prüfer | Opus (offen) |
 
 > **KI-generiert** (Claude Sonnet, 2026-11-25). Entwurf, nicht freigegeben. Grundlage `ERWARTUNG.md` (ERW-SV1, Nachtrag 2, Punkte 1–5, nicht geändert). Version 0.1 (2026-11-24) ist in `/tmp/claude-1003/SV1b/sv1dir/ERGEBNIS.md` gesichert. Zahlen aus `ergebnis_v02.json` (Auszug aus `/home/cae/cae_projekte/batterie/sv1b/out/ergebnis_<V>_e2d_e3c_sv1.json`, Gruppierung `…_gruppen.json`) und aus den DRC-/Router-Dateien unter `/home/cae/cae_projekte/batterie/sv1b/lauf*_*/` (`drc.json`, `fr.log`, `start.txt`, `ende.txt`). Alle Maße der Stecker sind Annahmen ERW-SV1 (`cad/pack/entwurf/annahmen_sv1.json`). Bohrungslagen B3/B4v: Annahme W1 (`sim/elektrik/w1_kolibri_waechter/ERGEBNIS.md`), von Opus als Annahme ERW-SV1 N2 übernommen.
+
+## Version 0.5 (Nachtrag 5, 2026-11-25 12:11 bis 12:30): Restverletzungen je Stecker, Bilder E3 neu
+Nichts am Modell geändert; Opus entscheidet über Regel oder Lage. Quellen: `restverletzungen_LFP.csv`, `restverletzungen_NMC.csv` (hier), Rohdaten `/home/cae/cae_projekte/batterie/sv1b/out_n5/ergebnis_<V>_e2d_e3c_sv1.json` (Pack-Arbeitskopie `sv1b/pack_e2d_n5.py`: Rechnung wie `cad/pack/pack_e2d.py` v0.4, schreibt nur nach `sv1b/`, zusätzlich Schnittkörper-Bounding-Box je Paar; Ergebnis identisch: LFP 29 / NMC 26 Verletzungen, 0 Kollisionen), Auswertung `sv1b/auswertung_n5.py`.
+
+**Wie gelesen:** *Eindringtiefe* = kleinste Ausdehnung des Schnittkörpers aus Freigang und Gegenkörper (so tief ragt der Gegenkörper in den Freigang, bei Platten parallel zur Steckrichtung die Plattendicke). *Länge* = Ausdehnung des Schnittkörpers in Steckrichtung. *Quer* = die beiden anderen Ausdehnungen. *Richtung* = Steckrichtung (Zug) im Pack-Koordinatensystem (x Länge, y Breite, z Höhe). *Zone* = Lage des Schnittkörpers entlang der Steckrichtung, gemessen vom offenen Ende des Freigangs: Greifraum (25 mm), dann Steckweg (HV 250 A 30 mm; Service 10 mm; BMS und Spule 8 mm; HV 40 A, NV: (Länge − 35)/2), dann Steckerkörper. Bei Handräumen (Ø 75) gilt „Höhenbereich“ nur als Lage entlang der Achse. Bounding-Box-Wert, kein exakter Abstand; Volumen aus der Boole-Schnittmenge.
+
+**LFP, 29 Verletzungen (sortiert nach Eindringtiefe).** NMC: dieselben Zeilen mit gleichen Werten ohne die 3 Schütz-Zeilen (Pyrosicherung, Schmelz_Halter, Schmelzsicherung), also 26; vollständige Tabelle `restverletzungen_NMC.csv`.
+| Stecker (Freigang) | Gegenkörper | Eindringtiefe mm | Länge mm | Quer mm | Richtung | Zone | Vol. mm³ |
+|---|---|---|---|---|---|---|---|
+| NV_Stecker_26pol (Handraum Ø 75) | Gas_Drucksensor | 12.5 | 15.0 | 30.0 x 12.5 | +z | Handraum, Höhenbereich Steckerkörper | 4491 |
+| HV_Stecker_40A (Handraum Ø 75) | HV_Stecker_250A_Verriegelungshebel | 7.5 | 10.0 | 32.5 x 7.5 | +z | Handraum, Höhenbereich Steckerkörper | 1855 |
+| NV_Stecker_26pol (Handraum Ø 75) | HV_Stecker_40A_Kabelstecker | 7.5 | 44.0 | 40.0 x 7.5 | +z | Handraum, Höhenbereich Steckerkörper | 6254 |
+| Hauptschuetz_1_Spulenstecker | Pyrosicherung | 6.8 | 30.0 | 6.8 x 32.0 | +y | Greifraum+Steckweg | 6480 |
+| Hauptschuetz_2_Spulenstecker | Schmelz_Halter | 6.8 | 33.0 | 6.8 x 32.0 | +y | Greifraum+Steckweg | 5560 |
+| BMS_Kabelstecker_J_DAISY2 | BMS_Kabelstecker_J_DAISY1 | 6.0 | 12.0 | 6.0 x 8.0 | +x | Steckerkörper | 576 |
+| BMS_Kabelstecker_J_DAISY1 | BMS_Kabelstecker_J_DAISY2 | 6.0 | 12.0 | 6.0 x 8.0 | +x | Steckerkörper | 576 |
+| NV_Stecker_26pol (Handraum Ø 75) | HV_Stecker_40A_Steckkoerper | 4.5 | 34.0 | 34.0 x 4.5 | +z | Handraum, Höhenbereich Steckerkörper | 3668 |
+| NV_Stecker_26pol (Handraum Ø 75) | HV_Stecker_40A_Schraube_2_Kopf | 4.0 | 4.0 | 6.9 x 6.4 | +z | Handraum, Höhenbereich Steckerkörper | 115 |
+| NV_Stecker_26pol (Handraum Ø 75) | HV_Stecker_40A_Schraube_3_Kopf | 4.0 | 4.0 | 6.9 x 6.4 | +z | Handraum, Höhenbereich Steckerkörper | 115 |
+| HV_Stecker_40A (Handraum Ø 75) | HV_Stecker_250A_Schraube_3_Kopf | 3.2 | 5.0 | 5.3 x 3.2 | +z | Handraum, Höhenbereich Steckerkörper | 30 |
+| HV_Stecker_250A | Kuehlplatte_oben | 3.0 | 95.0 | 29.6 x 3.0 | -x | Greifraum+Steckweg+Steckerkörper | 5669 |
+| HV_Stecker_250A (Handraum Ø 75) | Kuehlplatte_oben | 2.5 | 95.0 | 26.9 x 2.5 | -x | Handraum, Höhenbereich Greifraum+Steckweg+Steckerkörper | 4293 |
+| HV_Stecker_40A (Handraum Ø 75) | NV_Stecker_26pol_Kabelstecker | 2.5 | 44.0 | 26.9 x 2.5 | +z | Handraum, Höhenbereich Steckerkörper | 1988 |
+| HV_Stecker_250A | Deckel | 2.0 | 95.0 | 37.7 x 2.0 | -x | Greifraum+Steckweg+Steckerkörper | 6430 |
+| HV_Stecker_250A (Handraum Ø 75) | Deckel | 2.0 | 95.0 | 35.6 x 2.0 | -x | Handraum, Höhenbereich Greifraum+Steckweg+Steckerkörper | 5988 |
+| BMS_Kabelstecker_J_VERSORGUNG | Schaltbox_Wanne | 2.0 | 2.0 | 28.0 x 18.0 | -x | Steckweg | 1008 |
+| BMS_Kabelstecker_J_DEBUG | Schaltbox_Wanne | 2.0 | 2.0 | 28.0 x 18.0 | -x | Greifraum | 1008 |
+| BMS_Kabelstecker_J_SPULE_P | Schaltbox_Wanne | 2.0 | 2.0 | 28.0 x 18.0 | -y | Steckweg | 1008 |
+| BMS_Kabelstecker_J_SPULE_M | Schaltbox_Wanne | 2.0 | 2.0 | 28.0 x 18.0 | -y | Steckweg | 1008 |
+| BMS_Kabelstecker_J_SPULE_V | Schaltbox_Wanne | 2.0 | 2.0 | 28.0 x 18.0 | -y | Steckweg | 1008 |
+| HV_Stecker_40A (Handraum Ø 75) | HV_Stecker_250A_Flansch | 2.0 | 2.0 | 45.0 x 7.5 | +z | Handraum, Höhenbereich Steckerkörper | 460 |
+| HV_Stecker_40A (Handraum Ø 75) | NV_Stecker_26pol_Schraube_0_Kopf | 2.0 | 3.0 | 3.5 x 2.0 | +z | Handraum, Höhenbereich Steckerkörper | 6 |
+| HV_Stecker_40A (Handraum Ø 75) | NV_Stecker_26pol_Schraube_1_Kopf | 2.0 | 3.0 | 3.5 x 2.0 | +z | Handraum, Höhenbereich Steckerkörper | 6 |
+| Hauptschuetz_2_Spulenstecker | Schmelzsicherung | 1.8 | 28.0 | 1.8 x 32.0 | +y | Greifraum+Steckweg | 1568 |
+| BMS_Kabelstecker_J_VERSORGUNG | HV_Stecker_250A_Schraube_3_Kopf | 1.4 | 5.8 | 8.5 x 1.4 | -x | Greifraum | 57 |
+| NV_Stecker_26pol (Handraum Ø 75) | HV_Stecker_40A_Flansch | 1.0 | 1.0 | 50.0 x 12.5 | +z | Handraum, Höhenbereich Steckerkörper | 452 |
+| NV_Stecker_26pol (Handraum Ø 75) | HV_Stecker_40A_Schraube_2_Schaft | 1.0 | 1.0 | 4.0 x 4.0 | +z | Handraum, Höhenbereich Steckerkörper | 11 |
+| NV_Stecker_26pol (Handraum Ø 75) | HV_Stecker_40A_Schraube_3_Schaft | 1.0 | 1.0 | 4.0 x 4.0 | +z | Handraum, Höhenbereich Steckerkörper | 11 |
+
+**Die drei größten Eindringtiefen (LFP und NMC):** 12,5 mm (Handraum NV-Stecker gegen Gas_Drucksensor), 7,5 mm (Handraum HV 40 A gegen Verriegelungshebel HV 250 A), 7,5 mm (Handraum NV-Stecker gegen Kabelstecker HV 40 A); nur LFP danach 6,8 mm (Schütz-Spulenstecker gegen Pyrosicherung und Schmelz_Halter; hier ist die Zugrichtung auf 30–33 mm Länge verstellt: Greifraum und Steckweg).
+**Einordnung (Deutung durch Opus offen):** 14 der 29 Zeilen sind Handraum-Überlappungen der Deckelstecker untereinander und mit Gas_Drucksensor (Ø 75 gegen Nachbarstecker, Flansche, Schrauben); 4 sind HV 250 A (Freigang und Handraum) gegen Deckel und obere Kühlplatte (Tiefe 2,0 bis 3,0 mm, Freigang läuft auf 95 mm Länge am Deckel entlang); 5 sind BMS-Stecker gegen die Schaltbox-Wanne (je 2,0 mm, Steckweg bzw. Greifraum); 2 BMS-Daisy-Stecker gegeneinander (6,0 mm); 1 BMS-Versorgung gegen Schraubenkopf HV 250 A (1,4 mm Greifraum); 3 Schütz-Spulenstecker (nur LFP).
+
+**Bilder E3 mit Bohrungen neu (CPU, `sv1b/bilder_neu.sh`, Sicherung der alten in `/tmp/claude-1003/SV1b/bilder_alt/`):**
+- Neu: `/home/cae/cae_projekte/batterie/e3/r3d_<V>_{iso,top,bottom,nah}.png` (KiCad-3D, vier Bohrungen sichtbar), `e3/roh/explosion_<V>_roh.png`, `e3/explosion_<V>.json`, `.blend`, `sim/elektrik/e3_platine/platine_<V>_3d_{iso,top,bottom,nah}.png`, `platine_<V>.png`, `platine_<V>_explosion.png`, `explosion_<V>_anker.json`. Zahlen in den Titeln aus `ergebnis_platine.json` (aktualisiert mit `ergebnis_aktualisieren.py`: 1682 Bahnen, 399 Vias, DRC 0/0) und `thermovias_<V>.json` (neu aus `sv1b/e3w`: 144 von 144, davon 3 klein).
+- **Nicht neu erzeugt:** `platine_<V>_einbau.png` (braucht den Pack-Lauf `PACK_E3=1` und schreibt `e2/pack_<V>_e2d_e3*`, die der Video-Agent liest; Stand 2026-11-24 ohne Bohrungen).
+- **Integrationsgrenzen:** Die Explosionsansicht (Blender) kennt keine Bohrungen (Daten `explosion_daten.py` ohne MH-Footprints), zeigt sie also nicht; ihre Beschriftung nennt weiter „Vias 0,6/0,3 mm“, obwohl 3 Thermovias 0,45/0,2 mm haben. Titelzeilen der Bilder tragen noch das Erstelldatum 2026-11-24 (Skript unverändert).
+
+---
+### Stand v0.4 (unverändert)
 
 ## Version 0.4 (Entscheidungen Opus nach v0.3, 2026-11-25 11:42 bis 12:10)
 Quellen: `ergebnis_v04.json` (Auszug aus `cad/pack/entwurf/ergebnis_<V>_e2d_e3c_sv1.json`), `/home/cae/cae_projekte/batterie/e3/cmu_<V>_drc.json`, `sv1b/e3w/thermovias_<V>.json`. Vorherige Stände: v0.3 in `/tmp/claude-1003/SV1b/ERGEBNIS_v03.md`.

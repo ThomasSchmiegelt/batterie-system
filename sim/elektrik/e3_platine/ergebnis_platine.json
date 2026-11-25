@@ -9,7 +9,7 @@
   "drc_typen": [],
   "lagen": 4,
   "erc_skidl_fehler": 0,
-  "leiterbahnen": 1787,
+  "leiterbahnen": 1682,
   "vias": 399,
   "teile_je_klasse": {
    "FPC_24": 1,
@@ -39,7 +39,7 @@
    "BT-324.pruefspannung_V": "1500.0 (ENT-174)"
   },
   "thermovias": {
-   "vias_klein_0_45": 0,
+   "vias_klein_0_45": 3,
    "widerstaende": 36,
    "vias_gesetzt": 144,
    "vias_soll": 144,
@@ -93,7 +93,7 @@
   "drc_typen": [],
   "lagen": 4,
   "erc_skidl_fehler": 0,
-  "leiterbahnen": 1787,
+  "leiterbahnen": 1682,
   "vias": 399,
   "teile_je_klasse": {
    "FPC_24": 1,
@@ -123,7 +123,7 @@
    "BT-324.pruefspannung_V": "1500.0 (ENT-174)"
   },
   "thermovias": {
-   "vias_klein_0_45": 0,
+   "vias_klein_0_45": 3,
    "widerstaende": 36,
    "vias_gesetzt": 144,
    "vias_soll": 144,
