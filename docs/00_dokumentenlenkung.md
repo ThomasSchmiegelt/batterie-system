@@ -55,6 +55,7 @@ Dokumentkopf (Nummer, Version, Status, Ersteller, Prüfer), Hinweis „KI-generi
 | BAT-PM-OPT | ../pm/optimierungen.md | Optimierungsliste (erst konservativ, Bewertung Kosten/Sicherheit/Effizienz) |
 | BAT-KR-00 | ../pm/kreativ/METHODE.md | Kreativmethoden mit Paarvergleich (Werkzeug pm/kreativ) |
 | BAT-DOC-25 | 25_loesungen_aus_kreativmethoden.md | Lösungen aus Kreativsitzungen und Opus-Abwägung, mit Zuschreibung und verworfenen Alternativen |
+| BAT-DOC-26 | 26_modelltest_kolibri.md | Modelltest Kolibri 1: Einsatz, Monitoring, Bewertung |
 
 ---
 *KI-generiert (Claude Opus, 2026-11-11). Status Entwurf. Freigabe nur durch den Autor.*

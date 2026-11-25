@@ -25,6 +25,7 @@ Das gilt dauerhaft. Opus fragt nicht nach, ob verteilt werden soll. Es verteilt 
 | **Sonnet** | Skripte nach Vorgabe, Rechnungen starten und fortsetzen, Tabellen, Bilder und Berichtsentwürfe aus Ergebnisdateien, Übersetzung DE/EN, Dokumente nach Vorlage | Agent `sonnet-umsetzer` (`.claude/agents/`) |
 | **Haiku** | Mechanisches: Log-Auszüge, Listen, Umformatieren, Links und Nummern prüfen, Rechtschreibung | Agent `haiku-helfer` |
 | **PI** (lokal, ohne Werkzeuge) | Patentrecherche, Wissensaufbau, Zweitmeinung zu Texten | `bash forschung/lauf.sh …` (drei Stufen, Zitate automatisch geprüft) |
+| **PI mit Kolibri 1** (Franconia-API, im Test seit 2026-11-25) | Buch schreiben, Recherche-Gegenlauf, Zweitmeinung; alles messen | `forschung/modelltest.sh franconia "Kolibri 1" …`; Einsatz und Messwerte in `docs/26_modelltest_kolibri.md` |
 | **Maschine** | Rechnen (PyBaMM, Elmer, FluidX3D, FreeCAD) | Skripte, losgelöst und pausierbar |
 | **Mensch** (Autor) | Vorgaben, Freigaben, alles nach außen | – |
 

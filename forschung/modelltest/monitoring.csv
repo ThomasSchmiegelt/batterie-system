@@ -1,0 +1,11 @@
+datum;modell;thema;dauer_s;zeichen;belege_ok;belege_fehler;abbruch
+2026-11-25 09:33:00;kolibri;W51;35;2951;0;0;0
+2026-11-25 09:33:55;kolibri;W48;55;2544;2;0;0
+2026-11-25 09:34:55;kolibri;W35;59;3878;0;0;0
+2026-11-25 09:40:34;kolibri;buch_14c_startwerte_chemie;90;1532;22;0;0
+2026-11-25 09:42:20;kolibri;buch_14c_zellen_cad;105;0;0;0;1
+2026-11-25 09:44:06;kolibri;buch_14c_kuehlung_elektrik;105;0;0;0;1
+2026-11-25 09:45:52;kolibri;buch_14c_kosten_crash;105;0;0;0;1
+2026-11-25 09:47:22;kolibri;buch_14c_arbeitsweise_elektronik;90;2087;15;2;0
+2026-11-25 09:49:08;kolibri;buch_14c_arbeitsweise_elektronik_wdh;105;0;0;0;1
+2026-11-25 09:52:05;kolibri;buch_14c_zellen_cad;81;1252;13;0;0

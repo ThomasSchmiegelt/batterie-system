@@ -1,0 +1,31 @@
+# Auftrag an PI: Wissensaufbau zu einem Thema (Batteriesystem)
+
+## Erklärung
+Ein Batteriesystem (REESS = Rechargeable Electric Energy Storage System) speichert elektrische Energie chemisch und wandelt sie bei Bedarf zurück. Im Fahrzeug fließt Hochspannung zwischen den Hochspannungsbussen und dem elektrischen Chassis; der Isolationswiderstand (isolation resistance) beschreibt den Widerstand zwischen diesen Potentialen. Ein hoher Isolationswiderstand verhindert, dass Hochspannung ungewollt auf leitfähige Gehäuseteile übertritt und Personen gefährdet. Die Verordnung schreibt Mindestwerte vor, die vom Bustyp abhängen (separate DC-/AC-Busse, combined Busse), und verlangt, dass die Isolation auch nach Wasserkontakt, Vibration, Schock und thermischer Belastung erhalten bleibt. Zusätzlich muss ein On-Board-Monitoring-System die Isolation überwachen und den Fahrer bei Abfall warnen. Auch die Elektrolytleckage (Austritt der leitfähigen Flüssigkeit) und die thermische Propagation (Kaskadeneffekt einer Zellentartung) werden reguliert.
+
+## Kennwerte
+| Größe | Wert | Einheit | Beleg |
+|---|---|---|---|
+| Isolationswiderstand DC-Bus (separate Busse) | 100 | Ω/Volt | Beleg: "minimum value of 100 Ω/volt of the working voltage for DC buses" (https://publications.europa.eu/resource/celex/42021X2190) |
+| Isolationswiderstand AC-Bus (separate Busse) | 500 | Ω/Volt | Beleg: "minimum value of 500 Ω/volt of the working voltage for AC buses" (https://publications.europa.eu/resource/celex/42021X2190) |
+| Isolationswiderstand combined Busse (galvanisch verbunden) | 500 | Ω/Volt | Beleg: "minimum value of 500 Ω/volt of the working voltage" (https://publications.europa.eu/resource/celex/42021X2190) |
+| Max. Elektrolytleckage mechanischer Schock (aqueous) | 7 | % by volume | Beleg: "no more than 7 per cent by volume of the REESS electrolyte" (https://publications.europa.eu/resource/celex/42021X2190) |
+| Max. Elektrolytleckage mechanischer Schock (aqueous) | 5,0 | l | Beleg: "maximum of 5,0 l leaked from the REESS" (https://publications.europa.eu/resource/celex/42021X2190) |
+| Zeitraum nach Impact ohne Leckage Passagierraum | 60 | Minuten | Beleg: "until 60 minutes after the impact" (https://publications.europa.eu/resource/celex/42021X2190) |
+| Min. Höhe REESS untere Oberfläche (Feuerwiderstand) | 1,5 | m | Beleg: "more than 1.5m above the ground" (https://publications.europa.eu/resource/celex/42021X2190) |
+
+## Bedeutung für unser Batteriesystem
+- Folgerung: Da unser Batteriesystem vermutlich non-aqueous electrolyte verwendet, muss bei mechanischem Schock keine Flüssigkeit nach außen austreten, was die Abdichtung vereinfacht.
+- Folgerung: Der Isolationswiderstand muss nach allen geforderten Tests mindestens 100 Ω/Volt betragen, was unsere Isolationsmaterialien und Konstruktion belastet.
+- Folgerung: Ein On-Board-Isolation-Resistance-Monitoring-System ist erforderlich, wenn die Isolation unter den Mindestwert fällt; dies muss im Fahrzeugkonzept berücksichtigt werden.
+- Folgerung: Bei combined DC- und AC-Bussen mit galvanischer Verbindung gilt ein strengerer Mindestwert von 500 Ω/Volt, was die Auslegung der Isolationen beeinflusst.
+- Folgerung: Die mechanische Integrität des Batteriesystems muss in der spezifischen Einbauposition nachgewiesen werden, um Crash-Szenarien abzudecken.
+
+## Offene Fragen
+1. Welchen Bustyp (separate DC/AC-Busse oder combined Busse mit galvanischer Verbindung) verwendet unser Batteriesystem?
+2. Ist unser Elektrolyt aqueous oder non-aqueous, und welche Konsequenzen ergeben sich daraus für die Leckage-Anforderungen?
+3. Wie wird die mechanische Integrität des Batteriesystems in unserer spezifischen Einbauposition nachgewiesen (Crash-Test oder Simulation)?
+4. Welche Isolationsmaterialien und Schutzgrade (IPXXB) kommen zum Einsatz, um die Mindestwerte nach Wasserkontakt und mechanischer Belastung zu erfüllen?
+
+## Auffälliges
+nichts

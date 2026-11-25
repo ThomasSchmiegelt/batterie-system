@@ -1,0 +1,1038 @@
+{
+ "anforderungen": [
+  {
+   "id": "REQ-P01",
+   "titel": "Anwendung / Fahrzeugklasse",
+   "wert": "Pkw, Fahrzeugmasse etwa 1500 kg, Anhaltswert (Autor 2026-11-16); Auslegung rechn",
+   "status": "Vorgabe Autor",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-P02",
+   "titel": "nutzbarer Energieinhalt",
+   "wert": "aus Reichweite 400 km (Vorgabe Autor 2026-11-16) × Verbrauch (Annahme), Vergleic",
+   "status": "Reichweite: Vorgabe Autor",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-P03",
+   "titel": "Systemspannung (Nenn, min, max)",
+   "wert": "U_nenn 720–880 V, U_min und U_max ausweisen (Autor, Freigaberunde 2026-11-23); 8",
+   "status": "festgelegt",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-P04",
+   "titel": "Dauer- und Spitzenleistung Entladen",
+   "wert": "P_spitze nach Startwert (10 s), P_dauer ≥ 60 kW (Autor, Freigaberunde 2026-11-23",
+   "status": "festgelegt",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-P05",
+   "titel": "Schnellladen 10 → 80 %",
+   "wert": "LFP 20 min, NMC-4680 30 min (Autor 2026-11-17 „30 minuten“, nach K1b; Variantenu",
+   "status": "festgelegt",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-P06",
+   "titel": "Zellchemie",
+   "wert": "zwei Varianten gleicher Spezifikation (Autor 2026-11-16): LFP-Blade prismatisch ",
+   "status": "entschieden",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-P07",
+   "titel": "Bauraum (L × B × H) und Masse",
+   "wert": "L ≤ 2400 mm (Autor, Freigaberunde 2026-11-23); B = 1430 mm (ENT-030, Autor 2026-",
+   "status": "festgelegt",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-P08",
+   "titel": "Umgebungstemperatur Betrieb und Laden",
+   "wert": "Betrieb −20 … +45 °C, Laden 0 … +45 °C (Vorheizen unter 0 °C) (Autor, Freigaberu",
+   "status": "festgelegt",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-P09",
+   "titel": "max. Zelltemperatur und Spreizung zwischen den Zellen",
+   "wert": "T_max ≤ 45 °C, Spreizung ΔT ≤ 5 K zwischen den Zellen (Autor, Freigaberunde 2026",
+   "status": "festgelegt",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-P10",
+   "titel": "Lebensdauer (Zyklen, Jahre, Restkapazität)",
+   "wert": "SOH ≥ 70 % nach 200.000 km (Autor, Freigaberunde 2026-11-23)",
+   "status": "festgelegt",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-P11",
+   "titel": "Sicherheit: keine Ausbreitung des thermischen Durchgehens bzw. Warnzeit nach Norm",
+   "wert": "nach Norm (BAT-DOC-07)",
+   "status": "offen",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-P12",
+   "titel": "Kühlmittel und Anschlüsse",
+   "wert": "Kühlmittel Wasser-Glykol, Δp je Platte ≤ 0,5 bar, Verteilung ±10 % (Autor, Freig",
+   "status": "festgelegt",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-P13",
+   "titel": "Schutzart, Isolation, Berührschutz",
+   "wert": "IP67, R_iso ≥ 100 Ω/V (UN R100, DC-Bus, W35) (Autor, Freigaberunde 2026-11-23)",
+   "status": "festgelegt",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-P14",
+   "titel": "Mechanik: Stoß, Schwingung, Crash",
+   "wert": "Zellverschiebung ≤ 0,5 mm bei Pfahl 5 kJ und bei Quetschung nach R100 (100–105 k",
+   "status": "festgelegt",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-P15",
+   "titel": "Messung und BMS: Zellspannung, Temperatur, Isolationswächter",
+   "wert": "Messumfang: Zellspannung je Reihe, Temperaturfühler, Isolationswächter (Stücklis",
+   "status": "festgelegt",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-P16",
+   "titel": "Herstellkosten je Variante ausweisen (€/kWh Pack, Anteile je Baugruppe)",
+   "wert": "kein Zielwert (Autor 2026-11-18: „lass offen“); Preise als Schätzung oder verifi",
+   "status": "vorgeschlagen",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-D01",
+   "titel": "Jede Zahl ist rückverfolgbar (Rechnung mit Datei oder Quelle mit wörtlichem Beleg)",
+   "wert": "",
+   "status": "eingerichtet",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-D02",
+   "titel": "Jedes Dokument hat einen Kopf nach BAT-DOC-00 und ist als KI-generiert gekennzeichnet",
+   "wert": "",
+   "status": "eingerichtet",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-D03",
+   "titel": "Jede Anforderung hat einen Nachweis in BAT-DOC-03",
+   "wert": "",
+   "status": "eingerichtet",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-D04",
+   "titel": "KI-Einsatz protokolliert: Modell, Aufgabe, Prüfung",
+   "wert": "",
+   "status": "eingerichtet",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-D05",
+   "titel": "Freigabe nur durch den Menschen",
+   "wert": "",
+   "status": "eingerichtet",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-D06",
+   "titel": "Erwartung vor jeder Rechnung, Vergleich danach",
+   "wert": "",
+   "status": "eingerichtet",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-D07",
+   "titel": "Fremde Inhalte und Geheimnisse nicht im Repo, Lizenzen erfasst",
+   "wert": "",
+   "status": "eingerichtet",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-D08",
+   "titel": "Patentrecherche ohne rechtliche Bewertung; Freedom to Operate nur durch Fachleute",
+   "wert": "",
+   "status": "eingerichtet",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-D09",
+   "titel": "Rechnungen reproduzierbar: Skript, Eingaben, Softwarestand (requirements.txt, Versionen)",
+   "wert": "",
+   "status": "eingerichtet",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-D11",
+   "titel": "Jede Entscheidung als Akte an Bauteil und Merkmal gebunden; CAD-Maße nur aus diesen Akten",
+   "wert": "",
+   "status": "eingerichtet",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-D12",
+   "titel": "Bauteilgespräch: jedes Bauteil begründet seine Form mit Aktenverweisen",
+   "wert": "",
+   "status": "eingerichtet (Test BT-100)",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-D13",
+   "titel": "Projektdokumentation als Abschlussvideo (Zelle → … → System)",
+   "wert": "",
+   "status": "freigegeben (Autor 2026-11-23)",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-D14",
+   "titel": "Unternehmenspräsentation am Projektende, erzeugt aus den Projektdaten; jeder Vorgang liefert unterwegs seinen Folienbaustein",
+   "wert": "",
+   "status": "freigegeben (Autor 2026-11-23)",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-D10",
+   "titel": "Aufwand messbar: Laufzeiten und Agentenaufrufe je Arbeitspaket",
+   "wert": "",
+   "status": "eingerichtet",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-G01",
+   "titel": "Maschinenrichtlinie (EU 2023/1230)",
+   "wert": "",
+   "status": "nicht anwendbar (zu belegen, W37)",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-G02",
+   "titel": "Kennzeichnung, CO₂-Fußabdruck und Batteriepass nach VO (EU) 2023/1542",
+   "wert": "Batteriepass, Kennzeichnung und CO₂-Fußabdruck nach VO (EU) 2023/1542 (Autor, Fr",
+   "status": "festgelegt",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-P17",
+   "titel": "EMV der Elektronik (BMS, CMU, Schützansteuerung)",
+   "wert": "Störaussendung CISPR 25 Klasse 3 (Vorschlag); Störfestigkeit ISO 11452-2/-4; Tra",
+   "status": "festgelegt",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-P18",
+   "titel": "Funktionale Sicherheit nach ISO 26262",
+   "wert": "ASIL je Sicherheitsziel nach HARA BAT-DOC-24 (Vorschlag: SG-01 ASIL D, SG-02/03/",
+   "status": "festgelegt",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-P19",
+   "titel": "Isolationskoordination (Luft- und Kriechstrecken) auf Leiterplatten und in der Schaltbox",
+   "wert": "IEC 60664-1, Arbeitsspannung = U_max (REQ-P03), Verschmutzungsgrad 2, Überspannu",
+   "status": "festgelegt",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-P20",
+   "titel": "Umweltfestigkeit und Bauteilqualifikation der Elektronik",
+   "wert": "ISO 16750-1…5 (Klima, Schwingung, elektrisch); Bauteile AEC-Q100/Q101/Q200; Fert",
+   "status": "festgelegt",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-P21",
+   "titel": "Cybersicherheit BMS",
+   "wert": "ISO/SAE 21434, UN R155/R156 – Vorschlag: im Testprojekt nur benennen, nicht ausl",
+   "status": "festgelegt",
+   "quelle": "pm/anforderungen.json"
+  },
+  {
+   "id": "REQ-D15",
+   "titel": "Lösungssuche nachvollziehbar: Alternativen einer Akte mit echter Abwägung stammen aus einer Kreativmethode (Morphologischer Kasten, TRIZ, Kopfstand) und sind per Paarvergleich bewertet",
+   "wert": "Gewichtung der Kriterien durch den Autor; Paarurteile mit Begründung und Konsist",
+   "status": "festgelegt",
+   "quelle": "pm/anforderungen.json"
+  }
+ ],
+ "normen": [
+  {
+   "norm": "UN-Regelung Nr. 100 (Rev. 3)",
+   "thema": "Sicherheit des elektrischen Antriebs, Batterie (REESS): Schwingung, Stoß, Quetschung, Feuer, Kurzschluss, Über- und Tiefentladung, Übertemperatur, Ausbreitung",
+   "verfuegbar": "frei (UNECE)",
+   "quelle": "docs/07_normen_und_vorschriften.md"
+  },
+  {
+   "norm": "UN-Regelungen Nr. 94, 95, 135",
+   "thema": "Frontal-, Seiten- und **Pfahlaufprall** im Fahrzeug, elektrische Sicherheit danach",
+   "verfuegbar": "frei (UNECE)",
+   "quelle": "docs/07_normen_und_vorschriften.md"
+  },
+  {
+   "norm": "ISO 26262, ISO/SAE 21434, UN R155/R156",
+   "thema": "funktionale Sicherheit und Cybersicherheit des BMS",
+   "verfuegbar": "ISO kostenpflichtig, UN frei",
+   "quelle": "docs/07_normen_und_vorschriften.md"
+  },
+  {
+   "norm": "CISPR 25, ISO 11452-2/-4, ISO 7637-2/-3, ISO 10605, UN R10",
+   "thema": "EMV der Elektronik (REQ-P17)",
+   "verfuegbar": "ISO/IEC kostenpflichtig; Pegel aus Gedächtnis sind Annahmen",
+   "quelle": "docs/07_normen_und_vorschriften.md"
+  },
+  {
+   "norm": "IEC 60664-1",
+   "thema": "Luft- und Kriechstrecken (REQ-P19)",
+   "verfuegbar": "kostenpflichtig",
+   "quelle": "docs/07_normen_und_vorschriften.md"
+  },
+  {
+   "norm": "EU-Batterieverordnung (EU) 2023/1542",
+   "thema": "Kennzeichnung, CO₂-Fußabdruck, Batteriepass, Recyclinganteil, Sorgfaltspflicht, Entnehmbarkeit",
+   "verfuegbar": "frei (EUR-Lex)",
+   "quelle": "docs/07_normen_und_vorschriften.md"
+  }
+ ],
+ "sicherheitsziele": [
+  {
+   "sg": "SG-01",
+   "kurztext": "Verhindere, dass eine Zelle über U_max geladen wird",
+   "asil": "D",
+   "quelle": "docs/24_gefahrenanalyse_hara.md"
+  },
+  {
+   "sg": "SG-02",
+   "kurztext": "Verhindere das Laden einer tiefentladenen Zelle",
+   "asil": "C",
+   "quelle": "docs/24_gefahrenanalyse_hara.md"
+  },
+  {
+   "sg": "SG-03",
+   "kurztext": "Verhindere Zelltemperaturen über T_krit und Laden außerhalb des Temperaturfensters",
+   "asil": "C",
+   "quelle": "docs/24_gefahrenanalyse_hara.md"
+  },
+  {
+   "sg": "SG-04",
+   "kurztext": "Trenne bei Überstrom und Kurzschluss",
+   "asil": "C",
+   "quelle": "docs/24_gefahrenanalyse_hara.md"
+  },
+  {
+   "sg": "SG-05",
+   "kurztext": "Verhindere unerwartetes Trennen während der Fahrt",
+   "asil": "B",
+   "quelle": "docs/24_gefahrenanalyse_hara.md"
+  },
+  {
+   "sg": "SG-06",
+   "kurztext": "Trenne Hochvolt nach Crash und auf Abschaltbefehl",
+   "asil": "B",
+   "quelle": "docs/24_gefahrenanalyse_hara.md"
+  },
+  {
+   "sg": "SG-07",
+   "kurztext": "Erkenne Isolationsfehler und melde sie",
+   "asil": "B",
+   "quelle": "docs/24_gefahrenanalyse_hara.md"
+  },
+  {
+   "sg": "SG-08",
+   "kurztext": "Warne die Insassen rechtzeitig vor einem thermischen Ereignis",
+   "asil": "C",
+   "quelle": "docs/24_gefahrenanalyse_hara.md"
+  }
+ ],
+ "ketten": [
+  {
+   "req": "REQ-P18",
+   "req_titel": "Funktionale Sicherheit nach ISO 26262",
+   "ent": "ENT-192",
+   "ent_status": "vorgeschlagen (Opus, delegiert durch Autor 2026-11-23)",
+   "bt": "BT-323",
+   "bt_name": "Ausgleichskreis",
+   "nachweis": [
+    "B-BAT-055",
+    "sim/elektrik/e3d_fmeda/ERGEBNIS.md",
+    "sim/elektrik/e3_platine/ERWARTUNG.md Nachtrag 7"
+   ],
+   "quelle": "pm/graph/graph.json; pm/entscheidungen/ENT-192.md",
+   "graph_req_ent": true
+  },
+  {
+   "req": "REQ-P19",
+   "req_titel": "Isolationskoordination (Luft- und Kriechstrecken) auf Leiterplatten und in der Schaltbox",
+   "ent": "ENT-195",
+   "ent_status": "entschieden (Opus, delegiert durch Autor 2026-11-23)",
+   "bt": "BT-311",
+   "bt_name": "BMS-Leiterplatte",
+   "nachweis": [
+    "sim/elektrik/e3c_bms_platine/ERWARTUNG.md",
+    "sim/elektrik/e3c_bms_platine/ERGEBNIS.md"
+   ],
+   "quelle": "pm/graph/graph.json; pm/entscheidungen/ENT-195.md",
+   "graph_req_ent": true
+  },
+  {
+   "req": "REQ-P15",
+   "req_titel": "Messung und BMS: Zellspannung, Temperatur, Isolationswächter",
+   "ent": "ENT-184",
+   "ent_status": "entschieden (Mensch)",
+   "bt": "BT-321",
+   "bt_name": "CMU-Leiterplatte",
+   "nachweis": [
+    "B-BAT-051",
+    "pm/kreativ/KR1/ERGEBNIS.md",
+    "pm/kreativ/KR1/rang.json",
+    "sim/elektrik/e3_platine/ergebnis_waerme.json"
+   ],
+   "quelle": "pm/graph/graph.json; pm/entscheidungen/ENT-184.md",
+   "graph_req_ent": true
+  }
+ ],
+ "zahlen": [
+  {
+   "name": "CMU LFP teile",
+   "wert": 110,
+   "quelle": "sim/elektrik/e3_platine/ergebnis_platine.json #LFP.teile"
+  },
+  {
+   "name": "CMU LFP drc_verstoesse",
+   "wert": 0,
+   "quelle": "sim/elektrik/e3_platine/ergebnis_platine.json #LFP.drc_verstoesse"
+  },
+  {
+   "name": "CMU LFP drc_unverbunden",
+   "wert": 0,
+   "quelle": "sim/elektrik/e3_platine/ergebnis_platine.json #LFP.drc_unverbunden"
+  },
+  {
+   "name": "CMU LFP lagen",
+   "wert": 4,
+   "quelle": "sim/elektrik/e3_platine/ergebnis_platine.json #LFP.lagen"
+  },
+  {
+   "name": "CMU LFP laenge_mm",
+   "wert": 120.0,
+   "quelle": "sim/elektrik/e3_platine/ergebnis_platine.json #LFP.laenge_mm"
+  },
+  {
+   "name": "CMU LFP breite_mm",
+   "wert": 60.0,
+   "quelle": "sim/elektrik/e3_platine/ergebnis_platine.json #LFP.breite_mm"
+  },
+  {
+   "name": "CMU NMC teile",
+   "wert": 110,
+   "quelle": "sim/elektrik/e3_platine/ergebnis_platine.json #NMC.teile"
+  },
+  {
+   "name": "CMU NMC drc_verstoesse",
+   "wert": 0,
+   "quelle": "sim/elektrik/e3_platine/ergebnis_platine.json #NMC.drc_verstoesse"
+  },
+  {
+   "name": "CMU NMC drc_unverbunden",
+   "wert": 0,
+   "quelle": "sim/elektrik/e3_platine/ergebnis_platine.json #NMC.drc_unverbunden"
+  },
+  {
+   "name": "CMU NMC lagen",
+   "wert": 4,
+   "quelle": "sim/elektrik/e3_platine/ergebnis_platine.json #NMC.lagen"
+  },
+  {
+   "name": "CMU NMC laenge_mm",
+   "wert": 120.0,
+   "quelle": "sim/elektrik/e3_platine/ergebnis_platine.json #NMC.laenge_mm"
+  },
+  {
+   "name": "CMU NMC breite_mm",
+   "wert": 60.0,
+   "quelle": "sim/elektrik/e3_platine/ergebnis_platine.json #NMC.breite_mm"
+  },
+  {
+   "name": "BMS teile",
+   "wert": 134,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_platine.json #teile"
+  },
+  {
+   "name": "BMS drc_verstoesse",
+   "wert": 0,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_platine.json #drc_verstoesse"
+  },
+  {
+   "name": "BMS drc_unverbunden",
+   "wert": 0,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_platine.json #drc_unverbunden"
+  },
+  {
+   "name": "BMS lagen",
+   "wert": 4,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_platine.json #lagen"
+  },
+  {
+   "name": "BMS laenge_mm",
+   "wert": 160.0,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_platine.json #laenge_mm"
+  },
+  {
+   "name": "BMS breite_mm",
+   "wert": 100.0,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_platine.json #breite_mm"
+  },
+  {
+   "name": "FMEDA Ziel SG-01 ASIL",
+   "wert": "D",
+   "quelle": "sim/elektrik/e3d_fmeda/ergebnis.json #ziel.SG-01"
+  },
+  {
+   "name": "FMEDA Ziel SG-01 SPFM",
+   "wert": 0.99,
+   "quelle": "sim/elektrik/e3d_fmeda/ergebnis.json #ziel.SG-01"
+  },
+  {
+   "name": "FMEDA Ziel SG-01 LFM",
+   "wert": 0.9,
+   "quelle": "sim/elektrik/e3d_fmeda/ergebnis.json #ziel.SG-01"
+  },
+  {
+   "name": "FMEDA Ziel SG-02 ASIL",
+   "wert": "C",
+   "quelle": "sim/elektrik/e3d_fmeda/ergebnis.json #ziel.SG-02"
+  },
+  {
+   "name": "FMEDA Ziel SG-02 SPFM",
+   "wert": 0.97,
+   "quelle": "sim/elektrik/e3d_fmeda/ergebnis.json #ziel.SG-02"
+  },
+  {
+   "name": "FMEDA Ziel SG-02 LFM",
+   "wert": 0.8,
+   "quelle": "sim/elektrik/e3d_fmeda/ergebnis.json #ziel.SG-02"
+  },
+  {
+   "name": "FMEDA CMU LFP SG-01 SPFM",
+   "wert": 1.0,
+   "quelle": "sim/elektrik/e3d_fmeda/ergebnis.json #cmu.LFP.SG-01.SPFM"
+  },
+  {
+   "name": "FMEDA CMU LFP SG-01 LFM",
+   "wert": 0.97,
+   "quelle": "sim/elektrik/e3d_fmeda/ergebnis.json #cmu.LFP.SG-01.LFM"
+  },
+  {
+   "name": "FMEDA CMU LFP SG-02 SPFM",
+   "wert": 0.98,
+   "quelle": "sim/elektrik/e3d_fmeda/ergebnis.json #cmu.LFP.SG-02.SPFM"
+  },
+  {
+   "name": "FMEDA CMU LFP SG-02 LFM",
+   "wert": 0.98,
+   "quelle": "sim/elektrik/e3d_fmeda/ergebnis.json #cmu.LFP.SG-02.LFM"
+  },
+  {
+   "name": "FMEDA CMU LFP Teile",
+   "wert": 110,
+   "quelle": "sim/elektrik/e3d_fmeda/ergebnis.json #cmu.LFP.Teile"
+  },
+  {
+   "name": "FMEDA CMU NMC SG-01 SPFM",
+   "wert": 1.0,
+   "quelle": "sim/elektrik/e3d_fmeda/ergebnis.json #cmu.NMC.SG-01.SPFM"
+  },
+  {
+   "name": "FMEDA CMU NMC SG-01 LFM",
+   "wert": 0.97,
+   "quelle": "sim/elektrik/e3d_fmeda/ergebnis.json #cmu.NMC.SG-01.LFM"
+  },
+  {
+   "name": "FMEDA CMU NMC SG-02 SPFM",
+   "wert": 0.98,
+   "quelle": "sim/elektrik/e3d_fmeda/ergebnis.json #cmu.NMC.SG-02.SPFM"
+  },
+  {
+   "name": "FMEDA CMU NMC SG-02 LFM",
+   "wert": 0.98,
+   "quelle": "sim/elektrik/e3d_fmeda/ergebnis.json #cmu.NMC.SG-02.LFM"
+  },
+  {
+   "name": "FMEDA CMU NMC Teile",
+   "wert": 110,
+   "quelle": "sim/elektrik/e3d_fmeda/ergebnis.json #cmu.NMC.Teile"
+  },
+  {
+   "name": "SPICE Vorladung U_V",
+   "wert": 912.0,
+   "quelle": "sim/elektrik/e3_platine/ergebnis_vorladung.json #U_V"
+  },
+  {
+   "name": "SPICE Vorladung C_F",
+   "wert": 0.001,
+   "quelle": "sim/elektrik/e3_platine/ergebnis_vorladung.json #C_F"
+  },
+  {
+   "name": "SPICE Vorladung R_Ohm",
+   "wert": 100.0,
+   "quelle": "sim/elektrik/e3_platine/ergebnis_vorladung.json #R_Ohm"
+  },
+  {
+   "name": "SPICE Vorladung I_spitze_A",
+   "wert": 9.12,
+   "quelle": "sim/elektrik/e3_platine/ergebnis_vorladung.json #I_spitze_A"
+  },
+  {
+   "name": "SPICE Vorladung E_Widerstand_J",
+   "wert": 415.8,
+   "quelle": "sim/elektrik/e3_platine/ergebnis_vorladung.json #E_Widerstand_J"
+  },
+  {
+   "name": "SPICE Vorladung E_Kondensator_J",
+   "wert": 415.87,
+   "quelle": "sim/elektrik/e3_platine/ergebnis_vorladung.json #E_Kondensator_J"
+  },
+  {
+   "name": "SPICE Vorladung t_95_ms",
+   "wert": 299.57,
+   "quelle": "sim/elektrik/e3_platine/ergebnis_vorladung.json #t_95_ms"
+  },
+  {
+   "name": "SPICE Vorladung tau_ms",
+   "wert": 100.0,
+   "quelle": "sim/elektrik/e3_platine/ergebnis_vorladung.json #tau_ms"
+  },
+  {
+   "name": "SPICE Vorladung u_C_Ende_V",
+   "wert": 912.0,
+   "quelle": "sim/elektrik/e3_platine/ergebnis_vorladung.json #u_C_Ende_V"
+  },
+  {
+   "name": "SPICE Vorladung t_Ende_s",
+   "wert": 1.5,
+   "quelle": "sim/elektrik/e3_platine/ergebnis_vorladung.json #t_Ende_s"
+  },
+  {
+   "name": "SPICE Vorladung Anforderung_Puls_J",
+   "wert": 450.0,
+   "quelle": "sim/elektrik/e3_platine/ergebnis_vorladung.json #Anforderung_Puls_J"
+  },
+  {
+   "name": "SPICE Vorladung Puls_ok",
+   "wert": true,
+   "quelle": "sim/elektrik/e3_platine/ergebnis_vorladung.json #Puls_ok"
+  },
+  {
+   "name": "SPICE Vorladung E_800V_J",
+   "wert": 320.0,
+   "quelle": "sim/elektrik/e3_platine/ergebnis_vorladung.json #E_800V_J"
+  },
+  {
+   "name": "SPICE Schuetz zener_anzug zener",
+   "wert": true,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #zener_anzug.zener"
+  },
+  {
+   "name": "SPICE Schuetz zener_anzug t_open_s",
+   "wert": 0.1,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #zener_anzug.t_open_s"
+  },
+  {
+   "name": "SPICE Schuetz zener_anzug i_max_A",
+   "wert": 1.5,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #zener_anzug.i_max_A"
+  },
+  {
+   "name": "SPICE Schuetz zener_anzug t_fall_bis_0_15_ms",
+   "wert": 1.43,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #zener_anzug.t_fall_bis_0_15_ms"
+  },
+  {
+   "name": "SPICE Schuetz zener_anzug v_n_max_V",
+   "wert": 37.11,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #zener_anzug.v_n_max_V"
+  },
+  {
+   "name": "SPICE Schuetz zener_anzug i_bei_oeffnen_A",
+   "wert": 1.5,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #zener_anzug.i_bei_oeffnen_A"
+  },
+  {
+   "name": "SPICE Schuetz zener_anzug E_zener_J",
+   "wert": 0.05,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #zener_anzug.E_zener_J"
+  },
+  {
+   "name": "SPICE Schuetz zener_halten zener",
+   "wert": true,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #zener_halten.zener"
+  },
+  {
+   "name": "SPICE Schuetz zener_halten t_open_s",
+   "wert": 0.2,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #zener_halten.t_open_s"
+  },
+  {
+   "name": "SPICE Schuetz zener_halten i_max_A",
+   "wert": 1.5,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #zener_halten.i_max_A"
+  },
+  {
+   "name": "SPICE Schuetz zener_halten t_fall_bis_0_15_ms",
+   "wert": 0.26,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #zener_halten.t_fall_bis_0_15_ms"
+  },
+  {
+   "name": "SPICE Schuetz zener_halten v_n_max_V",
+   "wert": 37.0,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #zener_halten.v_n_max_V"
+  },
+  {
+   "name": "SPICE Schuetz zener_halten i_bei_oeffnen_A",
+   "wert": 0.43,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #zener_halten.i_bei_oeffnen_A"
+  },
+  {
+   "name": "SPICE Schuetz zener_halten E_zener_J",
+   "wert": 0.004356543765346939,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #zener_halten.E_zener_J"
+  },
+  {
+   "name": "SPICE Schuetz zener_halten i_halt_mittel_A",
+   "wert": 0.44,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #zener_halten.i_halt_mittel_A"
+  },
+  {
+   "name": "SPICE Schuetz zener_halten i_halt_min_A",
+   "wert": 0.43,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #zener_halten.i_halt_min_A"
+  },
+  {
+   "name": "SPICE Schuetz zener_halten i_halt_max_A",
+   "wert": 0.44,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #zener_halten.i_halt_max_A"
+  },
+  {
+   "name": "SPICE Schuetz zener_halten welligkeit_pp_rel",
+   "wert": 0.01,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #zener_halten.welligkeit_pp_rel"
+  },
+  {
+   "name": "SPICE Schuetz zener_halten P_halt_Spule_W",
+   "wert": 1.52,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #zener_halten.P_halt_Spule_W"
+  },
+  {
+   "name": "SPICE Schuetz zener_halten P_anzug_Spule_W",
+   "wert": 18.0,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #zener_halten.P_anzug_Spule_W"
+  },
+  {
+   "name": "SPICE Schuetz zener_halten P_einsparung_rel",
+   "wert": 0.92,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #zener_halten.P_einsparung_rel"
+  },
+  {
+   "name": "SPICE Schuetz freilauf_anzug zener",
+   "wert": false,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #freilauf_anzug.zener"
+  },
+  {
+   "name": "SPICE Schuetz freilauf_anzug t_open_s",
+   "wert": 0.1,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #freilauf_anzug.t_open_s"
+  },
+  {
+   "name": "SPICE Schuetz freilauf_anzug i_max_A",
+   "wert": 1.5,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #freilauf_anzug.i_max_A"
+  },
+  {
+   "name": "SPICE Schuetz freilauf_anzug t_fall_bis_0_15_ms",
+   "wert": 8.88,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #freilauf_anzug.t_fall_bis_0_15_ms"
+  },
+  {
+   "name": "SPICE Schuetz freilauf_anzug v_n_max_V",
+   "wert": 0.8,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #freilauf_anzug.v_n_max_V"
+  },
+  {
+   "name": "SPICE Schuetz freilauf_anzug i_bei_oeffnen_A",
+   "wert": 1.5,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #freilauf_anzug.i_bei_oeffnen_A"
+  },
+  {
+   "name": "SPICE Schuetz freilauf_halten zener",
+   "wert": false,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #freilauf_halten.zener"
+  },
+  {
+   "name": "SPICE Schuetz freilauf_halten t_open_s",
+   "wert": 0.2,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #freilauf_halten.t_open_s"
+  },
+  {
+   "name": "SPICE Schuetz freilauf_halten i_max_A",
+   "wert": 1.5,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #freilauf_halten.i_max_A"
+  },
+  {
+   "name": "SPICE Schuetz freilauf_halten t_fall_bis_0_15_ms",
+   "wert": 2.64,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #freilauf_halten.t_fall_bis_0_15_ms"
+  },
+  {
+   "name": "SPICE Schuetz freilauf_halten v_n_max_V",
+   "wert": 0.71,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #freilauf_halten.v_n_max_V"
+  },
+  {
+   "name": "SPICE Schuetz freilauf_halten i_bei_oeffnen_A",
+   "wert": 0.43,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #freilauf_halten.i_bei_oeffnen_A"
+  },
+  {
+   "name": "SPICE Schuetz freilauf_halten i_halt_mittel_A",
+   "wert": 0.44,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #freilauf_halten.i_halt_mittel_A"
+  },
+  {
+   "name": "SPICE Schuetz freilauf_halten i_halt_min_A",
+   "wert": 0.43,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #freilauf_halten.i_halt_min_A"
+  },
+  {
+   "name": "SPICE Schuetz freilauf_halten i_halt_max_A",
+   "wert": 0.44,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #freilauf_halten.i_halt_max_A"
+  },
+  {
+   "name": "SPICE Schuetz freilauf_halten welligkeit_pp_rel",
+   "wert": 0.01,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #freilauf_halten.welligkeit_pp_rel"
+  },
+  {
+   "name": "SPICE Schuetz freilauf_halten P_halt_Spule_W",
+   "wert": 1.52,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #freilauf_halten.P_halt_Spule_W"
+  },
+  {
+   "name": "SPICE Schuetz freilauf_halten P_anzug_Spule_W",
+   "wert": 18.0,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #freilauf_halten.P_anzug_Spule_W"
+  },
+  {
+   "name": "SPICE Schuetz freilauf_halten P_einsparung_rel",
+   "wert": 0.92,
+   "quelle": "sim/elektrik/e3c_bms_platine/ergebnis_schuetz.json #freilauf_halten.P_einsparung_rel"
+  },
+  {
+   "name": "Packmasse LFP masse_bekannt_kg",
+   "wert": 619.85,
+   "quelle": "cad/pack/entwurf/ergebnis_LFP_e2d_e3c.json #masse_bekannt_kg"
+  },
+  {
+   "name": "Packmasse NMC masse_bekannt_kg",
+   "wert": 482.41,
+   "quelle": "cad/pack/entwurf/ergebnis_NMC_e2d_e3c.json #masse_bekannt_kg"
+  }
+ ],
+ "bilder": [
+  {
+   "pfad": "sim/elektrik/e3_platine/platine_LFP.png",
+   "quelle": "sim/elektrik/e3_platine/platine_LFP.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3_platine/platine_LFP_3d_bottom.png",
+   "quelle": "sim/elektrik/e3_platine/platine_LFP_3d_bottom.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3_platine/platine_LFP_3d_iso.png",
+   "quelle": "sim/elektrik/e3_platine/platine_LFP_3d_iso.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3_platine/platine_LFP_3d_nah.png",
+   "quelle": "sim/elektrik/e3_platine/platine_LFP_3d_nah.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3_platine/platine_LFP_3d_top.png",
+   "quelle": "sim/elektrik/e3_platine/platine_LFP_3d_top.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3_platine/platine_LFP_einbau.png",
+   "quelle": "sim/elektrik/e3_platine/platine_LFP_einbau.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3_platine/platine_LFP_explosion.png",
+   "quelle": "sim/elektrik/e3_platine/platine_LFP_explosion.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3_platine/platine_NMC.png",
+   "quelle": "sim/elektrik/e3_platine/platine_NMC.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3_platine/platine_NMC_3d_bottom.png",
+   "quelle": "sim/elektrik/e3_platine/platine_NMC_3d_bottom.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3_platine/platine_NMC_3d_iso.png",
+   "quelle": "sim/elektrik/e3_platine/platine_NMC_3d_iso.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3_platine/platine_NMC_3d_nah.png",
+   "quelle": "sim/elektrik/e3_platine/platine_NMC_3d_nah.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3_platine/platine_NMC_3d_top.png",
+   "quelle": "sim/elektrik/e3_platine/platine_NMC_3d_top.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3_platine/platine_NMC_einbau.png",
+   "quelle": "sim/elektrik/e3_platine/platine_NMC_einbau.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3_platine/platine_NMC_explosion.png",
+   "quelle": "sim/elektrik/e3_platine/platine_NMC_explosion.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3_platine/schaltbild_cmu.png",
+   "quelle": "sim/elektrik/e3_platine/schaltbild_cmu.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3_platine/schaltplan_LFP_afe.png",
+   "quelle": "sim/elektrik/e3_platine/schaltplan_LFP_afe.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3_platine/schaltplan_LFP_daisy.png",
+   "quelle": "sim/elektrik/e3_platine/schaltplan_LFP_daisy.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3_platine/schaltplan_LFP_deckblatt.png",
+   "quelle": "sim/elektrik/e3_platine/schaltplan_LFP_deckblatt.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3_platine/schaltplan_LFP_kanaele.png",
+   "quelle": "sim/elektrik/e3_platine/schaltplan_LFP_kanaele.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3_platine/schaltplan_LFP_kanal.png",
+   "quelle": "sim/elektrik/e3_platine/schaltplan_LFP_kanal.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3_platine/schaltplan_LFP_ntc_stecker.png",
+   "quelle": "sim/elektrik/e3_platine/schaltplan_LFP_ntc_stecker.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3_platine/schaltplan_LFP_sekundaerschutz.png",
+   "quelle": "sim/elektrik/e3_platine/schaltplan_LFP_sekundaerschutz.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3_platine/schaltplan_NMC_afe.png",
+   "quelle": "sim/elektrik/e3_platine/schaltplan_NMC_afe.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3_platine/schaltplan_NMC_daisy.png",
+   "quelle": "sim/elektrik/e3_platine/schaltplan_NMC_daisy.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3_platine/schaltplan_NMC_deckblatt.png",
+   "quelle": "sim/elektrik/e3_platine/schaltplan_NMC_deckblatt.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3_platine/schaltplan_NMC_kanaele.png",
+   "quelle": "sim/elektrik/e3_platine/schaltplan_NMC_kanaele.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3_platine/schaltplan_NMC_kanal.png",
+   "quelle": "sim/elektrik/e3_platine/schaltplan_NMC_kanal.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3_platine/schaltplan_NMC_ntc_stecker.png",
+   "quelle": "sim/elektrik/e3_platine/schaltplan_NMC_ntc_stecker.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3_platine/schaltplan_NMC_sekundaerschutz.png",
+   "quelle": "sim/elektrik/e3_platine/schaltplan_NMC_sekundaerschutz.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3_platine/spice_ausgleich_vorladung.png",
+   "quelle": "sim/elektrik/e3_platine/spice_ausgleich_vorladung.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3c_bms_platine/platine_bms.png",
+   "quelle": "sim/elektrik/e3c_bms_platine/platine_bms.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3c_bms_platine/platine_bms_3d_bottom.png",
+   "quelle": "sim/elektrik/e3c_bms_platine/platine_bms_3d_bottom.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3c_bms_platine/platine_bms_3d_iso.png",
+   "quelle": "sim/elektrik/e3c_bms_platine/platine_bms_3d_iso.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3c_bms_platine/platine_bms_3d_nah.png",
+   "quelle": "sim/elektrik/e3c_bms_platine/platine_bms_3d_nah.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3c_bms_platine/platine_bms_3d_top.png",
+   "quelle": "sim/elektrik/e3c_bms_platine/platine_bms_3d_top.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3c_bms_platine/platine_bms_einbau.png",
+   "quelle": "sim/elektrik/e3c_bms_platine/platine_bms_einbau.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3c_bms_platine/platine_bms_explosion.png",
+   "quelle": "sim/elektrik/e3c_bms_platine/platine_bms_explosion.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-1.png",
+   "quelle": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-1.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-2.png",
+   "quelle": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-2.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-3.png",
+   "quelle": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-3.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-4.png",
+   "quelle": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-4.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-5.png",
+   "quelle": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-5.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-6.png",
+   "quelle": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-6.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-7.png",
+   "quelle": "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-7.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3c_bms_platine/spice_schuetz.png",
+   "quelle": "sim/elektrik/e3c_bms_platine/spice_schuetz.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3d_fmeda/e3d_fmeda.png",
+   "quelle": "sim/elektrik/e3d_fmeda/e3d_fmeda.png"
+  }
+ ]
+}
