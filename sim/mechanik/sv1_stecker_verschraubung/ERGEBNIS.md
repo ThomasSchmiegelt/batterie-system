@@ -1,8 +1,34 @@
-| Dok.-Nr. | ERG-SV1 | Version | 0.3 | Status | Entwurf |
+| Dok.-Nr. | ERG-SV1 | Version | 0.4 | Status | Entwurf |
 |---|---|---|---|---|---|
 | Titel | Ergebnis SV1: Stecker mit Gegenstück, Steckfreigang, Verschraubungen im Pack-CAD (Fortsetzung Nachtrag 2) | Ersteller | Claude Sonnet (KI) | Prüfer | Opus (offen) |
 
 > **KI-generiert** (Claude Sonnet, 2026-11-25). Entwurf, nicht freigegeben. Grundlage `ERWARTUNG.md` (ERW-SV1, Nachtrag 2, Punkte 1–5, nicht geändert). Version 0.1 (2026-11-24) ist in `/tmp/claude-1003/SV1b/sv1dir/ERGEBNIS.md` gesichert. Zahlen aus `ergebnis_v02.json` (Auszug aus `/home/cae/cae_projekte/batterie/sv1b/out/ergebnis_<V>_e2d_e3c_sv1.json`, Gruppierung `…_gruppen.json`) und aus den DRC-/Router-Dateien unter `/home/cae/cae_projekte/batterie/sv1b/lauf*_*/` (`drc.json`, `fr.log`, `start.txt`, `ende.txt`). Alle Maße der Stecker sind Annahmen ERW-SV1 (`cad/pack/entwurf/annahmen_sv1.json`). Bohrungslagen B3/B4v: Annahme W1 (`sim/elektrik/w1_kolibri_waechter/ERGEBNIS.md`), von Opus als Annahme ERW-SV1 N2 übernommen.
+
+## Version 0.4 (Entscheidungen Opus nach v0.3, 2026-11-25 11:42 bis 12:10)
+Quellen: `ergebnis_v04.json` (Auszug aus `cad/pack/entwurf/ergebnis_<V>_e2d_e3c_sv1.json`), `/home/cae/cae_projekte/batterie/e3/cmu_<V>_drc.json`, `sv1b/e3w/thermovias_<V>.json`. Vorherige Stände: v0.3 in `/tmp/claude-1003/SV1b/ERGEBNIS_v03.md`.
+
+**Platine (Via-Ausnahme 0,45/0,2 mm für LFP und NMC, Vorgabe Opus):** Projektdatei mit Mindest-Via 0,4 und Mindestbohrung 0,2. KiCad-DRC `e3/cmu_LFP_drc.json` und `e3/cmu_NMC_drc.json`: **0 Verstöße, 0 offen**; 144 Thermovias je Platine (davon 3 klein, Netz T5; `thermovias_<V>.json`). Übernommen nach `e3/` (PCB, Projekt, Gerber, STEP, Top/Bottom-Bilder, DRC-Datei; Sicherung der alten Stände in `/tmp/claude-1003/SV1b/e3_vor/`) und als `abgabe_2026-11-24/cmu_<V>_mit_bohrungen.step` (die alten `cmu_<V>.step` dort bleiben); LIESMICH dort ergänzt. **Nicht neu erzeugt** (alter Stand ohne Bohrungen): `e3/cmu_<V>_ohne_thermovias.kicad_pcb`, `e3/r3d_*`, `e3/explosion_*`, `sim/elektrik/e3_platine/platine_*.png`. Akten ENT-209 bis 211 Status „entschieden (Opus, delegiert durch Autor 2026-11-23)“, `pm.py parameter` übernimmt `befestigung`, `bohrung_d_mm` 3,2, `bohrung_anzahl` 4 für BT-321 (`parameter.json`). `pm.py pruefe` 0 Fehler.
+
+**Rest-Freigänge (Pack, `PACK_SV1=1`, neue CMU-STEP mit Bohrungen):**
+- **(a) Wandabstand (Annahme ERW-SV1 N4, im Code `pack_e2d.py` Zeile um `SV1_WAND` kommentiert):** Die Überlappung betrifft die Wandnormale (x), nicht y; ich habe die CMU in x von der Endwand weggerückt (nicht in y). **1,5 mm war nicht zulässig:** a) mit mitgeführten FPC-Enden 2 Kollisionen Lasche/FPC (je 120 mm³, Datei `sv1b/out/ergebnis_LFP_wand1p5_facemit.json`), b) mit festen FPC-Enden 16 Kollisionen FPC/Stecker (0,5 mm). **Gerechnet mit 1,0 mm** (= der Platinenstecker-Freigang quer 2 mm berührt die Wand gerade); die FPC/NTC-Enden bleiben fest. Abweichung von der Vorgabe 1,5 mm, Entscheidung Opus (Vorschlag: 1,0 mm bestätigen oder FPC-Führung ändern). Der Wandabstand gilt im Code nur mit `PACK_SV1=1`.
+- **(b) NMC:** Aussparung in Zellträger und Verguss jetzt um Daisy-Buchse **und** Daisy-Steckfreigang (Annahme ERW-SV1 N4). Ausgesparte Volumina (`ergebnis_v04.json`, `aussparung_mm3`): Zellträger Feld 0 18 480, Feld 3 3 360, Verguss Feld 0 52 173, Feld 3 9 753 mm³ (v0.3: 1 320/240 und 19 800/3 600 mm³). Masse bekannt NMC 483,631 kg (v0.3: 483,667), LFP 621,134 kg; die Verguss-Dichte fehlt weiter.
+
+**Neuzählung (`ergebnis_v04.json`):**
+| | LFP v0.3 → v0.4 | NMC v0.3 → v0.4 |
+|---|---|---|
+| Harte Kollisionen | 0 → **0** | 0 → **0** |
+| Steckfreigang-Verletzungen gesamt | 71 → **29** | 117 → **26** |
+| C Platinenstecker (CMU) gegen festes Teil | 42 → **0** | 91 → **0** |
+| D BMS gegen Nachbarstecker | 2 | 2 |
+| E BMS gegen Schaltbox | 6 | 6 |
+| F Deckelstecker (Handraum Ø 75, Freigang) | 18 | 18 |
+| G Schütz-Spulenstecker | 3 | 0 |
+Ziel 0/0 für die CMU-Platinenstecker erreicht (Klasse C = 0, Kollisionen 0). **Rest 29 (LFP) und 26 (NMC) liegen bei BMS-Steckern, Außensteckern und Schütz-Spulenstecker**, nicht Teil der Entscheidungen (a)/(b); Maße und Paare wie v0.2 Punkt 3. Offen an Opus.
+Bilder (Schaltbox, Endzone je Variante) neu, Zielband beschriftet; Pack-Dateien nur mit Suffix `_sv1` geschrieben (`/home/cae/cae_projekte/batterie/e2/pack_<V>_e2d_e3c_sv1.*`).
+Integrationsgrenze: Die CMU liegt im Pack 1,0 mm weiter von der Wand weg als im E3-Modell (E2-Leitungen, Laschen, Wärmepad ENT-185 nicht angepasst, nur Kollisionsprüfung); der Bolzenkonflikt ENT-185 bleibt offen.
+
+---
+### Stand v0.3 (unverändert)
 
 ## Version 0.3 (Nachtrag 3, 2026-11-25 11:08 bis 11:40): Entscheidungen Opus umgesetzt
 Quellen: `sim/elektrik`-Arbeitskopie `/home/cae/cae_projekte/batterie/sv1b/e3w/` (DRC-Dateien `cmu_<V>_drc.json`, `drc_vor_thermo_<V>.json`, `thermovias_<V>.json`), `sv1b/lauf2_B4/` (Router, `drc.json`), `ergebnis_v03.json` (Pack). **Zusammenfassung: Pack-Teile 2 und 3 erledigt (Zahlen unten); Punkt 1 (Platine) bis auf 3 Thermovias erreicht, Abnahme DRC 0 formal verfehlt, daher nichts nach `e3/` oder `abgabe_2026-11-24/` kopiert (Rückfrage an Opus).**

@@ -69,3 +69,8 @@ Reihenfolge, erst konservativ:
 ## Nachtrag 4 (Opus, 2026-11-25)
 - Die Via-Ausnahme 0,45/0,2 gilt für LFP und NMC (wie E3 Frage 9). ENT-209 bis 211 entschieden.
 - Rest-Freigänge: CMU um 1,5 mm vom Seitenrahmen weg (falls kollisionsfrei, Annahme N4), NMC-Aussparung um den Daisy-Freigang erweitert. Ziel 0 Freigangsverletzungen und 0 Kollisionen.
+
+## Nachtrag 5 (Opus, 2026-11-25)
+- Opus prüft Rohdaten: DRC LFP/NMC 0/0 und 0 offen (e3/cmu_*_drc.json). Kollisionen 0/0 (ergebnis_v04.json). Die Abgabe-STEPs sind verschieden (md5), gleiche Größe ist plausibel bei gleichen Gehäusen.
+- Der Wandabstand der CMU beträgt 1,0 mm in x statt 1,5 mm in y. Bestätigt als Annahme N4, weil 1,5 mm Kollisionen erzeugt.
+- Offen sind 29/26 Freigangsverletzungen an BMS-, Außen- und Schütz-Spulensteckern. Sie werden je Stecker mit Eindringtiefe und Gegenkörper ausgewertet, dann entscheidet Opus über Regel oder Lage. Veraltete Bilder E3 (r3d, explosion, platine_*.png) werden mit Bohrungen neu erzeugt.

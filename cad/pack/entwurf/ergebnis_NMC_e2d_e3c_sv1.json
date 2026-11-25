@@ -68,15 +68,15 @@
   },
   "Zelltraeger": {
    "anzahl": 4,
-   "volumen_cm3": 2555.55154516466,
-   "masse_kg": 3.0666618541975925,
+   "volumen_cm3": 2535.2715451646604,
+   "masse_kg": 3.0423258541975926,
    "masse_bekannt": true,
    "werkstoff": "offen (Werkstoff/Dichte fehlt)"
   },
   "Verguss": {
    "anzahl": 4,
-   "volumen_cm3": 37846.99748580648,
-   "masse_kg": 11.354099245741946,
+   "volumen_cm3": 37808.47146780222,
+   "masse_kg": 11.342541440340668,
    "masse_bekannt": true,
    "werkstoff": "offen (Dichte fehlt)"
   },
@@ -110,7 +110,7 @@
   },
   "E2_CMU": {
    "anzahl": 13,
-   "volumen_cm3": 160.4738692906074,
+   "volumen_cm3": 159.8423739710541,
    "masse_kg": 0.6402500000000001,
    "masse_bekannt": true,
    "werkstoff": "E3 Platine STEP; Masse 49.25 g = Platine 27.60 g + Wärmeleitpad 21.65 g (ergebnis_platine.json, ERW-E3 Nachtrag 6)"
@@ -256,883 +256,25 @@
    "werkstoff": "Stahl A2 (Annahme Masse)"
   }
  },
- "masse_bekannt_kg": 483.66674802851065,
+ "masse_bekannt_kg": 483.63085422310934,
  "schwerpunkt_mm": [
-  969.2265384355715,
-  705.9256567806058,
-  58.48837235213223
+  969.2756655557944,
+  705.9233876390755,
+  58.491020047443705
  ],
  "mitte_mm": [
   975.0,
   715.0
  ],
  "schwerpunkt_abw_mm": [
-  -5.773461564428544,
-  -9.074343219394223
+  -5.724334444205624,
+  -9.076612360924514
  ],
  "teile": 2916,
- "kollisionspaare_geprueft": 9256,
+ "kollisionspaare_geprueft": 9282,
  "kollisionen": [],
  "anzahl_kollisionen": 0,
  "steckfreigang_verletzungen": [
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_00",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 303.99999999999994,
-   "bb_freigang": [
-    1909.0,
-    83.2,
-    90.0,
-    1921.0,
-    121.2,
-    98.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_00_In",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 280.0,
-   "bb_freigang": [
-    1909.0,
-    37.7,
-    20.0,
-    1921.0,
-    65.7,
-    30.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_00_Out",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 280.0000000000001,
-   "bb_freigang": [
-    1909.0,
-    125.7,
-    20.0,
-    1921.0,
-    153.7,
-    30.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_01",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 303.99999999999994,
-   "bb_freigang": [
-    29.0,
-    127.5,
-    90.0,
-    41.0,
-    165.5,
-    98.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_01_In",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 280.0,
-   "bb_freigang": [
-    29.0,
-    82.0,
-    20.0,
-    41.0,
-    110.0,
-    30.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_01_Out",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 280.0,
-   "bb_freigang": [
-    29.0,
-    170.0,
-    20.0,
-    41.0,
-    198.0,
-    30.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_02",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 303.99999999999994,
-   "bb_freigang": [
-    29.0,
-    247.5,
-    90.0,
-    41.0,
-    285.5,
-    98.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_02_In",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 280.0,
-   "bb_freigang": [
-    29.0,
-    202.0,
-    20.0,
-    41.0,
-    230.0,
-    30.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_02_Out",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 280.0,
-   "bb_freigang": [
-    29.0,
-    290.0,
-    20.0,
-    41.0,
-    318.0,
-    30.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_03",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 303.99999999999994,
-   "bb_freigang": [
-    29.0,
-    367.5,
-    90.0,
-    41.0,
-    405.5,
-    98.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_03_In",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 280.0,
-   "bb_freigang": [
-    29.0,
-    322.0,
-    20.0,
-    41.0,
-    350.0,
-    30.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_03_Out",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 280.0,
-   "bb_freigang": [
-    29.0,
-    410.0,
-    20.0,
-    41.0,
-    438.0,
-    30.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_04",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 303.99999999999994,
-   "bb_freigang": [
-    29.0,
-    487.5,
-    90.0,
-    41.0,
-    525.5,
-    98.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_04_In",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 280.0,
-   "bb_freigang": [
-    29.0,
-    442.0,
-    20.0,
-    41.0,
-    470.0,
-    30.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_04_Out",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 280.0,
-   "bb_freigang": [
-    29.0,
-    530.0,
-    20.0,
-    41.0,
-    558.0,
-    30.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_05",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 303.99999999999994,
-   "bb_freigang": [
-    29.0,
-    607.5,
-    90.0,
-    41.0,
-    645.5,
-    98.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_05_In",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 280.0,
-   "bb_freigang": [
-    29.0,
-    562.0,
-    20.0,
-    41.0,
-    590.0,
-    30.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_05_Out",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 280.0,
-   "bb_freigang": [
-    29.0,
-    650.0,
-    20.0,
-    41.0,
-    678.0,
-    30.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_06",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 303.99999999999994,
-   "bb_freigang": [
-    29.0,
-    740.5,
-    90.0,
-    41.0,
-    778.5,
-    98.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_06_In",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 280.0,
-   "bb_freigang": [
-    29.0,
-    682.0,
-    20.0,
-    41.0,
-    710.0,
-    30.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_06_Out",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 280.0,
-   "bb_freigang": [
-    29.0,
-    770.0,
-    20.0,
-    41.0,
-    798.0,
-    30.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_07",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 303.99999999999994,
-   "bb_freigang": [
-    29.0,
-    847.5,
-    90.0,
-    41.0,
-    885.5,
-    98.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_07_In",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 280.0,
-   "bb_freigang": [
-    29.0,
-    802.0,
-    20.0,
-    41.0,
-    830.0,
-    30.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_07_Out",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 280.0,
-   "bb_freigang": [
-    29.0,
-    890.0,
-    20.0,
-    41.0,
-    918.0,
-    30.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_08",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 303.99999999999994,
-   "bb_freigang": [
-    29.0,
-    967.5,
-    90.0,
-    41.0,
-    1005.5,
-    98.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_08_In",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 280.0,
-   "bb_freigang": [
-    29.0,
-    922.0,
-    20.0,
-    41.0,
-    950.0,
-    30.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_08_Out",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 280.0,
-   "bb_freigang": [
-    29.0,
-    1010.0,
-    20.0,
-    41.0,
-    1038.0,
-    30.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_09",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 303.99999999999994,
-   "bb_freigang": [
-    29.0,
-    1087.5,
-    90.0,
-    41.0,
-    1125.5,
-    98.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_09_In",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 280.0,
-   "bb_freigang": [
-    29.0,
-    1042.0,
-    20.0,
-    41.0,
-    1070.0,
-    30.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_09_Out",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 280.0,
-   "bb_freigang": [
-    29.0,
-    1130.0,
-    20.0,
-    41.0,
-    1158.0,
-    30.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_10",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 303.99999999999994,
-   "bb_freigang": [
-    29.0,
-    1207.5,
-    90.0,
-    41.0,
-    1245.5,
-    98.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_10_In",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 280.0,
-   "bb_freigang": [
-    29.0,
-    1162.0,
-    20.0,
-    41.0,
-    1190.0,
-    30.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_10_Out",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 280.0,
-   "bb_freigang": [
-    29.0,
-    1250.0,
-    20.0,
-    41.0,
-    1278.0,
-    30.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_11",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 303.99999999999994,
-   "bb_freigang": [
-    29.0,
-    1327.5,
-    90.0,
-    41.0,
-    1365.5,
-    98.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_11_In",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 280.0,
-   "bb_freigang": [
-    29.0,
-    1282.0,
-    20.0,
-    41.0,
-    1310.0,
-    30.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_11_Out",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 280.0,
-   "bb_freigang": [
-    29.0,
-    1370.0,
-    20.0,
-    41.0,
-    1398.0,
-    30.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_12",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 303.99999999999994,
-   "bb_freigang": [
-    1909.0,
-    1305.5,
-    90.0,
-    1921.0,
-    1343.5,
-    98.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_12_In",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 280.0,
-   "bb_freigang": [
-    1909.0,
-    1282.0,
-    20.0,
-    1921.0,
-    1310.0,
-    30.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_12_Out",
-   "teil": "Seitenrahmen",
-   "gruppe": "Seitenrahmen",
-   "volumen_mm3": 280.0,
-   "bb_freigang": [
-    1909.0,
-    1370.0,
-    20.0,
-    1921.0,
-    1398.0,
-    30.0
-   ],
-   "bb_teil": [
-    0.0,
-    0.0,
-    11.0,
-    1950.0,
-    1430.0,
-    113.0
-   ]
-  },
   {
    "freigang": "Steckfreigang_HV_Stecker_250A",
    "teil": "Kuehlplatte_oben",
@@ -1219,1150 +361,6 @@
     1950.0,
     1430.0,
     115.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_01_In",
-   "teil": "Zelltraeger_f0",
-   "gruppe": "Zelltraeger",
-   "volumen_mm3": 710.0,
-   "bb_freigang": [
-    29.0,
-    82.0,
-    20.0,
-    41.0,
-    110.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    20.0,
-    480.0,
-    1400.0,
-    22.5
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_01_Out",
-   "teil": "Zelltraeger_f0",
-   "gruppe": "Zelltraeger",
-   "volumen_mm3": 710.0,
-   "bb_freigang": [
-    29.0,
-    170.0,
-    20.0,
-    41.0,
-    198.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    20.0,
-    480.0,
-    1400.0,
-    22.5
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_02_In",
-   "teil": "Zelltraeger_f0",
-   "gruppe": "Zelltraeger",
-   "volumen_mm3": 710.0,
-   "bb_freigang": [
-    29.0,
-    202.0,
-    20.0,
-    41.0,
-    230.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    20.0,
-    480.0,
-    1400.0,
-    22.5
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_02_Out",
-   "teil": "Zelltraeger_f0",
-   "gruppe": "Zelltraeger",
-   "volumen_mm3": 710.0,
-   "bb_freigang": [
-    29.0,
-    290.0,
-    20.0,
-    41.0,
-    318.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    20.0,
-    480.0,
-    1400.0,
-    22.5
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_03_In",
-   "teil": "Zelltraeger_f0",
-   "gruppe": "Zelltraeger",
-   "volumen_mm3": 710.0,
-   "bb_freigang": [
-    29.0,
-    322.0,
-    20.0,
-    41.0,
-    350.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    20.0,
-    480.0,
-    1400.0,
-    22.5
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_03_Out",
-   "teil": "Zelltraeger_f0",
-   "gruppe": "Zelltraeger",
-   "volumen_mm3": 710.0,
-   "bb_freigang": [
-    29.0,
-    410.0,
-    20.0,
-    41.0,
-    438.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    20.0,
-    480.0,
-    1400.0,
-    22.5
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_04_In",
-   "teil": "Zelltraeger_f0",
-   "gruppe": "Zelltraeger",
-   "volumen_mm3": 710.0,
-   "bb_freigang": [
-    29.0,
-    442.0,
-    20.0,
-    41.0,
-    470.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    20.0,
-    480.0,
-    1400.0,
-    22.5
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_04_Out",
-   "teil": "Zelltraeger_f0",
-   "gruppe": "Zelltraeger",
-   "volumen_mm3": 710.0,
-   "bb_freigang": [
-    29.0,
-    530.0,
-    20.0,
-    41.0,
-    558.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    20.0,
-    480.0,
-    1400.0,
-    22.5
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_05_In",
-   "teil": "Zelltraeger_f0",
-   "gruppe": "Zelltraeger",
-   "volumen_mm3": 710.0,
-   "bb_freigang": [
-    29.0,
-    562.0,
-    20.0,
-    41.0,
-    590.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    20.0,
-    480.0,
-    1400.0,
-    22.5
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_05_Out",
-   "teil": "Zelltraeger_f0",
-   "gruppe": "Zelltraeger",
-   "volumen_mm3": 710.0,
-   "bb_freigang": [
-    29.0,
-    650.0,
-    20.0,
-    41.0,
-    678.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    20.0,
-    480.0,
-    1400.0,
-    22.5
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_06_In",
-   "teil": "Zelltraeger_f0",
-   "gruppe": "Zelltraeger",
-   "volumen_mm3": 710.0,
-   "bb_freigang": [
-    29.0,
-    682.0,
-    20.0,
-    41.0,
-    710.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    20.0,
-    480.0,
-    1400.0,
-    22.5
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_06_Out",
-   "teil": "Zelltraeger_f0",
-   "gruppe": "Zelltraeger",
-   "volumen_mm3": 710.0,
-   "bb_freigang": [
-    29.0,
-    770.0,
-    20.0,
-    41.0,
-    798.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    20.0,
-    480.0,
-    1400.0,
-    22.5
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_07_In",
-   "teil": "Zelltraeger_f0",
-   "gruppe": "Zelltraeger",
-   "volumen_mm3": 710.0,
-   "bb_freigang": [
-    29.0,
-    802.0,
-    20.0,
-    41.0,
-    830.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    20.0,
-    480.0,
-    1400.0,
-    22.5
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_07_Out",
-   "teil": "Zelltraeger_f0",
-   "gruppe": "Zelltraeger",
-   "volumen_mm3": 710.0,
-   "bb_freigang": [
-    29.0,
-    890.0,
-    20.0,
-    41.0,
-    918.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    20.0,
-    480.0,
-    1400.0,
-    22.5
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_08_In",
-   "teil": "Zelltraeger_f0",
-   "gruppe": "Zelltraeger",
-   "volumen_mm3": 710.0,
-   "bb_freigang": [
-    29.0,
-    922.0,
-    20.0,
-    41.0,
-    950.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    20.0,
-    480.0,
-    1400.0,
-    22.5
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_08_Out",
-   "teil": "Zelltraeger_f0",
-   "gruppe": "Zelltraeger",
-   "volumen_mm3": 710.0,
-   "bb_freigang": [
-    29.0,
-    1010.0,
-    20.0,
-    41.0,
-    1038.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    20.0,
-    480.0,
-    1400.0,
-    22.5
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_09_In",
-   "teil": "Zelltraeger_f0",
-   "gruppe": "Zelltraeger",
-   "volumen_mm3": 710.0,
-   "bb_freigang": [
-    29.0,
-    1042.0,
-    20.0,
-    41.0,
-    1070.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    20.0,
-    480.0,
-    1400.0,
-    22.5
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_09_Out",
-   "teil": "Zelltraeger_f0",
-   "gruppe": "Zelltraeger",
-   "volumen_mm3": 710.0,
-   "bb_freigang": [
-    29.0,
-    1130.0,
-    20.0,
-    41.0,
-    1158.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    20.0,
-    480.0,
-    1400.0,
-    22.5
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_10_In",
-   "teil": "Zelltraeger_f0",
-   "gruppe": "Zelltraeger",
-   "volumen_mm3": 710.0,
-   "bb_freigang": [
-    29.0,
-    1162.0,
-    20.0,
-    41.0,
-    1190.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    20.0,
-    480.0,
-    1400.0,
-    22.5
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_10_Out",
-   "teil": "Zelltraeger_f0",
-   "gruppe": "Zelltraeger",
-   "volumen_mm3": 710.0,
-   "bb_freigang": [
-    29.0,
-    1250.0,
-    20.0,
-    41.0,
-    1278.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    20.0,
-    480.0,
-    1400.0,
-    22.5
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_11_In",
-   "teil": "Zelltraeger_f0",
-   "gruppe": "Zelltraeger",
-   "volumen_mm3": 710.0,
-   "bb_freigang": [
-    29.0,
-    1282.0,
-    20.0,
-    41.0,
-    1310.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    20.0,
-    480.0,
-    1400.0,
-    22.5
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_11_Out",
-   "teil": "Zelltraeger_f0",
-   "gruppe": "Zelltraeger",
-   "volumen_mm3": 710.0,
-   "bb_freigang": [
-    29.0,
-    1370.0,
-    20.0,
-    41.0,
-    1398.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    20.0,
-    480.0,
-    1400.0,
-    22.5
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_01_In",
-   "teil": "Verguss_f0",
-   "gruppe": "Verguss",
-   "volumen_mm3": 1410.0000000000002,
-   "bb_freigang": [
-    29.0,
-    82.0,
-    20.0,
-    41.0,
-    110.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    22.5,
-    480.0,
-    1400.0,
-    60.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_01_Out",
-   "teil": "Verguss_f0",
-   "gruppe": "Verguss",
-   "volumen_mm3": 1246.6371820133313,
-   "bb_freigang": [
-    29.0,
-    170.0,
-    20.0,
-    41.0,
-    198.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    22.5,
-    480.0,
-    1400.0,
-    60.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_02_In",
-   "teil": "Verguss_f0",
-   "gruppe": "Verguss",
-   "volumen_mm3": 1246.6371820133309,
-   "bb_freigang": [
-    29.0,
-    202.0,
-    20.0,
-    41.0,
-    230.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    22.5,
-    480.0,
-    1400.0,
-    60.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_02_Out",
-   "teil": "Verguss_f0",
-   "gruppe": "Verguss",
-   "volumen_mm3": 1246.6371820133309,
-   "bb_freigang": [
-    29.0,
-    290.0,
-    20.0,
-    41.0,
-    318.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    22.5,
-    480.0,
-    1400.0,
-    60.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_03_In",
-   "teil": "Verguss_f0",
-   "gruppe": "Verguss",
-   "volumen_mm3": 1246.6371820133309,
-   "bb_freigang": [
-    29.0,
-    322.0,
-    20.0,
-    41.0,
-    350.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    22.5,
-    480.0,
-    1400.0,
-    60.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_03_Out",
-   "teil": "Verguss_f0",
-   "gruppe": "Verguss",
-   "volumen_mm3": 1246.6371820133309,
-   "bb_freigang": [
-    29.0,
-    410.0,
-    20.0,
-    41.0,
-    438.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    22.5,
-    480.0,
-    1400.0,
-    60.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_04_In",
-   "teil": "Verguss_f0",
-   "gruppe": "Verguss",
-   "volumen_mm3": 1246.6371820133309,
-   "bb_freigang": [
-    29.0,
-    442.0,
-    20.0,
-    41.0,
-    470.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    22.5,
-    480.0,
-    1400.0,
-    60.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_04_Out",
-   "teil": "Verguss_f0",
-   "gruppe": "Verguss",
-   "volumen_mm3": 1246.6371820133309,
-   "bb_freigang": [
-    29.0,
-    530.0,
-    20.0,
-    41.0,
-    558.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    22.5,
-    480.0,
-    1400.0,
-    60.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_05_In",
-   "teil": "Verguss_f0",
-   "gruppe": "Verguss",
-   "volumen_mm3": 1246.6371820133309,
-   "bb_freigang": [
-    29.0,
-    562.0,
-    20.0,
-    41.0,
-    590.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    22.5,
-    480.0,
-    1400.0,
-    60.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_05_Out",
-   "teil": "Verguss_f0",
-   "gruppe": "Verguss",
-   "volumen_mm3": 1246.6371820133309,
-   "bb_freigang": [
-    29.0,
-    650.0,
-    20.0,
-    41.0,
-    678.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    22.5,
-    480.0,
-    1400.0,
-    60.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_06_In",
-   "teil": "Verguss_f0",
-   "gruppe": "Verguss",
-   "volumen_mm3": 1246.6371820133309,
-   "bb_freigang": [
-    29.0,
-    682.0,
-    20.0,
-    41.0,
-    710.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    22.5,
-    480.0,
-    1400.0,
-    60.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_06_Out",
-   "teil": "Verguss_f0",
-   "gruppe": "Verguss",
-   "volumen_mm3": 1246.6371820133309,
-   "bb_freigang": [
-    29.0,
-    770.0,
-    20.0,
-    41.0,
-    798.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    22.5,
-    480.0,
-    1400.0,
-    60.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_07_In",
-   "teil": "Verguss_f0",
-   "gruppe": "Verguss",
-   "volumen_mm3": 1246.6371820133309,
-   "bb_freigang": [
-    29.0,
-    802.0,
-    20.0,
-    41.0,
-    830.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    22.5,
-    480.0,
-    1400.0,
-    60.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_07_Out",
-   "teil": "Verguss_f0",
-   "gruppe": "Verguss",
-   "volumen_mm3": 1246.6371820133309,
-   "bb_freigang": [
-    29.0,
-    890.0,
-    20.0,
-    41.0,
-    918.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    22.5,
-    480.0,
-    1400.0,
-    60.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_08_In",
-   "teil": "Verguss_f0",
-   "gruppe": "Verguss",
-   "volumen_mm3": 1246.6371820133309,
-   "bb_freigang": [
-    29.0,
-    922.0,
-    20.0,
-    41.0,
-    950.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    22.5,
-    480.0,
-    1400.0,
-    60.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_08_Out",
-   "teil": "Verguss_f0",
-   "gruppe": "Verguss",
-   "volumen_mm3": 1246.6371820133309,
-   "bb_freigang": [
-    29.0,
-    1010.0,
-    20.0,
-    41.0,
-    1038.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    22.5,
-    480.0,
-    1400.0,
-    60.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_09_In",
-   "teil": "Verguss_f0",
-   "gruppe": "Verguss",
-   "volumen_mm3": 1246.6371820133304,
-   "bb_freigang": [
-    29.0,
-    1042.0,
-    20.0,
-    41.0,
-    1070.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    22.5,
-    480.0,
-    1400.0,
-    60.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_09_Out",
-   "teil": "Verguss_f0",
-   "gruppe": "Verguss",
-   "volumen_mm3": 1246.6371820133313,
-   "bb_freigang": [
-    29.0,
-    1130.0,
-    20.0,
-    41.0,
-    1158.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    22.5,
-    480.0,
-    1400.0,
-    60.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_10_In",
-   "teil": "Verguss_f0",
-   "gruppe": "Verguss",
-   "volumen_mm3": 1246.6371820133304,
-   "bb_freigang": [
-    29.0,
-    1162.0,
-    20.0,
-    41.0,
-    1190.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    22.5,
-    480.0,
-    1400.0,
-    60.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_10_Out",
-   "teil": "Verguss_f0",
-   "gruppe": "Verguss",
-   "volumen_mm3": 1246.6371820133313,
-   "bb_freigang": [
-    29.0,
-    1250.0,
-    20.0,
-    41.0,
-    1278.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    22.5,
-    480.0,
-    1400.0,
-    60.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_11_In",
-   "teil": "Verguss_f0",
-   "gruppe": "Verguss",
-   "volumen_mm3": 1246.6371820133304,
-   "bb_freigang": [
-    29.0,
-    1282.0,
-    20.0,
-    41.0,
-    1310.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    22.5,
-    480.0,
-    1400.0,
-    60.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_11_Out",
-   "teil": "Verguss_f0",
-   "gruppe": "Verguss",
-   "volumen_mm3": 1410.0,
-   "bb_freigang": [
-    29.0,
-    1370.0,
-    20.0,
-    41.0,
-    1398.0,
-    30.0
-   ],
-   "bb_teil": [
-    30.0,
-    30.0,
-    22.5,
-    480.0,
-    1400.0,
-    60.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_00_In",
-   "teil": "Zelltraeger_f3",
-   "gruppe": "Zelltraeger",
-   "volumen_mm3": 709.9999999999999,
-   "bb_freigang": [
-    1909.0,
-    37.7,
-    20.0,
-    1921.0,
-    65.7,
-    30.0
-   ],
-   "bb_teil": [
-    1470.0,
-    30.0,
-    20.0,
-    1920.0,
-    1400.0,
-    22.5
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_00_Out",
-   "teil": "Zelltraeger_f3",
-   "gruppe": "Zelltraeger",
-   "volumen_mm3": 710.0000000000002,
-   "bb_freigang": [
-    1909.0,
-    125.7,
-    20.0,
-    1921.0,
-    153.7,
-    30.0
-   ],
-   "bb_teil": [
-    1470.0,
-    30.0,
-    20.0,
-    1920.0,
-    1400.0,
-    22.5
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_12_In",
-   "teil": "Zelltraeger_f3",
-   "gruppe": "Zelltraeger",
-   "volumen_mm3": 709.9999999999999,
-   "bb_freigang": [
-    1909.0,
-    1282.0,
-    20.0,
-    1921.0,
-    1310.0,
-    30.0
-   ],
-   "bb_teil": [
-    1470.0,
-    30.0,
-    20.0,
-    1920.0,
-    1400.0,
-    22.5
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_12_Out",
-   "teil": "Zelltraeger_f3",
-   "gruppe": "Zelltraeger",
-   "volumen_mm3": 709.9999999999999,
-   "bb_freigang": [
-    1909.0,
-    1370.0,
-    20.0,
-    1921.0,
-    1398.0,
-    30.0
-   ],
-   "bb_teil": [
-    1470.0,
-    30.0,
-    20.0,
-    1920.0,
-    1400.0,
-    22.5
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_00_In",
-   "teil": "Verguss_f3",
-   "gruppe": "Verguss",
-   "volumen_mm3": 1409.9999999999998,
-   "bb_freigang": [
-    1909.0,
-    37.7,
-    20.0,
-    1921.0,
-    65.7,
-    30.0
-   ],
-   "bb_teil": [
-    1470.0,
-    30.0,
-    22.5,
-    1920.0,
-    1400.0,
-    60.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_00_Out",
-   "teil": "Verguss_f3",
-   "gruppe": "Verguss",
-   "volumen_mm3": 1246.6371820133295,
-   "bb_freigang": [
-    1909.0,
-    125.7,
-    20.0,
-    1921.0,
-    153.7,
-    30.0
-   ],
-   "bb_teil": [
-    1470.0,
-    30.0,
-    22.5,
-    1920.0,
-    1400.0,
-    60.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_12_In",
-   "teil": "Verguss_f3",
-   "gruppe": "Verguss",
-   "volumen_mm3": 1246.6371820133293,
-   "bb_freigang": [
-    1909.0,
-    1282.0,
-    20.0,
-    1921.0,
-    1310.0,
-    30.0
-   ],
-   "bb_teil": [
-    1470.0,
-    30.0,
-    22.5,
-    1920.0,
-    1400.0,
-    60.0
-   ]
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_12_Out",
-   "teil": "Verguss_f3",
-   "gruppe": "Verguss",
-   "volumen_mm3": 1410.0000000000002,
-   "bb_freigang": [
-    1909.0,
-    1370.0,
-    20.0,
-    1921.0,
-    1398.0,
-    30.0
-   ],
-   "bb_teil": [
-    1470.0,
-    30.0,
-    22.5,
-    1920.0,
-    1400.0,
-    60.0
    ]
   },
   {
@@ -2850,942 +848,942 @@
    ]
   }
  ],
- "anzahl_steckfreigang_verletzungen": 117,
+ "anzahl_steckfreigang_verletzungen": 26,
  "kontakte_zugelassen": [
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_00_Schraube_2716",
-   "volumen_mm3": 42.411500823462625,
+   "volumen_mm3": 35.34291735288559,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_00_Bolzen_2717",
-   "volumen_mm3": 127.23450247038663,
+   "volumen_mm3": 106.02875205865548,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_00_Schraube_2718",
-   "volumen_mm3": 42.41150082346266,
+   "volumen_mm3": 35.34291735288562,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_00_Bolzen_2719",
-   "volumen_mm3": 127.2345024703867,
+   "volumen_mm3": 106.02875205865554,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_00_Schraube_2720",
-   "volumen_mm3": 42.41150082346264,
+   "volumen_mm3": 35.34291735288561,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_00_Bolzen_2721",
-   "volumen_mm3": 127.2345024703866,
+   "volumen_mm3": 106.02875205865546,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_00_Schraube_2722",
-   "volumen_mm3": 42.41150082346266,
+   "volumen_mm3": 35.34291735288562,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_00_Bolzen_2723",
-   "volumen_mm3": 127.23450247038662,
+   "volumen_mm3": 106.02875205865551,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_01_Schraube_2730",
-   "volumen_mm3": 42.41150082346221,
+   "volumen_mm3": 35.34291735288517,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_01_Bolzen_2731",
-   "volumen_mm3": 127.23450247038667,
+   "volumen_mm3": 106.02875205865554,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_01_Schraube_2732",
-   "volumen_mm3": 42.411500823462234,
+   "volumen_mm3": 35.342917352885195,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_01_Bolzen_2733",
-   "volumen_mm3": 127.23450247038666,
+   "volumen_mm3": 106.02875205865551,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_01_Schraube_2734",
-   "volumen_mm3": 42.41150082346221,
+   "volumen_mm3": 35.34291735288518,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_01_Bolzen_2735",
-   "volumen_mm3": 127.23450247038664,
+   "volumen_mm3": 106.02875205865551,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_01_Schraube_2736",
-   "volumen_mm3": 42.411500823462234,
+   "volumen_mm3": 35.342917352885195,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_01_Bolzen_2737",
-   "volumen_mm3": 127.23450247038662,
+   "volumen_mm3": 106.02875205865551,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_02_Schraube_2744",
-   "volumen_mm3": 42.411500823462234,
+   "volumen_mm3": 35.342917352885195,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_02_Bolzen_2745",
-   "volumen_mm3": 127.23450247038667,
+   "volumen_mm3": 106.02875205865553,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_02_Schraube_2746",
-   "volumen_mm3": 42.411500823462156,
+   "volumen_mm3": 35.34291735288513,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_02_Bolzen_2747",
-   "volumen_mm3": 127.23450247038687,
+   "volumen_mm3": 106.02875205865568,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_02_Schraube_2748",
-   "volumen_mm3": 42.411500823462234,
+   "volumen_mm3": 35.342917352885195,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_02_Bolzen_2749",
-   "volumen_mm3": 127.23450247038662,
+   "volumen_mm3": 106.02875205865551,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_02_Schraube_2750",
-   "volumen_mm3": 42.41150082346216,
+   "volumen_mm3": 35.34291735288514,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_02_Bolzen_2751",
-   "volumen_mm3": 127.23450247038681,
+   "volumen_mm3": 106.02875205865563,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_03_Schraube_2758",
-   "volumen_mm3": 42.41150082346216,
+   "volumen_mm3": 35.34291735288514,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_03_Bolzen_2759",
-   "volumen_mm3": 127.23450247038681,
+   "volumen_mm3": 106.02875205865566,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_03_Schraube_2760",
-   "volumen_mm3": 42.41150082346216,
+   "volumen_mm3": 35.34291735288514,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_03_Bolzen_2761",
-   "volumen_mm3": 127.23450247038684,
+   "volumen_mm3": 106.02875205865566,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_03_Schraube_2762",
-   "volumen_mm3": 42.41150082346216,
+   "volumen_mm3": 35.34291735288514,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_03_Bolzen_2763",
-   "volumen_mm3": 127.23450247038681,
+   "volumen_mm3": 106.02875205865563,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_03_Schraube_2764",
-   "volumen_mm3": 42.41150082346217,
+   "volumen_mm3": 35.342917352885145,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_03_Bolzen_2765",
-   "volumen_mm3": 127.23450247038681,
+   "volumen_mm3": 106.02875205865563,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_04_Schraube_2772",
-   "volumen_mm3": 42.41150082346216,
+   "volumen_mm3": 35.34291735288514,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_04_Bolzen_2773",
-   "volumen_mm3": 127.23450247038687,
+   "volumen_mm3": 106.02875205865568,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_04_Schraube_2774",
-   "volumen_mm3": 42.41150082346223,
+   "volumen_mm3": 35.34291735288519,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_04_Bolzen_2775",
-   "volumen_mm3": 127.2345024703865,
+   "volumen_mm3": 106.02875205865539,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_04_Schraube_2776",
-   "volumen_mm3": 42.41150082346216,
+   "volumen_mm3": 35.34291735288514,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_04_Bolzen_2777",
-   "volumen_mm3": 127.23450247038676,
+   "volumen_mm3": 106.02875205865563,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_04_Schraube_2778",
-   "volumen_mm3": 42.41150082346223,
+   "volumen_mm3": 35.342917352885195,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_04_Bolzen_2779",
-   "volumen_mm3": 127.23450247038646,
+   "volumen_mm3": 106.02875205865534,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_05_Schraube_2786",
-   "volumen_mm3": 42.41150082346223,
+   "volumen_mm3": 35.34291735288519,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_05_Bolzen_2787",
-   "volumen_mm3": 127.2345024703865,
+   "volumen_mm3": 106.02875205865539,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_05_Schraube_2788",
-   "volumen_mm3": 42.41150082346223,
+   "volumen_mm3": 35.34291735288519,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_05_Bolzen_2789",
-   "volumen_mm3": 127.2345024703865,
+   "volumen_mm3": 106.02875205865539,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_05_Schraube_2790",
-   "volumen_mm3": 42.41150082346223,
+   "volumen_mm3": 35.342917352885195,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_05_Bolzen_2791",
-   "volumen_mm3": 127.23450247038647,
+   "volumen_mm3": 106.02875205865536,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_05_Schraube_2792",
-   "volumen_mm3": 42.41150082346223,
+   "volumen_mm3": 35.342917352885195,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_05_Bolzen_2793",
-   "volumen_mm3": 127.23450247038646,
+   "volumen_mm3": 106.02875205865534,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_06_Schraube_2800",
-   "volumen_mm3": 42.41150082346223,
+   "volumen_mm3": 35.34291735288519,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_06_Bolzen_2801",
-   "volumen_mm3": 127.2345024703865,
+   "volumen_mm3": 106.02875205865539,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_06_Schraube_2802",
-   "volumen_mm3": 42.41150082346223,
+   "volumen_mm3": 35.34291735288519,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_06_Bolzen_2803",
-   "volumen_mm3": 127.2345024703865,
+   "volumen_mm3": 106.02875205865539,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_06_Schraube_2804",
-   "volumen_mm3": 42.41150082346223,
+   "volumen_mm3": 35.342917352885195,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_06_Bolzen_2805",
-   "volumen_mm3": 127.23450247038646,
+   "volumen_mm3": 106.02875205865534,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_06_Schraube_2806",
-   "volumen_mm3": 42.41150082346223,
+   "volumen_mm3": 35.342917352885195,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_06_Bolzen_2807",
-   "volumen_mm3": 127.23450247038646,
+   "volumen_mm3": 106.02875205865534,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_07_Schraube_2814",
-   "volumen_mm3": 42.41150082346223,
+   "volumen_mm3": 35.34291735288519,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_07_Bolzen_2815",
-   "volumen_mm3": 127.2345024703865,
+   "volumen_mm3": 106.02875205865539,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_07_Schraube_2816",
-   "volumen_mm3": 42.41150082346223,
+   "volumen_mm3": 35.34291735288519,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_07_Bolzen_2817",
-   "volumen_mm3": 127.2345024703865,
+   "volumen_mm3": 106.02875205865539,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_07_Schraube_2818",
-   "volumen_mm3": 42.41150082346223,
+   "volumen_mm3": 35.342917352885195,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_07_Bolzen_2819",
-   "volumen_mm3": 127.23450247038646,
+   "volumen_mm3": 106.02875205865534,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_07_Schraube_2820",
-   "volumen_mm3": 42.41150082346223,
+   "volumen_mm3": 35.342917352885195,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_07_Bolzen_2821",
-   "volumen_mm3": 127.23450247038647,
+   "volumen_mm3": 106.02875205865536,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_08_Schraube_2828",
-   "volumen_mm3": 42.41150082346223,
+   "volumen_mm3": 35.34291735288519,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_08_Bolzen_2829",
-   "volumen_mm3": 127.2345024703865,
+   "volumen_mm3": 106.02875205865539,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_08_Schraube_2830",
-   "volumen_mm3": 42.41150082346165,
+   "volumen_mm3": 35.34291735288471,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_08_Bolzen_2831",
-   "volumen_mm3": 127.23450247038733,
+   "volumen_mm3": 106.02875205865608,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_08_Schraube_2832",
-   "volumen_mm3": 42.41150082346223,
+   "volumen_mm3": 35.342917352885195,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_08_Bolzen_2833",
-   "volumen_mm3": 127.23450247038647,
+   "volumen_mm3": 106.02875205865536,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_08_Schraube_2834",
-   "volumen_mm3": 42.41150082346166,
+   "volumen_mm3": 35.34291735288472,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_08_Bolzen_2835",
-   "volumen_mm3": 127.23450247038727,
+   "volumen_mm3": 106.02875205865605,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_09_Schraube_2842",
-   "volumen_mm3": 42.41150082346165,
+   "volumen_mm3": 35.34291735288471,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_09_Bolzen_2843",
-   "volumen_mm3": 127.23450247038733,
+   "volumen_mm3": 106.02875205865608,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_09_Schraube_2844",
-   "volumen_mm3": 42.41150082346165,
+   "volumen_mm3": 35.34291735288471,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_09_Bolzen_2845",
-   "volumen_mm3": 127.23450247038733,
+   "volumen_mm3": 106.02875205865608,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_09_Schraube_2846",
-   "volumen_mm3": 42.41150082346166,
+   "volumen_mm3": 35.34291735288472,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_09_Bolzen_2847",
-   "volumen_mm3": 127.23450247038727,
+   "volumen_mm3": 106.02875205865605,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_09_Schraube_2848",
-   "volumen_mm3": 42.41150082346166,
+   "volumen_mm3": 35.34291735288472,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_09_Bolzen_2849",
-   "volumen_mm3": 127.23450247038727,
+   "volumen_mm3": 106.02875205865605,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_10_Schraube_2856",
-   "volumen_mm3": 42.41150082346165,
+   "volumen_mm3": 35.34291735288471,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_10_Bolzen_2857",
-   "volumen_mm3": 127.23450247038733,
+   "volumen_mm3": 106.02875205865608,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_10_Schraube_2858",
-   "volumen_mm3": 42.41150082346165,
+   "volumen_mm3": 35.34291735288471,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_10_Bolzen_2859",
-   "volumen_mm3": 127.23450247038733,
+   "volumen_mm3": 106.02875205865608,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_10_Schraube_2860",
-   "volumen_mm3": 42.41150082346166,
+   "volumen_mm3": 35.34291735288472,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_10_Bolzen_2861",
-   "volumen_mm3": 127.23450247038727,
+   "volumen_mm3": 106.02875205865605,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_10_Schraube_2862",
-   "volumen_mm3": 42.41150082346166,
+   "volumen_mm3": 35.34291735288472,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_10_Bolzen_2863",
-   "volumen_mm3": 127.23450247038727,
+   "volumen_mm3": 106.02875205865605,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_11_Schraube_2870",
-   "volumen_mm3": 42.41150082346165,
+   "volumen_mm3": 35.34291735288471,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_11_Bolzen_2871",
-   "volumen_mm3": 127.23450247038733,
+   "volumen_mm3": 106.02875205865608,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_11_Schraube_2872",
-   "volumen_mm3": 42.41150082346165,
+   "volumen_mm3": 35.34291735288471,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_11_Bolzen_2873",
-   "volumen_mm3": 127.23450247038741,
+   "volumen_mm3": 106.3179319517001,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_11_Schraube_2874",
-   "volumen_mm3": 42.41150082346166,
+   "volumen_mm3": 35.34291735288472,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_11_Bolzen_2875",
-   "volumen_mm3": 127.23450247038727,
+   "volumen_mm3": 106.02875205865605,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_11_Schraube_2876",
-   "volumen_mm3": 42.41150082346166,
+   "volumen_mm3": 35.34291735288472,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_11_Bolzen_2877",
-   "volumen_mm3": 127.23450247038738,
+   "volumen_mm3": 106.3179319517001,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_12_Schraube_2884",
-   "volumen_mm3": 42.411500823462084,
+   "volumen_mm3": 35.34291735288514,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_12_Bolzen_2885",
-   "volumen_mm3": 127.23450247038733,
+   "volumen_mm3": 106.02875205865608,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_12_Schraube_2886",
-   "volumen_mm3": 42.411500823462084,
+   "volumen_mm3": 35.34291735288514,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_12_Bolzen_2887",
-   "volumen_mm3": 127.23450247038741,
+   "volumen_mm3": 106.31793195170013,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_12_Schraube_2888",
-   "volumen_mm3": 42.411500823462084,
+   "volumen_mm3": 35.342917352885145,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_12_Bolzen_2889",
-   "volumen_mm3": 127.23450247038727,
+   "volumen_mm3": 106.02875205865605,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_12_Schraube_2890",
-   "volumen_mm3": 42.411500823462084,
+   "volumen_mm3": 35.342917352885145,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
    "a": "Seitenrahmen",
    "b": "SV1_CMU_12_Bolzen_2891",
-   "volumen_mm3": 127.23450247038741,
+   "volumen_mm3": 106.31793195170007,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_00",
-   "b": "SV1_CMU_00_Schraube_2716",
-   "volumen_mm3": 10.673561040571258,
-   "art": "SV1 Schraube im Rahmen/Platine"
-  },
-  {
-   "a": "CMU_00",
-   "b": "SV1_CMU_00_Schraube_2718",
-   "volumen_mm3": 10.67356104057127,
-   "art": "SV1 Schraube im Rahmen/Platine"
-  },
-  {
-   "a": "CMU_00",
-   "b": "SV1_CMU_00_Schraube_2720",
-   "volumen_mm3": 10.673561040571261,
-   "art": "SV1 Schraube im Rahmen/Platine"
-  },
-  {
-   "a": "CMU_00",
-   "b": "SV1_CMU_00_Schraube_2722",
-   "volumen_mm3": 10.67356104057127,
-   "art": "SV1 Schraube im Rahmen/Platine"
-  },
-  {
-   "a": "CMU_01",
+   "a": "Verguss_f0",
    "b": "SV1_CMU_01_Schraube_2730",
-   "volumen_mm3": 10.673561040571336,
+   "volumen_mm3": 7.068583470577035,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_01",
+   "a": "Verguss_f0",
+   "b": "SV1_CMU_01_Bolzen_2731",
+   "volumen_mm3": 20.929916300384182,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Verguss_f0",
    "b": "SV1_CMU_01_Schraube_2732",
-   "volumen_mm3": 10.673561040571347,
+   "volumen_mm3": 7.068583470577039,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_01",
-   "b": "SV1_CMU_01_Schraube_2734",
-   "volumen_mm3": 10.673561040571336,
+   "a": "Verguss_f0",
+   "b": "SV1_CMU_01_Bolzen_2733",
+   "volumen_mm3": 20.929916300384146,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_01",
-   "b": "SV1_CMU_01_Schraube_2736",
-   "volumen_mm3": 10.673561040571347,
-   "art": "SV1 Schraube im Rahmen/Platine"
-  },
-  {
-   "a": "CMU_02",
+   "a": "Verguss_f0",
    "b": "SV1_CMU_02_Schraube_2744",
-   "volumen_mm3": 10.673561040571341,
+   "volumen_mm3": 7.068583470577039,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_02",
+   "a": "Verguss_f0",
+   "b": "SV1_CMU_02_Bolzen_2745",
+   "volumen_mm3": 20.92991630038414,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Verguss_f0",
    "b": "SV1_CMU_02_Schraube_2746",
-   "volumen_mm3": 10.673561040571325,
+   "volumen_mm3": 7.0685834705770265,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_02",
-   "b": "SV1_CMU_02_Schraube_2748",
-   "volumen_mm3": 10.673561040571341,
+   "a": "Verguss_f0",
+   "b": "SV1_CMU_02_Bolzen_2747",
+   "volumen_mm3": 20.9299163003842,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_02",
-   "b": "SV1_CMU_02_Schraube_2750",
-   "volumen_mm3": 10.673561040571329,
-   "art": "SV1 Schraube im Rahmen/Platine"
-  },
-  {
-   "a": "CMU_03",
+   "a": "Verguss_f0",
    "b": "SV1_CMU_03_Schraube_2758",
-   "volumen_mm3": 10.673561040571323,
+   "volumen_mm3": 7.068583470577027,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_03",
+   "a": "Verguss_f0",
+   "b": "SV1_CMU_03_Bolzen_2759",
+   "volumen_mm3": 20.929916300384185,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Verguss_f0",
    "b": "SV1_CMU_03_Schraube_2760",
-   "volumen_mm3": 10.673561040571329,
+   "volumen_mm3": 7.068583470577027,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_03",
-   "b": "SV1_CMU_03_Schraube_2762",
-   "volumen_mm3": 10.673561040571323,
+   "a": "Verguss_f0",
+   "b": "SV1_CMU_03_Bolzen_2761",
+   "volumen_mm3": 20.929916300384207,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_03",
-   "b": "SV1_CMU_03_Schraube_2764",
-   "volumen_mm3": 10.673561040571329,
-   "art": "SV1 Schraube im Rahmen/Platine"
-  },
-  {
-   "a": "CMU_04",
+   "a": "Verguss_f0",
    "b": "SV1_CMU_04_Schraube_2772",
-   "volumen_mm3": 10.673561040571323,
+   "volumen_mm3": 7.068583470577027,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_04",
+   "a": "Verguss_f0",
+   "b": "SV1_CMU_04_Bolzen_2773",
+   "volumen_mm3": 20.929916300384193,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Verguss_f0",
    "b": "SV1_CMU_04_Schraube_2774",
-   "volumen_mm3": 10.673561040571343,
+   "volumen_mm3": 7.068583470577038,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_04",
-   "b": "SV1_CMU_04_Schraube_2776",
-   "volumen_mm3": 10.673561040571323,
+   "a": "Verguss_f0",
+   "b": "SV1_CMU_04_Bolzen_2775",
+   "volumen_mm3": 20.929916300384292,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_04",
-   "b": "SV1_CMU_04_Schraube_2778",
-   "volumen_mm3": 10.673561040571343,
-   "art": "SV1 Schraube im Rahmen/Platine"
-  },
-  {
-   "a": "CMU_05",
+   "a": "Verguss_f0",
    "b": "SV1_CMU_05_Schraube_2786",
-   "volumen_mm3": 10.67356104057134,
+   "volumen_mm3": 7.068583470577038,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_05",
+   "a": "Verguss_f0",
+   "b": "SV1_CMU_05_Bolzen_2787",
+   "volumen_mm3": 20.929916300384164,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Verguss_f0",
    "b": "SV1_CMU_05_Schraube_2788",
-   "volumen_mm3": 10.673561040571343,
+   "volumen_mm3": 7.068583470577038,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_05",
-   "b": "SV1_CMU_05_Schraube_2790",
-   "volumen_mm3": 10.67356104057134,
+   "a": "Verguss_f0",
+   "b": "SV1_CMU_05_Bolzen_2789",
+   "volumen_mm3": 20.929916300384253,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_05",
-   "b": "SV1_CMU_05_Schraube_2792",
-   "volumen_mm3": 10.673561040571343,
-   "art": "SV1 Schraube im Rahmen/Platine"
-  },
-  {
-   "a": "CMU_06",
+   "a": "Verguss_f0",
    "b": "SV1_CMU_06_Schraube_2800",
-   "volumen_mm3": 10.67356104057134,
+   "volumen_mm3": 7.068583470577038,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_06",
+   "a": "Verguss_f0",
+   "b": "SV1_CMU_06_Bolzen_2801",
+   "volumen_mm3": 20.92991630038417,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Verguss_f0",
    "b": "SV1_CMU_06_Schraube_2802",
-   "volumen_mm3": 10.673561040571343,
+   "volumen_mm3": 7.068583470577038,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_06",
-   "b": "SV1_CMU_06_Schraube_2804",
-   "volumen_mm3": 10.67356104057134,
+   "a": "Verguss_f0",
+   "b": "SV1_CMU_06_Bolzen_2803",
+   "volumen_mm3": 20.92991630038442,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_06",
-   "b": "SV1_CMU_06_Schraube_2806",
-   "volumen_mm3": 10.673561040571343,
-   "art": "SV1 Schraube im Rahmen/Platine"
-  },
-  {
-   "a": "CMU_07",
+   "a": "Verguss_f0",
    "b": "SV1_CMU_07_Schraube_2814",
-   "volumen_mm3": 10.67356104057134,
+   "volumen_mm3": 7.068583470577038,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_07",
+   "a": "Verguss_f0",
+   "b": "SV1_CMU_07_Bolzen_2815",
+   "volumen_mm3": 20.92991630038417,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Verguss_f0",
    "b": "SV1_CMU_07_Schraube_2816",
-   "volumen_mm3": 10.673561040571343,
+   "volumen_mm3": 7.068583470577038,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_07",
-   "b": "SV1_CMU_07_Schraube_2818",
-   "volumen_mm3": 10.67356104057134,
+   "a": "Verguss_f0",
+   "b": "SV1_CMU_07_Bolzen_2817",
+   "volumen_mm3": 20.92991630038442,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_07",
-   "b": "SV1_CMU_07_Schraube_2820",
-   "volumen_mm3": 10.673561040571343,
-   "art": "SV1 Schraube im Rahmen/Platine"
-  },
-  {
-   "a": "CMU_08",
+   "a": "Verguss_f0",
    "b": "SV1_CMU_08_Schraube_2828",
-   "volumen_mm3": 10.67356104057134,
+   "volumen_mm3": 7.068583470577038,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_08",
+   "a": "Verguss_f0",
+   "b": "SV1_CMU_08_Bolzen_2829",
+   "volumen_mm3": 20.92991630038417,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Verguss_f0",
    "b": "SV1_CMU_08_Schraube_2830",
-   "volumen_mm3": 10.673561040571197,
+   "volumen_mm3": 7.068583470576942,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_08",
-   "b": "SV1_CMU_08_Schraube_2832",
-   "volumen_mm3": 10.67356104057134,
+   "a": "Verguss_f0",
+   "b": "SV1_CMU_08_Bolzen_2831",
+   "volumen_mm3": 20.92991630038443,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_08",
-   "b": "SV1_CMU_08_Schraube_2834",
-   "volumen_mm3": 10.673561040571201,
-   "art": "SV1 Schraube im Rahmen/Platine"
-  },
-  {
-   "a": "CMU_09",
+   "a": "Verguss_f0",
    "b": "SV1_CMU_09_Schraube_2842",
-   "volumen_mm3": 10.673561040571196,
+   "volumen_mm3": 7.068583470576942,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_09",
+   "a": "Verguss_f0",
+   "b": "SV1_CMU_09_Bolzen_2843",
+   "volumen_mm3": 20.929916300384164,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Verguss_f0",
    "b": "SV1_CMU_09_Schraube_2844",
-   "volumen_mm3": 10.673561040571197,
+   "volumen_mm3": 7.068583470576942,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_09",
-   "b": "SV1_CMU_09_Schraube_2846",
-   "volumen_mm3": 10.673561040571196,
+   "a": "Verguss_f0",
+   "b": "SV1_CMU_09_Bolzen_2845",
+   "volumen_mm3": 20.92991630038443,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_09",
-   "b": "SV1_CMU_09_Schraube_2848",
-   "volumen_mm3": 10.673561040571201,
-   "art": "SV1 Schraube im Rahmen/Platine"
-  },
-  {
-   "a": "CMU_10",
+   "a": "Verguss_f0",
    "b": "SV1_CMU_10_Schraube_2856",
-   "volumen_mm3": 10.673561040571196,
+   "volumen_mm3": 7.068583470576942,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_10",
+   "a": "Verguss_f0",
+   "b": "SV1_CMU_10_Bolzen_2857",
+   "volumen_mm3": 20.929916300384164,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Verguss_f0",
    "b": "SV1_CMU_10_Schraube_2858",
-   "volumen_mm3": 10.673561040571197,
+   "volumen_mm3": 7.068583470576942,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_10",
-   "b": "SV1_CMU_10_Schraube_2860",
-   "volumen_mm3": 10.673561040571196,
+   "a": "Verguss_f0",
+   "b": "SV1_CMU_10_Bolzen_2859",
+   "volumen_mm3": 20.92991630038443,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_10",
-   "b": "SV1_CMU_10_Schraube_2862",
-   "volumen_mm3": 10.673561040571201,
-   "art": "SV1 Schraube im Rahmen/Platine"
-  },
-  {
-   "a": "CMU_11",
+   "a": "Verguss_f0",
    "b": "SV1_CMU_11_Schraube_2870",
-   "volumen_mm3": 10.673561040571196,
+   "volumen_mm3": 7.068583470576942,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_11",
+   "a": "Verguss_f0",
+   "b": "SV1_CMU_11_Bolzen_2871",
+   "volumen_mm3": 20.929916300384164,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Verguss_f0",
    "b": "SV1_CMU_11_Schraube_2872",
-   "volumen_mm3": 10.673561040571197,
+   "volumen_mm3": 7.068583470576942,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_11",
-   "b": "SV1_CMU_11_Schraube_2874",
-   "volumen_mm3": 10.673561040571196,
+   "a": "Verguss_f0",
+   "b": "SV1_CMU_11_Bolzen_2873",
+   "volumen_mm3": 20.640736407369303,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_11",
-   "b": "SV1_CMU_11_Schraube_2876",
-   "volumen_mm3": 10.673561040571201,
+   "a": "Verguss_f3",
+   "b": "SV1_CMU_00_Schraube_2716",
+   "volumen_mm3": 7.068583470577034,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_12",
+   "a": "Verguss_f3",
+   "b": "SV1_CMU_00_Bolzen_2717",
+   "volumen_mm3": 20.929916300383955,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Verguss_f3",
+   "b": "SV1_CMU_00_Schraube_2718",
+   "volumen_mm3": 7.068583470577039,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Verguss_f3",
+   "b": "SV1_CMU_00_Bolzen_2719",
+   "volumen_mm3": 20.929916300384026,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Verguss_f3",
    "b": "SV1_CMU_12_Schraube_2884",
-   "volumen_mm3": 10.673561040571121,
+   "volumen_mm3": 7.068583470576942,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_12",
+   "a": "Verguss_f3",
+   "b": "SV1_CMU_12_Bolzen_2885",
+   "volumen_mm3": 20.929916300389547,
+   "art": "SV1 Schraube im Rahmen/Platine"
+  },
+  {
+   "a": "Verguss_f3",
    "b": "SV1_CMU_12_Schraube_2886",
-   "volumen_mm3": 10.673561040571125,
+   "volumen_mm3": 7.068583470576942,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
-   "a": "CMU_12",
-   "b": "SV1_CMU_12_Schraube_2888",
-   "volumen_mm3": 10.673561040571121,
-   "art": "SV1 Schraube im Rahmen/Platine"
-  },
-  {
-   "a": "CMU_12",
-   "b": "SV1_CMU_12_Schraube_2890",
-   "volumen_mm3": 10.673561040571125,
+   "a": "Verguss_f3",
+   "b": "SV1_CMU_12_Bolzen_2887",
+   "volumen_mm3": 20.64073640731715,
    "art": "SV1 Schraube im Rahmen/Platine"
   },
   {
@@ -3957,7 +1955,7 @@
    "art": "SV1 Schraube im Rahmen/Platine"
   }
  ],
- "rechenzeit_s": 520.3726427555084,
+ "rechenzeit_s": 528.8616635799408,
  "e3": {
   "platine_mm": [
    120.0,
@@ -5530,10 +3528,10 @@
    "Pad_oben": 135296.24958610302,
    "Kuehlplatte_oben": 371164.9845189415,
    "Deckel": 904.7786842333153,
-   "Zelltraeger_f0": 1320.000000000815,
-   "Verguss_f0": 419569.91118429974,
-   "Zelltraeger_f3": 240.00000000570435,
-   "Verguss_f3": 90105.78047917597,
+   "Zelltraeger_f0": 1320.000000000582,
+   "Verguss_f0": 419569.9111842513,
+   "Zelltraeger_f3": 240.00000000558794,
+   "Verguss_f3": 90105.78047916852,
    "FPC_09": 20.136083660854638,
    "FPC_10": 36.24495058949651,
    "FPC_11": 20.136083660845543,
@@ -5550,91 +3548,91 @@
     {
      "i": 0,
      "seite": "hinten",
-     "x": 1915.0,
+     "x": 1914.0,
      "y": 95.66666666666667,
      "taps": 18
     },
     {
      "i": 1,
      "seite": "vorn",
-     "x": 35.0,
+     "x": 36.0,
      "y": 140.0,
      "taps": 18
     },
     {
      "i": 2,
      "seite": "vorn",
-     "x": 35.0,
+     "x": 36.0,
      "y": 260.0,
      "taps": 18
     },
     {
      "i": 3,
      "seite": "vorn",
-     "x": 35.0,
+     "x": 36.0,
      "y": 380.0,
      "taps": 18
     },
     {
      "i": 4,
      "seite": "vorn",
-     "x": 35.0,
+     "x": 36.0,
      "y": 500.0,
      "taps": 18
     },
     {
      "i": 5,
      "seite": "vorn",
-     "x": 35.0,
+     "x": 36.0,
      "y": 620.0,
      "taps": 18
     },
     {
      "i": 6,
      "seite": "vorn",
-     "x": 35.0,
+     "x": 36.0,
      "y": 740.0,
      "taps": 18
     },
     {
      "i": 7,
      "seite": "vorn",
-     "x": 35.0,
+     "x": 36.0,
      "y": 860.0,
      "taps": 18
     },
     {
      "i": 8,
      "seite": "vorn",
-     "x": 35.0,
+     "x": 36.0,
      "y": 980.0,
      "taps": 18
     },
     {
      "i": 9,
      "seite": "vorn",
-     "x": 35.0,
+     "x": 36.0,
      "y": 1100.0,
      "taps": 18
     },
     {
      "i": 10,
      "seite": "vorn",
-     "x": 35.0,
+     "x": 36.0,
      "y": 1220.0,
      "taps": 18
     },
     {
      "i": 11,
      "seite": "vorn",
-     "x": 35.0,
+     "x": 36.0,
      "y": 1340.0,
      "taps": 18
     },
     {
      "i": 12,
      "seite": "hinten",
-     "x": 1915.0,
+     "x": 1914.0,
      "y": 1340.0,
      "taps": 2
     }
@@ -7925,11 +5923,12 @@
    "anzahl_gegenstuecke": 40,
    "anzahl_schrauben_bolzen": 104,
    "aussparung_daisy_buchsen_mm3": {
-    "Zelltraeger_f0": 1319.9999999997672,
-    "Verguss_f0": 19799.999999981374,
-    "Zelltraeger_f3": 239.99999999452848,
-    "Verguss_f3": 3600.0000000018626
+    "Zelltraeger_f0": 18479.999999999767,
+    "Verguss_f0": 52172.74364026636,
+    "Zelltraeger_f3": 3359.9999999945285,
+    "Verguss_f3": 9753.274364033714
    },
+   "cmu_wandabstand_mm": 1.0,
    "freigang_platinenstecker": {
     "greifraum_mm": 5.0,
     "quer_mm": 2.0

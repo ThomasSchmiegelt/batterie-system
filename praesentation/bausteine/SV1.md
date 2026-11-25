@@ -4,3 +4,5 @@
 **Zahlen:** sim/mechanik/sv1_stecker_verschraubung/ergebnis_v02.json: Verletzungen LFP 211, NMC 215 (davon CMU-Platinenstecker gegen festes Teil LFP 162, NMC 169; eigene Teile 0); harte Kollisionen LFP 0, NMC 52 (26 Daisy-Buchsen in Zellträger/Verguss). CMU-Bohrungen: B3 und B4v nicht abnahmefähig (sim/mechanik/sv1_stecker_verschraubung/ERGEBNIS.md, Punkt 1, Quelle sv1b/lauf2_*/drc.json: B3 0 offen und 18 Verstöße, B4v 3 offen und 10 Verstöße). Werkzeugbefund: Daisy-Klasse 2,5 mm fehlte im W1-Lauf (ERGEBNIS Punkt 2b).
 
 **Nachtrag v0.3 (2026-11-25):** Platinenstecker-Freigang Steckweg + 5 mm, quer 2 mm: Verletzungen LFP 71, NMC 117 (sim/mechanik/sv1_stecker_verschraubung/ergebnis_v03.json); NMC-Kollisionen 52 → 0 durch Aussparung der Daisy-Buchsen. CMU mit 4 Eckbohrungen: DRC 0 und 0 offen vor den Thermovias, danach 3 Vias 0,45 mm außerhalb der Regel (sv1b/e3w/cmu_LFP_drc.json).
+
+**Nachtrag v0.4 (2026-11-25):** CMU-Platine mit 4 Bohrungen: DRC 0 und 0 offen, 144 Thermovias (e3/cmu_<V>_drc.json). Kollisionen LFP 0, NMC 0; Freigangsverletzungen LFP 29, NMC 26, Platinenstecker der CMU 0 (sim/mechanik/sv1_stecker_verschraubung/ergebnis_v04.json).
