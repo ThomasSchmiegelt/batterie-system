@@ -51,3 +51,11 @@ Jede Verletzung eines Steckfreigangs; fehlendes Merkmal; Bohrung nicht routbar.
 - **211/215 Freigangsverletzungen sind nicht glaubhaft als echte Verletzungen.** Vermutlich prüft das Skript die Freigänge auch gegen das eigene Kabel, den eigenen Stecker oder Nachbarzellen. Die 52 harten Kollisionen bei NMC (Daisy-Gegenstück gegen Zellträger/Verguss) sind dagegen echt. Beides prüft Opus in der nächsten Sitzung an ergebnis.json (Liste der Paare), dann folgen die Ausnahmen bzw. die Lage der Daisy-Stecker.
 - CMU-Bohrungen: Das Routing ist bei 120 × 60 mit 4 Bohrungen gescheitert, der Stand ist zurückgesetzt. Nächster Versuch: Bohrungen nur an 2 Ecken + Klemmung im Rahmen, oder 3 Bohrungen. Entscheidung Opus offen.
 - Fehlende Merkmale (befestigung, bohrung_*, steckfreigang_mm) → in der nächsten Sitzung anlegen.
+
+## Nachtrag 2 (Opus, 2026-11-25, nach W1)
+Reihenfolge, erst konservativ:
+1. **CMU-Bohrungen:** Variante **B3** (2 Ecken + 1 Bohrung mittig an der gegenüberliegenden Langseite) direkt rechnen, ohne Wächter, mit 200 Passes. Daisy-Regel 2,5 mm (ENT-183) bleibt. Gelingt B3 nicht, **B4v** mit 200 Passes. Abnahme DRC 0, 0 offen, 144 Thermovias, danach NMC per Übertragung. Die Lagen der Bohrungen aus `sim/elektrik/w1_kolibri_waechter/ERGEBNIS.md` übernehmen, als Annahme ERW-SV1 N2.
+2. Abweichung Router-Log (3 unrouted) gegen KiCad-DRC (0 unverbunden) klären. Maßgebend ist der KiCad-DRC.
+3. **Freigangslogik prüfen:** Die 211/215 Verletzungen nach Paaren gruppieren. Eigene Teile (Kabel, Gegenstück, Platine desselben Steckers) gehören in die Ausnahmen. Echte Verletzungen an OPUS mit Maß melden.
+4. **NMC-Daisy:** Die 52 Kollisionen (Gegenstück gegen Zellträger/Verguss) prüfen. Vorschlag zur Lage melden, nicht selbst ändern.
+5. Neue Merkmale: BT-321/BT-311 `befestigung`, `bohrung_d_mm`, `bohrung_anzahl`, BT-7xx `steckfreigang_mm` werden von Opus angelegt (siehe struktur.json), dann die Akten vorgeschlagen.

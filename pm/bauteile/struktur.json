@@ -461,7 +461,11 @@
         "kriechstrecke_hv_nv_mm": null,
         "luftstrecke_hv_nv_mm": null,
         "abstand_nv_mm": null,
-        "schuetzkanaele": null
+        "schuetzkanaele": null,
+        "befestigung": null,
+        "bohrung_d_mm": null,
+        "bohrung_anzahl": null,
+        "steckfreigang_mm": null
       }
     },
     {
@@ -507,7 +511,10 @@
         "waermeabfuhr": null,
         "pad_dicke_mm": null,
         "pad_lambda_W_mK": null,
-        "vias_je_widerstandspaar": null
+        "vias_je_widerstandspaar": null,
+        "befestigung": null,
+        "bohrung_d_mm": null,
+        "bohrung_anzahl": null
       }
     },
     {
@@ -642,7 +649,8 @@
       ],
       "merkmale": {
         "art": null,
-        "breite_mm": null
+        "breite_mm": null,
+        "steckfreigang_mm": null
       }
     },
     {
@@ -1222,7 +1230,8 @@
       ],
       "merkmale": {
         "nennstrom_A": null,
-        "nennspannung_V": null
+        "nennspannung_V": null,
+        "steckfreigang_mm": null
       }
     },
     {
@@ -1294,7 +1303,8 @@
       "merkmale": {
         "nennstrom_A": null,
         "einbauort": null,
-        "bauform": null
+        "bauform": null,
+        "steckfreigang_mm": null
       }
     },
     {
@@ -1349,7 +1359,8 @@
       ],
       "merkmale": {
         "anzahl": null,
-        "nennstrom_A": null
+        "nennstrom_A": null,
+        "steckfreigang_mm": null
       }
     },
     {
@@ -1365,7 +1376,8 @@
         "700.7"
       ],
       "merkmale": {
-        "polzahl": null
+        "polzahl": null,
+        "steckfreigang_mm": null
       }
     },
     {
