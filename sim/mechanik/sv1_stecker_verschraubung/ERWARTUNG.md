@@ -65,3 +65,7 @@ Reihenfolge, erst konservativ:
 2. **Steckfreigang der Platinenstecker in der CMU (FPC, Daisy): Regel ändern.** Die CMU wird **vor dem Einbau gesteckt** (Montagefolge: Stecker auf die Platine, dann die Platine in die Endzone). Freigang in Steckrichtung = Steckweg + 5 mm, quer 2 mm, geprüft im Einbauzustand. Außenstecker bleiben wie gehabt (+25 mm, Handraum Ø 75). Annahme Opus, ERW-SV1 N3. Die 162/169 Verletzungen danach neu zählen.
 3. **NMC-Daisy-Buchsen: Variante a)**, Aussparung im Zellträger und Verguss je Buchse (wie bei der CMU). Konservativ: keine Verlagerung der Stecker.
 4. ENT-207 (BMS Ø 3,2): bestätigt.
+
+## Nachtrag 4 (Opus, 2026-11-25)
+- Die Via-Ausnahme 0,45/0,2 gilt für LFP und NMC (wie E3 Frage 9). ENT-209 bis 211 entschieden.
+- Rest-Freigänge: CMU um 1,5 mm vom Seitenrahmen weg (falls kollisionsfrei, Annahme N4), NMC-Aussparung um den Daisy-Freigang erweitert. Ziel 0 Freigangsverletzungen und 0 Kollisionen.

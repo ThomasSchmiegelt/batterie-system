@@ -17,6 +17,7 @@ VO = VAR + "_e2d" + ("_e3c" if E3C else "_e3" if E3 else "") + ("_sv1" if SV1 el
 PARM = json.load(open(f"{os.environ.get('BATTERIE', '/home/cae/hermes/batterie')}/pm/bauteile/parameter.json"))["parameter"]   # Maße aus Akten (E3c: BT-722 lichte_hoehe_zugabe_mm = ENT-194)
 ROOT = os.environ.get("BATTERIE", "/home/cae/hermes/batterie")
 OUT = f"{ROOT}/cad/pack/entwurf"
+OUTW = OUT   # SV1b N3: Schreibziel wie bisher (Suffix _sv1)
 PJ = json.load(open(os.environ.get("PACK_PARAMETER", f"{OUT}/parameter_{VAR}_e2d.json")))
 P, A = PJ["parameter"], {k: v["wert"] for k, v in PJ["A"].items()}
 def w(bt, m):
@@ -226,14 +227,16 @@ if E2:
             y = ypos[j] + dd
             if all(abs(y - h) >= 2 * rhv + 5 + fw / 2 + 1 for h in hv_y if VAR == "NMC") and all(abs(y - l) >= fw + 2 for l in lane if l is not None): lane[j] = y; break
         assert lane[j] is not None, j
-    cmu_x = {"vorn": (xv_in, xv_in + cmuD), "hinten": (xh_in - cmuD, xh_in)}
+    # SV1b N4 (Annahme Opus ERW-SV1 N4, 2026-11-25): Mit PACK_SV1 wird jede CMU um 1,5 mm von der Endwand (Seitenrahmen) weggerückt, damit der Platinenstecker-Freigang (quer 2 mm) den Rahmen nicht schneidet. Richtung = Wandnormale (x); ERW sagt "y", gemeint ist der Wandabstand (siehe ERGEBNIS v0.4).
+    SV1_WAND = 1.5 if SV1 else 0.0
+    cmu_x = {"vorn": (xv_in + SV1_WAND, xv_in + SV1_WAND + cmuD), "hinten": (xh_in - cmuD - SV1_WAND, xh_in - SV1_WAND)}
     for j in range(ncmu):
         x0, x1 = cmu_x[seite[j]]
         cbox = box(x0, ypos[j] - cmuL / 2, zc - cmuB / 2, x1, ypos[j] + cmuL / 2, zc + cmuB / 2)
         add(f"CMU_{j:02d}", "E2_CMU", cbox, mass=A["A_e2_cmu_masse_kg"], mat="E2 Teil (Masse ERW-E2 N1)")
         if E3:   # Platine aus KiCad-STEP: Platinen-x (Länge) -> Pack-y, Platinen-y (Breite) -> Pack-z, Platinen-z (Bauteile oben) -> Pack-x (vorn +x, hinten -x); Rückseite an der Wand
             if "E3SHAPE" not in globals():
-                E3SHAPE = Part.read(f"/home/cae/cae_projekte/batterie/e3/cmu_{VAR}.step"); bb3 = E3SHAPE.BoundBox
+                E3SHAPE = Part.read(os.environ.get("CMU_STEP", f"/home/cae/cae_projekte/batterie/e3/cmu_{VAR}.step")); bb3 = E3SHAPE.BoundBox
                 E3SHAPE.translate(V(-bb3.XMin, -bb3.YMin, -bb3.ZMin)); E3DIM = (bb3.XLength, bb3.YLength, bb3.ZLength)
             m3 = FreeCAD.Matrix()
             if seite[j] == "vorn": m3.A11, m3.A12, m3.A13, m3.A21, m3.A22, m3.A23, m3.A31, m3.A32, m3.A33 = 0, 0, 1, 1, 0, 0, 0, 1, 0; ox = x0
@@ -714,6 +717,8 @@ if SV1:
     S = {k: v["wert"] for k, v in json.load(open(f"{OUT}/annahmen_sv1.json")).items()}
     wnd, kap, grf, qr, hd = S["A_sv1_stecker_wand_mm"], S["A_sv1_stecker_kappe_mm"], S["A_sv1_greifraum_mm"], S["A_sv1_quer_mm"], S["A_sv1_handraum_d_mm"]
     spl, MS = S["A_sv1_steckweg_platine_mm"], S["A_sv1_masse_kg"]
+    FG_GRF_PL, FG_QUER_PL = 5.0, 2.0   # Annahme Opus ERW-SV1 N3 (Montagefolge: CMU wird vor dem Einbau gesteckt)
+    SV1_AUS = {}
     TP = {p["name"]: p for p in teile}
     def sv1_add(name, grp, shp, mass=0.0, mat="SV1 Teil (Annahme ERW-SV1)"): add(name, grp, shp, mass=mass, mat=mat)
     def freigang(nm, shp, prefix, grp_ok=(), names_ok=()):
@@ -757,12 +762,12 @@ if SV1:
             p["grp"] = "SV1_Stecker"; b_ = p["shape"].BoundBox; Ly = b_.YMax - b_.YMin
             by0_, by1_ = (b_.YMin - Ly, b_.YMin) if sign > 0 else (b_.YMax, b_.YMax + Ly)
             sv1_add(name + "_Buchse", "SV1_Gegenstueck", box(b_.XMin, by0_, b_.ZMin, b_.XMax, by1_, b_.ZMax), MS["klein"], "SV1 Gegenstück auf der CMU (Annahme)")
-            Lf = Ly + spl + grf; ya_, yb_ = (b_.YMin, b_.YMin + Lf) if sign > 0 else (b_.YMax - Lf, b_.YMax)
-            return b_, box(b_.XMin - qr, ya_, b_.ZMin - zdown, b_.XMax + qr, yb_, b_.ZMax + zup)
-        b_, fgb = pl_y(TP[f"FPC_Stecker_{j:02d}"], f"FPC_Stecker_{j:02d}", +1, 0.0, qr)      # Platine liegt unter dem Stecker: z nur nach oben
+            Lf = Ly + spl + FG_GRF_PL; ya_, yb_ = (b_.YMin, b_.YMin + Lf) if sign > 0 else (b_.YMax - Lf, b_.YMax)   # SV1b N3: Platinenstecker in der CMU, Steckweg + 5 mm, quer 2 mm (Annahme ERW-SV1 N3)
+            return b_, box(b_.XMin - FG_QUER_PL, ya_, b_.ZMin - zdown, b_.XMax + FG_QUER_PL, yb_, b_.ZMax + zup)
+        b_, fgb = pl_y(TP[f"FPC_Stecker_{j:02d}"], f"FPC_Stecker_{j:02d}", +1, 0.0, FG_QUER_PL)      # Platine liegt unter dem Stecker: z nur nach oben
         freigang(f"Steckfreigang_FPC_Stecker_{j:02d}", fgb, f"FPC_Stecker_{j:02d}", grp_ok=("E2_FPC", "E2_FPC_Halter", "E2_FPC_Detail"))
         for nm_, sg_ in (("In", -1), ("Out", +1)):
-            b_, fgb = pl_y(TP[f"Daisy_Stecker_{j:02d}_{nm_}"], f"Daisy_Stecker_{j:02d}_{nm_}", sg_, qr, 0.0)   # Platine liegt über dem Stecker
+            b_, fgb = pl_y(TP[f"Daisy_Stecker_{j:02d}_{nm_}"], f"Daisy_Stecker_{j:02d}_{nm_}", sg_, FG_QUER_PL, 0.0)   # Platine liegt über dem Stecker
             freigang(f"Steckfreigang_Daisy_Stecker_{j:02d}_{nm_}", fgb, f"Daisy_Stecker_{j:02d}_{nm_}", grp_ok=("E2_Daisy",))
         # Schrauben M3 + Abstandsbolzen je CMU (Ecken, Mitte vom Rand = inset), Achse x
         ins, kd, ksh = S["A_sv1_cmu_bohrung_inset_mm"], S["A_sv1_cmu_schraube_kopf_mm"][0], S["A_sv1_cmu_schraube_kopf_mm"][1]; sd = S["A_sv1_cmu_schaft_d_mm"]; bd, bl = S["A_sv1_cmu_bolzen_mm"]; pd_ = S["A_sv1_cmu_platine_dicke_mm"]
@@ -775,6 +780,14 @@ if SV1:
             bol = Part.makeCylinder(bd / 2, bl, V(xw - bl if sgn > 0 else xw, yy_, zz_), V(1, 0, 0)).cut(Part.makeCylinder(sd / 2, bl, V(xw - bl if sgn > 0 else xw, yy_, zz_), V(1, 0, 0)))
             sv1_add(f"SV1_CMU_{j:02d}_Schraube_{len(teile)}", "SV1_Schraube", shaft.fuse(kopf), MS["M3_Satz"] / 2, "Stahl A2 (Annahme Masse)")
             sv1_add(f"SV1_CMU_{j:02d}_Bolzen_{len(teile)}", "SV1_Schraube", bol, MS["M3_Satz"] / 2, "Stahl A2 (Annahme Masse)")
+    # --- SV1b N3 Punkt 3: Aussparung in Zellträger und Verguss je Daisy-Buchse (NMC), wie bei der CMU
+    # SV1b N4 Punkt (b): Aussparung zusätzlich um den Daisy-Steckfreigang (Platz zum Stecken im Einbauzustand), Annahme Opus ERW-SV1 N4
+    _bu = [p for p in teile if (p["grp"] == "SV1_Gegenstueck" and p["name"].startswith("Daisy_Stecker_") and p["name"].endswith("_Buchse")) or (p["grp"] == "E2_Steckfreigang" and p["name"].startswith("Steckfreigang_Daisy_Stecker_"))]
+    for p in teile:
+        if p["name"].startswith(("Zelltraeger_f", "Verguss_f")):
+            tl_ = [q["shape"] for q in _bu if p["shape"].BoundBox.intersect(q["shape"].BoundBox)]
+            if tl_:
+                v0 = p["shape"].Volume; p["shape"] = p["shape"].cut(tl_); SV1_AUS[p["name"]] = v0 - p["shape"].Volume
     # --- BMS-Kabelstecker: nach Lage der Stecker im Layout (Richtung = zum nächsten Platinenrand), parallel zur Platine
     _li = json.load(open(f"{ROOT}/sim/elektrik/e3c_bms_platine/layout_info.json")); _tn = {t["tag"]: t["name"] for t in json.load(open(f"{ROOT}/sim/elektrik/e3c_bms_platine/bms_teile.json"))["teile"]}
     _s = Part.read("/home/cae/cae_projekte/batterie/e3c/bms.step"); _r = _s.BoundBox; PLb, PBb = _li["platine_mm"]
@@ -797,6 +810,7 @@ if SV1:
         p = TP[f"{n_}_Spulenstecker"]; p["grp"] = "SV1_Stecker"; b_ = p["shape"].BoundBox; Lf = (b_.YMax - b_.YMin) + spl + grf
         freigang(f"Steckfreigang_{n_}_Spulenstecker", box(b_.XMin - qr, b_.YMin, b_.ZMin - qr, b_.XMax + qr, b_.YMin + Lf, b_.ZMax + qr), n_)
     sv1res = dict(freigaenge=sorted(SV1_FG), bms_stecker=sv1_bms, masse_zusatz_kg=sum(p["mass"] for p in teile if p["grp"] in ("SV1_Stecker", "SV1_Gegenstueck", "SV1_Schraube")), anzahl_stecker=sum(1 for p in teile if p["grp"] == "SV1_Stecker"), anzahl_gegenstuecke=sum(1 for p in teile if p["grp"] == "SV1_Gegenstueck"), anzahl_schrauben_bolzen=sum(1 for p in teile if p["grp"] == "SV1_Schraube"))
+    sv1res["aussparung_daisy_buchsen_mm3"] = SV1_AUS; sv1res["cmu_wandabstand_mm"] = SV1_WAND; sv1res["freigang_platinenstecker"] = dict(greifraum_mm=FG_GRF_PL, quer_mm=FG_QUER_PL)
     e2res["sv1"] = sv1res
 
 # ---- Massen, Schwerpunkt
@@ -843,14 +857,14 @@ for i in range(N):
                 if "E2_Steckfreigang" in (ga_, gb_):
                     fg_, ot_ = (a, b) if ga_ == "E2_Steckfreigang" else (b, a); cfg_ = SV1_FG[fg_["name"]]
                     if ot_["grp"] == "E2_Steckfreigang" or ot_["name"].startswith(cfg_["prefix"]) or ot_["grp"] in cfg_["grp_ok"] or "_Bolzen_" in ot_["name"] or any(ot_["name"].startswith(x_) for x_ in cfg_["names_ok"]): continue
-                    fverl.append(dict(freigang=fg_["name"], teil=ot_["name"], gruppe=ot_["grp"], volumen_mm3=vol)); continue
+                    fverl.append(dict(freigang=fg_["name"], teil=ot_["name"], gruppe=ot_["grp"], volumen_mm3=vol, bb_freigang=[round(x,1) for x in (fg_["shape"].BoundBox.XMin,fg_["shape"].BoundBox.YMin,fg_["shape"].BoundBox.ZMin,fg_["shape"].BoundBox.XMax,fg_["shape"].BoundBox.YMax,fg_["shape"].BoundBox.ZMax)], bb_teil=[round(x,1) for x in (ot_["shape"].BoundBox.XMin,ot_["shape"].BoundBox.YMin,ot_["shape"].BoundBox.ZMin,ot_["shape"].BoundBox.XMax,ot_["shape"].BoundBox.YMax,ot_["shape"].BoundBox.ZMax)])); continue
                 if "SV1_Stecker" in (ga_, gb_):   # gesteckter Stecker überlappt eigenes Gegenstück (Flansch, Schrauben, Hebel, Platine): Kontakt, kein Verstoß (Vereinfachung)
                     pl_, ot_ = (a, b) if ga_ == "SV1_Stecker" else (b, a); base_ = pl_["name"].replace("_Kabelstecker", "")
                     if ot_["name"].startswith(base_) or (ot_["name"] == "BMS_Platine" and pl_["name"].startswith("BMS_Kabelstecker")): kontakte.append(dict(a=a["name"], b=b["name"], volumen_mm3=vol, art="SV1 gesteckt")); continue
                 if "SV1_Schraube" in (ga_, gb_) and any(x_["name"] == "Seitenrahmen" or x_["name"].startswith(("CMU_", "SV1_CMU_")) for x_ in (a, b)): kontakte.append(dict(a=a["name"], b=b["name"], volumen_mm3=vol, art="SV1 Schraube im Rahmen/Platine")); continue
                 if "SV1_Gegenstueck" in (ga_, gb_) and any(x_["name"].startswith("CMU_") for x_ in (a, b)): kontakte.append(dict(a=a["name"], b=b["name"], volumen_mm3=vol, art="SV1 Buchse auf CMU")); continue
             if {a["name"], b["name"]} in KONTAKT_VERSCHRAUBT and vol <= A["A_e3c_kontakt_schwelle_mm3"]: kontakte.append(dict(a=a["name"], b=b["name"], volumen_mm3=vol))   # E3c: verschraubte Berührung, kein Verstoß
-            else: koll.append(dict(a=a["name"], b=b["name"], volumen_mm3=vol))
+            else: koll.append(dict(a=a["name"], b=b["name"], volumen_mm3=vol, bb_a=[round(x,1) for x in (a["shape"].BoundBox.XMin,a["shape"].BoundBox.YMin,a["shape"].BoundBox.ZMin,a["shape"].BoundBox.XMax,a["shape"].BoundBox.YMax,a["shape"].BoundBox.ZMax)], bb_b=[round(x,1) for x in (b["shape"].BoundBox.XMin,b["shape"].BoundBox.YMin,b["shape"].BoundBox.ZMin,b["shape"].BoundBox.XMax,b["shape"].BoundBox.YMax,b["shape"].BoundBox.ZMax)]))
 bbA = FreeCAD.BoundBox(); [bbA.add(p["shape"].BoundBox) for p in teile]
 doc = FreeCAD.newDocument(f"pack_{VO}")
 gruppen = {}
@@ -890,12 +904,12 @@ def schnitt(box_, datei):
     json.dump(m, open(datei, "w"))
 xq = pos_q[1] + qb / 2 if len(pos_q) > 1 else pos_q[0] + qb / 2   # Mitte eines Querträgers
 if not E2:
-    schnitt(FreeCAD.BoundBox(Lg / 2, -1, -1, Lg + 1, B / 2, H + 1), f"{OUT}/netz_{VO}_schnitt.json")     # Viertel
+    schnitt(FreeCAD.BoundBox(Lg / 2, -1, -1, Lg + 1, B / 2, H + 1), f"{OUTW}/netz_{VO}_schnitt.json")     # Viertel
     zv = [p["shape"].BoundBox.Center.x for p in teile if p["grp"] == "Zellverbinder"]
     xh = (min(zv, key=lambda x: abs(x - (Lg / 2 + 150))) + 3) if zv else Lg / 2 + 150   # LFP: Schnittebene mitten durch einen Zellverbinder
-    schnitt(FreeCAD.BoundBox(xh, -1, -1, Lg + 1, B + 1, H + 1), f"{OUT}/netz_{VO}_halb.json")        # Halbschnitt x = Lg/2 (Ansicht "ecke")
-    schnitt(FreeCAD.BoundBox(-1, -1, -1, Lg + 1, B / 2, H + 1), f"{OUT}/netz_{VO}_laengs.json")       # Längsschnitt y = B/2
-    schnitt(FreeCAD.BoundBox(-1, -1, -1, xq, B + 1, H + 1), f"{OUT}/netz_{VO}_quer.json")            # Querschnitt durch Querträger
+    schnitt(FreeCAD.BoundBox(xh, -1, -1, Lg + 1, B + 1, H + 1), f"{OUTW}/netz_{VO}_halb.json")        # Halbschnitt x = Lg/2 (Ansicht "ecke")
+    schnitt(FreeCAD.BoundBox(-1, -1, -1, Lg + 1, B / 2, H + 1), f"{OUTW}/netz_{VO}_laengs.json")       # Längsschnitt y = B/2
+    schnitt(FreeCAD.BoundBox(-1, -1, -1, xq, B + 1, H + 1), f"{OUTW}/netz_{VO}_quer.json")            # Querschnitt durch Querträger
 
 if E2:   # Netze für die E2D-Bilder (große Dateien nach cae_projekte)
     xq = xh = 0.0
@@ -919,6 +933,6 @@ res = dict(schnittebene_quer_x_mm=(xq if not E2 else None), schnittebene_halb_x_
   teile=len(teile), kollisionspaare_geprueft=paare, kollisionen=koll, anzahl_kollisionen=len(koll), steckfreigang_verletzungen=fverl, anzahl_steckfreigang_verletzungen=len(fverl), kontakte_zugelassen=kontakte, rechenzeit_s=time.time() - t0,
   e3=(dict(E3INFO, anzahl_cmu=ncmu, step=f"/home/cae/cae_projekte/batterie/e3/cmu_{VAR}.step", cmu_masse_gesamt_kg=sum(t_["mass"] or 0 for t_ in teile if t_["name"].startswith("CMU_")), cmu_masse_je_g=(teile[[t_["name"] for t_ in teile].index("CMU_00")]["mass"] or 0) * 1000, cmu_masse_alt_e2_kg=A["A_e2_cmu_masse_kg"] * ncmu) if E3 else None),
   e2=e2res, annahmen={k: PJ["A"][k] for k in PJ["A"]})
-json.dump(res, open(f"{OUT}/ergebnis_{VO}.json", "w"), indent=1, ensure_ascii=False)
+json.dump(res, open(f"{OUTW}/ergebnis_{VO}.json", "w"), indent=1, ensure_ascii=False)
 print("FERTIG", VAR, "Teile", len(teile), "Paare", paare, "Koll", len(koll), "t", round(time.time() - t0))
 

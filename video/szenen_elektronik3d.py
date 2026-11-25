@@ -205,7 +205,7 @@ if SZ == "steuer":
     rootB, LB, (WB, HB) = platine("bms", DdB, BdB, Matrix.Translation(OB) @ Matrix.Diagonal((MM, MM, MM, 1)), zone=(100.0, 110.0))
     cB = Vector((rootB.matrix_basis @ Vector((WB / 2, HB / 2, 1.0, 1.0)))[:3])
     print("ZENTRUM CMU", cC, "BMS", cB, flush=True)
-    TC0, TC1 = 8.4, 9.0; TB0 = 20.0; NX = 10   # Überblendung über 10 Bilder
+    TC0, TC1 = 8.4, 9.0; TB0 = 20.0; NX = 25   # Überblendung über 25 Bilder (1 s)
     def bbox_welt(objs):
         pts = []
         for o in objs:

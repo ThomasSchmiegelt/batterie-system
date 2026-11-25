@@ -1,7 +1,7 @@
 #!/bin/bash
 # KI-generiert (Claude Sonnet 5.5, 2026-11-25), Entwurf. Auftrag video/AUFTRAG_VIDEO_ELEKTRONIK.md (REQ-D13, BAT-DOC-13c). Stufe 2: Szenen 4 und 5 sind 3D (Blender EEVEE, RGBA) aus video/szenen_elektronik3d.py, gerendert mit video/render_elektronik3d.sh nach /home/cae/cae_projekte/batterie_video/elektronik3d/; das Zusammensetzen ist CPU (Pillow).
 # Aufruf: bash video/erzeuge_video_elektronik.sh [daten|storyboard|render3d|render|zusammen|alles]   (vorhandene Einzelbilder werden übersprungen)
-cd /home/cae/hermes/batterie; source umgebung.sh; D=/home/cae/cae_projekte/batterie_video/elektronik; mkdir -p $D/bilder; NF=4125
+cd /home/cae/hermes/batterie; source umgebung.sh; D=/home/cae/cae_projekte/batterie_video/elektronik; mkdir -p $D/bilder; NF=4275
 render3d()   { systemd-run --user --scope --unit=hermes-batterie-video-elektronik bash video/render_elektronik3d.sh; }   # vorher: bash rechnen/gpu_warten.sh (steht im Skript)
 daten()      { echo "daten.json liegt vor (Haiku, Opus): video/elektronik/daten.json"; }
 storyboard() { echo "Storyboard: video/elektronik/STORYBOARD_kolibri.md (Kolibri 1, geprüft: pruefung_storyboard.txt)"; }

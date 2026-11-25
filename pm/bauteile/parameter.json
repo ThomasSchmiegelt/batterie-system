@@ -423,8 +423,9 @@
     "entscheidung": null
    },
    "bohrung_d_mm": {
-    "wert": null,
-    "entscheidung": null
+    "wert": 3.2,
+    "einheit": "\"mm\"",
+    "entscheidung": "ENT-207"
    },
    "bohrung_anzahl": {
     "wert": null,
@@ -505,16 +506,19 @@
     "entscheidung": "ENT-187"
    },
    "befestigung": {
-    "wert": null,
-    "entscheidung": null
+    "wert": "\"4 × M3 (ISO 14580, A2) mit Abstandsbolzen 6 mm in den Rahmen, Ecken (2,8|2,8)\"",
+    "einheit": "\"-\"",
+    "entscheidung": "ENT-209"
    },
    "bohrung_d_mm": {
-    "wert": null,
-    "entscheidung": null
+    "wert": 3.2,
+    "einheit": "\"mm\"",
+    "entscheidung": "ENT-210"
    },
    "bohrung_anzahl": {
-    "wert": null,
-    "entscheidung": null
+    "wert": 4.0,
+    "einheit": "\"-\"",
+    "entscheidung": "ENT-211"
    }
   },
   "BT-322": {

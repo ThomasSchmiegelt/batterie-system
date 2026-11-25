@@ -1,0 +1,179 @@
+{
+ "LFP": {
+  "teile": 1183,
+  "kollisionen": 0,
+  "verletzungen": 71,
+  "kontakte": 197,
+  "masse_zusatz_kg": 1.3340577276630856,
+  "masse_bekannt_kg": 621.1336678630641,
+  "aussparung_daisy_buchsen_mm3": {},
+  "freigang_platinenstecker": {
+   "greifraum_mm": 5.0,
+   "quer_mm": 2.0
+  },
+  "gruppen": {
+   "C CMU-Platinenstecker gegen festes Teil": 42,
+   "D BMS-Stecker gegen Nachbarstecker": 2,
+   "E BMS-Stecker gegen Schaltbox/Bauteile": 6,
+   "F Deckelstecker (Freigang/Handraum) gegen Nachbarn/Deckel": 18,
+   "G Schütz-Spulenstecker gegen Nachbarteile": 3
+  },
+  "gruppen_detail": {
+   "C CMU-Platinenstecker gegen festes Teil": {
+    "anzahl": 42,
+    "vol_min": 280.0,
+    "vol_max": 303.99999999999994,
+    "paare": {
+     "SF_FPC_Stecker_## <- Seitenrahmen": 14,
+     "SF_Daisy_Stecker_##_In <- Seitenrahmen": 14,
+     "SF_Daisy_Stecker_##_Out <- Seitenrahmen": 14
+    }
+   },
+   "D BMS-Stecker gegen Nachbarstecker": {
+    "anzahl": 2,
+    "vol_min": 576.0,
+    "vol_max": 576.0,
+    "paare": {
+     "SF_BMS_Kabelstecker_J_DAISY2 <- BMS_Kabelstecker_J_DAISY1": 1,
+     "SF_BMS_Kabelstecker_J_DAISY1 <- BMS_Kabelstecker_J_DAISY2": 1
+    }
+   },
+   "E BMS-Stecker gegen Schaltbox/Bauteile": {
+    "anzahl": 6,
+    "vol_min": 57.19367123332677,
+    "vol_max": 1008.0,
+    "paare": {
+     "SF_BMS_Kabelstecker_J_VERSORGUNG <- Schaltbox_Wanne": 1,
+     "SF_BMS_Kabelstecker_J_DEBUG <- Schaltbox_Wanne": 1,
+     "SF_BMS_Kabelstecker_J_SPULE_P <- Schaltbox_Wanne": 1,
+     "SF_BMS_Kabelstecker_J_SPULE_M <- Schaltbox_Wanne": 1,
+     "SF_BMS_Kabelstecker_J_SPULE_V <- Schaltbox_Wanne": 1,
+     "SF_BMS_Kabelstecker_J_VERSORGUNG <- HV_Stecker_250A_Schraube_3_Kopf": 1
+    }
+   },
+   "F Deckelstecker (Freigang/Handraum) gegen Nachbarn/Deckel": {
+    "anzahl": 18,
+    "vol_min": 5.638055471173357,
+    "vol_max": 6429.891980952904,
+    "paare": {
+     "SF_HV_Stecker_##0A <- Kuehlplatte_oben": 1,
+     "Handraum_HV_Stecker_##0A <- Kuehlplatte_oben": 1,
+     "SF_HV_Stecker_##0A <- Deckel": 1,
+     "Handraum_HV_Stecker_##0A <- Deckel": 1,
+     "Handraum_HV_Stecker_##A <- HV_Stecker_250A_Flansch": 1,
+     "Handraum_HV_Stecker_##A <- HV_Stecker_250A_Schraube_3_Kopf": 1,
+     "Handraum_HV_Stecker_##A <- HV_Stecker_250A_Verriegelungshebel": 1,
+     "Handraum_NV_Stecker_##pol <- HV_Stecker_40A_Flansch": 1,
+     "Handraum_NV_Stecker_##pol <- HV_Stecker_40A_Schraube_2_Kopf": 1,
+     "Handraum_NV_Stecker_##pol <- HV_Stecker_40A_Schraube_2_Schaft": 1,
+     "Handraum_NV_Stecker_##pol <- HV_Stecker_40A_Schraube_3_Kopf": 1,
+     "Handraum_NV_Stecker_##pol <- HV_Stecker_40A_Schraube_3_Schaft": 1,
+     "Handraum_NV_Stecker_##pol <- HV_Stecker_40A_Steckkoerper": 1,
+     "Handraum_HV_Stecker_##A <- NV_Stecker_26pol_Schraube_0_Kopf": 1,
+     "Handraum_HV_Stecker_##A <- NV_Stecker_26pol_Schraube_1_Kopf": 1,
+     "Handraum_NV_Stecker_##pol <- Gas_Drucksensor": 1,
+     "Handraum_NV_Stecker_##pol <- HV_Stecker_40A_Kabelstecker": 1,
+     "Handraum_HV_Stecker_##A <- NV_Stecker_26pol_Kabelstecker": 1
+    }
+   },
+   "G Schütz-Spulenstecker gegen Nachbarteile": {
+    "anzahl": 3,
+    "vol_min": 1568.0000000000005,
+    "vol_max": 6480.0,
+    "paare": {
+     "SF_Hauptschuetz_1_Spulenstecker <- Pyrosicherung": 1,
+     "SF_Hauptschuetz_2_Spulenstecker <- Schmelz_Halter": 1,
+     "SF_Hauptschuetz_2_Spulenstecker <- Schmelzsicherung": 1
+    }
+   }
+  }
+ },
+ "NMC": {
+  "teile": 2916,
+  "kollisionen": 0,
+  "verletzungen": 117,
+  "kontakte": 184,
+  "masse_zusatz_kg": 1.4559999999999966,
+  "masse_bekannt_kg": 483.66674802851065,
+  "aussparung_daisy_buchsen_mm3": {
+   "Zelltraeger_f0": 1319.9999999997672,
+   "Verguss_f0": 19799.999999981374,
+   "Zelltraeger_f3": 239.99999999452848,
+   "Verguss_f3": 3600.0000000018626
+  },
+  "freigang_platinenstecker": {
+   "greifraum_mm": 5.0,
+   "quer_mm": 2.0
+  },
+  "gruppen": {
+   "C CMU-Platinenstecker gegen festes Teil": 91,
+   "D BMS-Stecker gegen Nachbarstecker": 2,
+   "E BMS-Stecker gegen Schaltbox/Bauteile": 6,
+   "F Deckelstecker (Freigang/Handraum) gegen Nachbarn/Deckel": 18
+  },
+  "gruppen_detail": {
+   "C CMU-Platinenstecker gegen festes Teil": {
+    "anzahl": 91,
+    "vol_min": 280.0,
+    "vol_max": 1410.0000000000002,
+    "paare": {
+     "SF_FPC_Stecker_## <- Seitenrahmen": 13,
+     "SF_Daisy_Stecker_##_In <- Seitenrahmen": 13,
+     "SF_Daisy_Stecker_##_Out <- Seitenrahmen": 13,
+     "SF_Daisy_Stecker_##_In <- Zelltraeger_f#": 13,
+     "SF_Daisy_Stecker_##_Out <- Zelltraeger_f#": 13,
+     "SF_Daisy_Stecker_##_In <- Verguss_f#": 13,
+     "SF_Daisy_Stecker_##_Out <- Verguss_f#": 13
+    }
+   },
+   "D BMS-Stecker gegen Nachbarstecker": {
+    "anzahl": 2,
+    "vol_min": 576.0,
+    "vol_max": 576.0,
+    "paare": {
+     "SF_BMS_Kabelstecker_J_DAISY2 <- BMS_Kabelstecker_J_DAISY1": 1,
+     "SF_BMS_Kabelstecker_J_DAISY1 <- BMS_Kabelstecker_J_DAISY2": 1
+    }
+   },
+   "E BMS-Stecker gegen Schaltbox/Bauteile": {
+    "anzahl": 6,
+    "vol_min": 57.19367123332677,
+    "vol_max": 1008.0,
+    "paare": {
+     "SF_BMS_Kabelstecker_J_VERSORGUNG <- Schaltbox_Wanne": 1,
+     "SF_BMS_Kabelstecker_J_DEBUG <- Schaltbox_Wanne": 1,
+     "SF_BMS_Kabelstecker_J_SPULE_P <- Schaltbox_Wanne": 1,
+     "SF_BMS_Kabelstecker_J_SPULE_M <- Schaltbox_Wanne": 1,
+     "SF_BMS_Kabelstecker_J_SPULE_V <- Schaltbox_Wanne": 1,
+     "SF_BMS_Kabelstecker_J_VERSORGUNG <- HV_Stecker_250A_Schraube_3_Kopf": 1
+    }
+   },
+   "F Deckelstecker (Freigang/Handraum) gegen Nachbarn/Deckel": {
+    "anzahl": 18,
+    "vol_min": 5.638055471173358,
+    "vol_max": 6429.891980952904,
+    "paare": {
+     "SF_HV_Stecker_##0A <- Kuehlplatte_oben": 1,
+     "Handraum_HV_Stecker_##0A <- Kuehlplatte_oben": 1,
+     "SF_HV_Stecker_##0A <- Deckel": 1,
+     "Handraum_HV_Stecker_##0A <- Deckel": 1,
+     "Handraum_HV_Stecker_##A <- HV_Stecker_250A_Flansch": 1,
+     "Handraum_HV_Stecker_##A <- HV_Stecker_250A_Schraube_3_Kopf": 1,
+     "Handraum_HV_Stecker_##A <- HV_Stecker_250A_Verriegelungshebel": 1,
+     "Handraum_NV_Stecker_##pol <- HV_Stecker_40A_Flansch": 1,
+     "Handraum_NV_Stecker_##pol <- HV_Stecker_40A_Schraube_2_Kopf": 1,
+     "Handraum_NV_Stecker_##pol <- HV_Stecker_40A_Schraube_2_Schaft": 1,
+     "Handraum_NV_Stecker_##pol <- HV_Stecker_40A_Schraube_3_Kopf": 1,
+     "Handraum_NV_Stecker_##pol <- HV_Stecker_40A_Schraube_3_Schaft": 1,
+     "Handraum_NV_Stecker_##pol <- HV_Stecker_40A_Steckkoerper": 1,
+     "Handraum_HV_Stecker_##A <- NV_Stecker_26pol_Schraube_0_Kopf": 1,
+     "Handraum_HV_Stecker_##A <- NV_Stecker_26pol_Schraube_1_Kopf": 1,
+     "Handraum_NV_Stecker_##pol <- Gas_Drucksensor": 1,
+     "Handraum_NV_Stecker_##pol <- HV_Stecker_40A_Kabelstecker": 1,
+     "Handraum_HV_Stecker_##A <- NV_Stecker_26pol_Kabelstecker": 1
+    }
+   }
+  }
+ },
+ "hinweis": "KI-generiert, Entwurf. Auszug aus cad/pack/entwurf/ergebnis_<V>_e2d_e3c_sv1.json (pack_e2d.py PACK_SV1=1, Nachtrag 3: Platinenstecker Steckweg+5 mm, quer 2 mm; Aussparung Daisy-Buchsen NMC) und Gruppierung sv1b/gruppen.py"
+}

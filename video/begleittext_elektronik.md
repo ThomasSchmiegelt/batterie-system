@@ -2,7 +2,7 @@
 |---|---|---|---|---|---|
 | Titel | Drittes Video „Batterie, Nachverfolgung, Normen, Elektronik“: Begleittext (DE) | Ersteller | Claude Sonnet 5.5 (KI), Storyboard-Rohtext Kolibri 1 | Prüfer | – (Prüfung Opus offen) |
 
-> **KI-generiert.** Video `video/elektronik_nachverfolgung.mp4` (165 s, 1280x720, 25 fps), gebaut von `video/erzeuge_video_elektronik.sh`; Szenen 4 und 5 (CMU, BMS) sind echte 3D-Szenen (Blender EEVEE, RGBA, `video/szenen_elektronik3d.py`), der Rest aus vorhandenen Bildern. Stand v1 (Bildfolge): `video/elektronik_nachverfolgung_v1.mp4`. Zahlen nur aus `video/elektronik/daten.json`. Storyboard: `video/elektronik/STORYBOARD_kolibri.md`, Prüfung: `video/elektronik/pruefung_storyboard.txt`. Im Video steht nur der Name des Autors (Konstrukteur); dieser Text begleitet es. Entwurf, nicht freigegeben.
+> **KI-generiert.** Video `video/elektronik_nachverfolgung.mp4` (171 s, 1280x720, 25 fps), gebaut von `video/erzeuge_video_elektronik.sh`; Szenen 4 und 5 (CMU, BMS) sind echte 3D-Szenen (Blender EEVEE, RGBA, `video/szenen_elektronik3d.py`), der Rest aus vorhandenen Bildern. Stand v1 (Bildfolge): `video/elektronik_nachverfolgung_v1.mp4`. Zahlen nur aus `video/elektronik/daten.json`. Storyboard: `video/elektronik/STORYBOARD_kolibri.md`, Prüfung: `video/elektronik/pruefung_storyboard.txt`. Im Video steht nur der Name des Autors (Konstrukteur); dieser Text begleitet es. Entwurf, nicht freigegeben.
 
 Vorgabe des Autors (2026-11-25): Das Video beginnt mit den Anforderungen, der Wissensgraph wächst, dann erscheinen Zelle, Pack und die Steuergeräte, am Ende verschwindet die Batterie und nur der Graph bleibt.
 
@@ -23,7 +23,13 @@ Neue Blender-Szene `pack`: Zellen in sechs Bändern, Rahmen, Kühlplatte, Verbin
 - Rechnungen: SPICE Vorladung 912 V, SPICE Schütz Zener 37,11 V, Elmer-Wärme E3b, FMEDA (CMU LFP SG-01: SPFM 99,93 %, LFM 96,72 %, Ziel ASIL D 99 % und 90 %; `sim/elektrik/e3d_fmeda/ergebnis.json`).
 - Nachverfolgung im Graphen: REQ-P18 → ENT-192 (vorgeschlagen) → BT-323 → FMEDA E3d und B-BAT-055; REQ-P19 → ENT-195 → BT-311; REQ-P15 → ENT-184 → BT-321. Danach die Sicherheitsziele SG-01 bis SG-08 mit ASIL (`docs/24_gefahrenanalyse_hara.md`).
 
-## Szene 6: Batterie fertig (140 bis 165 s)
+## Agentenband und Schlusstafel (v3, Vorgabe Autor: „mir geht es in erster Linie um den agentischen Ablauf“)
+Unten links in jeder Szene steht eine feste Leiste „Wer hat das gemacht“ mit den Marken Autor, Opus, Sonnet, Haiku, PI/qwen, Kolibri. Es leuchten nur Agenten, die in den zitierten Zeilen von `docs/08_ki_einsatz_protokoll.md` stehen (Zeilennummern in der Leiste und in `video/elektronik/agenten.json`, erzeugt von `video/agenten_erzeugen.py`; Regel dort im Kopf). Fehlt die Zeile, bleibt die Marke aus. Wo das Protokoll „Prüfung Opus offen“ sagt, steht Opus nur für Auftrag und Erwartung, nicht für Prüfung. Schlusstafel (165 bis 171 s): Zahl der Verteilungen je Agent aus docs/08 (Opus 28, Sonnet 134, Haiku 5, PI/qwen 22, Kolibri 2 laut `agenten.json`, eine Zeile zählt für jeden genannten Agenten) und der Satz „Freigaben: nur der Autor“.
+
+## Bewegte Rechnungen in Szene 4 (v3)
+Bild-in-Bild je 4 bis 5 s mit Quelle in der Ecke: FluidX3D-Strömung und Temperatur (`sim/kuehlung/k3_gesamt/k3_durchstroemung_temperatur.mp4`, 4-fach schneller auf 25 fps), K4-Temperatur (`k4_temperatur_LFP_DAUER_V0.png`), Crash-Film (`sim/mechanik/x3_crash_g5/film_LFP_a2.mp4`) und Energiebilanz (`energie_LFP_a2.png`). Schaltplan-Einblendungen erscheinen jetzt deckend. Die Überblendung Pack-Teil gegen Detailmodell dauert 25 Bilder.
+
+## Szene 6: Batterie fertig (140 bis 165 s), danach Schlusstafel (165 bis 171 s)
 Zahlen auf einen Blick (Packmasse, Teile, DRC, SPFM), dann wird die Batterie durchsichtig, der Graph bleibt. Abspann: KI-generiert, Autor Konstrukteur.
 
 ## Integrationsgrenzen (ehrlich)

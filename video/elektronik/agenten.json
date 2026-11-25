@@ -1,0 +1,405 @@
+{
+ "quelle": "docs/08_ki_einsatz_protokoll.md",
+ "regel": "Agent in Spalte 2; Opus auch Spalte 5 Beginn Opus; Kolibri auch Spalte 3; Autor Spalte 3 Freigaberunde; Zählung: Zeilen mit Datum, Agent in Spalte 2 (eine Zeile zählt für jeden genannten Agenten)",
+ "zeilen_gesamt": 178,
+ "zaehlung": {
+  "Opus": 28,
+  "Sonnet": 134,
+  "Haiku": 5,
+  "PI/qwen": 22,
+  "Kolibri": 2
+ },
+ "abschnitte": [
+  {
+   "von": 0,
+   "bis": 25,
+   "szene": "Anforderungen und Normen",
+   "zeilen": [
+    144,
+    151,
+    145,
+    153,
+    92,
+    169,
+    193
+   ],
+   "agenten": [
+    "Autor",
+    "Kolibri",
+    "Opus",
+    "PI/qwen",
+    "Sonnet"
+   ],
+   "kurz": "Opus: Kriterien · Sonnet: anforderungen.json, Regelwerke · PI: W30 · Autor: Freigaberunde · Kolibri: Tafeltexte",
+   "zeilen_agenten": {
+    "144": [
+     "Opus",
+     "Sonnet"
+    ],
+    "151": [
+     "Opus",
+     "Sonnet"
+    ],
+    "145": [
+     "Opus",
+     "Sonnet"
+    ],
+    "153": [
+     "Sonnet"
+    ],
+    "92": [
+     "PI/qwen"
+    ],
+    "169": [
+     "Autor",
+     "Opus",
+     "Sonnet"
+    ],
+    "193": [
+     "Kolibri",
+     "Sonnet"
+    ]
+   }
+  },
+  {
+   "von": 25,
+   "bis": 50,
+   "szene": "Zelle",
+   "zeilen": [
+    76,
+    193
+   ],
+   "agenten": [
+    "Kolibri",
+    "Opus",
+    "Sonnet"
+   ],
+   "kurz": "Sonnet: C1 PyBaMM-Zellmodell · Opus: Prüfung gegen W20/W24 · Kolibri: Storyboard",
+   "zeilen_agenten": {
+    "76": [
+     "Opus",
+     "Sonnet"
+    ],
+    "193": [
+     "Kolibri",
+     "Sonnet"
+    ]
+   }
+  },
+  {
+   "von": 50,
+   "bis": 62,
+   "szene": "Pack",
+   "zeilen": [
+    69,
+    70,
+    71,
+    135,
+    193
+   ],
+   "agenten": [
+    "Kolibri",
+    "Opus",
+    "Sonnet"
+   ],
+   "kurz": "Sonnet: G4 Pack-CAD, G5.9 · Opus: Prüfung Schnitt, Masse · Kolibri: Storyboard",
+   "zeilen_agenten": {
+    "69": [
+     "Opus",
+     "Sonnet"
+    ],
+    "70": [
+     "Opus",
+     "Sonnet"
+    ],
+    "71": [
+     "Opus",
+     "Sonnet"
+    ],
+    "135": [
+     "Sonnet"
+    ],
+    "193": [
+     "Kolibri",
+     "Sonnet"
+    ]
+   }
+  },
+  {
+   "von": 62,
+   "bis": 70,
+   "szene": "Kühlung",
+   "zeilen": [
+    118,
+    119,
+    120,
+    121,
+    123,
+    193
+   ],
+   "agenten": [
+    "Kolibri",
+    "Opus",
+    "Sonnet"
+   ],
+   "kurz": "Sonnet: K3/K4 FluidX3D, Film · Opus: Prüfung K4 · Kolibri: Storyboard",
+   "zeilen_agenten": {
+    "118": [
+     "Opus",
+     "Sonnet"
+    ],
+    "119": [
+     "Opus",
+     "Sonnet"
+    ],
+    "120": [
+     "Opus",
+     "Sonnet"
+    ],
+    "121": [
+     "Opus",
+     "Sonnet"
+    ],
+    "123": [
+     "Opus"
+    ],
+    "193": [
+     "Kolibri",
+     "Sonnet"
+    ]
+   }
+  },
+  {
+   "von": 70,
+   "bis": 80,
+   "szene": "Crash",
+   "zeilen": [
+    91,
+    117,
+    122,
+    123,
+    193
+   ],
+   "agenten": [
+    "Kolibri",
+    "Opus",
+    "Sonnet"
+   ],
+   "kurz": "Sonnet: X3 Crash (CalculiX/Radioss) · Opus: Fehlersuche LFP_a · Kolibri: Storyboard",
+   "zeilen_agenten": {
+    "91": [
+     "Opus",
+     "Sonnet"
+    ],
+    "117": [
+     "Opus",
+     "Sonnet"
+    ],
+    "122": [
+     "Opus",
+     "Sonnet"
+    ],
+    "123": [
+     "Opus"
+    ],
+    "193": [
+     "Kolibri",
+     "Sonnet"
+    ]
+   }
+  },
+  {
+   "von": 80,
+   "bis": 95,
+   "szene": "CMU-Platine",
+   "zeilen": [
+    176,
+    183,
+    184,
+    189,
+    195,
+    193
+   ],
+   "agenten": [
+    "Kolibri",
+    "Opus",
+    "Sonnet"
+   ],
+   "kurz": "Opus: Auftrag, Erwartung · Sonnet: KiCad-Routing · Kolibri: Wächter, Storyboard · Prüfung offen",
+   "zeilen_agenten": {
+    "176": [
+     "Opus",
+     "Sonnet"
+    ],
+    "183": [
+     "Opus",
+     "Sonnet"
+    ],
+    "184": [
+     "Sonnet"
+    ],
+    "189": [
+     "Opus",
+     "Sonnet"
+    ],
+    "195": [
+     "Kolibri",
+     "Opus",
+     "Sonnet"
+    ],
+    "193": [
+     "Kolibri",
+     "Sonnet"
+    ]
+   }
+  },
+  {
+   "von": 95,
+   "bis": 110,
+   "szene": "BMS-Platine",
+   "zeilen": [
+    186,
+    188,
+    191,
+    193
+   ],
+   "agenten": [
+    "Kolibri",
+    "Opus",
+    "Sonnet"
+   ],
+   "kurz": "Opus: Erwartung ERW-E3c · Sonnet: BMS-Platine, SPICE · Kolibri: Storyboard · Prüfung offen",
+   "zeilen_agenten": {
+    "186": [
+     "Opus",
+     "Sonnet"
+    ],
+    "188": [
+     "Sonnet"
+    ],
+    "191": [
+     "Sonnet"
+    ],
+    "193": [
+     "Kolibri",
+     "Sonnet"
+    ]
+   }
+  },
+  {
+   "von": 110,
+   "bis": 125,
+   "szene": "Rechnungen",
+   "zeilen": [
+    176,
+    191,
+    182,
+    185,
+    193
+   ],
+   "agenten": [
+    "Kolibri",
+    "Opus",
+    "Sonnet"
+   ],
+   "kurz": "Opus: Erwartung · Sonnet: SPICE, Elmer, FMEDA · Kolibri: Storyboard · Prüfung offen",
+   "zeilen_agenten": {
+    "176": [
+     "Opus",
+     "Sonnet"
+    ],
+    "191": [
+     "Sonnet"
+    ],
+    "182": [
+     "Opus",
+     "Sonnet"
+    ],
+    "185": [
+     "Opus",
+     "Sonnet"
+    ],
+    "193": [
+     "Kolibri",
+     "Sonnet"
+    ]
+   }
+  },
+  {
+   "von": 125,
+   "bis": 140,
+   "szene": "Nachverfolgung",
+   "zeilen": [
+    157,
+    158,
+    159,
+    21,
+    193
+   ],
+   "agenten": [
+    "Kolibri",
+    "Opus",
+    "Sonnet"
+   ],
+   "kurz": "Sonnet: Wissensgraph · Opus: Prüfung, Schema · Kolibri: Storyboard",
+   "zeilen_agenten": {
+    "157": [
+     "Sonnet"
+    ],
+    "158": [
+     "Sonnet"
+    ],
+    "159": [
+     "Opus"
+    ],
+    "21": [
+     "Opus"
+    ],
+    "193": [
+     "Kolibri",
+     "Sonnet"
+    ]
+   }
+  },
+  {
+   "von": 140,
+   "bis": 165,
+   "szene": "Batterie fertig, Graph",
+   "zeilen": [
+    157,
+    159,
+    173,
+    174,
+    196,
+    193
+   ],
+   "agenten": [
+    "Kolibri",
+    "Opus",
+    "Sonnet"
+   ],
+   "kurz": "Sonnet: Graph, Video · Opus: Prüfung Video 2 · Kolibri: Storyboard",
+   "zeilen_agenten": {
+    "157": [
+     "Sonnet"
+    ],
+    "159": [
+     "Opus"
+    ],
+    "173": [
+     "Sonnet"
+    ],
+    "174": [
+     "Opus"
+    ],
+    "196": [
+     "Sonnet"
+    ],
+    "193": [
+     "Kolibri",
+     "Sonnet"
+    ]
+   }
+  }
+ ]
+}

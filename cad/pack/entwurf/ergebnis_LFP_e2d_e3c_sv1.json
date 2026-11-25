@@ -222,7 +222,7 @@
   },
   "E2_Steckfreigang": {
    "anzahl": 62,
-   "volumen_cm3": 3970.4286749599714,
+   "volumen_cm3": 3074.428674959978,
    "masse_kg": 0.0,
    "masse_bekannt": true,
    "werkstoff": "Steckfreigang (kein Bauteil)"
@@ -257,7 +257,7 @@
   -0.034260412347521196
  ],
  "teile": 1183,
- "kollisionspaare_geprueft": 2537,
+ "kollisionspaare_geprueft": 2353,
  "kollisionen": [],
  "anzahl_kollisionen": 0,
  "steckfreigang_verletzungen": [
@@ -265,1270 +265,1566 @@
    "freigang": "Steckfreigang_FPC_Stecker_00",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 8352.0
+   "volumen_mm3": 303.99999999999994,
+   "bb_freigang": [
+    2009.0,
+    77.5,
+    95.0,
+    2021.0,
+    115.5,
+    103.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_Daisy_Stecker_00_In",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 13932.000000000002
+   "volumen_mm3": 280.0,
+   "bb_freigang": [
+    2009.0,
+    32.0,
+    25.0,
+    2021.0,
+    60.0,
+    35.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_Daisy_Stecker_00_Out",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 7776.0
+   "volumen_mm3": 280.0,
+   "bb_freigang": [
+    2009.0,
+    120.0,
+    25.0,
+    2021.0,
+    148.0,
+    35.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_FPC_Stecker_01",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 8352.0
+   "volumen_mm3": 303.99999999999994,
+   "bb_freigang": [
+    2009.0,
+    197.5,
+    95.0,
+    2021.0,
+    235.5,
+    103.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_Daisy_Stecker_01_In",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 7776.0
+   "volumen_mm3": 280.0,
+   "bb_freigang": [
+    2009.0,
+    152.0,
+    25.0,
+    2021.0,
+    180.0,
+    35.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_Daisy_Stecker_01_Out",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 7776.0
+   "volumen_mm3": 280.0,
+   "bb_freigang": [
+    2009.0,
+    240.0,
+    25.0,
+    2021.0,
+    268.0,
+    35.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_FPC_Stecker_02",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 8352.0
+   "volumen_mm3": 303.99999999999994,
+   "bb_freigang": [
+    2009.0,
+    317.5,
+    95.0,
+    2021.0,
+    355.5,
+    103.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_Daisy_Stecker_02_In",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 7776.0
+   "volumen_mm3": 280.0,
+   "bb_freigang": [
+    2009.0,
+    272.0,
+    25.0,
+    2021.0,
+    300.0,
+    35.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_Daisy_Stecker_02_Out",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 7776.0
+   "volumen_mm3": 280.0,
+   "bb_freigang": [
+    2009.0,
+    360.0,
+    25.0,
+    2021.0,
+    388.0,
+    35.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_FPC_Stecker_03",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 8352.0
+   "volumen_mm3": 303.99999999999994,
+   "bb_freigang": [
+    29.0,
+    77.5,
+    95.0,
+    41.0,
+    115.5,
+    103.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_Daisy_Stecker_03_In",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 13932.0
+   "volumen_mm3": 280.0,
+   "bb_freigang": [
+    29.0,
+    32.0,
+    25.0,
+    41.0,
+    60.0,
+    35.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_Daisy_Stecker_03_Out",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 7776.0
+   "volumen_mm3": 280.0,
+   "bb_freigang": [
+    29.0,
+    120.0,
+    25.0,
+    41.0,
+    148.0,
+    35.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_FPC_Stecker_04",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 8352.0
+   "volumen_mm3": 303.99999999999994,
+   "bb_freigang": [
+    29.0,
+    197.5,
+    95.0,
+    41.0,
+    235.5,
+    103.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_Daisy_Stecker_04_In",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 7776.0
+   "volumen_mm3": 280.0,
+   "bb_freigang": [
+    29.0,
+    152.0,
+    25.0,
+    41.0,
+    180.0,
+    35.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_Daisy_Stecker_04_Out",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 7776.0
+   "volumen_mm3": 280.0,
+   "bb_freigang": [
+    29.0,
+    240.0,
+    25.0,
+    41.0,
+    268.0,
+    35.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_FPC_Stecker_05",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 8352.0
+   "volumen_mm3": 303.99999999999994,
+   "bb_freigang": [
+    29.0,
+    317.5,
+    95.0,
+    41.0,
+    355.5,
+    103.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_Daisy_Stecker_05_In",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 7776.0
+   "volumen_mm3": 280.0,
+   "bb_freigang": [
+    29.0,
+    272.0,
+    25.0,
+    41.0,
+    300.0,
+    35.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_Daisy_Stecker_05_Out",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 7776.0
+   "volumen_mm3": 280.0,
+   "bb_freigang": [
+    29.0,
+    360.0,
+    25.0,
+    41.0,
+    388.0,
+    35.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_FPC_Stecker_06",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 8352.0
+   "volumen_mm3": 303.99999999999994,
+   "bb_freigang": [
+    29.0,
+    437.5,
+    95.0,
+    41.0,
+    475.5,
+    103.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_Daisy_Stecker_06_In",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 7776.0
+   "volumen_mm3": 280.0,
+   "bb_freigang": [
+    29.0,
+    392.0,
+    25.0,
+    41.0,
+    420.0,
+    35.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_Daisy_Stecker_06_Out",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 7776.0
+   "volumen_mm3": 280.0,
+   "bb_freigang": [
+    29.0,
+    480.0,
+    25.0,
+    41.0,
+    508.0,
+    35.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_FPC_Stecker_07",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 8352.0
+   "volumen_mm3": 303.99999999999994,
+   "bb_freigang": [
+    29.0,
+    1087.5,
+    95.0,
+    41.0,
+    1125.5,
+    103.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_Daisy_Stecker_07_In",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 7776.0
+   "volumen_mm3": 280.0,
+   "bb_freigang": [
+    29.0,
+    1042.0,
+    25.0,
+    41.0,
+    1070.0,
+    35.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_Daisy_Stecker_07_Out",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 7776.0
+   "volumen_mm3": 280.0,
+   "bb_freigang": [
+    29.0,
+    1130.0,
+    25.0,
+    41.0,
+    1158.0,
+    35.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_FPC_Stecker_08",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 8352.0
+   "volumen_mm3": 303.99999999999994,
+   "bb_freigang": [
+    29.0,
+    1207.5,
+    95.0,
+    41.0,
+    1245.5,
+    103.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_Daisy_Stecker_08_In",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 7776.0
+   "volumen_mm3": 280.0,
+   "bb_freigang": [
+    29.0,
+    1162.0,
+    25.0,
+    41.0,
+    1190.0,
+    35.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_Daisy_Stecker_08_Out",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 7776.0
+   "volumen_mm3": 280.0,
+   "bb_freigang": [
+    29.0,
+    1250.0,
+    25.0,
+    41.0,
+    1278.0,
+    35.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_FPC_Stecker_09",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 8352.0
+   "volumen_mm3": 303.99999999999994,
+   "bb_freigang": [
+    29.0,
+    1327.5,
+    95.0,
+    41.0,
+    1365.5,
+    103.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_Daisy_Stecker_09_In",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 7776.0
+   "volumen_mm3": 280.0,
+   "bb_freigang": [
+    29.0,
+    1282.0,
+    25.0,
+    41.0,
+    1310.0,
+    35.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_Daisy_Stecker_09_Out",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 13932.0
+   "volumen_mm3": 280.0,
+   "bb_freigang": [
+    29.0,
+    1370.0,
+    25.0,
+    41.0,
+    1398.0,
+    35.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_FPC_Stecker_10",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 8352.0
+   "volumen_mm3": 303.99999999999994,
+   "bb_freigang": [
+    2009.0,
+    967.5,
+    95.0,
+    2021.0,
+    1005.5,
+    103.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_Daisy_Stecker_10_In",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 7776.0
+   "volumen_mm3": 280.0,
+   "bb_freigang": [
+    2009.0,
+    922.0,
+    25.0,
+    2021.0,
+    950.0,
+    35.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_Daisy_Stecker_10_Out",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 7776.0
+   "volumen_mm3": 280.0,
+   "bb_freigang": [
+    2009.0,
+    1010.0,
+    25.0,
+    2021.0,
+    1038.0,
+    35.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_FPC_Stecker_11",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 8352.0
+   "volumen_mm3": 303.99999999999994,
+   "bb_freigang": [
+    2009.0,
+    1087.5,
+    95.0,
+    2021.0,
+    1125.5,
+    103.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_Daisy_Stecker_11_In",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 7776.0
+   "volumen_mm3": 280.0,
+   "bb_freigang": [
+    2009.0,
+    1042.0,
+    25.0,
+    2021.0,
+    1070.0,
+    35.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_Daisy_Stecker_11_Out",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 7776.0
+   "volumen_mm3": 280.0,
+   "bb_freigang": [
+    2009.0,
+    1130.0,
+    25.0,
+    2021.0,
+    1158.0,
+    35.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_FPC_Stecker_12",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 8352.0
+   "volumen_mm3": 303.99999999999994,
+   "bb_freigang": [
+    2009.0,
+    1207.5,
+    95.0,
+    2021.0,
+    1245.5,
+    103.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_Daisy_Stecker_12_In",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 7776.0
+   "volumen_mm3": 280.0,
+   "bb_freigang": [
+    2009.0,
+    1162.0,
+    25.0,
+    2021.0,
+    1190.0,
+    35.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_Daisy_Stecker_12_Out",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 7776.0
+   "volumen_mm3": 280.0,
+   "bb_freigang": [
+    2009.0,
+    1250.0,
+    25.0,
+    2021.0,
+    1278.0,
+    35.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_FPC_Stecker_13",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 8352.0
+   "volumen_mm3": 303.99999999999994,
+   "bb_freigang": [
+    2009.0,
+    1327.5,
+    95.0,
+    2021.0,
+    1365.5,
+    103.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_Daisy_Stecker_13_In",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 7776.0
+   "volumen_mm3": 280.0,
+   "bb_freigang": [
+    2009.0,
+    1282.0,
+    25.0,
+    2021.0,
+    1310.0,
+    35.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_Daisy_Stecker_13_Out",
    "teil": "Seitenrahmen",
    "gruppe": "Seitenrahmen",
-   "volumen_mm3": 13932.000000000002
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_00_In",
-   "teil": "Kuehlplatte_unten",
-   "gruppe": "Kuehlplatte",
-   "volumen_mm3": 1140.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_00_Out",
-   "teil": "Kuehlplatte_unten",
-   "gruppe": "Kuehlplatte",
-   "volumen_mm3": 1823.9999999999998
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_01_In",
-   "teil": "Kuehlplatte_unten",
-   "gruppe": "Kuehlplatte",
-   "volumen_mm3": 1823.9999999999998
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_01_Out",
-   "teil": "Kuehlplatte_unten",
-   "gruppe": "Kuehlplatte",
-   "volumen_mm3": 1823.9999999999998
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_02_In",
-   "teil": "Kuehlplatte_unten",
-   "gruppe": "Kuehlplatte",
-   "volumen_mm3": 1823.9999999999998
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_02_Out",
-   "teil": "Kuehlplatte_unten",
-   "gruppe": "Kuehlplatte",
-   "volumen_mm3": 1823.9999999999998
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_03_In",
-   "teil": "Kuehlplatte_unten",
-   "gruppe": "Kuehlplatte",
-   "volumen_mm3": 1140.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_03_Out",
-   "teil": "Kuehlplatte_unten",
-   "gruppe": "Kuehlplatte",
-   "volumen_mm3": 1823.9999999999998
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_04_In",
-   "teil": "Kuehlplatte_unten",
-   "gruppe": "Kuehlplatte",
-   "volumen_mm3": 1823.9999999999998
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_04_Out",
-   "teil": "Kuehlplatte_unten",
-   "gruppe": "Kuehlplatte",
-   "volumen_mm3": 1823.9999999999998
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_05_In",
-   "teil": "Kuehlplatte_unten",
-   "gruppe": "Kuehlplatte",
-   "volumen_mm3": 1823.9999999999998
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_05_Out",
-   "teil": "Kuehlplatte_unten",
-   "gruppe": "Kuehlplatte",
-   "volumen_mm3": 1823.9999999999998
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_06_In",
-   "teil": "Kuehlplatte_unten",
-   "gruppe": "Kuehlplatte",
-   "volumen_mm3": 1823.9999999999998
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_06_Out",
-   "teil": "Kuehlplatte_unten",
-   "gruppe": "Kuehlplatte",
-   "volumen_mm3": 1823.9999999999998
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_07_In",
-   "teil": "Kuehlplatte_unten",
-   "gruppe": "Kuehlplatte",
-   "volumen_mm3": 1823.9999999999998
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_07_Out",
-   "teil": "Kuehlplatte_unten",
-   "gruppe": "Kuehlplatte",
-   "volumen_mm3": 1823.9999999999998
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_08_In",
-   "teil": "Kuehlplatte_unten",
-   "gruppe": "Kuehlplatte",
-   "volumen_mm3": 1823.9999999999998
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_08_Out",
-   "teil": "Kuehlplatte_unten",
-   "gruppe": "Kuehlplatte",
-   "volumen_mm3": 1823.9999999999998
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_09_In",
-   "teil": "Kuehlplatte_unten",
-   "gruppe": "Kuehlplatte",
-   "volumen_mm3": 1823.9999999999998
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_09_Out",
-   "teil": "Kuehlplatte_unten",
-   "gruppe": "Kuehlplatte",
-   "volumen_mm3": 1140.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_10_In",
-   "teil": "Kuehlplatte_unten",
-   "gruppe": "Kuehlplatte",
-   "volumen_mm3": 1823.9999999999998
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_10_Out",
-   "teil": "Kuehlplatte_unten",
-   "gruppe": "Kuehlplatte",
-   "volumen_mm3": 1823.9999999999998
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_11_In",
-   "teil": "Kuehlplatte_unten",
-   "gruppe": "Kuehlplatte",
-   "volumen_mm3": 1823.9999999999998
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_11_Out",
-   "teil": "Kuehlplatte_unten",
-   "gruppe": "Kuehlplatte",
-   "volumen_mm3": 1823.9999999999998
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_12_In",
-   "teil": "Kuehlplatte_unten",
-   "gruppe": "Kuehlplatte",
-   "volumen_mm3": 1823.9999999999998
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_12_Out",
-   "teil": "Kuehlplatte_unten",
-   "gruppe": "Kuehlplatte",
-   "volumen_mm3": 1823.9999999999998
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_13_In",
-   "teil": "Kuehlplatte_unten",
-   "gruppe": "Kuehlplatte",
-   "volumen_mm3": 1823.9999999999998
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_13_Out",
-   "teil": "Kuehlplatte_unten",
-   "gruppe": "Kuehlplatte",
-   "volumen_mm3": 1140.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_00_In",
-   "teil": "Pad_unten",
-   "gruppe": "Pad",
-   "volumen_mm3": 570.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_00_Out",
-   "teil": "Pad_unten",
-   "gruppe": "Pad",
-   "volumen_mm3": 911.9999999999999
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_01_In",
-   "teil": "Pad_unten",
-   "gruppe": "Pad",
-   "volumen_mm3": 911.9999999999999
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_01_Out",
-   "teil": "Pad_unten",
-   "gruppe": "Pad",
-   "volumen_mm3": 911.9999999999999
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_02_In",
-   "teil": "Pad_unten",
-   "gruppe": "Pad",
-   "volumen_mm3": 911.9999999999999
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_02_Out",
-   "teil": "Pad_unten",
-   "gruppe": "Pad",
-   "volumen_mm3": 911.9999999999999
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_03_In",
-   "teil": "Pad_unten",
-   "gruppe": "Pad",
-   "volumen_mm3": 570.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_03_Out",
-   "teil": "Pad_unten",
-   "gruppe": "Pad",
-   "volumen_mm3": 911.9999999999999
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_04_In",
-   "teil": "Pad_unten",
-   "gruppe": "Pad",
-   "volumen_mm3": 911.9999999999999
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_04_Out",
-   "teil": "Pad_unten",
-   "gruppe": "Pad",
-   "volumen_mm3": 911.9999999999999
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_05_In",
-   "teil": "Pad_unten",
-   "gruppe": "Pad",
-   "volumen_mm3": 911.9999999999999
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_05_Out",
-   "teil": "Pad_unten",
-   "gruppe": "Pad",
-   "volumen_mm3": 911.9999999999999
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_06_In",
-   "teil": "Pad_unten",
-   "gruppe": "Pad",
-   "volumen_mm3": 911.9999999999999
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_06_Out",
-   "teil": "Pad_unten",
-   "gruppe": "Pad",
-   "volumen_mm3": 911.9999999999999
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_07_In",
-   "teil": "Pad_unten",
-   "gruppe": "Pad",
-   "volumen_mm3": 911.9999999999999
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_07_Out",
-   "teil": "Pad_unten",
-   "gruppe": "Pad",
-   "volumen_mm3": 911.9999999999999
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_08_In",
-   "teil": "Pad_unten",
-   "gruppe": "Pad",
-   "volumen_mm3": 911.9999999999999
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_08_Out",
-   "teil": "Pad_unten",
-   "gruppe": "Pad",
-   "volumen_mm3": 911.9999999999999
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_09_In",
-   "teil": "Pad_unten",
-   "gruppe": "Pad",
-   "volumen_mm3": 911.9999999999999
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_09_Out",
-   "teil": "Pad_unten",
-   "gruppe": "Pad",
-   "volumen_mm3": 570.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_10_In",
-   "teil": "Pad_unten",
-   "gruppe": "Pad",
-   "volumen_mm3": 911.9999999999999
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_10_Out",
-   "teil": "Pad_unten",
-   "gruppe": "Pad",
-   "volumen_mm3": 911.9999999999999
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_11_In",
-   "teil": "Pad_unten",
-   "gruppe": "Pad",
-   "volumen_mm3": 911.9999999999999
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_11_Out",
-   "teil": "Pad_unten",
-   "gruppe": "Pad",
-   "volumen_mm3": 911.9999999999999
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_12_In",
-   "teil": "Pad_unten",
-   "gruppe": "Pad",
-   "volumen_mm3": 911.9999999999999
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_12_Out",
-   "teil": "Pad_unten",
-   "gruppe": "Pad",
-   "volumen_mm3": 911.9999999999999
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_13_In",
-   "teil": "Pad_unten",
-   "gruppe": "Pad",
-   "volumen_mm3": 911.9999999999999
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_13_Out",
-   "teil": "Pad_unten",
-   "gruppe": "Pad",
-   "volumen_mm3": 570.0
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_00",
-   "teil": "Pad_oben",
-   "gruppe": "Pad",
-   "volumen_mm3": 1101.9999999999998
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_01",
-   "teil": "Pad_oben",
-   "gruppe": "Pad",
-   "volumen_mm3": 1101.9999999999998
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_02",
-   "teil": "Pad_oben",
-   "gruppe": "Pad",
-   "volumen_mm3": 1101.9999999999998
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_03",
-   "teil": "Pad_oben",
-   "gruppe": "Pad",
-   "volumen_mm3": 753.9999999999999
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_04",
-   "teil": "Pad_oben",
-   "gruppe": "Pad",
-   "volumen_mm3": 753.9999999999999
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_05",
-   "teil": "Pad_oben",
-   "gruppe": "Pad",
-   "volumen_mm3": 753.9999999999999
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_06",
-   "teil": "Pad_oben",
-   "gruppe": "Pad",
-   "volumen_mm3": 753.9999999999999
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_07",
-   "teil": "Pad_oben",
-   "gruppe": "Pad",
-   "volumen_mm3": 753.9999999999999
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_08",
-   "teil": "Pad_oben",
-   "gruppe": "Pad",
-   "volumen_mm3": 753.9999999999999
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_09",
-   "teil": "Pad_oben",
-   "gruppe": "Pad",
-   "volumen_mm3": 753.9999999999999
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_10",
-   "teil": "Pad_oben",
-   "gruppe": "Pad",
-   "volumen_mm3": 1101.9999999999998
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_11",
-   "teil": "Pad_oben",
-   "gruppe": "Pad",
-   "volumen_mm3": 1101.9999999999998
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_12",
-   "teil": "Pad_oben",
-   "gruppe": "Pad",
-   "volumen_mm3": 1101.9999999999998
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_13",
-   "teil": "Pad_oben",
-   "gruppe": "Pad",
-   "volumen_mm3": 1060.5078284225506
+   "volumen_mm3": 280.0,
+   "bb_freigang": [
+    2009.0,
+    1370.0,
+    25.0,
+    2021.0,
+    1398.0,
+    35.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    11.0,
+    2050.0,
+    1430.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_HV_Stecker_250A",
    "teil": "Kuehlplatte_oben",
    "gruppe": "Kuehlplatte",
-   "volumen_mm3": 5669.4391960914445
+   "volumen_mm3": 5669.4391960914445,
+   "bb_freigang": [
+    1526.0,
+    577.0,
+    116.0,
+    1621.0,
+    653.0,
+    192.0
+   ],
+   "bb_teil": [
+    30.0,
+    30.0,
+    111.0,
+    2020.0,
+    1400.0,
+    119.0
+   ]
   },
   {
    "freigang": "Handraum_HV_Stecker_250A",
    "teil": "Kuehlplatte_oben",
    "gruppe": "Kuehlplatte",
-   "volumen_mm3": 4292.514037093005
+   "volumen_mm3": 4292.514037093005,
+   "bb_freigang": [
+    1526.0,
+    577.5,
+    116.5,
+    1621.0,
+    652.5,
+    191.5
+   ],
+   "bb_teil": [
+    30.0,
+    30.0,
+    111.0,
+    2020.0,
+    1400.0,
+    119.0
+   ]
   },
   {
    "freigang": "Steckfreigang_HV_Stecker_250A",
    "teil": "Deckel",
    "gruppe": "Deckel",
-   "volumen_mm3": 6429.891980952904
+   "volumen_mm3": 6429.891980952904,
+   "bb_freigang": [
+    1526.0,
+    577.0,
+    116.0,
+    1621.0,
+    653.0,
+    192.0
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    119.0,
+    2050.0,
+    1430.0,
+    121.0
+   ]
   },
   {
    "freigang": "Handraum_HV_Stecker_250A",
    "teil": "Deckel",
    "gruppe": "Deckel",
-   "volumen_mm3": 5988.4982394652325
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_03",
-   "teil": "Zelle_000",
-   "gruppe": "Zellen",
-   "volumen_mm3": 5220.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_03_In",
-   "teil": "Zelle_000",
-   "gruppe": "Zellen",
-   "volumen_mm3": 2340.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_03_Out",
-   "teil": "Zelle_000",
-   "gruppe": "Zellen",
-   "volumen_mm3": 4320.0
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_04",
-   "teil": "Zelle_000",
-   "gruppe": "Zellen",
-   "volumen_mm3": 5220.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_04_In",
-   "teil": "Zelle_000",
-   "gruppe": "Zellen",
-   "volumen_mm3": 4320.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_04_Out",
-   "teil": "Zelle_000",
-   "gruppe": "Zellen",
-   "volumen_mm3": 4320.0
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_05",
-   "teil": "Zelle_000",
-   "gruppe": "Zellen",
-   "volumen_mm3": 5220.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_05_In",
-   "teil": "Zelle_000",
-   "gruppe": "Zellen",
-   "volumen_mm3": 4320.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_05_Out",
-   "teil": "Zelle_000",
-   "gruppe": "Zellen",
-   "volumen_mm3": 4320.0
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_06",
-   "teil": "Zelle_000",
-   "gruppe": "Zellen",
-   "volumen_mm3": 5220.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_06_In",
-   "teil": "Zelle_000",
-   "gruppe": "Zellen",
-   "volumen_mm3": 4320.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_06_Out",
-   "teil": "Zelle_000",
-   "gruppe": "Zellen",
-   "volumen_mm3": 4320.0
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_07",
-   "teil": "Zelle_032",
-   "gruppe": "Zellen",
-   "volumen_mm3": 5220.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_07_In",
-   "teil": "Zelle_032",
-   "gruppe": "Zellen",
-   "volumen_mm3": 4320.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_07_Out",
-   "teil": "Zelle_032",
-   "gruppe": "Zellen",
-   "volumen_mm3": 4320.0
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_08",
-   "teil": "Zelle_032",
-   "gruppe": "Zellen",
-   "volumen_mm3": 5220.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_08_In",
-   "teil": "Zelle_032",
-   "gruppe": "Zellen",
-   "volumen_mm3": 4320.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_08_Out",
-   "teil": "Zelle_032",
-   "gruppe": "Zellen",
-   "volumen_mm3": 4320.0
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_09",
-   "teil": "Zelle_032",
-   "gruppe": "Zellen",
-   "volumen_mm3": 5220.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_09_In",
-   "teil": "Zelle_032",
-   "gruppe": "Zellen",
-   "volumen_mm3": 4320.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_09_Out",
-   "teil": "Zelle_032",
-   "gruppe": "Zellen",
-   "volumen_mm3": 2340.0
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_00",
-   "teil": "Zelle_218",
-   "gruppe": "Zellen",
-   "volumen_mm3": 2610.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_00_In",
-   "teil": "Zelle_218",
-   "gruppe": "Zellen",
-   "volumen_mm3": 1170.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_00_Out",
-   "teil": "Zelle_218",
-   "gruppe": "Zellen",
-   "volumen_mm3": 2160.0
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_01",
-   "teil": "Zelle_218",
-   "gruppe": "Zellen",
-   "volumen_mm3": 2610.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_01_In",
-   "teil": "Zelle_218",
-   "gruppe": "Zellen",
-   "volumen_mm3": 2160.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_01_Out",
-   "teil": "Zelle_218",
-   "gruppe": "Zellen",
-   "volumen_mm3": 2160.0
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_02",
-   "teil": "Zelle_218",
-   "gruppe": "Zellen",
-   "volumen_mm3": 2610.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_02_In",
-   "teil": "Zelle_218",
-   "gruppe": "Zellen",
-   "volumen_mm3": 2160.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_02_Out",
-   "teil": "Zelle_218",
-   "gruppe": "Zellen",
-   "volumen_mm3": 2160.0
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_10",
-   "teil": "Zelle_249",
-   "gruppe": "Zellen",
-   "volumen_mm3": 2610.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_10_In",
-   "teil": "Zelle_249",
-   "gruppe": "Zellen",
-   "volumen_mm3": 2160.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_10_Out",
-   "teil": "Zelle_249",
-   "gruppe": "Zellen",
-   "volumen_mm3": 2160.0
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_11",
-   "teil": "Zelle_249",
-   "gruppe": "Zellen",
-   "volumen_mm3": 2610.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_11_In",
-   "teil": "Zelle_249",
-   "gruppe": "Zellen",
-   "volumen_mm3": 2160.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_11_Out",
-   "teil": "Zelle_249",
-   "gruppe": "Zellen",
-   "volumen_mm3": 2160.0
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_12",
-   "teil": "Zelle_249",
-   "gruppe": "Zellen",
-   "volumen_mm3": 2610.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_12_In",
-   "teil": "Zelle_249",
-   "gruppe": "Zellen",
-   "volumen_mm3": 2160.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_12_Out",
-   "teil": "Zelle_249",
-   "gruppe": "Zellen",
-   "volumen_mm3": 2160.0
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_13",
-   "teil": "Zelle_249",
-   "gruppe": "Zellen",
-   "volumen_mm3": 2610.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_13_In",
-   "teil": "Zelle_249",
-   "gruppe": "Zellen",
-   "volumen_mm3": 2160.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_13_Out",
-   "teil": "Zelle_249",
-   "gruppe": "Zellen",
-   "volumen_mm3": 1170.0
+   "volumen_mm3": 5988.4982394652325,
+   "bb_freigang": [
+    1526.0,
+    577.5,
+    116.5,
+    1621.0,
+    652.5,
+    191.5
+   ],
+   "bb_teil": [
+    0.0,
+    0.0,
+    119.0,
+    2050.0,
+    1430.0,
+    121.0
+   ]
   },
   {
    "freigang": "Steckfreigang_Hauptschuetz_1_Spulenstecker",
    "teil": "Pyrosicherung",
    "gruppe": "E2_Schaltbox_Inhalt",
-   "volumen_mm3": 6480.0
+   "volumen_mm3": 6480.0,
+   "bb_freigang": [
+    1725.5,
+    800.0,
+    138.0,
+    1760.5,
+    843.0,
+    170.0
+   ],
+   "bb_teil": [
+    1753.8,
+    810.0,
+    123.0,
+    1783.8,
+    840.0,
+    203.0
+   ]
   },
   {
    "freigang": "Steckfreigang_Hauptschuetz_2_Spulenstecker",
    "teil": "Schmelz_Halter",
    "gruppe": "E2_Schaltbox_Inhalt",
-   "volumen_mm3": 5560.0
+   "volumen_mm3": 5560.0,
+   "bb_freigang": [
+    1815.5,
+    800.0,
+    138.0,
+    1850.5,
+    843.0,
+    170.0
+   ],
+   "bb_teil": [
+    1843.8,
+    810.0,
+    123.0,
+    1883.8,
+    850.0,
+    218.0
+   ]
   },
   {
    "freigang": "Steckfreigang_Hauptschuetz_2_Spulenstecker",
    "teil": "Schmelzsicherung",
    "gruppe": "E2_Schaltbox_Inhalt",
-   "volumen_mm3": 1568.0000000000005
+   "volumen_mm3": 1568.0000000000005,
+   "bb_freigang": [
+    1815.5,
+    800.0,
+    138.0,
+    1850.5,
+    843.0,
+    170.0
+   ],
+   "bb_teil": [
+    1848.8,
+    815.0,
+    133.0,
+    1878.8,
+    845.0,
+    218.0
+   ]
   },
   {
    "freigang": "Steckfreigang_BMS_Kabelstecker_J_VERSORGUNG",
    "teil": "Schaltbox_Wanne",
    "gruppe": "E2_Schaltbox",
-   "volumen_mm3": 1008.0
+   "volumen_mm3": 1008.0,
+   "bb_freigang": [
+    1659.5,
+    622.0,
+    132.6,
+    1704.5,
+    650.0,
+    150.6
+   ],
+   "bb_teil": [
+    1676.0,
+    553.0,
+    121.0,
+    2020.0,
+    877.0,
+    239.0
+   ]
   },
   {
    "freigang": "Steckfreigang_BMS_Kabelstecker_J_DEBUG",
    "teil": "Schaltbox_Wanne",
    "gruppe": "E2_Schaltbox",
-   "volumen_mm3": 1008.0
+   "volumen_mm3": 1008.0,
+   "bb_freigang": [
+    1665.0,
+    590.0,
+    132.6,
+    1710.0,
+    618.0,
+    150.6
+   ],
+   "bb_teil": [
+    1676.0,
+    553.0,
+    121.0,
+    2020.0,
+    877.0,
+    239.0
+   ]
   },
   {
    "freigang": "Steckfreigang_BMS_Kabelstecker_J_SPULE_P",
    "teil": "Schaltbox_Wanne",
    "gruppe": "E2_Schaltbox",
-   "volumen_mm3": 1007.9999999999999
+   "volumen_mm3": 1007.9999999999999,
+   "bb_freigang": [
+    1734.0,
+    537.0,
+    132.6,
+    1762.0,
+    582.0,
+    150.6
+   ],
+   "bb_teil": [
+    1676.0,
+    553.0,
+    121.0,
+    2020.0,
+    877.0,
+    239.0
+   ]
   },
   {
    "freigang": "Steckfreigang_BMS_Kabelstecker_J_SPULE_M",
    "teil": "Schaltbox_Wanne",
    "gruppe": "E2_Schaltbox",
-   "volumen_mm3": 1007.9999999999999
+   "volumen_mm3": 1007.9999999999999,
+   "bb_freigang": [
+    1756.0,
+    537.0,
+    132.6,
+    1784.0,
+    582.0,
+    150.6
+   ],
+   "bb_teil": [
+    1676.0,
+    553.0,
+    121.0,
+    2020.0,
+    877.0,
+    239.0
+   ]
   },
   {
    "freigang": "Steckfreigang_BMS_Kabelstecker_J_SPULE_V",
    "teil": "Schaltbox_Wanne",
    "gruppe": "E2_Schaltbox",
-   "volumen_mm3": 1007.9999999999999
+   "volumen_mm3": 1007.9999999999999,
+   "bb_freigang": [
+    1778.0,
+    537.0,
+    132.6,
+    1806.0,
+    582.0,
+    150.6
+   ],
+   "bb_teil": [
+    1676.0,
+    553.0,
+    121.0,
+    2020.0,
+    877.0,
+    239.0
+   ]
   },
   {
    "freigang": "Handraum_HV_Stecker_40A",
    "teil": "HV_Stecker_250A_Flansch",
    "gruppe": "E2_Stecker_Sensor",
-   "volumen_mm3": 459.8468684811115
+   "volumen_mm3": 459.8468684811115,
+   "bb_freigang": [
+    1603.5,
+    642.5,
+    127.0,
+    1678.5,
+    717.5,
+    230.0
+   ],
+   "bb_teil": [
+    1576.0,
+    580.0,
+    121.0,
+    1666.0,
+    650.0,
+    129.0
+   ]
   },
   {
    "freigang": "Handraum_HV_Stecker_40A",
    "teil": "HV_Stecker_250A_Schraube_3_Kopf",
    "gruppe": "E2_Schraube",
-   "volumen_mm3": 30.419658484234475
+   "volumen_mm3": 30.419658484234475,
+   "bb_freigang": [
+    1603.5,
+    642.5,
+    127.0,
+    1678.5,
+    717.5,
+    230.0
+   ],
+   "bb_teil": [
+    1656.8,
+    640.8,
+    129.0,
+    1665.2,
+    649.2,
+    134.0
+   ]
   },
   {
    "freigang": "Steckfreigang_BMS_Kabelstecker_J_VERSORGUNG",
    "teil": "HV_Stecker_250A_Schraube_3_Kopf",
    "gruppe": "E2_Schraube",
-   "volumen_mm3": 57.19367123332677
+   "volumen_mm3": 57.19367123332677,
+   "bb_freigang": [
+    1659.5,
+    622.0,
+    132.6,
+    1704.5,
+    650.0,
+    150.6
+   ],
+   "bb_teil": [
+    1656.8,
+    640.8,
+    129.0,
+    1665.2,
+    649.2,
+    134.0
+   ]
   },
   {
    "freigang": "Handraum_HV_Stecker_40A",
    "teil": "HV_Stecker_250A_Verriegelungshebel",
    "gruppe": "E2_Stecker_Sensor",
-   "volumen_mm3": 1854.686178756518
+   "volumen_mm3": 1854.686178756518,
+   "bb_freigang": [
+    1603.5,
+    642.5,
+    127.0,
+    1678.5,
+    717.5,
+    230.0
+   ],
+   "bb_teil": [
+    1591.0,
+    640.0,
+    149.0,
+    1651.0,
+    650.0,
+    159.0
+   ]
   },
   {
    "freigang": "Handraum_NV_Stecker_26pol",
    "teil": "HV_Stecker_40A_Flansch",
    "gruppe": "E2_Stecker_Sensor",
-   "volumen_mm3": 451.9802706334933
+   "volumen_mm3": 451.9802706334933,
+   "bb_freigang": [
+    1603.5,
+    687.5,
+    126.0,
+    1678.5,
+    762.5,
+    231.0
+   ],
+   "bb_teil": [
+    1616.0,
+    660.0,
+    121.0,
+    1666.0,
+    700.0,
+    127.0
+   ]
   },
   {
    "freigang": "Handraum_NV_Stecker_26pol",
    "teil": "HV_Stecker_40A_Schraube_2_Kopf",
    "gruppe": "E2_Schraube",
-   "volumen_mm3": 115.0485363372542
+   "volumen_mm3": 115.0485363372542,
+   "bb_freigang": [
+    1603.5,
+    687.5,
+    126.0,
+    1678.5,
+    762.5,
+    231.0
+   ],
+   "bb_teil": [
+    1617.5,
+    691.5,
+    127.0,
+    1624.5,
+    698.5,
+    131.0
+   ]
   },
   {
    "freigang": "Handraum_NV_Stecker_26pol",
    "teil": "HV_Stecker_40A_Schraube_2_Schaft",
    "gruppe": "E2_Schraube",
-   "volumen_mm3": 11.485244452181522
+   "volumen_mm3": 11.485244452181522,
+   "bb_freigang": [
+    1603.5,
+    687.5,
+    126.0,
+    1678.5,
+    762.5,
+    231.0
+   ],
+   "bb_teil": [
+    1619.0,
+    693.0,
+    121.0,
+    1623.0,
+    697.0,
+    127.0
+   ]
   },
   {
    "freigang": "Handraum_NV_Stecker_26pol",
    "teil": "HV_Stecker_40A_Schraube_3_Kopf",
    "gruppe": "E2_Schraube",
-   "volumen_mm3": 115.04853633725423
+   "volumen_mm3": 115.04853633725423,
+   "bb_freigang": [
+    1603.5,
+    687.5,
+    126.0,
+    1678.5,
+    762.5,
+    231.0
+   ],
+   "bb_teil": [
+    1657.5,
+    691.5,
+    127.0,
+    1664.5,
+    698.5,
+    131.0
+   ]
   },
   {
    "freigang": "Handraum_NV_Stecker_26pol",
    "teil": "HV_Stecker_40A_Schraube_3_Schaft",
    "gruppe": "E2_Schraube",
-   "volumen_mm3": 11.485244452181549
+   "volumen_mm3": 11.485244452181549,
+   "bb_freigang": [
+    1603.5,
+    687.5,
+    126.0,
+    1678.5,
+    762.5,
+    231.0
+   ],
+   "bb_teil": [
+    1659.0,
+    693.0,
+    121.0,
+    1663.0,
+    697.0,
+    127.0
+   ]
   },
   {
    "freigang": "Handraum_NV_Stecker_26pol",
    "teil": "HV_Stecker_40A_Steckkoerper",
    "gruppe": "E2_Stecker_Sensor",
-   "volumen_mm3": 3667.6695996218255
+   "volumen_mm3": 3667.6695996218255,
+   "bb_freigang": [
+    1603.5,
+    687.5,
+    126.0,
+    1678.5,
+    762.5,
+    231.0
+   ],
+   "bb_teil": [
+    1624.0,
+    668.0,
+    127.0,
+    1658.0,
+    692.0,
+    161.0
+   ]
   },
   {
    "freigang": "Handraum_HV_Stecker_40A",
    "teil": "NV_Stecker_26pol_Schraube_0_Kopf",
    "gruppe": "E2_Schraube",
-   "volumen_mm3": 5.638055471173393
+   "volumen_mm3": 5.638055471173393,
+   "bb_freigang": [
+    1603.5,
+    642.5,
+    127.0,
+    1678.5,
+    717.5,
+    230.0
+   ],
+   "bb_teil": [
+    1617.5,
+    711.5,
+    126.0,
+    1624.5,
+    718.5,
+    130.0
+   ]
   },
   {
    "freigang": "Handraum_HV_Stecker_40A",
    "teil": "NV_Stecker_26pol_Schraube_1_Kopf",
    "gruppe": "E2_Schraube",
-   "volumen_mm3": 5.638055471173357
+   "volumen_mm3": 5.638055471173357,
+   "bb_freigang": [
+    1603.5,
+    642.5,
+    127.0,
+    1678.5,
+    717.5,
+    230.0
+   ],
+   "bb_teil": [
+    1657.5,
+    711.5,
+    126.0,
+    1664.5,
+    718.5,
+    130.0
+   ]
   },
   {
    "freigang": "Handraum_NV_Stecker_26pol",
    "teil": "Gas_Drucksensor",
    "gruppe": "E2_Stecker_Sensor",
-   "volumen_mm3": 4491.274998653002
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_13",
-   "teil": "Lasche_Minus",
-   "gruppe": "E2_Lasche",
-   "volumen_mm3": 657.9921715774498
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_03",
-   "teil": "Querverbinder_Mitte_A",
-   "gruppe": "Zellverbinder",
-   "volumen_mm3": 348.0
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_04",
-   "teil": "Querverbinder_Mitte_A",
-   "gruppe": "Zellverbinder",
-   "volumen_mm3": 348.0
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_05",
-   "teil": "Querverbinder_Mitte_A",
-   "gruppe": "Zellverbinder",
-   "volumen_mm3": 348.0
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_06",
-   "teil": "Querverbinder_Mitte_A",
-   "gruppe": "Zellverbinder",
-   "volumen_mm3": 348.0
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_07",
-   "teil": "Querverbinder_Mitte_B",
-   "gruppe": "Zellverbinder",
-   "volumen_mm3": 348.0
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_08",
-   "teil": "Querverbinder_Mitte_B",
-   "gruppe": "Zellverbinder",
-   "volumen_mm3": 348.0
-  },
-  {
-   "freigang": "Steckfreigang_FPC_Stecker_09",
-   "teil": "Querverbinder_Mitte_B",
-   "gruppe": "Zellverbinder",
-   "volumen_mm3": 348.0
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_01_In",
-   "teil": "Daisy_Stecker_00_Out",
-   "gruppe": "SV1_Stecker",
-   "volumen_mm3": 191.99999999999997
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_00_Out",
-   "teil": "Daisy_Stecker_01_In",
-   "gruppe": "SV1_Stecker",
-   "volumen_mm3": 191.99999999999997
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_02_In",
-   "teil": "Daisy_Stecker_01_Out",
-   "gruppe": "SV1_Stecker",
-   "volumen_mm3": 191.99999999999997
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_01_Out",
-   "teil": "Daisy_Stecker_02_In",
-   "gruppe": "SV1_Stecker",
-   "volumen_mm3": 191.99999999999997
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_04_In",
-   "teil": "Daisy_Stecker_03_Out",
-   "gruppe": "SV1_Stecker",
-   "volumen_mm3": 191.99999999999997
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_03_Out",
-   "teil": "Daisy_Stecker_04_In",
-   "gruppe": "SV1_Stecker",
-   "volumen_mm3": 191.99999999999997
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_05_In",
-   "teil": "Daisy_Stecker_04_Out",
-   "gruppe": "SV1_Stecker",
-   "volumen_mm3": 191.99999999999997
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_04_Out",
-   "teil": "Daisy_Stecker_05_In",
-   "gruppe": "SV1_Stecker",
-   "volumen_mm3": 191.99999999999997
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_06_In",
-   "teil": "Daisy_Stecker_05_Out",
-   "gruppe": "SV1_Stecker",
-   "volumen_mm3": 191.99999999999997
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_05_Out",
-   "teil": "Daisy_Stecker_06_In",
-   "gruppe": "SV1_Stecker",
-   "volumen_mm3": 191.99999999999997
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_08_In",
-   "teil": "Daisy_Stecker_07_Out",
-   "gruppe": "SV1_Stecker",
-   "volumen_mm3": 191.99999999999997
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_07_Out",
-   "teil": "Daisy_Stecker_08_In",
-   "gruppe": "SV1_Stecker",
-   "volumen_mm3": 191.99999999999997
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_09_In",
-   "teil": "Daisy_Stecker_08_Out",
-   "gruppe": "SV1_Stecker",
-   "volumen_mm3": 191.99999999999997
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_08_Out",
-   "teil": "Daisy_Stecker_09_In",
-   "gruppe": "SV1_Stecker",
-   "volumen_mm3": 191.99999999999997
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_11_In",
-   "teil": "Daisy_Stecker_10_Out",
-   "gruppe": "SV1_Stecker",
-   "volumen_mm3": 191.99999999999997
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_10_Out",
-   "teil": "Daisy_Stecker_11_In",
-   "gruppe": "SV1_Stecker",
-   "volumen_mm3": 191.99999999999997
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_12_In",
-   "teil": "Daisy_Stecker_11_Out",
-   "gruppe": "SV1_Stecker",
-   "volumen_mm3": 191.99999999999997
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_11_Out",
-   "teil": "Daisy_Stecker_12_In",
-   "gruppe": "SV1_Stecker",
-   "volumen_mm3": 191.99999999999997
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_13_In",
-   "teil": "Daisy_Stecker_12_Out",
-   "gruppe": "SV1_Stecker",
-   "volumen_mm3": 191.99999999999997
-  },
-  {
-   "freigang": "Steckfreigang_Daisy_Stecker_12_Out",
-   "teil": "Daisy_Stecker_13_In",
-   "gruppe": "SV1_Stecker",
-   "volumen_mm3": 191.99999999999997
+   "volumen_mm3": 4491.274998653002,
+   "bb_freigang": [
+    1603.5,
+    687.5,
+    126.0,
+    1678.5,
+    762.5,
+    231.0
+   ],
+   "bb_teil": [
+    1636.0,
+    750.0,
+    121.0,
+    1666.0,
+    780.0,
+    141.0
+   ]
   },
   {
    "freigang": "Handraum_NV_Stecker_26pol",
    "teil": "HV_Stecker_40A_Kabelstecker",
    "gruppe": "SV1_Stecker",
-   "volumen_mm3": 6254.131120518169
+   "volumen_mm3": 6254.131120518169,
+   "bb_freigang": [
+    1603.5,
+    687.5,
+    126.0,
+    1678.5,
+    762.5,
+    231.0
+   ],
+   "bb_teil": [
+    1581.0,
+    665.0,
+    127.0,
+    1661.0,
+    695.0,
+    171.0
+   ]
   },
   {
    "freigang": "Handraum_HV_Stecker_40A",
    "teil": "NV_Stecker_26pol_Kabelstecker",
    "gruppe": "SV1_Stecker",
-   "volumen_mm3": 1988.1117645483505
+   "volumen_mm3": 1988.1117645483505,
+   "bb_freigang": [
+    1603.5,
+    642.5,
+    127.0,
+    1678.5,
+    717.5,
+    230.0
+   ],
+   "bb_teil": [
+    1581.0,
+    715.0,
+    126.0,
+    1661.0,
+    735.0,
+    171.0
+   ]
   },
   {
    "freigang": "Steckfreigang_BMS_Kabelstecker_J_DAISY2",
    "teil": "BMS_Kabelstecker_J_DAISY1",
    "gruppe": "SV1_Stecker",
-   "volumen_mm3": 576.0
+   "volumen_mm3": 576.0,
+   "bb_freigang": [
+    1864.0,
+    620.0,
+    132.6,
+    1909.0,
+    648.0,
+    150.6
+   ],
+   "bb_teil": [
+    1864.0,
+    642.0,
+    132.6,
+    1876.0,
+    650.0,
+    140.6
+   ]
   },
   {
    "freigang": "Steckfreigang_BMS_Kabelstecker_J_DAISY1",
    "teil": "BMS_Kabelstecker_J_DAISY2",
    "gruppe": "SV1_Stecker",
-   "volumen_mm3": 576.0
+   "volumen_mm3": 576.0,
+   "bb_freigang": [
+    1864.0,
+    632.0,
+    132.6,
+    1909.0,
+    660.0,
+    150.6
+   ],
+   "bb_teil": [
+    1864.0,
+    630.0,
+    132.6,
+    1876.0,
+    638.0,
+    140.6
+   ]
   }
  ],
- "anzahl_steckfreigang_verletzungen": 211,
+ "anzahl_steckfreigang_verletzungen": 71,
  "kontakte_zugelassen": [
   {
    "a": "Seitenrahmen",
@@ -2712,7 +3008,7 @@
    "art": "SV1 Schraube im Rahmen/Platine"
   }
  ],
- "rechenzeit_s": 269.20115089416504,
+ "rechenzeit_s": 270.18437099456787,
  "e3": {
   "platine_mm": [
    120.0,
@@ -4718,7 +5014,12 @@
    "masse_zusatz_kg": 1.3340577276630856,
    "anzahl_stecker": 65,
    "anzahl_gegenstuecke": 42,
-   "anzahl_schrauben_bolzen": 112
+   "anzahl_schrauben_bolzen": 112,
+   "aussparung_daisy_buchsen_mm3": {},
+   "freigang_platinenstecker": {
+    "greifraum_mm": 5.0,
+    "quer_mm": 2.0
+   }
   },
   "bms_platine_bbox_mm": [
    1703.0,

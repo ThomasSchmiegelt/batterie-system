@@ -1,10 +1,51 @@
-| Dok.-Nr. | ERG-SV1 | Version | 0.2 | Status | Entwurf |
+| Dok.-Nr. | ERG-SV1 | Version | 0.3 | Status | Entwurf |
 |---|---|---|---|---|---|
 | Titel | Ergebnis SV1: Stecker mit Gegenstück, Steckfreigang, Verschraubungen im Pack-CAD (Fortsetzung Nachtrag 2) | Ersteller | Claude Sonnet (KI) | Prüfer | Opus (offen) |
 
 > **KI-generiert** (Claude Sonnet, 2026-11-25). Entwurf, nicht freigegeben. Grundlage `ERWARTUNG.md` (ERW-SV1, Nachtrag 2, Punkte 1–5, nicht geändert). Version 0.1 (2026-11-24) ist in `/tmp/claude-1003/SV1b/sv1dir/ERGEBNIS.md` gesichert. Zahlen aus `ergebnis_v02.json` (Auszug aus `/home/cae/cae_projekte/batterie/sv1b/out/ergebnis_<V>_e2d_e3c_sv1.json`, Gruppierung `…_gruppen.json`) und aus den DRC-/Router-Dateien unter `/home/cae/cae_projekte/batterie/sv1b/lauf*_*/` (`drc.json`, `fr.log`, `start.txt`, `ende.txt`). Alle Maße der Stecker sind Annahmen ERW-SV1 (`cad/pack/entwurf/annahmen_sv1.json`). Bohrungslagen B3/B4v: Annahme W1 (`sim/elektrik/w1_kolibri_waechter/ERGEBNIS.md`), von Opus als Annahme ERW-SV1 N2 übernommen.
 
-**Status: ABBRUCH an OPUS bei Punkt 1** (weder B3 noch B4v erreicht DRC 0 und 0 offen; Ursache sind Bauteile an den Bohrungsorten, nicht das Routing). `e3/` und `abgabe_2026-11-24/` sind unverändert, ebenso `cad/pack/pack_e2d.py` und `cad/pack/entwurf/`.
+## Version 0.3 (Nachtrag 3, 2026-11-25 11:08 bis 11:40): Entscheidungen Opus umgesetzt
+Quellen: `sim/elektrik`-Arbeitskopie `/home/cae/cae_projekte/batterie/sv1b/e3w/` (DRC-Dateien `cmu_<V>_drc.json`, `drc_vor_thermo_<V>.json`, `thermovias_<V>.json`), `sv1b/lauf2_B4/` (Router, `drc.json`), `ergebnis_v03.json` (Pack). **Zusammenfassung: Pack-Teile 2 und 3 erledigt (Zahlen unten); Punkt 1 (Platine) bis auf 3 Thermovias erreicht, Abnahme DRC 0 formal verfehlt, daher nichts nach `e3/` oder `abgabe_2026-11-24/` kopiert (Rückfrage an Opus).**
+
+**Punkt 1: B4, Ecken (2,8|2,8), mit Projektdatei und Daisy-Klasse (`sv1b/lauf2.sh B4 200`, danach `nach.sh`, `nach_nmc.sh`).**
+| Schritt | LFP | NMC | Quelle |
+|---|---|---|---|
+| Router (Pass 18, offen / Verstöße) | 3 / 46 (Handbahn-Nets, siehe Punkt 2a) | durch Übertragung | `lauf2_B4/fr.log` |
+| KiCad-DRC nach SES-Import | 0 offen, 2 Bahnbreitenverstöße (0,12 mm) | – | `lauf2_B4/drc.json` |
+| nach `via_aufraeumen` (0 Vias entfernt, 2 Bahnen verbreitert) | **0 Verstöße, 0 offen** | **0 Verstöße, 0 offen** (Übertragung: 36 Werte geändert) | `e3w/drc_vor_thermo_<V>.json` |
+| Thermovias gesetzt | **144 von 144**, davon 3 als kleine Via 0,45/0,2 mm | 144 von 144, davon 3 klein | `e3w/thermovias_<V>.json` |
+| KiCad-DRC danach | **6 Verstöße** (3 × Via-Durchmesser 0,45 < 0,5, 3 × Bohrung < 0,3), 0 offen | 6 (gleiche Arten), 0 offen | `e3w/cmu_<V>_drc.json` |
+| zur Information (Kopie, nicht übernommen): Projekt mit Mindest-Via 0,4 / Mindestbohrung 0,2 | 0 Verstöße, 0 offen | 0 Verstöße, 0 offen | `sv1b/test_via/drc.json`, `sv1b/test_via_nmc/drc.json` |
+- Die drei kleinen Vias liegen im Netz **T5** bei (53,0 | 13,00), (53,7 | 13,00), (57,7 | 13,00) mm. Die Router-Läufe sind deterministisch (`lauf2_B4`, `lauf3_B4_t3`, `lauf3_B4_t8`: gleiche Punktzahl 973,68, SES-Dateien byte-gleich), eine Wiederholung ändert nichts.
+- Die E3-Ausnahme (Opus, Frage 9: Via 0,45/0,2 mm mit Mindest-Via 0,4 und Mindestbohrung 0,2) galt nach E3-ERGEBNIS nur für NMC und steckt in den jetzigen `e3/*.kicad_pro` nicht (beide haben Mindest-Via 0,5 / Bohrung 0,3). **Entscheidung Opus:** Ausnahme auch für LFP (und beide Projektdateien) setzen, dann ist die Abnahme erfüllt; oder anderes Routing. Ich habe die Regel nicht gelockert.
+- Hilfsskripte angepasst in Arbeitskopie `sv1b/skripte/` (Pfade auf `e3w`, `route_uebertragen.py` überspringt die Bohrungs-Footprints MH1–MH4, Fehler `KeyError 'MH2'`; `thermovias.py` schreibt die JSON nach `e3w`). Originale unverändert.
+- Akten BT-321: ENT-209 `befestigung` (4 × M3, Bolzen 6 mm), ENT-210 `bohrung_d_mm` 3,2, ENT-211 `bohrung_anzahl` 4, Status vorgeschlagen, Abnahme in der Akte als offen vermerkt. `pm.py pruefe`: 211 Entscheidungen, 0 Fehler.
+- Das CMU-STEP im Pack ist weiter das alte ohne Bohrungen (`e3/cmu_<V>.step` unverändert); neue STEP mit Bohrungen und Thermovias liegen nur in `sv1b/e3w/cmu_<V>.step` (Prüfung `kicad-cli`: Export ohne Fehler), nicht als `cmu_<V>_mit_bohrungen.step` in der Abgabe.
+
+**Punkt 2: Freigangsregel Platinenstecker (FPC, Daisy): Steckerlänge + Steckweg 8 + 5 mm, quer 2 mm** (Annahme Opus ERW-SV1 N3; ich habe „Steckweg + 5 mm“ ab der Steckerbasis gezählt, wie in v0.1 die 25 mm, also Länge + Steckweg + 5 mm). Außenstecker unverändert (+25 mm, Handraum Ø 75). Neuzählung (`ergebnis_v03.json`, Pack mit `PACK_SV1=1`, Ausgabe nur `_sv1`):
+| Klasse | LFP v0.2 → v0.3 | NMC v0.2 → v0.3 |
+|---|---|---|
+| Gesamt | 211 → **71** | 215 → **117** |
+| B Freigang gegen Nachbarstecker auf der CMU | 20 → 0 | 20 → 0 |
+| C Platinenstecker gegen festes Teil | 162 → 42 | 169 → 91 |
+| D BMS gegen Nachbarstecker | 2 → 2 | 2 → 2 |
+| E BMS gegen Schaltbox | 6 → 6 | 6 → 6 |
+| F Deckelstecker | 18 → 18 | 18 → 18 |
+| G Schütz-Spulenstecker | 3 → 3 | 0 → 0 |
+- **Rest in Klasse C LFP (42):** alle gegen den Seitenrahmen (je 14 für FPC, Daisy-In, Daisy-Out), Überlappung je 280–304 mm³; der Freigang reicht bis x 2021, der Seitenrahmen beginnt bei x 2020 (Überlappung **1 mm** in Querrichtung zur Wand, Beispiel CMU 00).
+- **Rest in Klasse C NMC (91):** 39 wie LFP gegen den Seitenrahmen (13 je Stecker), dazu 52 Daisy-Freigänge gegen Zellträger und Verguss (Feld 0 und 3; Überlappung je 710 mm³ Zellträger und 1410 mm³ Verguss; Freigang x 29–41 bzw. 1909–1921, y 82–110, z 20–30): Die Aussparung gilt nur der Buchse (Punkt 3), nicht dem Freigang davor.
+- Klassen D, E, F, G sind unverändert (Regel gilt dort nicht): Maße siehe v0.2 Punkt 3. Offen an Opus.
+
+**Punkt 3: NMC-Daisy-Buchsen, Aussparung in Zellträger und Verguss (Variante a).** Harte Kollisionen NMC **52 → 0** (LFP 0). Ausgesparte Volumina (`ergebnis_v03.json`, `aussparung_daisy_buchsen_mm3`): Zellträger Feld 0 1320 mm³, Verguss Feld 0 19 800 mm³, Zellträger Feld 3 240 mm³, Verguss Feld 3 3600 mm³ (22 Buchsen in Feld 0, 4 in Feld 3). Masse bekannt NMC 483,667 kg (v0.2: 483,676 kg), LFP 621,134 kg. Der Verguss selbst hat keine Dichte (Akte offen), seine Massenänderung ist nicht enthalten.
+
+**Bilder:** je Variante Schaltbox und Endzone neu (`sv1_<V>_schaltbox.png`, `sv1_<V>_endzone.png`), Zielband 0 Verletzungen beschriftet, Lesehilfe im Bild. Pack-Dateien nur mit Suffix `_sv1` überschrieben (`/home/cae/cae_projekte/batterie/e2/pack_<V>_e2d_e3c_sv1.*`, `netz_<V>_e2d_e3c_sv1_*.json`, `cad/pack/entwurf/ergebnis_<V>_e2d_e3c_sv1.json`), keine `_e3c`-Dateien. Sicherungen: `/tmp/claude-1003/SV1b/` (`pack_e2d.py.vor_n3`, `ERGEBNIS_v02.md`, `sv1dir/`).
+
+**Offen (an Opus):** (a) Via-Ausnahme 0,45/0,2 mm auch für LFP, damit DRC 0 gilt, danach Kopie nach `e3/` und `abgabe_2026-11-24/` als `cmu_<V>_mit_bohrungen.step` plus Pack neu; (b) Platinenstecker-Freigang 1 mm gegen den Seitenrahmen (Quer 2 mm bei 1 mm Abstand der Stecker zur Wand), NMC-Freigang in Verguss und Zellträger; (c) Klassen D, E, F, G unverändert.
+
+---
+### Stand v0.2 (2026-11-25 vormittags, unverändert)
+
+**Status v0.2: ABBRUCH an OPUS bei Punkt 1 (durch Nachtrag 3 überholt)** (weder B3 noch B4v erreicht DRC 0 und 0 offen; Ursache sind Bauteile an den Bohrungsorten, nicht das Routing). `e3/` und `abgabe_2026-11-24/` sind unverändert, ebenso `cad/pack/pack_e2d.py` und `cad/pack/entwurf/`.
 
 ## Was getan
 - **Punkt 1:** Routing der CMU LFP mit Freerouting (`-mp 200 -mt 5`, nice, Scope `hermes-batterie-sv1b-*`, CPU, ohne Wächter) für B3, dann B4v. Skripte `sv1b/lauf.sh`, `sv1b/lauf2.sh` (nutzen `w1_platine.py`, `strip_pcb.py`, Startplatine `w1/start/start_LFP.kicad_pcb`). Daisy-Regel 2,5 mm (ENT-183) angewendet.

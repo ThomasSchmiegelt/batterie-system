@@ -5,7 +5,7 @@ import os, sys, json, math, textwrap
 from PIL import Image, ImageDraw, ImageFont
 R = "/home/cae/hermes/batterie"; G = "/home/cae/cae_projekte/batterie_video/wissen/graph"; OUT = "/home/cae/cae_projekte/batterie_video/elektronik/bilder"
 LAY = "/home/cae/cae_projekte/batterie_video/elektronik/layout.json"
-FPS = 25; NF = 165 * FPS; W, H = 1280, 720
+FPS = 25; NF = 171 * FPS; W, H = 1280, 720
 D = json.load(open(f"{R}/video/elektronik/daten.json"))
 FA = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"; FB = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
 _f = {}
@@ -23,7 +23,8 @@ ZS, ZL = pct(FM["ziel"]["SG-01"]["SPFM"]).replace(",00", ""), pct(FM["ziel"]["SG
 KOMM = {"REQ-P01": "1500 kg Anhaltswert", "REQ-P03": "720–880 V", "REQ-P04": "P_dauer ≥ 60 kW", "REQ-P05": "LFP 20 min, NMC 30 min", "REQ-P15": "Zellspannung, Temperatur, Isolation",
         "REQ-P17": "EMV BMS, CMU, Schütz", "REQ-P18": "ISO 26262", "REQ-P19": "Luft- und Kriechstrecken", "REQ-P20": "Umwelt, Qualifikation", "REQ-P21": "Cybersicherheit BMS"}
 HOCH = {"REQ-P15", "REQ-P17", "REQ-P18", "REQ-P19", "REQ-P20", "REQ-P21"}
-PFAD = {b["pfad"] for b in D["bilder"]}
+PFAD = {b["pfad"] for b in D["bilder"]} | {"sim/kuehlung/k3_gesamt/k4_temperatur_LFP_DAUER_V0.png", "sim/mechanik/x3_crash_g5/energie_LFP_a2.png"}
+AG = json.load(open(f"{R}/video/elektronik/agenten.json"))
 VF = "/home/cae/cae_projekte/batterie_video/frames/2749.png"   # echtes Blender-Rendering aus dem ersten Video (Pack geschlossen, Schaltbox, Kabel)
 def bild(p):
     assert p in PFAD or p == VF, p
@@ -65,7 +66,7 @@ def lage3d(im, sz, t):
     im.paste(Image.alpha_composite(im.convert("RGBA"), L).convert("RGB")); return im
 def graph_index(f):
     if f < 3050: return int(f * 2680 / 3050)
-    return min(3150, 2680 + int((f - 3050) * 470 / 1075))
+    return min(3149, 2680 + int((f - 3050) * 470 / 1075))
 _lay = None
 def layout():
     global _lay
@@ -115,26 +116,26 @@ def s1(im, t):
     kopf(im, "Anforderungen und Normen")
     d = ImageDraw.Draw(im, "RGBA")
     if t < 15:
-        d.rounded_rectangle([40, 70, W - 40, 640], 14, fill=(12, 16, 24, 190), outline=(200, 200, 210, 180))
+        d.rounded_rectangle([40, 70, W - 40, 586], 14, fill=(12, 16, 24, 190), outline=(200, 200, 210, 180))
         A = {a["id"]: a for a in D["anforderungen"]}; ids = ["REQ-P01", "REQ-P03", "REQ-P04", "REQ-P05", "REQ-P15", "REQ-P17", "REQ-P18", "REQ-P19", "REQ-P20", "REQ-P21", "REQ-D13"]
         d.text((60, 82), "Nummer", font=F(22, True), fill=(180, 180, 190, 255)); d.text((190, 82), "Kurztitel", font=F(22, True), fill=(180, 180, 190, 255))
         d.text((650, 82), "Wert", font=F(22, True), fill=(180, 180, 190, 255)); d.text((1010, 82), "Status", font=F(22, True), fill=(180, 180, 190, 255))
         for k, i in enumerate(ids):
             w = clamp((t - 0.5 - k * 1.1) / 0.5)
             if w <= 0: continue
-            a = A[i]; y = 122 + k * 47; hc = (255, 190, 80) if i in HOCH else (235, 235, 240)
-            if i in HOCH: d.rectangle([50, y - 3, W - 50, y + 40], fill=(120, 80, 10, int(110 * w)))
+            a = A[i]; y = 122 + k * 38; hc = (255, 190, 80) if i in HOCH else (235, 235, 240)
+            if i in HOCH: d.rectangle([50, y - 3, W - 50, y + 33], fill=(120, 80, 10, int(110 * w)))
             al = int(255 * w); wert = KOMM.get(i, "")
             d.text((60, y), i, font=F(24, True), fill=hc + (al,)); d.text((190, y), kurz(a["titel"], 33), font=F(22), fill=hc + (al,))
             d.text((650, y), kurz(wert, 24), font=F(22), fill=hc + (al,)); d.text((1010, y), kurz(a["status"], 18), font=F(22), fill=hc + (al,))
-        d.text((60, 648), "Hervorgehoben: REQ-P15, P17…P21 (Elektronik)   Quelle: pm/anforderungen.json", font=F(18), fill=(200, 200, 205, 255))
+        d.text((60, 552), "Hervorgehoben: REQ-P15, P17…P21 (Elektronik)   Quelle: pm/anforderungen.json", font=F(18), fill=(200, 200, 205, 255))
     else:
-        d.rounded_rectangle([40, 70, W - 40, 640], 14, fill=(12, 16, 24, 190), outline=(200, 200, 210, 180))
+        d.rounded_rectangle([40, 70, W - 40, 586], 14, fill=(12, 16, 24, 190), outline=(200, 200, 210, 180))
         d.text((60, 82), "Normen (docs/07_normen_und_vorschriften.md)", font=F(26, True), fill=(255, 255, 255, 255))
         for k, n in enumerate(D["normen"]):
             w = clamp((t - 15.3 - k * 0.9) / 0.5)
             if w <= 0: continue
-            y = 135 + k * 80; frei = n["verfuegbar"].startswith("frei"); c = (110, 220, 140) if frei else (255, 120, 110); al = int(255 * w)
+            y = 135 + k * 70; frei = n["verfuegbar"].startswith("frei"); c = (110, 220, 140) if frei else (255, 120, 110); al = int(255 * w)
             d.text((60, y), kurz(n["norm"], 52), font=F(26, True), fill=(255, 255, 255, al))
             d.text((60, y + 34), kurz(n["verfuegbar"], 62), font=F(22), fill=c + (al,))
             d.text((W - 290, y), "frei" if frei else "kostenpflichtig", font=F(22, True), fill=c + (al,))
@@ -148,30 +149,40 @@ def s3(im, t):
           (20, 25, "sim/chemie/c1_zellmodell/waerme_LFP.png", "Wärme je Zelle über der Zeit (LFP, Modell) mit Zielband  [sim/chemie/c1_zellmodell]")]
     for a, b, p, cap in bl:
         if a <= t < b:
-            panel(im, p, (110, 80, 1060, 520), quelle=p, a=clamp(min((t - a) / 0.5, 1))); d = ImageDraw.Draw(im, "RGBA"); tafel(d, cap, 110, 626, 26)
+            panel(im, p, (110, 80, 1060, 450), quelle=p, a=clamp(min((t - a) / 0.5, 1))); d = ImageDraw.Draw(im, "RGBA"); tafel(d, cap, 110, 548, 26)
     return im
+
+PIP = "/home/cae/cae_projekte/batterie_video/elektronik3d/pip"
+def pip(im, t, a, b, src, cap, kind, x=640, y=70, n=0):
+    """Bewegtes oder stehendes Bild-in-Bild (deckend), Quelle klein in der Ecke, Beschriftung darunter."""
+    if not (a <= t < b): return
+    if kind == "png": pim = lade(src, 600, 380)
+    else:
+        i = min(int((t - a) * FPS) + 1, len(os.listdir(f"{PIP}/{kind}"))); pim = Image.open(f"{PIP}/{kind}/{i:04d}.png").convert("RGB")
+    bx = Image.new("RGB", (pim.width + 8, pim.height + 8), (250, 250, 250)); bx.paste(pim, (4, 4)); im.paste(bx, (x, y)); d = ImageDraw.Draw(im, "RGBA")
+    d.rectangle([x, y, x + bx.width, y + bx.height], outline=(255, 210, 60, 255), width=3)
+    q = "Quelle: " + src; qw = d.textlength(q, font=F(14)); d.rectangle([x + 4, y + bx.height - 22, x + 12 + qw, y + bx.height - 4], fill=(10, 12, 18, 200)); d.text((x + 8, y + bx.height - 21), q, font=F(14), fill=(220, 220, 225, 255))
+    tafel(d, cap, x, y + bx.height + 8, 22)
 
 def s4(im, t):
     kopf(im, "Pack baut sich auf  [REQ-P07]")
     im = lage3d(im, "pack", t); kopf(im, "Pack baut sich auf  [REQ-P07]")
     d = ImageDraw.Draw(im, "RGBA"); cap = [(0, 8, "Zellen, Rahmen, Kühlplatte"), (8, 17, "CMU, Schaltbox, Verbindungen"), (17, 22, "Deckel schließt"), (22, 30, "Deckel öffnet")]
     for a, b, c in cap:
-        if a <= t < b: tafel(d, c + "  [cad/pack/entwurf, e2d_e3c]", 40, 626, 26, a=clamp(min((t - a) / 0.5, 1)))
-    pk = [(12, 16.5, "sim/kuehlung/k3_gesamt/k3_vergleich.png", "Kühlung K3, K4  [REQ-P12]", (30, 90)), (19, 23.5, "sim/mechanik/x3_crash_g5/energie_LFP_a.png", "Crash Pfahl 5 kJ  [REQ-P14]", (700, 90))]
-    for a, b, p, cap, (x, y) in pk:
-        if a <= t < b:
-            w = clamp(min((t - a) / 0.5, (b - t) / 0.5)); pim = lade(p, 520, 300); bx = Image.new("RGB", (pim.width + 8, pim.height + 8), (250, 250, 250)); bx.paste(pim, (4, 4))
-            im.paste(Image.blend(im.crop((x, y, x + bx.width, y + bx.height)), bx, w), (x, y)); d = ImageDraw.Draw(im, "RGBA")
-            d.rectangle([x, y, x + bx.width, y + bx.height], outline=(255, 210, 60, 255), width=3); tafel(d, cap, x, y + bx.height + 8, 22, a=w)
-            d.text((x + 2, y + bx.height + 52), p, font=F(14), fill=(200, 200, 205, int(255 * w)))
-    if t >= 24:
-        d = ImageDraw.Draw(im, "RGBA"); m = zahl("Packmasse LFP masse_bekannt_kg"); tafel(d, f"Packmasse LFP {num(m)} kg", 780, 626, 26, a=clamp((t - 24) / 0.5))
+        if a <= t < b: tafel(d, c + "  [cad/pack/entwurf, e2d_e3c]", 40, 542, 26, a=clamp(min((t - a) / 0.5, 1)))
+    K = "sim/kuehlung/k3_gesamt/"; X = "sim/mechanik/x3_crash_g5/"
+    pip(im, t, 6, 11, K + "k3_durchstroemung_temperatur.mp4", "Kühlung K3: Strömung, Temperatur (4-fach)  [REQ-P12]", "flow")
+    pip(im, t, 11.5, 15.5, K + "k4_temperatur_LFP_DAUER_V0.png", "Kühlung K4: Temperatur Zellblock  [REQ-P12]", "png")
+    pip(im, t, 17, 22.1, X + "film_LFP_a2.mp4", "Crash Pfahl: Verformung LFP_a2  [REQ-P14]", "crash")
+    pip(im, t, 22.5, 26.5, X + "energie_LFP_a2.png", "Crash Pfahl: Energie LFP_a2  [REQ-P14]", "png")
+    if t >= 27:
+        d = ImageDraw.Draw(im, "RGBA"); m = zahl("Packmasse LFP masse_bekannt_kg"); tafel(d, f"Packmasse LFP {num(m)} kg", 780, 548, 26, a=clamp((t - 27) / 0.5))
     return im
 
 def inset(im, p, t, a, b, cap):
     """Schaltplan als Bild-in-Bild unten rechts zwischen a und b s."""
     if not (a <= t < b): return
-    w = clamp(min((t - a) / 0.5, (b - t) / 0.5)); x, y = 700, 90; pim = lade(p, 540, 330); bx = Image.new("RGB", (pim.width + 8, pim.height + 8), (250, 250, 250)); bx.paste(pim, (4, 4))
+    w = 1.0; x, y = 700, 90; pim = lade(p, 540, 330); bx = Image.new("RGB", (pim.width + 8, pim.height + 8), (250, 250, 250)); bx.paste(pim, (4, 4))
     im.paste(Image.blend(im.crop((x, y, x + bx.width, y + bx.height)), bx, w), (x, y)); d = ImageDraw.Draw(im, "RGBA"); d.rectangle([x, y, x + bx.width, y + bx.height], outline=(255, 210, 60, 255), width=3)
     tafel(d, cap, x, y + bx.height + 8, 22, a=w); d.text((x + 2, y + bx.height + 52), p, font=F(14), fill=(200, 200, 205, int(255 * w)))
 
@@ -184,7 +195,7 @@ def s5(im, t, gi):
                (10, 15, "CMU: Explosion nach Lagen, Vias als Stäbe"), (15, 20, "Weiter zur Schaltbox, Umgebung durchsichtig"),
                (20, 22, f"BMS-Platine in der Schaltbox: {zahl('BMS teile')} Teile, DRC {zahl('BMS drc_verstoesse')}, rote HV/NV-Sperrzone"), (22, 30, "BMS: Explosion nach Lagen")]
         for a_, b_, c in cap:
-            if a_ <= ts < b_: tafel(d, c, 40, 626, 26, a=clamp(min((ts - a_) / 0.5, 1)))
+            if a_ <= ts < b_: tafel(d, c, 40, 548, 26, a=clamp(min((ts - a_) / 0.5, 1)))
         inset(im, "sim/elektrik/e3_platine/schaltplan_LFP_kanal.png", ts, 10.5, 14.5, "Schaltplanblatt Kanal"); inset(im, "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-1.png", ts, 22.5, 29, "Schaltplanblatt BMS"); return im
     elif ts < 45:
         ts -= 30; kopf(im, "Rechnungen zur Elektronik")
@@ -209,19 +220,19 @@ def s5(im, t, gi):
         for i, (a, b2) in enumerate(WIN):
             if ts >= a + 0.8: kette(im, gi, ts, i, a + 0.8, (b2 - a - 1.2) * 0.8, tr)
         if ts < 11.5: return im
-        ts -= 11.5; d = ImageDraw.Draw(im, "RGBA"); d.rounded_rectangle([700, 64, W - 14, 664], 12, fill=(10, 14, 22, 225), outline=(200, 200, 210, 160))
+        ts -= 11.5; d = ImageDraw.Draw(im, "RGBA"); d.rounded_rectangle([700, 64, W - 14, 590], 12, fill=(10, 14, 22, 225), outline=(200, 200, 210, 160))
         d.text((716, 70), "Sicherheitsziele (HARA)", font=F(24, True), fill=(255, 255, 255, 255))
         for k, s in enumerate(D["sicherheitsziele"]):
             w = clamp((ts - 0.2 - k * 0.2) / 0.3)
             if w <= 0: continue
-            y = 98 + k * 66; al = int(255 * w); c = {"D": (255, 90, 90), "C": (255, 170, 60), "B": (240, 220, 90)}[s["asil"]]
+            y = 98 + k * 60; al = int(255 * w); c = {"D": (255, 90, 90), "C": (255, 170, 60), "B": (240, 220, 90)}[s["asil"]]
             d.text((716, y), f"{s['sg']}  ASIL {s['asil']}", font=F(22, True), fill=c + (al,))
             for j, ln in enumerate(textwrap.wrap(s["kurztext"], 46)[:2]): d.text((716, y + 25 + j * 21), ln, font=F(19), fill=(235, 235, 240, al))
-        d.text((716, 646), "docs/24_gefahrenanalyse_hara.md", font=F(14), fill=(200, 200, 205, 255))
+        d.text((716, 570), "docs/24_gefahrenanalyse_hara.md", font=F(14), fill=(200, 200, 205, 255))
         return im
     for a, b, p, cap in bl:
         if a <= ts < b:
-            panel(im, p, (60, 80, 1160, 520), quelle=p, a=clamp(min((ts - a) / 0.5, 1))); d = ImageDraw.Draw(im, "RGBA"); tafel(d, cap, 60, 626, 24)
+            panel(im, p, (60, 80, 1160, 450), quelle=p, a=clamp(min((ts - a) / 0.5, 1))); d = ImageDraw.Draw(im, "RGBA"); tafel(d, cap, 60, 548, 24)
     return im
 
 def s6(im, t, gimg):
@@ -235,10 +246,37 @@ def s6(im, t, gimg):
         kopf(im, "Batterie fertig: BT-000 LFP")
         z = [f"Packmasse LFP {num(zahl('Packmasse LFP masse_bekannt_kg'))} kg", f"CMU {zahl('CMU LFP teile')} Teile, BMS {zahl('BMS teile')} Teile",
              f"DRC {zahl('CMU LFP drc_verstoesse')} (CMU und BMS)", f"FMEDA SG-01: SPFM {SPFM}"]
-        for k, s in enumerate(z): tafel(d, s, 60 + (k % 2) * 560, 528 + (k // 2) * 58, 26, a=w * clamp((t - 0.5 - k * 0.6) / 0.6) if False else clamp((t - 0.5 - k * 0.6) / 0.6) * clamp(a * 2))
-    if t >= 18:
-        d = ImageDraw.Draw(im, "RGBA"); w = clamp((t - 18.5) / 1.0); tafel(d, "Wissensgraph: Anforderungen, Entscheidungen, Bauteile, Nachweise", 190, 604, 26, a=w)
-        tafel(d, "KI-generiert (Claude, Kolibri 1). Entwurf. Autor: Konstrukteur", 250, 548, 22, a=w)
+        for k, s in enumerate(z): tafel(d, s, 60 + (k % 2) * 560, 440 + (k // 2) * 58, 26, a=w * clamp((t - 0.5 - k * 0.6) / 0.6) if False else clamp((t - 0.5 - k * 0.6) / 0.6) * clamp(a * 2))
+    if 18 <= t < 25:
+        d = ImageDraw.Draw(im, "RGBA"); w = clamp((t - 18.5) / 1.0); tafel(d, "Wissensgraph: Anforderungen, Entscheidungen, Bauteile, Nachweise", 190, 532, 26, a=w)
+        tafel(d, "KI-generiert (Claude, Kolibri 1). Entwurf. Autor: Konstrukteur", 250, 476, 22, a=w)
+    return im
+
+MARKEN = [("Autor", (210, 210, 220)), ("Opus", (255, 150, 60)), ("Sonnet", (90, 170, 255)), ("Haiku", (120, 220, 140)), ("PI/qwen", (190, 130, 255)), ("Kolibri", (255, 110, 170))]
+def band(im, t):
+    """Agentenband unten links: Marken aus video/elektronik/agenten.json (aus docs/08); aktiv = leuchtet, sonst grau."""
+    seg = [x for x in AG["abschnitte"] if x["von"] <= t < x["bis"]]
+    if not seg: return
+    seg = seg[0]; d = ImageDraw.Draw(im, "RGBA"); d.rectangle([6, 596, 668, 700], fill=(8, 10, 16, 215), outline=(120, 120, 135, 160))
+    d.text((14, 599), "Wer hat das gemacht (docs/08, Zeilen " + ", ".join(str(n) for n in seg["zeilen"][:6]) + ")", font=F(15), fill=(190, 190, 200, 255))
+    for j, ln in enumerate(textwrap.wrap(seg["kurz"], 62)[:2]): d.text((14, 617 + j * 21), ln, font=F(18), fill=(240, 240, 245, 255))
+    x = 14
+    for nm, col in MARKEN:
+        on = nm in seg["agenten"]; w = int(d.textlength(nm, font=F(16, True))) + 16
+        d.rounded_rectangle([x, 664, x + w, 692], 8, fill=(col + (255,)) if on else (30, 32, 40, 255), outline=col + (255 if on else 90,), width=2)
+        d.text((x + 8, 668), nm, font=F(16, True), fill=(10, 10, 14, 255) if on else (120, 120, 130, 255)); x += w + 6
+
+def s7(im, t):
+    """Schlusstafel (6 s): Verteilungen je Agent laut docs/08."""
+    w = clamp(t / 0.8); d = ImageDraw.Draw(im, "RGBA"); d.rounded_rectangle([200, 70, W - 200, 520], 14, fill=(10, 14, 22, int(235 * w)), outline=(200, 200, 210, int(200 * w)))
+    d.text((230, 84), "Verteilungen je Agent (docs/08_ki_einsatz_protokoll.md)", font=F(26, True), fill=(255, 255, 255, int(255 * w)))
+    Z = AG["zaehlung"]; mx = max(Z.values())
+    for k, (nm, col) in enumerate(MARKEN[1:]):
+        y = 140 + k * 56; n = Z[nm]; bw = int(520 * n / mx * clamp((t - 0.3 - k * 0.2) / 0.8))
+        d.rounded_rectangle([230, y, 230 + 150, y + 38], 8, fill=col + (255,)); d.text((242, y + 6), nm, font=F(24, True), fill=(10, 10, 14, 255))
+        d.rectangle([400, y + 4, 400 + max(bw, 2), y + 34], fill=col + (230,)); d.text((410 + bw, y + 4), str(n), font=F(26, True), fill=(255, 255, 255, int(255 * w)))
+    d.text((230, 424), f"Zeilen im Protokoll: {AG['zeilen_gesamt']} (eine Zeile zählt für jeden genannten Agenten)", font=F(20), fill=(200, 200, 205, int(255 * w)))
+    tafel(d, "Freigaben: nur der Autor", 360, 458, 30, a=w, b=True)
     return im
 
 def einbild(f):
@@ -253,6 +291,8 @@ def einbild(f):
     elif t < 80: im = s4(im, t - 50)
     elif t < 140: im = s5(im, t, gi)
     else: im = s6(im, t - 140, None)
+    if t < 165: band(im, t)
+    else: im = s7(im, t - 165)
     d = ImageDraw.Draw(im, "RGBA"); n = "Thomas Schmiegelt"; fw = d.textlength(n, font=F(30))
     d.text(((W - fw) / 2, H - 52), n, font=F(30), fill=(255, 255, 255, 255), stroke_width=2, stroke_fill=(0, 0, 0, 180))
     d.text((W - 150, H - 24), "KI-generiert", font=F(16), fill=(230, 200, 120, 255))

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""KI-generiert (Claude Sonnet, 2026-11-24), Entwurf. SV1: Beschriftung (PIL) der Rohbilder aus render_sv1.py -> sim/mechanik/sv1_stecker_verschraubung/sv1_<V>_<ansicht>.png.
+"""KI-generiert (Claude Sonnet, 2026-11-25), Entwurf. SV1: Beschriftung (PIL) der Rohbilder aus render_sv1.py -> sim/mechanik/sv1_stecker_verschraubung/sv1_<V>_<ansicht>.png.
 Zahlen nur aus cad/pack/entwurf/ergebnis_<V>_e2d_e3c_sv1.json. Aufruf: python3 label_sv1.py [LFP,NMC]"""
 import json, sys, os
 from PIL import Image, ImageDraw, ImageFont
@@ -23,5 +23,5 @@ for v in (sys.argv[1] if len(sys.argv) > 1 else "LFP,NMC").split(","):
         y += 14
         for t in LESE: d.text((W + 14, y), t, font=font(14), fill=(20, 20, 20)); y += 22
         y += 12; d.text((W + 14, y), "Zielband: 0 Verletzungen (Erwartung 1-3, Annahme", font=font(13, True), fill=(20, 20, 20)); d.text((W + 14, y + 20), "ERW-SV1, nicht freigegeben)", font=font(13, True), fill=(20, 20, 20))
-        d.text((16, H + kopf + 12), f"KI-generiert (Claude Sonnet, 2026-11-24), Entwurf, nicht freigegeben. Quelle: cad/pack/entwurf/ergebnis_{v}_e2d_e3c_sv1.json; Maße sind Annahmen ERW-SV1. Lesehilfe oben rechts.", font=font(13), fill=(90, 90, 90))
+        d.text((16, H + kopf + 12), f"KI-generiert (Claude Sonnet, 2026-11-25), Entwurf, nicht freigegeben. Quelle: cad/pack/entwurf/ergebnis_{v}_e2d_e3c_sv1.json; Maße sind Annahmen ERW-SV1. Lesehilfe oben rechts.", font=font(13), fill=(90, 90, 90))
         c.save(f"{ZIEL}/sv1_{v}_{a}.png")
