@@ -1,0 +1,12 @@
+KI-generiert (Claude Sonnet 5.5, 2026-11-25). Prüfung Kolibri-Storyboard (video/elektronik/kol3.md, Lauf 109 s, 2579 Zeichen) gegen video/elektronik/daten.json.
+Lauf 1 (Textmodus, ohne --mode json) lieferte 0 Zeichen nach 126 s (Monitoring-Zeile mit abbruch 0 ist irrtümlich, Ergebnis leer). Lauf 2 mit Szenenfolge alt abgebrochen, nach Nachtrag 1 neu gestartet. Lauf 3 = kol3.md. Keine Korrekturrunde nötig.
+Gestrichen/korrigiert:
+- "Teile Gesamt 244": Summe nicht in daten.json (nur 110 und 134 einzeln) -> gestrichen, beide Einzelwerte gezeigt.
+- "SPFM 99,00 %": ist der Zielwert (ziel.SG-01), nicht das Ergebnis -> ersetzt durch Rohwert CMU LFP SG-01 SPFM 99,93 %, LFM 96,72 % (sim/elektrik/e3d_fmeda/ergebnis.json), Ziel 99 % und 90 % daneben.
+- "Schock Sperrzone Rot": "Schock" erfunden -> "Rote HV/NV-Sperrzone" (Auftrag).
+- Szene 1 Bild FMEDA-PNG passte nicht zu Anforderungen -> Tafel aus daten.json.
+- Szene 5d Bild FMEDA statt Graph -> Graph mit hervorgehobenen Ketten.
+- Teil 5c: Kolibri liess E3b und HARA SG-01…08 aus -> aus daten.json ergänzt (e3b_temperatur.png, sicherheitsziele).
+- Hinweis: REQ-P12 (Kühlmittel) bei Kühlung als Bezug schwach, aber Anforderung existiert.
+Zahlen bestätigt: 1500 kg, 720–880 V, 60 kW, 20/30 min, 5 K, 619,85 kg, 912 V, 37,11 V, 134 Teile, DRC 0, ASIL D.
+Alle 6 Szenen vorhanden -> freigegeben nach Auftrag Schritt 2.

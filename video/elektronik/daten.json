@@ -1033,6 +1033,50 @@
   {
    "pfad": "sim/elektrik/e3d_fmeda/e3d_fmeda.png",
    "quelle": "sim/elektrik/e3d_fmeda/e3d_fmeda.png"
+  },
+  {
+   "pfad": "sim/chemie/c1_zellmodell/ladekurve.png",
+   "quelle": "sim/chemie/c1_zellmodell/ladekurve.png"
+  },
+  {
+   "pfad": "sim/chemie/c1_zellmodell/dcir.png",
+   "quelle": "sim/chemie/c1_zellmodell/dcir.png"
+  },
+  {
+   "pfad": "sim/chemie/c1_zellmodell/waerme_LFP.png",
+   "quelle": "sim/chemie/c1_zellmodell/waerme_LFP.png"
+  },
+  {
+   "pfad": "sim/kuehlung/k3_gesamt/k3_vergleich.png",
+   "quelle": "sim/kuehlung/k3_gesamt/k3_vergleich.png"
+  },
+  {
+   "pfad": "sim/kuehlung/k3_gesamt/k4_temperatur_LFP_DAUER_V0.png",
+   "quelle": "sim/kuehlung/k3_gesamt/k4_temperatur_LFP_DAUER_V0.png"
+  },
+  {
+   "pfad": "sim/mechanik/x3_crash_g5/energie_LFP_a.png",
+   "quelle": "sim/mechanik/x3_crash_g5/energie_LFP_a.png"
+  },
+  {
+   "pfad": "sim/elektrik/e3b_platine_waerme/e3b_temperatur.png",
+   "quelle": "sim/elektrik/e3b_platine_waerme/e3b_temperatur.png"
+  },
+  {
+   "pfad": "cad/pack/entwurf/pack_LFP_gesamt.png",
+   "quelle": "cad/pack/entwurf/pack_LFP_gesamt.png"
+  },
+  {
+   "pfad": "cad/pack/entwurf/pack_LFP_explosion.png",
+   "quelle": "cad/pack/entwurf/pack_LFP_explosion.png"
+  },
+  {
+   "pfad": "cad/pack/entwurf/pack_LFP_schnitt.png",
+   "quelle": "cad/pack/entwurf/pack_LFP_schnitt.png"
+  },
+  {
+   "pfad": "cad/zelle/entwurf/render/zelle_LFP_render.png",
+   "quelle": "cad/zelle/entwurf/render/zelle_LFP_render.png"
   }
  ]
 }

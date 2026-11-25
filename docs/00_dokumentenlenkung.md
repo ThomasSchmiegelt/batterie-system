@@ -41,6 +41,7 @@ Dokumentkopf (Nummer, Version, Status, Ersteller, Prüfer), Hinweis „KI-generi
 | BAT-DOC-13 | 13_stueckliste.md | Grobe Stückliste (Baugruppen, Hauptkomponenten), erzeugt von pm/bauteile/stueckliste.py aus Startsatz und Annahmen |
 | BAT-DOC-13 | ../video/STORYBOARD.md | Abschlussvideo |
 | BAT-DOC-13b | ../video/begleittext_wissen.md | Zweites Abschlussvideo „Batterie und Wissensgraph“ (Begleittext; Video abschluss_wissen.mp4, Auftrag video/AUFTRAG_VIDEO_WISSEN.md), freigegeben (Autor 2026-11-23: „das video ist gut“); Zeitraffer 20 s für LinkedIn: video/abschluss_wissen_linkedin.mp4 |
+| BAT-DOC-13c | ../video/begleittext_elektronik.md | Drittes Video „Batterie, Nachverfolgung, Normen, Elektronik“ (REQ-D13; Video elektronik_nachverfolgung.mp4, Auftrag video/AUFTRAG_VIDEO_ELEKTRONIK.md), Entwurf, KI-generiert, Prüfung Opus offen |
 | BAT-DOC-14 | ../praesentation/STORYBOARD.md | Unternehmenspräsentation: Folienplan, Bausteine je Vorgang |
 | BAT-DOC-15 | 15_foerdermoeglichkeiten.md | Recherche staatliche Förderung (KI/Open Source, Batterie, Wasserstoff), privat und KMU, Voraussetzungen |
 | BAT-DOC-16 | 16_ergebnisbilder.md | Ergebnisbilder mit Lesehilfe, erzeugt von pm/plan/bilder.py |

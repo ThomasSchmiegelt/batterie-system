@@ -35,3 +35,17 @@ KI-generiert (Claude Opus, 2026-11-25). Vorgabe des Autors (wörtlich): „in de
 
 ## Prüfung
 8 Standbilder ins Scratchpad und ansehen: je Szene 1, dazu das letzte Bild. Prüfen: Lesbarkeit der Tafeln (Schrift ≥ 22 px), nichts abgeschnitten, Zahlen = daten.json.
+
+## Nachtrag 1: neue Dramaturgie (Autor 2026-11-25, ersetzt die Reihenfolge der Szenen 1–6)
+Wörtlich: „vielleicht beginnt das video mit den requirements, dann wächst langsam der wissensgraph, dann erscheint das blade, das gesamte paket, dann entstehen die steuergeräte … und am ende ist die batterie fertig und verschwindet wieder und nur der wissensgraph bleibt. es wäre schön berechnungen zu sehen.“
+1. **Anforderungen** erscheinen als Tafel (REQ-Liste, Normen dazu).
+2. **Wissensgraph wächst** im Hintergrund (vorhandenes `video/graph_zeitraffer.py` wiederverwenden). Er wächst während des ganzen Films weiter.
+3. **Zelle** (LFP prismatisch, „Blade“) erscheint vor dem Graphen. Kurz eingeblendet die Zellrechnung (Bilder aus sim/chemie).
+4. **Gesamtes Pack** baut sich auf. Eingeblendet: Kühlung (sim/kuehlung, z. B. K3/K4) und Crash (sim/mechanik X3), je 3–4 s als Bild-in-Bild.
+5. **Steuergeräte entstehen:**
+   - CMU-Platinen in den Endzonen und die BMS-Platine in der Schaltbox
+   - Explosion nach Lagen, Schaltplan
+   - Rechnungen: SPICE (Vorladung, Schütz), Elmer-Wärme E3b, FMEDA
+   - Nachverfolgungsketten REQ → ENT → BT → Nachweis als Hervorhebung im Graphen
+6. **Batterie fertig**, kurzer Halt mit Zahlen. Dann wird sie durchsichtig und verschwindet (wie `abschluss_wissen`), **nur der Graph bleibt** stehen. Unten „Thomas Schmiegelt“.
+Rechnungsbilder nur vorhandene PNG mit Zielband. Jedes Bild ≥ 3 s, Quelle klein in der Ecke. Länge darf auf ≈ 150–180 s wachsen. Renderzeit über 1,5 h → Opus.
