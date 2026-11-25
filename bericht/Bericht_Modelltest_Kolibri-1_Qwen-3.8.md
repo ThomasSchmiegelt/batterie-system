@@ -1,113 +1,178 @@
-# Bericht: Praxistest der Sprachmodelle Kolibri 1 und Qwen 3.8 27B in einem technischen Entwicklungsablauf
+---
+title: "Praxistest der Sprachmodelle Kolibri 1 und Qwen 3.8 27B in einem technischen Entwicklungsablauf"
+subtitle: "Testbericht, Version 2.1 vom 25.11.2026"
+lang: de
+---
 
 | Version | Datum | Status | Ersteller |
 |---|---|---|---|
-| 2.0 | 2026-11-25 | Entwurf | KI-generiert (Claude Opus), Messwerte aus automatischen Protokollen |
+| 2.1 | 25.11.2026 | Entwurf | KI-generiert (Claude Opus, Anthropic). Alle Messwerte stammen aus automatischen Protokollen |
 
-Änderung gegenüber 1.0: Qwen 3.8 27B als zweites gehostetes Modell aufgenommen, dazu ein zweiter Fachtext-Lauf von Kolibri 1 mit Stilvorgabe.
+# Kurzfassung
 
-## 1 Ziel
-Der Test sollte zeigen, wie sich zwei gehostete Sprachmodelle in einem bestehenden, mehrstufigen KI-Arbeitsablauf eines technischen Entwicklungsprojekts bewähren:
-- **Kolibri 1** (Aleph Alpha, Mixture-of-Experts, 78 Mrd. Parameter gesamt, 3,5 Mrd. aktiv, Deutsch und Englisch, Reasoning)
-- **Qwen 3.8 27B** (dichtes Modell, 27 Mrd. Parameter, Reasoning)
+Zwei KI-Sprachmodelle wurden einen Arbeitstag lang in einem echten Entwicklungsablauf eingesetzt: **Kolibri 1** des deutschen Herstellers Aleph Alpha und **Qwen 3.8 27B** des chinesischen Herstellers Alibaba. Beide liefen auf den Servern eines Anbieters, nicht auf eigener Hardware. Sie bekamen Aufgaben aus einem Testprojekt, in dem ein Batteriesystem für ein Elektroauto rechnerisch ausgelegt wird. Jede Antwort wurde automatisch geprüft.
 
-Gemessen wurden Geschwindigkeit, Zuverlässigkeit der Antworten, Treue zu Quellen und Zahlen, Formattreue und die Qualität von Texten und Entscheidungen. Der Ablauf war ein Testprojekt zur Auslegung eines Batteriesystems.
+**Wichtigste Ergebnisse:**
 
-## 2 Testaufbau
+- **Kolibri 1 ist schnell und sehr quellentreu.** Werte aus Unterlagen übernahm es fast fehlerfrei, eine Rechercheaufgabe dauerte unter einer Minute. Es fand aber nur wenige Werte, hielt vorgegebene Ausgabeformate kaum ein und machte Fehler, sobald es selbst etwas ableiten sollte.
+- **Qwen 3.8 ist gründlich, aber langsam.** In der Recherche fand es fast dreimal so viele belegte Werte wie Kolibri, bei ebenso wenigen Fehlern und mit korrektem Format. Es brauchte dafür aber 5 bis 7 Minuten je Aufgabe. Qwen 3.8 wurde nur in dieser einen Aufgabe geprüft.
+- **Texte schreiben (nur Kolibri geprüft):** Ohne genaue Stilvorgabe entstand unbrauchbarer Text. Mit Stilvorgabe und einem Musterabsatz wurde er gut lesbar. Er enthielt aber eine frei erfundene Angabe über eine Person und muss deshalb von einem Menschen gegengelesen werden.
+- **Überwachung einer laufenden Rechnung (nur Kolibri geprüft):** Die Antworten waren formal immer korrekt. Die Entscheidungen waren aber ungeduldig: Kolibri startete die Rechnung zu früh neu, statt die Entwicklung abzuwarten.
+
+**Empfehlung:** Kolibri 1 für schnelles Herausziehen von Werten aus Unterlagen, Qwen 3.8 für gründliche Recherche. Beide nur mit automatischer Prüfung dahinter. Texte über Personen nie ungeprüft übernehmen.
+
+# 1 Begriffe
+
+| Begriff | Bedeutung in diesem Bericht |
+|----|----------------|
+| Sprachmodell | KI-Programm, das auf eine Texteingabe (Auftrag) einen Text als Antwort erzeugt |
+| gehostet | Das Modell läuft auf den Servern eines Anbieters. Man schickt den Auftrag über das Internet und erhält die Antwort zurück |
+| API | die technische Schnittstelle, über die ein Programm dem Anbieter Aufträge schickt |
+| Parameter | Kennzahl für die Größe eines Modells (Milliarden gelernter Zahlenwerte). Mehr Parameter bedeuten meist mehr Wissen, aber auch mehr Rechenaufwand |
+| Mixture-of-Experts | Bauart, bei der für jede Antwort nur ein Teil des Modells rechnet. Kolibri 1 hat 78 Mrd. Parameter, davon rechnen je Antwort nur 3,5 Mrd. Das macht es schnell |
+| Reasoning | Das Modell „denkt“ vor der Antwort in einem verborgenen Zwischentext nach. Das kostet Zeit, verbessert aber oft das Ergebnis |
+| Token | Rechen- und Abrechnungseinheit eines Sprachmodells, etwa ein Wortteil. Rund 1 000 Token entsprechen etwa 700 deutschen Wörtern |
+| FP8, 4-Bit | Rechengenauigkeit, mit der ein Modell betrieben wird. Geringere Genauigkeit spart Speicher und Zeit und kann die Qualität leicht senken |
+| Zitatprüfung | Ein Programm sucht jedes Zitat, das das Modell angibt, Zeichen für Zeichen im Originaltext der Quelle. Fehlt es dort, gilt es als falsch |
+| Zahlenprüfung | Ein Programm prüft, ob jede Zahl im erzeugten Text in der Quelle steht, auf die der Text verweist |
+| JSON | festes, maschinenlesbares Textformat für Daten, hier für die Antworten in Test D |
+| leere Antwort | Der Aufruf endete ohne Fehlermeldung, aber das Modell lieferte keinen Text |
+
+# 2 Ziel
+
+Der Test sollte klären, ob sich die beiden Modelle für Aufgaben in einem technischen Entwicklungsablauf eignen und wofür jeweils. Gemessen wurden:
+
+- **Geschwindigkeit:** Wie lange dauert eine Antwort?
+- **Verfügbarkeit:** Kommt überhaupt eine Antwort?
+- **Quellentreue:** Stimmen Zitate und Zahlen mit den Unterlagen überein?
+- **Formattreue:** Hält das Modell eine vorgegebene Ausgabeform ein?
+- **Qualität:** Sind Texte lesbar und Entscheidungen sinnvoll?
+
+| | Kolibri 1 | Qwen 3.8 27B |
+|---|---|---|
+| Hersteller | Aleph Alpha (Deutschland) | Alibaba (China) |
+| Bauart | Mixture-of-Experts, 78 Mrd. Parameter, davon 3,5 Mrd. je Antwort aktiv | alle 27 Mrd. Parameter rechnen bei jeder Antwort |
+| Sprachen laut Hersteller | Deutsch, Englisch | viele, darunter Deutsch |
+| Reasoning | ja | ja |
+
+# 3 Testaufbau
+
+Ein Entwicklungsprojekt arbeitet hier mit mehreren KI-Modellen, die sich die Aufgaben teilen. Ein leitendes Modell (Claude Opus von Anthropic) schrieb die Aufträge für die beiden Testmodelle, schickte sie ab und prüfte jede Antwort mit Prüfprogrammen. Bewertet wurde immer anhand der tatsächlichen Antwort und der Originalquellen, nicht anhand einer Zusammenfassung.
+
 | Punkt | Ausführung |
-|---|---|
-| Zugang | beide Modelle über dieselbe OpenAI-kompatible API eines Drittanbieters. Der Server meldete für Kolibri die Variante `kolibri-1-fp8`. Die Quantisierung von Qwen 3.8 wurde nicht gemeldet |
-| Aufruf | Kommandozeilen-Agent „pi“, ohne Werkzeuge (reiner Text rein, Text raus), ein Aufruf je Teilaufgabe |
-| Steuerung und Prüfung | Ein anderes KI-Modell bereitete die Aufträge vor und prüfte jede Antwort mit Skripten. Die Bewertung erfolgte an den Rohdaten |
-| Referenz | ein lokal betriebenes Modell der Vorgängerreihe (Qwen 3.5 27B, 4-Bit) mit denselben Eingaben, nur in Test A |
-| Protokoll | je Aufruf: Dauer, Ausgabelänge, Prüfergebnis, Abbruch |
-| Zeitraum | ein Arbeitstag, 46 protokollierte Aufrufe (Kolibri 43, Qwen 3.8 3) |
+|----|----------------|
+| Zugang | Beide Modelle liefen gehostet beim selben Anbieter. Kolibri 1 lief dort in FP8, für Qwen 3.8 nannte der Anbieter die Rechengenauigkeit nicht |
+| Arbeitsweise | Jede Teilaufgabe wurde als einzelner Auftrag geschickt: Text hinein, Text heraus. Die Modelle durften keine Dateien lesen und keine Programme starten |
+| Vergleichsmodell | Qwen 3.5 27B, die Vorgängerversion von Qwen 3.8, auf eigener Hardware in 4-Bit. Es bekam in Test A dieselben Aufträge |
+| Protokoll | Für jeden Aufruf wurden Dauer, Länge der Antwort, Prüfergebnis und Abbrüche gespeichert |
+| Umfang | ein Arbeitstag, 46 Aufrufe: 43 mit Kolibri 1, 3 mit Qwen 3.8 |
 
-Kolibri 1 ließ sich nicht lokal betreiben: In FP8 braucht es rund 78 GB Grafikspeicher, vorhanden waren 24 GB.
+Kolibri 1 ließ sich nicht auf eigener Hardware betreiben. Es braucht rund 78 GB Grafikspeicher, vorhanden waren 24 GB.
 
-**Einrichtung.** Für beide Modelle beim selben Anbieter waren dieselben zwei Anpassungen nötig:
-- Der Server lehnt die Nachrichtenrolle `developer` ab (HTTP 422). Nötig ist deshalb die Kompatibilitätsoption „keine developer-Rolle“.
-- Der API-Schlüssel musste ausdrücklich übergeben werden.
+**Einrichtung.** Bei beiden Modellen waren zwei kleine technische Anpassungen nötig, damit das verwendete Steuerprogramm mit dem Anbieter zusammenarbeitet. Danach liefen beide ohne weitere Störung.
 
-## 3 Aufgaben
-| Test | Aufgabe | Prüfung | Kolibri 1 | Qwen 3.8 |
+# 4 Aufgaben
+
+**Test A, Recherche.** Das Modell bekam ein Paket mit Texten von Webseiten und aus technischen Regelwerken. Es sollte daraus technische Kennwerte heraussuchen und zu jedem Wert das wörtliche Zitat und die Quelladresse angeben. Drei Themen. Prüfung: Zitatprüfung.
+
+**Test B, Fachtext.** Das Modell bekam eine Tabelle mit nummerierten Fakten zum Projektverlauf. Daraus sollte es einen Abschnitt für ein Sachbuch schreiben, mit Verweis auf die Faktennummer bei jeder Zahl. Zwei Läufe mit je 7 Abschnitten: Lauf 1 mit einfachem Auftrag, Lauf 2 mit ausführlicher Stilvorgabe und einem Musterabsatz. Prüfung: Zahlenprüfung, dazu wurden Stil und Richtigkeit gelesen.
+
+**Test C, Storyboard.** Aus einer Datei mit Projektdaten sollte das Modell den Ablauf eines kurzen Erklärvideos entwerfen (6 Szenen mit Einblendtexten). Prüfung: Jede Zahl und jeder Name wurde mit der Datei verglichen.
+
+**Test D, Überwachung einer Rechnung.** Ein Programm verlegte automatisch die Leiterbahnen einer Elektronikplatine. Diese Rechnung dauert mehrere Minuten und gelingt nicht immer. Das Modell bekam alle 30 Sekunden einen kurzen Zwischenstand und sollte entscheiden: weiterlaufen lassen, mit anderen Einstellungen neu starten, als fertig erklären oder aufgeben. Die erlaubten Einstellungen waren in einer festen Liste vorgegeben, die Antwort musste im JSON-Format kommen. Prüfung: Format, Einhaltung der Liste, Wirkung der Eingriffe.
+
+| Test | Kolibri 1 | Qwen 3.8 |
+|---|---|---|
+| A Recherche | geprüft | geprüft |
+| B Fachtext | geprüft | nicht geprüft |
+| C Storyboard | geprüft | nicht geprüft |
+| D Überwachung | geprüft | nicht geprüft |
+
+Qwen 3.8 stand erst im Lauf des Tages zur Verfügung. Deshalb wurde es nur in Test A geprüft.
+
+# 5 Ergebnisse
+
+## 5.1 Geschwindigkeit und Verfügbarkeit
+
+| Test | Modell | Aufrufe | Dauer je Aufruf | leere Antworten |
 |---|---|---|---|---|
-| A Recherche | Aus einem vorbereiteten Quellenpaket (Webseiten, Regelwerkstexte) Kennwerte mit wörtlichem Zitat und Quell-URL herausziehen. 3 Themen | Skript prüft jedes Zitat wörtlich gegen den abgerufenen Quelltext | ja | ja |
-| B Fachtext | Aus einer Faktentabelle einen Sachbuchabschnitt schreiben, jede Zahl mit Verweis auf ihren Eintrag. Lauf 1 ohne, Lauf 2 mit Stilvorgabe, je 7 Abschnitte | Skript prüft jede Zahl gegen den genannten Eintrag, Stil und Zuschreibung gelesen | ja | nein |
-| C Storyboard | Aus einer Datendatei ein Storyboard für ein Erklärvideo mit 6 Szenen entwerfen | jede Zahl und jeder Name gegen die Datendatei | ja | nein |
-| D Rechenwächter | Eine laufende Rechnung (automatisches Leiterplatten-Routing) alle 30 s bewerten. Antwort nur als JSON: weiter, neu starten mit Parametern aus einer festen Erlaubtliste, fertig oder aufgeben | JSON-Gültigkeit, Erlaubtliste, Wirkung der Eingriffe | ja | nein |
+| A Recherche | Kolibri 1 | 3 | 35 bis 59 s | 0 |
+| A Recherche | Qwen 3.8 | 3 | 302 bis 395 s | 0 |
+| A Recherche | Vergleichsmodell | 3 | etwa 140 s | 0 |
+| B Fachtext, Lauf 1 | Kolibri 1 | 18 | 57 bis 126 s | **9** |
+| B Fachtext, Lauf 2 | Kolibri 1 | 7 | 37 bis 75 s | 0 |
+| C Storyboard | Kolibri 1 | 2 | 109 bis 126 s | 1 |
+| D Überwachung | Kolibri 1 | 13 | 8 bis 42 s | 0 |
 
-Qwen 3.8 wurde erst im Lauf des Tages verfügbar und nur in Test A geprüft.
+- **Kolibri 1** erzeugte rund 155 Token je Sekunde. Etwa 90 % davon entfielen auf das verborgene Nachdenken (Reasoning), nur etwa 10 % auf die sichtbare Antwort.
+- **Qwen 3.8** war in Test A 6- bis 8-mal langsamer als Kolibri 1 und auch langsamer als das Vergleichsmodell auf eigener Hardware.
+- **Leere Antworten** gab es nur bei Kolibri 1, und nur bei langen Aufträgen, die nach 105 bis 126 Sekunden abbrachen. Vermutlich begrenzt der Anbieter die Laufzeit, das wurde aber nicht geprüft. In Lauf 2 von Test B waren die Aufträge kürzer, alle Antworten kamen nach höchstens 75 Sekunden, keine war leer. Qwen 3.8 lief beim selben Anbieter bis zu 395 Sekunden ohne Abbruch. Eine einheitliche Zeitgrenze für alle Modelle ist deshalb unwahrscheinlich.
 
-## 4 Messwerte
+## 5.2 Quellentreue
 
-### 4.1 Geschwindigkeit und Verfügbarkeit
-| Test | Modell | Aufrufe | Dauer je Aufruf (min / Median / max) | leere Antworten |
-|---|---|---|---|---|
-| A Recherche | Kolibri 1 | 3 | 35 / 55 / 59 s | 0 |
-| A Recherche | Qwen 3.8 | 3 | 302 / 361 / 395 s | 0 |
-| A Recherche | Referenz lokal | 3 | ≈ 140 s | 0 |
-| B Fachtext, Lauf 1 | Kolibri 1 | 18 | 57 / 105 / 126 s | **9** |
-| B Fachtext, Lauf 2 | Kolibri 1 | 7 | 37 / – / 75 s | 0 |
-| C Storyboard | Kolibri 1 | 2 | 109 / – / 126 s | 1 |
-| D Wächter | Kolibri 1 | 13 | 8 / 13 / 42 s | 0 |
-
-- **Kolibri 1** gab rund **155 Token/s** aus (gemessen in Test A), davon etwa **90 % Reasoning-Token**, die nicht im Ergebnis erscheinen. Test D: 1 739–6 157 Token je Entscheidung.
-- **Qwen 3.8** war in Test A **6- bis 8-mal langsamer** als Kolibri und auch langsamer als die lokale Referenz. Token je Sekunde wurden nicht erfasst.
-- **Leere Antworten** traten nur bei Kolibri auf, nur bei großen Eingaben und nur nach 105–126 s Laufzeit. Das deutet auf eine Zeitgrenze beim Anbieter hin (nicht geprüft). In Lauf 2 von Test B waren die Teilaufträge kleiner, alle Antworten kamen nach höchstens 75 s, keine war leer. Qwen 3.8 lief bis 395 s ohne Abbruch. Eine feste Zeitgrenze für alle Modelle ist damit unwahrscheinlich.
-
-### 4.2 Treue zu Quellen und Zahlen
-| Test | Kolibri 1 | Qwen 3.8 | Referenz lokal |
+| Test | Kolibri 1 | Qwen 3.8 | Vergleichsmodell |
 |---|---|---|---|
-| A Zitate (3 Themen) | 13 Zitate, **0 falsch** | **38 Zitate, 1 falsch** | 29 Zitate, 1 falsch |
-| B Zahlen, Lauf 1 | 99 von 101 belegt, nach einer Korrekturrunde 103 von 103 | – | – |
-| B Zahlen, Lauf 2 | 60 von 60 im genannten Eintrag | – | – |
-| C Storyboard | 4 Werte gestrichen: ein Zielwert als Ergebnis ausgegeben, eine nicht vorhandene Summe gebildet | – | – |
+| A: Zitate über alle 3 Themen | 13 Zitate, **keines falsch** | **38 Zitate, 1 falsch** | 29 Zitate, 1 falsch |
+| B, Lauf 1: Zahlen mit Beleg | 99 von 101, nach einer Korrekturrunde 103 von 103 | – | – |
+| B, Lauf 2: Zahlen mit Beleg | 60 von 60 | – | – |
+| C: Storyboard | 4 Fehler: ein Zielwert als erreichtes Ergebnis ausgegeben, eine Summe gebildet, die es in den Daten nicht gab | – | – |
 
-In Test A fand Qwen 3.8 je Thema 10–17 belegte Werte, Kolibri 3–6.
+Je Thema fand Qwen 3.8 in Test A 10 bis 17 belegte Werte, Kolibri 1 nur 3 bis 6.
 
-### 4.3 Formattreue
-- **Test A, Kolibri 1:** Die Vorgabe „URL in runden Klammern hinter dem Zitat“ wurde in keinem Fall eingehalten. Ohne Nachbearbeitung erkannte das Prüfskript kein einziges Zitat. Nach einer automatischen Formatkorrektur waren alle Zitate wörtlich richtig.
-- **Test A, Qwen 3.8:** Das Format wurde eingehalten. Alle Zitate wurden ohne Nachbearbeitung erkannt.
-- **Test B, Lauf 2, Kolibri 1:** Die Vorgabe „Fundstellen gesammelt am Absatzende“ wurde eingehalten.
-- **Test D, Kolibri 1:** JSON-Antworten 13 von 13 gültig, Erlaubtliste 13 von 13 Mal eingehalten.
+## 5.3 Formattreue
 
-### 4.4 Qualität von Text und Entscheidungen (nur Kolibri 1)
-- **Test B, Lauf 1, ohne Stilvorgabe:** Der Text bestand überwiegend aus aneinandergereihten Kurzsätzen mit einem Verweis nach fast jedem Satz. Einzelne Sätze waren sinnentstellt verkürzt. Eine Handlung der Software wurde einer Person zugeschrieben. Als Fließtext war das Ergebnis nicht verwendbar.
-- **Test B, Lauf 2, mit Stilvorgabe:** Die Vorgabe umfasste zusammenhängende Absätze, Regeln zur Zuschreibung und einen Musterabsatz. Daraus entstand deutlich lesbarer, erzählender Fließtext, in dem auch die Fehler der Software sachlich benannt wurden. Es blieben drei Mängel:
-  1. **eine erfundene Angabe über eine Person**, die in keiner Eingabe stand
-  2. ein Wechsel der Erzählperspektive innerhalb des Textes
-  3. Zahlen, die als Wort ausgeschrieben sind („acht“) und deshalb der automatischen Zahlenprüfung entgehen
-  Das Ergebnis ist als Rohfassung zum Überarbeiten verwendbar, nicht als fertiger Text.
-- **Test D, Entscheidungen:** Von 13 Entscheidungen waren 7 Neustarts und 6 „weiter“. Die Begründungen waren nachvollziehbar formuliert. Zwei Neustarts kamen jedoch nach nur 1–2 Durchläufen, bevor sich ein Trend zeigen konnte. Eine vielversprechende Variante wurde zweimal zu früh abgebrochen, zwei weitere erlaubte Varianten wurden nie versucht. Innerhalb der Grenze von 6 Neustarts wurde das Ziel nicht erreicht. Eine spätere Auswertung zeigte, dass die überwachte Rechnung selbst falsch aufgesetzt war: Eine Regeldatei fehlte, das Ziel war so nicht erreichbar. Die Ungeduld der Entscheidungen bleibt als Befund bestehen. Dass das Ziel verfehlt wurde, lässt sich dem Modell aber nicht zurechnen.
+- **Kolibri 1, Test A:** Der Auftrag verlangte die Quelladresse in runden Klammern hinter dem Zitat. Kolibri hielt das in keinem Fall ein. Das Prüfprogramm erkannte deshalb zunächst kein einziges Zitat. Erst nachdem ein Programm das Format automatisch angepasst hatte, ließ sich prüfen: Alle Zitate waren wörtlich richtig.
+- **Qwen 3.8, Test A:** Das Format wurde eingehalten, alle Zitate waren ohne Anpassung prüfbar.
+- **Kolibri 1, Test B, Lauf 2:** Die Vorgabe „Belege gesammelt am Absatzende“ wurde eingehalten.
+- **Kolibri 1, Test D:** Alle 13 Antworten waren gültiges JSON, alle hielten die Liste der erlaubten Einstellungen ein.
 
-## 5 Beobachtungen
-1. **Sehr hohe Treue zur Vorlage bei Kolibri 1.** In allen Tests wurden Zitate und Zahlen nahezu fehlerfrei aus den Unterlagen übernommen. Erfundene Zitate traten nicht auf.
-2. **Stilvorgaben wirken stark.** Mit Musterabsatz und klaren Regeln wurde Kolibris Fließtext deutlich besser, und es gab keine leeren Antworten mehr. Angaben über Personen müssen trotzdem gegengelesen werden: Die automatische Zahlenprüfung findet sie nicht.
-3. **Schwäche beim Ableiten über die Vorlage hinaus (Kolibri 1).** Wo eine eigene Ableitung verlangt war, etwa eine Summe statt eines Einzelwerts oder die Trennung von Ziel und Ergebnis, entstanden Fehler.
-4. **Belegdichte und Format:** Qwen 3.8 zog fast dreimal so viele belegte Werte heraus wie Kolibri 1, bei gleich niedriger Fehlerquote und ohne Formatnachbearbeitung. Kolibri befolgt feste Ausgabeformate nur locker.
-5. **Geschwindigkeit:** Kolibri 1 antwortete in Test A in unter einer Minute, Qwen 3.8 brauchte 5–7 Minuten.
-6. **Ungeduldige Steuerentscheidungen (Kolibri 1).** Als Wächter reagierte das Modell auf kurzfristige Schwankungen, statt einen Trend abzuwarten.
+## 5.4 Qualität von Text und Entscheidungen (nur Kolibri 1)
 
-## 6 Grenzen des Tests
-- ein Arbeitstag, kleine Stichprobe (46 Aufrufe), eine Anwendung, ein Anbieter
-- **Qwen 3.8 nur in Test A (3 Aufrufe).** Für Fachtext, Storyboard und Wächter liegt kein Vergleich vor.
-- Aufrufe ohne Werkzeuge. Die Eignung als selbstständig arbeitender Agent mit Dateizugriff ist nicht geprüft.
-- Die Quantisierung von Qwen 3.8 beim Anbieter ist unbekannt, die lokale Referenz lief in 4 Bit. Die Geschwindigkeiten hängen auch von Last und Infrastruktur des Anbieters ab.
-- Die Prompts für Test A wurden für die Referenz entwickelt und nicht auf eines der beiden Modelle abgestimmt.
+**Test B, Lauf 1, einfacher Auftrag.** Der Text bestand überwiegend aus kurzen, aneinandergereihten Sätzen mit einem Verweis nach fast jedem Satz. Einzelne Sätze waren so verkürzt, dass der Sinn verloren ging. Eine Handlung, die die Software ausgeführt hatte, wurde einer Person zugeschrieben. Als lesbarer Text war das Ergebnis nicht verwendbar.
+
+**Test B, Lauf 2, mit Stilvorgabe.** Die Vorgabe verlangte zusammenhängende Absätze, legte fest, wer als handelnd genannt werden darf, und enthielt einen Musterabsatz. Das Ergebnis war deutlich besser: erzählender, gut lesbarer Text, der auch Fehler der Software sachlich benannte. Drei Mängel blieben:
+
+1. **Eine Angabe über eine Person war frei erfunden.** Sie stand in keiner Unterlage.
+2. Der Text wechselte zwischen „der Autor“ und „ich“.
+3. Einige Zahlen waren als Wort geschrieben, etwa „acht“. Die Zahlenprüfung erkennt nur Ziffern und übersah sie deshalb.
+
+Das Ergebnis taugt als Rohfassung, die ein Mensch überarbeitet, nicht als fertiger Text.
+
+**Test D, Überwachung.** Von 13 Entscheidungen waren 7 Neustarts und 6 „weiterlaufen“. Die Begründungen waren verständlich formuliert. Zwei Neustarts kamen aber schon nach ein bis zwei Rechendurchgängen, bevor erkennbar war, ob die Rechnung vorankommt. Eine Einstellung, die gut aussah, wurde zweimal zu früh abgebrochen, zwei andere erlaubte Einstellungen wurden nie versucht. Das Ziel wurde nicht erreicht.
+
+Eine spätere Auswertung zeigte allerdings, dass die überwachte Rechnung selbst falsch aufgesetzt war: Eine Datei mit Regeln fehlte, und das Ziel war damit gar nicht erreichbar. Dass das Ziel verfehlt wurde, liegt also nicht am Modell. Die ungeduldigen Entscheidungen bleiben trotzdem ein Befund.
+
+# 6 Beobachtungen
+
+1. **Kolibri 1 übernimmt Unterlagen sehr treu.** Erfundene Zitate kamen in keinem Test vor.
+2. **Eine genaue Stilvorgabe verbessert Texte stark.** Mit Musterabsatz und klaren Regeln wurde Kolibris Text gut lesbar. Angaben über Personen bleiben ein Risiko, weil keine automatische Prüfung sie erkennt.
+3. **Eigene Schlüsse sind Kolibris Schwäche.** Sollte das Modell über die Unterlagen hinausdenken, etwa eine Summe bilden oder Ziel und Ergebnis auseinanderhalten, entstanden Fehler.
+4. **Qwen 3.8 findet mehr.** Es lieferte fast dreimal so viele belegte Werte wie Kolibri 1, bei gleich niedriger Fehlerquote und im richtigen Format.
+5. **Kolibri 1 ist viel schneller.** Unter einer Minute gegenüber 5 bis 7 Minuten bei Qwen 3.8.
+6. **Als Aufpasser war Kolibri 1 zu ungeduldig.** Es reagierte auf kurze Schwankungen, statt eine Entwicklung abzuwarten.
+
+# 7 Grenzen des Tests
+
+- Der Test lief einen Tag, mit wenigen Aufrufen (46), in einem einzigen Projekt und bei einem einzigen Anbieter. Die Ergebnisse sind Hinweise, keine gesicherten Aussagen.
+- **Qwen 3.8 wurde nur in der Recherche geprüft (3 Aufrufe).** Zu Textqualität, Storyboard und Überwachung gibt es für Qwen 3.8 keine Aussage.
+- Die Modelle arbeiteten ohne Zugriff auf Dateien oder Programme. Wie gut sie als selbstständig handelnde Assistenten arbeiten, wurde nicht geprüft.
+- Die Geschwindigkeit hängt auch von Auslastung und Technik des Anbieters ab. Sie kann zu anderen Zeiten oder bei anderen Anbietern deutlich anders sein.
+- Die Aufträge für Test A waren für das Vergleichsmodell geschrieben und nicht auf eines der beiden Testmodelle abgestimmt.
 - Kosten wurden nicht erfasst.
 
-## 7 Fazit
-| Einsatz | Empfehlung |
-|---|---|
-| schnelle, quellentreue Extraktion, Faktengerüste | **Kolibri 1**, mit automatischer Format- und Zahlenprüfung danach |
-| gründliche Recherche mit vielen belegten Werten | **Qwen 3.8 27B**, wenn Wartezeiten von Minuten tragbar sind |
-| Fließtext | Kolibri 1 nur mit Stilvorgabe und Musterabsatz, als Rohfassung mit menschlicher Durchsicht, besonders bei Angaben über Personen |
-| Aufgaben mit eigener Ableitung, Steuerung laufender Rechnungen | im Test nicht ausreichend (Kolibri 1), Qwen 3.8 nicht geprüft |
+# 8 Fazit und Empfehlung
 
-Allgemein empfohlen:
-- kleine Teilaufträge
-- automatische Prüfung hinter jedem Aufruf
-- bei Wächteraufgaben eine feste Mindestlaufzeit vor jedem Neustart
+| Aufgabe | Empfehlung |
+|-------|----------|
+| schnell Werte aus vorhandenen Unterlagen herausziehen | **Kolibri 1**, mit automatischer Prüfung von Format und Zahlen danach |
+| gründlich recherchieren, möglichst viele belegte Werte | **Qwen 3.8 27B**, wenn einige Minuten Wartezeit je Aufgabe tragbar sind |
+| lesbare Texte schreiben | Kolibri 1 nur mit genauer Stilvorgabe und Musterabsatz. Das Ergebnis ist eine Rohfassung, die ein Mensch durchsieht, besonders bei Angaben über Personen |
+| eigene Schlüsse ziehen, laufende Rechnungen steuern | Kolibri 1 im Test nicht ausreichend, Qwen 3.8 nicht geprüft |
 
-Sinnvoll wäre ein Folgetest, der Qwen 3.8 in den Tests B bis D prüft, die Prompts auf beide Modelle abstimmt und den Werkzeuggebrauch untersucht.
+**Allgemein empfohlen:**
+
+- Aufträge in kleine Teile zerlegen. Das verhinderte bei Kolibri 1 die leeren Antworten.
+- Jede Antwort automatisch prüfen, bevor sie weiterverwendet wird.
+- Bei Überwachungsaufgaben eine feste Mindestwartezeit vorgeben, bevor ein Neustart erlaubt ist.
+
+Ein Folgetest sollte Qwen 3.8 auch in den Tests B bis D prüfen, die Aufträge auf beide Modelle abstimmen und die Arbeit mit Werkzeugen (Dateizugriff, Programme) einbeziehen.
