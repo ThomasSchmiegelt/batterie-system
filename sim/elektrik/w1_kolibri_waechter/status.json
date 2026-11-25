@@ -1,0 +1,658 @@
+{
+ "status": "abbruch",
+ "abbruch": "Neustartlimit erreicht ohne Erfolg",
+ "laeufe": 7,
+ "neustarts": 6,
+ "minuten": 17.3,
+ "parameter_final": {
+  "bohrungsvariante": "B4",
+  "max_passes": 200,
+  "optimierung": "an",
+  "reihenfolge": "standard",
+  "fanout": "nein"
+ },
+ "runs": [
+  {
+   "lauf": 1,
+   "parameter": {
+    "bohrungsvariante": "B4",
+    "max_passes": 20,
+    "optimierung": "an",
+    "reihenfolge": "standard",
+    "fanout": "nein"
+   },
+   "ergebnis": {
+    "ses": true,
+    "import_ok": true,
+    "drc_verletzungen": 6,
+    "offen": 0,
+    "typen": {
+     "clearance": 6
+    }
+   },
+   "passes": [
+    {
+     "nr": 1,
+     "sek": 39.95,
+     "score": 841.73,
+     "offen": 33,
+     "verletzungen": 0,
+     "t_abs": 1795597239.0
+    },
+    {
+     "nr": 2,
+     "sek": 6.75,
+     "score": 928.06,
+     "offen": 15,
+     "verletzungen": 0,
+     "t_abs": 1795597246.0
+    },
+    {
+     "nr": 3,
+     "sek": 11.86,
+     "score": 961.63,
+     "offen": 8,
+     "verletzungen": 0,
+     "t_abs": 1795597258.0
+    },
+    {
+     "nr": 4,
+     "sek": 15.79,
+     "score": 971.22,
+     "offen": 6,
+     "verletzungen": 0,
+     "t_abs": 1795597274.0
+    },
+    {
+     "nr": 5,
+     "sek": 1.47,
+     "score": 966.43,
+     "offen": 7,
+     "verletzungen": 0,
+     "t_abs": 1795597276.0
+    },
+    {
+     "nr": 6,
+     "sek": 1.85,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795597278.0
+    },
+    {
+     "nr": 7,
+     "sek": 0.32,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795597278.0
+    },
+    {
+     "nr": 8,
+     "sek": 0.32,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795597278.0
+    },
+    {
+     "nr": 9,
+     "sek": 0.32,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795597279.0
+    },
+    {
+     "nr": 10,
+     "sek": 0.32,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795597279.0
+    },
+    {
+     "nr": 11,
+     "sek": 0.32,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795597279.0
+    },
+    {
+     "nr": 12,
+     "sek": 0.31,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795597280.0
+    },
+    {
+     "nr": 13,
+     "sek": 0.31,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795597280.0
+    },
+    {
+     "nr": 14,
+     "sek": 0.31,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795597280.0
+    },
+    {
+     "nr": 15,
+     "sek": 0.31,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795597281.0
+    },
+    {
+     "nr": 16,
+     "sek": 0.31,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795597281.0
+    },
+    {
+     "nr": 17,
+     "sek": 0.31,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795597281.0
+    },
+    {
+     "nr": 18,
+     "sek": 0.31,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795597282.0
+    }
+   ],
+   "beendet": "neustart durch Kolibri"
+  },
+  {
+   "lauf": 2,
+   "parameter": {
+    "bohrungsvariante": "B4v",
+    "max_passes": 100,
+    "optimierung": "an",
+    "reihenfolge": "t_zuerst",
+    "fanout": "nein"
+   },
+   "ergebnis": null,
+   "passes": [
+    {
+     "nr": 1,
+     "sek": 55.06,
+     "score": 836.93,
+     "offen": 34,
+     "verletzungen": 0,
+     "t_abs": 1795597388.0
+    },
+    {
+     "nr": 2,
+     "sek": 24.25,
+     "score": 904.08,
+     "offen": 20,
+     "verletzungen": 0,
+     "t_abs": 1795597413.0
+    },
+    {
+     "nr": 3,
+     "sek": 27.35,
+     "score": 932.85,
+     "offen": 14,
+     "verletzungen": 0,
+     "t_abs": 1795597440.0
+    },
+    {
+     "nr": 4,
+     "sek": 18.18,
+     "score": 952.04,
+     "offen": 10,
+     "verletzungen": 0,
+     "t_abs": 1795597458.0
+    },
+    {
+     "nr": 5,
+     "sek": 19.56,
+     "score": 956.83,
+     "offen": 9,
+     "verletzungen": 0,
+     "t_abs": 1795597478.0
+    },
+    {
+     "nr": 6,
+     "sek": 18.54,
+     "score": 956.83,
+     "offen": 9,
+     "verletzungen": 0,
+     "t_abs": 1795597497.0
+    }
+   ],
+   "beendet": "neustart durch Kolibri"
+  },
+  {
+   "lauf": 3,
+   "parameter": {
+    "bohrungsvariante": "B4",
+    "max_passes": 100,
+    "optimierung": "an",
+    "reihenfolge": "standard",
+    "fanout": "nein"
+   },
+   "ergebnis": null,
+   "passes": [
+    {
+     "nr": 1,
+     "sek": 46.39,
+     "score": 841.73,
+     "offen": 33,
+     "verletzungen": 0,
+     "t_abs": 1795597569.0
+    }
+   ],
+   "beendet": "neustart durch Kolibri"
+  },
+  {
+   "lauf": 4,
+   "parameter": {
+    "bohrungsvariante": "B4",
+    "max_passes": 200,
+    "optimierung": "an",
+    "reihenfolge": "t_zuerst",
+    "fanout": "nein"
+   },
+   "ergebnis": {
+    "ses": true,
+    "import_ok": true,
+    "drc_verletzungen": 3,
+    "offen": 0,
+    "typen": {
+     "clearance": 3
+    }
+   },
+   "passes": [
+    {
+     "nr": 1,
+     "sek": 49.96,
+     "score": 841.73,
+     "offen": 33,
+     "verletzungen": 0,
+     "t_abs": 1795597685.0
+    },
+    {
+     "nr": 2,
+     "sek": 8.83,
+     "score": 928.06,
+     "offen": 15,
+     "verletzungen": 0,
+     "t_abs": 1795597694.0
+    },
+    {
+     "nr": 3,
+     "sek": 14.76,
+     "score": 961.63,
+     "offen": 8,
+     "verletzungen": 0,
+     "t_abs": 1795597709.0
+    },
+    {
+     "nr": 4,
+     "sek": 19.64,
+     "score": 971.22,
+     "offen": 6,
+     "verletzungen": 0,
+     "t_abs": 1795597729.0
+    },
+    {
+     "nr": 5,
+     "sek": 1.92,
+     "score": 966.43,
+     "offen": 7,
+     "verletzungen": 0,
+     "t_abs": 1795597731.0
+    },
+    {
+     "nr": 6,
+     "sek": 2.48,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795597734.0
+    },
+    {
+     "nr": 7,
+     "sek": 0.46,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795597734.0
+    },
+    {
+     "nr": 8,
+     "sek": 0.43,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795597735.0
+    },
+    {
+     "nr": 9,
+     "sek": 0.42,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795597735.0
+    },
+    {
+     "nr": 10,
+     "sek": 0.41,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795597735.0
+    },
+    {
+     "nr": 11,
+     "sek": 0.39,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795597736.0
+    },
+    {
+     "nr": 12,
+     "sek": 0.43,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795597737.0
+    },
+    {
+     "nr": 13,
+     "sek": 0.41,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795597737.0
+    },
+    {
+     "nr": 14,
+     "sek": 0.4,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795597737.0
+    },
+    {
+     "nr": 15,
+     "sek": 0.4,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795597738.0
+    },
+    {
+     "nr": 16,
+     "sek": 0.41,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795597738.0
+    },
+    {
+     "nr": 17,
+     "sek": 0.41,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795597739.0
+    },
+    {
+     "nr": 18,
+     "sek": 0.41,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795597739.0
+    }
+   ],
+   "beendet": "neustart durch Kolibri"
+  },
+  {
+   "lauf": 5,
+   "parameter": {
+    "bohrungsvariante": "B4v",
+    "max_passes": 200,
+    "optimierung": "an",
+    "reihenfolge": "standard",
+    "fanout": "nein"
+   },
+   "ergebnis": null,
+   "passes": [
+    {
+     "nr": 1,
+     "sek": 66.52,
+     "score": 836.93,
+     "offen": 34,
+     "verletzungen": 0,
+     "t_abs": 1795597868.0
+    },
+    {
+     "nr": 2,
+     "sek": 23.32,
+     "score": 904.08,
+     "offen": 20,
+     "verletzungen": 0,
+     "t_abs": 1795597891.0
+    }
+   ],
+   "beendet": "neustart durch Kolibri"
+  },
+  {
+   "lauf": 6,
+   "parameter": {
+    "bohrungsvariante": "B4",
+    "max_passes": 200,
+    "optimierung": "an",
+    "reihenfolge": "t_zuerst",
+    "fanout": "nein"
+   },
+   "ergebnis": {
+    "ses": true,
+    "import_ok": true,
+    "drc_verletzungen": 6,
+    "offen": 0,
+    "typen": {
+     "clearance": 6
+    }
+   },
+   "passes": [
+    {
+     "nr": 1,
+     "sek": 40.51,
+     "score": 841.73,
+     "offen": 33,
+     "verletzungen": 0,
+     "t_abs": 1795597962.0
+    },
+    {
+     "nr": 2,
+     "sek": 6.76,
+     "score": 928.06,
+     "offen": 15,
+     "verletzungen": 0,
+     "t_abs": 1795597969.0
+    },
+    {
+     "nr": 3,
+     "sek": 11.51,
+     "score": 961.63,
+     "offen": 8,
+     "verletzungen": 0,
+     "t_abs": 1795597980.0
+    },
+    {
+     "nr": 4,
+     "sek": 15.23,
+     "score": 971.22,
+     "offen": 6,
+     "verletzungen": 0,
+     "t_abs": 1795597996.0
+    },
+    {
+     "nr": 5,
+     "sek": 1.47,
+     "score": 966.43,
+     "offen": 7,
+     "verletzungen": 0,
+     "t_abs": 1795597997.0
+    },
+    {
+     "nr": 6,
+     "sek": 1.88,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795597999.0
+    },
+    {
+     "nr": 7,
+     "sek": 0.33,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795598000.0
+    },
+    {
+     "nr": 8,
+     "sek": 0.32,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795598000.0
+    },
+    {
+     "nr": 9,
+     "sek": 0.32,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795598000.0
+    },
+    {
+     "nr": 10,
+     "sek": 0.32,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795598001.0
+    },
+    {
+     "nr": 11,
+     "sek": 0.33,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795598001.0
+    },
+    {
+     "nr": 12,
+     "sek": 0.33,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795598002.0
+    },
+    {
+     "nr": 13,
+     "sek": 0.33,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795598002.0
+    },
+    {
+     "nr": 14,
+     "sek": 0.33,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795598002.0
+    },
+    {
+     "nr": 15,
+     "sek": 0.33,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795598003.0
+    },
+    {
+     "nr": 16,
+     "sek": 0.32,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795598003.0
+    },
+    {
+     "nr": 17,
+     "sek": 0.33,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795598003.0
+    },
+    {
+     "nr": 18,
+     "sek": 0.31,
+     "score": 985.61,
+     "offen": 3,
+     "verletzungen": 0,
+     "t_abs": 1795598004.0
+    }
+   ],
+   "beendet": "neustart durch Kolibri"
+  },
+  {
+   "lauf": 7,
+   "parameter": {
+    "bohrungsvariante": "B4",
+    "max_passes": 200,
+    "optimierung": "an",
+    "reihenfolge": "standard",
+    "fanout": "nein"
+   },
+   "ergebnis": null,
+   "passes": [
+    {
+     "nr": 1,
+     "sek": 45.23,
+     "score": 836.88,
+     "offen": 34,
+     "verletzungen": 1,
+     "t_abs": 1795598078.0
+    },
+    {
+     "nr": 2,
+     "sek": 130.61,
+     "score": 942.45,
+     "offen": 12,
+     "verletzungen": 0,
+     "t_abs": 1795598208.0
+    }
+   ],
+   "beendet": "abbruch"
+  }
+ ]
+}
