@@ -59,3 +59,9 @@ Reihenfolge, erst konservativ:
 3. **Freigangslogik prüfen:** Die 211/215 Verletzungen nach Paaren gruppieren. Eigene Teile (Kabel, Gegenstück, Platine desselben Steckers) gehören in die Ausnahmen. Echte Verletzungen an OPUS mit Maß melden.
 4. **NMC-Daisy:** Die 52 Kollisionen (Gegenstück gegen Zellträger/Verguss) prüfen. Vorschlag zur Lage melden, nicht selbst ändern.
 5. Neue Merkmale: BT-321/BT-311 `befestigung`, `bohrung_d_mm`, `bohrung_anzahl`, BT-7xx `steckfreigang_mm` werden von Opus angelegt (siehe struktur.json), dann die Akten vorgeschlagen.
+
+## Nachtrag 3 (Opus, 2026-11-25, Entscheidungen nach ERGEBNIS v0.2)
+1. **Bohrungen CMU: B4 an den Ecken (2,8|2,8), 4 × M3.** `frei_pruefung.txt` zeigt an allen 4 Ecken ≥ 2,0 mm Abstand Kupfer–Bohrung. Das Scheitern in SV1 und W1 lag an der fehlenden Daisy-Netzklasse (Platine ohne Projektdatei geladen), nicht an den Bohrungen. Rechnen mit `sv1b/lauf2.sh B4` **mit Projektdatei**. Abnahme DRC 0, 0 offen, 144 Thermovias. Danach Akten BT-321 befestigung (4 × M3, Bolzen 6 mm), bohrung_d_mm 3,2, bohrung_anzahl 4.
+2. **Steckfreigang der Platinenstecker in der CMU (FPC, Daisy): Regel ändern.** Die CMU wird **vor dem Einbau gesteckt** (Montagefolge: Stecker auf die Platine, dann die Platine in die Endzone). Freigang in Steckrichtung = Steckweg + 5 mm, quer 2 mm, geprüft im Einbauzustand. Außenstecker bleiben wie gehabt (+25 mm, Handraum Ø 75). Annahme Opus, ERW-SV1 N3. Die 162/169 Verletzungen danach neu zählen.
+3. **NMC-Daisy-Buchsen: Variante a)**, Aussparung im Zellträger und Verguss je Buchse (wie bei der CMU). Konservativ: keine Verlagerung der Stecker.
+4. ENT-207 (BMS Ø 3,2): bestätigt.

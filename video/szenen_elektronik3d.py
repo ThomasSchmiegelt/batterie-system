@@ -6,10 +6,10 @@
 # Darstellung (keine Rechengröße): Lagenabstand 11 mm, Kupferdicke überhöht 0,35 mm, Farben, Zeitplan, Kamerapfade. Maße der Teile stammen aus den Netzen.
 import bpy, os, sys, json, math, struct
 import numpy as np
-from mathutils import Vector
+from mathutils import Vector, Matrix
 MM = 0.001; DV = "/home/cae/cae_projekte/batterie_video"; E2 = "/home/cae/cae_projekte/batterie/e2"
 SZ = os.environ["SZENE"]; STEP = int(os.environ.get("VIDEO_STEP", "1")); SAMP = int(os.environ.get("VIDEO_SAMPLES", "24"))
-NFR = {"pack": 750, "cmu": 375, "bms": 375}[SZ]; FPS = 25
+NFR = {"pack": 750, "steuer": 750}[SZ]; FPS = 25
 arg = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
 bpy.ops.wm.read_factory_settings(use_empty=True)
 sc = bpy.context.scene; sc.render.engine = "BLENDER_EEVEE"; sc.render.resolution_x, sc.render.resolution_y = 1280, 720; sc.render.fps = FPS
@@ -73,11 +73,18 @@ FARBE = {"Unterfahrschutz": ((0.3, 0.3, 0.33), 0.5, 0.4), "Boden": ((0.5, 0.52, 
          "E2_FPC": ((0.9, 0.65, 0.1), 0.0, 0.5), "E2_FPC_Halter": ((0.2, 0.2, 0.22), 0.0, 0.6), "E2_FPC_Detail": ((0.9, 0.65, 0.1), 0.0, 0.5), "E2_Daisy": ((0.1, 0.4, 0.2), 0.0, 0.5)}
 CEN = (1.025, 0.715, 0.08)
 
-def pack_laden(nur_gehaeuse=False):
-    N = json.load(open(f"{E2}/netz_LFP_e2d_e3c_gesamt.json")); ob = {}
+def pack_laden(masken=()):
+    """Pack-Netz laden. masken: (Gruppe, neuer Name, untere Ecke, obere Ecke in mm): Dreiecke mit Schwerpunkt in der Box werden als eigenes Objekt abgetrennt (gleiches Material)."""
+    N = json.load(open(f"{E2}/netz_LFP_e2d_e3c_gesamt.json")); ob = {}; mats = {}
+    for gname, nm, lo, hi in masken:
+        v = N[gname]; P = np.array(v["punkte"]); T = np.array(v["dreiecke"]); c = P[T].mean(1); m = np.all((c >= np.array(lo)) & (c <= np.array(hi)), axis=1)
+        pp = P[T[m]].reshape(-1, 3); print("MASKE", nm, int(m.sum()), "Dreiecke, bbox", pp.min(0).round(2).tolist(), pp.max(0).round(2).tolist(), flush=True)
+        N[gname] = dict(punkte=v["punkte"], dreiecke=T[~m].tolist()); N[nm] = dict(punkte=v["punkte"], dreiecke=T[m].tolist(), _mat=gname)
     for g, v in N.items():
         if not v["punkte"]: continue
-        col, me_, ro = FARBE.get(g, ((0.5, 0.5, 0.5), 0.3, 0.5)); m = mat(g, col, 1.0, 0.3 * me_, ro, 0.0); ob[g] = mesh(g, v["punkte"], v["dreiecke"], m)
+        gm = v.get("_mat", g)
+        if gm not in mats: col, me_, ro = FARBE.get(gm, ((0.5, 0.5, 0.5), 0.3, 0.5)); mats[gm] = mat(gm, col, 1.0, 0.3 * me_, ro, 0.0)
+        ob[g] = mesh(g, v["punkte"], v["dreiecke"], mats[gm])
     return N, ob
 
 if SZ == "pack":
@@ -111,7 +118,7 @@ class Akku:
     def add(s, v, f): o = len(s.v); s.v += v; s.f += [tuple(i + o for i in q) for q in f]
 def platine(prefix, Dd, Bd, off, S=11.0, TC=0.35, zone=None, mitte_pad=False):
     """Platine in mm (Wurzel-Leer mit Maßstab 1e-3 bei off). Gibt Wurzel, Ebenen (Name -> (Objekt, Index im Explosionsstapel)) und Maße zurück."""
-    W, H = Dd["w"], Dd["h"]; root = bpy.data.objects.new(prefix + "_wurzel", None); sc.collection.objects.link(root); root.location = off; root.scale = (MM, MM, MM)
+    W, H = Dd["w"], Dd["h"]; root = bpy.data.objects.new(prefix + "_wurzel", None); sc.collection.objects.link(root); root.matrix_basis = off   # off: 4x4 (Lage im Pack-Koordinatensystem, Maßstab mm -> m)
     lx = lambda x: x - Dd["x0"]; ly = lambda y: Dd["y0"] + H - y
     ZC = {"F.Cu": 1.51 + TC / 2, "In1.Cu": 1.0, "In2.Cu": 0.55, "B.Cu": 0.0 - TC / 2 + TC / 2 + 0.0}
     mcu = mat(prefix + "cu", (0.85, 0.42, 0.22), 1.0, 0.9, 0.3); mfr = mat(prefix + "fr4", (0.12, 0.45, 0.2), 0.55, 0.0, 0.5); mbt = mat(prefix + "bt", (0.18, 0.18, 0.2), 1.0, 0.0, 0.5)
@@ -126,19 +133,35 @@ def platine(prefix, Dd, Bd, off, S=11.0, TC=0.35, zone=None, mitte_pad=False):
         n = len(pts)
         if n < 3: continue
         ak[ln].add([(lx(a), ly(b), ZC[ln] - TC / 2) for a, b in pts] + [(lx(a), ly(b), ZC[ln] + TC / 2) for a, b in pts], [tuple(range(n))[::-1], tuple(range(n, 2 * n))] + [(i, (i + 1) % n, n + (i + 1) % n, n + i) for i in range(n)])
+    # Vias als dünne Kupferstäbe (Muster explosion_blender.py E3: Thermovias = Via im Pad eines 2512-Widerstands, orange); Stab Höhe 1, Skalierung in z folgt dem Lagenabstand
+    mth = mat(prefix + "thermo", (1.0, 0.25, 0.05), 1.0, 0.9, 0.3); rp = [(p[1], p[2], p[3], p[4]) for p in Dd["pads"] if p[5].startswith("R") and p[3] > 3.0]
+    va, vt = Akku(), Akku()
+    for x, y, d, dr, net in Dd["vias"]:
+        th = any(abs(x - px) <= w / 2 and abs(y - py) <= h / 2 for px, py, w, h in rp); r = d / 2 * (0.55 if th else 0.35); xx, yy = lx(x), ly(y); n = 6
+        (vt if th else va).add([(xx + r * math.cos(2 * math.pi * i / n), yy + r * math.sin(2 * math.pi * i / n), z) for z in (0.0, 1.0) for i in range(n)],
+                               [(i, (i + 1) % n, n + (i + 1) % n, n + i) for i in range(n)] + [tuple(range(n))[::-1], tuple(range(n, 2 * n))])
+    viao = {}
     idx = {"Pad": 0, "B.Cu": 1, "In2.Cu": 2, "In1.Cu": 3, "Substrat": 4, "F.Cu": 5, "Bauteile": 6} if mitte_pad else {"B.Cu": 0, "In2.Cu": 1, "In1.Cu": 2, "Substrat": 3, "F.Cu": 4, "Bauteile": 5}
     for ln, a in ak.items():
         if a.v: L[ln] = (mesh(prefix + ln, a.v, a.f, mcu, faces=True, parent=root), idx[ln])
     v, f = quader_v(0, 0, 0.0, W, H, 1.51); L["Substrat"] = (mesh(prefix + "Substrat", v, f, mfr, faces=True, parent=root), idx["Substrat"])
     if mitte_pad:
         mp = mat(prefix + "pad", (0.85, 0.7, 0.12), 1.0, 0.0, 0.5); v, f = quader_v(0, 0, -1.2, W, H, -0.2); L["Pad"] = (mesh(prefix + "Pad", v, f, mp, faces=True, parent=root), idx["Pad"])
+    if va.v: L["Vias"] = (mesh(prefix + "Vias", va.v, va.f, mcu, faces=True, parent=root), -2)
+    if vt.v: L["Thermovias"] = (mesh(prefix + "Thermovias", vt.v, vt.f, mth, faces=True, parent=root), -2)
+    for k_ in ("Vias", "Thermovias"):
+        if k_ in L: L[k_][0].scale.z = 1.51 + TC
     pb = Bd["platine_bbox"]; pts = [(p[0] - pb[0], p[1] - pb[1], p[2]) for p in Bd["punkte"]]; L["Bauteile"] = (mesh(prefix + "Bauteile", pts, Bd["dreiecke"], mbt, parent=root), idx["Bauteile"])
     if zone:
         mzn = mat(prefix + "sperr", (1.0, 0.05, 0.05), 0.28, 0.0, 0.5); v, f = quader_v(zone[0], 0, -4, zone[1], H, 6 * S + 10); L["Sperrzone"] = (mesh(prefix + "Sperrzone", v, f, mzn, faces=True, parent=root), -1)
     return root, L, (W, H)
 def explodieren(L, t0, t1, t2, t3, S=11.0, niveau=None):
     """Lagen fahren von t0 bis t1 auseinander, bleiben bis t2, fahren bis t3 zusammen (s)."""
+    top = L["F.Cu"][1]
     for k, (o, i) in L.items():
+        if i == -2:   # Via-Stäbe wachsen mit dem Lagenabstand (Stab von B.Cu bis F.Cu)
+            o.scale.z = 1.51 + 0.35; o.keyframe_insert("scale", index=2, frame=fr(t0)); o.scale.z = top * S + 1.51 + 0.35; o.keyframe_insert("scale", index=2, frame=fr(t1))
+            o.keyframe_insert("scale", index=2, frame=fr(t2)); o.scale.z = 1.51 + 0.35; o.keyframe_insert("scale", index=2, frame=fr(t3)); ease(o); continue
         if i < 0: continue
         o.location.z = 0; o.keyframe_insert("location", index=2, frame=fr(t0)); o.location.z = i * S; o.keyframe_insert("location", index=2, frame=fr(t1))
         o.keyframe_insert("location", index=2, frame=fr(t2)); o.location.z = 0; o.keyframe_insert("location", index=2, frame=fr(t3)); ease(o)
@@ -146,65 +169,76 @@ def sperr_ein(L, t0, t1):
     o = L["Sperrzone"][0]; al = o.data.materials[0].node_tree.nodes["Principled BSDF"].inputs["Alpha"]; a1 = al.default_value
     al.default_value = 0; al.keyframe_insert("default_value", frame=fr(t0)); al.default_value = a1; al.keyframe_insert("default_value", frame=fr(t1))
 
-# ---------------- CMU: Pack mit Endzonen, Anflug, dann Platine mit Leiterbahnen ----------------
-def gehaeuse_blass(N, ob):
-    for g, o in ob.items():
-        if g in ("E2_CMU",): continue
-        mm_ = o.data.materials[0]; b = mm_.node_tree.nodes["Principled BSDF"]
-        a = 0.10 if g in ("Seitenrahmen", "E2_Schaltbox", "E2_Schaltbox_Inhalt", "E2_FPC", "E2_FPC_Detail") else 0.0
-        b.inputs["Alpha"].default_value = a
-        if a == 0.0: o.hide_render = True
-def cmu_zentrum(N, links=True):
-    P = np.array(N["E2_CMU"]["punkte"]); T = np.array(N["E2_CMU"]["dreiecke"]); c = P[T].mean(1); cx = 1025.0; cy = 715.0
-    sel = ((c[:, 0] < cx) if links else (c[:, 0] >= cx)) & (c[:, 1] < cy); p = P[T[sel]].reshape(-1, 3); return (p.min(0) + p.max(0)) / 2 * MM, p.min(0) * MM, p.max(0) * MM
-
-if SZ == "cmu":
-    N, ob = pack_laden(); gehaeuse_blass(N, ob)
-    cz, lo, hi = cmu_zentrum(N); mc = ob["E2_CMU"].data.materials[0]; bsd = mc.node_tree.nodes["Principled BSDF"]
-    erscheint(ob["E2_CMU"], 0.8, 0.0, 1.0, alpha_ins=mc)
-    bsd.inputs["Emission Color"].default_value = (1.0, 0.45, 0.05, 1); es = bsd.inputs["Emission Strength"]
-    for t, v in ((0.8, 0.0), (1.8, 1.2), (3.0, 0.3), (4.2, 1.0), (5.5, 0.3), (6.4, 0.3)): es.default_value = v; es.keyframe_insert("default_value", frame=fr(t))
-    camA = kamera("camA", [(0, CEN, -40, 32, 3.8), (3.2, CEN, -28, 30, 3.5), (6.4, tuple(cz), -42, 28, 0.42)])
-    OFF = Vector((8.0, 0.0, 0.0)); Dd = json.load(open("/home/cae/cae_projekte/batterie/e3/explosion_LFP.json")); Bd = json.load(open("/home/cae/cae_projekte/batterie/e3/bauteile_LFP.json"))
-    root, L, (W, H) = platine("cmu", Dd, Bd, OFF, mitte_pad=True); w_, h_ = W * MM, H * MM; B0 = Vector((OFF.x, OFF.y, OFF.z + 0.002))
-    # Kamera B: Überflug der Leiterbahnen (Oberseite), Annäherung an die Kanäle, dann Rückzug zur Explosion (10,3 bis 14 s)
-    camB = kamera("camB", [(6.5, tuple(B0 + Vector((0.02, 0.03, 0.0))), -35, 38, 0.22), (8.6, tuple(B0 + Vector((0.05, 0.03, 0.0))), -22, 42, 0.12), (10.2, tuple(B0 + Vector((0.07, 0.025, 0.0))), -30, 35, 0.10),
-                          (11.5, tuple(B0 + Vector((0.06, 0.03, 0.03))), -35, 28, 0.30), (14.0, tuple(B0 + Vector((0.06, 0.03, 0.03))), -45, 25, 0.32), (15, tuple(B0 + Vector((0.06, 0.03, 0.03))), -50, 25, 0.34)])
-    explodieren(L, 10.4, 12.8, 14.0, 14.99)
-    # CMU-Teile der Platine erscheinen erst mit Kamera B; Kamera-Umschaltung per Marker
-    sc.camera = camA; m = sc.timeline_markers.new("A", frame=0); m.camera = camA; m = sc.timeline_markers.new("B", frame=fr(6.5)); m.camera = camB
-    for o, _i in L.values():
-        o.hide_render = True; o.keyframe_insert("hide_render", frame=0); o.hide_render = False; o.keyframe_insert("hide_render", frame=fr(6.5)); ease(o)
-    for k, o in ob.items(): o.hide_render = o.hide_render
-    # Pack-Teile ab 6,5 s ausblenden
-    for k, o in ob.items():
-        if k == "E2_CMU" or o.hide_render is False:
-            o.hide_render = False; o.keyframe_insert("hide_render", frame=fr(6.4)); o.hide_render = True; o.keyframe_insert("hide_render", frame=fr(6.5)); ease(o)
-
-# ---------------- BMS: Schaltbox öffnet, dann Platine mit Sperrzone ----------------
-if SZ == "bms":
-    N, ob = pack_laden(); gehaeuse_blass(N, ob)
-    for k in ("E2_Schaltbox", "E2_Schaltbox_Inhalt"):
-        b = ob[k].data.materials[0].node_tree.nodes["Principled BSDF"]; b.inputs["Alpha"].default_value = 1.0; ob[k].hide_render = False
-    bm = ob["E2_Schaltbox_Inhalt"].data.materials[0].node_tree.nodes["Principled BSDF"]; bm.inputs["Emission Color"].default_value = (0.2, 0.9, 0.4, 1); es = bm.inputs["Emission Strength"]
-    for t, v in ((0.0, 0.0), (3.0, 0.0), (4.0, 1.2), (5.0, 0.2), (6.4, 0.2)): es.default_value = v; es.keyframe_insert("default_value", frame=fr(t))
-    for k in ("E2_Schaltbox_Deckel", "E2_Dichtung", "E2_Servicedeckel", "E2_Schraube", "E2_Stecker_Sensor", "E2_Stromschiene", "E2_Schrumpfschlauch"):
-        if k in ob: ob[k].hide_render = False; ob[k].data.materials[0].node_tree.nodes["Principled BSDF"].inputs["Alpha"].default_value = 1.0
-    sd = ob["E2_Schaltbox_Deckel"]; z = sd.location.z; sd.keyframe_insert("location", index=2, frame=fr(0.8)); sd.location.z = z + 0.35; sd.keyframe_insert("location", index=2, frame=fr(2.8))
-    sd.hide_render = False; sd.keyframe_insert("hide_render", frame=fr(3.0)); sd.hide_render = True; sd.keyframe_insert("hide_render", frame=fr(3.01)); ease(sd)
-    sb = N["E2_Schaltbox"]["punkte"]; P = np.array(N["E2_Schaltbox_Inhalt"]["punkte"]) * MM; bc = (P.min(0) + P.max(0)) / 2
-    camA = kamera("camA", [(0, tuple(bc), -35, 38, 1.2), (3.0, tuple(bc), -20, 42, 0.8), (6.4, tuple(bc), -10, 50, 0.45)])
-    OFF = Vector((8.0, 0.0, 0.0)); Dd = json.load(open("/home/cae/cae_projekte/batterie/e3c/explosion.json")); Bd = json.load(open("/home/cae/cae_projekte/batterie/e3c/bauteile.json"))
-    root, L, (W, H) = platine("bms", Dd, Bd, OFF, zone=(100.0, 110.0)); B0 = Vector((OFF.x, OFF.y, OFF.z + 0.002))
-    camB = kamera("camB", [(6.5, tuple(B0 + Vector((0.08, 0.05, 0.0))), -35, 40, 0.30), (9.5, tuple(B0 + Vector((0.10, 0.05, 0.0))), -20, 45, 0.20), (10.5, tuple(B0 + Vector((0.08, 0.05, 0.03))), -35, 30, 0.38),
-                          (14.0, tuple(B0 + Vector((0.08, 0.05, 0.03))), -45, 25, 0.40), (15, tuple(B0 + Vector((0.08, 0.05, 0.03))), -50, 25, 0.42)])
-    explodieren(L, 10.4, 12.8, 14.0, 14.99); sperr_ein(L, 7.0, 8.5)
-    sc.camera = camA; m = sc.timeline_markers.new("A", frame=0); m.camera = camA; m = sc.timeline_markers.new("B", frame=fr(6.5)); m.camera = camB
-    for o, _i in L.values():
-        o.hide_render = True; o.keyframe_insert("hide_render", frame=0); o.hide_render = False; o.keyframe_insert("hide_render", frame=fr(6.5)); ease(o)
-    for k, o in ob.items():
-        if not o.hide_render:
-            o.hide_render = False; o.keyframe_insert("hide_render", frame=fr(6.4)); o.hide_render = True; o.keyframe_insert("hide_render", frame=fr(6.5)); ease(o)
+# ---------------- Steuergeräte am Einbauort: eine durchgehende Kamerafahrt (Pack -> CMU in der Endzone -> BMS in der Schaltbox) ----------------
+if SZ == "steuer":
+    # Lage aus dem Pack-STEP e2d_e3c (pack_e2d.py): CMU hinten: Platinen-x -> Pack-y, Platinen-y -> -Pack-z, Platinen-z (Bauteile) -> -Pack-x, Rückseite innen; BMS: Platinen-x,y,z -> Pack-x,y,z, Ecke bei bms_platine_bbox_mm
+    BMSB = json.load(open("/home/cae/hermes/batterie/cad/pack/entwurf/ergebnis_LFP_e2d_e3c.json"))["e2"]["bms_platine_bbox_mm"]
+    N, ob = pack_laden(masken=[("E2_CMU", "CMU_eins", (0, 30, 35), (1025, 150, 95)), ("E2_Schaltbox_Inhalt", "BMS_alt", tuple(v - 0.2 for v in BMSB[:3]), tuple(v + 0.2 for v in BMSB[3:]))])
+    P = np.array(N["CMU_eins"]["punkte"]); T = np.array(N["CMU_eins"]["dreiecke"]); pc = P[T].reshape(-1, 3); cmin, cmax = pc.min(0), pc.max(0)
+    ob["Deckel"].hide_render = True
+    mc = ob["E2_CMU"].data.materials[0]; bsd = mc.node_tree.nodes["Principled BSDF"]; bsd.inputs["Emission Color"].default_value = (1.0, 0.45, 0.05, 1); es = bsd.inputs["Emission Strength"]
+    for t, v in ((0, 0.0), (1.0, 1.0), (2.5, 0.3), (4.0, 0.9), (6.0, 0.3), (8.0, 0.3)): es.default_value = v; es.keyframe_insert("default_value", frame=fr(t))
+    # Zellen als Bänder (Hüllkörper)
+    t_ = stl(f"{DV}/netz_LFP/BT-100__Zelle_LFP.stl"); cx = t_[:, :, 0].mean(1); x0_, x1_ = float(cx.min()), float(cx.max()); mz = mat("zelle", (0.30, 0.50, 0.85), 1.0, 0.0, 0.4)
+    zb_ = []
+    for k in range(6):
+        sel = (cx >= x0_ + (x1_ - x0_) * k / 6) & (cx <= x0_ + (x1_ - x0_) * (k + 1) / 6 + (1e-3 if k == 5 else -1e-3)); zb_.append(soup(f"Zellen_{k}", t_[sel], mz))
+    def alpha_key(m, t0, a0_, t1, a1_):
+        al = m.node_tree.nodes["Principled BSDF"].inputs["Alpha"]; al.default_value = a0_; al.keyframe_insert("default_value", frame=fr(t0)); al.default_value = a1_; al.keyframe_insert("default_value", frame=fr(t1))
+    GH = {"Seitenrahmen": .10, "Boden": 0, "Unterfahrschutz": 0, "Kuehlplatte": 0, "Pad": 0, "Zellverbinder": 0, "Quertraeger": .10, "E2_Daisy": .25, "E2_FPC": .25, "E2_FPC_Detail": .25, "E2_FPC_Halter": .25,
+          "E2_Schaltbox": .12, "E2_Schaltbox_Deckel": .10, "E2_Dichtung": .10, "E2_Servicedeckel": .10, "E2_HV_Leitung": .25, "E2_Kabelschuh": .25, "E2_Clip": .25, "E2_Lasche": .25, "E2_Trennbruecke": .2, "E2_Trennbrueckenschraube": .2,
+          "E2_Stecker_Sensor": .3, "E2_Schraube": .2}
+    for g, a_end in GH.items():
+        if g in ob: m_ = ob[g].data.materials[0]; a_st = 0.22 if g in ("Kuehlplatte", "Pad") else 1.0; alpha_key(m_, 2.0, a_st, 5.0, a_end)
+    alpha_key(mz, 2.0, 1.0, 4.5, 0.0)   # Zellen blenden aus und werden ausgeblendet (viele gestapelte Alpha-Flächen sähen sonst wie ein dunkler Block aus)
+    for o in zb_: o.hide_render = False; o.keyframe_insert("hide_render", frame=0); o.keyframe_insert("hide_render", frame=fr(4.5)); o.hide_render = True; o.keyframe_insert("hide_render", frame=fr(4.6)); ease(o)
+    for g in ("E2_Schaltbox_Inhalt", "E2_Stromschiene", "E2_Schrumpfschlauch", "BMS_alt"):   # Umgebung der BMS-Platine wird durchsichtig, bevor die Kamera ankommt
+        if g in ob and g != "BMS_alt": alpha_key(ob[g].data.materials[0], 16.0, 1.0, 19.0, 0.25)
+    # CMU: Platine am Einbauort
+    rotC = Matrix(((0, 0, 1, 0), (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 0, 1)))   # Spalten: X -> +y, Y -> +z, Z -> +x (Seite 'vorn' im Code = kleines x; Platinenrücken an der Wand, Bauteile zum Packinneren; geprüft an der Flächenverteilung des Pack-Netzes)
+    OC = Vector((cmin[0], cmin[1], cmin[2])) * MM
+    DdC = json.load(open("/home/cae/cae_projekte/batterie/e3/explosion_LFP.json")); BdC = json.load(open("/home/cae/cae_projekte/batterie/e3/bauteile_LFP.json"))
+    rootC, LC, (WC, HC) = platine("cmu", DdC, BdC, Matrix.Translation(OC) @ rotC @ Matrix.Diagonal((MM, MM, MM, 1)))
+    cC = rootC.matrix_basis @ Vector((WC / 2, HC / 2, 1.0, 1.0)); cC = Vector(cC[:3])
+    # BMS: Platine in der Schaltbox
+    OB = Vector(BMSB[:3]) * MM; DdB = json.load(open("/home/cae/cae_projekte/batterie/e3c/explosion.json")); BdB = json.load(open("/home/cae/cae_projekte/batterie/e3c/bauteile.json"))
+    rootB, LB, (WB, HB) = platine("bms", DdB, BdB, Matrix.Translation(OB) @ Matrix.Diagonal((MM, MM, MM, 1)), zone=(100.0, 110.0))
+    cB = Vector((rootB.matrix_basis @ Vector((WB / 2, HB / 2, 1.0, 1.0)))[:3])
+    print("ZENTRUM CMU", cC, "BMS", cB, flush=True)
+    TC0, TC1 = 8.4, 9.0; TB0 = 20.0; NX = 10   # Überblendung über 10 Bilder
+    def bbox_welt(objs):
+        pts = []
+        for o in objs:
+            n = len(o.data.vertices); v = np.zeros(n * 3); o.data.vertices.foreach_get("co", v); v = v.reshape(-1, 3)
+            M_ = np.array(o.parent.matrix_basis @ o.matrix_basis) if o.parent else np.array(o.matrix_basis)
+            pts.append((np.c_[v, np.ones(n)] @ M_.T)[:, :3])
+        pts = np.vstack(pts) / MM; return pts.min(0), pts.max(0)
+    def bbox_pts(objs):
+        r = []
+        for o in objs:
+            n = len(o.data.vertices); v = np.zeros(n * 3); o.data.vertices.foreach_get("co", v); v = v.reshape(-1, 3); M_ = np.array(o.parent.matrix_basis @ o.matrix_basis); r.append((np.c_[v, np.ones(n)] @ M_.T)[:, :3] / MM)
+        return np.unique(np.vstack(r), axis=0)
+    def lagepruefung(name, piece, L_):
+        d0, d1 = bbox_welt([L_[k][0] for k in ("Substrat", "Bauteile")]); pp_ = np.array(N[piece.name]["punkte"])[np.array(N[piece.name]["dreiecke"]).reshape(-1)]; p0, p1 = pp_.min(0), pp_.max(0)   # nur die benutzten Punkte des abgetrennten Pack-Teils dev = max(np.abs(d0 - p0).max(), np.abs(d1 - p1).max())
+        dev = max(np.abs(d0 - p0).max(), np.abs(d1 - p1).max())
+        sw = np.abs(np.unique(pp_, axis=0).mean(0) - bbox_pts([L_["Bauteile"][0]]).mean(0)).max(); print(f"  Schwerpunkt der Bauteil-Punkte, Abweichung {sw:.3f} mm", flush=True); 
+        tt_ = np.array(N[piece.name]["punkte"])[np.array(N[piece.name]["dreiecke"])]; ar_ = np.linalg.norm(np.cross(tt_[:, 1] - tt_[:, 0], tt_[:, 2] - tt_[:, 0]), axis=1) / 2; bg_ = tt_[ar_ > 500].reshape(-1, 3)
+        s0, s1 = bbox_welt([L_["Substrat"][0]]); ds = max(np.abs(bg_.min(0) - s0).max(), np.abs(bg_.max(0) - s1).max()); print(f"  Platinenkörper (große Flächen des Pack-Teils) gegen Substrat: Abweichung {ds:.3f} mm", flush=True); assert ds < 0.5, f"Substrat {ds}"
+        print(f"LAGEPRUEFUNG {name}: Pack-Teil bbox {p0.round(2).tolist()} bis {p1.round(2).tolist()} mm; Detailmodell {d0.round(2).tolist()} bis {d1.round(2).tolist()} mm; max. Abweichung {dev:.3f} mm", flush=True)
+        assert dev < 1.0, f"Lageabweichung {dev} mm"
+    lagepruefung("CMU (erste Endzone hinten)", ob["CMU_eins"], LC); lagepruefung("BMS", ob["BMS_alt"], LB)
+    def ueberblenden(L_, piece, t0):
+        """Pack-Teil (eigene Materialkopie) blendet über NX Bilder aus, Detailmodell gleichzeitig ein (gleiche Lage)."""
+        f0 = fr(t0); mp_ = piece.data.materials[0].copy(); piece.data.materials[0] = mp_; alpha_key(mp_, t0, 1.0, t0 + NX / FPS, 0.0)
+        piece.hide_render = False; piece.keyframe_insert("hide_render", frame=0); piece.keyframe_insert("hide_render", frame=f0 + NX); piece.hide_render = True; piece.keyframe_insert("hide_render", frame=f0 + NX + 1); ease(piece)
+        for k, (o, _i) in L_.items():
+            m_ = o.data.materials[0]; a1 = m_.node_tree.nodes["Principled BSDF"].inputs["Alpha"].default_value; alpha_key(m_, t0, 0.0, t0 + NX / FPS, a1)
+            o.hide_render = True; o.keyframe_insert("hide_render", frame=0); o.hide_render = False; o.keyframe_insert("hide_render", frame=f0); ease(o)
+    ueberblenden(LC, ob["CMU_eins"], TC0); ueberblenden(LB, ob["BMS_alt"], TB0)
+    explodieren(LC, 10.0, 12.2, 13.4, 14.6); explodieren(LB, 22.0, 24.2, 25.6, 27.0); sperr_ein(LB, TB0 + 0.5, TB0 + 2.0)
+    camp = [(0, CEN, -40, 32, 3.8), (3.0, CEN, -45, 30, 3.6), (6.0, (0.5, 0.3, 0.1), 60, 28, 1.4), (8.4, tuple(cC), 68, 22, 0.30), (10.0, tuple(cC), 68, 22, 0.30), (12.2, tuple(cC), 66, 22, 0.42), (14.0, tuple(cC), 66, 22, 0.42),
+            (17.0, (1.2, 0.5, 0.15), -30, 40, 1.4), (20.0, tuple(cB), -25, 50, 0.45), (24.0, tuple(cB), -25, 38, 0.55), (27.5, tuple(cB), -25, 38, 0.55), (30.0, tuple(cB), -25, 40, 0.6)]
+    cam = kamera("cam", camp); sc.camera = cam
 
 a0, a1 = (int(arg[0]), int(arg[1])) if len(arg) >= 2 else (0, NFR - 1)
 sc.frame_start, sc.frame_end = a0, a1

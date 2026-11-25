@@ -1,4 +1,4 @@
-# Folienbaustein SV1: Stecker, Steckfreigang, Verschraubung (KI-generiert, Entwurf)
-**Kernaussage:** Jeder Stecker im Pack hat Gegenstück und sichtbaren Steckfreigang; die Kollisionsprüfung zeigt, wo fester Bauraum den Zugriff verstellt (Entwurf, nicht freigegeben).
+# Folienbaustein SV1: Stecker, Steckfreigang, Verschraubung (KI-generiert, Entwurf, v0.2 2026-11-25)
+**Kernaussage:** Jeder Stecker im Pack hat Gegenstück und sichtbaren Steckfreigang; die Kollisionsprüfung zeigt, wo fester Bauraum den Zugriff verstellt, und die CMU-Bohrungen scheitern an Bauteilen am Bohrungsort, nicht am Routing (Entwurf, nicht freigegeben).
 **Bild (Zielband 0 Verletzungen beschriftet):** sim/mechanik/sv1_stecker_verschraubung/sv1_LFP_schaltbox.png, sv1_LFP_endzone.png, sv1_NMC_schaltbox.png, sv1_NMC_endzone.png
-**Zahlen:** sim/mechanik/sv1_stecker_verschraubung/ergebnis.json: Verletzungen LFP 211, NMC 215; harte Kollisionen LFP 0, NMC 52; Massezuwachs LFP 1,29 kg, NMC 1,26 kg. CMU-Bohrungen: Routing offen (ERGEBNIS.md).
+**Zahlen:** sim/mechanik/sv1_stecker_verschraubung/ergebnis_v02.json: Verletzungen LFP 211, NMC 215 (davon CMU-Platinenstecker gegen festes Teil LFP 162, NMC 169; eigene Teile 0); harte Kollisionen LFP 0, NMC 52 (26 Daisy-Buchsen in Zellträger/Verguss). CMU-Bohrungen: B3 und B4v nicht abnahmefähig (sim/mechanik/sv1_stecker_verschraubung/ERGEBNIS.md, Punkt 1, Quelle sv1b/lauf2_*/drc.json: B3 0 offen und 18 Verstöße, B4v 3 offen und 10 Verstöße). Werkzeugbefund: Daisy-Klasse 2,5 mm fehlte im W1-Lauf (ERGEBNIS Punkt 2b).

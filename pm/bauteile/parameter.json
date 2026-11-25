@@ -417,6 +417,22 @@
     "wert": 3.0,
     "einheit": "\"-\"",
     "entscheidung": "ENT-197"
+   },
+   "befestigung": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "bohrung_d_mm": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "bohrung_anzahl": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "steckfreigang_mm": {
+    "wert": null,
+    "entscheidung": null
    }
   },
   "BT-320": {
@@ -487,6 +503,18 @@
     "wert": 8.0,
     "einheit": "\"-\"",
     "entscheidung": "ENT-187"
+   },
+   "befestigung": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "bohrung_d_mm": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "bohrung_anzahl": {
+    "wert": null,
+    "entscheidung": null
    }
   },
   "BT-322": {
@@ -585,6 +613,10 @@
     "entscheidung": "ENT-121"
    },
    "breite_mm": {
+    "wert": null,
+    "entscheidung": null
+   },
+   "steckfreigang_mm": {
     "wert": null,
     "entscheidung": null
    }
@@ -1028,6 +1060,10 @@
     "wert": 1000.0,
     "einheit": "V",
     "entscheidung": "ENT-124"
+   },
+   "steckfreigang_mm": {
+    "wert": null,
+    "entscheidung": null
    }
   },
   "BT-712": {
@@ -1088,6 +1124,10 @@
    "bauform": {
     "wert": null,
     "entscheidung": null
+   },
+   "steckfreigang_mm": {
+    "wert": null,
+    "entscheidung": null
    }
   },
   "BT-721": {
@@ -1121,6 +1161,10 @@
     "wert": 250.0,
     "einheit": "A",
     "entscheidung": "ENT-133"
+   },
+   "steckfreigang_mm": {
+    "wert": null,
+    "entscheidung": null
    }
   },
   "BT-740": {
@@ -1128,6 +1172,10 @@
     "wert": 26.0,
     "einheit": "-",
     "entscheidung": "ENT-134"
+   },
+   "steckfreigang_mm": {
+    "wert": null,
+    "entscheidung": null
    }
   },
   "BT-750": {

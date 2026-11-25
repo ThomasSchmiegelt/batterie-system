@@ -1,0 +1,19 @@
+KI-generiert (Claude Sonnet, 2026-11-25), Entwurf. Ausgabe von sv1b/frei.py auf lauf2_B4v/basis.kicad_pcb (nur Pads und 19 Handbahnen, keine Router-Bahnen).
+Platinenursprung (Pad-Min) 2.52 Breite/Hoehe Annahme 120x60
+Kontur -0.05 -0.05 120.05 60.05
+MH1 B4 (2,8|2,8)                   (   2.8,  2.8) Abstand Kupfer-Bohrungskante   2.11 mm OK (naechstes: R20-2)
+MH2 B4 (117,2|2,8)                 ( 117.2,  2.8) Abstand Kupfer-Bohrungskante   8.10 mm OK (naechstes: R37-2)
+MH3 B4 (2,8|57,2)                  (   2.8, 57.2) Abstand Kupfer-Bohrungskante   2.01 mm OK (naechstes: R38-1)
+MH4 B4 (117,2|57,2)                ( 117.2, 57.2) Abstand Kupfer-Bohrungskante   8.06 mm OK (naechstes: R55-1)
+B4v (4,8|4,8)                      (   4.8,  4.8) Abstand Kupfer-Bohrungskante   0.07 mm VERLETZT (naechstes: R20-2)
+B4v (115,2|4,8)                    ( 115.2,  4.8) Abstand Kupfer-Bohrungskante   5.57 mm OK (naechstes: R37-2)
+B4v (4,8|55,2)                     (   4.8, 55.2) Abstand Kupfer-Bohrungskante  -0.02 mm VERLETZT (naechstes: R38-1)
+B4v (115,2|55,2)                   ( 115.2, 55.2) Abstand Kupfer-Bohrungskante   5.55 mm OK (naechstes: R55-1)
+B3 Mitte rechts (117,2|30)         ( 117.2, 30.0) Abstand Kupfer-Bohrungskante  -1.25 mm VERLETZT (naechstes: Bahn N$11)
+Langseite oben Mitte (60|2,8)      (  60.0,  2.8) Abstand Kupfer-Bohrungskante   2.12 mm OK (naechstes: R29-2)
+Langseite unten Mitte (60|57,2)    (  60.0, 57.2) Abstand Kupfer-Bohrungskante   2.02 mm OK (naechstes: R47-1)
+freie Strecken (Abstand >= 2,0) entlang der Kanten bei Randabstand 2,8, Raster 1 mm:
+   oben y=2,8 (x) ['3..117']
+   unten y=57,2 (x) ['12..15', '24..27', '36..39', '48..51', '60..63', '73..76', '85..88', '97..100', '109..117']
+   links x=2,8 (y) ['22..25', '35..38']
+   rechts x=117,2 (y) ['3..17', '34..57']

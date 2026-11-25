@@ -177,18 +177,15 @@ def inset(im, p, t, a, b, cap):
 
 def s5(im, t, gi):
     ts = t - 80
-    if ts < 15:
-        kopf(im, "Steuergerät 1: CMU-Platine in den Endzonen  [REQ-P15]"); im = lage3d(im, "cmu", ts); kopf(im, "Steuergerät 1: CMU-Platine in den Endzonen  [REQ-P15]"); d = ImageDraw.Draw(im, "RGBA")
-        cap = [(0, 6.5, "CMU-Platinen in den Endzonen des Packs"), (6.5, 10.3, f"Leiterbahnen, {zahl('CMU LFP lagen')} Lagen, {zahl('CMU LFP teile')} Teile, DRC {zahl('CMU LFP drc_verstoesse')}"), (10.3, 15, "Explosion nach Lagen")]
-        for a, b, c in cap:
-            if a <= ts < b: tafel(d, c, 40, 626, 26, a=clamp(min((ts - a) / 0.5, 1)))
-        inset(im, "sim/elektrik/e3_platine/schaltplan_LFP_kanal.png", ts, 10.8, 15, "Schaltplanblatt Kanal"); return im
-    elif ts < 30:
-        ts -= 15; kopf(im, "Steuergerät 2: BMS-Platine in der Schaltbox  [REQ-P19]"); im = lage3d(im, "bms", ts); kopf(im, "Steuergerät 2: BMS-Platine in der Schaltbox  [REQ-P19]"); d = ImageDraw.Draw(im, "RGBA")
-        cap = [(0, 6.5, "Schaltbox öffnet, BMS-Platine darin"), (6.5, 10.3, f"BMS-Platine, {zahl('BMS teile')} Teile, DRC {zahl('BMS drc_verstoesse')}, rote HV/NV-Sperrzone"), (10.3, 15, "Explosion nach Lagen")]
-        for a, b, c in cap:
-            if a <= ts < b: tafel(d, c, 40, 626, 26, a=clamp(min((ts - a) / 0.5, 1)))
-        inset(im, "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-1.png", ts, 10.8, 15, "Schaltplanblatt BMS"); return im
+    if ts < 30:
+        tit = "Steuergerät 1: CMU-Platine in der Endzone  [REQ-P15]" if ts < 15 else "Steuergerät 2: BMS-Platine in der Schaltbox  [REQ-P19]"
+        kopf(im, tit); im = lage3d(im, "steuer", ts); kopf(im, tit); d = ImageDraw.Draw(im, "RGBA")
+        cap = [(0, 8.4, "Zellen und Umgebung werden durchsichtig, Anflug auf die erste CMU"), (8.4, 10, f"CMU am Einbauort (Endwand, hochkant): {zahl('CMU LFP lagen')} Lagen, {zahl('CMU LFP teile')} Teile, DRC {zahl('CMU LFP drc_verstoesse')}"),
+               (10, 15, "CMU: Explosion nach Lagen, Vias als Stäbe"), (15, 20, "Weiter zur Schaltbox, Umgebung durchsichtig"),
+               (20, 22, f"BMS-Platine in der Schaltbox: {zahl('BMS teile')} Teile, DRC {zahl('BMS drc_verstoesse')}, rote HV/NV-Sperrzone"), (22, 30, "BMS: Explosion nach Lagen")]
+        for a_, b_, c in cap:
+            if a_ <= ts < b_: tafel(d, c, 40, 626, 26, a=clamp(min((ts - a_) / 0.5, 1)))
+        inset(im, "sim/elektrik/e3_platine/schaltplan_LFP_kanal.png", ts, 10.5, 14.5, "Schaltplanblatt Kanal"); inset(im, "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-1.png", ts, 22.5, 29, "Schaltplanblatt BMS"); return im
     elif ts < 45:
         ts -= 30; kopf(im, "Rechnungen zur Elektronik")
         bl = [(0, 4, "sim/elektrik/e3_platine/spice_ausgleich_vorladung.png", f"SPICE Vorladung, U_V {num(zahl('SPICE Vorladung U_V'), 0)} V"),
