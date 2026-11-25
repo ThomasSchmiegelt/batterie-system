@@ -56,6 +56,13 @@ def panel(im, p, box, titel=None, quelle=None, a=1.0):
     q = quelle or p; d.text((x + 6, y + h + 4), q, font=F(16), fill=(200, 200, 205, 255))
     return im
 
+O3 = "/home/cae/cae_projekte/batterie_video/elektronik3d"
+def lage3d(im, sz, t):
+    """3D-Szene sz (pack|cmu|bms) bei t s (lokal) als RGBA über das Bild legen; fehlende Bilder: nächstes früheres."""
+    f = int(t * FPS)
+    while f > 0 and not os.path.exists(f"{O3}/{sz}/{f:04d}.png"): f -= 1
+    L = Image.open(f"{O3}/{sz}/{f:04d}.png").convert("RGBA")
+    im.paste(Image.alpha_composite(im.convert("RGBA"), L).convert("RGB")); return im
 def graph_index(f):
     if f < 3050: return int(f * 2680 / 3050)
     return min(3150, 2680 + int((f - 3050) * 470 / 1075))
@@ -136,9 +143,9 @@ def s1(im, t):
 def s3(im, t):
     kopf(im, "Zelle LFP prismatisch (Blade)  [REQ-P06]")
     bl = [(0, 8, "cad/zelle/entwurf/render/zelle_LFP_render.png", "Zelle LFP prismatisch, Blade  [REQ-P06]"),
-          (8, 15, "sim/chemie/c1_zellmodell/ladekurve.png", "Ladekurve  [sim/chemie/c1_zellmodell]"),
-          (15, 20, "sim/chemie/c1_zellmodell/dcir.png", "DCIR  [sim/chemie/c1_zellmodell]"),
-          (20, 25, "sim/chemie/c1_zellmodell/waerme_LFP.png", "Wärme LFP, Spreizung höchstens 5 K  [REQ-P09]")]
+          (8, 15, "sim/chemie/c1_zellmodell/ladekurve.png", "Ladekurve LFP und NMC bis 80 % mit Zielzeit  [sim/chemie/c1_zellmodell]"),
+          (15, 20, "sim/chemie/c1_zellmodell/dcir.png", "DCIR: Spannungsabfall im 10-s-Puls bei 10, 25, 40 °C  [sim/chemie/c1_zellmodell]"),
+          (20, 25, "sim/chemie/c1_zellmodell/waerme_LFP.png", "Wärme je Zelle über der Zeit (LFP, Modell) mit Zielband  [sim/chemie/c1_zellmodell]")]
     for a, b, p, cap in bl:
         if a <= t < b:
             panel(im, p, (110, 80, 1060, 520), quelle=p, a=clamp(min((t - a) / 0.5, 1))); d = ImageDraw.Draw(im, "RGBA"); tafel(d, cap, 110, 626, 26)
@@ -146,11 +153,10 @@ def s3(im, t):
 
 def s4(im, t):
     kopf(im, "Pack baut sich auf  [REQ-P07]")
-    bl = [(0, 8, "cad/pack/entwurf/pack_LFP_schnitt.png", "Pack LFP im Schnitt"), (8, 16, "cad/pack/entwurf/pack_LFP_explosion.png", "Explosion nach Baugruppen"),
-          (16, 30, "cad/pack/entwurf/pack_LFP_gesamt.png", "Pack LFP gesamt")]
-    for a, b, p, cap in bl:
-        if a <= t < b:
-            panel(im, p, (60, 80, 1160, 520), quelle=p, a=clamp(min((t - a) / 0.6, 1))); d = ImageDraw.Draw(im, "RGBA"); tafel(d, cap + "  [REQ-P07]", 60, 626, 26)
+    im = lage3d(im, "pack", t); kopf(im, "Pack baut sich auf  [REQ-P07]")
+    d = ImageDraw.Draw(im, "RGBA"); cap = [(0, 8, "Zellen, Rahmen, Kühlplatte"), (8, 17, "CMU, Schaltbox, Verbindungen"), (17, 22, "Deckel schließt"), (22, 30, "Deckel öffnet")]
+    for a, b, c in cap:
+        if a <= t < b: tafel(d, c + "  [cad/pack/entwurf, e2d_e3c]", 40, 626, 26, a=clamp(min((t - a) / 0.5, 1)))
     pk = [(12, 16.5, "sim/kuehlung/k3_gesamt/k3_vergleich.png", "Kühlung K3, K4  [REQ-P12]", (30, 90)), (19, 23.5, "sim/mechanik/x3_crash_g5/energie_LFP_a.png", "Crash Pfahl 5 kJ  [REQ-P14]", (700, 90))]
     for a, b, p, cap, (x, y) in pk:
         if a <= t < b:
@@ -162,19 +168,27 @@ def s4(im, t):
         d = ImageDraw.Draw(im, "RGBA"); m = zahl("Packmasse LFP masse_bekannt_kg"); tafel(d, f"Packmasse LFP {num(m)} kg", 780, 626, 26, a=clamp((t - 24) / 0.5))
     return im
 
+def inset(im, p, t, a, b, cap):
+    """Schaltplan als Bild-in-Bild unten rechts zwischen a und b s."""
+    if not (a <= t < b): return
+    w = clamp(min((t - a) / 0.5, (b - t) / 0.5)); x, y = 700, 90; pim = lade(p, 540, 330); bx = Image.new("RGB", (pim.width + 8, pim.height + 8), (250, 250, 250)); bx.paste(pim, (4, 4))
+    im.paste(Image.blend(im.crop((x, y, x + bx.width, y + bx.height)), bx, w), (x, y)); d = ImageDraw.Draw(im, "RGBA"); d.rectangle([x, y, x + bx.width, y + bx.height], outline=(255, 210, 60, 255), width=3)
+    tafel(d, cap, x, y + bx.height + 8, 22, a=w); d.text((x + 2, y + bx.height + 52), p, font=F(14), fill=(200, 200, 205, int(255 * w)))
+
 def s5(im, t, gi):
     ts = t - 80
     if ts < 15:
-        kopf(im, "Steuergerät 1: CMU-Platine in den Endzonen  [REQ-P15]")
-        bl = [(0, 4, "sim/elektrik/e3_platine/platine_LFP_3d_top.png", f"CMU-Leiterplatte, {zahl('CMU LFP lagen')} Lagen, {zahl('CMU LFP teile')} Teile, DRC {zahl('CMU LFP drc_verstoesse')}"),
-              (4, 8, "sim/elektrik/e3_platine/platine_LFP_explosion.png", "Explosion nach Lagen"),
-              (8, 11.5, "sim/elektrik/e3_platine/platine_LFP_3d_nah.png", "Nahaufnahme Ausgleichskanal"),
-              (11.5, 15, "sim/elektrik/e3_platine/schaltplan_LFP_kanal.png", "Schaltplanblatt Kanal")]
+        kopf(im, "Steuergerät 1: CMU-Platine in den Endzonen  [REQ-P15]"); im = lage3d(im, "cmu", ts); kopf(im, "Steuergerät 1: CMU-Platine in den Endzonen  [REQ-P15]"); d = ImageDraw.Draw(im, "RGBA")
+        cap = [(0, 6.5, "CMU-Platinen in den Endzonen des Packs"), (6.5, 10.3, f"Leiterbahnen, {zahl('CMU LFP lagen')} Lagen, {zahl('CMU LFP teile')} Teile, DRC {zahl('CMU LFP drc_verstoesse')}"), (10.3, 15, "Explosion nach Lagen")]
+        for a, b, c in cap:
+            if a <= ts < b: tafel(d, c, 40, 626, 26, a=clamp(min((ts - a) / 0.5, 1)))
+        inset(im, "sim/elektrik/e3_platine/schaltplan_LFP_kanal.png", ts, 10.8, 15, "Schaltplanblatt Kanal"); return im
     elif ts < 30:
-        ts -= 15; kopf(im, "Steuergerät 2: BMS-Platine in der Schaltbox  [REQ-P19]")
-        bl = [(0, 5, "sim/elektrik/e3c_bms_platine/platine_bms_3d_top.png", f"BMS-Platine, {zahl('BMS teile')} Teile, DRC {zahl('BMS drc_verstoesse')}, rote HV/NV-Sperrzone"),
-              (5, 10, "sim/elektrik/e3c_bms_platine/platine_bms_explosion.png", "Explosion nach Lagen"),
-              (10, 15, "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-1.png", "Schaltplanblatt BMS")]
+        ts -= 15; kopf(im, "Steuergerät 2: BMS-Platine in der Schaltbox  [REQ-P19]"); im = lage3d(im, "bms", ts); kopf(im, "Steuergerät 2: BMS-Platine in der Schaltbox  [REQ-P19]"); d = ImageDraw.Draw(im, "RGBA")
+        cap = [(0, 6.5, "Schaltbox öffnet, BMS-Platine darin"), (6.5, 10.3, f"BMS-Platine, {zahl('BMS teile')} Teile, DRC {zahl('BMS drc_verstoesse')}, rote HV/NV-Sperrzone"), (10.3, 15, "Explosion nach Lagen")]
+        for a, b, c in cap:
+            if a <= ts < b: tafel(d, c, 40, 626, 26, a=clamp(min((ts - a) / 0.5, 1)))
+        inset(im, "sim/elektrik/e3c_bms_platine/schaltplan_bms_blatt-1.png", ts, 10.8, 15, "Schaltplanblatt BMS"); return im
     elif ts < 45:
         ts -= 30; kopf(im, "Rechnungen zur Elektronik")
         bl = [(0, 4, "sim/elektrik/e3_platine/spice_ausgleich_vorladung.png", f"SPICE Vorladung, U_V {num(zahl('SPICE Vorladung U_V'), 0)} V"),
